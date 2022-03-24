@@ -14,9 +14,27 @@ Equipo de trabajo:
 
 Joel Casa: 
 
-Jorge 
+Jorge Aloiza
+
+Chiara Romulo
 
 
 Vamos a realizar un E-commerce dedicado exclusivamente a la venta de calzado femenino de moda.
 Nuestro publico objetivo son mujeres de 18 a 50 años 
-El equipo de trabajo esta compuesto por Joel Casa, Jorge Aloiza y Chiara Romulo
+El equipo de trabajo esta compuesto por Joel Casa, Jorge Aloiza y Chiara Romulo.
+
+
+
+Sitios de referencia:
+
+1- https://ubac-store.com/
+
+2-https://yolele.com/
+
+3-https://www.santinicycling.com/tour-de-france/en/
+
+4-https://robin-noguier.com/
+
+5-https://www.rickysarkany.com/
+
+6- https://www.paruolo.com.ar/
