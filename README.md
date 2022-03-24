@@ -5,3 +5,13 @@ Somo pioineros en la fabricación de la vestimenta de sus pies. Por eso nos preo
 bolsillo y pies.
 
 Nuestro equipo de trabajo está conformado por profesionales que lo atenderán de como usted lo merece.
+
+
+En Shoe Market puedes encontrar la verdadera MODA del calzado para ELLAS.
+Somos pioneros en la fabricacion de la vestimenta de sus pies. Por eso nos preocupamos por ofercer un producto que te de todo que buscas.
+
+Equipo de trabajo:
+
+Joel Casa: 
+
+Jorge 
