@@ -28,6 +28,7 @@ El equipo de trabajo esta compuesto por Joel Casa, Jorge Aloiza y Chiara Romulo.
 Sitios de referencia:
 
 1- https://ubac-store.com/
+Este sitio presenta una interfaz de usuario sencilla y agradable indicando de unamanera inmediata el objetivo principal de su diseño.
 
 2-https://yolele.com/
 
