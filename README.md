@@ -4,7 +4,7 @@ los estilos y marcas reconocidas.
 Somo pioineros en la fabricación de la vestimenta de sus pies. Por eso nos preocupamos por ofrecer un producto acorde a su 
 bolsillo y pies.
 
-Nuestro equipo de trabajo está conformado por profesionales que lo atenderán de como usted lo merece.
+Nuestro equipo de trabajo está conformado por profesionales en el área.
 
 
 En Shoe Market puedes encontrar la verdadera MODA del calzado para ELLAS.
@@ -14,7 +14,7 @@ Equipo de trabajo:
 
 Joel Casa: 
 
-Jorge Aloiza
+Jorge Loaiza
 
 Chiara Romulo
 
