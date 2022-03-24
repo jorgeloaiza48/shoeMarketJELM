@@ -28,14 +28,14 @@ El equipo de trabajo esta compuesto por Joel Casa, Jorge Aloiza y Chiara Romulo.
 Sitios de referencia:
 
 1- https://ubac-store.com/
-Este sitio presenta una interfaz de usuario sencilla y agradable indicando de unamanera inmediata el objetivo principal de su diseño.
+Este sitio presenta una interfaz de usuario sencilla y agradable indicando de una manera inmediata el objetivo principal de su diseño.
 
-2-https://yolele.com/
+2-https://yolele.com/ Similar al anterior en su introducción, presenta una entrada dinámica y atractiva al usuario.
 
 3-https://www.santinicycling.com/tour-de-france/en/
 
-4-https://robin-noguier.com/
+4-https://robin-noguier.com/ presenta un aspecto diferente y dinámico.
 
-5-https://www.rickysarkany.com/
+5-https://www.rickysarkany.com/ Ofrece un catálogo de productos animados e interactivos
 
 6- https://www.paruolo.com.ar/
