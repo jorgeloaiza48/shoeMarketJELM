@@ -15,3 +15,8 @@ Equipo de trabajo:
 Joel Casa: 
 
 Jorge 
+
+
+Vamos a realizar un E-commerce dedicado exclusivamente a la venta de calzado femenino de moda.
+Nuestro publico objetivo son mujeres de 18 a 50 años 
+El equipo de trabajo esta compuesto por Joel Casa, Jorge Aloiza y Chiara Romulo
