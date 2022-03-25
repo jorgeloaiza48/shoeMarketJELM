@@ -32,7 +32,7 @@ Este sitio presenta una interfaz de usuario sencilla y agradable indicando de un
 
 2-https://yolele.com/ Similar al anterior en su introducción, presenta una entrada dinámica y atractiva al usuario.
 
-3-https://www.santinicycling.com/tour-de-france/en/
+3-https://www.santinicycling.com/
 
 4-https://robin-noguier.com/ presenta un aspecto diferente y dinámico.
 
