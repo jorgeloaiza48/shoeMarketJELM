@@ -4,7 +4,7 @@ los estilos y marcas reconocidas.
 Somo pioneros en la fabricación de la vestimenta de sus pies. Por eso nos preocupamos por ofrecer un producto acorde a su 
 bolsillo y pies.
 
-Nuestro equipo de trabajo está conformado por profesionales que lo atenderán de como usted lo merece.
+Nuestro equipo de trabajo está conformado por profesionales en el área.
 
 
 En Shoe Market puedes encontrar la verdadera MODA del calzado para ELLAS.
@@ -32,7 +32,7 @@ El equipo de trabajo esta compuesto por Joel Casa, Jorge Aloiza y Chiara Romulo.
 
 Sitios de referencia:
 
-1- https://ubac-store.com/ : Elegimos este sitio ya que nos gusto como muestra los calzados tanto femeninos como masculinos, es una web muy dinamina y facil de entender.
+1- https://ubac-store.com/ : Elegimos este sitio ya que nos gusto como muestra los calzados tanto femeninos como masculinos, presenta una interfaz de usuario sencilla y agradable indicando de una manera inmediata el objetivo principal de su diseño.
 
 2-https://www.newrock.com/es/ : Esta es una web que esta relacionado con nuestro proyecto ya que vende calzado, pero nos llamo la atencion lo bien que muestran siempre la misma tematica de sus productos y su pagina web. Marcando bien un estilo propio.
 
