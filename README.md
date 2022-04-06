@@ -1,15 +1,5 @@
 # grupo_4_Shoe_Market
-En Shoe_Market puedes encontrar una gran variedad de calzado para dama en todos 
-los estilos y marcas reconocidas.
-Somo pioneros en la fabricación de la vestimenta de sus pies. Por eso nos preocupamos por ofrecer un producto acorde a su 
-bolsillo y pies.
-
-Nuestro equipo de trabajo está conformado por profesionales en el área.
-
-
-En Shoe Market puedes encontrar la verdadera MODA del calzado para ELLAS.
-Somos pioneros en la fabricacion de la vestimenta de sus pies. Por eso nos preocupamos por ofrecer productos que te den todo que buscas para todos los ambitos de tu vida.
-Estamos enfocados en todas las mujeres entre 18 y 60 años, nuestra misión es lograr que todas las mujeres encuentren el zapato que buscan en una sola marca.
+Shoe Market es un proyecto de desarrollo que consiste en la realización de un sitio web (E-commerce) dedicado a la comercialización de calzado femenino. El objetivo principal de este proyecto es brindar una oferta variada y de calidad en diferentes diseños y estilos de calzado conservando y siguiendo los estándares de eficacia del producto que garanticen la satisfacción de los clientes. Así mismo, se pretende que los clientes puedan tener una experiencia cómoda en el proceso de compra de los productos pues se les facilitará dicho proceso mediante el e-commerce en cuestión.
 
 
 Equipo de trabajo:
@@ -24,9 +14,6 @@ Franco
 
 
 
-Vamos a realizar un E-commerce dedicado exclusivamente a la venta de calzado femenino de moda.
-Nuestro publico objetivo son mujeres de 18 a 50 años 
-El equipo de trabajo esta compuesto por Joel Casa, Jorge Aloiza y Chiara Romulo.
 
 
 
