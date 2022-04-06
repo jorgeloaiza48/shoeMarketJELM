@@ -4,13 +4,11 @@ Shoe Market es un proyecto de desarrollo que consiste en la realización de un s
 
 Equipo de trabajo:
 
-Joel Casa : Product Owner del proyecto, es el que mas experiencia tiene con el calzado femenino por eso representa la voz del cliente como asi tambien cumple un rol en el equipo tecnico.
+Jorge Eliécer Loaiza Muñoz (SCRUM MASTER) 
+Joel Casa (PRODUCT OWNER)
+Franco Matías Oller (DESARROLLADOR)
+Chiara Fiorella Rómulo (DESARROLLADOR)
 
-Jorge Aloiza : Scrum Master del proyecto
-
-Chiara Romulo : Equipo tecnico
-
-Franco 
 
 
 
