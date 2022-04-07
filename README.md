@@ -10,7 +10,9 @@ Franco Matías Oller (DESARROLLADOR)
 Chiara Fiorella Rómulo (DESARROLLADOR)
 
 
+TRELLO
 
+https://trello.com/b/xU5XWR0j/tablero-shoe-market
 
 
 
