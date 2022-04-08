@@ -1,7 +1,13 @@
 const express = require("express")
 const path = require("path")
 const app = express()
-app.listen(4000,()=>console.log("servidor corriendo en 4000"))
+
+let puerto = 4000
+
+app.listen(puerto,()=>console.log("Servidor corriendo en el puerto ---> " + puerto))
+
+// const publicPath = path.resolve(__dirname,'./public')
+// app.use(express.static(publicPath))
 
 app.use(express.static("public"));
 
