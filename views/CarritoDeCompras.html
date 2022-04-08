@@ -1,17 +1,89 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/normalize.css">
+    <script src="https://kit.fontawesome.com/82d69982a4.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu&display=swap" rel="stylesheet">
     <title>Carrito de compras</title>
 </head>
+
 <body>
-    carrito de compras
-    <header></header>
-    <main></main>
-    <footer></footer>
+    <header class="header"> aqui va el header</header>
+    <main class="maincarrito">
+        <article class="artproductos">
+            <p><span class="nombreproductocarrito">Borcego LARA negro 36</span></p>
+            <img class="productocarrito" src="img/LARA.jpeg" alt="PRODUCTO1">
+
+            <article class="sumacantidadresta">
+                <span class="precioCarrito">$20.000</span><button class="logomasmenoscarrito"><i
+                        class="fa-solid fa-minus"></i></button><span class="cantidadproductocarrito">1</span><button
+                    class="logomasmenoscarrito"><i class="fa-solid fa-plus"></i></button><br>
+
+            </article>
+
+            <article class="articleeliminar">
+                <span class="iconoeliminar"><i class="fa-solid fa-trash-can"></i></span> <button
+                    class="botoneliminar">Eliminar</button>
+            </article>
+        </article>
+        <div class="lineacarrito"></div>
+        <article class="artproductos">
+            <p><span class="nombreproductocarrito">Borcego TIZI negro 36</span></p>
+            <img class="productocarrito" src="img/TIZI.jpeg" alt="PRODUCTO1">
+            <article class="sumacantidadresta">
+                <span class="precioCarrito">$25.000</span>
+                <button class="logomasmenoscarrito"><i class="fa-solid fa-minus"></i></button><span
+                    class="cantidadproductocarrito">1</span><button class="logomasmenoscarrito"><i
+                        class="fa-solid fa-plus"></i></button><br>
+
+
+            </article>
+            <article class="articleeliminar">
+                <span class="iconoeliminar"><i class="fa-solid fa-trash-can"></i></span> <button
+                    class="botoneliminar">Eliminar</button>
+            </article>
+
+        </article>
+        <div class="lineacarrito"></div>
+
+
+        <article class="resumencarrito">
+            <h2>Resumen de compra</h2>
+            <p>cupon de descuento</p>
+
+            <form class="formulario" action="/action_page.php">
+                <label for="fname"></label>
+                <input type="text" id="fname" name="fname" value="Ingrese su codigo">
+                <button>Usar Cupon</button>
+
+            </form>
+        </article>
+
+        <article>
+            <span>Subtotal</span> <span>$45.000</span>
+            <br>
+            <span>Total</span> <span>$45.000</span> <br>
+
+            <button>TERMINAR COMPRA</button> <br>
+
+
+            <BUTton>seguir comprando</BUTton>
+
+        </article>
+
+
+
+    </main>
+    <footer class="footer">
+        aqui va el footer
+    </footer>
 </body>
+
 </html>
