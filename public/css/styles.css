@@ -156,26 +156,20 @@ margin-left: 25px;
 /* //////////////////////////////////////////INICIO FOOTER ///////////////////////////////////////////////*/
 
 .cuotas{
-    background-color:aquamarine;
+    /* background-color:aquamarine; */
     margin-top: 100%;
     overflow: hidden;
-    padding: 1em;
-       
+    padding: 1em;      
+    /* margin: 1em; */
 }     
-
-
-.coleccion{
-    background-color: aqua;
-}
    
 .cuotas-pagos{
    
-    width: 20%;
-    height: 5%;
+    width: 200px;
+    height: 98px;
     text-align: center;
-    background-color: aliceblue;
-    font-family: 'Roboto', sans-serif;  
-    border: solid 1px red;
+    /* background-color: aliceblue;
+    border: solid 1px red; */
     padding: 1em;
     margin: 1em;
     float: left;
@@ -184,23 +178,32 @@ margin-left: 25px;
 
 
 .cuotas-pagos p{
-    font-size: x-small;
-    /* margin-left: 15%; */
+
     text-align: justify;
+    font-size: xx-small;
+    font-family: 'Roboto', sans-serif; 
+
+    
     
 }
 
 .cuotas-pagos h6{
     color: black;
+    font-size: x-small;
+   
 
     
 }
 
-
 .cuotas-pagos img{
-    width: 20%;
-    height: 20%;
+   position: absolute;
+   width: 50px;
+   height: 60px; 
+   padding: 2px 20px 35px 0% ;
+   display: block;
+ 
    
+ 
     
 }
 
