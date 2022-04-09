@@ -2,6 +2,8 @@
     box-sizing: border-box;
 }
 
+/* ////////////////////////////////////////INICIO HEADER //////////////////////////////////////////////////*/
+
 .principal{
     height: 110px;
     /* border: solid 2px red; */
@@ -73,6 +75,86 @@ li {
        font-family: 'Roboto', sans-serif;     
          }
 
+/* /////////////////////////////////////////FIN DEL HEADER //////////////////////////////////////////////////*/
+
+/* ///////////////////////////////////INICIA CARRITO DE COMPRAS /////////////////////////////////////////////*/
+
+.maincarrito{
+    font-family: "ubuntu";
+    margin-left: 15px;
+}
+
+.nombreproductocarrito {
+    margin-left: 25px;
+
+    padding-right: 0px;
+}
+.lineacarrito {
+    border-bottom: 1px solid rgb(175, 153, 153);
+    margin-left: -50px;
+    margin-top: 20px;
+}
+
+.productocarrito{
+width: 30%;
+margin-top: 5px;
+margin-bottom: 5px;
+border: 1px inset rgb(175, 153, 153);
+margin-left: 25px;
+}
+
+.precioCarrito{
+    color: rgb(78, 84, 82);
+    margin-bottom: 5px;
+    margin-left: 10px;
+    margin-top: 5px;
+    margin-right: 10px;
+
+    padding-bottom: 10px;
+    padding-top: 10px;
+
+}
+.logomasmenoscarrito{
+    color: white;
+    background-color: rgb(70, 69, 69);
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.cantidadproductocarrito{
+    border: 1px solid rgb(70, 69, 69);
+    padding-top: 2px;
+    padding-left: 3px;
+    padding-right: 3px;
+    padding-bottom: 2px;
+}
+
+.sumacantidadresta{
+    display: inline;
+    position: relative;
+    bottom: 8px;
+}
+
+.botoneliminar{
+    color : red;
+    border: 0px;
+
+}
+.iconoeliminar{
+    color: red;
+    display: inline;
+
+}
+
+.articleeliminar{
+    text-align: center;
+}
+
+/* ////////////////////////////////////FINALIZA CARRITO DE COMPRAS////////////////////////////////////////*/
+
+
+
+/* //////////////////////////////////////////INICIO FOOTER ///////////////////////////////////////////////*/
+
 .cuotas{
     background-color:aquamarine;
     margin-top: 100%;
@@ -80,13 +162,6 @@ li {
     padding: 1em;
        
 }     
-
-/* .cuotas .cuotas-pagos, .cuotas .tiempo-entrega{
-    /* display: table-cell; */
-    
-} */
-
-
 
 
 .coleccion{
@@ -129,3 +204,4 @@ li {
     
 }
 
+/* //////////////////////////////////////////FIN DEL FOOTER /////////////////////////////////////////////////////*/
