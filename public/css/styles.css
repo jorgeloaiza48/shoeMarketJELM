@@ -43,11 +43,7 @@ img{
     margin-left: 100px;
     margin-top: 20px;
     width: fit-content; 
-    font-family: 'Roboto', sans-serif;
-  
-
-   
-    
+    font-family: 'Roboto', sans-serif;  
     
 }
 
@@ -69,19 +65,67 @@ li {
        margin-right: 15px; /*space between li elements */
    }
 
-   .cuenta{
+.cuenta{
        /* background-color: aqua; */
        margin-left: 690px;
        margin-top: -55px;
        margin-right: 15px;
-       font-family: 'Roboto', sans-serif;
-                 
-      
-   }
+       font-family: 'Roboto', sans-serif;     
+         }
 
-   
- 
+.cuotas{
+    background-color:aquamarine;
+    margin-top: 100%;
+    overflow: hidden;
+    padding: 1em;
+       
+}     
 
-   
+/* .cuotas .cuotas-pagos, .cuotas .tiempo-entrega{
+    /* display: table-cell; */
+    
+} */
 
+
+
+
+.coleccion{
+    background-color: aqua;
+}
    
+.cuotas-pagos{
+   
+    width: 20%;
+    height: 5%;
+    text-align: center;
+    background-color: aliceblue;
+    font-family: 'Roboto', sans-serif;  
+    border: solid 1px red;
+    padding: 1em;
+    margin: 1em;
+    float: left;
+    
+}
+
+
+.cuotas-pagos p{
+    font-size: x-small;
+    /* margin-left: 15%; */
+    text-align: justify;
+    
+}
+
+.cuotas-pagos h6{
+    color: black;
+
+    
+}
+
+
+.cuotas-pagos img{
+    width: 20%;
+    height: 20%;
+   
+    
+}
+
