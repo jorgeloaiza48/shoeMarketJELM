@@ -67,10 +67,6 @@ padding: 0px;
 /*------------------------------------------header joel---------------------------------------*/
 
 
-
-
-
-
 header{
     width: 90vw; 
     margin: auto;
@@ -169,8 +165,31 @@ img{
 main{
     width: 90vw;
     margin: auto;
-    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    /* box-shadow: 0px 0px 10px rgb(100, 100, 100); */
 }
+
+section h3{
+    text-align: center;
+    font-family: 'ubuntu';
+}
+
+.productos{
+    background-color: rgb(89, 0, 255);
+    justify-content: space-around;
+    flex-direction: row;
+     flex-wrap: wrap; /*esta línea ubica los div´s hijos en la parte de abajo si estos sobrepasan al elemento padre */
+    display: flex;
+
+}
+
+.produc{
+    background-color: aquamarine;
+    width: 125px;
+    height: 120px;
+    margin: 1em; 
+}
+
+
 /* /////////////////////////////////////////FIN MAIN ///////////////////////////////////////////////////////////*/
 
 
