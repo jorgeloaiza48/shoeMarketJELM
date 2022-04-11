@@ -1,5 +1,8 @@
+
+
 *{
     box-sizing: border-box;
+   
 }
 
 /* ////////////////////////////////////////INICIO HEADER //////////////////////////////////////////////////*/
@@ -7,13 +10,16 @@
 header{
     width: 90vw; 
     margin: auto;
-    font-family: 'ubuntu';
+    /* font-family: 'ubuntu'; */
+    /* box-shadow: 0px 0px 10px rgb(100, 100, 100); */
+    background-color: rgb(231, 241, 241);
+   
 }
 
 .principal{
-    height: 110px;
+    height: 130px;
     /* border: solid 2px red; */
-    border-bottom: gray solid 1px;
+    /* border-bottom: gray solid 1px; */
    
 }
 
@@ -42,31 +48,25 @@ img{
     width: fit-content;
     margin-left: 100px;
     margin-top: -60px;
-    /* border: solid 1px red; */
-   
+    /* border: solid 1px red; */ 
+}
+
+
+.menus{
+    flex-direction: row;
+    justify-content: center;
+    display: flex;
+    /* background-color: aquamarine; */
 }
     
 .menu{
-    /* border: solid 2px blue; */
-    margin-left: 100px;
-    margin-top: 20px;
-    width: fit-content; 
-    font-family: 'Roboto', sans-serif;  
-    
+    /* background-color: blue; */
+    margin: 42px 10px 12px 0px;
 }
 
 .menu ul{
-    /* list-style-type: none; */
-    margin: 0;
-    /* padding: 0; */
-    
+    list-style: none;
 }
-
-
-.menu ul li {
-    display: inline;
-    
-      }
 
    a{
        color: black;
@@ -75,26 +75,29 @@ img{
    }
 
 .cuenta{
-       /* background-color: aqua; */
-       margin-left: 690px;
-       margin-top: -55px;
-       margin-right: 15px;
-       /* font-family: 'Roboto', sans-serif;      */
-         }
+       
+       margin: -20px -215px 10px 10px;  
+         
+       }
 
- .cuenta ul li{
-    display: inline;
- }        
+ header .carrito{
+           width: 6%;
+           height: 6%;
+                   
+       }
+
+.cuentaCarrito{
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+    display: flex;
+    
+    }
 
  .cuenta ul{
-     margin: 0;
-     padding: 1px;
-     background-color: aqua;
- }
-
-/* .cuenta ul fa-cart-shopping{
-    padding: 8px;
-} */
+    margin-top: 2px;
+    list-style: none;
+}
 
 /* /////////////////////////////////////////FIN DEL HEADER //////////////////////////////////////////////////*/
 
@@ -102,6 +105,7 @@ img{
 main{
     width: 90vw;
     margin: auto;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
 }
 /* /////////////////////////////////////////FIN MAIN ///////////////////////////////////////////////////////////*/
 
@@ -185,10 +189,11 @@ margin-left: 25px;
 /* //////////////////////////////////////////INICIO FOOTER ///////////////////////////////////////////////*/
 
 footer{
-    /* width: 90vw; 
-    margin: auto; */
+    width: 90vw; 
+    margin: auto;
     font-size: 12px;
     text-align: center;  
+    /* box-shadow: 0px 0px 10px rgb(100, 100, 100); */
 }
 
 .cuotas{
@@ -198,6 +203,12 @@ footer{
    padding: 1em;      
    border-top: solid 1px black;
    border-bottom: solid 1px black;
+   flex-direction: row;
+   justify-content: space-around;
+   display: flex;
+  
+   
+
 }     
    
 .cuotas-pagos{
