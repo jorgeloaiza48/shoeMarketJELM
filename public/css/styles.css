@@ -116,20 +116,41 @@ section h3{
 }
 
 .productos{
-    background-color: rgb(89, 0, 255);
+    background-color: white;
     justify-content: space-around;
     flex-direction: row;
-     flex-wrap: wrap; /*esta línea ubica los div´s hijos en la parte de abajo si estos sobrepasan al elemento padre */
+    flex-wrap: wrap; /*esta línea ubica los div´s hijos en la parte de abajo si estos sobrepasan al elemento padre */
     display: flex;
 
 }
 
 .produc{
-    background-color: aquamarine;
-    width: 125px;
-    height: 120px;
+    background-color: white;
+    height: 230px;
     margin: 1em; 
+    text-align: center;
+    /* padding:3rem; */
+    width: 125px;
+    
 }
+
+.produc P{
+    font-size: x-small;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold; /*negrita al texto */
+    line-height: 5px;
+
+}
+
+
+.produc_img_bueno{
+    border:solid 1px red;
+    font-size: small;
+      
+}
+
+
+
 
 
 /* /////////////////////////////////////////FIN MAIN ///////////////////////////////////////////////////////////*/
