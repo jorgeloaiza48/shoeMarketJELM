@@ -14,7 +14,7 @@ header{
     margin: auto;
     /* font-family: 'ubuntu'; */
     /* box-shadow: 0px 0px 10px rgb(100, 100, 100); */
-    background-color: rgb(231, 241, 241);
+   
    
 }
 
@@ -22,6 +22,8 @@ header{
     height: 130px;
     /* border: solid 2px red; */
     /* border-bottom: gray solid 1px; */
+    background-color: rgb(231, 241, 241);
+    border: solid 1px red;
    
 }
 
@@ -34,15 +36,8 @@ header{
     font-family: 'Roboto', sans-serif;
 }
 
-img{
-    width: 100%;
-}
-
-.logo{
-    
+.logo img{
     width: 20%;
-    /* border: solid 1px red;    */
-    
 }
 
 .form{
@@ -64,6 +59,25 @@ img{
 .menu{
     /* background-color: blue; */
     margin: 2px 10px 12px 0px;
+}
+
+.menu{
+    display: none;
+}
+
+.hamburguer-menu{
+    background-color: #03264C;
+    color: white;
+    display: block;
+    max-width: 35px;
+    max-height: 10px;
+    /* padding:15px 0px; */
+    border-radius: 15%;
+    text-align: center;
+    font-size: 20px;
+    margin: auto;
+    padding-bottom: 25px;
+
 }
 
 .menu ul{
@@ -100,6 +114,47 @@ img{
     margin-top: 2px;
     list-style: none;
 }
+
+
+@media (min-width: 760px){
+    .hamburguer-menu{
+        display: none;
+    }
+
+    .menu{
+        display: block;
+        margin: -15px;
+    }
+
+    
+/* .principal logo{
+    padding-top: 12px;
+} */
+
+   .menu ul i{
+       margin: 0px 5px;
+   }
+
+   .form{
+    /* background-color: blue; */
+    width: 20%;
+    height: 10%;
+    font-size:small;
+    margin-left: 175px;
+    margin-top: 15px;
+    
+}
+
+.cuenta{
+      
+    margin: -150px -260px 50px 1px;  
+       
+    }
+
+}
+
+
+
 
 /* /////////////////////////////////////////FIN DEL HEADER //////////////////////////////////////////////////*/
 
