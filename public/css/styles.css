@@ -140,7 +140,7 @@ section h3{
 
 
 
-.producto{
+.producto-carrito{
     display: flex;
  
     justify-content: space-between;
@@ -155,21 +155,21 @@ section h3{
 }
 
 
-.producto__img{
+.prod-carr__img{
 width: 30%;
 margin-top: 5px;
 margin-bottom: 5px;
 border: 1px inset rgb(175, 153, 153);
 margin-left: 5px;
 }
-.producto__precio{
+.prod-carr__precio{
  
     align-items: center;
     display: flex;
     font-size: 20px;
    
 }
- .producto__logomenos{
+ .prod-carr__logomenos{
     color: white;
     background-color: rgb(70, 69, 69);
     margin-left: -25px;
@@ -177,7 +177,7 @@ margin-left: 5px;
     
 
 }
-.producto__logomas{
+.prod-carr__logomas{
     color: white;
     background-color: rgb(70, 69, 69);
     margin-left: 5px;
@@ -188,20 +188,20 @@ margin-left: 5px;
 
 
 
-.producto__cantidad{
+.prod-carr__cantidad{
  
     align-items: center;
     display: flex;
    
 }
 
-.eliminar__boton i{
+.eliminar-carr__boton i{
     color: red
 }
-.eliminar__boton{
+.eliminar-carr__boton{
     color: red;
 }
-.eliminar{
+.eliminar-carr{
     text-align: center;
 }
 
@@ -237,11 +237,13 @@ border: 0.5px solid grey;
 .cupon-descuento__boton{
     color: white;
     background-color: rgb(229, 114, 221);
-    width: 30%;
-    display: inline;
+    width: 45%;
+    
     text-align: left;
     margin-left: 10px;
     padding-right: 10px;
+    
+    
 }
 
 .descuento-flex{
