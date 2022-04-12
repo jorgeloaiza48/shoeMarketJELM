@@ -85,7 +85,7 @@
             </div>
 
             <div class="eliminar-carr"><button class="eliminar-carr__boton"><i class="fa-solid fa-trash-can"></i>
-                Eliminar</button></div>
+                    Eliminar</button></div>
 
 
 
@@ -108,7 +108,7 @@
             </div>
 
             <div class="eliminar-carr"><button class="eliminar-carr__boton"><i class="fa-solid fa-trash-can"></i>
-                Eliminar</button></div>
+                    Eliminar</button></div>
 
 
         </section>
@@ -123,13 +123,13 @@
             <p class="cupon-descuento__text">Cupon de descuento</p>
             <div class="descuento-flex">
 
-                <form class="cupon-descuento__form" action="/action_page.php">
+                <!-- <form class="cupon-descuento__form" action="/action_page.php">
                     <label for="fname"></label>
                     <input type="text" id="fname" name="fname" value="Ingrese su codigo">
 
-                </form>
-               
-                <button class="cupon-descuento__boton" >Usar Cupon</button>
+                </form> -->
+
+                <button class="cupon-descuento__boton">Usar Cupon</button>
 
             </div>
 
@@ -137,15 +137,28 @@
 
         </article>
 
-        <article>
-            <span>Subtotal</span> <span>$45.000</span>
-            <br>
-            <span>Total</span> <span>$45.000</span> <br>
+        <article class="fin-compra">
+            <div class="contenedor-sub">
+                <div class="contenedor-sub__text">Subtotal</div>
+                <div class="contenedor-sub__price">$45.000</div>
+            </div>
 
-            <button>TERMINAR COMPRAS</button> <br>
 
 
-            <BUTton>seguir comprando</BUTton>
+            <div class="contenedor-total">
+                <div class="contenedor-total__text">Total</div>
+                <div class="contenedor-total__price">$45.000</div>
+
+            </div>
+
+
+
+            <div>
+                <button class="fin-compra__boton-terminar">TERMINAR COMPRA</button>
+                <BUTton class="fin-compra__seguir">seguir comprando</BUTton>
+
+
+            </div>
 
         </article>
 

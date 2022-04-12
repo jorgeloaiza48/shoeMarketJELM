@@ -226,32 +226,40 @@ border: 0.5px solid grey;
 }
 
 .cupon-descuento__form{
-    text-align: left;
-    width: 50%;
+    
+    width: 20%;
     
 }
 .cupon-descuento__form input{
-    width: 100%;;
+ 
     margin-bottom: 15px;
+   
+   
 }
 .cupon-descuento__boton{
     color: white;
     background-color: rgb(229, 114, 221);
-    width: 45%;
-    
-    text-align: left;
-    margin-left: 10px;
-    padding-right: 10px;
-    
+    margin-bottom: 15px
+  
+
+   
+  ;
     
 }
 
-.descuento-flex{
-display: flex;
+.contenedor-sub{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 15px;
+    align-items: center;
 }
 
-
-
+.contenedor-total{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 15px;
+    align-self: center;
+}
 
 
 
