@@ -7,6 +7,8 @@
 
 /* ////////////////////////////////////////INICIO HEADER //////////////////////////////////////////////////*/
 
+
+
 header{
     width: 90vw; 
     margin: auto;
@@ -103,84 +105,142 @@ img{
 
 /* ///////////////////////////////////////////INICIO MAIN ///////////////////////////////////////////////////////////*/
 main{
-    width: 90vw;
+    width: 90%;
     margin: auto;
-    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+     /* box-shadow: 0px 0px 10px rgb(100, 100, 100);  */
 }
+
+ section h3{
+    text-align: center;
+    font-family: 'ubuntu';
+} 
+
+
+
+
 /* /////////////////////////////////////////FIN MAIN ///////////////////////////////////////////////////////////*/
 
 
 /* ///////////////////////////////////INICIA CARRITO DE COMPRAS /////////////////////////////////////////////*/
 
-.maincarrito{
-    font-family: "ubuntu";
-    margin-left: 15px;
+
+
+
+.producto{
+    display: flex;
+ 
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+    padding-right: 5px;
+    
+}
+.art-productos{
+    border: solid 1px grey
 }
 
-.nombreproductocarrito {
-    margin-left: 25px;
 
-    padding-right: 0px;
-}
-.lineacarrito {
-    border-bottom: 1px solid rgb(175, 153, 153);
-    margin-left: -50px;
-    margin-top: 20px;
-}
-
-.productocarrito{
+.producto__img{
 width: 30%;
 margin-top: 5px;
 margin-bottom: 5px;
 border: 1px inset rgb(175, 153, 153);
-margin-left: 25px;
+margin-left: 5px;
 }
-
-.precioCarrito{
-    color: rgb(78, 84, 82);
-    margin-bottom: 5px;
-    margin-left: 10px;
-    margin-top: 5px;
-    margin-right: 10px;
-
-    padding-bottom: 10px;
-    padding-top: 10px;
+.producto__precio{
+ 
+    align-items: center;
+    display: flex;
+    font-size: 20px;
+   
+}
+ .producto__logomenos{
+    color: white;
+    background-color: rgb(70, 69, 69);
+    margin-left: -25px;
+    margin-right: 0px;
+    
 
 }
-.logomasmenoscarrito{
+.producto__logomas{
     color: white;
     background-color: rgb(70, 69, 69);
     margin-left: 5px;
-    margin-right: 5px;
-}
-.cantidadproductocarrito{
-    border: 1px solid rgb(70, 69, 69);
-    padding-top: 2px;
-    padding-left: 3px;
-    padding-right: 3px;
-    padding-bottom: 2px;
-}
-
-.sumacantidadresta{
-    display: inline;
-    position: relative;
-    bottom: 8px;
-}
-
-.botoneliminar{
-    color : red;
-    border: 0px;
+    margin-right: -25px;
+    
 
 }
-.iconoeliminar{
+
+
+
+.producto__cantidad{
+ 
+    align-items: center;
+    display: flex;
+   
+}
+
+.eliminar__boton i{
+    color: red
+}
+.eliminar__boton{
     color: red;
-    display: inline;
-
 }
-
-.articleeliminar{
+.eliminar{
     text-align: center;
 }
+
+.main-carrito{
+    font-family: "ubuntu";
+  width: 85% ;
+}
+
+
+.linea-carrito{
+    border: rgb(122, 117, 117) solid 1px;
+    margin-top: 10px;
+}
+
+.title-resumen{
+border: 0.5px solid grey;
+    text-align: center;
+}
+
+.cupon-descuento__text{
+    text-align: left;
+}
+
+.cupon-descuento__form{
+    text-align: left;
+    width: 50%;
+    
+}
+.cupon-descuento__form input{
+    width: 100%;;
+    margin-bottom: 15px;
+}
+.cupon-descuento__boton{
+    color: white;
+    background-color: rgb(229, 114, 221);
+    width: 30%;
+    display: inline;
+    text-align: left;
+    margin-left: 10px;
+    padding-right: 10px;
+}
+
+.descuento-flex{
+display: flex;
+}
+
+
+
+
+
+
+
+
 
 /* ////////////////////////////////////FINALIZA CARRITO DE COMPRAS////////////////////////////////////////*/
 

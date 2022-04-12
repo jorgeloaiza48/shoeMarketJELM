@@ -20,102 +20,121 @@
         <div class="texto">
             <h4>Envío gratis en compras superiores a $2000</h4>
         </div>
-        
+
         <div class="principal">
             <div class="logo">
-                <img src = "/Desing/LOGO.jpeg" alt="logo" >
-            </div>        
-            
+                <img src="/Desing/LOGO.jpeg" alt="logo">
+            </div>
+
             <div class="form">
                 <form action="/action_page.php">
-                  <input type="text" placeholder="Search.." name="search">
-                  <button type="submit"><i class="fa fa-search"></i></button>
+                    <input type="text" placeholder="Search.." name="search">
+                    <button type="submit"><i class="fa fa-search"></i></button>
                 </form>
-            </div>     
-            
-            <nav>                             
+            </div>
+
+            <nav>
                 <div class="cuenta">
                     <ul class="cuentaCarrito">
                         <li><a href="#">Cuenta</a></li>
                         <li><a href="#">Carrito de compras</a></li>
-                        <li><img src = "/img/cart-shopping-solid.svg" alt="logo" class="carrito"></li>
-                    </ul>                   
-                   
+                        <li><img src="/img/cart-shopping-solid.svg" alt="logo" class="carrito"></li>
+                    </ul>
+
                 </div>
 
-               
-             <!-- </nav>              
+
+                <!-- </nav>              
 
              <nav> -->
-                               
+
                 <div class="menu">
                     <ul class="menus">
                         <li><a href="#New Arrivals">New Arrivals </a></li>
                         <li><a href="#Borcegos">Borcegos </a></li>
                         <li><a href="#Botas">Botas </a></li>
-                        <li><a href="#Texanas">Texanas </a></li>                                                                                         
-                        
-                        
+                        <li><a href="#Texanas">Texanas </a></li>
+
+
                     </ul>
-                </div>               
+                </div>
 
             </nav>
-            
-                            
+
+
         </div>
-      
-      
+
+
     </header>
 
 
-    <main class="maincarrito">
-        <article class="artproductos">
-            <p><span class="nombreproductocarrito">Borcego LARA negro 36</span></p>
-            <img class="productocarrito" src="img/LARA.jpeg" alt="PRODUCTO1">
+    <main class="main-carrito">
+        <section class="art-productos">
+            <h3 class="nombreproductocarrito">Borcego LARA negro 36</h3>
+            <div class="productos-carrto">
 
-            <article class="sumacantidadresta">
-                <span class="precioCarrito">$20.000</span><button class="logomasmenoscarrito"><i
-                        class="fa-solid fa-minus"></i></button><span class="cantidadproductocarrito">1</span><button
-                    class="logomasmenoscarrito"><i class="fa-solid fa-plus"></i></button><br>
+                <article class="producto">
 
-            </article>
+                    <img class="producto__img" src="img/LARA.jpeg" alt="PRODUCTO1">
+                    <div class="producto__precio">$20000</div>
+                    <button class="producto__logomas"><i class="fa-solid fa-minus"></i></button>
+                    <div class="producto__cantidad">1</div>
+                    <button class="producto__logomenos"><i class="fa-solid fa-plus"></i></button>
 
-            <article class="articleeliminar">
-                <span class="iconoeliminar"><i class="fa-solid fa-trash-can"></i></span> <button
-                    class="botoneliminar">Eliminar</button>
-            </article>
+                </article>
+            </div>
+
+            <div class="eliminar"><button class="eliminar__boton"><i class="fa-solid fa-trash-can"></i>
+                    Eliminar</button></div>
+
+
+
+        </section>
+
+        <div class="linea-carrito"></div>
+        <section class="art-productos">
+            <h3 class="nombreproductocarrito">Borcego TIZI negro 36</h3>
+            <div class="productos-carrto">
+
+                <article class="producto">
+
+                    <img class="producto__img" src="img/TIZI.jpeg" alt="PRODUCTO1">
+                    <div class="producto__precio">$25000</div>
+                    <button class="producto__logomas"><i class="fa-solid fa-minus"></i></button>
+                    <div class="producto__cantidad">1</div>
+                    <button class="producto__logomenos"><i class="fa-solid fa-plus"></i></button>
+
+                </article>
+            </div>
+
+            <div class="eliminar"><button class="eliminar__boton"><i class="fa-solid fa-trash-can"></i>
+                    Eliminar</button></div>
+
+
+
+        </section>
+
         </article>
-        <div class="lineacarrito"></div>
-        <article class="artproductos">
-            <p><span class="nombreproductocarrito">Borcego TIZI negro 36</span></p>
-            <img class="productocarrito" src="img/TIZI.jpeg" alt="PRODUCTO1">
-            <article class="sumacantidadresta">
-                <span class="precioCarrito">$25.000</span>
-                <button class="logomasmenoscarrito"><i class="fa-solid fa-minus"></i></button><span
-                    class="cantidadproductocarrito">1</span><button class="logomasmenoscarrito"><i
-                        class="fa-solid fa-plus"></i></button><br>
-
-
-            </article>
-            <article class="articleeliminar">
-                <span class="iconoeliminar"><i class="fa-solid fa-trash-can"></i></span> <button
-                    class="botoneliminar">Eliminar</button>
-            </article>
-
-        </article>
-        <div class="lineacarrito"></div>
+        <div class="linea-carrito"></div>
 
 
         <article class="resumencarrito">
-            <h2>Resumen de compra</h2>
-            <p>cupon de descuento</p>
+            <h2 class="title-resumen">Resumen de compra</h2>
 
-            <form class="formulario" action="/action_page.php">
-                <label for="fname"></label>
-                <input type="text" id="fname" name="fname" value="Ingrese su codigo">
-                <button>Usar Cupon</button>
+            <p class="cupon-descuento__text">Cupon de descuento</p>
+            <div class="descuento-flex">
 
-            </form>
+                <form class="cupon-descuento__form" action="/action_page.php">
+                    <label for="fname"></label>
+                    <input type="text" id="fname" name="fname" value="Ingrese su codigo">
+
+                </form>
+                <button class="cupon-descuento__boton">Usar Cupon</button>
+
+            </div>
+
+
+
         </article>
 
         <article>
@@ -134,8 +153,8 @@
 
     </main>
     <footer>
-       
-         
+
+
         <!-- <div class="cuotas">
             <div class="cuotas-pagos">
                
@@ -191,23 +210,23 @@
                 <li>PROMOCIONES <i class="fa-solid fa-caret-down"></i></li><br>
                 <li>FRANQUICIAS <i class="fa-solid fa-caret-down"></i></li><br>
                 <li>TRABAJA CON NOSOTROS <i class="fa-solid fa-caret-down"></i></li>
-            </ul>               
+            </ul>
         </div>
 
         <div class="social-nets">
-          
+
             <i class="fa-brands fa-facebook-square"></i>
             <i class="fa-brands fa-twitter-square"></i>
             <i class="fa-brands fa-instagram-square"></i>
-            <i class="fa-brands fa-google-plus-square"></i>     
-            <i class="fa-brands fa-linkedin"></i>  
-            <i class="fa-brands fa-whatsapp-square"></i>  
-            
+            <i class="fa-brands fa-google-plus-square"></i>
+            <i class="fa-brands fa-linkedin"></i>
+            <i class="fa-brands fa-whatsapp-square"></i>
+
         </div>
 
         <div class="td">
             <h5>SHOE MARKET <i class="fa-solid fa-copyright"></i> Todos los derechos reservados</h5>
-        </div>      
+        </div>
 
     </footer>
 </body>
