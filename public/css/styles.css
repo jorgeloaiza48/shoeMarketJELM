@@ -350,6 +350,12 @@ border: 0.5px solid grey;
     justify-content: space-around;
     margin-bottom: 15px;
     align-items: center;
+    
+}
+.contenedor-precios{
+    border: 1px grey dashed;
+margin-bottom: 10px;
+padding: 10px;
 }
 
 .contenedor-total{
@@ -386,7 +392,7 @@ border: 0.5px solid grey;
 
 
 
-@media (min-width: 760px){
+@media (min-width: 768px){
     .main-carrito{
         display: flex;
 
@@ -400,7 +406,18 @@ border: 0.5px solid grey;
         align-self: center;
     }
 
+    .main-carrito{
+        justify-content: space-evenly;
+    }
+    
+}
 
+    @media (min-width: 992px){
+
+
+.main-carrito{
+    justify-content: space-evenly;
+}
 
 }
 
