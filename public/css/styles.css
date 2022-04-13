@@ -19,12 +19,33 @@ header{
 }
 
 .principal{
-    height: 130px;
-    /* border: solid 2px red; */
-    /* border-bottom: gray solid 1px; */
+    height: 80px;
+    /* display: flex; */
+    /* flex-direction: column; */
     background-color: rgb(231, 241, 241);
     border: solid 1px red;
+    margin: auto;    
    
+}
+
+
+
+.principal-hamburguer-menu{
+    text-align: center;
+    background-color: black;
+    border-radius: 20%;
+    color: white;
+    display:block;
+    margin: auto;
+    padding: 2px 0;
+    font-size: 17px; 
+    max-width: 25px; 
+}
+
+.principal-form-boton{
+    margin: auto;
+   
+  
 }
 
 .texto{
@@ -36,8 +57,9 @@ header{
     font-family: 'Roboto', sans-serif;
 }
 
-.logo img{
+.logo{
     width: 20%;
+    height: 10%;
 }
 
 .form{
@@ -45,7 +67,11 @@ header{
     width: fit-content;
     margin-left: 70px;
     margin-top: -60px;
-    /* border: solid 1px red; */ 
+    border: solid 1px red; 
+}
+
+.principal-carrito{
+    display: none;
 }
 
 
@@ -65,20 +91,7 @@ header{
     display: none;
 }
 
-.hamburguer-menu{
-    background-color: #03264C;
-    color: white;
-    display: block;
-    max-width: 35px;
-    max-height: 10px;
-    /* padding:15px 0px; */
-    border-radius: 15%;
-    text-align: center;
-    font-size: 20px;
-    margin: auto;
-    padding-bottom: 25px;
 
-}
 
 .menu ul{
     list-style: none;
@@ -117,7 +130,7 @@ header{
 
 
 @media (min-width: 760px){
-    .hamburguer-menu{
+    .principal-hamburguer-menu{
         display: none;
     }
 
@@ -386,7 +399,6 @@ border: 0.5px solid grey;
         padding: 10px;
         align-self: center;
     }
-
 
 
 
