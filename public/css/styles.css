@@ -327,11 +327,13 @@ border: 0.5px solid grey;
 .cupon-descuento__form{
     
     width: 20%;
+    padding-right: 10px;
     
 }
 .cupon-descuento__form input{
  
     margin-bottom: 15px;
+    
    
    
 }
@@ -390,13 +392,20 @@ padding: 10px;
     border-radius: 10px;
     background-color: rgb(252, 252, 252);
 }
-
+.descuento-flex{
+    display: flex;
+    justify-content: space-between;
+} 
 
 
 @media (min-width: 768px){
     .main-carrito{
         display: flex;
 
+    }
+
+    .descuento-flex{
+        display: block;
     }
 
     .resumen-de-compra{
@@ -415,7 +424,9 @@ padding: 10px;
 
     @media (min-width: 992px){
 
-
+        .descuento-flex{
+            display: block;
+        } 
 .main-carrito{
     justify-content: space-evenly;
 }
