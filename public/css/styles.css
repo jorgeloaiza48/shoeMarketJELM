@@ -440,37 +440,74 @@ padding: 10px;
 
 .main-descr{
 padding-top: 20px;
+font-family: "ubuntu";
 
 
 }
 .photos-desc{
-    width: 85%;
+    width: 100%;
     display: flex;
     justify-content: space-around;
-    border: 1px blue solid;
+    border: 1px rgb(236, 139, 200) solid;
+    margin-bottom: 20px;
 }
 
 .photos-small__photo{
-width: 50px;
+height: 100%;
+width: 100%;
+padding: 5px;
+align-self: center;
+display: flex;
+border: 1px rgb(236, 139, 200) solid;
+align-items: center;
 
 }
 .photos-desc__big{
-width: 90%
+width: 80%;
 
+margin-left: auto;
+margin-right: auto;
 }
 
 .photos-small{
-    border: 1px red solid;
+    
     width: 20%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    align-self: center;
+
 }
 .photos-desc__div{
-
-border: 1px red solid;
     width: 70%;
+    display: flex;
+    align-items: center;
 }
+.name-pr{
+    text-align: center;
+    border: 1px rgb(236, 139, 200) solid;
 
 
-
+}
+.name-pr__title{
+    
+    font-size: 15px;
+    justify-content: center;
+    display: flex;
+    align-self: center;
+    padding-bottom: 3px;
+    padding-top: 3px;
+    margin-top: 0px;
+}
+.name-pr__price{
+    font-size: 15px;
+    justify-content: center;
+    display: flex;
+    align-self: center;
+}
 
 
 
