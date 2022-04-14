@@ -1,75 +1,153 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/normalize.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-rel="stylesheet" />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu&display=swap" rel="stylesheet">
-<script src="https://kit.fontawesome.com/c0b01d51a5.js" crossorigin="anonymous"></script> <!--para íconos de  fontawesome-->
-    <title>Descripcion del producto</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,100&display=swap" rel="stylesheet">
+    <!--tipografía -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <!--ícono de búsqueda -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;1,100&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/c0b01d51a5.js" crossorigin="anonymous"></script>
+    <!--para íconos de  fontawesome-->
+    <title>Shoe Market</title>
 </head>
+
 <body>
-    descripcion del producto
-    <header>
+    <!-------------------- INICIO HEADER ------------------>
+    <header class="main-header">
 
         <div class="texto">
             <h4>Envío gratis en compras superiores a $2000</h4>
         </div>
-        
+
         <div class="principal">
-            <div class="logo">
-                <img src = "/Desing/LOGO.jpeg" alt="logo" >
-            </div>        
-            
-            <div class="form">
-                <form action="/action_page.php">
-                  <input type="text" placeholder="Search.." name="search">
-                  <button type="submit"><i class="fa fa-search"></i></button>
+
+
+            <div class="principal-form-logo">
+                <img src="/Desing/LOGO.jpeg" alt="logo" class="logo">
+            </div>
+
+            <div class="principal-form-boton">
+                <form action="/action_page.php" class="form">
+                    <input type="text" placeholder="Search..." name="search">
+                    <button type="submit" class="principal-form-boton"><i class="fa fa-search"></i></button>
                 </form>
-            </div>     
-            
-            <nav>                             
-                <div class="cuenta">
+            </div>
+
+            <div class="principal-carrito">
+
+                <nav>
                     <ul class="cuentaCarrito">
                         <li><a href="#">Cuenta</a></li>
                         <li><a href="#">Carrito de compras</a></li>
-                        <li><img src = "/img/cart-shopping-solid.svg" alt="logo" class="carrito"></li>
-                    </ul>                   
-                   
-                </div>
-
-               
-             <!-- </nav>              
-
-             <nav> -->
-                               
-                <div class="menu">
-                    <ul class="menus">
-                        <li><a href="#New Arrivals">New Arrivals </a></li>
-                        <li><a href="#Borcegos">Borcegos </a></li>
-                        <li><a href="#Botas">Botas </a></li>
-                        <li><a href="#Texanas">Texanas </a></li>                                                                                         
-                        
-                        
+                        <li><img src="/img/cart-shopping-solid.svg" alt="logo" class="carrito"></li>
                     </ul>
-                </div>               
+
+                </nav>
+            </div>
+
+
+
+            <a href="#" class="principal-hamburguer-menu">
+                <i class="fa-solid fa-bars"></i>
+            </a>
+
+
+
+        </div>
+
+
+
+
+
+
+        <div class="menu">
+            <nav>
+
+                <ul class="menus">
+                    <li><a href="#New Arrivals">New Arrivals </a></li>
+                    <li><a href="#Borcegos">Borcegos </a></li>
+                    <li><a href="#Botas">Botas </a></li>
+                    <li><a href="#Texanas">Texanas </a></li>
+                    <li><a href="#SALES">SALES </a></li>
+                    <li><a href="#Teniss">Teniss </a></li>
+
+                </ul>
 
             </nav>
-            
-                            
         </div>
-      
+
+
     </header>
 
-    <main></main>
-    <footer>
+    <main class="main-descr">
+        <section class="photos-desc">
 
+            <article class="photos-small">
+
+                <div class="photos-small__div">
+                    <img  class="photos-small__photo"  src="img/FlorNegro.jpeg" alt="product">
+
+                </div>
+                <div class="photos-small__div">
+                    <img class="photos-small__photo"   src="img/FlorRojo.jpeg" alt="product">
+                </div>
+                <div class="photos-small__div">
+                    <img  class="photos-small__photo"  src="img/FlorCrema.jpeg" alt="product">
+                </div>
+            </article>
+
+            <div class="photos-desc__div">
+                <img class="photos-desc__big" src="img/FlorNegro.jpeg" alt="product">
+
+            </div>
+
+
+
+        </section>
+
+        <section class="descr-prod">
+
+            <article class="name-pr">
+                <h3 class="name-pr__title">Nombre del producto</h3>
+                <h4 class="name-pr__price" >$18000</h4>
+                <h5 class="name-pr__cuo" >cuotas disponibles</h5>
+            </article>
+
+            <article class="selec-color">
+                <h4 class="selec-color__title">Selecciona un Color</h4>
+                <div class="selec-color__red"></div>
+                <div class="selec-color__black"></div>
+                <div class="selec-color__beige"></div>
+
+            </article>
+
+            <article class="size">
+                <div class="size__35"></div>
+                <div class="size__36"></div>
+                <div class="size__37" ></div>
+                <div class="size__38" ></div>
+                <div class="size__39" ></div>
+                
+            </article>
+        </section>
+
+
+
+
+
+
+
+
+
+    </main>
+    <footer>
 
         <!-- <div class="cuotas">
             <div class="cuotas-pagos">
@@ -126,25 +204,25 @@ rel="stylesheet" />
                 <li>PROMOCIONES <i class="fa-solid fa-caret-down"></i></li><br>
                 <li>FRANQUICIAS <i class="fa-solid fa-caret-down"></i></li><br>
                 <li>TRABAJA CON NOSOTROS <i class="fa-solid fa-caret-down"></i></li>
-            </ul>               
+            </ul>
         </div>
 
         <div class="social-nets">
-          
+
             <i class="fa-brands fa-facebook-square"></i>
             <i class="fa-brands fa-twitter-square"></i>
             <i class="fa-brands fa-instagram-square"></i>
-            <i class="fa-brands fa-google-plus-square"></i>     
-            <i class="fa-brands fa-linkedin"></i>  
-            <i class="fa-brands fa-whatsapp-square"></i>  
-            
+            <i class="fa-brands fa-google-plus-square"></i>
+            <i class="fa-brands fa-linkedin"></i>
+            <i class="fa-brands fa-whatsapp-square"></i>
+
         </div>
 
         <div class="td">
             <h5>SHOE MARKET <i class="fa-solid fa-copyright"></i> Todos los derechos reservados</h5>
-        </div>      
-
+        </div>
 
     </footer>
 </body>
+
 </html>
