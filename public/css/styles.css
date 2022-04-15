@@ -2,6 +2,7 @@
 
 *{
     box-sizing: border-box;
+    font-family: "ubuntu";
    
 }
 
@@ -402,7 +403,7 @@ section h3{
    
 }
  .prod-carr__logomenos{
-     background-color: rgb(236, 139, 200);
+     background-color: rgb(162, 16, 55);
     color: white;
     margin-left: -25px;
     margin-right: 0px;
@@ -411,7 +412,7 @@ section h3{
 }
 .prod-carr__logomas{
     color: white;
-    background-color: rgb(236, 139, 200);
+    background-color: rgb(162, 16, 55);
     margin-left: 5px;
     margin-right: -25px;
     
@@ -457,7 +458,7 @@ border: 0.5px solid grey;
 
 .cupon-descuento__boton{
     color: white;
-    background-color: rgb(236, 139, 200);
+    background-color: rgb(162, 16, 55);
  
     
 
@@ -509,13 +510,13 @@ padding: 10px;
   
 }
 .boton-finalizar__terminar{
-    background-color: rgb(236, 139, 200);
+    background-color: rgb(162, 16, 55);
     color: white;
     margin-bottom: 15px;
 }
 
 .boton-finalizar__seguir{
-    background-color: rgb(236, 139, 200);
+    background-color: rgb(162, 16, 55);
     color: white;
     margin-bottom: 15px;
 }
@@ -588,7 +589,7 @@ padding: 10px;
 
 }
 .photos-desc{
-    border: 1px rgb(236, 139, 200) solid;
+    
     display: flex;
     justify-content: space-around;
     margin-bottom: 20px;
@@ -630,8 +631,8 @@ width: 100%;
     width: 70%;
 }
 .name-pr{
-    border-top: 1px rgb(236, 139, 200) solid;
-    border-bottom: 1px rgb(236, 139, 200) solid;
+    border-top: 1px rgb(162, 16, 55) solid;
+    border-bottom: 1px rgb(162, 16, 55) solid;
     height: 25%;
     text-align: center;
 
@@ -776,12 +777,12 @@ justify-content: left;
   }
 .select{
     
-    border-bottom: 1px rgb(236, 139, 200) solid;
+    border-bottom: 1px rgb(162, 16, 55) solid;
     height: 25%;
     padding-bottom: 10px;
 }
 .art-size{
-    border-bottom: 1px rgb(236, 139, 200) solid;
+    border-bottom: 1px rgb(162, 16, 55) solid;
     height: 25%;
     padding-bottom: 10px;
 }
@@ -797,6 +798,9 @@ align-items: center;
 padding-top: 10px;
 padding-bottom: 10px;
 width: 90px;
+margin-top: 15px;
+background-color: rgb(162, 16, 55);
+border-radius: 5px;
 }
 
 @media (min-width: 768px){
@@ -830,19 +834,311 @@ text-align: center;
 }
 
 
+.desc-comp__but{
+height: 43px;
+
+}
 
 }
 
 
 /* ////////////////////////////////////FINALIZA DESCRIPCION DEL PRODUCTO////////////////////////////////////////*/
 
+/*-------------------------------------- REGISTRO   -----------------------------------*/
+
+
+.form-Reg {
+    background-color:rgb(206, 184, 205);
+    border-radius: 10px;
+    max-width: 380px;
+    margin: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
+    width: 90%;
+
+}
+
+.form__nombre {
+    margin-bottom: 20px;
+    margin-top: 0px;
+    padding-top: 20px;
+
+}
+.form__nombre label{
+
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    padding-bottom: 10px;
+
+}
+
+
+.form__nombre input {
+    border: none;
+    border-radius: 7px;
+    font-size: 15px;
+    margin-top: 15px;
+    margin-left: 10px;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    padding-left: 5px;
+    width: 85%;
+
+}
+
+/* .form__nombre input:invalid {
+    border: 2px solid red;
+  }
+  
+  .form__nombre input:valid {
+    border: 2px solid #39b54a;
+  }
+  .form__nombre input:focus{
+outline: none
+
+
+  } */
+
+
+.form__usuario {
+    margin-bottom: 20px;
+   
+}
+
+.form__usuario input {
+    border: none;
+    border-radius: 7px;
+    font-size: 15px;
+    margin-left: 10px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 5px;
+    width: 85%;
+
+}
+.form__usuario label{
+
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    padding-bottom: 10px;
+
+    
+
+}
+/* .form__usuario input:invalid {
+    border: 2px solid red;
+  }
+  
+  .form__usuario input:valid {
+    border: 2px solid #39b54a;
+  }
+  .form__usuario input:focus{
+outline: none
+
+
+  } */
+
+
+
+
+
+
+
+.form__fecha input {
+    border-radius: 7px;
+    border: none;
+    color: rgb(122, 117, 117);
+    display: block;
+    font-size: 15px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-left: 10px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    width: 85%; 
+}
+
+
+
+
+
+
+
+.form__fecha label {
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-left: 10px;
+
+
+
+}
+
+.form__domicilio {
+    margin-bottom: 20px;
+}
+
+.form__domicilio input {
+    border: none;
+    border-radius: 7px;
+    font-size: 15px;
+    margin-left: 10px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 5px;
+    width: 85%;
+    
+}
+.form__domicilio label{
+
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    padding-bottom: 10px;
+
+
+
+}
+
+.form__password input{
+    border: none;
+    border-radius: 7px;
+    font-size: 15px;
+    margin-left: 10px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 5px;
+    width: 85%;
+}
+
+.form__password__title{
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    padding-bottom: 10px;
+
+}
+
+.form__confirm input{
+    border: none;
+    border-radius: 7px;
+    font-size: 15px;
+    margin-left: 10px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 5px;
+    width: 85%;
+
+
+}
+
+.form__confirm__title{
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    padding-bottom: 10px;
+
+}
+
+
+.form__button{
+
+background-color: rgb(162, 16, 55);
+border: none;
+border-radius: 10px;
+color: white;
+padding: 10px 20px;
+
+}
+.contenedor_button{
+display: flex;
+justify-content: space-around;
+}
+
+/*---------------------------------------------------REGISTRO-------------------------------------------*/
+
+/*---------------------------------------------------LOGIN-------------------------------------------*/
+
+
+.main-login{
+    margin-top: 30px;
+    
+}
+.button-login {
+    background-color: rgb(162, 16, 55);
+    border-radius: 10px;
+    color: white;
+    margin-bottom: 50px;
+    margin-top: 30px;
+    max-width: 350px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    width: 90%;
+
+}
+
+.usuario {
+
+    text-align: center;
+
+}
+
+.section-login__button {
+
+    text-align: center;
+}
+
+.section-login {
+    background-color: #ebebeb;
+    max-width: 350px;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 100%;
+}
+
+
+.usuario__nombre input {
+    border: 1px solid rgb(162, 16, 55);
+    border-radius: 5px ;
+    margin: 20px;
+    max-width: 600px;
+    margin-top: 30px;
+    padding: 5px;
+    width: 90%;
+
+}
+
+.usuario__pass input {
+    border: 1px solid rgb(162, 16, 55);
+    border-radius: 5px;
+    margin: 20px;
+    max-width: 600px;
+    padding: 5px;
+    width: 90%;
+
+}
+
+/*---------------------------------------------------LOGIN-------------------------------------------*/
+
+
+
 /* //////////////////////////////////////////INICIO FOOTER ///////////////////////////////////////////////*/
 
 footer{
-    width: 90vw; 
     margin: auto;
     font-size: 12px;
     text-align: center;  
+    width: 90vw; 
     /* box-shadow: 0px 0px 10px rgb(100, 100, 100); */
 }
 
