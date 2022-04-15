@@ -905,8 +905,9 @@ footer h5 {
 }
 
 .td{
-    border: solid 1px black;
-    width: 300px;
+    /* border: solid 1px black; */
+    
+    width: 100%;
 }
 
 
@@ -930,6 +931,38 @@ footer h5 {
    margin: auto;
    font-size:x-large;
 }
+
+/* ///////////////////////Media quieries para el footer//////////////////////////////////////////////// */
+
+@media (min-width: 760px){
+
+    .social-nets{
+        width: 100%;
+        border-style: groove;
+        border-style: outset;
+    }
+
+    .td{
+       
+        border-style:outset; 
+    }
+
+    .footer-mobile .footer-mobile-list{
+        display: flex;
+        /* width: 100%; */
+        justify-content: space-around;
+        margin: auto;
+        border-style:outset;
+    }
+
+    footer{
+      margin-top: 10%;
+    }
+}
+
+
+
+
 
 
 /* //////////////////////////////////////////FIN DEL FOOTER /////////////////////////////////////////////////////*/
