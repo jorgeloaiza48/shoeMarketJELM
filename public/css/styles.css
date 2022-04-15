@@ -359,11 +359,14 @@ section h3{
   width: 95% ;
   margin-top: 50px;
   background-color: rgb(232, 207, 207);
+  padding-bottom: 15px;
 }
 .primer-parte-carrito{
     max-width: 400px;
     margin-bottom: 20px;
     padding: 15px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .producto-carrito{
@@ -451,28 +454,35 @@ border: 0.5px solid grey;
     text-align: left;
 }
 
-.cupon-descuento__form{
-    
-    width: 20%;
-    padding-right: 10px;
-    
-}
-.cupon-descuento__form input{
- 
-    margin-bottom: 15px;
-    
-   
-   
-}
+
+
 .cupon-descuento__boton{
     color: white;
     background-color: rgb(236, 139, 200);
-    margin-bottom: 15px
-  
+ 
+    
 
    
   ;
     
+}
+.cont-cupon{
+    display: flex;
+    width: 100%;
+    
+  
+}
+.cont-cupon input{
+width: 65%;
+margin-right: 15px;
+padding-left: 10px;
+
+
+}
+.cupon-descuento__form{
+margin-bottom: 10px
+
+
 }
 
 .contenedor-sub{
@@ -518,10 +528,17 @@ padding: 10px;
     max-width: 400px;
     border-radius: 10px;
     background-color: rgb(252, 252, 252);
+    margin-left: 15px;
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 .descuento-flex{
     display: flex;
     justify-content: space-between;
+    
 } 
 
 
