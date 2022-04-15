@@ -125,6 +125,51 @@ header{
 }
 
 
+/* /////////////////////////////Media quiery para 359px   ///////////////////////////// */
+
+@media(max-width:359px){
+.texto{
+    display: none;
+}
+
+.menu-hamburguesa{
+    display: none;
+}
+
+main .productos{
+    display: none;
+}
+
+main h3{
+    display: none;
+}
+
+.principal-form-boton form{
+    display: none;
+}
+
+.footer-mobile {
+    display: none;
+}
+
+.principal-carrito{
+    display: none;
+}
+
+.social-nets i{
+   display: none;
+    
+}
+
+.footer-mobile{
+    display: none;
+}
+
+.td{
+    display: none;
+}
+
+}
 
 /* /////////////////////////////Media quiery para 360px   ///////////////////////////// */
 
@@ -143,8 +188,8 @@ header{
 
     .principal .principal-form-logo{
       border-style: ridge;
-       width: 20%;
-       height: 100%;       
+       width: auto;
+       height: auto;       
     }
 
     /* .principal .principal-form-boton{
@@ -159,6 +204,7 @@ header{
 
     
     .menu-hamburguesa{
+        display: block;
         border-style:ridge;
         background-color:rgb(231, 241, 241);       
     
