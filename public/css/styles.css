@@ -29,6 +29,7 @@ header{
 
 
 
+
 .principal-hamburguer-menu{
     text-align: center;
     background-color: black;
@@ -125,51 +126,6 @@ header{
 }
 
 
-/* /////////////////////////////Media quiery para 359px   ///////////////////////////// */
-
-@media(max-width:359px){
-.texto{
-    display: none;
-}
-
-.menu-hamburguesa{
-    display: none;
-}
-
-main .productos{
-    display: none;
-}
-
-main h3{
-    display: none;
-}
-
-.principal-form-boton form{
-    display: none;
-}
-
-.footer-mobile {
-    display: none;
-}
-
-.principal-carrito{
-    display: none;
-}
-
-.social-nets i{
-   display: none;
-    
-}
-
-.footer-mobile{
-    display: none;
-}
-
-.td{
-    display: none;
-}
-
-}
 
 /* /////////////////////////////Media quiery para 360px   ///////////////////////////// */
 
@@ -192,11 +148,7 @@ main h3{
        height: auto;       
     }
 
-    /* .principal .principal-form-boton{
-                width: 30%;
-    } */
-
-    
+     
     .principal .principal-form-logo img{
         width:100%;
         height:100%;
@@ -242,6 +194,8 @@ main h3{
         margin: -15px;
     }
 
+
+
 .principal{
     display: flex;
     justify-content: space-around;
@@ -260,7 +214,6 @@ main h3{
 
 .principal-carrito{
     display: block;
-    border-style: ridge;
     width: 200px;
  
 }
@@ -270,10 +223,12 @@ main h3{
     
 }
 
+
+
 .principal-carrito nav cuentaCarrito{
     display: flex;
     justify-content: center;
-
+  
 }
 .principal-carrito li{
     list-style: none;
@@ -922,7 +877,7 @@ footer h5 {
 }
 
 .td{
-    /* border: solid 1px black; */
+    border: solid 1px black;
     
     width: 100%;
 }
@@ -931,15 +886,20 @@ footer h5 {
 .footer-mobile-list{
     list-style: none;
     text-align: left;
+    border: solid 1px black;
 }
+
+
 
 .social-nets{
     width: 300px;
     height: 50px;
+    border: solid 1px black;
     /* background-color: aqua; */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    width: 100%;
     
 }
 
@@ -949,7 +909,38 @@ footer h5 {
    font-size:x-large;
 }
 
+
+
 /* ///////////////////////Media quieries para el footer//////////////////////////////////////////////// */
+
+
+@media (min-width: 360px){
+    .footer-mobile-list .franquicias{
+        display: none;
+    }
+
+    .footer-mobile-list .trabaja{
+        display: none;
+    }
+
+    .footer-mobile-list .locales{
+        display: none;
+    }
+
+    .footer-mobile-list{
+        display: flex;
+        justify-content: space-around;
+       padding-top: 5%;
+       padding-right: 11%;
+
+    }
+
+    footer{
+        margin-top: 10%;
+    }
+}
+
+
 
 @media (min-width: 760px){
 
@@ -974,6 +965,18 @@ footer h5 {
 
     footer{
       margin-top: 10%;
+    }
+
+    .footer-mobile-list .franquicias{
+        display: block;
+    }
+
+    .footer-mobile-list .trabaja{
+        display: block;
+    }
+
+    .footer-mobile-list .locales{
+        display: block;
     }
 }
 
