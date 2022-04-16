@@ -965,6 +965,7 @@ outline: none
     font-size: 15px;
     margin-left: 10px;
     margin-top: 15px;
+    margin-bottom: 15px;
     padding-top: 8px;
     padding-bottom: 8px;
     padding-left: 5px;
@@ -1014,7 +1015,39 @@ padding: 10px 20px;
 .contenedor_button{
 display: flex;
 justify-content: space-around;
+margin-top: 20px;
+margin-bottom: 20px;
 }
+
+.form-Reg input:hover{
+
+    box-shadow: 0 0 5px 0 #095484;
+
+}
+.form-Reg input{
+    outline: none;
+}
+
+.form-Reg label:hover  {
+    color: #095484;
+    }
+
+    .form__button:hover {
+        background-color: rgb(228, 56, 101);
+        }
+        .form-Reg input[type="text"]:focus:required:valid{
+            border:2px solid green;
+        }
+        .form-Reg input[type="text"]:required:invalid{
+            border:2px solid red;
+            }
+
+
+
+
+
+
+
 
 /*---------------------------------------------------REGISTRO-------------------------------------------*/
 
@@ -1081,6 +1114,27 @@ justify-content: space-around;
     padding: 5px;
     width: 90%;
 
+}
+
+.form-login input:hover{
+
+    box-shadow: 0 0 5px 0 rgb(162, 16, 55);
+
+}
+.form-login input{
+    outline: none;
+}
+
+    .button-login:hover {
+        background-color: rgb(228, 56, 101);
+        }       
+
+        .form-login input[type="text"]:focus:required:valid{
+            border:2px solid green;
+        }
+        .form-login input[type="text"]:required:invalid{
+            border:2px solid red;
+            
 }
 
 /*---------------------------------------------------LOGIN-------------------------------------------*/
