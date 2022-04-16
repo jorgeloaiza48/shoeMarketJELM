@@ -1315,6 +1315,10 @@ footer h5 {
       margin-top: 10%;
     }
 
+    .footer-mobile-list{
+        padding-bottom: 4%;
+    }
+
     .footer-mobile-list .franquicias{
         display: block;
     }
@@ -1326,7 +1330,26 @@ footer h5 {
     .footer-mobile-list .locales{
         display: block;
     }
+
+ .main-section-imagen{
+     border: solid 2px violet;
+     /* width: 100%; */
+     
+ }
+
+ 
+
+
+.fa-star{
+    color: red;
+    font-size: medium;
 }
+
+
+
+}
+
+
 
 
 
