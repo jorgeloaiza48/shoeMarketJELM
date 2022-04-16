@@ -22,10 +22,20 @@ header{
 .principal{
     background-color: rgb(231, 241, 241);
     height: 80px;
-    /* display: flex; */
+    display: flex;
     /* flex-direction: column; */
-    margin: auto;    
+    margin: auto;     
+}
+
+/* .principal-form-boton{
+   border: solid 2px red;
    
+} */
+
+.principal-carrito{
+    /* border: solid 2px red; */
+    margin-right: 2%;
+    
 }
 
 
@@ -128,6 +138,8 @@ header{
 
 
 
+
+
 /* /////////////////////////////Media quiery para 360px   ///////////////////////////// */
 
 @media(min-width:360px){
@@ -215,20 +227,34 @@ header{
 
 .principal-carrito{
     display: block;
-    width: 200px;
- 
-}
- 
-.principal-carrito img{
-    width: 80%;
+    width: 400px;
     
 }
 
+/* para juntar la palabra y el ícono */
+.cuentaCarrito a{
+  /* display: flex;  */
+  margin: 0 auto;
+  justify-content: space-between;
+ 
+
+}
+
+.cuentaCarrito{
+    display: flex;
+    justify-content: space-between;
+
+}
 
 
+.principal-carrito nav ul li{
+    padding-bottom: 10px;
+}
+ 
 .principal-carrito nav cuentaCarrito{
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
+    
   
 }
 .principal-carrito li{
@@ -249,7 +275,30 @@ header{
     margin: auto;
 
 }
-   
+
+
+/* Para el efecto en el menú */
+.cuentaCarrito li{
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+  padding: 10px 10px 10px 10px;
+  font-size: 10px;
+  margin-left: 5px;
+  transition: border-bottom 80ms;
+  cursor: pointer;
+}
+
+/* Para el efecto en el menú */
+.cuentaCarrito li:hover{
+  border-bottom: 7px solid rgba(255, 0, 0, 0.7);
+  padding-bottom: 3px;
+}
+
+
+/* Quita el subrayado de los enlaces */
+.cuentaCarrito a{
+    text-decoration: none;
+}
+
 }
 
 /* /////////////////////////////////////////FIN DEL HEADER //////////////////////////////////////////////////*/
@@ -1292,6 +1341,8 @@ footer h5 {
 
 @media (min-width: 760px){
 
+    
+
     .social-nets{
         width: 100%;
         border-style: groove;
@@ -1331,20 +1382,30 @@ footer h5 {
         display: block;
     }
 
- .main-section-imagen{
-     border: solid 2px violet;
-     /* width: 100%; */
-     
- }
-
- 
-
 
 .fa-star{
     color: red;
     font-size: medium;
 }
 
+.section1{
+    margin-bottom: 5%;
+}
+
+.section3{
+    margin-top: 5%;
+}
+
+.section5{
+    margin-top: 5%;
+}
+
+.productos img:hover{
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5); 
+   
+
+}
 
 
 }
