@@ -1010,6 +1010,7 @@ border: none;
 border-radius: 10px;
 color: white;
 padding: 10px 20px;
+transition: all 0.5s;
 
 }
 .contenedor_button{
@@ -1021,11 +1022,12 @@ margin-bottom: 20px;
 
 .form-Reg input:hover{
 
-    box-shadow: 0 0 5px 0 #095484;
+    box-shadow: 0 0 5px 0 rgb(228, 56, 101);
 
 }
 .form-Reg input{
     outline: none;
+    transition: all 0.5s;
 }
 
 .form-Reg label:hover  {
@@ -1069,7 +1071,7 @@ margin-bottom: 20px;
     padding-bottom: 10px;
     text-align: center;
     width: 90%;
-
+transition: all 0.5s;
 }
 
 .usuario {

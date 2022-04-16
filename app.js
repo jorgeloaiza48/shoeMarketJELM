@@ -18,15 +18,15 @@ app.get ("/",(req, res) => {
 
 })
 
-app.get ("/carritodecompras.html",(req, res) => {
+app.get ("/carritodecompras",(req, res) => {
     res.sendFile(path.join(__dirname,"/views/CarritoDeCompras.html"))
 })
 
-app.get ("/login.html",(req, res) => {
+app.get ("/login",(req, res) => {
     res.sendFile(path.join(__dirname,"/views/login.html"))
 })
 
-app.get ("/Registro.html",(req, res) => {
+app.get ("/Registro",(req, res) => {
     res.sendFile(path.join(__dirname,"/views/Registro.html"))
 })
 
