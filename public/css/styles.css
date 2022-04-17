@@ -349,6 +349,13 @@ section h3{
       
 }
 
+/* Aumenta la imagen cuando se pasa el cursor sobre ella */
+.productos img:hover{
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5); 
+}
+
+
 
 
 
@@ -1402,12 +1409,6 @@ footer h5 {
     margin-top: 5%;
 }
 
-.productos img:hover{
-    -webkit-transform: scale(1.5);
-    transform: scale(1.5); 
-   
-
-}
 
 
 }
