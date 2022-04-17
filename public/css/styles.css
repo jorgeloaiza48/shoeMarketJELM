@@ -321,6 +321,8 @@ section h3{
     flex-direction: row;
     flex-wrap: wrap; /*esta línea ubica los div´s hijos en la parte de abajo si estos sobrepasan al elemento padre */
     justify-content: space-around;
+    margin-left: auto;
+    margin-right: auto;
 
 }
 
@@ -334,11 +336,16 @@ section h3{
     
 }
 
+
 .produc P{
     font-size: x-small;
     font-family: 'Roboto', sans-serif;
     font-weight: bold; /*negrita al texto */
     line-height: 5px;
+
+}
+.produc img{
+    width: 150px
 
 }
 
@@ -371,7 +378,7 @@ section h3{
     font-family: "ubuntu";
     margin-top: 50px;
     padding-bottom: 15px;
-    width: 95% ;
+    width: 90% ;
 }
 .primer-parte-carrito{
     max-width: 400px;
@@ -556,6 +563,7 @@ padding: 10px;
 @media (min-width: 768px){
     .main-carrito{
         display: flex;
+       
 
     }
 
@@ -565,15 +573,13 @@ padding: 10px;
 
     .resumen-de-compra{
         align-self: center;
-        margin-left: 30px;
-        margin-right: 10px;
+        margin-left: auto;
+        margin-right: auto;
         height: 50%;
         padding: 10px;
     }
 
-    .main-carrito{
-        justify-content: space-evenly;
-    }
+  
     
 }
 
@@ -582,9 +588,6 @@ padding: 10px;
         .descuento-flex{
             display: block;
         } 
-.main-carrito{
-    justify-content: space-evenly;
-}
 
 }
 

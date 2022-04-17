@@ -18,11 +18,7 @@ app.get ("/",(req, res) => {
 
 })
 
-<<<<<<< HEAD
-app.get ("/CarritoDeCompras",(req, res) => {
-=======
 app.get ("/carritodecompras",(req, res) => {
->>>>>>> e57495a5ad5efa7aba3da16396982bf25073da13
     res.sendFile(path.join(__dirname,"/views/CarritoDeCompras.html"))
 })
 

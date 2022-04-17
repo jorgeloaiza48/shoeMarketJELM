@@ -1,86 +1,81 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/normalize.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,100&display=swap" rel="stylesheet">
-    <!--tipografía -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
-    <!--ícono de búsqueda -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;1,100&display=swap"
-        rel="stylesheet">
-    <script src="https://kit.fontawesome.com/c0b01d51a5.js" crossorigin="anonymous"></script>
-    <!--para íconos de  fontawesome-->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,100&display=swap" rel="stylesheet"> <!--tipografía -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" /> <!--ícono de búsqueda -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;1,100&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/c0b01d51a5.js" crossorigin="anonymous"></script> <!--para íconos de  fontawesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+    <script src="https://player.vimeo.com/api/player.js"></script>
     <title>Shoe Market</title>
 </head>
 
 <body>
-
-    <!-------------------- INICIO HEADER ------------------>
+                <!-------------------- INICIO HEADER ------------------>
     <header class="main-header">
-
+        
         <div class="texto">
             <h4>Envío gratis en compras superiores a $2000</h4>
         </div>
-
+        
         <div class="principal">
 
 
             <div class="principal-form-logo">
-                <img src="/Desing/LOGO2.jpg" alt="logo">
-            </div>
+                <img src = "/Desing/LOGO2.jpg" alt="logo" >
+            </div>    
 
             <div class="principal-form-boton">
-                <form action="/action_page.php">
-                    <input type="text" placeholder="Search..." name="search">
-                    <button type="submit"><i class="fa fa-search"></i></button>
+                <form action="/action_page.php" >
+                  <input type="text" placeholder="Search..." name="search">
+                  <button type="submit"><i class="fa fa-search"></i></button>
                 </form>
             </div>
 
-            <div class="principal-carrito">
+            <div class="principal-carrito">        
+           
+                    <nav>                             
+                         <ul class="cuentaCarrito">
+                             <li><a href="Registro">REGISTRARSE</a><i class="fa-solid fa-user-plus"></i></li>
+                             <li><a href="LOGIN">INICIAR SESIÓN</a><i class="fa-solid fa-right-to-bracket"></i></li>
+                             <li><a href="CarritoDeCompras">CARRITO</a><i class="fa-solid fa-cart-shopping"></i></li>
+                             <!-- <li><img src = "/img/cart-shopping-solid.svg" alt="logo" ></li> -->
+                         </ul>                                  
+                                 
+                      </nav>   
+            </div>                               
 
-                <nav>
-                    <ul class="cuentaCarrito">
-                        <li><a href="#">CUENTA</a></li>
-                        <li><a href="#">CARRITO</a></li>
-                        <li><img src="/img/cart-shopping-solid.svg" alt="logo"></li>
-                    </ul>
+        </div>     
 
-                </nav>
+            <div class="menu-hamburguesa">
+                <a href="#"><i class="fa-solid fa-bars" ></i></a>
             </div>
+            
+          
 
-        </div>
-
-        <div class="menu-hamburguesa">
-            <a href="#"><i class="fa-solid fa-bars"></i></a>
-        </div>
+           
 
 
+            <div class="menu">
+                <nav>                              
+                   
+                     <ul class="menus">
+                        <li><a href="#New Arrivals">NEW ARRIVALS </a></li>
+                        <li><a href="#Borcegos">BORCEGOS </a></li>
+                        <li><a href="#Botas">BOTAS </a></li>
+                        <li><a href="#Texanas">TEXANAS </a></li>
+                        <li><a href="#SALES">SALES </a></li> 
+                        
+                    </ul>                        
 
-
-
-
-        <div class="menu">
-            <nav>
-
-                <ul class="menus">
-                    <li><a href="#New Arrivals">NEW ARRIVALS </a></li>
-                    <li><a href="#Borcegos">BORCEGOS </a></li>
-                    <li><a href="#Botas">BOTAS </a></li>
-                    <li><a href="#Texanas">TEXANAS </a></li>
-                    <li><a href="#SALES">SALES </a></li>
-                    <li><a href="#Teniss">TENIS </a></li>
-                    <li><a href="#Teniss">MARCAS </a></li>
-
-                </ul>
-
-            </nav>
-        </div>
-
+                </nav>                                        
+            </div>
+      
 
     </header>
     <!-------------------------- FIN HEADER ------------------------------->
@@ -92,19 +87,19 @@
             <article class="photos-small">
 
                 <div class="photos-small__div">
-                    <img class="photos-small__photo" src="img/FlorNegro.jpeg" alt="product">
+                    <img class="photos-small__photo" src="img/maddyNegro.jpeg" alt="product">
 
                 </div>
                 <div class="photos-small__div">
-                    <img class="photos-small__photo" src="img/FlorRojo.jpeg" alt="product">
+                    <img class="photos-small__photo" src="img/maddyRojo.jpeg" alt="product">
                 </div>
                 <div class="photos-small__div">
-                    <img class="photos-small__photo" src="img/FlorCrema.jpeg" alt="product">
+                    <img class="photos-small__photo" src="img/maddyCrema.jpeg" alt="product">
                 </div>
             </article>
 
             <div class="photos-desc__div">
-                <img class="photos-desc__big" src="img/FlorNegro.jpeg" alt="product">
+                <img class="photos-desc__big" src="img/maddyNegro.jpeg" alt="product">
 
             </div>
 
