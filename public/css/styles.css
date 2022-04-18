@@ -1,3 +1,24 @@
+/* 
+COLORES
+
+bordo rgb(162, 16, 55)
+
+gris claro rgb(231, 241, 241);
+
+ rojo rgba(255, 0, 0, 0.7);
+
+ rosa rgb(228, 56, 101);
+
+ gris oscuro rgb(122, 117, 117);
+
+
+ TIPOGRAFIA 
+
+ "UBUNTU"
+
+ */
+
+
 * {
     box-sizing: border-box;
     font-family: "ubuntu";
@@ -435,7 +456,7 @@ section h3 {
     color: white;
     margin-left: -25px;
     margin-right: 0px;
-
+    transition: all 0.3s;
 
 }
 
@@ -444,8 +465,13 @@ section h3 {
     background-color: rgb(162, 16, 55);
     margin-left: 5px;
     margin-right: -25px;
-
-
+    transition: all 0.3s;
+}
+.prod-carr__logomas:hover,  .prod-carr__logomenos:hover{
+   
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    
 }
 
 
@@ -463,6 +489,12 @@ section h3 {
 
 .eliminar-carr__boton {
     color: red;
+    transition: all 0.3s;
+}
+.eliminar-carr__boton:hover {
+   
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
 }
 
 .eliminar-carr {
@@ -488,15 +520,19 @@ section h3 {
 
 
 .cupon-descuento__boton {
-    color: white;
     background-color: rgb(162, 16, 55);
-
-
-
-
-    ;
-
+    color: white;
+    transition: all 0.5s;
 }
+
+.cupon-descuento__boton:hover {
+    background-color: rgb(228, 56, 101);
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+
+
 
 .cont-cupon {
     display: flex;
@@ -547,13 +583,27 @@ section h3 {
     background-color: rgb(162, 16, 55);
     color: white;
     margin-bottom: 15px;
+    transition: all 0.5s;
 }
 
 .boton-finalizar__seguir {
     background-color: rgb(162, 16, 55);
     color: white;
     margin-bottom: 15px;
+    transition: all 0.5s;
 }
+.boton-finalizar__seguir:hover {
+    background-color: rgb(228, 56, 101);
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
+.boton-finalizar__terminar:hover {
+    background-color: rgb(228, 56, 101);
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+
 
 
 
@@ -1018,18 +1068,6 @@ section h3 {
 
 }
 
-/* .form__nombre input:invalid {
-    border: 2px solid red;
-  }
-  
-  .form__nombre input:valid {
-    border: 2px solid #39b54a;
-  }
-  .form__nombre input:focus{
-outline: none
-
-
-  } */
 
 
 .form__usuario {
@@ -1060,25 +1098,6 @@ outline: none
 
 
 }
-
-/* .form__usuario input:invalid {
-    border: 2px solid red;
-  }
-  
-  .form__usuario input:valid {
-    border: 2px solid #39b54a;
-  }
-  .form__usuario input:focus{
-outline: none
-
-
-  } */
-
-
-
-
-
-
 
 .form__fecha input {
     border-radius: 7px;
@@ -1211,7 +1230,7 @@ outline: none
 }
 
 .form-Reg label:hover {
-    color: #095484;
+    color: rgb(228, 56, 101);
 }
 
 .form__button:hover {

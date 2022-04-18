@@ -30,3 +30,7 @@ Sitios de referencia:
 5-https://www.rickysarkany.com/ : Es 100% un modelo a seguir dentro de nuestro proyecto, es un e-commerce dedicado a los mismos productos y clientes a los cuales apuntamos nosotros. Tienen un estilo muy marcado y se destacan por su buen marketing
 
 6- https://www.paruolo.com.ar/ : Al igual que la web anterior, es una marca muy reconocida pero en este caso con un publico mas especifico, llevado a la moda de chicas jovenes. Tiene un diseño mas innovador y llamativo.
+
+
+WIREFRAMES:
+
