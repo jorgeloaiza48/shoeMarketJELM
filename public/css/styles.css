@@ -234,22 +234,32 @@ header .carrito {
         border-style: groove;
         display: flex;
         justify-content: space-around;
+       
+       
     }
 
-    .principal-form-logo {
-        width: 80px;
-    }
+    /* .principal-form-logo {
+        width: 100%;  
+       
+    } */
 
-    .principal-form-logo img {
+    
+
+ .principal-form-logo img {
         width: auto;
         height: auto;
-    }
+    } 
 
 
     .principal-carrito {
         display: block;
         width: 400px;
+        padding-top: 2%;
+        
+    }
 
+    .texto h4{
+        font-size: large;
     }
 
     /* para juntar la palabra y el ícono */
@@ -298,6 +308,7 @@ header .carrito {
 
     }
 
+  
 
     /* Para el efecto en el menú */
     .cuentaCarrito li, .menus li {
@@ -310,23 +321,24 @@ header .carrito {
     }
 
     /* Para el efecto en el menú */
-    .cuentaCarrito li:hover  {
+    .cuentaCarrito li:hover, .menus li:hover  {
         border-bottom: 7px solid rgba(255, 0, 0, 0.7);
         padding-bottom: 3px;
     }
 
-    .menus li:hover{
-        border-bottom: 7px solid rgba(255, 0, 0, 0.7);
-        padding-bottom: 3px;
-    }
-    
-
-
+   
     /* Quita el subrayado de los enlaces */
     .cuentaCarrito a, .menus a {
         text-decoration: none;
     }
 
+   
+    .principal{
+        height: 130px;
+
+    }
+
+    
 }
 
 /* /////////////////////////////////////////FIN DEL HEADER //////////////////////////////////////////////////*/
