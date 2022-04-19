@@ -246,15 +246,24 @@ header .carrito {
 
     /* .principal-form-logo {
         width: 100%;  
+        height: 140%;
        
     } */
 
     
 
- .principal-form-logo img {
-        width: auto;
-        height: auto;
+ .principal .principal-form-logo img {
+        /* width: auto; */
+        height: 160%;
+        border-radius: 20%;
     } 
+
+    .principal .principal-form-logo{
+        border: none;
+       
+    }
+
+
 
 
     .principal-carrito {
@@ -322,7 +331,7 @@ header .carrito {
         padding: 10px 10px 10px 10px;
         font-size: 10px;
         margin-left: 5px;
-        transition: border-bottom 80ms;
+        transition: border-bottom 450ms;
         cursor: pointer;
     }
 
@@ -357,10 +366,7 @@ header .carrito {
      height: 5%;     
    }
 
-   .productos .produc p{
-    font-size: large;
-   }
-
+   
    .productos .produc img{
              border-radius: 5%;
              width: 100%;
@@ -375,6 +381,17 @@ header .carrito {
        color: black;
     }
 
+
+    /* Aumenta la imagen cuando se pasa el cursor sobre ella y coloca sombra*/
+.produc:hover {
+    /* -webkit-transform: scale(1); */
+    transform: scale(1.1);
+    box-shadow: 5px 5px 15px 5px rgb(90, 88, 88);
+}
+
+.produc{
+    border-radius: 10%;
+}
 
   
 }
@@ -422,6 +439,18 @@ header .carrito {
 .productos .produc p{
 font-size: large;
 }
+
+/* Aumenta la imagen cuando se pasa el cursor sobre ella y coloca sombra*/
+.produc:hover {
+    /* -webkit-transform: scale(1); */
+    transform: scale(1.1);
+    box-shadow: 5px 5px 15px 5px rgb(90, 88, 88);
+}
+
+.produc{
+    border-radius: 10%;
+}
+
 
 
 }
@@ -485,11 +514,13 @@ section h3 {
 }
 
 /* Aumenta la imagen cuando se pasa el cursor sobre ella y coloca sombra*/
-.productos img:hover {
-    /* -webkit-transform: scale(1.5); */
+/* .productos img:hover {
+    -webkit-transform: scale(1.5);
     transform: scale(1.5);
     box-shadow: 5px 5px 15px 5px rgb(90, 88, 88);
-}
+} */
+
+
 
 
 
