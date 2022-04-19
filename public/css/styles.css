@@ -345,11 +345,28 @@ header .carrito {
 
     }
 
-    /* .main-header{
-        position: fixed;
-        top: 0;
-        width: 100%;
-    } */
+    .productos{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+    }
+
+   .productos .produc{
+      /* border: solid 1px red; */
+     width: 35%;
+     height: 5%;     
+   }
+
+   .productos .produc p{
+    font-size: large;
+   }
+
+   .productos .produc img{
+             border-radius: 5%;
+             width: 100%;
+            
+   }
 
     .fa-star{
         transition: all 450ms;
@@ -374,13 +391,13 @@ header .carrito {
     padding: 10px 10px 10px 10px;
     font-size: 10px;
     margin-left: 5px;
-    transition: border-bottom 80ms;
-    cursor: pointer;
+    transition: border-bottom 450ms;
+  
 }
 
 /* Para el efecto en el menú */
 .cuentaCarrito li:hover, .menus li:hover  {
-    border-bottom: 7px solid rgba(255, 0, 0, 0.7);
+    border-bottom: 7px solid rgb(228, 56, 101,0.7);
     padding-bottom: 3px;
 }
 
@@ -389,6 +406,24 @@ header .carrito {
 .cuentaCarrito a, .menus a {
     text-decoration: none;
 }
+
+.productos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+
+.productos .produc{
+  /* border: solid 1px red; */
+ width: 35%;
+ height: 5%;     
+}
+
+.productos .produc p{
+font-size: large;
+}
+
 
 }
 
