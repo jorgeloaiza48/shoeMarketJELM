@@ -210,6 +210,12 @@ header .carrito {
 
     }
 
+    .main-header{
+        position: fixed;
+        width: 100%;
+        top: 0;
+    }
+
 
 
 
@@ -338,7 +344,51 @@ header .carrito {
 
     }
 
-    
+    /* .main-header{
+        position: fixed;
+        top: 0;
+        width: 100%;
+    } */
+
+    .fa-star{
+        transition: all 450ms;
+    }
+
+    .fa-star:hover{
+       color: black;
+    }
+
+
+  
+}
+
+
+/* /////////////////////////////Media quiery para 992px   ///////////////////////////// */
+
+@media (min-width: 992px) {
+
+ /* Para el efecto en el menú */
+ .cuentaCarrito li, .menus li {
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+    padding: 10px 10px 10px 10px;
+    font-size: 10px;
+    margin-left: 5px;
+    transition: border-bottom 80ms;
+    cursor: pointer;
+}
+
+/* Para el efecto en el menú */
+.cuentaCarrito li:hover, .menus li:hover  {
+    border-bottom: 7px solid rgba(255, 0, 0, 0.7);
+    padding-bottom: 3px;
+}
+
+
+/* Quita el subrayado de los enlaces */
+.cuentaCarrito a, .menus a {
+    text-decoration: none;
+}
+
 }
 
 /* /////////////////////////////////////////FIN DEL HEADER //////////////////////////////////////////////////*/
@@ -399,10 +449,11 @@ section h3 {
 
 }
 
-/* Aumenta la imagen cuando se pasa el cursor sobre ella */
+/* Aumenta la imagen cuando se pasa el cursor sobre ella y coloca sombra*/
 .productos img:hover {
-    -webkit-transform: scale(1.5);
+    /* -webkit-transform: scale(1.5); */
     transform: scale(1.5);
+    box-shadow: 5px 5px 15px 5px rgb(90, 88, 88);
 }
 
 
