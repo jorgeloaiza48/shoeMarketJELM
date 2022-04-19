@@ -11,7 +11,8 @@ gris claro rgb(231, 241, 241);
 
  gris oscuro rgb(122, 117, 117);
 
-
+ rosa claro rgb(232, 207, 207)
+ 
  TIPOGRAFIA 
 
  "UBUNTU"
@@ -1045,7 +1046,7 @@ section h3 {
 
 
 .form-Reg {
-    background-color: rgb(206, 184, 205);
+    background-color: rgb(232, 207, 207);
     border-radius: 10px;
     max-width: 380px;
     margin: 20px;
