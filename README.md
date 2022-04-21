@@ -10,10 +10,11 @@ Franco Matías Oller (DESARROLLADOR)
 Chiara Fiorella Rómulo (DESARROLLADOR)
 
 
-TRELLO
+TRELLO:
 
 https://trello.com/b/xU5XWR0j/tablero-shoe-market
 
+GITHUB:
 
 
 
@@ -33,4 +34,22 @@ Sitios de referencia:
 
 
 WIREFRAMES:
+![Carrito](https://user-images.githubusercontent.com/101527250/164489339-68cd33a7-8e19-49a4-ac35-949302f4f44c.jpg)
+![DescripcionDelProducto](https://user-images.githubusercontent.com/101527250/164489361-658adf4a-c2b2-401a-bbfe-f77270db327c.jpg)
+![FormularioDeRegistro](https://user-images.githubusercontent.com/101527250/164489370-a2519861-0b26-4748-96ac-b9ed6a906574.jpg)
+![Home](https://user-images.githubusercontent.com/101527250/164489377-4951ec6b-7300-456c-a627-9e3f0c4bcdf2.jpg)
+![SingUp](https://user-images.githubusercontent.com/101527250/164489385-02602d33-8578-42b0-ba01-a3bb21091dd8.jpg)
+
+DESING:
+Logo:
+![LOGO2](https://user-images.githubusercontent.com/101527250/164489733-9575423e-ce22-4abb-bf89-ce79e13ead6d.jpg)
+
+
+
+
+
+
+
+
+
 
