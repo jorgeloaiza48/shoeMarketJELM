@@ -34,8 +34,3 @@ Sitios de referencia:
 
 WIREFRAMES:
 
-<img src="/wireframes/Carrito.jpg" alt="Carrito"/>
-<img src="/wireframes/DescripcionDelProducto.jpg" alt="Carrito"/>
-<img src="/wireframes/FormularioDeRegistro.jpg" alt="Carrito"/>
-<img src="/wireframes/Home.jpg" alt="Carrito"/>
-<img src="/wireframes/SingUp.jpg" alt="Carrito"/>
