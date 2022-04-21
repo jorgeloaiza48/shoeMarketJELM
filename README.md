@@ -44,6 +44,29 @@ DESING:
 Logo:
 ![LOGO2](https://user-images.githubusercontent.com/101527250/164489733-9575423e-ce22-4abb-bf89-ce79e13ead6d.jpg)
 
+/* 
+
+COLORES:
+
+-bordo  rgb(162, 16, 55)
+
+-gris claro  rgb(231, 241, 241);
+
+-rojo rgba(255, 0, 0, 0.7);
+
+-rosa rgb(228, 56, 101);
+
+-gris oscuro rgb(122, 117, 117);
+
+-rosa claro rgb(232, 207, 207)
+ 
+ TIPOGRAFIA: 
+
+ "UBUNTU"
+
+ 
+
+
 
 
 
