@@ -339,6 +339,17 @@ header .carrito {
 /* /////////////////////////////Media quiery para 760px   ///////////////////////////// */
 
 @media (min-width: 760px) {
+
+
+
+.icono-carrito{
+    display: none;
+}
+
+    .main-header{
+        border-bottom: none;
+    }
+
     .menu-hamburguesa {
         display: none;
     }
@@ -349,19 +360,39 @@ header .carrito {
         margin: -15px;
     }
 
+    .principal{
+        border: solid 1px blue;
+        width: 100%;
+        height: 54%;
+        display: flex;
+        flex-wrap: wrap;
+      
+    }
 
+    .principal-carrito {
+        display: block;
+        width: 400px;
+        padding-top: -1%;
+        
+    }
 
-    .main-header .principal{
+    .texto{
+        display: block;
+        border: solid 2px red;
+        width: 100%;
+    }
+
+    /* .main-header .principal{
       
         display: flex;
         justify-content: space-around;
         height: 65px;
              
-    }
+    } */
    
-
+/* 
  .principal .principal-form-logo img {
-        /* width: auto; */
+       
         height: 200%;
         border-radius: 2%;
     } 
@@ -372,16 +403,11 @@ header .carrito {
     }
 
 
-    .principal-carrito {
-        display: block;
-        width: 400px;
-        padding-top: -1%;
-        
-    }
+   
 
 .texto h4{
         font-size: large;
-    }
+    } */
 
     /* para juntar la palabra y el ícono */
     .cuentaCarrito a {
@@ -457,10 +483,7 @@ header .carrito {
     }
 
     
-    .main-header .principal{
-        height: 60px;
-        border: none;
-    }
+   
 
     .main-header .menu{
         /* border: solid 2px red; */
