@@ -4,7 +4,7 @@ const app = express()
 
 let puerto = 4000
 
-app.listen(puerto,()=>console.log("Servidor corriendo en el puerto ---> " + puerto))
+app.listen(process.env.PORT || puerto,()=>console.log("Servidor corriendo en el puerto ---> " + puerto))
 
 // const publicPath = path.resolve(__dirname,'./public')
 // app.use(express.static(publicPath))
