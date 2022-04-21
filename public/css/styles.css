@@ -157,6 +157,14 @@ header .carrito {
     list-style: none;
 }
 
+.produc{
+    width: 10%;
+}
+
+.productos{
+    display: flex;
+}
+
 
 
 
@@ -165,46 +173,61 @@ header .carrito {
 
 @media(min-width:360px) {
 
-    .principal-carrito {
+    .texto{
         display: none;
+    }
+
+    .principal-form-boton{
+        display: none;
+    }
+
+    .principal-carrito{
+        display: none;
+    }
+
+    .main-header{
+        border-bottom: solid 2px #a10009;
 
     }
 
-    .principal {
+    .principal-form-logo{
+        display: inline;
+    }
+
+    .menu{
+        display: none;
+    }
+
+    .principal{
         display: flex;
-        justify-content: space-between;
-
+        justify-content: center;
+        height: 10%;
     }
 
-    .principal .principal-form-logo {
-       
-        border-style: ridge;
-        height: 50%;
-        left: 0;
-        top: 0%;
-        width: 20%;
-        position: absolute;
-
-    }
-
+.principal-form-logo{
+    /* border: solid 2px red; */
+    width:40%
+}
 
     .principal .principal-form-logo img {
-        height: auto;
-        width: auto;
+        height: 100%;
+        width:100%;
         
     }
 
 
     .menu-hamburguesa {
-        background-color: rgb(231, 241, 241);
-        border-style: ridge;
+        
+        /* background-color: rgb(231, 241, 241); */
+        /* border-style: ridge; */
         display: block;
-
+        margin-top: 2%;
+        margin-bottom: 2%;
+       
     }
 
     .menu-hamburguesa a {
         background-color: rgb(231, 241, 241);
-        ;
         background-color: black;
         border-radius: 20%;
         color: white;
@@ -217,16 +240,76 @@ header .carrito {
 
     }
 
-    /* .main-header{
-        position: fixed;
+    .section-destacados{
         width: 100%;
-        top: 0;
-    } */
+    }
+
+    h3{
+        text-align: center;
+    }
+
+    .productos{
+        /* border: solid 2px red; */
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        
+        
+    }
+
+    .produc{
+        /* border: solid 2px blue; */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width:auto;       
+        
+    }
+
+    .produc p, i{
+        text-align: center;
+        line-height:0px;        
+    }
+
+    .produc i{
+        margin-bottom: 20px;
+    }
+
+    .produc img{
+        width: 80%;
+        padding-left: 20%;
+        padding-bottom: 2%;  
+    }
+
+    .footer-mobile .institucional{
+        display: none;
+    }
+
+    .footer-mobile .footer-mobile-list{
+        text-align: center;
+        list-style: none;
+        font-size: smaller;
+        line-height: 35%;
+    }
+
+    .footer-mobile{
+        border-top: solid 2px #a10009;
+    }
+
+    .social-nets{
+      
+        margin-top: 10%;
+        text-align: center;
+    }
+
+    .td{
+        text-align: center;
+        border-bottom: solid 2px #a10009;
+    }
 
 
 
 
-}
 
 
 /* /////////////////////////////Media quiery para 760px   ///////////////////////////// */
