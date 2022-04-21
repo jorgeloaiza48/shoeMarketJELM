@@ -13,24 +13,23 @@ app.use(express.static("public"));
 
 // app.use("/static",express.static(__dirname,))
 
-app.get ("/",(req, res) => {
+app.get("/",(req, res) => {
     res.sendFile(path.join(__dirname,"/views/index.html"))
-
 })
 
-app.get ("/carritodecompras",(req, res) => {
+app.get("/carritodecompras",(req, res) => {
     res.sendFile(path.join(__dirname,"/views/CarritoDeCompras.html"))
 })
 
-app.get ("/login",(req, res) => {
+app.get("/login",(req, res) => {
     res.sendFile(path.join(__dirname,"/views/login.html"))
 })
 
-app.get ("/Registro",(req, res) => {
+app.get("/Registro",(req, res) => {
     res.sendFile(path.join(__dirname,"/views/Registro.html"))
 })
 
-app.get ("/descripciondelproducto",(req, res) => {
+app.get("/descripciondelproducto",(req, res) => {
     res.sendFile(path.join(__dirname,"/views/DescripcionDelProducto.html"))
 })
 
