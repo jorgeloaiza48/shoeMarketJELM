@@ -4,7 +4,8 @@ const app = express()
 
 let puerto = 4000
 
-app.listen(process.env.PORT || puerto,()=>console.log("Servidor corriendo en el puerto ---> " + puerto))
+app.listen(process.env.PORT || puerto, ()=>console.log("Servidor corriendo en el puerto ---> " + puerto))
+
 
 // const publicPath = path.resolve(__dirname,'./public')
 // app.use(express.static(publicPath))
@@ -13,27 +14,23 @@ app.use(express.static("public"));
 
 // app.use("/static",express.static(__dirname,))
 
-app.get("/",(req, res) => {
-    res.sendFile(path.join(__dirname,"/views/index.html"))
-})
-app.post("/",(req, res) => {
+app.get("/",(req, res) =>{
     res.sendFile(path.join(__dirname,"/views/index.html"))
 })
 
-
-app.get("/carritodecompras",(req, res) => {
+app.get("/carritodecompras",(req, res) =>{
     res.sendFile(path.join(__dirname,"/views/CarritoDeCompras.html"))
 })
 
-app.get("/login",(req, res) => {
+app.get("/login",(req, res) =>{
     res.sendFile(path.join(__dirname,"/views/login.html"))
 })
 
-app.get("/Registro",(req, res) => {
+app.get("/Registro",(req, res) =>{
     res.sendFile(path.join(__dirname,"/views/Registro.html"))
 })
 
-app.get("/descripciondelproducto",(req, res) => {
+app.get("/descripciondelproducto",(req, res) =>{
     res.sendFile(path.join(__dirname,"/views/DescripcionDelProducto.html"))
 })
 
