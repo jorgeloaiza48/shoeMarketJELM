@@ -20,4 +20,4 @@ Falta de comunicacion en el grupo.
 
 5 Dejar de hacer
 
-Esperar algo de la otra persona sin antes hablar con ella.
+Esperar algo de la otra persona sin antes hablar con ella y decirle lo que uno piensa.
