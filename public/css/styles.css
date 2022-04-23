@@ -19,6 +19,9 @@ gris claro rgb(231, 241, 241);
 
  */
 
+/* div{
+    border: solid 3px green;
+} */
 
 * {
     box-sizing: border-box;
@@ -30,20 +33,25 @@ gris claro rgb(231, 241, 241);
 
 @media(min-width:360px) {
     
-    .footer-mobile .institucional{
+   
+
+  .footer-mobile .institucional{
         display: none;
     }
 
     
     .footer-mobile .footer-mobile-list{
         font-size: smaller;
+        justify-content: space-between;
         line-height: 35%;
         list-style: none;
         text-align: center;
+        margin: 0;
     }
 
-    .footer-mobile{
-        border-top: solid 2px #a10009;
+    .footer-mobile{   
+      
+        margin: 0;
     }
 
 
@@ -118,47 +126,55 @@ gris claro rgb(231, 241, 241);
     }
 
     .productos{
-        /* border: solid 2px red; */
+        /* border: solid 2px  blue; */
         display: flex;
         flex-wrap: wrap;
-        flex-direction: column;    
+        flex-direction: column;   
+      
         
     }
 
      
 
-    .produc{
+    .productos .produc{
         /* border: solid 2px blue; */
         display: flex;
         flex-direction: column;
         justify-content: center;
-        width:auto;       
+        /* border: solid 2px red;  */
+        width: 50%;   
+       
         
     }
 
     .produc p, i{        
         line-height:0px;        
         text-align: center;
+        flex-grow: 0.3;
     }
 
+    
     .produc i{
         margin-bottom: 20px;
     }
 
-    .produc img{
-        padding-left: 20%;
-        padding-bottom: 2%;  
-        width: 80%;
+    .productos .produc img{
+       /* height: 50%; */
+       flex-grow: 0.7;
+        width: 100%;
+      
+       
     }
 
    
-    .section-destacados{
+    /* .section-destacados{
         width: 100%;
-    }
+    } */
 
     .social-nets{     
         margin-top: 10%;
         text-align: center;
+        margin: 0;
     }
 
 
@@ -169,6 +185,7 @@ gris claro rgb(231, 241, 241);
     .td{
         border-bottom: solid 2px #a10009;
         text-align: center;
+        margin: 0;
     }
 
 }
@@ -190,7 +207,7 @@ gris claro rgb(231, 241, 241);
     }
 
 .main-header{
-     background-color: #a10009; /*para fondo del header */
+     background-color: whitesmoke; /*para fondo del header */
 }
 
 .menu ul {
@@ -229,15 +246,19 @@ gris claro rgb(231, 241, 241);
 }
 
 .principal-form-logo img{
+    
     width: 130%;
     height: 150%;
-    margin: 2%;
+   
    
 }
 
 .principal-form-logo{
     /* border: solid 3px greenyellow; */
+    margin-top: 1%;
+    margin-left: 1%;
     width: 10%;    
+  
 }
 
 .principal-form-boton{
@@ -245,6 +266,7 @@ gris claro rgb(231, 241, 241);
     margin: auto;
     width: 30%;   
     height: 20%; 
+    margin-left: 40px;
 }
 
 .principal-form-boton form{
@@ -262,7 +284,9 @@ gris claro rgb(231, 241, 241);
 .principal-carrito {
     /* border: solid 2px blue; */
     display: flex;
-    align-self: center;       
+    align-self: center;   
+    padding: 20px; 
+
 }
 
 .principal-carrito li {
@@ -307,7 +331,7 @@ gris claro rgb(231, 241, 241);
 
     /* Para el efecto en el menú */
     .cuentaCarrito li:hover, .menus li:hover  {
-        border-bottom: 7px solid yellow;
+        border-bottom: 7px solid red;
         padding-bottom: 3px;
     }
 
@@ -378,39 +402,43 @@ gris claro rgb(231, 241, 241);
 
 /* ################### Fin del main############################################# */
 
-/* ##########################Inicio footer########################################## */
+/* ##########################Inicio footer para 760px########################################## */
 
-
-.td{
-    background-color: black ;
+ .footer-mobile{
+    border-top: none;
 }
 
-.td h5{
-    color: white;
+.footer-mobile-list li{
     font-size: medium;
 }
 
-.texto{
-    height: 40px;
-    /* display: flex;
-    justify-content:space-around;
-     */
+   .footer-mobile-list .institucional{
+        /* border: solid 1px blue; */
+        display: flex;
+        flex-direction: column;      
+       line-height: 20px ;
+       padding-left: 2px;
+       margin: 5px;
    }
 
-   .institucional{
-        /* border: solid 1px blue; */
-        flex-direction: column;
-        display: flex;
-       padding-left: 10%; 
-       font-size: smaller;
-       padding-top: 2%;
-       
+   .footer-mobile-list .institucional li{
+       /* border: solid 2px red; */
+      text-align: left;
    }
+
+  
 
    .institucional li{
        /* border: solid 2px red;    */
-       list-style:disc;      
+       list-style:disc;   
+       font-size: x-small;   
       
+   }
+
+   .social-nets{
+       /* border: solid 5px blue; */
+       /* background-color: aqua; */
+       margin: auto;
    }
 
 .social-nets i{
@@ -426,13 +454,26 @@ gris claro rgb(231, 241, 241);
       
    }
 
-    footer{
-       /* border:solid 2px red ; */
-       padding-bottom: 3%;
-       width:100%;
-       
-   } 
+   
+.td{
+    background-color: black;
+}
 
+.td h5{
+    color: white;
+    font-size: medium;
+   
+}
+
+.texto{
+    height: 40px;
+    /* display: flex;
+    justify-content:space-around;
+     */
+   }
+
+   
+}
 
 
 
