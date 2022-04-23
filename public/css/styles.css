@@ -26,147 +26,6 @@ gris claro rgb(231, 241, 241);
 
 }
 
-/* ////////////////////////////////////////INICIO HEADER //////////////////////////////////////////////////*/
-
-
-
-header {
-    margin: auto;
-    width: 90vw;
-    /* font-family: 'ubuntu'; */
-    /* box-shadow: 0px 0px 10px rgb(100, 100, 100); */
-
-
-}
-
-.principal {
-    /* background-color: rgb(231, 241, 241); */
-    height: 80px;
-    display: flex;
-    /* flex-direction: column; */
-    margin: auto;
-}
-
-/* .principal-form-boton{
-   border: solid 2px red;
-   
-} */
-
-.principal-carrito {
-    /* border: solid 2px red; */
-    margin-right: 2%;
-
-}
-
-
-.principal-hamburguer-menu {
-    background-color: black;
-    border-radius: 20%;
-    color: white;
-    display: block;
-    font-size: 17px;
-    margin: auto;
-    max-width: 25px;
-    padding: 2px 0;
-    text-align: center;
-}
-
-.principal-form-boton {
-    margin: auto;
-
-
-}
-
-.texto {
-    background-color: black;
-    color: white;
-    font-size: small;
-    font-family: 'Roboto', sans-serif;
-    padding: 2px;
-    text-align: center;
-}
-
-.logo {
-    height: 10%;
-    width: 20%;
-}
-
-.form {
-    /* background-color: blue; */
-    border: solid 1px red;
-    margin-left: 70px;
-    margin-top: -60px;
-    width: fit-content;
-}
-
-
-
-.menus {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    /* background-color: aquamarine; */
-}
-
-.menu {
-    /* background-color: blue; */
-    margin: 2px 10px 12px 0px;
-}
-
-.menu {
-    display: none;
-}
-
-
-
-.menu ul {
-    list-style: none;
-}
-
-a {
-    color: black;
-    font-size: small;
-    margin-right: 15px;
-    /*space between li elements */
-}
-
-.cuenta {
-
-    margin: 14px -215px 10px 10px;
-
-}
-
-header .carrito {
-    height: 6%;
-    width: 6%;
-
-}
-
-.cuentaCarrito {
-    align-items: flex-end;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-
-}
-
-.cuenta ul {
-    margin-top: 2px;
-    list-style: none;
-}
-
-.produc{
-    width: 10%;
-}
-
-.productos{
-    display: flex;
-}
-
-
-
-
-
 /* /////////////////////////////Media quiery para 360px   ///////////////////////////// */
 
 @media(min-width:360px) {
@@ -195,7 +54,7 @@ header .carrito {
     .icono-carrito{
         /* border: solid 2px blue; */
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         font-size: larger;     
         margin-bottom: 5%;
         width: 100%;            
@@ -214,9 +73,13 @@ header .carrito {
     .principal-form-boton{
         /* border: solid 2px blue; */
         flex-grow: 0.6;
-        width: 40%;
-       
-       
+        display: flex;
+    }
+
+    .principal-form-boton form{
+        display: flex;
+        align-self: center;
+        justify-content: center;
     }
 
     .principal-form-boton form input{
@@ -231,6 +94,7 @@ header .carrito {
 
     .principal-form-logo{
         flex-grow: 0.2;
+        /* border: solid 2px green; */
       }
 
       .principal{
@@ -312,130 +176,125 @@ header .carrito {
 
 
 
+
 /* /////////////////////////////Media quiery para 760px   ///////////////////////////// */
 
 @media (min-width: 760px) {
 
+    .cuentaCarrito {
+        align-items: flex-end;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+    
+    }
 
+.main-header{
+     background-color: #a10009; /*para fondo del header */
+}
+
+.menu ul {
+    list-style: none;
+}
+
+.menu{
+    /* border: solid 5px green; */
+    display: block;
+   
+    }
+
+   .menus {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* background-color: aquamarine; */
+} 
+
+.principal-carrito a, .menu a{
+    color: black;
+    font-size: small;
+    margin-right: 15px;
+   
+}
+
+
+.principal{
+    /* border: solid 5px blue; */
+    width: 100%;
+    height: 54%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  
+}
+
+.principal-form-logo img{
+    width: 130%;
+    height: 150%;
+    margin: 2%;
+   
+}
+
+.principal-form-logo{
+    /* border: solid 3px greenyellow; */
+    width: 10%;    
+}
+
+.principal-form-boton{
+    /* border: solid 5px red; */
+    margin: auto;
+    width: 30%;   
+    height: 20%; 
+}
+
+.principal-form-boton form{
+    /* border: solid 2px blue; */
+    display: flex;
+    width:94%;
+    height: 20%;
+}
+
+.principal-form-boton form input{
+    width: 100%;
+    height: 100%;
+}
+
+.principal-carrito {
+    /* border: solid 2px blue; */
+    display: flex;
+    align-self: center;       
+}
+
+.principal-carrito li {
+    list-style: none;
+
+}
+
+.section-destacados{
+    margin-top: 30%;
+}
+
+.texto {
+    background-color: black;
+    color: white;
+    font-size: small;
+    font-family: 'Roboto', sans-serif;
+    padding: 2px;
+    text-align: center;
+}
 
 .icono-carrito{
     display: none;
 }
 
-    .main-header{
-        border-bottom: none;
-    }
-
-    .menu-hamburguesa {
-        display: none;
-    }
-
-    .menu {
-        display: flex;
-        justify-content: center;
-        margin: -15px;
-    }
-
-    .principal{
-        border: solid 1px blue;
-        width: 100%;
-        height: 54%;
-        display: flex;
-        flex-wrap: wrap;
-      
-    }
-
-    .principal-carrito {
-        display: block;
-        width: 400px;
-        padding-top: -1%;
-        
-    }
-
-    .texto{
-        display: block;
-        border: solid 2px red;
-        width: 100%;
-    }
-
-    /* .main-header .principal{
-      
-        display: flex;
-        justify-content: space-around;
-        height: 65px;
-             
-    } */
-   
-/* 
- .principal .principal-form-logo img {
-       
-        height: 200%;
-        border-radius: 2%;
-    } 
-
-    .principal .principal-form-logo{
-        border: none;
-       
-    }
-
-
-   
-
-.texto h4{
-        font-size: large;
-    } */
-
     /* para juntar la palabra y el ícono */
-    .cuentaCarrito a {
-        /* display: flex;  */
+    /* .cuentaCarrito a {
         margin: 0 auto;
         justify-content: space-between;
 
 
-    }
-
-    .cuentaCarrito {
-        display: flex;
-        justify-content: space-between;
-
-    }
-
-
-    .principal-carrito nav ul li {
-        padding-bottom: 10px;
-    }
-
-    .principal-carrito nav cuentaCarrito {
-        display: flex;
-        justify-content: space-evenly;
-
-
-    }
-
-    .principal-carrito li {
-        list-style: none;
-
-    }
-
-    .principal-carrito img {
-        padding-right: 35px;
-        width: 160%;
-
-    }
-
-    .main-header .menu {
-        
-        height: 75px;
-
-    }
-
-    .menu .menus{
-        display: flex;
-        justify-content: center;
-    }
-
-  
-
+    } */
+ 
     /* Para el efecto en el menú */
     .cuentaCarrito li, .menus li {
         box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
@@ -458,64 +317,69 @@ header .carrito {
         text-decoration: none;
     }
 
+
+/* #######################Fin header para 760px######################## */
+
+/* #######################Inicio main para 760px######################## */
+
     
-   
+.fa-star{
+    transition: all 4s;
+}
 
-    .main-header .menu{
-        /* border: solid 2px red; */
-        height: 68px;
-    }
-
+.fa-star:hover{
+   color: black;
+   transform: rotate(360deg);
+}
+    
     .productos{
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
-
+        /* border: solid 2px green; */
     }
 
    .productos .produc{
-      /* border: solid 1px red; */
-     width: 35%;
+     /* border: solid 1px red; */
+     /* border: groove; */
+     width: 5%;
      height: 5%;     
    }
 
    
    .productos .produc img{
-             border-radius: 5%;
-             width: 100%;
-            
+      /* border-radius: 5%; */
+      width: 100%;     
+      /* border: solid 2px green;   */
+      padding: 2px;     
    }
 
-    .fa-star{
-        transition: all 450ms;
-    }
-
-    .fa-star:hover{
-       color: black;
-    }
-
     .produc{
+        /* border-radius: 10%; */
+        /* border: solid 2px red; */
         transition: all 500ms;
     }
 
-    /* Aumenta la imagen cuando se pasa el cursor sobre ella y coloca sombra*/
-/* .produc:hover {
+ /* Aumenta la imagen cuando se pasa el cursor sobre ella y coloca sombra*/
+.produc:hover {
     -webkit-transform: scale(1);
     transform: scale(1.1);
     box-shadow: 5px 5px 15px 5px rgb(90, 88, 88);
-} */
+}
+
 
 /* Aumenta la imagen cuando se pasa el cursor sobre ella y coloca sombra*/
-.productos .produc img:hover {
-    /* -webkit-transform: scale(1); */
-    transform: scale(1.1);
+/* .productos .produc img:hover {
+   
+    transform: scale(1);
     box-shadow: 5px 5px 15px 5px rgb(90, 88, 88);
-}
+} */
 
 
-.produc{
-    border-radius: 10%;
-}
+/* ################### Fin del main############################################# */
+
+/* ##########################Inicio footer########################################## */
+
 
 .td{
     background-color: black ;
@@ -531,10 +395,6 @@ header .carrito {
     /* display: flex;
     justify-content:space-around;
      */
-   }
-
-.texto p{
-    padding: 0;
    }
 
    .institucional{
@@ -626,22 +486,16 @@ font-size: large;
     box-shadow: 5px 5px 15px 5px rgb(90, 88, 88);
 }
 
-.produc{
-    border-radius: 10%;
-}
-
   .main-header{
-      background-color: rgb(228, 56, 101);
+      /* background-color: rgb(228, 56, 101); */
         position: fixed;
         width: 100%;
         top: 0;
         
     }
 
-    .section-destacados{
-        margin-top: 20%;
-    }
 
+   
 
 
 }
