@@ -14,7 +14,6 @@ comunicacion entre los integrantes del grupo para lograr buenas ideas en conjunt
 
 Comunicacion a diaria a traves de Whatsapp
 
-
 4 Menos de
 
 Falta de comunicacion en el grupo.

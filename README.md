@@ -65,9 +65,33 @@ COLORES:
 
  "UBUNTU"
 
- 
+ HOME de la web en tamaño PC
 
+ HOME de la web en tamaño tablet
 
+ HOME de la web en tamaño celular
+
+Carrito de compras de la web en tamaño PC
+
+Carrito de comprasE de la web en tamaño tablet
+
+Carrito de compras de la web en tamaño celular
+
+Formulario de registro de la web en tamaño PC
+
+Formulario de registro de la web en tamaño tablet
+
+Formulario de registro de la web en tamaño celular
+
+Formulario para loguearse  de la web en tamaño tablet
+
+Formulario para loguearse  de la web en tamaño celular
+
+Descripcion de un producto de la web en tamaño PC
+
+Descripcion de un producto de la web en tamaño tablet
+
+Descripcion de un producto de la web en tamaño celular
 
 
 
