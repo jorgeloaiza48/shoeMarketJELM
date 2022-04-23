@@ -2,11 +2,10 @@ const express = require("express")
 const path = require("path")
 const app = express()
 
-// let puerto = 4000
-// app.listen(process.env.PORT || puerto, ()=>console.log("Servidor corriendo en el puerto ---> " + puerto))
+let puerto = 4000
+app.listen(process.env.PORT || puerto, ()=>console.log("Servidor corriendo en el puerto ---> " + puerto))
 
 //configuración para montar en Heroku
-app.listen(process.env.PORT || 4000, ()=> console.log("Server is running..."))
 
 // const publicPath = path.resolve(__dirname,'./public')
 // app.use(express.static(publicPath))
