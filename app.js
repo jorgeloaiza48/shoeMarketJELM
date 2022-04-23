@@ -2,11 +2,10 @@ const express = require("express")
 const path = require("path")
 const app = express()
 
-// let puerto = 4000
-// app.listen(process.env.PORT || puerto, ()=>console.log("Servidor corriendo en el puerto ---> " + puerto))
+let puerto = 4000
+app.listen(process.env.PORT || puerto, ()=>console.log("Servidor corriendo en el puerto ---> " + puerto))
 
 //configuración para montar en Heroku
-app.listen(process.env.PORT || 3030, ()=> console.log("Server is running..."))
 
 // const publicPath = path.resolve(__dirname,'./public')
 // app.use(express.static(publicPath))
@@ -16,11 +15,11 @@ app.use(express.static("public"));
 // app.use("/static",express.static(__dirname,))
 
 app.get("/",(req, res) =>{
-    res.sendFile(path.join(__dirname,"/views/index.html"))
+    res.sendFile(path.join(__dirname,"/views/home.html"))
 })
 
 app.get("/carritodecompras",(req, res) =>{
-    res.sendFile(path.join(__dirname,"/views/CarritoDeCompras.html"))
+    res.sendFile(path.join(__dirname,"/views/carritodecompras.html"))
 })
 
 app.get("/login",(req, res) =>{
@@ -28,10 +27,10 @@ app.get("/login",(req, res) =>{
 })
 
 app.get("/Registro",(req, res) =>{
-    res.sendFile(path.join(__dirname,"/views/Registro.html"))
+    res.sendFile(path.join(__dirname,"/views/registro.html"))
 })
 
 app.get("/descripciondelproducto",(req, res) =>{
-    res.sendFile(path.join(__dirname,"/views/DescripcionDelProducto.html"))
+    res.sendFile(path.join(__dirname,"/views/descripciondelproducto.html"))
 })
 
