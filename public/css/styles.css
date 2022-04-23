@@ -207,11 +207,7 @@ gris claro rgb(231, 241, 241);
     }
 
 .main-header{
-<<<<<<< HEAD
      background-color: whitesmoke; /*para fondo del header */
-=======
-     background-color: #ffffff; /*para fondo del header */
->>>>>>> 9e4a0edc92516b8e04ea03383368e923484eb576
 }
 
 .menu ul {
