@@ -29,6 +29,8 @@ gris claro rgb(231, 241, 241);
 
 }
 
+
+
 /* /////////////////////////////Media quiery para 360px   ///////////////////////////// */
 
 @media(min-width:360px) {
@@ -54,6 +56,10 @@ gris claro rgb(231, 241, 241);
         margin: 0;
     }
 
+    
+    header{
+        background-color: white;
+    }
 
     h3{
         text-align: center;
@@ -68,6 +74,7 @@ gris claro rgb(231, 241, 241);
         width: 100%;            
     }
 
+    
     .main-header{
         border-bottom: solid 2px #a10009;
 
@@ -125,53 +132,51 @@ gris claro rgb(231, 241, 241);
         width:100%;       
     }
 
-    .productos{
-        /* border: solid 2px  blue; */
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;   
-      
-        
-    }
 
-     
-
-    .productos .produc{
+    .productos {
         /* border: solid 2px blue; */
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        /* border: solid 2px red;  */
-        width: 50%;   
-       
-        
+        justify-content: center;  
+                                   
+    }
+
+    .productos .produc{
+        /* border: solid 2px green;         */
+        width: 100%;
+        height: auto;                              
     }
 
     .produc p, i{        
         line-height:0px;        
         text-align: center;
-        flex-grow: 0.3;
+       
     }
-
     
     .produc i{
         margin-bottom: 20px;
     }
 
-    .productos .produc img{
-       /* height: 50%; */
-       flex-grow: 0.7;
-        width: 100%;
-      
+    .produc img{       
+       width: 100% !important;
+       height: auto;
        
     }
 
-   
-    /* .section-destacados{
-        width: 100%;
-    } */
+    .section-destacados{
+        margin-top: 12%;
+    }
 
-    .social-nets{     
+    .section-destacados h3{
+        background-color: white;
+        margin-bottom: 10%;
+        width: 100% !important;
+        height: auto;
+        
+    }
+
+   
+     .social-nets{     
         margin-top: 10%;
         text-align: center;
         margin: 0;
@@ -188,6 +193,7 @@ gris claro rgb(231, 241, 241);
         margin: 0;
     }
 
+   
 }
 
 
@@ -226,6 +232,8 @@ gris claro rgb(231, 241, 241);
     justify-content: center;
     /* background-color: aquamarine; */
 } 
+
+
 
 .principal-carrito a, .menu a{
     color: black;
@@ -294,8 +302,23 @@ gris claro rgb(231, 241, 241);
 
 }
 
+
+.produc{
+    width: 25% !important ;
+}
+.productos{   
+    border: none;
+    margin-top: -2rem;  
+}
 .section-destacados{
-    margin-top: 30%;
+    /* border: solid 2px green; */
+    margin-top: 15px;
+    
+}
+
+.section-destacados h3{
+    /* border: solid 2px violet; */
+    margin-top: 2rem;
 }
 
 .texto {
@@ -404,12 +427,30 @@ gris claro rgb(231, 241, 241);
 
 /* ##########################Inicio footer para 760px########################################## */
 
- .footer-mobile{
-    border-top: none;
+
+
+.footer-mobile-list .uno{
+    width: 33%;
+}
+.footer-mobile-list .uno li{
+    color: black;
+    /* border: solid 2px black; */
+}
+
+.footer-mobile .footer-mobile-list {
+    /* border: solid 2px blue; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: auto;
+    border-style: outset;
 }
 
 .footer-mobile-list li{
-    font-size: medium;
+    font-size: x-small;
+    /* border: solid 2px red; */
+  
+    
 }
 
    .footer-mobile-list .institucional{
@@ -427,7 +468,6 @@ gris claro rgb(231, 241, 241);
    }
 
   
-
    .institucional li{
        /* border: solid 2px red;    */
        list-style:disc;   
@@ -474,6 +514,56 @@ gris claro rgb(231, 241, 241);
 
    
 }
+
+
+.social-nets {
+    width: 100%;
+    border-style: groove;
+    border-style: outset;
+}
+
+.td {
+
+    border-style: outset;
+}
+
+
+
+footer {
+    margin-top: 10%;
+}
+/* 
+.footer-mobile-list {
+    padding-bottom: 4%;
+}
+
+
+
+.footer-mobile-list .trabaja {
+    display: block;
+} */
+
+/* .footer-mobile-list .locales {
+    display: block;
+} */
+
+
+.fa-star {
+    color: red;
+    font-size: medium;
+}
+
+.section1 {
+    margin-bottom: 5%;
+}
+
+.section3 {
+    margin-top: 6%;
+}
+
+/* .section5 {
+    margin-top: 5%;
+} */
 
 
 
@@ -1689,7 +1779,7 @@ footer h5 {
 
 
 @media (min-width: 360px) {
-    .footer-mobile-list .franquicias {
+    /* .footer-mobile-list .franquicias {
         display: none;
     }
 
@@ -1699,85 +1789,24 @@ footer h5 {
 
     .footer-mobile-list .locales {
         display: none;
-    }
+    } */
 
     .footer-mobile-list {
         display: flex;
-        justify-content: space-around;
-        padding-top: 5%;
-        padding-right: 11%;
-
+        justify-content:space-evenly;
+        flex-wrap: wrap;    
+        padding: 10px;
     }
 
-    footer {
-        margin-top: 10%;
+    .footer-mobile-list li{
+      /* border: solid 1px red; */
+      padding: 4px;
     }
-}
-
-
-
-@media (min-width: 760px) {
-
-
-
-    .social-nets {
-        width: 100%;
-        border-style: groove;
-        border-style: outset;
-    }
-
-    .td {
-
-        border-style: outset;
-    }
-
-    .footer-mobile .footer-mobile-list {
-        display: flex;
-        /* width: 100%; */
-        justify-content: space-around;
-        margin: auto;
-        border-style: outset;
-    }
-
+  
     footer {
         margin-top: 10%;
     }
 
-    .footer-mobile-list {
-        padding-bottom: 4%;
-    }
-
-    .footer-mobile-list .franquicias {
-        display: block;
-    }
-
-    .footer-mobile-list .trabaja {
-        display: block;
-    }
-
-    .footer-mobile-list .locales {
-        display: block;
-    }
-
-
-    .fa-star {
-        color: red;
-        font-size: medium;
-    }
-
-    .section1 {
-        margin-bottom: 5%;
-    }
-
-    .section3 {
-        margin-top: 5%;
-    }
-
-    .section5 {
-        margin-top: 5%;
-    }
-
-
 
 }
 
@@ -1785,7 +1814,18 @@ footer h5 {
 
 
 
-}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* //////////////////////////////////////////FIN DEL FOOTER /////////////////////////////////////////////////////*/
