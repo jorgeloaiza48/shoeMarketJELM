@@ -34,3 +34,6 @@ app.get("/descripciondelproducto",(req, res) =>{
     res.sendFile(path.join(__dirname,"/views/descripciondelproducto.html"))
 })
 
+app.post("/",(req, res) =>{
+    res.sendFile(path.join(__dirname,"/views/home.html"))
+})
