@@ -214,6 +214,7 @@ gris claro rgb(231, 241, 241);
 
 .main-header{
      background-color: whitesmoke; /*para fondo del header */
+     
 }
 
 .menu ul {
@@ -343,21 +344,41 @@ gris claro rgb(231, 241, 241);
     } */
  
     /* Para el efecto en el menú */
-    .cuentaCarrito li, .menus li {
+    .principal-carrito nav .cuentaCarrito li{
         box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
         padding: 10px 10px 10px 10px;
         font-size: 10px;
         margin-left: 5px;
-        transition: border-bottom 450ms;
+        transition: all 300ms;
         cursor: pointer;
     }
 
-    /* Para el efecto en el menú */
-    .cuentaCarrito li:hover, .menus li:hover  {
-        border-bottom: 7px solid red;
-        padding-bottom: 3px;
+    .menu nav .menus li {
+        box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+        padding: 10px 10px 10px 10px;
+        font-size: 10px;
+        margin-left: 5px;
+        transition: all 300ms;
+        cursor: pointer;
+        
     }
 
+    /* Para el efecto en el menú */
+   .principal-carrito nav .cuentaCarrito li:hover{
+        border-bottom: 7px solid red;
+        padding-bottom: 3px;
+        transform:scale(1.1);
+       
+    }
+ /* Para el efecto en el menú */
+ .menu nav .menus li:hover  {
+    border-bottom: 7px solid red;
+    padding-bottom: 3px;
+    transform:scale(1.1);
+   
+  
+    
+}
    
     /* Quita el subrayado de los enlaces */
     .cuentaCarrito a, .menus a {
@@ -378,7 +399,23 @@ gris claro rgb(231, 241, 241);
    color: black;
    transform: rotate(360deg);
 }
+
+.help-button{   
+    /* border: solid 3px red; */
+    max-width: 12%;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+.help-button button {
+    background-color: black;
+    border-radius: 10%;
+    color: white;
+    cursor: pointer;
+    height: 38px; 
+    width: 100%; 
     
+}
     .productos{
         display: flex;
         flex-wrap: wrap;
@@ -414,6 +451,21 @@ gris claro rgb(231, 241, 241);
     box-shadow: 5px 5px 15px 5px rgb(90, 88, 88);
 }
 
+/* https://stackoverflow.com/questions/16771225/css3-rotate-animation */
+/* Para que el signo de interrogación gire 360 grados */
+.help-button button .fa-circle-question{
+    animation: spin 2s linear signopregunta;
+    -webkit-animation: signopregunta 2s linear infinite;
+    -moz-animation:signopregunta 2s linear infinite;
+    
+}
+/* https://stackoverflow.com/questions/16771225/css3-rotate-animation */
+/* Para que el signo de interrogación gire 360 grados */
+@-moz-keyframes signopregunta { 100% { -moz-transform: rotateY(360deg); } }
+@-webkit-keyframes signopregunta { 100% { -webkit-transform: rotateY(360deg); } }
+@keyframes signopregunta { 100% { -webkit-transform: rotateY(360deg); transform:rotateY(360deg); } } 
+
+
 
 /* Aumenta la imagen cuando se pasa el cursor sobre ella y coloca sombra*/
 /* .productos .produc img:hover {
@@ -427,7 +479,23 @@ gris claro rgb(231, 241, 241);
 
 /* ##########################Inicio footer para 760px########################################## */
 
-
+footer{
+    border-top: solid 2px #a10009;
+}
+.footer-mobile{
+    border:none;
+  
+}
+.footer-mobile .footer-mobile-list{
+    border: none;
+    text-align: left;
+}
+.footer-mobile .footer-mobile-list .uno h4{
+    /* border: solid 3px red; */
+  justify-content: center;
+   text-decoration: underline black;
+   
+}
 
 .footer-mobile-list .uno{
     width: 33%;
@@ -437,13 +505,14 @@ gris claro rgb(231, 241, 241);
     /* border: solid 2px black; */
 }
 
+
 .footer-mobile .footer-mobile-list {
-    /* border: solid 2px blue; */
+    /* border: solid 5px blue; */
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    margin: auto;
-    border-style: outset;
+    justify-content: flex-end;
+    margin-left: 10%; 
+    margin-right: 10%;
 }
 
 .footer-mobile-list li{
@@ -460,6 +529,7 @@ gris claro rgb(231, 241, 241);
        line-height: 20px ;
        padding-left: 2px;
        margin: 5px;
+      
    }
 
    .footer-mobile-list .institucional li{
@@ -481,6 +551,15 @@ gris claro rgb(231, 241, 241);
        margin: auto;
    }
 
+   .news-letter{
+       align-items: center;
+       background-color: whitesmoke;
+       display: flex;
+       flex-direction: column;
+       padding: 1% 2% 4% 2%;
+       /* border: solid 2px red; */
+       width: 100%;
+   }
 .social-nets i{
     transition: all 550ms;
     cursor: pointer;
@@ -518,9 +597,9 @@ gris claro rgb(231, 241, 241);
 
 .social-nets {
     width: 100%;
-    border-style: groove;
-    border-style: outset;
-}
+    /* border-style: groove;
+    border-style: outset;*/
+} 
 
 .td {
 
@@ -617,13 +696,13 @@ font-size: large;
     box-shadow: 5px 5px 15px 5px rgb(90, 88, 88);
 }
 
-  .main-header{
-      /* background-color: rgb(228, 56, 101); */
+  /* .main-header{
+      background-color: rgb(228, 56, 101);
         position: fixed;
         width: 100%;
         top: 0;
         
-    }
+    } */
 
 
    
