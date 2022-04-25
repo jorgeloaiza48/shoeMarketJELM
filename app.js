@@ -16,21 +16,21 @@ app.use(express.static(publicPath));
 // app.use("/static",express.static(__dirname,))
 
 app.get('/',(req, res) =>{
-    res.sendFile(path.resolve(__dirname,'./views/home.html'))
+    res.sendFile(path.resolve(__dirname,"/views/home.html"))
 })
 
-app.get('/carritodecompras',(req, res) =>{
-    res.sendFile(path.resolve(__dirname,'./views/carrito.html'))
+app.get('/carrito',(req, res) =>{
+    res.sendFile(path.resolve(__dirname,"/views/carrito.html"))
 })
 
 app.get('/login',(req, res) =>{
-    res.sendFile(path.resolve(__dirname,'./views/login.html'))
+    res.sendFile(path.resolve(__dirname,"/views/login.html"))
 })
 
 app.get('/registro',(req, res) =>{
-    res.sendFile(path.resolve(__dirname,'./views/registro.html'))
+    res.sendFile(path.resolve(__dirname,"/views/registro.html"))
 })
 
 app.get("/descripcion",(req, res) =>{
-    res.sendFile(path.join(__dirname,"/views/descripcion.html"))
+    res.sendFile(path.join(__dirname,"views/descripcion.html"))
 })
