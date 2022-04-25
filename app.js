@@ -10,7 +10,8 @@ app.listen(process.env.PORT || puerto, ()=>console.log("Servidor corriendo en el
 // const publicPath = path.resolve(__dirname,'./public')
 // app.use(express.static(publicPath))
 
-app.use(express.static("public"));
+const publicPath = path.resolve(__dirname,'./public')
+app.use(express.static(publicPath));
 
 // app.use("/static",express.static(__dirname,))
 
