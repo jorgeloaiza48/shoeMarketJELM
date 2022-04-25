@@ -18,13 +18,8 @@ app.get("/",(req, res) =>{
     res.sendFile(path.join(__dirname,"/views/home.html"))
 })
 
-<<<<<<< HEAD
 app.get('/carrito',(req, res) =>{
     res.sendFile(path.resolve(__dirname,'./views/carrito.html'))
-=======
-app.get("/carritodecompras",(req, res) =>{
-    res.sendFile(path.join(__dirname,"/views/carrito.html"))
->>>>>>> 191ad37f0108fa64dd0bc993c84efd858a6d8618
 })
 
 app.get("/login",(req, res) =>{
@@ -35,12 +30,6 @@ app.get("/registro",(req, res) =>{
     res.sendFile(path.join(__dirname,"/views/Registro.html"))
 })
 
-<<<<<<< HEAD
 app.get('/descripcion',(req, res) =>{
     res.sendFile(path.resolve(__dirname,'./views/descripcion.html'))
 })
-=======
-app.get("/descripciondelproducto",(req, res) =>{
-    res.sendFile(path.join(__dirname,"/views/descripcion.html"))
-})
->>>>>>> 191ad37f0108fa64dd0bc993c84efd858a6d8618
