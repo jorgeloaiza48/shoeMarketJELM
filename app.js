@@ -23,11 +23,11 @@ app.get("/carritodecompras",(req, res) =>{
 })
 
 app.get("/login",(req, res) =>{
-    res.sendFile(path.join(__dirname,"/views/login.html"))
+    res.sendFile(path.join(__dirname,"/views/logIn.html"))
 })
 
 app.get("/registro",(req, res) =>{
-    res.sendFile(path.join(__dirname,"/views/registro.html"))
+    res.sendFile(path.join(__dirname,"/views/Registro.html"))
 })
 
 app.get("/descripciondelproducto",(req, res) =>{
