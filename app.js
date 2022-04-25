@@ -14,22 +14,22 @@ app.use(express.static("public"));
 
 // app.use("/static",express.static(__dirname,))
 
-app.get("/",(req, res) =>{
-    res.sendFile(path.join(__dirname,"/views/home.html"))
+app.get('/',(req, res) =>{
+    res.sendFile(path.resolve(__dirname,'./views/home.html'))
 })
 
-app.get("/carritodecompras",(req, res) =>{
-    res.sendFile(path.join(__dirname,"/views/carritodecompras.html"))
+app.get('/carritodecompras',(req, res) =>{
+    res.sendFile(path.resolve(__dirname,'./views/carritodecompras.html'))
 })
 
-app.get("/login",(req, res) =>{
-    res.sendFile(path.join(__dirname,"/views/login.html"))
+app.get('/login',(req, res) =>{
+    res.sendFile(path.resolve(__dirname,'./views/login.html'))
 })
 
-app.get("/registro",(req, res) =>{
-    res.sendFile(path.join(__dirname,"/views/registro.html"))
+app.get('/registro',(req, res) =>{
+    res.sendFile(path.resolve(__dirname,'./views/registro.html'))
 })
 
-app.get("/descripciondelproducto",(req, res) =>{
-    res.sendFile(path.join(__dirname,"/views/descripciondelproducto.html"))
+app.get('/descripciondelproducto',(req, res) =>{
+    res.sendFile(path.resolve(__dirname,'./views/descripciondelproducto.html'))
 })
