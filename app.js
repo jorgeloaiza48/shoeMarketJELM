@@ -30,6 +30,6 @@ app.get("/registro",(req, res) =>{
     res.sendFile(path.join(__dirname,"/views/Registro.html"))
 })
 
-app.get('/descripcion',(req, res) =>{
+app.get('/descripciondelproducto',(req, res) =>{
     res.sendFile(path.resolve(__dirname,'./views/descripcion.html'))
 })
