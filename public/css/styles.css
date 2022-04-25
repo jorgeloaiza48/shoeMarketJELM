@@ -29,6 +29,8 @@ gris claro rgb(231, 241, 241);
 
 }
 
+
+
 /* /////////////////////////////Media quiery para 360px   ///////////////////////////// */
 
 @media(min-width:360px) {
@@ -54,6 +56,10 @@ gris claro rgb(231, 241, 241);
         margin: 0;
     }
 
+    
+    header{
+        background-color: white;
+    }
 
     h3{
         text-align: center;
@@ -68,6 +74,7 @@ gris claro rgb(231, 241, 241);
         width: 100%;            
     }
 
+    
     .main-header{
         border-bottom: solid 2px #a10009;
 
@@ -125,53 +132,51 @@ gris claro rgb(231, 241, 241);
         width:100%;       
     }
 
-    .productos{
-        /* border: solid 2px  blue; */
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;   
-      
-        
-    }
 
-     
-
-    .productos .produc{
+    .productos {
         /* border: solid 2px blue; */
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        /* border: solid 2px red;  */
-        width: 50%;   
-       
-        
+        justify-content: center;  
+                                   
+    }
+
+    .productos .produc{
+        /* border: solid 2px green;         */
+        width: 100%;
+        height: auto;                              
     }
 
     .produc p, i{        
         line-height:0px;        
         text-align: center;
-        flex-grow: 0.3;
+       
     }
-
     
     .produc i{
         margin-bottom: 20px;
     }
 
-    .productos .produc img{
-       /* height: 50%; */
-       flex-grow: 0.7;
-        width: 100%;
-      
+    .produc img{       
+       width: 100% !important;
+       height: auto;
        
     }
 
-   
-    /* .section-destacados{
-        width: 100%;
-    } */
+    .section-destacados{
+        margin-top: 12%;
+    }
 
-    .social-nets{     
+    .section-destacados h3{
+        background-color: white;
+        margin-bottom: 10%;
+        width: 100% !important;
+        height: auto;
+        
+    }
+
+   
+     .social-nets{     
         margin-top: 10%;
         text-align: center;
         margin: 0;
@@ -188,6 +193,7 @@ gris claro rgb(231, 241, 241);
         margin: 0;
     }
 
+   
 }
 
 
@@ -207,7 +213,8 @@ gris claro rgb(231, 241, 241);
     }
 
 .main-header{
-     background-color: #ffffff; /*para fondo del header */
+     background-color: whitesmoke; /*para fondo del header */
+     
 }
 
 .menu ul {
@@ -226,6 +233,8 @@ gris claro rgb(231, 241, 241);
     justify-content: center;
     /* background-color: aquamarine; */
 } 
+
+
 
 .principal-carrito a, .menu a{
     color: black;
@@ -294,8 +303,23 @@ gris claro rgb(231, 241, 241);
 
 }
 
+
+.produc{
+    width: 25% !important ;
+}
+.productos{   
+    border: none;
+    margin-top: -2rem;  
+}
 .section-destacados{
-    margin-top: 30%;
+    /* border: solid 2px green; */
+    margin-top: 15px;
+    
+}
+
+.section-destacados h3{
+    /* border: solid 2px violet; */
+    margin-top: 2rem;
 }
 
 .texto {
@@ -320,21 +344,41 @@ gris claro rgb(231, 241, 241);
     } */
  
     /* Para el efecto en el menú */
-    .cuentaCarrito li, .menus li {
+    .principal-carrito nav .cuentaCarrito li{
         box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
         padding: 10px 10px 10px 10px;
         font-size: 10px;
         margin-left: 5px;
-        transition: border-bottom 450ms;
+        transition: all 300ms;
         cursor: pointer;
     }
 
-    /* Para el efecto en el menú */
-    .cuentaCarrito li:hover, .menus li:hover  {
-        border-bottom: 7px solid red;
-        padding-bottom: 3px;
+    .menu nav .menus li {
+        box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+        padding: 10px 10px 10px 10px;
+        font-size: 10px;
+        margin-left: 5px;
+        transition: all 300ms;
+        cursor: pointer;
+        
     }
 
+    /* Para el efecto en el menú */
+   .principal-carrito nav .cuentaCarrito li:hover{
+        border-bottom: 7px solid red;
+        padding-bottom: 3px;
+        transform:scale(1.1);
+       
+    }
+ /* Para el efecto en el menú */
+ .menu nav .menus li:hover  {
+    border-bottom: 7px solid red;
+    padding-bottom: 3px;
+    transform:scale(1.1);
+   
+  
+    
+}
    
     /* Quita el subrayado de los enlaces */
     .cuentaCarrito a, .menus a {
@@ -355,7 +399,23 @@ gris claro rgb(231, 241, 241);
    color: black;
    transform: rotate(360deg);
 }
+
+.help-button{   
+    /* border: solid 3px red; */
+    max-width: 12%;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+.help-button button {
+    background-color: black;
+    border-radius: 10%;
+    color: white;
+    cursor: pointer;
+    height: 38px; 
+    width: 100%; 
     
+}
     .productos{
         display: flex;
         flex-wrap: wrap;
@@ -391,6 +451,21 @@ gris claro rgb(231, 241, 241);
     box-shadow: 5px 5px 15px 5px rgb(90, 88, 88);
 }
 
+/* https://stackoverflow.com/questions/16771225/css3-rotate-animation */
+/* Para que el signo de interrogación gire 360 grados */
+.help-button button .fa-circle-question{
+    animation: spin 2s linear signopregunta;
+    -webkit-animation: signopregunta 2s linear infinite;
+    -moz-animation:signopregunta 2s linear infinite;
+    
+}
+/* https://stackoverflow.com/questions/16771225/css3-rotate-animation */
+/* Para que el signo de interrogación gire 360 grados */
+@-moz-keyframes signopregunta { 100% { -moz-transform: rotateY(360deg); } }
+@-webkit-keyframes signopregunta { 100% { -webkit-transform: rotateY(360deg); } }
+@keyframes signopregunta { 100% { -webkit-transform: rotateY(360deg); transform:rotateY(360deg); } } 
+
+
 
 /* Aumenta la imagen cuando se pasa el cursor sobre ella y coloca sombra*/
 /* .productos .produc img:hover {
@@ -404,12 +479,47 @@ gris claro rgb(231, 241, 241);
 
 /* ##########################Inicio footer para 760px########################################## */
 
- .footer-mobile{
-    border-top: none;
+footer{
+    border-top: solid 2px #a10009;
+}
+.footer-mobile{
+    border:none;
+  
+}
+.footer-mobile .footer-mobile-list{
+    border: none;
+    text-align: left;
+}
+.footer-mobile .footer-mobile-list .uno h4{
+    /* border: solid 3px red; */
+  justify-content: center;
+   text-decoration: underline black;
+   
+}
+
+.footer-mobile-list .uno{
+    width: 33%;
+}
+.footer-mobile-list .uno li{
+    color: black;
+    /* border: solid 2px black; */
+}
+
+
+.footer-mobile .footer-mobile-list {
+    /* border: solid 5px blue; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    margin-left: 10%; 
+    margin-right: 10%;
 }
 
 .footer-mobile-list li{
-    font-size: medium;
+    font-size: x-small;
+    /* border: solid 2px red; */
+  
+    
 }
 
    .footer-mobile-list .institucional{
@@ -419,6 +529,7 @@ gris claro rgb(231, 241, 241);
        line-height: 20px ;
        padding-left: 2px;
        margin: 5px;
+      
    }
 
    .footer-mobile-list .institucional li{
@@ -427,7 +538,6 @@ gris claro rgb(231, 241, 241);
    }
 
   
-
    .institucional li{
        /* border: solid 2px red;    */
        list-style:disc;   
@@ -441,6 +551,15 @@ gris claro rgb(231, 241, 241);
        margin: auto;
    }
 
+   .news-letter{
+       align-items: center;
+       background-color: whitesmoke;
+       display: flex;
+       flex-direction: column;
+       padding: 1% 2% 4% 2%;
+       /* border: solid 2px red; */
+       width: 100%;
+   }
 .social-nets i{
     transition: all 550ms;
     cursor: pointer;
@@ -474,6 +593,56 @@ gris claro rgb(231, 241, 241);
 
    
 }
+
+
+.social-nets {
+    width: 100%;
+    /* border-style: groove;
+    border-style: outset;*/
+} 
+
+.td {
+
+    border-style: outset;
+}
+
+
+
+footer {
+    margin-top: 10%;
+}
+/* 
+.footer-mobile-list {
+    padding-bottom: 4%;
+}
+
+
+
+.footer-mobile-list .trabaja {
+    display: block;
+} */
+
+/* .footer-mobile-list .locales {
+    display: block;
+} */
+
+
+.fa-star {
+    color: red;
+    font-size: medium;
+}
+
+.section1 {
+    margin-bottom: 5%;
+}
+
+.section3 {
+    margin-top: 6%;
+}
+
+/* .section5 {
+    margin-top: 5%;
+} */
 
 
 
@@ -527,13 +696,13 @@ font-size: large;
     box-shadow: 5px 5px 15px 5px rgb(90, 88, 88);
 }
 
-  .main-header{
-      /* background-color: rgb(228, 56, 101); */
+  /* .main-header{
+      background-color: rgb(228, 56, 101);
         position: fixed;
         width: 100%;
         top: 0;
         
-    }
+    } */
 
 
    
@@ -1689,7 +1858,7 @@ footer h5 {
 
 
 @media (min-width: 360px) {
-    .footer-mobile-list .franquicias {
+    /* .footer-mobile-list .franquicias {
         display: none;
     }
 
@@ -1699,88 +1868,26 @@ footer h5 {
 
     .footer-mobile-list .locales {
         display: none;
-    }
+    } */
 
     .footer-mobile-list {
         display: flex;
-        justify-content: space-around;
-        padding-top: 5%;
-        padding-right: 11%;
-
+        justify-content:space-evenly;
+        flex-wrap: wrap;    
+        padding: 10px;
     }
 
-    footer {
-        margin-top: 10%;
+    .footer-mobile-list li{
+      /* border: solid 1px red; */
+      padding: 4px;
     }
-}
-
-
-
-@media (min-width: 760px) {
-
-
-
-    .social-nets {
-        width: 100%;
-        border-style: groove;
-        border-style: outset;
-    }
-
-    .td {
-
-        border-style: outset;
-    }
-
-    .footer-mobile .footer-mobile-list {
-        display: flex;
-        /* width: 100%; */
-        justify-content: space-around;
-        margin: auto;
-        border-style: outset;
-    }
-
+  
     footer {
         margin-top: 10%;
     }
 
-    .footer-mobile-list {
-        padding-bottom: 4%;
-    }
-
-    .footer-mobile-list .franquicias {
-        display: block;
-    }
-
-    .footer-mobile-list .trabaja {
-        display: block;
-    }
-
-    .footer-mobile-list .locales {
-        display: block;
-    }
-
-
-    .fa-star {
-        color: red;
-        font-size: medium;
-    }
-
-    .section1 {
-        margin-bottom: 5%;
-    }
-
-    .section3 {
-        margin-top: 5%;
-    }
-
-    .section5 {
-        margin-top: 5%;
-    }
-
-
 
 }
-
 
 
 
