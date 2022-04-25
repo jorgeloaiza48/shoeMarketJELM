@@ -389,6 +389,10 @@ gris claro rgb(231, 241, 241);
 /* #######################Fin header para 760px######################## */
 
 /* #######################Inicio main para 760px######################## */
+.com-but-main{
+    color: rgb(162, 16, 55);
+  text-decoration: none;
+}
 
     
 .fa-star{
