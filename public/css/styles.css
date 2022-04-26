@@ -278,6 +278,8 @@ gris claro rgb(231, 241, 241);
 .menu{
     /* border: solid 5px green; */
     display: block;
+    border-top: solid 1px red;
+    width: 100%;
    
     }
 
