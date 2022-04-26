@@ -21,3 +21,15 @@ Falta de weekly.
 5 Dejar de hacer
 
 No dedicarle el tiempo necesario a las entregas, retro, weekly, pdf, etc.
+
+
+*  ¿Qué problemas tuvimos?
+
+
+
+*  ¿Qué hicimos bien?
+
+
+
+
+*  ¿Qué queremos mejorar?"
