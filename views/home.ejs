@@ -1,87 +1,8 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="stylesheet" href="/css/normalize.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,100&display=swap" rel="stylesheet"> <!--tipografía -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" /> <!--ícono de búsqueda -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;1,100&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/c0b01d51a5.js" crossorigin="anonymous"></script> <!--para íconos de  fontawesome-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
-    <script src="https://player.vimeo.com/api/player.js"></script>
-    <title>Shoe Market</title>
-</head>
+<%- include("./partials/head") %>
+<%- include("./partials/header") %>
 
 <body>
-                <!-------------------- INICIO HEADER ------------------>
-    <header class="main-header">
-        
-        <div class="texto">
-            <p><strong>Envío gratis en compras superiores a $2000</strong></p>
-        </div>
-        
-        <div class="principal">
-
-
-            <div class="principal-form-logo">
-                <a href="/"><img src = "/Desing/LOGO2.jpg" alt="logo" ></a>
-                
-            </div>    
-
-            <div class="principal-form-boton">
-                <form action="/action_page.php" >
-                  <input type="text" placeholder="Búsqueda..." name="search">
-                  <button type="submit"><i class="fa fa-search"></i></button>
-                </form>
-            </div>
-
-            
-            <div class="icono-carrito">
-                <a href="/carrito"><i class="fa-solid fa-cart-shopping"></i></a>
-                <a href="/registro"><i class="fa-solid fa-user-plus"></i></a>
-                <a href="#"><i class="fa-solid fa-bars" ></i></a>
-                
-                
-            </div>
-
-
-            <div class="principal-carrito">        
-           
-                    <nav>                             
-                         <ul class="cuentaCarrito">
-                             <li><a href="/registro">REGISTRARSE</a><i class="fa-solid fa-user-plus"></i></li>
-                             <li><a href="/login">INICIAR SESIÓN</a><i class="fa-solid fa-right-to-bracket"></i></li>
-                             <li><a href="/carrito">CARRITO</a><i class="fa-solid fa-cart-shopping"></i></li>
-                        </ul>                                  
-                                 
-                      </nav>   
-            </div>                               
-             
-
-
-            <div class="menu">
-                <nav>                              
-                   
-                     <ul class="menus">
-                        <li><a href="#New Arrivals">NEW ARRIVALS </a></li>
-                        <li><a href="#Borcegos">BORCEGOS </a></li>
-                        <li><a href="#Botas">BOTAS </a></li>
-                        <li><a href="#Texanas">TEXANAS </a></li>
-                        <li><a href="#SALES">SALES </a></li> 
-                        
-                    </ul>                        
-
-                </nav>                                        
-            </div>
-
-        </div> 
-      
-
-    </header>
-                <!-------------------------- FIN HEADER -------------------------------> 
+   
 
 <!-- *****************************INICIO MAIN****************************************** -->
     
@@ -102,12 +23,12 @@
         <section class="section-destacados">
             <h3>DESTACADOS</h3>
             <div class="productos">
-                <div class="produc"><img src="/img/SashaNegro.jpeg" alt="bota"> <p>Sasha Negro</p><p>$42.000</p> <a href="/descripciondelproducto" class="com-but-main"><p></p><strong>COMPRAR</strong></p></a><i class="fa-solid fa-star"></i></div>
-                <div class="produc"><img src="/img/maddyNegro.jpeg" alt="bota"> <p>Maddy Negro</p><p>$42.000</p><a href="/descripciondelproducto" class="com-but-main"><p></p><strong>COMPRAR</strong></p></a><i class="fa-solid fa-star"></i></div>
-                <div class="produc"><img src="/img/laraNegro.jpeg" alt="bota"> <p>Lara Negro</p><p>$42.000</p><a href="/descripciondelproducto" class="com-but-main"><p></p><strong>COMPRAR</strong></p></a><i class="fa-solid fa-star"></i></div>
-                <div class="produc"><img src="/img/maddyRojo.jpeg" alt="bota"> <p>Maddy Rojo</p><p>$42.000</p><a href="/descripciondelproducto" class="com-but-main"><p></p><strong>COMPRAR</strong></p></a><i class="fa-solid fa-star"></i></div>
-                <div class="produc"><img src="/img/maddyRojo.jpeg" alt="bota"> <p>Maddy Rojo</p><p>$42.000</p><a href="/descripciondelproducto" class="com-but-main"><p></p><strong>COMPRAR</strong></p></a><i class="fa-solid fa-star"></i></div>
-                <div class="produc"><img src="/img/maddyRojo.jpeg" alt="bota"> <p>Maddy Rojo</p><p>$42.000</p><a href="/descripciondelproducto" class="com-but-main"><p></p><strong>COMPRAR</strong></p></a><i class="fa-solid fa-star"></i></div>
+                <div class="produc"><img src="/img/SashaNegro.jpeg" alt="bota"> <p>Sasha Negro</p><p>$42.000</p> <a href="/descripcion" class="com-but-main"><p></p><strong>COMPRAR</strong></p></a><i class="fa-solid fa-star"></i></div>
+                <div class="produc"><img src="/img/maddyNegro.jpeg" alt="bota"> <p>Maddy Negro</p><p>$42.000</p><a href="/descripcion" class="com-but-main"><p></p><strong>COMPRAR</strong></p></a><i class="fa-solid fa-star"></i></div>
+                <div class="produc"><img src="/img/laraNegro.jpeg" alt="bota"> <p>Lara Negro</p><p>$42.000</p><a href="/descripcion" class="com-but-main"><p></p><strong>COMPRAR</strong></p></a><i class="fa-solid fa-star"></i></div>
+                <div class="produc"><img src="/img/maddyRojo.jpeg" alt="bota"> <p>Maddy Rojo</p><p>$42.000</p><a href="/descripcion" class="com-but-main"><p></p><strong>COMPRAR</strong></p></a><i class="fa-solid fa-star"></i></div>
+                <div class="produc"><img src="/img/maddyRojo.jpeg" alt="bota"> <p>Maddy Rojo</p><p>$42.000</p><a href="/descripcion" class="com-but-main"><p></p><strong>COMPRAR</strong></p></a><i class="fa-solid fa-star"></i></div>
+                <div class="produc"><img src="/img/maddyRojo.jpeg" alt="bota"> <p>Maddy Rojo</p><p>$42.000</p><a href="/descripcion" class="com-but-main"><p></p><strong>COMPRAR</strong></p></a><i class="fa-solid fa-star"></i></div>
                 
             </div>
         </section>
@@ -124,12 +45,12 @@
       <section>
         <h3>PROMOCIONES</h3>
             <div class="productos">
-                <div class="produc"><img src="/img/dianaNegro.jpeg" alt="bota"> <p>Diana Negro</p><p>$42.000</p> <a href="/descripciondelproducto" class="com-but-main"><p></p><strong>COMPRAR</strong></p></a><i class="fa-solid fa-star"></i></div>
-                <div class="produc"><img src="/img/maddyNegro.jpeg" alt="bota"> <p>Maddy Negro</p><p>$42.000</p> <a href="/descripciondelproducto" class="com-but-main"><p></p><strong>COMPRAR</strong></p></a><i class="fa-solid fa-star"></i></div>
-                <div class="produc"><img src="/img/maddyCrema.jpeg" alt="bota"> <p>Maddy Crema</p><p>$42.000</p> <a href="/descripciondelproducto" class="com-but-main"><p></p><strong>COMPRAR</strong></p></a><i class="fa-solid fa-star"></i></div>
-                <div class="produc"><img src="/img/londonNegro.jpeg" alt="bota"> <p>London Negro</p><p>$42.000</p> <a href="/descripciondelproducto" class="com-but-main"><p></p><strong>COMPRAR</strong></p></a><i class="fa-solid fa-star"></i></div>
-                <div class="produc"><img src="/img/londonNegro.jpeg" alt="bota"> <p>London Negro</p><p>$42.000</p> <a href="/descripciondelproducto" class="com-but-main"><p></p><strong>COMPRAR</strong></p></a><i class="fa-solid fa-star"></i></div>
-                <div class="produc"><img src="/img/londonNegro.jpeg" alt="bota"> <p>London Negro</p><p>$42.000</p> <a href="/descripciondelproducto" class="com-but-main"><p></p><strong>COMPRAR</strong></p></a><i class="fa-solid fa-star"></i></div>
+                <div class="produc"><img src="/img/dianaNegro.jpeg" alt="bota"> <p>Diana Negro</p><p>$42.000</p> <a href="/descripcion" class="com-but-main"><p></p><strong>COMPRAR</strong></p></a><i class="fa-solid fa-star"></i></div>
+                <div class="produc"><img src="/img/maddyNegro.jpeg" alt="bota"> <p>Maddy Negro</p><p>$42.000</p> <a href="/descripcion" class="com-but-main"><p></p><strong>COMPRAR</strong></p></a><i class="fa-solid fa-star"></i></div>
+                <div class="produc"><img src="/img/maddyCrema.jpeg" alt="bota"> <p>Maddy Crema</p><p>$42.000</p> <a href="/descripcion" class="com-but-main"><p></p><strong>COMPRAR</strong></p></a><i class="fa-solid fa-star"></i></div>
+                <div class="produc"><img src="/img/londonNegro.jpeg" alt="bota"> <p>London Negro</p><p>$42.000</p> <a href="/descripcion" class="com-but-main"><p></p><strong>COMPRAR</strong></p></a><i class="fa-solid fa-star"></i></div>
+                <div class="produc"><img src="/img/londonNegro.jpeg" alt="bota"> <p>London Negro</p><p>$42.000</p> <a href="/descripcion" class="com-but-main"><p></p><strong>COMPRAR</strong></p></a><i class="fa-solid fa-star"></i></div>
+                <div class="produc"><img src="/img/londonNegro.jpeg" alt="bota"> <p>London Negro</p><p>$42.000</p> <a href="/descripcion" class="com-but-main"><p></p><strong>COMPRAR</strong></p></a><i class="fa-solid fa-star"></i></div>
             </div>
           
       </section>
@@ -146,12 +67,12 @@
       <section>
         <h3>BOTAS</h3>
             <div class="productos">
-                <div class="produc"><img src="/img/SashaNegro.jpeg" alt="bota"> <p>Sasha Negro</p><p>$42.000</p> <a href="/descripciondelproducto" class="com-but-main"><p></p><strong>COMPRAR</strong></p></a><i class="fa-solid fa-star"></i></div>
-                <div class="produc"><img src="/img/dianaBlanco.jpeg" alt="bota"> <p>Diana Blanco</p><p>$42.000</p> <a href="/descripciondelproducto" class="com-but-main"><p></p><strong>COMPRAR</strong></p></a><i class="fa-solid fa-star"></i></div>
-                <div class="produc"><img src="/img/dianaNegro.jpeg" alt="bota"> <p>Diana negro</p><p>$42.000</p> <a href="/descripciondelproducto" class="com-but-main"><p></p><strong>COMPRAR</strong></p></a><i class="fa-solid fa-star"></i></div>
-                <div class="produc"><img src="/img/rianneNegro.jpeg" alt="bota"> <p>Rianne Negro</p><p>$42.000</p> <a href="/descripciondelproducto" class="com-but-main"><p></p><strong>COMPRAR</strong></p></a><i class="fa-solid fa-star"></i></div>
-                <div class="produc"><img src="/img/rianneNegro.jpeg" alt="bota"> <p>Rianne Negro</p><p>$42.000</p> <a href="/descripciondelproducto" class="com-but-main"><p></p><strong>COMPRAR</strong></p></a><i class="fa-solid fa-star"></i></div>
-                <div class="produc"><img src="/img/rianneNegro.jpeg" alt="bota"> <p>Rianne Negro</p><p>$42.000</p> <a href="/descripciondelproducto" class="com-but-main"><p></p><strong>COMPRAR</strong></p></a><i class="fa-solid fa-star"></i></div>
+                <div class="produc"><img src="/img/SashaNegro.jpeg" alt="bota"> <p>Sasha Negro</p><p>$42.000</p> <a href="/descripcion" class="com-but-main"><p></p><strong>COMPRAR</strong></p></a><i class="fa-solid fa-star"></i></div>
+                <div class="produc"><img src="/img/dianaBlanco.jpeg" alt="bota"> <p>Diana Blanco</p><p>$42.000</p> <a href="/descripcion" class="com-but-main"><p></p><strong>COMPRAR</strong></p></a><i class="fa-solid fa-star"></i></div>
+                <div class="produc"><img src="/img/dianaNegro.jpeg" alt="bota"> <p>Diana negro</p><p>$42.000</p> <a href="/descripcion" class="com-but-main"><p></p><strong>COMPRAR</strong></p></a><i class="fa-solid fa-star"></i></div>
+                <div class="produc"><img src="/img/rianneNegro.jpeg" alt="bota"> <p>Rianne Negro</p><p>$42.000</p> <a href="/descripcion" class="com-but-main"><p></p><strong>COMPRAR</strong></p></a><i class="fa-solid fa-star"></i></div>
+                <div class="produc"><img src="/img/rianneNegro.jpeg" alt="bota"> <p>Rianne Negro</p><p>$42.000</p> <a href="/descripcion" class="com-but-main"><p></p><strong>COMPRAR</strong></p></a><i class="fa-solid fa-star"></i></div>
+                <div class="produc"><img src="/img/rianneNegro.jpeg" alt="bota"> <p>Rianne Negro</p><p>$42.000</p> <a href="/descripcion" class="com-but-main"><p></p><strong>COMPRAR</strong></p></a><i class="fa-solid fa-star"></i></div>
                 
             </div>
           
@@ -173,40 +94,7 @@
     </main>
 
 <!-- ********************************FIN MAIN***************************************** -->
-
-    <footer>
-            
-      
-
-        <div class="footer-mobile">
-            <ul class="footer-mobile-list">
-                <li class="uno"><h4>SERVICIO AL CLIENTE<i class="fa-solid fa-headphones-simple"></i></h4><br><br><ul class="institucional"><li>MEMBRESÍAS</li><li>CUPONES</li><li>MEDIOS DE PAGO</li><li>GARANTÍAS</li></ul></li><br>
-                <li class="uno"><h4>INSTITUCIONAL <i class="fa-solid fa-building"></i></h4><br><br><ul class="institucional"><li>LOCALES</li><li>CONTACTO</li><li>FORMULARIO DE CONTACTO</li></ul></li><br>
-                <li class="uno"><h4>AYUDA <i class="fa-solid fa-hand-holding-hand"></i></h4><br><br><ul class="institucional"><li>CAMBIOS Y DEVOLUCIONES</li><li>PREGUNTAS FRECUENTES</li><li>CUIDADO DEL CALZADO</li></ul></li><br>
-                <li class="uno"><h4>FRANQUICIAS <i class="fa-solid fa-store"></i></h4><br><br><ul class="institucional"><li>REQUISITOS</li><li>INFORMACIÓN LEGAL</li></ul></li><br>
-                <li class="uno"><h4>ACERCA DE SHOE-MARKET <i class="fa-solid fa-people-group"><br></i></h4><ul class="institucional"><li>NOSOTROS</li><li>TÉRMINOS Y CONDICIONES</li><li>POLÍTICA DE PRIVACIDAD</li><li>POLÍTICA DE DATOS</li><li>TRABAJA CON NOSOTROS</li></ul></li>
-                <li class="uno"><h4>EVENTOS <i class="fa-solid fa-building"></i></h4><br><ul class="institucional"><li>NOSOTROS</li><li>TÉRMINOS Y CONDICIONES</li><li>POLÍTICA DE PRIVACIDAD</li><li>POLÍTICA DE DATOS</li><li>TRABAJA CON NOSOTROS</li></ul></li>
-
-            </ul>               
-        </div>
-
-       
-
-        <div class="social-nets">
-          
-            <i class="fa-brands fa-facebook-square"></i>
-            <i class="fa-brands fa-twitter-square"></i>
-            <i class="fa-brands fa-instagram-square"></i>
-            <i class="fa-brands fa-google-plus-square"></i>     
-            <i class="fa-brands fa-linkedin"></i>  
-            <i class="fa-brands fa-whatsapp-square"></i>  
-            
-        </div>
-
-        <div class="td">
-            <h5>SHOE MARKET <i class="fa-solid fa-copyright"></i> Todos los derechos reservados</h5>
-        </div>      
-
-    </footer>
+<%- include("./partials/footer") %>
+    
 </body>
 </html>
