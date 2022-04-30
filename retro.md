@@ -6,4 +6,3 @@ Estuvimos en constante comunicación y esto nos permitió desarrollar y entregar
 
 Es importante mejorar la distribución de tareas y tiempos apoyándonos en la herramienta destinada para ello que en este caso es Trello.com
 
-asdasdasdasdas
