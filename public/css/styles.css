@@ -256,7 +256,6 @@ h3 {
     .section-destacados h3 {
         background-color: white;
         height: auto;
-<<<<<<< HEAD
         margin-bottom: 10%;               
     }   
     .social-nets {
@@ -266,27 +265,11 @@ h3 {
     display: flex;
     flex-direction: column;
     left: 10px;
-    max-width: 10%;
+    max-width: 38px;
     position: fixed;
     right: 20px;
     top: 250px;
 }
-=======
-        margin-bottom: 10%;
-    }
-
-    .social-nets {
-        border: solid 2px red;
-        display: flex;
-        justify-content: flex-start;
-    }
-
-    .social-nets i {
-        border: solid 2px blue;
-
-
-    }
->>>>>>> 3aac96e20829b6849ba175080d9a5d7bc9837998
 
    
 
@@ -575,7 +558,6 @@ h3 {
         transition: all 500ms;
     }
 
-<<<<<<< HEAD
  /* Aumenta la imagen cuando se pasa el cursor sobre ella y coloca sombra*/
 .produc:hover {
     box-shadow: 5px 5px 15px 5px rgb(90, 88, 88);
@@ -591,7 +573,7 @@ h3 {
     height: 200px;
     justify-content: space-between;
     left: 10px;
-    max-width: 5%;
+    max-width: 38px;
     position: fixed;
     right: 20px;
     top: 250px;
@@ -606,14 +588,6 @@ h3 {
      transform: scale(1);
      -webkit-transform: scale(1.5);      
    }
-=======
-    /* Aumenta la imagen cuando se pasa el cursor sobre ella y coloca sombra*/
-    .produc:hover {
-        box-shadow: 5px 5px 15px 5px rgb(90, 88, 88);
-        transform: scale(1.1);
-        -webkit-transform: scale(1.1);
-    }
->>>>>>> 3aac96e20829b6849ba175080d9a5d7bc9837998
 
     /* https://stackoverflow.com/questions/16771225/css3-rotate-animation */
     /* Para que el signo de interrogación gire 360 grados */
@@ -713,7 +687,6 @@ h3 {
         text-align: left;
     }
 
-<<<<<<< HEAD
   
    .news-letter{
        align-items: center;
@@ -738,65 +711,6 @@ h3 {
    
 }   
 }
-=======
-
-    .institucional li {
-        /* border: solid 2px red;    */
-        font-size: x-small;
-        list-style: disc;
-
-    }
-
-    .social-nets {
-        /* border: solid 5px blue; */
-        /* background-color: aqua; */
-        margin-bottom: 4%;
-
-    }
-
-    .news-letter {
-        align-items: center;
-        background-color: whitesmoke;
-        display: flex;
-        flex-direction: column;
-        padding: 1% 2% 4% 2%;
-        /* border: solid 2px red; */
-        width: 100%;
-    }
-
-    .social-nets i {
-        cursor: pointer;
-        transition: all 550ms;
-    }
-
-    .social-nets i:hover {
-        color: red;
-        height: 100px;
-        transform: scale(1);
-        -webkit-transform: scale(1.5);
-
-    }
-
-
-    .td {
-        /* background-color: #E5E5E5; */
-        border-style: outset;
-    }
-
-    .td h5 {
-        color: black;
-        font-size: medium;
-
-    }
-}
-
-.social-nets {
-    width: 100%;
-    /* border-style: groove;
-    border-style: outset;*/
-}
-
->>>>>>> 3aac96e20829b6849ba175080d9a5d7bc9837998
 footer {
     margin-top: 10%;
 }
