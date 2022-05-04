@@ -19,15 +19,15 @@ gris claro rgb(231, 241, 241);
 
  */
 
-/* div{
-    border: solid 3px green;
-} */
-
 * {
     box-sizing: border-box;
     font-family: "ubuntu";
-
 }
+h3{
+    font-size:x-large;
+    text-align: center;
+}
+
 
 
 
@@ -110,10 +110,7 @@ gris claro rgb(231, 241, 241);
 @-webkit-keyframes signopregunta { 100% { -webkit-transform: rotateY(360deg); } }
 @keyframes signopregunta { 100% { -webkit-transform: rotateY(360deg); transform:rotateY(360deg); } } 
 
-    h3{
-        text-align: center;
-    }
-
+   
     .icono-carrito{
         /* border: solid 2px blue; */
         display: flex;
@@ -235,11 +232,18 @@ gris claro rgb(231, 241, 241);
         height: auto;
         margin-bottom: 10%;               
     }   
-    .social-nets{     
-        margin-top: 10%;
-        margin: 0;
-        text-align: center;
+    .social-nets{  
+        border: solid 2px red;  
+        display: flex;
+        justify-content: flex-start;       
     }
+
+    .social-nets i{
+        border: solid 2px blue;     
+      
+        
+    }
+
 
 
     .texto{
@@ -259,7 +263,7 @@ gris claro rgb(231, 241, 241);
 
 
 
-/* /////////////////////////////Media quiery para 760px   ///////////////////////////// */
+/* /////////////////////////////Media query para 760px   ///////////////////////////// */
 
 @media (min-width: 760px) {
     .credit-cards{
@@ -376,20 +380,6 @@ gris claro rgb(231, 241, 241);
     list-style: none;
 
 }
-/* 
-.productos{   
-    border: solid 1px red;
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: -2rem;  
-}
-.productos .produc{
-    border: solid 1px blue;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    width: 80rem;    
-} */
 .section-destacados{
     /* border: solid 2px green; */
     margin-top: 15px;
@@ -547,14 +537,6 @@ gris claro rgb(231, 241, 241);
 
 
 
-/* Aumenta la imagen cuando se pasa el cursor sobre ella y coloca sombra*/
-/* .productos .produc img:hover {
-   
-    transform: scale(1);
-    box-shadow: 5px 5px 15px 5px rgb(90, 88, 88);
-} */
-
-
 /* ################### Fin del main############################################# */
 
 /* ##########################Inicio footer para 760px########################################## */
@@ -664,40 +646,16 @@ footer{
     color: black;
     font-size: medium;
    
+}   
 }
-
-   
-}
-
-
 .social-nets {
     width: 100%;
     /* border-style: groove;
     border-style: outset;*/
 } 
-
-
-
-
 footer {
     margin-top: 10%;
 }
-/* 
-.footer-mobile-list {
-    padding-bottom: 4%;
-}
-
-
-
-.footer-mobile-list .trabaja {
-    display: block;
-} */
-
-/* .footer-mobile-list .locales {
-    display: block;
-} */
-
-
 .fa-star {
     color: red;
     font-size: medium;
@@ -711,9 +669,6 @@ footer {
     margin-top: 6%;
 }
 
-/* .section5 {
-    margin-top: 5%;
-} */
 
 
 
