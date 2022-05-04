@@ -232,18 +232,20 @@ h3{
         height: auto;
         margin-bottom: 10%;               
     }   
-    .social-nets{  
-        border: solid 2px red;  
-        display: flex;
-        justify-content: flex-start;       
-    }
+    .social-nets {
+    background-color: white;
+    border-radius: 8%;
+    border-style: outset;  
+    display: flex;
+    flex-direction: column;
+    left: 10px;
+    max-width: 10%;
+    position: fixed;
+    right: 20px;
+    top: 250px;
+}
 
-    .social-nets i{
-        border: solid 2px blue;     
-      
-        
-    }
-
+   
 
 
     .texto{
@@ -520,6 +522,30 @@ h3{
     transform: scale(1.1);
     -webkit-transform: scale(1.1);           
 }
+.social-nets {
+    background-color: white;
+    border-radius: 8%;
+    border-style: outset;  
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    justify-content: space-between;
+    left: 10px;
+    max-width: 5%;
+    position: fixed;
+    right: 20px;
+    top: 250px;
+}
+.social-nets img{
+    cursor: pointer;
+    transition: all 550ms;
+}
+
+   .social-nets img:hover{
+     color: red;
+     transform: scale(1);
+     -webkit-transform: scale(1.5);      
+   }
 
 /* https://stackoverflow.com/questions/16771225/css3-rotate-animation */
 /* Para que el signo de interrogación gire 360 grados */
@@ -607,13 +633,7 @@ footer{
       
    }
 
-   .social-nets{
-       /* border: solid 5px blue; */
-       /* background-color: aqua; */
-       margin-bottom: 4%;
-       
-   }
-
+  
    .news-letter{
        align-items: center;
        background-color: whitesmoke;
@@ -623,18 +643,7 @@ footer{
        /* border: solid 2px red; */
        width: 100%;
    }
-.social-nets i{
-    cursor: pointer;
-    transition: all 550ms;
-}
 
-   .social-nets i:hover{
-       color: red;
-       height: 100px;
-       transform: scale(1);
-      -webkit-transform: scale(1.5);
-      
-   }
 
    
 .td{
@@ -648,11 +657,6 @@ footer{
    
 }   
 }
-.social-nets {
-    width: 100%;
-    /* border-style: groove;
-    border-style: outset;*/
-} 
 footer {
     margin-top: 10%;
 }
@@ -1858,43 +1862,11 @@ footer h5 {
 }
 
 
-
-.social-nets {
-    width: 300px;
-    height: 50px;
-    /* border: solid 1px black; */
-    /* background-color: aqua; */
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
-
-}
-
-.social-nets i {
-
-    margin: auto;
-    font-size: x-large;
-}
-
-
-
 /* ///////////////////////Media quieries para el footer//////////////////////////////////////////////// */
 
 
 @media (min-width: 360px) {
-    /* .footer-mobile-list .franquicias {
-        display: none;
-    }
-
-    .footer-mobile-list .trabaja {
-        display: none;
-    }
-
-    .footer-mobile-list .locales {
-        display: none;
-    } */
-
+  
     .footer-mobile-list {
         display: flex;
         justify-content:space-evenly;
