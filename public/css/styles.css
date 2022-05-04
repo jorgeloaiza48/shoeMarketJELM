@@ -203,30 +203,26 @@ gris claro rgb(231, 241, 241);
     .productos {
         /* border: solid 2px blue; */
         display: flex;
-        flex-direction: column;
-        justify-content: center;  
-                                   
+        flex-wrap:wrap;                                  
     }
-
     .productos .produc{
-        /* border: solid 2px green;         */
+        border-style:outset ; 
         height: auto;                              
-        width: 100%;
+        width: 40%;
     }
-
-    .produc p, i{        
+   .produc p, i{        
         line-height:0px;        
-        text-align: center;
-       
+        text-align: center;       
     }
     
     .produc i{
         margin-bottom: 20px;
     }
 
-    .produc img{       
+    .productos .produc img{       
+        
         height: auto;
-        width: 100% !important;
+        width: 100% ;
        
     }
 
@@ -237,13 +233,9 @@ gris claro rgb(231, 241, 241);
     .section-destacados h3{
         background-color: white;
         height: auto;
-        margin-bottom: 10%;
-        width: 100% !important;
-        
-    }
-
-   
-     .social-nets{     
+        margin-bottom: 10%;               
+    }   
+    .social-nets{     
         margin-top: 10%;
         margin: 0;
         text-align: center;
@@ -384,15 +376,20 @@ gris claro rgb(231, 241, 241);
     list-style: none;
 
 }
-
-
-.produc{
-    width: 25% !important ;
-}
+/* 
 .productos{   
-    border: none;
+    border: solid 1px red;
+    display: flex;
+    flex-wrap: wrap;
     margin-top: -2rem;  
 }
+.productos .produc{
+    border: solid 1px blue;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 80rem;    
+} */
 .section-destacados{
     /* border: solid 2px green; */
     margin-top: 15px;
@@ -499,17 +496,18 @@ gris claro rgb(231, 241, 241);
     
 }
     .productos{
+        /* border: solid 2px green; */
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
-        /* border: solid 2px green; */
+       
     }
 
    .productos .produc{
      /* border: solid 1px red; */
-     /* border: groove; */
-     height: 5%;     
-     width: 5%;
+     border-style: outset;
+     width: 25%;
+     
    }
 
    
