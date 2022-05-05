@@ -21,13 +21,20 @@ gris claro rgb(231, 241, 241);
 
 * {
     box-sizing: border-box;
-    font-family: "Ubuntu";
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 h3 {
     font-size: x-large;
     text-align: center;
+}
+
+footer {
+    border-top: solid 2px #a10009;
+    font-size: 12px;
+    margin: auto;
+    text-align: center;
+   
 }
 
 
@@ -37,14 +44,18 @@ h3 {
 
 @media(min-width:360px) {
     .credit-cards {
-        /* background-color: #ebebeb; */
-        border: solid 1px black;
+        background-color: whitesmoke;      
     }
 
     .credit-cards {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
+        padding: 2px;
+    }
+    .credit-cards img{
+        /* border: solid 2px black; */
+        height: 35px;
     }
 
     .credit-cards .uno {
@@ -63,8 +74,6 @@ h3 {
     .footer-mobile .institucional {
         display: none;
     }
-
-
     .footer-mobile .footer-mobile-list {
         font-size: smaller;
         justify-content: space-between;
@@ -73,9 +82,18 @@ h3 {
         margin: 0;
         text-align: center;
     }
+    .footer-mobile-list {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        padding: 10px;
+    }
+    .footer-mobile-list li {
+        padding: 4px;
+    }
 
     .footer-mobile {
-
+        background-color: whitesmoke;
         margin: 0;
     }
 
@@ -260,35 +278,24 @@ h3 {
         margin-bottom: 10%;               
     }   
     .social-nets {
-    background-color: white;
-    border-radius: 8%;
-    border-style: outset;  
     display: flex;
     flex-direction: column;
+    height: 200px;
+    justify-content: space-between;
     left: 10px;
     max-width: 38px;
     position: fixed;
     right: 20px;
     top: 250px;
 }
-
-   
-
-
-    .texto {
+.texto {
         display: none;
-    }
-
-    .td {
-        border-bottom: solid 2px #a10009;
-        margin: 0;
-        text-align: center;
-    }
-
-
 }
-
-
+.td {
+    margin: 0;
+    text-align: center;
+    }
+}
 
 
 
@@ -299,12 +306,11 @@ h3 {
       
         display: flex;       
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: space-around;
        
     }
     .credit-cards img{
-       
-        border: solid 2px red;
+        height: 60px;
     }
 
     .credit-cards .uno {
@@ -461,6 +467,7 @@ h3 {
 
     /* Para el efecto en el menú */
     .principal-carrito nav .cuentaCarrito li {
+        border-radius: 5%;
         box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
         cursor: pointer;
         font-size: 10px;
@@ -471,6 +478,7 @@ h3 {
 
     .menu nav .menus li {
         cursor: pointer;
+        border-radius: 5%;
         box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
         font-size: 10px;
         margin-left: 5px;
@@ -571,10 +579,7 @@ h3 {
     transform: scale(1.1);
     -webkit-transform: scale(1.1);           
 }
-.social-nets {
-    background-color: white;
-    border-radius: 8%;
-    border-style: outset;  
+.social-nets { 
     display: flex;
     flex-direction: column;
     height: 200px;
@@ -632,10 +637,7 @@ h3 {
 
     /* ##########################Inicio footer para 760px########################################## */
 
-    footer {
-        border-top: solid 2px #a10009;
-    }
-
+    
     .footer-mobile {
         border: none;
 
@@ -1866,15 +1868,9 @@ section h3 {
 
 /* //////////////////////////////////////////INICIO FOOTER ///////////////////////////////////////////////*/
 
-footer {
-    margin: auto;
-    font-size: 12px;
-    text-align: center;
-    /* width: 90vw; */
-    /* box-shadow: 0px 0px 10px rgb(100, 100, 100); */
-}
 
-.cuotas {
+
+/* .cuotas {
     background-color: #e8e8e8;
     margin-top: 100%;
     overflow: hidden;
@@ -1884,11 +1880,11 @@ footer {
     flex-direction: row;
     justify-content: space-around;
     display: flex;
-}
+} */
 
-.cuotas-pagos {
+/* .cuotas-pagos {
 
-    /* background-color: aliceblue; */
+   
     float: left;
     font-size: x-small;
     height: 150px;
@@ -1897,100 +1893,40 @@ footer {
     text-align: center;
     width: 200px;
 
-}
+} */
 
 
-.cuotas-pagos p {
+/* .cuotas-pagos p {
 
     text-align: justify;
     font-size: xx-small;
-    /* font-family: 'Roboto', sans-serif; */
-}
+   
+} */
 
-.cuotas-pagos img {
+/* .cuotas-pagos img {
     position: absolute;
     width: 50px;
     height: 60px;
     padding: 2px 20px 35px 0%;
     display: block;
-}
+} */
 
-.cuotas-pagos ul li {
+/* .cuotas-pagos ul li {
     font-size: small;
     text-align: left;
-}
+} */
 
-.fa-facebook-square {
-
-    padding-left: 2.2rem;
-}
-
-.fa-twitter {
-    padding-left: 3.1rem;
-}
-
-.fa-linkedin {
-    padding-left: 2.5rem;
-}
-
-.fa-instagram-square {
-    padding-left: 1.5rem;
-}
-
-
-footer h5 {
+/* footer h5 {
     text-align: center;
-}
+} */
 
-.cuotas-pagos h3 {
+/* .cuotas-pagos h3 {
     text-align: center;
-}
-
-.td {
-    border: solid 1px black;
-
-    width: 100%;
-}
-
-
-.footer-mobile-list {
-    list-style: none;
-    text-align: left;
-    border: solid 1px black;
-}
-
-
-/* ///////////////////////Media quieries para el footer//////////////////////////////////////////////// */
-
-
-@media (min-width: 360px) {
-  
-    .footer-mobile-list {
-        display: flex;
-        justify-content: space-evenly;
-        flex-wrap: wrap;
-        padding: 10px;
-    }
-
-    .footer-mobile-list li {
-        /* border: solid 1px red; */
-        padding: 4px;
-    }
-
-    footer {
-        margin-top: 10%;
-    }
-
-
-}
+} */
 
 
 
 
-
-
-
-/* //////////////////////////////////////////FIN DEL FOOTER /////////////////////////////////////////////////////*/
 /* //////////////////////////////////////////FORMULARIO DE CREACION Y EDICION DE PRODUCTOS /////////////////////////////////////////////////////*/
 .crear-title {
     background-color: rgb(232, 207, 207);
