@@ -262,10 +262,13 @@ footer {
     }
 
     .productos .produc img {
-
         height: auto;
         width: 100%;
-
+    }
+    .productos .produc button{
+        background-color: white;
+        border-radius: 11%;
+        height: 25px;
     }
 
     .section-destacados {
@@ -432,8 +435,17 @@ footer {
 
     .principal-carrito li {
         list-style: none;
-
     }
+.productos .produc button{
+    background-color: white;
+    cursor: pointer;
+    height: 30px;
+    }
+.productos .produc button:hover{
+    background-color: black;
+    color: white;
+   
+}
 
     .section-destacados {
         /* border: solid 2px green; */
@@ -541,8 +553,8 @@ footer {
         cursor: pointer;
         height: 38px;
         width: 100%;
-
     }
+
 
     .productos {
         /* border: solid 2px green; */
@@ -705,15 +717,7 @@ footer {
        padding: 1% 2% 4% 2%;
        /* border: solid 2px red; */
        width: 100%;
-   }
-
-
-   
-.td{
-    /* background-color: #E5E5E5; */
-    border-style: outset;
 }
-
 .td h5{
     color: black;
     font-size: medium;
