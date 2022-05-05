@@ -21,7 +21,7 @@ gris claro rgb(231, 241, 241);
 
 * {
     box-sizing: border-box;
-    /* font-family: "ubuntu"; */
+    font-family: "Ubuntu";
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
@@ -296,8 +296,15 @@ h3 {
 
 @media (min-width: 760px) {
     .credit-cards {
-        border: none;
-        margin-bottom: 4%;
+      
+        display: flex;       
+        flex-wrap: wrap;
+        justify-content: space-between;
+       
+    }
+    .credit-cards img{
+       
+        border: solid 2px red;
     }
 
     .credit-cards .uno {
@@ -322,7 +329,7 @@ h3 {
     }
 
     .main-header {
-        background-color: whitesmoke;
+        background-color: white;
         /*para fondo del header */
 
     }
@@ -438,7 +445,6 @@ h3 {
         color: black;
         display: block;
         font-size: small;
-        /* font-family: 'Roboto', sans-serif; */
         padding: 2px;
         text-align: center;
     }
@@ -809,7 +815,7 @@ main {
 }
 
 section h3 {
-    /* font-family: Ubuntu; */
+   
     text-align: center;
 }
 
@@ -838,7 +844,6 @@ section h3 {
 
 .produc P {
     font-size: x-small;
-    /* font-family: 'Roboto', sans-serif; */
     font-weight: bold;
     /*negrita al texto */
     line-height: 5px;
@@ -873,7 +878,6 @@ section h3 {
 
 .main-carrito {
     background-color: rgb(232, 207, 207);
-    /* font-family: "ubuntu"; */
     margin-top: 50px;
     padding-bottom: 15px;
     width: 90%;
@@ -1913,7 +1917,6 @@ footer {
 
 .cuotas-pagos ul li {
     font-size: small;
-    /* font-family: 'Roboto', sans-serif; */
     text-align: left;
 }
 
