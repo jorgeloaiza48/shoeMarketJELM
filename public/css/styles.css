@@ -21,7 +21,8 @@ gris claro rgb(231, 241, 241);
 
 * {
     box-sizing: border-box;
-    font-family: "ubuntu";
+    /* font-family: "ubuntu"; */
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 h3 {
@@ -437,7 +438,7 @@ h3 {
         color: black;
         display: block;
         font-size: small;
-        font-family: 'Roboto', sans-serif;
+        /* font-family: 'Roboto', sans-serif; */
         padding: 2px;
         text-align: center;
     }
@@ -808,7 +809,7 @@ main {
 }
 
 section h3 {
-    font-family: 'ubuntu';
+    /* font-family: Ubuntu; */
     text-align: center;
 }
 
@@ -837,7 +838,7 @@ section h3 {
 
 .produc P {
     font-size: x-small;
-    font-family: 'Roboto', sans-serif;
+    /* font-family: 'Roboto', sans-serif; */
     font-weight: bold;
     /*negrita al texto */
     line-height: 5px;
@@ -872,7 +873,7 @@ section h3 {
 
 .main-carrito {
     background-color: rgb(232, 207, 207);
-    font-family: "ubuntu";
+    /* font-family: "ubuntu"; */
     margin-top: 50px;
     padding-bottom: 15px;
     width: 90%;
@@ -906,7 +907,7 @@ section h3 {
 
 
 .prod-carr__img {
-    border: 1px inset rgb(253, 253, 253);
+    
     margin-top: 5px;
     margin-bottom: 5px;
     margin-left: 5px;
@@ -997,7 +998,7 @@ section h3 {
 }
 
 .title-resumen {
-    border: 0.5px solid grey;
+    
     text-align: center;
 }
 
@@ -1063,7 +1064,8 @@ section h3 {
     margin-bottom: 15px;
 }
 .contenedor-sub__text{
-    font-size: 25px;
+    font-size: 18px;
+    margin-left: -23px;
 }
 
 .contenedor-total__text{
@@ -1168,7 +1170,7 @@ section h3 {
 
 .main-descr {
     padding-top: 20px;
-    font-family: "ubuntu";
+    /* font-family: "ubuntu"; */
 
 
 }
@@ -1572,10 +1574,13 @@ section h3 {
 }
 
 
-
+.form-login{
+    background-color: rgb(232, 207, 207);
+    border-radius: 15px;
+}
 .form__usuario {
     margin-bottom: 20px;
-
+    
 }
 
 .form__usuario input {
@@ -1746,9 +1751,9 @@ section h3 {
     border: 2px solid green;
 }
 
-.form-Reg input[type="text"]:required:invalid {
+/* .form-Reg input[type="text"]:required {
     border: 2px solid red;
-}
+} */
 
 
 
@@ -1805,7 +1810,7 @@ section h3 {
 
 
 .usuario__nombre input {
-    border: 1px solid rgb(162, 16, 55);
+    border: 1px solid rgb(124, 118, 119);
     border-radius: 5px;
     margin: 20px;
     max-width: 600px;
@@ -1816,7 +1821,7 @@ section h3 {
 }
 
 .usuario__pass input {
-    border: 1px solid rgb(162, 16, 55);
+    border: 1px solid rgb(124, 118, 119);
     border-radius: 5px;
     margin: 20px;
     max-width: 600px;
@@ -1846,10 +1851,10 @@ section h3 {
     border: 2px solid green;
 }
 
-.form-login input[type="text"]:required:invalid {
+/* .form-login input[type="text"]:required:invalid {
     border: 2px solid red;
 
-}
+} */
 
 /*---------------------------------------------------LOGIN-------------------------------------------*/
 
@@ -1895,7 +1900,7 @@ footer {
 
     text-align: justify;
     font-size: xx-small;
-    font-family: 'Roboto', sans-serif;
+    /* font-family: 'Roboto', sans-serif; */
 }
 
 .cuotas-pagos img {
@@ -1908,7 +1913,7 @@ footer {
 
 .cuotas-pagos ul li {
     font-size: small;
-    font-family: 'Roboto', sans-serif;
+    /* font-family: 'Roboto', sans-serif; */
     text-align: left;
 }
 
@@ -1983,7 +1988,7 @@ footer h5 {
 
 
 /* //////////////////////////////////////////FIN DEL FOOTER /////////////////////////////////////////////////////*/
-
+/* //////////////////////////////////////////FORMULARIO DE CREACION Y EDICION DE PRODUCTOS /////////////////////////////////////////////////////*/
 .crear-title {
     background-color: rgb(232, 207, 207);
     border: dotted 1px red;
