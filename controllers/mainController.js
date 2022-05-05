@@ -1,19 +1,19 @@
-const res = require("express/lib/response")
+
 
 const controller = {
-    index:(req,res) =>{return res.render("home")},
+    index:(req,res) =>{res.render("home", {title: "Shoe Market"})},
 
-    register: (req,res) => {return res.render("registro")},
+    register: (req,res) => { res.render("registro", {title: "Registro"} )},
 
-    login:(req,res) => {return res.render('login')},
+    login:(req,res) => {res.render('login',{title: "Login"})},
 
-    descripcion:(req,res) => {return res.render('descripcion')},
+    descripcion:(req,res) => {res.render('descripcion',{title: "Descripcion"})},
 
-    carrito:(req,res) => {return res.render('carrito')},
+    carrito:(req,res) => {res.render('carrito',{title: "Carrito de compras"})},
 
-    crearProducto: (req,res) => {return res.render('crearProducto')},
+    crearProducto: (req,res) => {res.render('crearProducto',{title: "Crear Producto"})},
 
-    editarProducto: (req,res) => {return res.render('editarProducto')}
+    editarProducto: (req,res) => {res.render('editarProducto',{title: "Editar producto"})}
 
 
 }
