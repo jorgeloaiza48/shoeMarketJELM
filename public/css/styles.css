@@ -257,22 +257,23 @@ h3 {
     .section-destacados h3 {
         background-color: white;
         height: auto;
-        margin-bottom: 10%;               
-    }   
-    .social-nets {
-    background-color: white;
-    border-radius: 8%;
-    border-style: outset;  
-    display: flex;
-    flex-direction: column;
-    left: 10px;
-    max-width: 38px;
-    position: fixed;
-    right: 20px;
-    top: 250px;
-}
+        margin-bottom: 10%;
+    }
 
-   
+    .social-nets {
+        background-color: white;
+        border-radius: 8%;
+        border-style: outset;
+        display: flex;
+        flex-direction: column;
+        left: 10px;
+        max-width: 38px;
+        position: fixed;
+        right: 20px;
+        top: 250px;
+    }
+
+
 
 
     .texto {
@@ -296,14 +297,15 @@ h3 {
 
 @media (min-width: 760px) {
     .credit-cards {
-      
-        display: flex;       
+
+        display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-       
+
     }
-    .credit-cards img{
-       
+
+    .credit-cards img {
+
         border: solid 2px red;
     }
 
@@ -565,36 +567,38 @@ h3 {
         transition: all 500ms;
     }
 
- /* Aumenta la imagen cuando se pasa el cursor sobre ella y coloca sombra*/
-.produc:hover {
-    box-shadow: 5px 5px 15px 5px rgb(90, 88, 88);
-    transform: scale(1.1);
-    -webkit-transform: scale(1.1);           
-}
-.social-nets {
-    background-color: white;
-    border-radius: 8%;
-    border-style: outset;  
-    display: flex;
-    flex-direction: column;
-    height: 200px;
-    justify-content: space-between;
-    left: 10px;
-    max-width: 38px;
-    position: fixed;
-    right: 20px;
-    top: 250px;
-}
-.social-nets img{
-    cursor: pointer;
-    transition: all 550ms;
-}
+    /* Aumenta la imagen cuando se pasa el cursor sobre ella y coloca sombra*/
+    .produc:hover {
+        box-shadow: 5px 5px 15px 5px rgb(90, 88, 88);
+        transform: scale(1.1);
+        -webkit-transform: scale(1.1);
+    }
 
-   .social-nets img:hover{
-     color: red;
-     transform: scale(1);
-     -webkit-transform: scale(1.5);      
-   }
+    .social-nets {
+        background-color: white;
+        border-radius: 8%;
+        border-style: outset;
+        display: flex;
+        flex-direction: column;
+        height: 200px;
+        justify-content: space-between;
+        left: 10px;
+        max-width: 38px;
+        position: fixed;
+        right: 20px;
+        top: 250px;
+    }
+
+    .social-nets img {
+        cursor: pointer;
+        transition: all 550ms;
+    }
+
+    .social-nets img:hover {
+        color: red;
+        transform: scale(1);
+        -webkit-transform: scale(1.5);
+    }
 
     /* https://stackoverflow.com/questions/16771225/css3-rotate-animation */
     /* Para que el signo de interrogación gire 360 grados */
@@ -694,30 +698,31 @@ h3 {
         text-align: left;
     }
 
-  
-   .news-letter{
-       align-items: center;
-       background-color: whitesmoke;
-       display: flex;
-       flex-direction: column;
-       padding: 1% 2% 4% 2%;
-       /* border: solid 2px red; */
-       width: 100%;
-   }
+
+    .news-letter {
+        align-items: center;
+        background-color: whitesmoke;
+        display: flex;
+        flex-direction: column;
+        padding: 1% 2% 4% 2%;
+        /* border: solid 2px red; */
+        width: 100%;
+    }
 
 
-   
-.td{
-    /* background-color: #E5E5E5; */
-    border-style: outset;
+
+    .td {
+        /* background-color: #E5E5E5; */
+        border-style: outset;
+    }
+
+    .td h5 {
+        color: black;
+        font-size: medium;
+
+    }
 }
 
-.td h5{
-    color: black;
-    font-size: medium;
-   
-}   
-}
 footer {
     margin-top: 10%;
 }
@@ -800,9 +805,6 @@ footer {
     } */
 
 
-
-
-
 }
 
 /* /////////////////////////////////////////FIN DEL HEADER //////////////////////////////////////////////////*/
@@ -815,7 +817,7 @@ main {
 }
 
 section h3 {
-   
+
     text-align: center;
 }
 
@@ -911,7 +913,7 @@ section h3 {
 
 
 .prod-carr__img {
-    
+
     margin-top: 5px;
     margin-bottom: 5px;
     margin-left: 5px;
@@ -1002,7 +1004,7 @@ section h3 {
 }
 
 .title-resumen {
-    
+
     text-align: center;
 }
 
@@ -1020,7 +1022,7 @@ section h3 {
 }
 
 .cupon-descuento__boton:hover {
-    
+
     -webkit-transform: scale(1.2);
     transform: scale(1.2);
 }
@@ -1067,18 +1069,21 @@ section h3 {
     justify-content: space-around;
     margin-bottom: 15px;
 }
-.contenedor-sub__text{
+
+.contenedor-sub__text {
     font-size: 18px;
     margin-left: -23px;
 }
 
-.contenedor-total__text{
+.contenedor-total__text {
     font-size: 25px;
 }
-.contenedor-total__price{
+
+.contenedor-total__price {
     padding-left: 37px;
     font-size: 25px;
 }
+
 .boton-finalizar {
     text-align: center;
 
@@ -1101,13 +1106,13 @@ section h3 {
 }
 
 .boton-finalizar__seguir:hover {
-    
+
     -webkit-transform: scale(1.2);
     transform: scale(1.2);
 }
 
 .boton-finalizar__terminar:hover {
-    
+
     -webkit-transform: scale(1.2);
     transform: scale(1.2);
 }
@@ -1165,6 +1170,8 @@ section h3 {
         display: block;
     }
 
+
+
 }
 
 
@@ -1182,7 +1189,7 @@ section h3 {
 .photos-desc {
 
     display: flex;
-    justify-content: space-around;
+
     margin-bottom: 20px;
     width: 100%;
 }
@@ -1232,7 +1239,7 @@ section h3 {
 .name-pr {
     border-top: 1px rgb(162, 16, 55) solid;
     border-bottom: 1px rgb(162, 16, 55) solid;
-    height: 25%;
+    height: 200%;
     text-align: center;
 
 
@@ -1242,9 +1249,10 @@ section h3 {
 
     align-self: center;
     display: flex;
-    font-size: 15px;
+    font-size: 25px;
+    font-weight: 700;
     justify-content: center;
-    margin-top: 0px;
+    margin-top: 15px;
     padding-bottom: 3px;
     padding-top: 3px;
 }
@@ -1252,10 +1260,25 @@ section h3 {
 .name-pr__price {
     align-self: center;
     display: flex;
-    font-size: 15px;
+    font-size: 20px;
+    font-weight: 700;
     justify-content: center;
 }
 
+.name-pr__cuota {
+    font-size: 20px;
+    font-weight: 700;
+    color: #c44b52;
+}
+.name-pr__off{
+    font-size: 20px;
+    font-weight: 700;
+    color: #c44b52;
+}
+
+.selec-color__title {
+    font-size: 20px;
+}
 
 .selec-color__red {
 
@@ -1318,7 +1341,7 @@ section h3 {
 
 .size {
     display: flex;
-    justify-content: left;
+    justify-content: center;
 
 
 }
@@ -1465,26 +1488,31 @@ section h3 {
     padding-bottom: 10px;
 }
 
+.art-size__title {
+    font-size: 20px;
+}
+
 .desc-comp {
     display: flex;
     height: 25%;
     justify-content: center;
 
+
 }
 
 .desc-comp__but {
     align-items: center;
-    background-color: rgb(162, 16, 55);
+    background-color: rgb(196 75 82);
     border-radius: 5px;
     margin-top: 15px;
     padding-top: 10px;
     padding-bottom: 10px;
     transition: all 0.5s;
-    width: 90px;
+    width: 113px;
 }
 
 .desc-comp__but:hover {
-    background-color: rgb(228, 56, 101);
+
     -webkit-transform: scale(1.2);
     transform: scale(1.2);
 }
@@ -1493,12 +1521,45 @@ section h3 {
 @media (min-width: 768px) {
     .main-descr {
         display: flex;
-        justify-content: space-around;
+
+
+    }
+
+    .name-pr {
+        height: 40%;
+        display: flex;
+        flex-direction: column;
+
+        justify-content: center;
+
+    }
+
+    .select {
+        display: flex;
+        flex-direction: column;
+        height: 20%;
+        justify-content: center;
+    }
+
+    .art-size {
+        display: flex;
+        flex-direction: column;
+        height: 20%;
+        justify-content: center;
+    }
+
+    .desc-comp {
+        align-items: center;
+        display: flex;
+        height: 20%;
+        justify-content: center;
+
 
     }
 
     .selec-color__title {
         text-align: center;
+
 
     }
 
@@ -1513,7 +1574,9 @@ section h3 {
     .descr-prod {
 
         border-right: none;
-        border-bottom: none
+        border-bottom: none;
+        margin-right: 24px;
+        width: 35%;
     }
 
     .name-pr {
@@ -1578,13 +1641,14 @@ section h3 {
 }
 
 
-.form-login{
+.form-login {
     background-color: rgb(232, 207, 207);
     border-radius: 15px;
 }
+
 .form__usuario {
     margin-bottom: 20px;
-    
+
 }
 
 .form__usuario input {
@@ -1964,7 +2028,7 @@ footer h5 {
 
 
 @media (min-width: 360px) {
-  
+
     .footer-mobile-list {
         display: flex;
         justify-content: space-evenly;
