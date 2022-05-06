@@ -1,74 +1,86 @@
 <%- include("./partials/head") %>
-<body>
-<%- include("./partials/header") %>
-    <main class="main-descr">
-        <section class="photos-desc">
 
-            <article class="photos-small">
+    <body>
+        <%- include("./partials/header") %>
+            <main class="main-descr">
+                <section class="photos-desc">
 
-                <div class="photos-small__div">
-                    <img class="photos-small__photo" src="img/maddyNegro.jpeg" alt="product">
+                    <article class="photos-small">
 
+                        <div class="photos-small__div">
+                            <img class="photos-small__photo" src="img/maddyNegro.jpeg" alt="product">
+
+                        </div>
+                        <div class="photos-small__div">
+                            <img class="photos-small__photo" src="img/maddyRojo.jpeg" alt="product">
+                        </div>
+                        <div class="photos-small__div">
+                            <img class="photos-small__photo" src="img/maddyCrema.jpeg" alt="product">
+                        </div>
+                    </article>
+
+                    <div class="photos-desc__div">
+                        <img class="photos-desc__big" src="img/maddyNegro.jpeg" alt="product">
+
+                    </div>
+
+
+
+                </section>
+
+                <article class="descr-prod">
+
+                    <section class="name-pr">
+                        <h3 class="name-pr__title">Guillermina Florencia</h3>
+                     
+                            <p class="name-pr__price">$18000</p>
+                      
+                      
+                            <p class="name-pr__cuota">12 cuotas sin interes</p>
+                       
+                       
+                            <p class="name-pr__off">20% OFF abonando con transferencia bancaria</p>
+                        
+
+
+
+
+                    </section>
+
+                    <section class="select">
+                        <h3 class="selec-color__title">Seleciona un color</h3>
+                        <div class="selec-color">
+                            <button class="selec-color__red"></button>
+                            <button class="selec-color__black"></button>
+                            <button class="selec-color__beige"></button>
+                        </div>
+
+                    </section>
+
+                    <section class="art-size">
+                        <h3 class="art-size__title">Selecciona el talle</h4>
+                            <div class="size">
+                                <button class="size__35">35</button>
+                                <button class="size__36">36</button>
+                                <button class="size__37">37</button>
+                                <button class="size__38">38</button>
+                                <button class="size__39">39</button>
+                            </div>
+
+                    </section>
+
+                    <article class="desc-comp">
+                        <button type="submit" class="desc-comp__but">COMPRAR</button>
+                    </article>
+                </article>
+
+                <div class="help-button">
+                    <button><i class="fa-solid fa-circle-question"></i> Ayuda</button>
                 </div>
-                <div class="photos-small__div">
-                    <img class="photos-small__photo" src="img/maddyRojo.jpeg" alt="product">
-                </div>
-                <div class="photos-small__div">
-                    <img class="photos-small__photo" src="img/maddyCrema.jpeg" alt="product">
-                </div>
-            </article>
-
-            <div class="photos-desc__div">
-                <img class="photos-desc__big" src="img/maddyNegro.jpeg" alt="product">
-
-            </div>
 
 
+            </main>
+            <%- include("./partials/footer") %>
+    </body>
 
-        </section>
-
-        <section class="descr-prod">
-
-            <article class="name-pr">
-                <p class="name-pr__title">Guillermina Florencia</p>
-                <p class="name-pr__price">$18000</p>
-                <p class="name-pr__cuota">12 cuotas sin interes</p>
-            </article>
-
-            <article class="select">
-                <p class="selec-color__title">Seleciona un color</p>
-                <div class="selec-color">
-                    <button class="selec-color__red"></button>
-                    <button class="selec-color__black"></button>
-                    <button class="selec-color__beige"></button>
-                </div>
-
-            </article>
-
-            <article class="art-size">
-                <p class="art-size__title">Selecciona el talle</p>
-                <div class="size">
-                    <button class="size__35">35</button>
-                    <button class="size__36">36</button>
-                    <button class="size__37">37</button>
-                    <button class="size__38">38</button>
-                    <button class="size__39">39</button>
-                </div>
-
-            </article>
-
-            <article class="desc-comp">
-                <button type="submit" class="desc-comp__but">COMPRAR</button>
-            </article>
-        </section>
-
-        <div class="help-button">
-            <button><i class="fa-solid fa-circle-question"></i> Ayuda</button>
-          </div>
-
-
-    </main>
-    <%- include("./partials/footer") %>
-</body>
-
-</html>
+    </html>
