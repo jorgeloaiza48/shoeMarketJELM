@@ -34,7 +34,7 @@ footer {
     font-size: 12px;
     margin: auto;
     text-align: center;
-   
+
 }
 
 
@@ -42,48 +42,41 @@ footer {
 
 /* /////////////////////////////Media quiery para 360px   ///////////////////////////// */
 
-@media(min-width:360px) 
-{
-    .credit-cards 
-    {
-        background-color: whitesmoke;      
+@media(min-width:360px) {
+    .credit-cards {
+        background-color: whitesmoke;
     }
 
-    .credit-cards 
-    {
+    .credit-cards {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
         padding: 2px;
     }
-    .credit-cards img
-    {
+
+    .credit-cards img {
         /* border: solid 2px black; */
         height: 35px;
     }
 
-    .credit-cards .uno 
-    {
+    .credit-cards .uno {
         display: none;
     }
 
-    .fa-star 
-    {
+    .fa-star {
         transition: all 4s;
     }
 
-    .fa-star:hover 
-    {
+    .fa-star:hover {
         color: black;
         transform: rotate(360deg);
     }
 
-    .footer-mobile .institucional 
-    {
+    .footer-mobile .institucional {
         display: none;
     }
-    .footer-mobile .footer-mobile-list 
-    {
+
+    .footer-mobile .footer-mobile-list {
         font-size: smaller;
         justify-content: space-between;
         line-height: 35%;
@@ -91,33 +84,30 @@ footer {
         margin: 0;
         text-align: center;
     }
-    .footer-mobile-list 
-    {
+
+    .footer-mobile-list {
         display: flex;
         justify-content: space-evenly;
         flex-wrap: wrap;
         padding: 10px;
     }
-    .footer-mobile-list li 
-    {
+
+    .footer-mobile-list li {
         padding: 4px;
     }
 
-    .footer-mobile 
-    {
+    .footer-mobile {
         background-color: whitesmoke;
         margin: 0;
     }
 
 
-    header 
-    {
+    header {
         background-color: white;
     }
 
 
-    .help-button 
-    {
+    .help-button {
         /* border: solid 3px red; */
         bottom: 5px;
         max-width: 28%;
@@ -125,8 +115,7 @@ footer {
         right: 3px;
     }
 
-    .help-button button 
-    {
+    .help-button button {
         background-color: black;
         border-radius: 10%;
         color: white;
@@ -138,8 +127,7 @@ footer {
 
     /* https://stackoverflow.com/questions/16771225/css3-rotate-animation */
     /* Para que el signo de interrogación gire 360 grados */
-    .help-button button .fa-circle-question 
-    {
+    .help-button button .fa-circle-question {
         animation: spin 2s linear signopregunta;
         -moz-animation: signopregunta 2s linear infinite;
         -webkit-animation: signopregunta 2s linear infinite;
@@ -148,34 +136,27 @@ footer {
 
     /* https://stackoverflow.com/questions/16771225/css3-rotate-animation */
     /* Para que el signo de interrogación gire 360 grados */
-    @-moz-keyframes signopregunta 
-    {
-        100% 
-        {
+    @-moz-keyframes signopregunta {
+        100% {
             -moz-transform: rotateY(360deg);
         }
     }
 
-    @-webkit-keyframes signopregunta 
-    {
-        100% 
-        {
+    @-webkit-keyframes signopregunta {
+        100% {
             -webkit-transform: rotateY(360deg);
         }
     }
 
-    @keyframes signopregunta 
-    {
-        100% 
-        {
+    @keyframes signopregunta {
+        100% {
             -webkit-transform: rotateY(360deg);
             transform: rotateY(360deg);
         }
     }
 
 
-    .icono-carrito 
-    {
+    .icono-carrito {
         /* border: solid 2px blue; */
         display: flex;
         font-size: larger;
@@ -185,19 +166,16 @@ footer {
     }
 
 
-    .main-header 
-    {
+    .main-header {
         border-bottom: solid 1px gray;
 
     }
 
-    .menu 
-    {
+    .menu {
         display: none;
     }
 
-    .news-letter 
-    {
+    .news-letter {
         align-items: center;
         background-color: whitesmoke;
         display: flex;
@@ -207,45 +185,38 @@ footer {
         width: 100%;
     }
 
-    .news-letter h2 
-    {
+    .news-letter h2 {
         text-align: center;
     }
 
-    .principal-form-boton 
-    {
+    .principal-form-boton {
         /* border: solid 2px blue; */
         display: flex;
         flex-grow: 0.6;
     }
 
-    .principal-form-boton form 
-    {
+    .principal-form-boton form {
         align-self: center;
         display: flex;
         justify-content: center;
     }
 
-    .principal-form-boton form input 
-    {
+    .principal-form-boton form input {
         width: 70%;
     }
 
 
 
-    .principal-carrito 
-    {
+    .principal-carrito {
         display: none;
     }
 
-    .principal-form-logo 
-    {
+    .principal-form-logo {
         flex-grow: 0.2;
         /* border: solid 2px green; */
     }
 
-    .principal 
-    {
+    .principal {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -253,75 +224,67 @@ footer {
         /* border: solid 2px violet; */
     }
 
-    .principal-form-logo 
-    {
+    .principal-form-logo {
         /* border: solid 2px red; */
         width: 20%
     }
-    .principal .principal-form-logo img 
-    {
+
+    .principal .principal-form-logo img {
         height: 100%;
         width: 100%;
     }
 
     /* Aumenta la imagen cuando se pasa el cursor sobre ella y coloca sombra*/
-    .produc:hover 
-    {
+    .produc:hover {
         box-shadow: 5px 5px 15px 5px rgb(90, 88, 88);
         transform: scale(1.1);
         -webkit-transform: scale(1.1);
     }
 
-    .productos 
-    {
+    .productos {
         /* border: solid 2px blue; */
         display: flex;
         flex-wrap: wrap;
     }
 
-    .productos .produc 
-    {
+    .productos .produc {
         border-style: outset;
         height: auto;
         width: 40%;
     }
 
-    .produc p,i 
-    {
+    .produc p,
+    i {
         line-height: 0px;
         text-align: center;
     }
 
-    .produc i 
-    {
+    .produc i {
         margin-bottom: 20px;
     }
 
-    .productos .produc img 
-    {
+    .productos .produc img {
         height: auto;
         width: 100%;
     }
-    .productos .produc button
-    {
+
+    .productos .produc button {
         background-color: white;
         border-radius: 11%;
         height: 25px;
     }
 
-    .section-destacados 
-    {
+    .section-destacados {
         margin-top: 12%;
     }
 
-    .section-destacados h3 
-    {
+    .section-destacados h3 {
         background-color: white;
         height: auto;
-        margin-bottom: 10%;               
-    }   
-    .social-nets 
-    {
+        margin-bottom: 10%;
+    }
+
+    .social-nets {
         display: flex;
         flex-direction: column;
         height: 200px;
@@ -332,12 +295,12 @@ footer {
         right: 20px;
         top: 250px;
     }
-    .texto 
-    {
+
+    .texto {
         display: none;
     }
-    .td 
-    {
+
+    .td {
         margin: 0;
         text-align: center;
     }
@@ -345,30 +308,26 @@ footer {
 
 /* /////////////////////////////Media query para 768px   ///////////////////////////// */
 
-@media (min-width: 768px) 
-{
-    .art-size__title 
-    {
+@media (min-width: 768px) {
+    .art-size__title {
         text-align: center;
     }
-   .credit-cards 
-   {     
-        display: flex;       
+
+    .credit-cards {
+        display: flex;
         flex-wrap: wrap;
-        justify-content: space-around;  
+        justify-content: space-around;
     }
-    .credit-cards img
-    {
+
+    .credit-cards img {
         height: 60px;
     }
 
-    .credit-cards .uno 
-    {
+    .credit-cards .uno {
         display: block;
     }
 
-    .cuentaCarrito 
-    {
+    .cuentaCarrito {
         align-items: flex-end;
         display: flex;
         flex-direction: row;
@@ -376,70 +335,65 @@ footer {
     }
 
     /* Quita el subrayado de los enlaces */
-    .cuentaCarrito a, .menus a 
-    {
+    .cuentaCarrito a,
+    .menus a {
         text-decoration: none;
     }
-    .desc-comp__but 
-    {
+
+    .desc-comp__but {
         height: 43px;
     }
-    .descr-prod 
-    {
+
+    .descr-prod {
         border-right: none;
         border-bottom: none
     }
-    .descuento-flex 
-    {
+
+    .descuento-flex {
         display: block;
     }
-    .icono-carrito 
-    {
+
+    .icono-carrito {
         display: none;
     }
-    .main-carrito 
-    {
+
+    .main-carrito {
         display: flex;
     }
-    .main-descr 
-    {
+
+    .main-descr {
         display: flex;
         justify-content: space-around;
     }
 
-    .main-header 
-    {
+    .main-header {
         background-color: white;
         /*para fondo del header */
     }
 
-    .menu ul 
-    {
+    .menu ul {
         list-style: none;
     }
 
-    .menu 
-    {
+    .menu {
         /* border: solid 5px green; */
         display: block;
         border-top: solid 1px gray;
         width: 100%;
     }
 
-    .menus 
-    {
+    .menus {
         display: flex;
         flex-direction: row;
         justify-content: center;
     }
-    .name-pr 
-    {
+
+    .name-pr {
 
         border-top: none
     }
 
-    .principal 
-    {
+    .principal {
         /* border: solid 5px blue; */
         display: flex;
         flex-wrap: wrap;
@@ -448,22 +402,20 @@ footer {
         width: 100%;
     }
 
-    .principal-carrito a, .menu a 
-    {
+    .principal-carrito a,
+    .menu a {
         color: black;
         font-size: small;
         margin-right: 15px;
     }
 
-    .principal-form-logo img 
-    {
+    .principal-form-logo img {
         border-radius: 10%;
         height: 150%;
         width: 130%;
     }
 
-    .principal-form-logo 
-    {
+    .principal-form-logo {
         /* border: solid 3px greenyellow; */
         margin-bottom: 1%;
         margin-top: 1%;
@@ -471,8 +423,7 @@ footer {
         width: 10%;
     }
 
-    .principal-form-boton 
-    {
+    .principal-form-boton {
         /* border: solid 1px red; */
         height: 40px;
         margin: auto;
@@ -480,85 +431,78 @@ footer {
         width: 30%;
     }
 
-    .principal-form-boton form 
-    {
+    .principal-form-boton form {
         /* border: solid 2px blue; */
         display: flex;
         height: 100%;
         width: 100%;
     }
 
-    .principal-form-boton form input 
-    {
+    .principal-form-boton form input {
         height: 100%;
         width: 100%;
     }
 
-    .principal-form-boton form button 
-    {
+    .principal-form-boton form button {
         background-color: black;
         border-radius: 10%;
         /* border: solid 5px violet; */
         width: 10%;
     }
 
-    .principal-form-boton form button .fa-search 
-    {
+    .principal-form-boton form button .fa-search {
         color: white;
     }
 
-    .principal-carrito 
-    {
+    .principal-carrito {
         /* border: solid 2px blue; */
         align-self: center;
         display: flex;
         padding: 20px;
     }
 
-    .principal-carrito li 
-    {
+    .principal-carrito li {
         list-style: none;
     }
-    .productos .produc button
-    {
+
+    .productos .produc button {
         background-color: white;
         cursor: pointer;
         height: 30px;
     }
-    .productos .produc button:hover
-    {
+
+    .productos .produc button:hover {
         background-color: black;
-        color: white;   
+        color: white;
     }
-    .resumen-de-compra 
-    {
+
+    .resumen-de-compra {
         align-self: center;
         margin-left: auto;
         margin-right: auto;
         height: 50%;
         padding: 10px;
     }
-    .section-destacados 
-    {
+
+    .section-destacados {
         /* border: solid 2px green; */
         margin-top: 15px;
     }
-    .section-destacados h3 
-    {
+
+    .section-destacados h3 {
         /* border: solid 2px violet; */
         margin-top: 2rem;
     }
-    .selec-color 
-    {
+
+    .selec-color {
         justify-content: center;
     }
-    .selec-color__title 
-    {
-        text-align: center;
-     }
 
-    .texto 
-    {
+    .selec-color__title {
+        text-align: center;
+    }
+
+    .texto {
         background-color: #E5E5E5;
         color: black;
         display: block;
@@ -578,8 +522,7 @@ footer {
     } */
 
     /* Para el efecto en el menú */
-    .principal-carrito nav .cuentaCarrito li 
-    {
+    .principal-carrito nav .cuentaCarrito li {
         border-radius: 5%;
         box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
         cursor: pointer;
@@ -589,8 +532,7 @@ footer {
         transition: all 300ms;
     }
 
-    .menu nav .menus li 
-    {
+    .menu nav .menus li {
         cursor: pointer;
         border-radius: 5%;
         box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
@@ -601,8 +543,7 @@ footer {
     }
 
     /* Para el efecto en el menú */
-    .principal-carrito nav .cuentaCarrito li:hover 
-    {
+    .principal-carrito nav .cuentaCarrito li:hover {
         border-bottom: 7px solid red;
         padding-bottom: 3px;
         transform: scale(1.1);
@@ -610,8 +551,7 @@ footer {
     }
 
     /* Para el efecto en el menú */
-    .menu nav .menus li:hover 
-    {
+    .menu nav .menus li:hover {
         border-bottom: 7px solid red;
         padding-bottom: 3px;
         transform: scale(1.1);
@@ -623,25 +563,21 @@ footer {
     /* #######################Fin header para 768px######################## */
 
     /* #######################Inicio main para 768px######################## */
-    .com-but-main 
-    {
+    .com-but-main {
         color: rgb(162, 16, 55);
         text-decoration: none;
     }
 
-    .fa-star 
-    {
+    .fa-star {
         transition: all 4s;
     }
 
-    .fa-star:hover 
-    {
+    .fa-star:hover {
         color: black;
         transform: rotate(360deg);
     }
 
-    .help-button 
-    {
+    .help-button {
         /* border: solid 3px red; */
         bottom: 10px;
         max-width: 12%;
@@ -649,8 +585,8 @@ footer {
         right: 10px;
     }
 
-    .help-button button 
-    { background-color: black;
+    .help-button button {
+        background-color: black;
         border-radius: 10%;
         color: white;
         cursor: pointer;
@@ -659,8 +595,7 @@ footer {
     }
 
 
-    .productos 
-    {
+    .productos {
         /* border: solid 2px green; */
         display: flex;
         flex-wrap: wrap;
@@ -675,30 +610,27 @@ footer {
     }
 
 
-    .productos .produc img 
-    {
+    .productos .produc img {
         /* border-radius: 5%; */
         /* border: solid 2px green;   */
         padding: 2px;
         width: 100%;
     }
 
-    .produc 
-    {
+    .produc {
         /* border-radius: 10%; */
         /* border: solid 2px red; */
         transition: all 500ms;
     }
 
- /* Aumenta la imagen cuando se pasa el cursor sobre ella y coloca sombra*/
-    .produc:hover 
-    {
+    /* Aumenta la imagen cuando se pasa el cursor sobre ella y coloca sombra*/
+    .produc:hover {
         box-shadow: 5px 5px 15px 5px rgb(90, 88, 88);
         transform: scale(1.1);
-        -webkit-transform: scale(1.1);           
+        -webkit-transform: scale(1.1);
     }
-    .social-nets 
-    { 
+
+    .social-nets {
         display: flex;
         flex-direction: column;
         height: 200px;
@@ -709,23 +641,21 @@ footer {
         right: 20px;
         top: 250px;
     }
-    .social-nets img
-    {
+
+    .social-nets img {
         cursor: pointer;
         transition: all 550ms;
     }
 
-   .social-nets img:hover
-   {
-     color: red;
-     transform: scale(1);
-     -webkit-transform: scale(1.5);      
-   }
+    .social-nets img:hover {
+        color: red;
+        transform: scale(1);
+        -webkit-transform: scale(1.5);
+    }
 
     /* https://stackoverflow.com/questions/16771225/css3-rotate-animation */
     /* Para que el signo de interrogación gire 360 grados */
-    .help-button button .fa-circle-question 
-    {
+    .help-button button .fa-circle-question {
         animation: spin 2s linear signopregunta;
         -moz-animation: signopregunta 2s linear infinite;
         -webkit-animation: signopregunta 2s linear infinite;
@@ -734,26 +664,20 @@ footer {
 
     /* https://stackoverflow.com/questions/16771225/css3-rotate-animation */
     /* Para que el signo de interrogación gire 360 grados */
-    @-moz-keyframes signopregunta 
-    {
-        100% 
-        {
+    @-moz-keyframes signopregunta {
+        100% {
             -moz-transform: rotateY(360deg);
         }
     }
 
-    @-webkit-keyframes signopregunta 
-    {
-        100% 
-        {
+    @-webkit-keyframes signopregunta {
+        100% {
             -webkit-transform: rotateY(360deg);
         }
     }
 
-    @keyframes signopregunta 
-    {
-        100% 
-        {
+    @keyframes signopregunta {
+        100% {
             -webkit-transform: rotateY(360deg);
             transform: rotateY(360deg);
         }
@@ -765,39 +689,33 @@ footer {
 
     /* ##########################Inicio footer para 768px########################################## */
 
-    
-    .footer-mobile 
-    {
+
+    .footer-mobile {
         border: none;
     }
 
-    .footer-mobile .footer-mobile-list 
-    {
+    .footer-mobile .footer-mobile-list {
         border: none;
         text-align: left;
     }
 
-    .footer-mobile .footer-mobile-list .uno h4 
-    {
+    .footer-mobile .footer-mobile-list .uno h4 {
         /* border: solid 3px red; */
         justify-content: center;
         text-decoration: underline black;
     }
 
-    .footer-mobile-list .uno 
-    {
+    .footer-mobile-list .uno {
         width: 33%;
     }
 
-    .footer-mobile-list .uno li 
-    {
+    .footer-mobile-list .uno li {
         color: black;
         /* border: solid 2px black; */
     }
 
 
-    .footer-mobile .footer-mobile-list 
-    {
+    .footer-mobile .footer-mobile-list {
         /* border: solid 5px blue; */
         display: flex;
         flex-wrap: wrap;
@@ -823,28 +741,26 @@ footer {
 
     }
 
-    .footer-mobile-list .institucional li 
-    {
+    .footer-mobile-list .institucional li {
         /* border: solid 2px red; */
         text-align: left;
     }
 
-  
-   .news-letter
-   {
-       align-items: center;
-       background-color: whitesmoke;
-       display: flex;
-       flex-direction: column;
-       padding: 1% 2% 4% 2%;
-       /* border: solid 2px red; */
-       width: 100%;
+
+    .news-letter {
+        align-items: center;
+        background-color: whitesmoke;
+        display: flex;
+        flex-direction: column;
+        padding: 1% 2% 4% 2%;
+        /* border: solid 2px red; */
+        width: 100%;
     }
-    .td h5
-    {
+
+    .td h5 {
         color: black;
         font-size: medium;
-    }   
+    }
 
 
     /* footer 
@@ -852,19 +768,16 @@ footer {
         margin-top: 10%;
     } */
 
-    .fa-star 
-    {
+    .fa-star {
         color: red;
         font-size: medium;
     }
 
-    .section1 
-    {
+    .section1 {
         margin-bottom: 5%;
     }
 
-    .section3 
-    {
+    .section3 {
         margin-top: 6%;
     }
 
@@ -900,6 +813,7 @@ footer {
     .menus a {
         text-decoration: none;
     }
+
     .descuento-flex {
         display: block;
     }
@@ -1042,9 +956,9 @@ section h3 {
 }
 
 .prod-carr__logomenos {
-    background-color: rgb(162, 16, 55);
+    background-color: rgb(232, 207, 207);
     border-radius: 5px;
-    color: white;
+    color: rgb(0, 0, 0);
     height: 30px;
     margin-left: -25px;
     margin-right: 0px;
@@ -1054,9 +968,9 @@ section h3 {
 }
 
 .prod-carr__logomas {
-    background-color: rgb(162, 16, 55);
+    background-color: rgb(232, 207, 207);
     border-radius: 5px;
-    color: white;
+    color: rgb(0, 0, 0);
     height: 30px;
     margin-left: 5px;
     margin-right: -25px;
@@ -1124,22 +1038,25 @@ section h3 {
 }
 
 .cupon-descuento__boton {
-    background-color: rgb(162, 16, 55);
+    background-color:  rgb(232, 207, 207);;
     border-radius: 5px;
-    color: white;
+    color: rgb(0, 0, 0);
     transition: all 0.5s;
 }
 
 .cupon-descuento__boton:hover {
-
+background-color: black;
+color: white;
     -webkit-transform: scale(1.2);
     transform: scale(1.2);
 }
+
 .cont-cupon {
     display: flex;
     width: 100%;
 
 }
+
 .cont-cupon input {
     margin-right: 15px;
     padding-left: 10px;
@@ -1190,29 +1107,33 @@ section h3 {
 }
 
 .boton-finalizar__terminar {
-    background-color: rgb(162, 16, 55);
+    background-color: rgb(232, 207, 207);
     border-radius: 5px;
-    color: white;
+    color: rgb(0, 0, 0);
     margin-bottom: 15px;
-    transition: all 0.5s;
+    transition: all 0.9s;
+    padding: 6px;
 }
 
 .boton-finalizar__seguir {
-    background-color: rgb(162, 16, 55);
+    background-color:rgb(232, 207, 207);
     border-radius: 5px;
-    color: white;
+    color: rgb(0, 0, 0);
     margin-bottom: 15px;
-    transition: all 0.5s;
+    transition: all 0.9s;
+    padding: 6px;
 }
 
 .boton-finalizar__seguir:hover {
-
+background-color: black;
+color: white;
     -webkit-transform: scale(1.2);
     transform: scale(1.2);
 }
 
 .boton-finalizar__terminar:hover {
-
+    background-color: black;
+    color: white;
     -webkit-transform: scale(1.2);
     transform: scale(1.2);
 }
@@ -1285,9 +1206,10 @@ section h3 {
 .photos-desc {
 
     display: flex;
-margin-right: 10px;
+    margin-right: 10px;
     margin-bottom: 20px;
     width: 100%;
+    justify-content: center;
 }
 
 .photos-small__photo {
@@ -1347,6 +1269,7 @@ margin-right: 10px;
     font-weight: 700;
     justify-content: center;
     margin-top: 15px;
+    margin-bottom: 10px;
     padding-bottom: 3px;
     padding-top: 3px;
 }
@@ -1357,21 +1280,30 @@ margin-right: 10px;
     font-size: 20px;
     font-weight: 700;
     justify-content: center;
+    margin-bottom: 10px;
 }
 
 .name-pr__cuota {
     font-size: 20px;
     font-weight: 700;
     color: #c44b52;
+    margin-bottom: 10px;
 }
-.name-pr__off{
+.name-pr__cuota i{
+    color: rgb(47, 30, 30)
+}
+
+.name-pr__off {
     font-size: 20px;
     font-weight: 700;
     color: #c44b52;
+    margin-bottom: 15px;
 }
 
 .selec-color__title {
     font-size: 20px;
+    margin-top: 15px;
+    margin-bottom: 10px;
 }
 
 .selec-color__red {
@@ -1430,12 +1362,14 @@ margin-right: 10px;
 .selec-color {
     display: flex;
     justify-content: center;
+    margin-bottom: 15px;
 
 }
 
 .size {
     display: flex;
     justify-content: center;
+    margin-bottom: 15px;
 
 
 }
@@ -1580,17 +1514,19 @@ margin-right: 10px;
     border-bottom: 1px rgb(162, 16, 55) solid;
     height: 25%;
     padding-bottom: 10px;
+    margin-bottom: 0px;
 }
 
 .art-size__title {
     font-size: 20px;
+    margin-top: 15px;
 }
 
 .desc-comp {
     display: flex;
     height: 25%;
     justify-content: center;
-
+    margin-bottom: 15px;
 
 }
 
@@ -1607,44 +1543,57 @@ margin-right: 10px;
 
 .desc-comp__but:hover {
     background-color: black;
-    color: white; 
-  
+    color: white;
+
 }
+.desc-desc__title{
+ text-align: left;   
+ margin-left: 53px;
+
+}
+.desc-desc ul li{
+    list-style:none;
+    margin-left: 15px;
+    margin-bottom: 7px;
+    font-size: 18px;
+}
+
 
 
 @media (min-width: 768px) {
     .main-descr {
         display: flex;
-
-
     }
 
     .name-pr {
         height: 38%;
         display: flex;
         flex-direction: column;
-margin-bottom: 10px;
+        margin-bottom: 10px;
         justify-content: center;
 
     }
-    .name-pr__price{
+
+    .name-pr__price {
         margin-top: 0px;
-        margin-bottom: 0px;
-        }
-    .name-pr__cuota{
-margin-top: 0px;
-margin-bottom: 2px;
-}
+        margin-bottom: 8px;
+    }
 
-.name-pr__title {
-    margin-top: 10px;
-    margin-bottom: 2px;
-}
+    .name-pr__cuota {
+        margin-top: 0px;
+        margin-bottom: 8px;
+    }
 
-.name-pr__off {
-    margin-top: 0px;
-    margin-bottom: 0px;
-}
+    .name-pr__title {
+        margin-top: 10px;
+        margin-bottom: 8px;
+    }
+
+    .name-pr__off {
+        margin-top: 0px;
+        margin-bottom: 10px;
+    }
+
     .select {
         display: flex;
         flex-direction: column;
@@ -1668,6 +1617,7 @@ margin-bottom: 2px;
 
     }
 
+
     .selec-color__title {
         text-align: center;
 
@@ -1688,7 +1638,7 @@ margin-bottom: 2px;
         border-bottom: none;
         margin-right: 24px;
         width: 35%;
-        
+
     }
 
     .name-pr {
@@ -1699,11 +1649,38 @@ margin-bottom: 2px;
 
     .desc-comp__but {
         height: 43px;
+        margin-top: 0px;
 
     }
 
 }
 
+
+
+
+@media (min-width: 1200px) {
+
+.name-pr__price {
+    margin-top: 0px;
+    margin-bottom: 12px;
+}
+
+.name-pr__cuota {
+    margin-top: 0px;
+    margin-bottom: 12px;
+}
+
+.name-pr__title {
+    margin-top: 10px;
+    margin-bottom: 12px;
+}
+
+.name-pr__off {
+    margin-top: 0px;
+    margin-bottom: 0px;
+   
+}
+}
 
 /* ////////////////////////////////////FINALIZA DESCRIPCION DEL PRODUCTO////////////////////////////////////////*/
 
