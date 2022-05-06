@@ -42,39 +42,48 @@ footer {
 
 /* /////////////////////////////Media quiery para 360px   ///////////////////////////// */
 
-@media(min-width:360px) {
-    .credit-cards {
+@media(min-width:360px) 
+{
+    .credit-cards 
+    {
         background-color: whitesmoke;      
     }
 
-    .credit-cards {
+    .credit-cards 
+    {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
         padding: 2px;
     }
-    .credit-cards img{
+    .credit-cards img
+    {
         /* border: solid 2px black; */
         height: 35px;
     }
 
-    .credit-cards .uno {
+    .credit-cards .uno 
+    {
         display: none;
     }
 
-    .fa-star {
+    .fa-star 
+    {
         transition: all 4s;
     }
 
-    .fa-star:hover {
+    .fa-star:hover 
+    {
         color: black;
         transform: rotate(360deg);
     }
 
-    .footer-mobile .institucional {
+    .footer-mobile .institucional 
+    {
         display: none;
     }
-    .footer-mobile .footer-mobile-list {
+    .footer-mobile .footer-mobile-list 
+    {
         font-size: smaller;
         justify-content: space-between;
         line-height: 35%;
@@ -82,28 +91,33 @@ footer {
         margin: 0;
         text-align: center;
     }
-    .footer-mobile-list {
+    .footer-mobile-list 
+    {
         display: flex;
         justify-content: space-evenly;
         flex-wrap: wrap;
         padding: 10px;
     }
-    .footer-mobile-list li {
+    .footer-mobile-list li 
+    {
         padding: 4px;
     }
 
-    .footer-mobile {
+    .footer-mobile 
+    {
         background-color: whitesmoke;
         margin: 0;
     }
 
 
-    header {
+    header 
+    {
         background-color: white;
     }
 
 
-    .help-button {
+    .help-button 
+    {
         /* border: solid 3px red; */
         bottom: 5px;
         max-width: 28%;
@@ -111,7 +125,8 @@ footer {
         right: 3px;
     }
 
-    .help-button button {
+    .help-button button 
+    {
         background-color: black;
         border-radius: 10%;
         color: white;
@@ -123,7 +138,8 @@ footer {
 
     /* https://stackoverflow.com/questions/16771225/css3-rotate-animation */
     /* Para que el signo de interrogación gire 360 grados */
-    .help-button button .fa-circle-question {
+    .help-button button .fa-circle-question 
+    {
         animation: spin 2s linear signopregunta;
         -moz-animation: signopregunta 2s linear infinite;
         -webkit-animation: signopregunta 2s linear infinite;
@@ -132,27 +148,34 @@ footer {
 
     /* https://stackoverflow.com/questions/16771225/css3-rotate-animation */
     /* Para que el signo de interrogación gire 360 grados */
-    @-moz-keyframes signopregunta {
-        100% {
+    @-moz-keyframes signopregunta 
+    {
+        100% 
+        {
             -moz-transform: rotateY(360deg);
         }
     }
 
-    @-webkit-keyframes signopregunta {
-        100% {
+    @-webkit-keyframes signopregunta 
+    {
+        100% 
+        {
             -webkit-transform: rotateY(360deg);
         }
     }
 
-    @keyframes signopregunta {
-        100% {
+    @keyframes signopregunta 
+    {
+        100% 
+        {
             -webkit-transform: rotateY(360deg);
             transform: rotateY(360deg);
         }
     }
 
 
-    .icono-carrito {
+    .icono-carrito 
+    {
         /* border: solid 2px blue; */
         display: flex;
         font-size: larger;
@@ -162,16 +185,19 @@ footer {
     }
 
 
-    .main-header {
+    .main-header 
+    {
         border-bottom: solid 1px gray;
 
     }
 
-    .menu {
+    .menu 
+    {
         display: none;
     }
 
-    .news-letter {
+    .news-letter 
+    {
         align-items: center;
         background-color: whitesmoke;
         display: flex;
@@ -181,38 +207,45 @@ footer {
         width: 100%;
     }
 
-    .news-letter h2 {
+    .news-letter h2 
+    {
         text-align: center;
     }
 
-    .principal-form-boton {
+    .principal-form-boton 
+    {
         /* border: solid 2px blue; */
         display: flex;
         flex-grow: 0.6;
     }
 
-    .principal-form-boton form {
+    .principal-form-boton form 
+    {
         align-self: center;
         display: flex;
         justify-content: center;
     }
 
-    .principal-form-boton form input {
+    .principal-form-boton form input 
+    {
         width: 70%;
     }
 
 
 
-    .principal-carrito {
+    .principal-carrito 
+    {
         display: none;
     }
 
-    .principal-form-logo {
+    .principal-form-logo 
+    {
         flex-grow: 0.2;
         /* border: solid 2px green; */
     }
 
-    .principal {
+    .principal 
+    {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -220,107 +253,122 @@ footer {
         /* border: solid 2px violet; */
     }
 
-    .principal-form-logo {
+    .principal-form-logo 
+    {
         /* border: solid 2px red; */
         width: 20%
     }
-
-
-
-    .principal .principal-form-logo img {
+    .principal .principal-form-logo img 
+    {
         height: 100%;
         width: 100%;
     }
 
     /* Aumenta la imagen cuando se pasa el cursor sobre ella y coloca sombra*/
-    .produc:hover {
+    .produc:hover 
+    {
         box-shadow: 5px 5px 15px 5px rgb(90, 88, 88);
         transform: scale(1.1);
         -webkit-transform: scale(1.1);
     }
 
-    .productos {
+    .productos 
+    {
         /* border: solid 2px blue; */
         display: flex;
         flex-wrap: wrap;
     }
 
-    .productos .produc {
+    .productos .produc 
+    {
         border-style: outset;
         height: auto;
         width: 40%;
     }
 
-    .produc p,
-    i {
+    .produc p,i 
+    {
         line-height: 0px;
         text-align: center;
     }
 
-    .produc i {
+    .produc i 
+    {
         margin-bottom: 20px;
     }
 
-    .productos .produc img {
+    .productos .produc img 
+    {
         height: auto;
         width: 100%;
     }
-    .productos .produc button{
+    .productos .produc button
+    {
         background-color: white;
         border-radius: 11%;
         height: 25px;
     }
 
-    .section-destacados {
+    .section-destacados 
+    {
         margin-top: 12%;
     }
 
-    .section-destacados h3 {
+    .section-destacados h3 
+    {
         background-color: white;
         height: auto;
         margin-bottom: 10%;               
     }   
-    .social-nets {
-    display: flex;
-    flex-direction: column;
-    height: 200px;
-    justify-content: space-between;
-    left: 10px;
-    max-width: 38px;
-    position: fixed;
-    right: 20px;
-    top: 250px;
-}
-.texto {
+    .social-nets 
+    {
+        display: flex;
+        flex-direction: column;
+        height: 200px;
+        justify-content: space-between;
+        left: 10px;
+        max-width: 38px;
+        position: fixed;
+        right: 20px;
+        top: 250px;
+    }
+    .texto 
+    {
         display: none;
-}
-.td {
-    margin: 0;
-    text-align: center;
+    }
+    .td 
+    {
+        margin: 0;
+        text-align: center;
     }
 }
 
+/* /////////////////////////////Media query para 768px   ///////////////////////////// */
 
-
-/* /////////////////////////////Media query para 760px   ///////////////////////////// */
-
-@media (min-width: 760px) {
-    .credit-cards {
-      
+@media (min-width: 768px) 
+{
+    .art-size__title 
+    {
+        text-align: center;
+    }
+   .credit-cards 
+   {     
         display: flex;       
         flex-wrap: wrap;
-        justify-content: space-around;
-       
+        justify-content: space-around;  
     }
-    .credit-cards img{
+    .credit-cards img
+    {
         height: 60px;
     }
 
-    .credit-cards .uno {
+    .credit-cards .uno 
+    {
         display: block;
     }
 
-    .cuentaCarrito {
+    .cuentaCarrito 
+    {
         align-items: flex-end;
         display: flex;
         flex-direction: row;
@@ -328,41 +376,70 @@ footer {
     }
 
     /* Quita el subrayado de los enlaces */
-    .cuentaCarrito a,
-    .menus a {
+    .cuentaCarrito a, .menus a 
+    {
         text-decoration: none;
     }
-
-    .icono-carrito {
+    .desc-comp__but 
+    {
+        height: 43px;
+    }
+    .descr-prod 
+    {
+        border-right: none;
+        border-bottom: none
+    }
+    .descuento-flex 
+    {
+        display: block;
+    }
+    .icono-carrito 
+    {
         display: none;
     }
-
-    .main-header {
-        background-color: white;
-        /*para fondo del header */
-
+    .main-carrito 
+    {
+        display: flex;
+    }
+    .main-descr 
+    {
+        display: flex;
+        justify-content: space-around;
     }
 
-    .menu ul {
+    .main-header 
+    {
+        background-color: white;
+        /*para fondo del header */
+    }
+
+    .menu ul 
+    {
         list-style: none;
     }
 
-    .menu {
+    .menu 
+    {
         /* border: solid 5px green; */
         display: block;
         border-top: solid 1px gray;
         width: 100%;
-
     }
 
-    .menus {
+    .menus 
+    {
         display: flex;
         flex-direction: row;
         justify-content: center;
-        /* background-color: aquamarine; */
+    }
+    .name-pr 
+    {
+
+        border-top: none
     }
 
-    .principal {
+    .principal 
+    {
         /* border: solid 5px blue; */
         display: flex;
         flex-wrap: wrap;
@@ -371,31 +448,31 @@ footer {
         width: 100%;
     }
 
-    .principal-carrito a,
-    .menu a {
+    .principal-carrito a, .menu a 
+    {
         color: black;
         font-size: small;
         margin-right: 15px;
     }
 
-    .principal-form-logo img {
+    .principal-form-logo img 
+    {
         border-radius: 10%;
         height: 150%;
         width: 130%;
-
-
     }
 
-    .principal-form-logo {
+    .principal-form-logo 
+    {
         /* border: solid 3px greenyellow; */
         margin-bottom: 1%;
         margin-top: 1%;
         margin-left: 1%;
         width: 10%;
-
     }
 
-    .principal-form-boton {
+    .principal-form-boton 
+    {
         /* border: solid 1px red; */
         height: 40px;
         margin: auto;
@@ -403,62 +480,85 @@ footer {
         width: 30%;
     }
 
-    .principal-form-boton form {
+    .principal-form-boton form 
+    {
         /* border: solid 2px blue; */
         display: flex;
         height: 100%;
         width: 100%;
     }
 
-    .principal-form-boton form input {
+    .principal-form-boton form input 
+    {
         height: 100%;
         width: 100%;
     }
 
-    .principal-form-boton form button {
+    .principal-form-boton form button 
+    {
         background-color: black;
         border-radius: 10%;
         /* border: solid 5px violet; */
         width: 10%;
     }
 
-    .principal-form-boton form button .fa-search {
+    .principal-form-boton form button .fa-search 
+    {
         color: white;
     }
 
-    .principal-carrito {
+    .principal-carrito 
+    {
         /* border: solid 2px blue; */
         align-self: center;
         display: flex;
         padding: 20px;
     }
 
-    .principal-carrito li {
+    .principal-carrito li 
+    {
         list-style: none;
     }
-.productos .produc button{
-    background-color: white;
-    cursor: pointer;
-    height: 30px;
+    .productos .produc button
+    {
+        background-color: white;
+        cursor: pointer;
+        height: 30px;
     }
-.productos .produc button:hover{
-    background-color: black;
-    color: white;
-   
-}
-
-    .section-destacados {
+    .productos .produc button:hover
+    {
+        background-color: black;
+        color: white;   
+    }
+    .resumen-de-compra 
+    {
+        align-self: center;
+        margin-left: auto;
+        margin-right: auto;
+        height: 50%;
+        padding: 10px;
+    }
+    .section-destacados 
+    {
         /* border: solid 2px green; */
         margin-top: 15px;
-
     }
-
-    .section-destacados h3 {
+    .section-destacados h3 
+    {
         /* border: solid 2px violet; */
         margin-top: 2rem;
     }
+    .selec-color 
+    {
+        justify-content: center;
+    }
+    .selec-color__title 
+    {
+        text-align: center;
+     }
 
-    .texto {
+    .texto 
+    {
         background-color: #E5E5E5;
         color: black;
         display: block;
@@ -478,7 +578,8 @@ footer {
     } */
 
     /* Para el efecto en el menú */
-    .principal-carrito nav .cuentaCarrito li {
+    .principal-carrito nav .cuentaCarrito li 
+    {
         border-radius: 5%;
         box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
         cursor: pointer;
@@ -488,7 +589,8 @@ footer {
         transition: all 300ms;
     }
 
-    .menu nav .menus li {
+    .menu nav .menus li 
+    {
         cursor: pointer;
         border-radius: 5%;
         box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
@@ -496,11 +598,11 @@ footer {
         margin-left: 5px;
         padding: 10px 10px 10px 10px;
         transition: all 300ms;
-
     }
 
     /* Para el efecto en el menú */
-    .principal-carrito nav .cuentaCarrito li:hover {
+    .principal-carrito nav .cuentaCarrito li:hover 
+    {
         border-bottom: 7px solid red;
         padding-bottom: 3px;
         transform: scale(1.1);
@@ -508,37 +610,38 @@ footer {
     }
 
     /* Para el efecto en el menú */
-    .menu nav .menus li:hover {
+    .menu nav .menus li:hover 
+    {
         border-bottom: 7px solid red;
         padding-bottom: 3px;
         transform: scale(1.1);
-
-
-
     }
 
 
 
 
-    /* #######################Fin header para 760px######################## */
+    /* #######################Fin header para 768px######################## */
 
-    /* #######################Inicio main para 760px######################## */
-    .com-but-main {
+    /* #######################Inicio main para 768px######################## */
+    .com-but-main 
+    {
         color: rgb(162, 16, 55);
         text-decoration: none;
     }
 
-    .fa-star {
+    .fa-star 
+    {
         transition: all 4s;
-
     }
 
-    .fa-star:hover {
+    .fa-star:hover 
+    {
         color: black;
         transform: rotate(360deg);
     }
 
-    .help-button {
+    .help-button 
+    {
         /* border: solid 3px red; */
         bottom: 10px;
         max-width: 12%;
@@ -546,8 +649,8 @@ footer {
         right: 10px;
     }
 
-    .help-button button {
-        background-color: black;
+    .help-button button 
+    { background-color: black;
         border-radius: 10%;
         color: white;
         cursor: pointer;
@@ -556,7 +659,8 @@ footer {
     }
 
 
-    .productos {
+    .productos 
+    {
         /* border: solid 2px green; */
         display: flex;
         flex-wrap: wrap;
@@ -568,46 +672,51 @@ footer {
         /* border: solid 1px red; */
         border-style: outset;
         width: 25%;
-
     }
 
 
-    .productos .produc img {
+    .productos .produc img 
+    {
         /* border-radius: 5%; */
         /* border: solid 2px green;   */
         padding: 2px;
         width: 100%;
     }
 
-    .produc {
+    .produc 
+    {
         /* border-radius: 10%; */
         /* border: solid 2px red; */
         transition: all 500ms;
     }
 
  /* Aumenta la imagen cuando se pasa el cursor sobre ella y coloca sombra*/
-.produc:hover {
-    box-shadow: 5px 5px 15px 5px rgb(90, 88, 88);
-    transform: scale(1.1);
-    -webkit-transform: scale(1.1);           
-}
-.social-nets { 
-    display: flex;
-    flex-direction: column;
-    height: 200px;
-    justify-content: space-between;
-    left: 10px;
-    max-width: 38px;
-    position: fixed;
-    right: 20px;
-    top: 250px;
-}
-.social-nets img{
-    cursor: pointer;
-    transition: all 550ms;
-}
+    .produc:hover 
+    {
+        box-shadow: 5px 5px 15px 5px rgb(90, 88, 88);
+        transform: scale(1.1);
+        -webkit-transform: scale(1.1);           
+    }
+    .social-nets 
+    { 
+        display: flex;
+        flex-direction: column;
+        height: 200px;
+        justify-content: space-between;
+        left: 10px;
+        max-width: 38px;
+        position: fixed;
+        right: 20px;
+        top: 250px;
+    }
+    .social-nets img
+    {
+        cursor: pointer;
+        transition: all 550ms;
+    }
 
-   .social-nets img:hover{
+   .social-nets img:hover
+   {
      color: red;
      transform: scale(1);
      -webkit-transform: scale(1.5);      
@@ -615,7 +724,8 @@ footer {
 
     /* https://stackoverflow.com/questions/16771225/css3-rotate-animation */
     /* Para que el signo de interrogación gire 360 grados */
-    .help-button button .fa-circle-question {
+    .help-button button .fa-circle-question 
+    {
         animation: spin 2s linear signopregunta;
         -moz-animation: signopregunta 2s linear infinite;
         -webkit-animation: signopregunta 2s linear infinite;
@@ -624,20 +734,26 @@ footer {
 
     /* https://stackoverflow.com/questions/16771225/css3-rotate-animation */
     /* Para que el signo de interrogación gire 360 grados */
-    @-moz-keyframes signopregunta {
-        100% {
+    @-moz-keyframes signopregunta 
+    {
+        100% 
+        {
             -moz-transform: rotateY(360deg);
         }
     }
 
-    @-webkit-keyframes signopregunta {
-        100% {
+    @-webkit-keyframes signopregunta 
+    {
+        100% 
+        {
             -webkit-transform: rotateY(360deg);
         }
     }
 
-    @keyframes signopregunta {
-        100% {
+    @keyframes signopregunta 
+    {
+        100% 
+        {
             -webkit-transform: rotateY(360deg);
             transform: rotateY(360deg);
         }
@@ -647,37 +763,41 @@ footer {
 
     /* ################### Fin del main############################################# */
 
-    /* ##########################Inicio footer para 760px########################################## */
+    /* ##########################Inicio footer para 768px########################################## */
 
     
-    .footer-mobile {
+    .footer-mobile 
+    {
         border: none;
-
     }
 
-    .footer-mobile .footer-mobile-list {
+    .footer-mobile .footer-mobile-list 
+    {
         border: none;
         text-align: left;
     }
 
-    .footer-mobile .footer-mobile-list .uno h4 {
+    .footer-mobile .footer-mobile-list .uno h4 
+    {
         /* border: solid 3px red; */
         justify-content: center;
         text-decoration: underline black;
-
     }
 
-    .footer-mobile-list .uno {
+    .footer-mobile-list .uno 
+    {
         width: 33%;
     }
 
-    .footer-mobile-list .uno li {
+    .footer-mobile-list .uno li 
+    {
         color: black;
         /* border: solid 2px black; */
     }
 
 
-    .footer-mobile .footer-mobile-list {
+    .footer-mobile .footer-mobile-list 
+    {
         /* border: solid 5px blue; */
         display: flex;
         flex-wrap: wrap;
@@ -703,13 +823,15 @@ footer {
 
     }
 
-    .footer-mobile-list .institucional li {
+    .footer-mobile-list .institucional li 
+    {
         /* border: solid 2px red; */
         text-align: left;
     }
 
   
-   .news-letter{
+   .news-letter
+   {
        align-items: center;
        background-color: whitesmoke;
        display: flex;
@@ -717,30 +839,36 @@ footer {
        padding: 1% 2% 4% 2%;
        /* border: solid 2px red; */
        width: 100%;
-}
-.td h5{
-    color: black;
-    font-size: medium;
-   
-}   
-}
-footer {
-    margin-top: 10%;
-}
+    }
+    .td h5
+    {
+        color: black;
+        font-size: medium;
+    }   
 
-.fa-star {
-    color: red;
-    font-size: medium;
-}
 
-.section1 {
-    margin-bottom: 5%;
-}
+    footer 
+    {
+        margin-top: 10%;
+    }
 
-.section3 {
-    margin-top: 6%;
-}
+    .fa-star 
+    {
+        color: red;
+        font-size: medium;
+    }
 
+    .section1 
+    {
+        margin-bottom: 5%;
+    }
+
+    .section3 
+    {
+        margin-top: 6%;
+    }
+
+}
 
 
 
@@ -772,6 +900,9 @@ footer {
     .menus a {
         text-decoration: none;
     }
+    .descuento-flex {
+        display: block;
+    }
 
     .productos {
         display: flex;
@@ -796,18 +927,6 @@ footer {
         transform: scale(1.1);
         -webkit-transform: scale(1);
     }
-
-    /* .main-header{
-      background-color: rgb(228, 56, 101);
-        position: fixed;
-        width: 100%;
-        top: 0;
-        
-    } */
-
-
-
-
 
 }
 
@@ -867,13 +986,6 @@ section h3 {
     font-size: small;
 
 }
-
-
-
-
-
-
-
 
 
 /* /////////////////////////////////////////FIN MAIN ///////////////////////////////////////////////////////////*/
@@ -1016,8 +1128,6 @@ section h3 {
     text-align: left;
 }
 
-
-
 .cupon-descuento__boton {
     background-color: rgb(162, 16, 55);
     border-radius: 5px;
@@ -1030,23 +1140,15 @@ section h3 {
     -webkit-transform: scale(1.2);
     transform: scale(1.2);
 }
-
-
-
-
 .cont-cupon {
     display: flex;
     width: 100%;
 
-
 }
-
 .cont-cupon input {
     margin-right: 15px;
     padding-left: 10px;
     width: 65%;
-
-
 }
 
 .cupon-descuento__form {
@@ -1058,7 +1160,6 @@ section h3 {
     display: flex;
     justify-content: space-around;
     margin-bottom: 15px;
-
 }
 
 .contenedor-precios {
@@ -1118,10 +1219,6 @@ section h3 {
     transform: scale(1.2);
 }
 
-
-
-
-
 .resumen-de-compra {
     border: 1px solid rgb(255, 254, 254);
     border-radius: 10px;
@@ -1138,38 +1235,6 @@ section h3 {
 .descuento-flex {
     display: flex;
     justify-content: space-between;
-
-}
-
-
-@media (min-width: 768px) {
-    .main-carrito {
-        display: flex;
-
-
-    }
-
-    .descuento-flex {
-        display: block;
-    }
-
-    .resumen-de-compra {
-        align-self: center;
-        margin-left: auto;
-        margin-right: auto;
-        height: 50%;
-        padding: 10px;
-    }
-
-
-
-}
-
-@media (min-width: 992px) {
-
-    .descuento-flex {
-        display: block;
-    }
 
 }
 
@@ -1495,47 +1560,6 @@ section h3 {
     transform: scale(1.2);
 }
 
-
-@media (min-width: 768px) {
-    .main-descr {
-        display: flex;
-        justify-content: space-around;
-
-    }
-
-    .selec-color__title {
-        text-align: center;
-
-    }
-
-    .selec-color {
-        justify-content: center;
-    }
-
-    .art-size__title {
-        text-align: center;
-    }
-
-    .descr-prod {
-
-        border-right: none;
-        border-bottom: none
-    }
-
-    .name-pr {
-
-        border-top: none
-    }
-
-
-    .desc-comp__but {
-        height: 43px;
-
-    }
-
-}
-
-
 /* ////////////////////////////////////FINALIZA DESCRIPCION DEL PRODUCTO////////////////////////////////////////*/
 
 /*-------------------------------------- REGISTRO   -----------------------------------*/
@@ -1631,19 +1655,10 @@ section h3 {
     width: 85%;
 }
 
-
-
-
-
-
-
 .form__fecha label {
     font-weight: bold;
     margin-bottom: 10px;
     margin-left: 10px;
-
-
-
 }
 
 .form__domicilio {
@@ -1766,16 +1781,9 @@ section h3 {
 } */
 
 
-
-
-
-
-
-
 /*---------------------------------------------------REGISTRO-------------------------------------------*/
 
 /*---------------------------------------------------LOGIN-------------------------------------------*/
-
 
 .main-login {
     margin-top: 30px;
@@ -1868,69 +1876,6 @@ section h3 {
 
 /*---------------------------------------------------LOGIN-------------------------------------------*/
 
-
-
-/* //////////////////////////////////////////INICIO FOOTER ///////////////////////////////////////////////*/
-
-
-
-/* .cuotas {
-    background-color: #e8e8e8;
-    margin-top: 100%;
-    overflow: hidden;
-    padding: 1em;
-    border-top: solid 1px black;
-    border-bottom: solid 1px black;
-    flex-direction: row;
-    justify-content: space-around;
-    display: flex;
-} */
-
-/* .cuotas-pagos {
-
-   
-    float: left;
-    font-size: x-small;
-    height: 150px;
-    margin: 1em;
-    padding: 1em;
-    text-align: center;
-    width: 200px;
-
-} */
-
-
-/* .cuotas-pagos p {
-
-    text-align: justify;
-    font-size: xx-small;
-   
-} */
-
-/* .cuotas-pagos img {
-    position: absolute;
-    width: 50px;
-    height: 60px;
-    padding: 2px 20px 35px 0%;
-    display: block;
-} */
-
-/* .cuotas-pagos ul li {
-    font-size: small;
-    text-align: left;
-} */
-
-/* footer h5 {
-    text-align: center;
-} */
-
-/* .cuotas-pagos h3 {
-    text-align: center;
-} */
-
-
-
-
 /* //////////////////////////////////////////FORMULARIO DE CREACION Y EDICION DE PRODUCTOS /////////////////////////////////////////////////////*/
 .crear-title {
     background-color: rgb(232, 207, 207);
@@ -1984,8 +1929,6 @@ section h3 {
     width: 85%;
 
 }
-
-
 
 .form-create__descr {
     margin-bottom: 20px;
