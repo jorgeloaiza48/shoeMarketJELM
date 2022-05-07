@@ -578,7 +578,7 @@ footer {
     }
 
     .fa-star {
-        transition: all 4s;
+        transition: all 4s;                            
     }
 
     .fa-star:hover {
@@ -594,7 +594,7 @@ footer {
         right: 10px;
     }
 
-    .help-button button {
+    .help-button button{
         background-color: black;
         border-radius: 10%;
         color: white;
@@ -612,16 +612,16 @@ footer {
 
     }
 
-    .productos .produc {
+    .productos .produc{
         /* border: solid 1px red; */
         border-style: outset;
-        width: 25%;
+        max-width: 25%;
         border-radius: 15px;
     }
 
 
-    .productos .produc img {
-        /* border-radius: 5%; */
+    .productos .produc img{
+        border-radius: 5%;
         /* border: solid 2px green;   */
         padding: 2px;
         width: 100%;
@@ -637,7 +637,7 @@ footer {
     .produc:hover {
         box-shadow: 5px 5px 15px 5px rgb(90, 88, 88);
         transform: scale(1.1);
-        -webkit-transform: scale(1.1);
+        -webkit-transform: scale(1.1);                
     }
 
     .social-nets {
@@ -669,7 +669,6 @@ footer {
         animation: spin 2s linear signopregunta;
         -moz-animation: signopregunta 2s linear infinite;
         -webkit-animation: signopregunta 2s linear infinite;
-
     }
 
     /* https://stackoverflow.com/questions/16771225/css3-rotate-animation */
