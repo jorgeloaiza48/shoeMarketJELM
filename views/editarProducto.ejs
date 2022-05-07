@@ -3,7 +3,7 @@
     <body>
         <header>
 
-            <h1 class="crear-title">Formulario para editar</h1>
+            <h1 class="crear-title">Formulario para editar producto</h1>
 
         </header>
 
@@ -13,9 +13,14 @@
             <form action="/" method="POST" class="form-create">
 
                 <div class="form-create__nombre">
-                    <label for="nombre">Nombre del producto *</label>
+                    <label for="nombre">Introduzca el nombre del producto que desea editar</label>
                     <input type="text" name="nombre" id="nombre" placeholder="Nombre del nuevo producto" required
                         minlength="4">
+                </div>
+                <div class="form-create__nombre">
+                    <label for="nombre">Introduzca el nuevo nombre del producto</label>
+                    <input type="text" name="nombre" id="nombre" placeholder="Nombre del nuevo producto" 
+                       >
                 </div>
                 <div class="form-create__descr">
                     <label for="description">Descripcion del producto*</label>

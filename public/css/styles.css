@@ -19,6 +19,9 @@ gris claro rgb(231, 241, 241);
 
  */
 
+
+ 
+
 * {
     box-sizing: border-box;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -71,6 +74,8 @@ footer {
         color: black;
         transform: rotate(360deg);
     }
+
+    
 
     .footer-mobile .institucional {
         display: none;
@@ -251,6 +256,7 @@ footer {
         border-style: outset;
         height: auto;
         width: 40%;
+       ;
     }
 
     .produc p,
@@ -270,8 +276,9 @@ footer {
 
     .productos .produc button {
         background-color: white;
-        border-radius: 11%;
+        border-radius: 5px;
         height: 25px;
+        transition: 0.5s;
     }
 
     .section-destacados {
@@ -386,6 +393,7 @@ footer {
         display: flex;
         flex-direction: row;
         justify-content: center;
+
     }
 
     .name-pr {
@@ -523,28 +531,29 @@ footer {
 
     /* Para el efecto en el menú */
     .principal-carrito nav .cuentaCarrito li {
-        border-radius: 5%;
+        border-radius: 10px;
         box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
         cursor: pointer;
         font-size: 10px;
         margin-left: 5px;
         padding: 10px 10px 10px 10px;
-        transition: all 300ms;
+        transition: all 0.5s;
     }
 
     .menu nav .menus li {
         cursor: pointer;
-        border-radius: 5%;
+        border-radius: 10px;
         box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
         font-size: 10px;
         margin-left: 5px;
         padding: 10px 10px 10px 10px;
-        transition: all 300ms;
+        transition: all 0.5s;
+
     }
 
     /* Para el efecto en el menú */
     .principal-carrito nav .cuentaCarrito li:hover {
-        border-bottom: 7px solid red;
+        border-bottom: 7px solid rgb(5, 5, 5);
         padding-bottom: 3px;
         transform: scale(1.1);
 
@@ -552,7 +561,7 @@ footer {
 
     /* Para el efecto en el menú */
     .menu nav .menus li:hover {
-        border-bottom: 7px solid red;
+        border-bottom: 7px solid rgb(0, 0, 0);
         padding-bottom: 3px;
         transform: scale(1.1);
     }
@@ -607,6 +616,7 @@ footer {
         /* border: solid 1px red; */
         border-style: outset;
         width: 25%;
+        border-radius: 15px;
     }
 
 
@@ -906,8 +916,11 @@ section h3 {
 .main-carrito {
     background-color: rgb(232, 207, 207);
     margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
     padding-bottom: 15px;
     width: 90%;
+
 }
 
 .primer-parte-carrito {
@@ -938,7 +951,7 @@ section h3 {
 
 
 .prod-carr__img {
-
+border-radius: 20px;
     margin-top: 5px;
     margin-bottom: 5px;
     margin-left: 5px;
@@ -992,6 +1005,8 @@ section h3 {
     align-items: center;
     display: flex;
     font-size: 30px;
+    margin-right: 12px;
+    margin-left: 12px;
     height: 30px;
     padding-left: 5px;
     width: 25px;
@@ -1038,15 +1053,15 @@ section h3 {
 }
 
 .cupon-descuento__boton {
-    background-color:  rgb(232, 207, 207);;
+    background-color: rgb(232, 207, 207);
     border-radius: 5px;
     color: rgb(0, 0, 0);
     transition: all 0.5s;
 }
 
 .cupon-descuento__boton:hover {
-background-color: black;
-color: white;
+    background-color: black;
+    color: white;
     -webkit-transform: scale(1.2);
     transform: scale(1.2);
 }
@@ -1116,7 +1131,7 @@ color: white;
 }
 
 .boton-finalizar__seguir {
-    background-color:rgb(232, 207, 207);
+    background-color: rgb(232, 207, 207);
     border-radius: 5px;
     color: rgb(0, 0, 0);
     margin-bottom: 15px;
@@ -1125,8 +1140,8 @@ color: white;
 }
 
 .boton-finalizar__seguir:hover {
-background-color: black;
-color: white;
+    background-color: black;
+    color: white;
     -webkit-transform: scale(1.2);
     transform: scale(1.2);
 }
@@ -1215,6 +1230,7 @@ color: white;
 .photos-small__photo {
     align-items: center;
     align-self: center;
+    border-radius: 35px;
     height: 100%;
     padding: 5px;
     display: flex;
@@ -1224,6 +1240,7 @@ color: white;
 
 
 .photos-desc__big {
+    border-radius: 35px;
     margin-left: auto;
     margin-right: auto;
     padding: 15px;
@@ -1289,7 +1306,8 @@ color: white;
     color: #c44b52;
     margin-bottom: 10px;
 }
-.name-pr__cuota i{
+
+.name-pr__cuota i {
     color: rgb(47, 30, 30)
 }
 
@@ -1546,13 +1564,15 @@ color: white;
     color: white;
 
 }
-.desc-desc__title{
- text-align: left;   
- margin-left: 53px;
+
+.desc-desc__title {
+    text-align: left;
+    margin-left: 53px;
 
 }
-.desc-desc ul li{
-    list-style:none;
+
+.desc-desc ul li {
+    list-style: none;
     margin-left: 15px;
     margin-bottom: 7px;
     font-size: 18px;
@@ -1660,26 +1680,26 @@ color: white;
 
 @media (min-width: 1200px) {
 
-.name-pr__price {
-    margin-top: 0px;
-    margin-bottom: 12px;
-}
+    .name-pr__price {
+        margin-top: 0px;
+        margin-bottom: 12px;
+    }
 
-.name-pr__cuota {
-    margin-top: 0px;
-    margin-bottom: 12px;
-}
+    .name-pr__cuota {
+        margin-top: 0px;
+        margin-bottom: 12px;
+    }
 
-.name-pr__title {
-    margin-top: 10px;
-    margin-bottom: 12px;
-}
+    .name-pr__title {
+        margin-top: 10px;
+        margin-bottom: 12px;
+    }
 
-.name-pr__off {
-    margin-top: 0px;
-    margin-bottom: 0px;
-   
-}
+    .name-pr__off {
+        margin-top: 0px;
+        margin-bottom: 0px;
+
+    }
 }
 
 /* ////////////////////////////////////FINALIZA DESCRIPCION DEL PRODUCTO////////////////////////////////////////*/
@@ -1856,17 +1876,6 @@ color: white;
 }
 
 
-.form__button {
-
-    background-color: rgb(162, 16, 55);
-    border: none;
-    border-radius: 10px;
-    color: white;
-    padding: 10px 20px;
-    transition: all 0.5s;
-
-}
-
 .contenedor_button {
     display: flex;
     justify-content: space-around;
@@ -1889,11 +1898,7 @@ color: white;
     color: rgb(228, 56, 101);
 }
 
-.form__button:hover {
-    background-color: rgb(228, 56, 101);
-    -webkit-transform: scale(1.2);
-    transform: scale(1.2);
-}
+
 
 .form-Reg input[type="text"]:focus:required:valid {
     border: 2px solid green;
@@ -1914,17 +1919,18 @@ color: white;
 }
 
 .button-login {
-    background-color: rgb(162, 16, 55);
+    background-color: rgb(255, 255, 255);
+    border: 1px solid grey;
     border-radius: 10px;
-    color: white;
+    color: rgb(0, 0, 0);
     margin-bottom: 50px;
     margin-top: 30px;
     max-width: 350px;
     padding-top: 10px;
     padding-bottom: 10px;
     text-align: center;
+    transition: all 0.7s;
     width: 90%;
-    transition: all 0.5s;
 }
 
 .usuario {
@@ -1982,9 +1988,10 @@ color: white;
 }
 
 .button-login:hover {
-    background-color: rgb(228, 56, 101);
-    -webkit-transform: scale(1.2);
-    transform: scale(1.2);
+    background-color: rgb(0, 0, 0);
+    color: white;
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
 
 }
 
@@ -2194,14 +2201,16 @@ color: white;
 
 .form__button {
 
-    background-color: rgb(162, 16, 55);
-    border: none;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid grey;
     border-radius: 10px;
-    color: white;
+    color: rgb(0, 0, 0);
     padding: 10px 20px;
-    transition: all 0.5s;
+    transition: all 0.8s;
 
 }
+
+
 
 .contenedor_button {
     display: flex;
@@ -2227,9 +2236,11 @@ color: white;
 
 
 .form__button:hover {
-    background-color: rgb(228, 56, 101);
+    background-color: rgb(0, 0, 0);
+    color: white;
     -webkit-transform: scale(1.2);
     transform: scale(1.2);
+
 }
 
 .form-create__descr:hover {
