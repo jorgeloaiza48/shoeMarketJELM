@@ -11,3 +11,6 @@ Analizamos la retroalimentación hecha por Daniel Duque y en ella observamos que
 
 Reunión 5-5-2022
 Durante diez minutos hablamos acerca de depurar y mejorar el archivo de estilos pues según la retroalimentación hecha por el profesor daniel Duque, dicho archivo está un poco extenso y tiene algunas reglas repetidas.
+
+Reunión 9-5-2022
+Por un lapso de cinco minutos ultimamos algunos detalles antes de la entrega como por ejemplo el agregar una etiqueta <a> para mostrar el detalle del producto cada vez que se hace clik en una imagen o sobre todo el contenedor.
