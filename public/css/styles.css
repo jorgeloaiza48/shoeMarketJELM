@@ -1677,29 +1677,7 @@ border-radius: 20px;
 
 
 
-@media (min-width: 1200px) {
 
-    .name-pr__price {
-        margin-top: 0px;
-        margin-bottom: 12px;
-    }
-
-    .name-pr__cuota {
-        margin-top: 0px;
-        margin-bottom: 12px;
-    }
-
-    .name-pr__title {
-        margin-top: 10px;
-        margin-bottom: 12px;
-    }
-
-    .name-pr__off {
-        margin-top: 0px;
-        margin-bottom: 0px;
-
-    }
-}
 
 /* ////////////////////////////////////FINALIZA DESCRIPCION DEL PRODUCTO////////////////////////////////////////*/
 
@@ -2250,3 +2228,9 @@ border-radius: 20px;
 .form-create input[type="text"]:focus:required:valid {
     border: 2px solid green;
 }
+
+
+
+
+
+
