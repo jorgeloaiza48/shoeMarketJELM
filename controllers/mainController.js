@@ -5,7 +5,7 @@ const controller = {
 
     register: (req,res) => { res.render("registro", {title: "Registro"} )},
 
-    login:(req,res) => {res.render('login',{title: "Login"})},
+    login:(req,res) => {res.render('/users/login',{title: "Login"})},
 
     descripcion:(req,res) => {res.render('descripcion',{title: "Descripcion"})},
 
