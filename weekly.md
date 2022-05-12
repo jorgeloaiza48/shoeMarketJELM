@@ -14,3 +14,6 @@ Durante diez minutos hablamos acerca de depurar y mejorar el archivo de estilos 
 
 Reunión 9-5-2022
 Por un lapso de cinco minutos ultimamos algunos detalles antes de la entrega como por ejemplo el agregar una etiqueta <a> para mostrar el detalle del producto cada vez que se hace clik en una imagen o sobre todo el contenedor.
+
+Reunión 11-5-2022
+Por un tiempo de cinco minutos, discutimos sobre lo visto en clase referente a dinamizar las rutas y trabajar los formularios con los diferentes métodos de envío de información.

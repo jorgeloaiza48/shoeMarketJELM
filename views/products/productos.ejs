@@ -1,6 +1,7 @@
 <%- include("../partials/head") %>
-<body>
-<%- include("../partials/header") %>
+
+    <body>
+        <%- include("../partials/header") %>
 
             <!-- *****************************INICIO MAIN****************************************** -->
 
@@ -14,14 +15,14 @@
 
                         <div class="productos">
 
-                            <a href="descripcion">
+                            <a href="/detalle/<%= product.id %>">
                                 <div class="produc"><img src="/img/products/<%= product.image %>" alt="bota">
                                     <p>
                                         <%= product.name %>
                                     </p>
                                     <p>$<%= product.price %>
                                     </p>
-                                    <p><a href="/descripcion" class="com-but-main"><button>COMPRAR</button></a></p><i
+                                    <p><a href="/detalle/<%= product.id %>" class="com-but-main"><button>COMPRAR</button></a></p><i
                                         class="fa-solid fa-star"></i>
                                 </div>
                             </a>
@@ -30,156 +31,139 @@
 
                 </section>
                 <% }) %>
+                    <section class="section-destacados">
 
-                    <section class="section3">
-                        <video autoplay loop muted width="100%">
-                            <source
-                                src="https://player.vimeo.com/progressive_redirect/playback/686324588/rendition/720p?loc=external&signature=d6b9e6986b56478f7ab61ca9479464a10d79f4f600bf950c804fe828697f1cce"
-                                playsinline type="video/mp4" />
-                            No se puede reproducir el video
-                        </video>
+                        <h3>Borcegos</h3>
+                        <% borcegos.forEach(product=> { %>
 
-                    </section>
+                            <div class="productos">
 
-                    <section>
-                        <h3>PROMOCIONES</h3>
-                        <div class="productos">
-                            <a href="descripcion">
-                                <div class="produc"><img src="/img/products/dianaNegro.jpeg" alt="bota">
-                                    <p>Diana Negro</p>
-                                    <p>$42.000</p>
-                                    <p><a href="/descripcion" class="com-but-main"><button>COMPRAR</button></a></p><i
-                                        class="fa-solid fa-star"></i>
-                                </div>
-                            </a>
-                            <a href="descripcion">
-                                <div class="produc"><img src="/img/products/maddyNegro.jpeg" alt="bota">
-                                    <p>Maddy Negro</p>
-                                    <p>$42.000</p>
-                                    <p><a href="/descripcion" class="com-but-main"><button>COMPRAR</button></a></p><i
-                                        class="fa-solid fa-star"></i>
-                                </div>
-                            </a>
-                            <a href="descripcion">
-                                <div class="produc"><img src="/img/products/maddyCrema.jpeg" alt="bota">
-                                    <p>Maddy Crema</p>
-                                    <p>$42.000</p>
-                                    <p><a href="/descripcion" class="com-but-main"><button>COMPRAR</button></a></p><i
-                                        class="fa-solid fa-star"></i>
-                                </div>
-                            </a>
-                            <a href="descripcion">
-                                <div class="produc"><img src="/img/products/londonNegro.jpeg" alt="bota">
-                                    <p>London Negro</p>
-                                    <p>$42.000</p>
-                                    <p><a href="/descripcion" class="com-but-main"><button>COMPRAR</button></a></p><i
-                                        class="fa-solid fa-star"></i>
-                                </div>
-                            </a>
-                            <a href="descripcion">
-                                <div class="produc"><img src="/img/products/londonNegro.jpeg" alt="bota">
-                                    <p>London Negro</p>
-                                    <p>$42.000</p>
-                                    <p><a href="/descripcion" class="com-but-main"><button>COMPRAR</button></a></p><i
-                                        class="fa-solid fa-star"></i>
-                                </div>
-                            </a>
-                            <a href="descripcion">
-                                <div class="produc"><img src="/img/products/londonNegro.jpeg" alt="bota">
-                                    <p>London Negro</p>
-                                    <p>$42.000</p>
-                                    <p><a href="/descripcion" class="com-but-main"><button>COMPRAR</button></a></p><i
-                                        class="fa-solid fa-star"></i>
-                                </div>
-                            </a>
-                        </div>
+                                <a href="/detalle/<%= product.id %>">
+                                    <div class="produc"><img src="/img/products/<%= product.image %>" alt="bota">
+                                        <p>
+                                            <%= product.name %>
+                                        </p>
+                                        <p>$<%= product.price %>
+                                        </p>
+                                        <p><a href="/descripcion" class="com-but-main"><button>COMPRAR</button></a></p>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                </a>
+
+                            </div>
 
                     </section>
+                    <% }) %>
+                        <section class="section-destacados">
 
+                            <h3>Texanas</h3>
+                            <% texanas.forEach(product=> { %>
 
-                    <section class="section5">
-                        <video autoplay loop muted width="100%">
-                            <source
-                                src="https://player.vimeo.com/progressive_redirect/playback/686324588/rendition/720p?loc=external&signature=d6b9e6986b56478f7ab61ca9479464a10d79f4f600bf950c804fe828697f1cce"
-                                playsinline type="video/mp4" />
-                            No se puede reproducir el video
-                        </video>
-                    </section>
+                                <div class="productos">
 
+                                    <a href="/detalle/<%= product.id %>">
+                                        <div class="produc"><img src="/img/products/<%= product.image %>" alt="bota">
+                                            <p>
+                                                <%= product.name %>
+                                            </p>
+                                            <p>$<%= product.price %>
+                                            </p>
+                                            <p><a href="/descripcion" class="com-but-main"><button>COMPRAR</button></a>
+                                            </p><i class="fa-solid fa-star"></i>
+                                        </div>
+                                    </a>
 
-                    <section>
-                        <h3>BOTAS</h3>
-                        <div class="productos">
-                            <a href="descripcion">
-                                <div class="produc"><img src="/img/products/SashaNegro.jpeg" alt="bota">
-                                    <p>Sasha Negro</p>
-                                    <p>$42.000</p>
-                                    <p><a href="/descripcion" class="com-but-main"><button>COMPRAR</button></a></p><i
-                                        class="fa-solid fa-star"> </i>
                                 </div>
-                            </a>
-                            <a href="descripcion">
-                                <div class="produc"><img src="/img/products/dianaBlanco.jpeg" alt="bota">
-                                    <p>Diana Blanco</p>
-                                    <p>$42.000</p>
-                                    <p><a href="/descripcion" class="com-but-main"><button>COMPRAR</button></a></p><i
-                                        class="fa-solid fa-star"></i>
-                                </div>
-                            </a>
-                            <a href="descripcion">
-                                <div class="produc"><img src="/img/products/dianaNegro.jpeg" alt="bota">
-                                    <p>Diana negro</p>
-                                    <p>$42.000</p>
-                                    <p><a href="/descripcion" class="com-but-main"><button>COMPRAR</button></a></p><i
-                                        class="fa-solid fa-star"> </i>
-                                </div>
-                            </a>
-                            <a href="descripcion">
-                                <div class="produc"><img src="/img/products/rianneNegro.jpeg" alt="bota">
-                                    <p>Rianne Negro</p>
-                                    <p>$42.000</p>
-                                    <p><a href="/descripcion" class="com-but-main"><button>COMPRAR</button></a></p><i
-                                        class="fa-solid fa-star"></i>
-                                </div>
-                            </a>
-                            <a href="descripcion">
-                                <div class="produc"><img src="/img/products/rianneNegro.jpeg" alt="bota">
-                                    <p>Rianne Negro</p>
-                                    <p>$42.000</p>
-                                    <p><a href="/descripcion" class="com-but-main"><button>COMPRAR</button></a></p><i
-                                        class="fa-solid fa-star"></i>
-                                </div>
-                            </a>
-                            <a href="descripcion">
-                                <div class="produc"><img src="/img/products/rianneNegro.jpeg" alt="bota">
-                                    <p>Rianne Negro</p>
-                                    <p>$42.000</p>
-                                    <p><a href="/descripcion" class="com-but-main"><button>COMPRAR</button></a></p><i
-                                        class="fa-solid fa-star"></i>
-                                </div>
-                            </a>
 
-                        </div>
+                        </section>
+                        <% }) %>
+                            <section class="section-destacados"></section>
+                            <h3>Bucaneras</h3>
+                            <% bucaneras.forEach(product=> { %>
 
-                    </section>
+                                <div class="productos">
 
-                    <div class="news-letter">
-                        <h2>Suscribite a nuestro newsletter</h2>
-                        <form>
-                            <input type="email" placeholder="Ingresa tu e-mail">
-                            <button><i class="fa-solid fa-arrow-right"></i></button>
-                        </form>
+                                    <a href="/detalle/<%= product.id %>">
+                                        <div class="produc"><img src="/img/products/<%= product.image %>" alt="bota">
+                                            <p>
+                                                <%= product.name %>
+                                            </p>
+                                            <p>$<%= product.price %>
+                                            </p>
+                                            <p><a href="/descripcion" class="com-but-main"><button>COMPRAR</button></a>
+                                            </p><i class="fa-solid fa-star"></i>
+                                        </div>
+                                    </a>
 
-                    </div>
+                                </div>
 
-                    <div class="help-button">
-                        <button><i class="fa-solid fa-circle-question"></i> Ayuda</button>
-                    </div>
+                                </section>
+                                <% }) %>
+                                <section class="section-destacados">
+                                    <h3>GIFT CARDS</h3>
+                                    <% guillerminas.forEach(product=> { %>
+
+                                        <div class="productos">
+
+                                            <a href="/detalle/<%= product.id %>">
+                                                <div class="produc"><img src="/img/products/<%= product.image %>"
+                                                        alt="bota">
+                                                    <p>
+                                                        <%= product.name %>
+                                                    </p>
+                                                    <p>$<%= product.price %>
+                                                    </p>
+                                                    <p><a href="/descripcion"
+                                                            class="com-but-main"><button>COMPRAR</button></a></p><i
+                                                        class="fa-solid fa-star"></i>
+                                                </div>
+                                            </a>
+
+                                        </div>
+
+                                </section>
+                                <% }) %>
+                                    <section class="section-destacados">
+                                        <h3>GIFT CARDS</h3>
+                                        <% giftCard.forEach(product=> { %>
+
+                                            <div class="productos">
+
+                                                <a href="/detalle/<%= product.id %>">
+                                                    <div class="produc"><img src="/img/products/<%= product.image %>"
+                                                            alt="bota">
+                                                        <p>
+                                                            <%= product.name %>
+                                                        </p>
+                                                        <p>$<%= product.price %>
+                                                        </p>
+                                                        <p><a href="/descripcion"
+                                                                class="com-but-main"><button>COMPRAR</button></a></p><i
+                                                            class="fa-solid fa-star"></i>
+                                                    </div>
+                                                </a>
+
+                                            </div>
+
+                                    </section>
+                                    <% }) %>
+                                        <div class="news-letter">
+                                            <h2>Suscribite a nuestro newsletter</h2>
+                                            <form>
+                                                <input type="email" placeholder="Ingresa tu e-mail">
+                                                <button><i class="fa-solid fa-arrow-right"></i></button>
+                                            </form>
+
+                                        </div>
+
+                                        <div class="help-button">
+                                            <button><i class="fa-solid fa-circle-question"></i> Ayuda</button>
+                                        </div>
 
             </main>
 
             <!-- ********************************FIN MAIN***************************************** -->
             <%- include("../partials/footer") %>
-        </body>
-        
-        </html>
+    </body>
+
+    </html>

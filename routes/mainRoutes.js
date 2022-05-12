@@ -13,6 +13,8 @@ router.get('/login',mainController.login)
 
 router.get('/descripcion',mainController.descripcion)
 
+router.get('/detalle/:id',mainController.detalle)
+
 router.get('/carrito',mainController.carrito)
 
 router.get("/crearproducto", mainController.crearProducto)

@@ -70,13 +70,6 @@ footer {
         transition: all 4s;
     }
 
-    .fa-star:hover {
-        color: black;
-        transform: rotate(360deg);
-    }
-
-    
-
     .footer-mobile .institucional {
         display: none;
     }
@@ -245,7 +238,10 @@ footer {
         transform: scale(1.1);
         -webkit-transform: scale(1.1);
     }
-
+    .produc:hover i{
+        color: black;
+        transform: rotate(360deg);
+    }
     .productos {
         /* border: solid 2px blue; */
         display: flex;
@@ -638,6 +634,11 @@ footer {
         box-shadow: 5px 5px 15px 5px rgb(90, 88, 88);
         transform: scale(1.1);
         -webkit-transform: scale(1.1);                
+    }
+
+    .produc:hover i{
+        color: black;
+        transform: rotate(360deg);
     }
 
     .social-nets {

@@ -5,7 +5,9 @@ const fs = require("fs")
 
 
 const controller = {
-    index: (req, res) => { res.render("home", { title: "Shoe Market" }) },
+    index: (req, res) => { 
+       
+        res.render("home", { title: "Shoe Market" }) },
 
     register: (req, res) => { res.render("users/registro", { title: "Registro" }) },
 
@@ -44,9 +46,6 @@ const controller = {
             return product.category == "GiftCard";
         })
 
-
-
-
         res.render("products/productos", {
             products: products,
             botas: botas,
@@ -54,7 +53,22 @@ const controller = {
             bucaneras: bucaneras,
             borcegos: borcegos,
             guillerminas: guillerminas,
-            title : "Productos"
+            title : "Productos",
+            giftCard: giftCard
+        })
+    },
+    detalle : (req,res) =>{
+        let productsFilePath = path.join(__dirname, '../data/SHOEMARKET.json');
+        let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+        let productJSON = fs.readFileSync(productsFilePath, 'utf-8')
+
+        let producto = products.find(product => product.id == req.params.id)
+
+
+        res.render("products/detalle", {
+            producto : producto,
+            title: "nose"
+
         })
     }
 
@@ -62,3 +76,4 @@ const controller = {
 }
 
 module.exports = controller
+
