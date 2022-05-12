@@ -1,0 +1,172 @@
+[
+    {
+        "id": "1",
+        "name": "DIANA",
+        "price": "11490",
+        "category": "Botas",
+        "color": "[Negro,Blanco]",
+        "description": "{Material: PU Sintetico, Alturabase : 0cm, Alturataco:8cm, Alturaca�a: 40cm, Colores: Negro Blanco}",
+        "image": "dianaNegro.jpeg",
+        "size": "[35,36,37,38,39,40]"
+    },
+    {
+        "id": "2",
+        "name": "LARA",
+        "price": "10490",
+        "category": "Borcegos",
+        "color": "[Negro,Crema,Blanco]",
+        "description": "{Material: Cuero Vacuno, Alturabase : 6cm, Alturataco:6cm, Alturaca�a: 13cm, Colores: Negro Crema Blanco}",
+        "image": "laraNegro.jpeg",
+        "size": "[35,36,37,38,39,40]"
+    },
+    {
+        "id": "3",
+        "name": "LONDON",
+        "price": "10990",
+        "category": "Borcegos",
+        "color": "[Negro]",
+        "description": "{Material: Cuero Vacuno, Alturabase : 6cm, Alturataco:6cm, Alturaca�a: 20cm, Colores: Negro}",
+        "image": "londonNegro.jpeg",
+        "size": "[35,36,37,38,39,40]"
+    },
+    {
+        "id": "4",
+        "name": "MADDY",
+        "price": "13990",
+        "category": "Guillerminas",
+        "color": "[Negro,Crema,Rojo]",
+        "description": "{Material: Razo, Alturabase : 5.5cm, Alturataco:13cm, Alturaca�a: 0cm, Colores: Negro Rojo Crema}",
+        "image": "MaddyNegro.jpeg",
+        "size": "[35,36,37,38,39,40]"
+    },
+    {
+        "id": "5",
+        "name": "RIANNE",
+        "price": "53000",
+        "category": "Bucaneras",
+        "color": "[Negro]",
+        "description": "{Material: Cuero Vacuno, Alturabase : 5.5cm, Alturataco:13cm, Alturaca�a: 39cm, Colores: Negro}",
+        "image": "rianneNegro.jpeg",
+        "size": "[35,36,37,38,39,40]"
+    },
+    {
+        "id": "6",
+        "name": "SASHA",
+        "price": "12490",
+        "category": "Botas",
+        "color": "[Negro,Blanco,Rosa]",
+        "description": "{Material: PU Sintetico, Alturabase : 0cm, Alturataco:8cm, Alturaca�a: 40cm, Colores: Negro Crema Rosa}",
+        "image": "sashaNegro.jpeg",
+        "size": "[35,36,37,38,39,40]"
+    },
+    {
+        "id": "7",
+        "name": "TIZIANA",
+        "price": "25000",
+        "category": "Bucaneras",
+        "color": "[Negro]",
+        "description": "{Material: Cuero Vacuno, Alturabase : 5.5cm, Alturataco:13cm, Alturaca�a: 39cm, Colores: Negro}",
+        "image": "",
+        "size": ""
+    },
+    {
+        "id": "8",
+        "name": "MERY",
+        "price": "15990",
+        "category": "Botas",
+        "color": "[Negro]",
+        "description": "{Material: Cuero Vacuno, Alturabase : 5.5cm, Alturataco:13cm, Alturaca�a: 39cm, Colores: Negro}",
+        "image": "",
+        "size": ""
+    },
+    {
+        "id": "9",
+        "name": "BELLA",
+        "price": "16990",
+        "category": "Botas",
+        "color": "[Negro]",
+        "description": "{Material: Cuero Vacuno, Alturabase : 5.5cm, Alturataco:13cm, Alturaca�a: 25cm, Colores: Negro}",
+        "image": "",
+        "size": ""
+    },
+    {
+        "id": "10",
+        "name": "HARD",
+        "price": "14990",
+        "category": "Botas",
+        "color": "[Negro]",
+        "description": "{Material: Cuero Vacuno, Alturabase : 6cm, Alturataco:6cm, Alturaca�a: 50cm, Colores: Negro}",
+        "image": "",
+        "size": ""
+    },
+    {
+        "id": "11",
+        "name": "ROCK",
+        "price": "11990",
+        "category": "Borcegos",
+        "color": "[Negro]",
+        "description": "{Material: Cuero Vacuno, Alturabase : 6cm, Alturataco:6cm, Alturaca�a: 15cm, Colores: Negro}",
+        "image": "",
+        "size": ""
+    },
+    {
+        "id": "12",
+        "name": "HAILEY",
+        "price": "13990",
+        "category": "Texanas",
+        "color": "[Negro,Crema]",
+        "description": "{Material: Cuero Vacuno, Alturabase : 0cm, Alturataco:6cm, Alturaca�a: 35cm, Colores: Negro Crema}",
+        "image": "",
+        "size": ""
+    },
+    {
+        "id": "13",
+        "name": "GIFT CARD $6000",
+        "price": "6000",
+        "category": "GiftCard",
+        "color": "",
+        "description": "",
+        "image": "",
+        "size": ""
+    },
+    {
+        "id": "14",
+        "name": "GIFT CARD $7000",
+        "price": "7000",
+        "category": "GiftCard",
+        "color": "",
+        "description": "",
+        "image": "",
+        "size": ""
+    },
+    {
+        "id": "15",
+        "name": "GIFT CARD $8000",
+        "price": "7000",
+        "category": "GiftCard",
+        "color": "",
+        "description": "",
+        "image": "",
+        "size": ""
+    },
+    {
+        "id": "16",
+        "name": "GIFT CARD $9000",
+        "price": "7000",
+        "category": "GiftCard",
+        "color": "",
+        "description": "",
+        "image": "",
+        "size": ""
+    },
+    {
+        "id": "17",
+        "name": "GIFT CARD $10000",
+        "price": "7000",
+        "category": "GiftCard",
+        "color": "",
+        "description": "",
+        "image": "",
+        "size": ""
+    }
+]
