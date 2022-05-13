@@ -17,3 +17,6 @@ Por un lapso de cinco minutos ultimamos algunos detalles antes de la entrega com
 
 Reunión 11-5-2022
 Por un tiempo de cinco minutos, discutimos sobre lo visto en clase referente a dinamizar las rutas y trabajar los formularios con los diferentes métodos de envío de información.
+
+Reunión 13-5-2022
+Joel propone mejorar las vistas de los detalles de producto y así lo hizo.

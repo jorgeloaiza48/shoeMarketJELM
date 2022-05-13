@@ -65,11 +65,7 @@ const controller = {
         let producto = products.find(product => product.id == req.params.id)
 
 
-        res.render("products/detalle", {
-            producto : producto,
-            title: "nose"
-
-        })
+        res.render('detalle', {producto : producto, title: "nose"})
     }
 
 
