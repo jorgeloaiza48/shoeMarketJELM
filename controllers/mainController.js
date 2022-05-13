@@ -67,9 +67,39 @@ const controller = {
 
         res.render("products/detalle", {
             producto : producto,
-            title: "nose"
+            title: "detalle del producto"
 
         })
+    },
+    newproduct: (req,res) => {
+        let productsFilePath = path.join(__dirname, '../data/SHOEMARKET.json');
+        let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+        let productJSON = fs.readFileSync(productsFilePath, 'utf-8')
+        let ultimo = products.length - 1
+		let idnuevo = products[ultimo].id + 1
+        let prodForm = {
+			id: idnuevo,
+			name: req.body.name,
+			price: req.body.price,
+			category: req.body.discount,
+			color: req.body.category,
+			description: req.body.description,
+			image: req.body.photo,
+            size : "[35,36,37,38,39,40]"
+        }
+
+        let productoNuevo
+
+        if(productJSON == ""){
+            productoNuevo = ""
+        }else{
+            productoNuevo = JSON.parse(productJSON)
+        }
+          productoNuevo.push(prodForm)
+
+
+
+
     }
 
 

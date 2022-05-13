@@ -1,17 +1,27 @@
 [
     {
         "id": "1",
-        "name": "DIANA",
+        "name": "DIANA NEGRO",
         "price": "11490",
         "category": "Botas",
         "color": "[Negro,Blanco]",
-        "description": "{Material: PU Sintetico, Alturabase : 0cm, Alturataco:8cm, Alturaca�a: 40cm, Colores: Negro Blanco}",
+        "description": "{ Material: PU Sintetico, Alturabase : 0cm, Alturataco:8cm, Alturaca�a: 40cm, Colores: Negro Blanco}",
         "image": "dianaNegro.jpeg",
         "size": "[35,36,37,38,39,40]"
     },
     {
+        "id": "1",
+        "name": "DIANA BLANCO",
+        "price": "11490",
+        "category": "Botas",
+        "color": "[Negro,Blanco]",
+        "description": "{Material: PU Sintetico, Alturabase : 0cm, Alturataco:8cm, Alturaca�a: 40cm, Colores: Negro Blanco}",
+        "image": "dianaBlanco.jpeg",
+        "size": "[35,36,37,38,39,40]"
+    },
+    {
         "id": "2",
-        "name": "LARA",
+        "name": "LARA NEGRO",
         "price": "10490",
         "category": "Borcegos",
         "color": "[Negro,Crema,Blanco]",
@@ -20,8 +30,28 @@
         "size": "[35,36,37,38,39,40]"
     },
     {
+        "id": "",
+        "name": "LARA CREMA",
+        "price": "10490",
+        "category": "Borcegos",
+        "color": "[Negro,Crema,Blanco]",
+        "description": "{Material: Cuero Vacuno, Alturabase : 6cm, Alturataco:6cm, Alturaca�a: 13cm, Colores: Negro Crema Blanco}",
+        "image": "",
+        "size": "[35,36,37,38,39,40]"
+    },
+    {
+        "id": "",
+        "name": "LARA BLANCO",
+        "price": "10490",
+        "category": "Borcegos",
+        "color": "[Negro,Crema,Blanco]",
+        "description": "{Material: Cuero Vacuno, Alturabase : 6cm, Alturataco:6cm, Alturaca�a: 13cm, Colores: Negro Crema Blanco}",
+        "image": "",
+        "size": "[35,36,37,38,39,40]"
+    },
+    {
         "id": "3",
-        "name": "LONDON",
+        "name": "LONDON NEGRO",
         "price": "10990",
         "category": "Borcegos",
         "color": "[Negro]",
@@ -31,142 +61,232 @@
     },
     {
         "id": "4",
-        "name": "MADDY",
+        "name": "MADDY NEGRO",
         "price": "13990",
         "category": "Guillerminas",
         "color": "[Negro,Crema,Rojo]",
         "description": "{Material: Razo, Alturabase : 5.5cm, Alturataco:13cm, Alturaca�a: 0cm, Colores: Negro Rojo Crema}",
-        "image": "MaddyNegro.jpeg",
+        "image": "maddyNegro.jpeg",
+        "size": "[35,36,37,38,39,40]"
+    },
+    {
+        "id": "",
+        "name": "MADDY CREMA",
+        "price": "13990",
+        "category": "Guillerminas",
+        "color": "[Negro,Crema,Rojo]",
+        "description": "{Material: Razo, Alturabase : 5.5cm, Alturataco:13cm, Alturaca�a: 0cm, Colores: Negro Rojo Crema}",
+        "image": "maddyCrema.jpeg",
+        "size": "[35,36,37,38,39,40]"
+    },
+    {
+        "id": "",
+        "name": "MADDY ROJO",
+        "price": "13990",
+        "category": "Guillerminas",
+        "color": "[Negro,Crema,Rojo]",
+        "description": "{Material: Razo, Alturabase : 5.5cm, Alturataco:13cm, Alturaca�a: 0cm, Colores: Negro Rojo Crema}",
+        "image": "maddyRojo.jpeg",
         "size": "[35,36,37,38,39,40]"
     },
     {
         "id": "5",
-        "name": "RIANNE",
+        "name": "RIANNE NEGRO",
         "price": "53000",
         "category": "Bucaneras",
         "color": "[Negro]",
         "description": "{Material: Cuero Vacuno, Alturabase : 5.5cm, Alturataco:13cm, Alturaca�a: 39cm, Colores: Negro}",
         "image": "rianneNegro.jpeg",
-        "size": "[ 35 ,36 ,37 ,38 ,39 ,40 ]"
+        "size": "[35,36,37,38,39,40]"
     },
     {
         "id": "6",
-        "name": "SASHA",
+        "name": "SASHA NEGRO",
         "price": "12490",
         "category": "Botas",
         "color": "[Negro,Blanco,Rosa]",
-        "description": "{Material: PU Sintetico, Alturabase : 0cm, Alturataco:8cm, Alturaca�a: 40cm, Colores: Negro Crema Rosa}",
+        "description": "{ Material: PU Sintetico, Alturabase : 0cm, Alturataco:8cm, Alturaca�a: 40cm, Colores: Negro Crema Rosa}",
         "image": "sashaNegro.jpeg",
         "size": "[35,36,37,38,39,40]"
     },
     {
+        "id": "",
+        "name": "SASHA CREMA",
+        "price": "12490",
+        "category": "Botas",
+        "color": "[Negro,Blanco,Rosa]",
+        "description": "{Material: PU Sintetico, Alturabase : 0cm, Alturataco:8cm, Alturaca�a: 40cm, Colores: Negro Crema Rosa}",
+        "image": "sashaCrema.jpeg",
+        "size": "[35,36,37,38,39,40]"
+    },
+    {
+        "id": "",
+        "name": "SASHA ROSA",
+        "price": "12490",
+        "category": "Botas",
+        "color": "[Negro,Blanco,Rosa]",
+        "description": "{Material: PU Sintetico, Alturabase : 0cm, Alturataco:8cm, Alturaca�a: 40cm, Colores: Negro Crema Rosa}",
+        "image": "sashaRosa.jpeg",
+        "size": "[35,36,37,38,39,40]"
+    },
+    {
         "id": "7",
-        "name": "TIZIANA",
+        "name": "TIZIANA NEGRO",
         "price": "25000",
         "category": "Bucaneras",
         "color": "[Negro]",
         "description": "{Material: Cuero Vacuno, Alturabase : 5.5cm, Alturataco:13cm, Alturaca�a: 39cm, Colores: Negro}",
-        "image": "",
-        "size": ""
+        "image": "tizianaNegro.jpeg",
+        "size": "[35,36,37,38,39,40]"
     },
     {
         "id": "8",
-        "name": "MERY",
+        "name": "MERY NEGRO",
         "price": "15990",
         "category": "Botas",
         "color": "[Negro]",
         "description": "{Material: Cuero Vacuno, Alturabase : 5.5cm, Alturataco:13cm, Alturaca�a: 39cm, Colores: Negro}",
-        "image": "",
-        "size": ""
+        "image": "meryNegro.jpeg",
+        "size": "[35,36,37,38,39,40]"
     },
     {
         "id": "9",
-        "name": "BELLA",
+        "name": "BELLA NEGRO",
         "price": "16990",
         "category": "Botas",
         "color": "[Negro]",
         "description": "{Material: Cuero Vacuno, Alturabase : 5.5cm, Alturataco:13cm, Alturaca�a: 25cm, Colores: Negro}",
-        "image": "",
-        "size": ""
+        "image": "bellaNegro.jpeg",
+        "size": "[35,36,37,38,39,40]"
     },
     {
         "id": "10",
-        "name": "HARD",
+        "name": "HARD NEGRO",
         "price": "14990",
         "category": "Botas",
         "color": "[Negro]",
         "description": "{Material: Cuero Vacuno, Alturabase : 6cm, Alturataco:6cm, Alturaca�a: 50cm, Colores: Negro}",
-        "image": "",
-        "size": ""
+        "image": "hardNegro.jpeg",
+        "size": "[35,36,37,38,39,40]"
     },
     {
         "id": "11",
-        "name": "ROCK",
+        "name": "ROCK NEGRO",
         "price": "11990",
         "category": "Borcegos",
-        "color": "[Negro]",
-        "description": "{Material: Cuero Vacuno, Alturabase : 6cm, Alturataco:6cm, Alturaca�a: 15cm, Colores: Negro}",
-        "image": "",
-        "size": ""
+        "color": "[Negro,Blanco]",
+        "description": "{Material: Cuero Vacuno, Alturabase : 6cm, Alturataco:6cm, Alturaca�a: 15cm, Colores: Negro Blanco}",
+        "image": "rockNegro.jpeg",
+        "size": "[35,36,37,38,39,40]"
+    },
+    {
+        "id": "",
+        "name": "ROCK BLANCO",
+        "price": "11990",
+        "category": "Borcegos",
+        "color": "[Negro,Blanco]",
+        "description": "{Material: Cuero Vacuno, Alturabase : 6cm, Alturataco:6cm, Alturaca�a: 15cm, Colores: Negro Blanco}",
+        "image": "rockBlanco.jpeg",
+        "size": "[35,36,37,38,39,40]"
     },
     {
         "id": "12",
-        "name": "HAILEY",
+        "name": "HAILEY NEGRO",
+        "price": "13990",
+        "category": "Texanas",
+        "color": "[Negro,Crema]",
+        "description": "{Material: Cuero Vacuno, Alturabase : 0cm, Alturataco:6cm, Alturaca�a: 35cm, Colores: Negro Crema}",
+        "image": "haileyNegro.jpeg",
+        "size": "[35,36,37,38,39,40]"
+    },
+    {
+        "id": "12",
+        "name": "HAILEY CREMA",
         "price": "13990",
         "category": "Texanas",
         "color": "[Negro,Crema]",
         "description": "{Material: Cuero Vacuno, Alturabase : 0cm, Alturataco:6cm, Alturaca�a: 35cm, Colores: Negro Crema}",
         "image": "",
-        "size": ""
+        "size": "[35,36,37,38,39,40]"
     },
     {
-        "id": "13",
+        "id": "12",
         "name": "GIFT CARD $6000",
         "price": "6000",
-        "category": "GiftCard",
+        "category": "Gift Card",
         "color": "",
         "description": "",
-        "image": "giftCard.jpg",
+        "image": "",
         "size": ""
     },
     {
         "id": "14",
         "name": "GIFT CARD $7000",
         "price": "7000",
-        "category": "GiftCard",
+        "category": "Gift Card",
         "color": "",
         "description": "",
-        "image": "giftCard.jpg",
+        "image": "",
         "size": ""
     },
     {
         "id": "15",
         "name": "GIFT CARD $8000",
-        "price": "7000",
-        "category": "GiftCard",
+        "price": "8000",
+        "category": "Gift Card",
         "color": "",
         "description": "",
-        "image": "giftCard.jpg",
+        "image": "",
         "size": ""
     },
     {
         "id": "16",
         "name": "GIFT CARD $9000",
-        "price": "7000",
-        "category": "GiftCard",
+        "price": "9000",
+        "category": "Gift Card",
         "color": "",
         "description": "",
-        "image": "giftCard.jpg",
+        "image": "",
         "size": ""
     },
     {
         "id": "17",
         "name": "GIFT CARD $10000",
-        "price": "7000",
-        "category": "GiftCard",
+        "price": "10000",
+        "category": "Gift Card",
         "color": "",
         "description": "",
-        "image": "giftCard.jpg",
+        "image": "",
+        "size": ""
+    },
+    {
+        "id": "18",
+        "name": "",
+        "price": "",
+        "category": "",
+        "color": "",
+        "description": "",
+        "image": "",
+        "size": ""
+    },
+    {
+        "id": "19",
+        "name": "",
+        "price": "",
+        "category": "",
+        "color": "",
+        "description": "",
+        "image": "",
+        "size": ""
+    },
+    {
+        "id": "20",
+        "name": "",
+        "price": "",
+        "category": "",
+        "color": "",
+        "description": "",
+        "image": "",
         "size": ""
     }
 ]

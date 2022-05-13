@@ -10,11 +10,11 @@
         <main class="main-register">
 
 
-            <form action="/" method="POST" class="form-create">
+            <form action="/" method="POST" class="form-create" enctype="multipart/form-data">
 
                 <div class="form-create__nombre">
                     <label for="nombre">Nombre del producto *</label>
-                    <input type="text" name="nombre" id="nombre" placeholder="Nombre del nuevo producto" required
+                    <input type="text" name="name" id="nombre" placeholder="Nombre del nuevo producto" required
                         minlength="4">
                 </div>
                 <div class="form-create__descr">
@@ -22,9 +22,10 @@
                     <textarea type="text" placeholder="Introduzca la descripcion del producto" name="description" required
                         id="description" ></textarea>
                 </div>
+
                 <div class="form-create__img">
-                    <label for="photo">Seleccione las fotos
-                        <div class="file-select"><input type="file" name="Photo" accept=".jpg,jpeg" multiple></div>
+                    <label for="photo">Seleccione las foto
+                        <div class="file-select"><input type="file" name="Photo" accept=".jpg,jpeg"></div>
                     </label>
 
 
@@ -48,14 +49,16 @@
                 </div>
                 <div class="form-create__cat">
                     <div class="form-create__cat-div">
-                        <label for="categoria">Selecciona la categoria</label>
+                        <label for="category">Selecciona la categoria</label>
                     </div>
                     <div class="form-create__cat__div-input">
-                        <select name="categoria" id="categoria" required>
+                        <select name="category" id="categoria" required>
                             <option value="Botas">Botas</option>
                             <option value="Borcegos">Borcegos</option>
                             <option value="Texanas">Texanas</option>
-                            <option value="Otros">Otros</option>
+                            <option value="Otros">Guillerminas</option>
+                            <option value="Otros">Bucaneras</option>
+                            <option value="Otros">Gift Card</option>
                         </select>
 
 
