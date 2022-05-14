@@ -85,12 +85,12 @@
                 <section class="desc-desc">
                     <h3 class="desc-desc__title">Descripcion</h3>
                     <ul>
-                        <li>Material : <%= producto.description[0] %> 
+                        <li>Material : <%= producto.description.Material %> 
                         </li>
-                        <li>Material Razo</li>
-                        <li>Altura del taco: 13cm</li>
-                        <li>Altura de base: 5,5cm</li>
-                        <li>Colores: rojo, negro, crema</li>
+                        <li>Altura Base :  <%= producto.description.Alturabase %></li>
+                        <li>Altura Taco :  <%= producto.description.Alturataco %></li>
+                        <li>Altura Caña :  <%= producto.description.Alturacana %></li>
+                        <li>Colores :  <%= producto.description.Colores %> </li>
 
                     </ul>
                 </section>

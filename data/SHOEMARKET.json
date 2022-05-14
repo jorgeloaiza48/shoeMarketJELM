@@ -1,31 +1,39 @@
 [
     {
-        "id": "1",
+        "id": 1,
         "name": "DIANA NEGRO",
         "price": "11490",
+<<<<<<< HEAD
         "category": "",
         "color": "[Negro,Blanco]",
         "description": "{ Material: PU Sintetico, Alturabase : 0cm, Alturataco:8cm, Alturaca�a: 40cm, Colores: Negro Blanco}",
+=======
+        "category": "Botas",
+        "color": ["Negro","Blanco"],
+        "description": { "Material": "PU Sintetico", "Alturabase" : "0cm", "Alturataco":"8cm", "Alturacana": "40cm", "Colores": "Negro Blanco"
+        },
+>>>>>>> ad453fc1d972583110c94566cf0c5ce9ccc2f15f
         "image": "dianaNegro.jpeg",
         "size": "[35,36,37,38,39,40]"
     },
     {
-        "id": "1",
+        "id": 2,
         "name": "DIANA BLANCO",
         "price": "11490",
         "category": "Borcegos",
         "color": "[Negro,Blanco]",
-        "description": "{Material: PU Sintetico, Alturabase : 0cm, Alturataco:8cm, Alturaca�a: 40cm, Colores: Negro Blanco}",
+        "description": { "Material": "PU Sintetico", "Alturabase" : "0cm", "Alturataco":"8cm", "Alturacana": "40cm", "Colores": "Negro Blanco"
+        },
         "image": "dianaBlanco.jpeg",
         "size": "[35,36,37,38,39,40]"
     },
     {
-        "id": "2",
+        "id": 3,
         "name": "LARA NEGRO",
         "price": "10490",
         "category": "Borcegos",
         "color": "[Negro,Crema,Blanco]",
-        "description": "{Material: Cuero Vacuno, Alturabase : 6cm, Alturataco:6cm, Alturaca�a: 13cm, Colores: Negro Crema Blanco}",
+        "description": {"Material": "Cuero Vacuno", "Alturabase" : "6cm", "Alturataco":"6cm", "Alturaca�a": "13cm", "Colores":" Negro Crema Blanco"},
         "image": "laraNegro.jpeg",
         "size": "[35,36,37,38,39,40]"
     },
@@ -177,7 +185,7 @@
         "color": "[Negro,Blanco]",
         "description": "{Material: Cuero Vacuno, Alturabase : 6cm, Alturataco:6cm, Alturaca�a: 15cm, Colores: Negro Blanco}",
         "image": "rockNegro.jpeg",
-        "size": "[35,36,37,38,39,40]"
+        "size": [35,36,37,38,39,40]
     },
     {
         "id": "",
