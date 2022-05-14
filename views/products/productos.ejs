@@ -8,145 +8,120 @@
             <main>
 
 
-                <section class="section-destacados">
-
-                    <h3>BOTAS</h3>
-                    <% botas.forEach(product=> { %>
-
-                        <div class="productos">
-
-                            <a href="/detalle/<%= product.id %>">
-                                <div class="produc"><img src="/img/products/<%= product.image %>" alt="bota">
-                                    <p>
-                                        <%= product.name %>
-                                    </p>
-                                    <p>$<%= product.price %>
-                                    </p>
-                                    <p><a href="/detalle/<%= product.id %>" class="com-but-main"><button>COMPRAR</button></a></p><i
-                                        class="fa-solid fa-star"></i>
-                                </div>
-                            </a>
-
-                        </div>
-
-                </section>
-                <% }) %>
-                    <section class="section-destacados">
-
-                        <h3>Borcegos</h3>
-                        <% borcegos.forEach(product=> { %>
-
-                            <div class="productos">
-
-                                <a href="/detalle/<%= product.id %>">
-                                    <div class="produc"><img src="/img/products/<%= product.image %>" alt="bota">
-                                        <p>
-                                            <%= product.name %>
-                                        </p>
-                                        <p>$<%= product.price %>
-                                        </p>
-                                        <p><a href="/descripcion" class="com-but-main"><button>COMPRAR</button></a></p>
-                                        <i class="fa-solid fa-star"></i>
-                                    </div>
-                                </a>
-
-                            </div>
-
-                    </section>
-                    <% }) %>
-                        <section class="section-destacados">
-
-                            <h3>Texanas</h3>
-                            <% texanas.forEach(product=> { %>
-
-                                <div class="productos">
-
-                                    <a href="/detalle/<%= product.id %>">
-                                        <div class="produc"><img src="/img/products/<%= product.image %>" alt="bota">
-                                            <p>
-                                                <%= product.name %>
-                                            </p>
-                                            <p>$<%= product.price %>
-                                            </p>
-                                            <p><a href="/descripcion" class="com-but-main"><button>COMPRAR</button></a>
-                                            </p><i class="fa-solid fa-star"></i>
-                                        </div>
-                                    </a>
-
-                                </div>
-
-                        </section>
-                        <% }) %>
-                            <section class="section-destacados"></section>
-                            <h3>Bucaneras</h3>
-                            <% bucaneras.forEach(product=> { %>
-
-                                <div class="productos">
-
-                                    <a href="/detalle/<%= product.id %>">
-                                        <div class="produc"><img src="/img/products/<%= product.image %>" alt="bota">
-                                            <p>
-                                                <%= product.name %>
-                                            </p>
-                                            <p>$<%= product.price %>
-                                            </p>
-                                            <p><a href="/descripcion" class="com-but-main"><button>COMPRAR</button></a>
-                                            </p><i class="fa-solid fa-star"></i>
-                                        </div>
-                                    </a>
-
-                                </div>
-
-                                </section>
-                                <% }) %>
-                                <section class="section-destacados">
-                                    <h3>GIFT CARDS</h3>
-                                    <% guillerminas.forEach(product=> { %>
-
-                                        <div class="productos">
-
-                                            <a href="/detalle/<%= product.id %>">
-                                                <div class="produc"><img src="/img/products/<%= product.image %>"
-                                                        alt="bota">
-                                                    <p>
-                                                        <%= product.name %>
-                                                    </p>
-                                                    <p>$<%= product.price %>
-                                                    </p>
-                                                    <p><a href="/descripcion"
-                                                            class="com-but-main"><button>COMPRAR</button></a></p><i
-                                                        class="fa-solid fa-star"></i>
-                                                </div>
-                                            </a>
-
-                                        </div>
-
-                                </section>
-                                <% }) %>
+                
+                   
+                    <div class="productos">                       
+                        <h3>BOTAS</h3>
+                            <% botas.forEach(product=> { %> 
+                                <!-- <div class="produc">  -->
                                     <section class="section-destacados">
-                                        <h3>GIFT CARDS</h3>
-                                        <% giftCard.forEach(product=> { %>
-
-                                            <div class="productos">
-
-                                                <a href="/detalle/<%= product.id %>">
-                                                    <div class="produc"><img src="/img/products/<%= product.image %>"
-                                                            alt="bota">
-                                                        <p>
-                                                            <%= product.name %>
-                                                        </p>
-                                                        <p>$<%= product.price %>
-                                                        </p>
-                                                        <p><a href="/descripcion"
-                                                                class="com-but-main"><button>COMPRAR</button></a></p><i
-                                                            class="fa-solid fa-star"></i>
-                                                    </div>
-                                                </a>
-
-                                            </div>
-
+                                    <a href="/detalle/<%= product.id %>">                                                                                                                                       
+                                        <img src="/img/products/<%= product.image %>" alt="bota">                                   
+                                        <p><%= product.name %></p>
+                                        <p>$<%= product.price %></p>
+                                        <p><a href="/detalle/<%= product.id %>" class="com-but-main"><button>COMPRAR</button></a></p>
+                                        <i class="fa-solid fa-star"></i>                                                                                       
+                                    </a>                                                        
                                     </section>
-                                    <% }) %>
+                                <!-- </div> -->
+                            <% }) %>
+                     
+                    </div>
+
+                    <div class="productos">                       
+                        <h3>TEXANAS</h3>
+                            <% texanas.forEach(product=> { %> 
+                                <!-- <div class="produc">  -->
+                                    <section class="section-destacados">
+                                    <a href="/detalle/<%= product.id %>">                                                                                                                                       
+                                        <img src="/img/products/<%= product.image %>" alt="bota">                                   
+                                        <p><%= product.name %></p>
+                                        <p>$<%= product.price %></p>
+                                        <p><a href="/detalle/<%= product.id %>" class="com-but-main"><button>COMPRAR</button></a></p>
+                                        <i class="fa-solid fa-star"></i>                                                                                       
+                                    </a>                                                        
+                                    </section>
+                                <!-- </div> -->
+                            <% }) %>
+                     
+                    </div>
+                   
+
+                    <div class="productos">                       
+                        <h3>BUCANERAS</h3>
+                            <% bucaneras.forEach(product=> { %> 
+                                <!-- <div class="produc">  -->
+                                    <section class="section-destacados">
+                                    <a href="/detalle/<%= product.id %>">                                                                                                                                       
+                                        <img src="/img/products/<%= product.image %>" alt="bota">                                   
+                                        <p><%= product.name %></p>
+                                        <p>$<%= product.price %></p>
+                                        <p><a href="/detalle/<%= product.id %>" class="com-but-main"><button>COMPRAR</button></a></p>
+                                        <i class="fa-solid fa-star"></i>                                                                                       
+                                    </a>                                                        
+                                    </section>
+                                <!-- </div> -->
+                            <% }) %>
+                     
+                    </div>
+
+                    
+                    <div class="productos">                       
+                        <h3>BORCEGOS</h3>
+                            <% borcegos.forEach(product=> { %> 
+                                <!-- <div class="produc">  -->
+                                    <section class="section-destacados">
+                                    <a href="/detalle/<%= product.id %>">                                                                                                                                       
+                                        <img src="/img/products/<%= product.image %>" alt="bota">                                   
+                                        <p><%= product.name %></p>
+                                        <p>$<%= product.price %></p>
+                                        <p><a href="/detalle/<%= product.id %>" class="com-but-main"><button>COMPRAR</button></a></p>
+                                        <i class="fa-solid fa-star"></i>                                                                                       
+                                    </a>                                                        
+                                    </section>
+                                <!-- </div> -->
+                            <% }) %>
+                     
+                    </div>
+
+                    <div class="productos">                       
+                        <h3>GUILLERMINAS</h3>
+                            <% guillerminas.forEach(product=> { %> 
+                                <!-- <div class="produc">  -->
+                                    <section class="section-destacados">
+                                    <a href="/detalle/<%= product.id %>">                                                                                                                                       
+                                        <img src="/img/products/<%= product.image %>" alt="bota">                                   
+                                        <p><%= product.name %></p>
+                                        <p>$<%= product.price %></p>
+                                        <p><a href="/detalle/<%= product.id %>" class="com-but-main"><button>COMPRAR</button></a></p>
+                                        <i class="fa-solid fa-star"></i>                                                                                       
+                                    </a>                                                        
+                                    </section>
+                                <!-- </div> -->
+                            <% }) %>
+                     
+                    </div>
+
+                    
+                    <!-- <div class="productos">                       
+                        <h3>GIFT-CARD</h3>
+                            <% giftCard.forEach(product=> { %> 
+                               
+                                    <section class="section-destacados">
+                                    <a href="/detalle/<%= product.id %>">                                                                                                                                       
+                                        <img src="/img/products/<%= product.image %>" alt="bota">                                   
+                                        <p><%= product.name %></p>
+                                        <p>$<%= product.price %></p>
+                                        <p><a href="/detalle/<%= product.id %>" class="com-but-main"><button>COMPRAR</button></a></p>
+                                        <i class="fa-solid fa-star"></i>                                                                                       
+                                    </a>                                                        
+                                    </section>
+                                
+                            <% }) %>
+                     
+                    </div> -->
+                    
+                    
                                         <div class="news-letter">
                                             <h2>Suscribite a nuestro newsletter</h2>
                                             <form>
