@@ -20,7 +20,7 @@ gris claro rgb(231, 241, 241);
  */
 
 
- 
+
 
 * {
     box-sizing: border-box;
@@ -238,10 +238,12 @@ footer {
         transform: scale(1.1);
         -webkit-transform: scale(1.1);
     }
-    .produc:hover i{
+
+    .produc:hover i {
         color: black;
         transform: rotate(360deg);
     }
+
     .productos {
         /* border: solid 2px blue; */
         display: flex;
@@ -252,7 +254,7 @@ footer {
         border-style: outset;
         height: auto;
         width: 40%;
-       ;
+        ;
     }
 
     .produc p,
@@ -574,7 +576,7 @@ footer {
     }
 
     .fa-star {
-        transition: all 4s;                            
+        transition: all 4s;
     }
 
     .fa-star:hover {
@@ -590,7 +592,7 @@ footer {
         right: 10px;
     }
 
-    .help-button button{
+    .help-button button {
         background-color: black;
         border-radius: 10%;
         color: white;
@@ -608,7 +610,7 @@ footer {
 
     }
 
-    .productos .produc{
+    .productos .produc {
         /* border: solid 1px red; */
         border-style: outset;
         max-width: 25%;
@@ -616,7 +618,7 @@ footer {
     }
 
 
-    .productos .produc img{
+    .productos .produc img {
         border-radius: 5%;
         /* border: solid 2px green;   */
         padding: 2px;
@@ -633,10 +635,10 @@ footer {
     .produc:hover {
         box-shadow: 5px 5px 15px 5px rgb(90, 88, 88);
         transform: scale(1.1);
-        -webkit-transform: scale(1.1);                
+        -webkit-transform: scale(1.1);
     }
 
-    .produc:hover i{
+    .produc:hover i {
         color: black;
         transform: rotate(360deg);
     }
@@ -951,7 +953,7 @@ section h3 {
 
 
 .prod-carr__img {
-border-radius: 20px;
+    border-radius: 20px;
     margin-top: 5px;
     margin-bottom: 5px;
     margin-left: 5px;
@@ -1324,6 +1326,8 @@ border-radius: 20px;
     margin-bottom: 10px;
 }
 
+
+
 .selec-color__red {
 
     background-color: #a10009;
@@ -1553,10 +1557,9 @@ border-radius: 20px;
     background-color: rgb(254, 254, 254);
     border-radius: 5px;
     margin-top: 15px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 10px;
     transition: all 0.5s;
-    width: 113px;
+    width: 220px;
 }
 
 .desc-comp__but:hover {
@@ -2229,9 +2232,3 @@ border-radius: 20px;
 .form-create input[type="text"]:focus:required:valid {
     border: 2px solid green;
 }
-
-
-
-
-
-

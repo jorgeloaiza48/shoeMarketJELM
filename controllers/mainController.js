@@ -42,7 +42,7 @@ const controller = {
             return product.category == "Gillerminas";
         })
         let giftCard = products.filter(function (product) {
-            return product.category == "GiftCard";
+            return product.category == "Gift Card";
         })
         res.render("products/productos", {
             products: products,
