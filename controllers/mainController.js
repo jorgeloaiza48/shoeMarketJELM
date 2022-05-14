@@ -2,8 +2,6 @@ const req = require("express/lib/request")
 const res = require("express/lib/response")
 const path = require("path")
 const fs = require("fs")
-
-
 const controller = {
     index: (req, res) => { 
        
@@ -27,6 +25,7 @@ const controller = {
         let productsFilePath = path.join(__dirname, '../data/SHOEMARKET.json');
         let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
         let productJSON = fs.readFileSync(productsFilePath, 'utf-8')
+      
         let botas = products.filter(function (product) {
             return product.category == "Botas";
         })
@@ -45,7 +44,6 @@ const controller = {
         let giftCard = products.filter(function (product) {
             return product.category == "GiftCard";
         })
-
         res.render("products/productos", {
             products: products,
             botas: botas,
