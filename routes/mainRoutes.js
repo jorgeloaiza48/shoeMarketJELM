@@ -5,7 +5,7 @@ const mainController = require('../controllers/mainController')
 
 router.get('/',mainController.index)
 
-router.get("/productos", mainController.products)
+router.get('/productos', mainController.products)
 //router.post("/productos", upload.single(photo), mainController.newproduct)
 
 router.get('/registro', mainController.register)

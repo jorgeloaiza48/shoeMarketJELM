@@ -40,7 +40,7 @@ const controller = {
             return product.category == "Borcegos";
         })
         let guillerminas = products.filter(function (product) {
-            return product.category == "Gillerminas";
+            return product.category == "Guillerminas";
         })
         let giftCard = products.filter(function (product) {
             return product.category == "GiftCard";
