@@ -20,3 +20,6 @@ Por un tiempo de cinco minutos, discutimos sobre lo visto en clase referente a d
 
 Reunión 13-5-2022
 Joel propone mejorar las vistas de los detalles de producto y así lo hizo.
+
+Reunión 14-5-2022
+Durante 10 minutos y por medio de videollamada discutimos la realización de la vista /productos y la configuración de los formularios de registro de usuarios y productos.

@@ -3,16 +3,9 @@
         "id": 1,
         "name": "DIANA NEGRO",
         "price": "11490",
-<<<<<<< HEAD
         "category": "",
         "color": "[Negro,Blanco]",
         "description": "{ Material: PU Sintetico, Alturabase : 0cm, Alturataco:8cm, Alturaca�a: 40cm, Colores: Negro Blanco}",
-=======
-        "category": "Botas",
-        "color": ["Negro","Blanco"],
-        "description": { "Material": "PU Sintetico", "Alturabase" : "0cm", "Alturataco":"8cm", "Alturacana": "40cm", "Colores": "Negro Blanco"
-        },
->>>>>>> ad453fc1d972583110c94566cf0c5ce9ccc2f15f
         "image": "dianaNegro.jpeg",
         "size": "[35,36,37,38,39,40]"
     },
