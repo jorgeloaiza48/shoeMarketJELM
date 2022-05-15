@@ -27,7 +27,7 @@ router.get("/productos/:categoria", mainController.categoria)
 
 // **Creación o registro de usuarios**
 router.get('/registro', mainController.register)
-router.post('/',upload.single('imagenProducto'), mainController.createUser ); //upload.single('imagenProducto')
+router.post('/registro',upload.single('imagenProducto'), mainController.createUser ); //upload.single('imagenProducto')
 
 
 

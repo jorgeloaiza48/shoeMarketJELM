@@ -3,6 +3,7 @@ const res = require("express/lib/response")
 const path = require("path")
 const fs = require("fs")
 
+
 const controller = {
     index: (req, res) => {res.render("home", { title: "Shoe Market" }) },
 
@@ -13,31 +14,38 @@ const controller = {
         let ultimoElemento = users.length - 1
         let idNuevo = users[ultimoElemento].id + 1
 
-        let userForm = {
-            id: idNuevo,
-            NombreYapellido : req.body.Nombre,
-            Usuario : req.body.usuario,
-            Email: req.body.email,
-            FechaNacimiento: req.body.fecha,
-            Domicilio1 : req.body.domicilio1,
-            Domicilio2 : req.body.domicilio2,
-            Contraseña : req.body.pass,
-            ConfirmarContraseña : req.body.pass2
-        }
+        if(req.body.pass === req.body.pass2){
+            let userForm = {
+                id: idNuevo,
+                NombreYapellido : req.body.Nombre,
+                Usuario : req.body.usuario,
+                Email: req.body.email,
+                FechaNacimiento: req.body.fecha,
+                Domicilio1 : req.body.domicilio1,
+                Domicilio2 : req.body.domicilio2,
+                Contraseña : req.body.pass,
+                ConfirmarContraseña : req.body.pass2
+            }
 
-        let NewUser = []
-        let UsersJSON = fs.readFileSync(usersFilePath, 'utf-8')
-        if (UsersJSON == ""){
-            NewUser.push(userForm)
+            let NewUser = []
+            let UsersJSON = fs.readFileSync(usersFilePath, 'utf-8')
+
+            if (UsersJSON == ""){
+                NewUser.push(userForm)
             } 
-        else {
-            NewUser = JSON.parse(UsersJSON) //de JSON a JS
-            NewUser.push(userForm)
-        }
+            else {
+                NewUser = JSON.parse(UsersJSON) //de JSON a JS
+                NewUser.push(userForm)
+            }
                
-        fs.writeFileSync(usersFilePath,JSON.stringify(NewUser,null,"\t")) //de JS a JSON
+            fs.writeFileSync(usersFilePath,JSON.stringify(NewUser,null,"\t")) //de JS a JSON
+            res.send("Usuario creado con éxito")      
+            }
 
-        res.send("Usuario creado con éxito")      
+        else {
+            res.send("Las contraseñas ingresadas no coinciden")
+                       
+        }            
 
     },
 
