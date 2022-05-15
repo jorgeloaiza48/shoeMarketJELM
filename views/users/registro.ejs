@@ -4,7 +4,7 @@
                 <main class="main-register">
 
         
-                    <form  action="/" method="POST" class="form-Reg">
+                    <form  action="/" method="POST" class="form-Reg" enctype="multipart/form-data">
             
                         <div class="form__nombre">
                             <label for="nombre">Nombre y Apellido *</label>
@@ -25,11 +25,11 @@
                         </div>
                         <div class="form__domicilio">
                             <label for="domicilio">Domicilio de envio 1 *</label><br>
-                            <input type="text" name="domicilio" id="domicilio" placeholder=" Introduzca su Domicilio" required minlength="4" >
+                            <input type="text" name="domicilio1" id="domicilio" placeholder=" Introduzca su Domicilio" required minlength="4" >
                         </div>
                         <div class="form__domicilio">
                             <label for="domicilio">Domicilio de envio 2  </label><br>
-                            <input type="text" name="domicilio" id="domicilio" placeholder=" Introduzca su Domicilio" >
+                            <input type="text" name="domicilio2" id="domicilio" placeholder=" Introduzca su Domicilio" >
                         </div>
                         
                             <div class="form__password">
@@ -38,7 +38,7 @@
                             </div>
                             <div class="form__confirm">
                                 <label class="form__confirm__title" for="pass">Confirmar contraseña *</label>
-                                <input type="password" name="pass" id="pass" placeholder="Introduzca su contraseña nuevamente" required minlength="4">
+                                <input type="password" name="pass2" id="pass" placeholder="Introduzca su contraseña nuevamente" required minlength="4">
                             </div>
                             <div class="contenedor_button" >
                                 <button class="form__button" type="submit" >Borrar</button>

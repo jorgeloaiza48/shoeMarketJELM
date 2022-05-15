@@ -25,7 +25,11 @@ router.get("/productos/crear", mainController.crearProducto)
 
 router.get("/productos/:categoria", mainController.categoria)
 
+// **Creación o registro de usuarios**
 router.get('/registro', mainController.register)
+router.post('/',upload.single('imagenProducto'), mainController.createUser ); //upload.single('imagenProducto')
+
+
 
 router.get('/login',mainController.login)
 
@@ -34,9 +38,6 @@ router.get('/login',mainController.login)
 router.get('/detalle/:id',mainController.detalle)
 
 router.get('/carrito',mainController.carrito)
-
-
-
 
 router.get("/editarproducto",mainController.editarProducto)
 
