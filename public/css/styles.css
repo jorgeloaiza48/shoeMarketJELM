@@ -1329,7 +1329,16 @@ footer {
     margin-bottom: 10px;
 }
 
+.selec-color__form{
+    border: solid rgb(66, 66, 66) 2px;
+    border-radius: 5px;
+    display: block;
+    font-size: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 3.5px;
 
+}
 
 .selec-color__red {
 
@@ -2062,12 +2071,27 @@ footer {
 .form-create__descr label {
 
     font-weight: bold;
-    margin-bottom: 10px;
-    margin-left: 10px;
-    padding-bottom: 10px;
+   
 
 }
-
+.div-desc{
+    display: flex;
+    margin-bottom: 8px;
+}
+.div-desc label{
+    margin-left: 10px;
+    width: 50%;
+    
+}
+.div-desc input{
+    margin-right: 50px;
+    width: 65%;
+    border: none;
+    border-radius: 7px;
+    font-size: 15px;
+    padding-top: 6px;
+  
+}
 .form-create__img {
     font-weight: bold;
     margin-left: 10px;
@@ -2108,7 +2132,13 @@ footer {
 
 
 }
-
+.form-create__color{
+    display: flex;
+    flex-wrap: wrap;
+}
+.form-create__color__check{
+    width: 30%;
+}
 .form-create__color__div {
     margin-bottom: 10px;
     margin-left: 10px;
@@ -2227,9 +2257,9 @@ footer {
 
 }
 
-.form-create__descr:hover {
+/* .form-create__descr:hover {
     color: rgb(228, 56, 101);
-}
+} */
 
 
 .form-create input[type="text"]:focus:required:valid {

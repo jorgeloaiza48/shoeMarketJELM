@@ -2,6 +2,7 @@ const req = require("express/lib/request")
 const res = require("express/lib/response")
 const path = require("path")
 const fs = require("fs")
+
 const controller = {
     index: (req, res) => { 
        
@@ -75,16 +76,24 @@ const controller = {
         let productJSON = fs.readFileSync(productsFilePath, 'utf-8')
         let ultimo = products.length - 1
 		let idnuevo = products[ultimo].id + 1
+
         let prodForm = {
 			id: idnuevo,
 			name: req.body.name,
-			price: req.body.price,
-			category: req.body.discount,
-			color: req.body.category,
-			description: req.body.description,
-			image: req.body.photo,
-            size : "[35,36,37,38,39,40]"
+			price: Number(req.body.price),
+			category: req.body.category,
+			color: req.body.color,
+			description: {
+                Material : req.body.material,
+                Alturabase : req.body.base,
+                Alturataco : req.body.taco,
+                Alturacana : req.body.cana,
+                Colores : req.body.colores
+            },
+			image: req.file.filename,
+            size : req.body.talle
         }
+        
 
         let productoNuevo
 
@@ -95,9 +104,23 @@ const controller = {
         }
           productoNuevo.push(prodForm)
 
+let nuevo = JSON.stringify(productoNuevo,null, "\t")
+fs.writeFileSync(productsFilePath,nuevo)
 
+res.redirect("/productos")
+    },
 
-
+    categoria : (req,res) =>{
+        let productsFilePath = path.join(__dirname, '../data/SHOEMARKET.json');
+        let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+        let productJSON = fs.readFileSync(productsFilePath, 'utf-8')
+        let categoria = products.filter(cate =>{
+            return cate.category == req.params.categoria
+        })
+       
+        
+        res.render("products/categoria",{categoria:categoria,title: "categoria"})
+        
     }
 
 
