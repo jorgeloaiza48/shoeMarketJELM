@@ -2,8 +2,20 @@ const express = require('express')
 const router = express.Router()
 const mainController = require('../controllers/mainController')
 const path = require("path")
-//*********multer ********/
+const {body} = require('express-validator')
 
+const validations = [
+    body('Nombre').notEmpty().withMessage('Debe introducir un nombre y apellido'),
+    body('usuario').notEmpty().withMessage('Debes escribir un usuario'),
+    body('email').notEmpty().withMessage('Este campo no puede quedar vacío'),
+    body('fecha').notEmpty().withMessage('Debes introducir una fecha de nacimiento'),
+    body('domicilio1').notEmpty().withMessage('Debes introducir una dirección de entrega'),
+    body('domicilio2').notEmpty().withMessage('Debes introducir una segunda dirección de entrega'),
+    body('pass').notEmpty().withMessage('No olvides digitar tu password o contraseña'),
+    body('pass2').notEmpty().withMessage('Debes reescribir la contraseña')
+]
+
+//*********multer ********/
 const multer = require("multer")
 
 const storage = multer.diskStorage({
@@ -15,6 +27,8 @@ const storage = multer.diskStorage({
     }
 }
 )
+
+//Método que permite subir archivos
 const upload = multer({ storage })
 
 router.get('/',mainController.index)
@@ -27,7 +41,7 @@ router.get("/productos/:categoria", mainController.categoria)
 
 // **Creación o registro de usuarios**
 router.get('/registro', mainController.register)
-router.post('/registro',upload.single('imagenProducto'), mainController.createUser ); //upload.single('imagenProducto')
+router.post('/registro',upload.single('imagenProducto'),validations, mainController.createUser ); 
 
 
 

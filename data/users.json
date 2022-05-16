@@ -130,5 +130,60 @@
 		"Domicilio2": "calle19",
 		"Contraseña": "asdfg",
 		"ConfirmarContraseña": "asdfg"
+	},
+	{
+		"id": 13,
+		"NombreYapellido": "alan brito",
+		"Usuario": "sindy",
+		"Email": "platano@gmail.com",
+		"FechaNacimiento": "1989-06-12",
+		"Domicilio1": "calle 8",
+		"Domicilio2": "calle3",
+		"Contraseña": "dsdsadsadas",
+		"ConfirmarContraseña": "gfgfdgfdgdf"
+	},
+	{
+		"id": 14,
+		"NombreYapellido": "",
+		"Usuario": "",
+		"Email": "",
+		"FechaNacimiento": "",
+		"Domicilio1": "",
+		"Domicilio2": "",
+		"Contraseña": "",
+		"ConfirmarContraseña": ""
+	},
+	{
+		"id": 15,
+		"NombreYapellido": "",
+		"Usuario": "",
+		"Email": "",
+		"FechaNacimiento": "",
+		"Domicilio1": "",
+		"Domicilio2": "",
+		"Contraseña": "",
+		"ConfirmarContraseña": ""
+	},
+	{
+		"id": 16,
+		"NombreYapellido": "",
+		"Usuario": "",
+		"Email": "",
+		"FechaNacimiento": "",
+		"Domicilio1": "",
+		"Domicilio2": "",
+		"Contraseña": "",
+		"ConfirmarContraseña": ""
+	},
+	{
+		"id": 17,
+		"NombreYapellido": "",
+		"Usuario": "",
+		"Email": "",
+		"FechaNacimiento": "",
+		"Domicilio1": "",
+		"Domicilio2": "",
+		"Contraseña": "",
+		"ConfirmarContraseña": ""
 	}
 ]
