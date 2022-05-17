@@ -1893,9 +1893,9 @@ footer {
 
 
 
-.form-Reg input[type="text"]:focus:required:valid {
+/* .form-Reg input[type="text"]:focus:required:valid {
     border: 2px solid green;
-}
+} */
 
 /* .form-Reg input[type="text"]:required {
     border: 2px solid red;

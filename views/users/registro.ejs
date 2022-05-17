@@ -2,21 +2,24 @@
 <body>
 <%- include("../partials/header") %>
                 <main class="main-register">
-
-        
-                    <form  action="/" method="POST" class="form-Reg" enctype="multipart/form-data">
-            
+                    <% if(locals.errors){%>
+                        <% for(let oneError in errors){%>
+                            <p><%= errors[oneError].msg %></p>
+                        <%}%>
+                   <%}%>    
+                    <form  action="/registro" method="POST" class="form-Reg" enctype="multipart/form-data">
+                           
                         <div class="form__nombre">
                             <label for="nombre">Nombre y Apellido *</label>
-                            <input type="text" name="Nombre" id="nombre" placeholder=" Introduzca su Nombre y apellido" required minlength="4">
+                            <input type="text" name="Nombre" id="nombre" placeholder=" Introduzca su Nombre y apellido" >
                         </div>
                         <div class="form__usuario">
                             <label for="usuario">Nombre de usuari@ *</label>
-                            <input type="text" name="usuario" id="usuario" placeholder="Introduzca su Nombre de usuari@" required minlength="4">
+                            <input type="text" name="usuario" id="usuario" placeholder="Introduzca su Nombre de usuari@" >
                         </div>
                         <div class="form__usuario">
                             <label for="email">Correo electronico *</label>
-                            <input type="email" name="email" id="email" placeholder="Introduzca su Correo electronico" required >
+                            <input type="email" name="email" id="email" placeholder="Introduzca su Correo electronico" >
                         </div>
                         <div class="form__fecha">
                             <label for="fecha">Fecha de nacimiento</label>
@@ -25,7 +28,7 @@
                         </div>
                         <div class="form__domicilio">
                             <label for="domicilio">Domicilio de envio 1 *</label><br>
-                            <input type="text" name="domicilio1" id="domicilio" placeholder=" Introduzca su Domicilio" required minlength="4" >
+                            <input type="text" name="domicilio1" id="domicilio" placeholder=" Introduzca su Domicilio"  >
                         </div>
                         <div class="form__domicilio">
                             <label for="domicilio">Domicilio de envio 2  </label><br>
@@ -34,11 +37,11 @@
                         
                             <div class="form__password">
                                 <label class="form__password__title" for="pass">Contraseña *</label><br>
-                                <input type="password" name="pass" id="pass" placeholder="Introduzca su contraseña"  required minlength="4">
+                                <input type="password" name="pass" id="pass" placeholder="Introduzca su contraseña"  >
                             </div>
                             <div class="form__confirm">
                                 <label class="form__confirm__title" for="pass">Confirmar contraseña *</label>
-                                <input type="password" name="pass2" id="pass" placeholder="Introduzca su contraseña nuevamente" required minlength="4">
+                                <input type="password" name="pass2" id="pass" placeholder="Introduzca su contraseña nuevamente" >
                             </div>
                             <div class="contenedor_button" >
                                 <button class="form__button" type="submit" >Borrar</button>
