@@ -23,3 +23,6 @@ Joel propone mejorar las vistas de los detalles de producto y así lo hizo.
 
 Reunión 14-5-2022
 Durante 10 minutos y por medio de videollamada discutimos la realización de la vista "/productos" y la configuración de los formularios de registro de usuarios y productos.
+
+Reunión 16-5-2022
+Aprovechando el espacio cedido en clase, discutimos sobre la retroalimentación hecha por Daniel respecto al Sprint anterior. Asi mismo, analizamos la situación actual del proyecto y recalcamos aquellos aspectos que se deben mejorar y trabajar pues se están presentando unas modificaciones en el mismo.

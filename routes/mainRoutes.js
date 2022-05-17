@@ -11,8 +11,8 @@ const validations = [
     body('fecha').notEmpty().withMessage('Debes introducir una fecha de nacimiento'),
     body('domicilio1').notEmpty().withMessage('Debes introducir una dirección de entrega'),
     body('domicilio2').notEmpty().withMessage('Debes introducir una segunda dirección de entrega'),
-    body('pass').notEmpty().withMessage('No olvides digitar tu password o contraseña'),
-    body('pass2').notEmpty().withMessage('Debes reescribir la contraseña')
+    body('pass').notEmpty().withMessage('Debes digitar un password o contraseña'),
+    body('pass2').notEmpty().withMessage('Debes reescribir la contraseña o password')
 ]
 
 //*********multer ********/

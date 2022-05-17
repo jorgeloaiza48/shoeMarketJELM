@@ -2,13 +2,13 @@
 <body>
 <%- include("../partials/header") %>
                 <main class="main-register">
-                       
+                    <% if(locals.errors){%>
+                        <% for(let oneError in errors){%>
+                            <p><%= errors[oneError].msg %></p>
+                        <%}%>
+                   <%}%>    
                     <form  action="/registro" method="POST" class="form-Reg" enctype="multipart/form-data">
-                        <% if(locals.errors){%>
-                            <% for(let oneError in errors){%>
-                                <p><%= errors[oneError].msg %></p>
-                            <%}%>
-                       <%}%>       
+                           
                         <div class="form__nombre">
                             <label for="nombre">Nombre y Apellido *</label>
                             <input type="text" name="Nombre" id="nombre" placeholder=" Introduzca su Nombre y apellido" >

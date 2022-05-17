@@ -14,9 +14,10 @@ const controller = {
         let users = JSON.parse(fs.readFileSync(usersFilePath,'utf-8')); //de JSON a JS
        
 
-        const errors = validationResult(req)
-        if (errors.length > 0){
-            return res.render('registro',{errors:errors.mapped()})//mapped convierte un array en un objeto literal
+        let resultValidation = validationResult(req)
+        console.log("Longitud..." + resultValidation.errors.length)
+        if (resultValidation.errors.length > 0){
+            return res.render("users/registro",{errors:resultValidation.mapped(),oldData:req.body,title:"Registro"})//mapped convierte un array en un objeto literal
         }
 
         else{
