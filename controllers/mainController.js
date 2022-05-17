@@ -7,6 +7,7 @@ const controller = {
     index: (req, res) => {res.render("home", { title: "Shoe Market" }) },
 
     register: (req, res) => { res.render("users/registro", { title: "Registro" }) },
+    
     createUser: function (req,res){
         let usersFilePath = path.join(__dirname, '../data/users.json');
         let users = JSON.parse(fs.readFileSync(usersFilePath,'utf-8')); //de JSON a JS
