@@ -17,19 +17,13 @@
 
             </div>
         </section> -->
-
-        <section>
-            <h3>DESTACADOS</h3>
-            <div class="productos">
-                
-                <a href="descripcion"><div class="produc"><img src="/img/products/SashaNegro.jpeg"alt="bota"><p>Sasha Negro</p><p>$42.000</p><p><a href="/descripcion" class="com-but-main"><button>COMPRAR</button></a></p><i class="fa-solid fa-star"></i></div></a>
-                <a href="descripcion"><div class="produc"><img src="/img/products/maddyNegro.jpeg"alt="bota"><p>Maddy Negro</p><p>$42.000</p><p><a href="/descripcion" class="com-but-main"><button>COMPRAR</button></a></p><i class="fa-solid fa-star"></i></div></a>
-                <a href="descripcion"><div class="produc"><img src="/img/products/laraNegro.jpeg" alt="bota"><p>Lara Negro</p><p>$42.000</p><p><a href="/descripcion" class="com-but-main"><button>COMPRAR</button></a></p><i class="fa-solid fa-star"></i></div></a>
-                <a href="descripcion"><div class="produc"><img src="/img/products/maddyRojo.jpeg" alt="bota"><p>Maddy Rojo</p><p>$42.000</p><p><a href="/descripcion" class="com-but-main"><button>COMPRAR</button></a></p><i class="fa-solid fa-star"></i></div></a>
-                <a href="descripcion"><div class="produc"><img src="/img/products/maddyRojo.jpeg" alt="bota"><p>Maddy Rojo</p><p>$42.000</p><p><a href="/descripcion" class="com-but-main"><button>COMPRAR</button></a></p><i class="fa-solid fa-star"></i></div></a>
-                <a href="descripcion"><div class="produc"><img src="/img/products/maddyRojo.jpeg" alt="bota"><p>Maddy Rojo</p><p>$42.000</p><p><a href="/descripcion" class="com-but-main"><button>COMPRAR</button></a></p><i class="fa-solid fa-star"></i></div></a>
-                
-            </div>
+        <h3>DESTACADOS</h3>
+        <section class="productos">
+           <% botas.forEach(product=> { %> 
+                <!-- <div class="productos"> -->
+                    <a href="/detalle/<%= product.id %>"><div class="produc"><img src="/img/products/<%= product.image %>"alt="bota"><p><%= product.name %></p><p><%= product.price %></p><p><a href="/detalle/<%= product.id %>" class="com-but-main"><button>COMPRAR</button></a></p><p><i class="fa-solid fa-star"></i></p></div></a>
+            <% }) %>
+                <!-- </div> -->
         </section>
 
 
@@ -41,16 +35,13 @@
     
         </section>
 
-      <section>
         <h3>PROMOCIONES</h3>
-            <div class="productos">
-                <a href="descripcion"><div class="produc"><img src="/img/products/dianaNegro.jpeg" alt="bota"><p>Diana Negro</p><p>$42.000</p><p><a href="/descripcion" class="com-but-main"><button>COMPRAR</button></a></p><i class="fa-solid fa-star"></i></div></a>
-                <a href="descripcion"><div class="produc"><img src="/img/products/maddyNegro.jpeg" alt="bota"><p>Maddy Negro</p><p>$42.000</p><p><a href="/descripcion" class="com-but-main"><button>COMPRAR</button></a></p><i class="fa-solid fa-star"></i></div></a>
-                <a href="descripcion"><div class="produc"><img src="/img/products/maddyCrema.jpeg" alt="bota"><p>Maddy Crema</p><p>$42.000</p><p><a href="/descripcion" class="com-but-main"><button>COMPRAR</button></a></p><i class="fa-solid fa-star"></i></div></a>
-                <a href="descripcion"><div class="produc"><img src="/img/products/londonNegro.jpeg" alt="bota"><p>London Negro</p><p>$42.000</p><p><a href="/descripcion" class="com-but-main"><button>COMPRAR</button></a></p><i class="fa-solid fa-star"></i></div></a>
-                <a href="descripcion"><div class="produc"><img src="/img/products/londonNegro.jpeg" alt="bota"><p>London Negro</p><p>$42.000</p><p><a href="/descripcion" class="com-but-main"><button>COMPRAR</button></a></p><i class="fa-solid fa-star"></i></div></a>
-                <a href="descripcion"><div class="produc"><img src="/img/products/londonNegro.jpeg" alt="bota"><p>London Negro</p><p>$42.000</p><p><a href="/descripcion" class="com-but-main"><button>COMPRAR</button></a></p><i class="fa-solid fa-star"></i></div></a>
-            </div>
+        <section class="productos">
+        <% Borcegos.forEach(product=> { %> 
+            <!-- <div class="productos"> -->
+                <a href="/detalle/<%= product.id %>"><div class="produc"><img src="/img/products/<%= product.image %>"alt="bota"><p><%= product.name %></p><p><%= product.price %></p><p><a href="/detalle/<%= product.id %>" class="com-but-main"><button>COMPRAR</button></a></p><p><i class="fa-solid fa-star"></i></p></div></a>
+        <% }) %>       
+            <!-- </div> -->
           
       </section>
 
@@ -62,21 +53,7 @@
         </video>        
     </section>
 
-
-      <section>
-        <h3>BOTAS</h3>
-            <div class="productos">
-                <a href="descripcion"><div class="produc"><img src="/img/products/SashaNegro.jpeg" alt="bota"> <p>Sasha Negro</p><p>$42.000</p> <p><a href="/descripcion" class="com-but-main"><button>COMPRAR</button></a></p><i class="fa-solid fa-star">  </i></div></a>
-                <a href="descripcion"><div class="produc"><img src="/img/products/dianaBlanco.jpeg" alt="bota"> <p>Diana Blanco</p><p>$42.000</p> <p><a href="/descripcion" class="com-but-main"><button>COMPRAR</button></a></p><i class="fa-solid fa-star"></i></div></a>
-                <a href="descripcion"><div class="produc"><img src="/img/products/dianaNegro.jpeg" alt="bota"> <p>Diana negro</p><p>$42.000</p> <p><a href="/descripcion" class="com-but-main"><button>COMPRAR</button></a></p><i class="fa-solid fa-star">  </i></div></a>
-                <a href="descripcion"><div class="produc"><img src="/img/products/rianneNegro.jpeg" alt="bota"> <p>Rianne Negro</p><p>$42.000</p> <p><a href="/descripcion" class="com-but-main"><button>COMPRAR</button></a></p><i class="fa-solid fa-star"></i></div></a>
-                <a href="descripcion"><div class="produc"><img src="/img/products/rianneNegro.jpeg" alt="bota"> <p>Rianne Negro</p><p>$42.000</p> <p><a href="/descripcion" class="com-but-main"><button>COMPRAR</button></a></p><i class="fa-solid fa-star"></i></div></a>
-                <a href="descripcion"><div class="produc"><img src="/img/products/rianneNegro.jpeg" alt="bota"> <p>Rianne Negro</p><p>$42.000</p> <p><a href="/descripcion" class="com-but-main"><button>COMPRAR</button></a></p><i class="fa-solid fa-star"></i></div></a>
-                
-            </div>
-          
-      </section>
-   
+      
       <div class="news-letter">
           <h2>Suscribite a nuestro newsletter</h2>
           <form>
