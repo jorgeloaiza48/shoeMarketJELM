@@ -10,13 +10,14 @@ let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));//JSON a J
 
 const controller = {
     index: (req, res) => {
-        let botas = products.filter(function (product) {
-            return product.category == "Botas";
+        let Promociones = products.filter(function (product) {
+            return product.category == "Promociones";
         })
-        let Borcegos = products.filter(function (product) {
-            return product.category == "Borcegos";
+        let Destacados = products.filter(function (product) {
+            return product.category == "Destacados";
         })
-        res.render("home", {botas:botas,Borcegos:Borcegos,title: "Shoe Market" }) },
+        res.render("home", {Promociones:Promociones,Destacados:Destacados,title: "Shoe Market" }) 
+    },
 
     register: (req, res) => { res.render("users/registro", { title: "Registro" }) },
     
@@ -28,7 +29,7 @@ const controller = {
         let resultValidation = validationResult(req)
         console.log("Longitud..." + resultValidation.errors.length)
         if (resultValidation.errors.length > 0){
-            return res.render("users/registro",{errors:resultValidation.mapped(),oldData:req.body,title:"Registro"})//mapped convierte un array en un objeto literal
+            return res.render("users/registro",{errors:resultValidation.mapped(),title:"Registro"})//mapped convierte un array en un objeto literal
         }
 
         else{
