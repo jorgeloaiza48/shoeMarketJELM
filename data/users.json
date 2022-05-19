@@ -97,5 +97,16 @@
 		"Domicilio2": "222222",
 		"Contraseña": "2222222222",
 		"ConfirmarContraseña": "22222222222222"
+	},
+	{
+		"id": 10,
+		"NombreYapellido": "alan brito",
+		"Usuario": "alanbrate",
+		"Email": "alan@gmail.com",
+		"FechaNacimiento": "2021-04-12",
+		"Domicilio1": "carrera búsquela",
+		"Domicilio2": "Calle encuéntrela",
+		"Contraseña": "123456",
+		"ConfirmarContraseña": "123456"
 	}
 ]
