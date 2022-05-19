@@ -1,66 +1,104 @@
 <%- include("../partials/head") %>
 
     <body>
+        <%- include("../partials/header") %>
         <header>
 
-            <h1 class="crear-title">Formulario para editar producto</h1>
+            <h1 class="crear-title">Crear nuevo producto</h1>
 
         </header>
 
         <main class="main-register">
 
 
-            <form action="/" method="POST" class="form-create">
+            <form action="/productos" method="POST" class="form-create" enctype="multipart/form-data">
 
                 <div class="form-create__nombre">
-                    <label for="nombre">Introduzca el nombre del producto a editar</label>
-                    <input type="text" name="nombre" id="nombre" placeholder="Nombre del nuevo producto" required
+                    <label for="nombre">Nombre del producto *</label>
+                    <input type="text" name="name" id="nombre" placeholder="Nombre del nuevo producto" required
                         minlength="4">
                 </div>
-                <div class="form-create__nombre">
-                    <label for="nombre">Introduzca el nuevo nombre del producto</label>
-                    <input type="text" name="nombre" id="nombre" placeholder="Nombre del nuevo producto" 
-                       >
-                </div>
                 <div class="form-create__descr">
-                    <label for="description">Nueva descripcion del producto*</label>
-                    <textarea type="text" placeholder="Introduzca la descripcion del producto" name="description" required
-                        id="description" ></textarea>
+                    <h3>Descripcion del producto*</h3>
+                    <div class="div-desc">
+                        <label for="material"> Material</label>
+                        <input type="text" name="material">
+                    </div>
+                    <div class="div-desc">
+                        <label for="base"> Altura de la base</label>
+                        <input type="text" name="base">
+                    </div>
+                    <div class="div-desc">
+                        <label for="taco">Altura del taco</label>
+                        <input type="text" name="taco">
+                    </div>
+
+                    <div class="div-desc">
+                        <label for="cana">Altura de la caña</label>
+                        <input type="text" name="cana">
+                    </div>
+
+                    <div class="div-desc">
+                        <label for="colores">Colores</label>
+                        <input type="text" name="colores">
+                    </div>
+
+
                 </div>
+
                 <div class="form-create__img">
-                    <label for="photo">Seleccione las nuevas fotos
-                        <div class="file-select"><input type="file" name="Photo" accept=".jpg,jpeg" multiple></div>
+                    <label for="photo">Seleccione las foto
+                        <div class="file-select"><input type="file" name="photo" accept=".jpg,.jpeg"></div>
                     </label>
 
 
 
                 </div>
                 <div class="form-create__price">
-                    <label for="price">Nuevo Precio </label><br>
+                    <label for="price">Precio *</label><br>
                     <input type="number" name="price" id="price" placeholder=" Introduzca el precio" required
                         minlength="4">
                 </div>
                 <div class="form-create__color">
-                    <div class="form-create__color__div">
-                        <label for="favcolor">Selecciona los nuevos colores</label>
-                    </div>
-                    <div class="form-create__color__div-input">
-                        <input class="form-create__color-input" type="color" id="favcolor" name="favcolor">
-                        <input class="form-create__color-input" type="color" id="favcolor" name="favcolor">
-                        <input class="form-create__color-input" type="color" id="favcolor" name="favcolor">
+                    <div class="form-create__size__title__div">
+                        <label class="form-create__size__title" for="talles">Seleccione los talles</label>
                     </div>
 
+                    <label class="form-create__color__check" for="negro">
+                        <input type="checkbox" name="color" id="negro" value="Negro">
+                        Negro
+                    </label>
+                    <label class="form-create__color__check" for="36">
+                        <input type="checkbox" name="color" id="36" value="Rojo">
+                        Rojo
+                    </label>
+                    <label class="form-create__color__check" for="37">
+                        <input type="checkbox" name="color" id="37" value="Crema">
+                        Crema
+                    </label>
+                    <label class="form-create__color__check" for="38">
+                        <input type="checkbox" name="color" id="38" value="Blanco">
+                        Blanco
+                    </label>
+                    <label class="form-create__color__check" for="38">
+                        <input type="checkbox" name="color" id="38" value="Rosa">
+                        Rosa
+                    </label>
+
                 </div>
+
                 <div class="form-create__cat">
                     <div class="form-create__cat-div">
-                        <label for="categoria">Selecciona la nueva categoria</label>
+                        <label for="category">Selecciona la categoria</label>
                     </div>
                     <div class="form-create__cat__div-input">
-                        <select name="categoria" id="categoria" required>
+                        <select name="category" id="categoria" required>
                             <option value="Botas">Botas</option>
                             <option value="Borcegos">Borcegos</option>
                             <option value="Texanas">Texanas</option>
-                            <option value="Otros">Otros</option>
+                            <option value="Guillerminas">Guillerminas</option>
+                            <option value="Bucaneras">Bucaneras</option>
+                            <option value="Gift Card">Gift Card</option>
                         </select>
 
 
@@ -70,31 +108,31 @@
 
                 <div class="form-create__size">
                     <div class="form-create__size__title__div">
-                        <label class="form-create__size__title" for="talles">Seleccione los nuevos talles</label>
+                        <label class="form-create__size__title" for="talles">Seleccione los talles</label>
                     </div>
-                    
+
                     <label class="form-create__size__check" for="35">
-                        <input type="checkbox" name="tale" id="35">
+                        <input type="checkbox" name="talle" id="35" value="35">
                         35
                     </label>
                     <label class="form-create__size__check" for="36">
-                        <input type="checkbox" name="talle" id="36">
-                       36
+                        <input type="checkbox" name="talle" id="36" value="36">
+                        36
                     </label>
                     <label class="form-create__size__check" for="37">
-                        <input type="checkbox" name="talle" id="37">
-                       37
+                        <input type="checkbox" name="talle" id="37" value="37">
+                        37
                     </label>
                     <label class="form-create__size__check" for="38">
-                        <input type="checkbox" name="talle" id="38">
+                        <input type="checkbox" name="talle" id="38" value="38">
                         38
                     </label>
                     <label class="form-create__size__check" for="39">
-                        <input type="checkbox" name="talle" id="39">
+                        <input type="checkbox" name="talle" id="39" value="39">
                         39
                     </label>
                     <label class="form-create__size__check" for="40">
-                        <input type="checkbox" name="talle" id="40">
+                        <input type="checkbox" name="talle" id="40" value="40">
                         40
                     </label>
                 </div>
@@ -109,6 +147,7 @@
 
         </main>
 
+          <%- include("../partials/footer") %>
     </body>
 
     </html>

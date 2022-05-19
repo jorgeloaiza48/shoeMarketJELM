@@ -867,7 +867,29 @@
 			"39",
 			"40"
 		]
+	},
+	{
+		"id": 31,
+		"name": "aaaaaaaaa",
+		"price": 25000,
+		"category": "Texanas",
+		"color": [
+			"Negro",
+			"Crema",
+			"Blanco"
+		],
+		"description": {
+			"Material": "a",
+			"Alturabase": "a",
+			"Alturataco": "a",
+			"Alturacana": "a",
+			"Colores": "a"
+		},
+		"image": "photo-1652989362625.jpeg",
+		"size": [
+			"38",
+			"39",
+			"40"
+		]
 	}
-
-	
 ]

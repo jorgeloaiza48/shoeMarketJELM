@@ -3,6 +3,20 @@ const router = express.Router()
 const mainController = require('../controllers/mainController')
 const path = require("path")
 const {body} = require('express-validator')
+const multer = require("multer")
+const productosRoutes = require("./productosRoutes")
+const storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+        cb(null, path.join(__dirname, "../public/img/products"))
+    },
+    filename: function (req, file, cb) {
+        cb(null, file.fieldname + "-" + Date.now() + path.extname(file.originalname))
+    }
+}
+)
+
+const upload = multer({ storage })
+
 
 const validations = [
     body('Nombre').notEmpty().withMessage('Debe introducir un nombre y apellido'),
@@ -15,35 +29,15 @@ const validations = [
     body('pass2').notEmpty().withMessage('Debes reescribir la contraseña o password')
 ]
 
-//*********multer ********/
-const multer = require("multer")
-
-const storage = multer.diskStorage({
-    destination: function (req, file, cb) {
-        cb(null, path.join(__dirname, "../public/img/products"))
-    },
-    filename: function (req, file, cb) {
-        cb(null, file.fieldname + "-" + Date.now() + path.extname(file.originalname))
-    }
-}
-)
-
-//Método que permite subir archivos
-const upload = multer({ storage })
+//** router de productos **//
+router.use("/productos", productosRoutes)
 
 router.get('/',mainController.index)
-
-router.get('/productos', mainController.products)
-router.post("/productos", upload.single("photo"), mainController.newproduct)
-router.get("/productos/crear", mainController.crearProducto)
-
-router.get("/productos/:categoria", mainController.categoria)
+router.get('/search',mainController.search)
 
 // **Creación o registro de usuarios**
 router.get('/registro', mainController.register)
 router.post('/registro',upload.single('imagenProducto'),validations, mainController.createUser ); 
-
-
 
 router.get('/login',mainController.login)
 
@@ -53,7 +47,7 @@ router.get('/detalle/:id',mainController.detalle)
 
 router.get('/carrito',mainController.carrito)
 
-router.get("/editarproducto",mainController.editarProducto)
+
 
 module.exports = router
 
