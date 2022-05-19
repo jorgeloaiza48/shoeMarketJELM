@@ -53,7 +53,7 @@ router.get('/detalle/:id',mainController.detalle)
 
 router.get('/carrito',mainController.carrito)
 
-router.get("/editarproducto",mainController.editarProducto)
+router.get("/productos/editar",mainController.editarProducto)
 
 module.exports = router
 
