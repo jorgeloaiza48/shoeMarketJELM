@@ -78,27 +78,6 @@
 	},
 	{
 		"id": 8,
-<<<<<<< HEAD
-		"NombreYapellido": "1231sdadas",
-		"Usuario": "joel",
-		"Email": "joe_cec@hotmail.com",
-		"FechaNacimiento": "2022-02-20",
-		"Domicilio1": "joel",
-		"Domicilio2": "joel",
-		"Contraseña": "joel",
-		"ConfirmarContraseña": "joel"
-	},
-	{
-		"id": 9,
-		"NombreYapellido": "12312312312",
-		"Usuario": "pablo",
-		"Email": "joe_cec@hotmail.com",
-		"FechaNacimiento": "1993-04-28",
-		"Domicilio1": "1232222222",
-		"Domicilio2": "222222",
-		"Contraseña": "2222222222",
-		"ConfirmarContraseña": "22222222222222"
-=======
 		"NombreYapellido": "alan brito",
 		"Usuario": "alan",
 		"Email": "platano@gmail.com",
@@ -217,6 +196,5 @@
 		"Domicilio2": "",
 		"Contraseña": "",
 		"ConfirmarContraseña": ""
->>>>>>> d3831f60bd406dd0c0645d87dbde9e78f212035d
 	}
 ]
