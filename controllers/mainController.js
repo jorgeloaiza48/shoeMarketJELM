@@ -4,9 +4,19 @@ const path = require("path")
 const fs = require("fs")
 const {validationResult} = require('express-validator')
 
+let productsFilePath = path.join(__dirname, '../data/SHOEMARKET.json');
+let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));//JSON a JS
+
 
 const controller = {
-    index: (req, res) => {res.render("home", { title: "Shoe Market" }) },
+    index: (req, res) => {
+        let botas = products.filter(function (product) {
+            return product.category == "Botas";
+        })
+        let Borcegos = products.filter(function (product) {
+            return product.category == "Borcegos";
+        })
+        res.render("home", {botas:botas,Borcegos:Borcegos,title: "Shoe Market" }) },
 
     register: (req, res) => { res.render("users/registro", { title: "Registro" }) },
     
@@ -68,7 +78,7 @@ const controller = {
         //para estos 3 no se puede usar const ya que mas abajo cuando reescribamos los json hay q volver a declarar las variables
         // y las variables declaradas con const no se pueden modificar
         let productsFilePath = path.join(__dirname, '../data/SHOEMARKET.json');
-        let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+        let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));//JSON a JS
         let productJSON = fs.readFileSync(productsFilePath, 'utf-8')
       
         let botas = products.filter(function (product) {
@@ -161,14 +171,10 @@ res.redirect("/productos")
         let categoria = products.filter(cate =>{
             return cate.category == req.params.categoria
         })
-       
-        
+               
         res.render("products/categoria",{categoria:categoria,title: "categoria"})
         
     }
-
-
-
 
 }
 

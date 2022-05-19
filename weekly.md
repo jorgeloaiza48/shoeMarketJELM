@@ -26,3 +26,6 @@ Durante 10 minutos y por medio de videollamada discutimos la realización de la 
 
 Reunión 16-5-2022
 Aprovechando el espacio cedido en clase, discutimos sobre la retroalimentación hecha por Daniel respecto al Sprint anterior. Asi mismo, analizamos la situación actual del proyecto y recalcamos aquellos aspectos que se deben mejorar y trabajar pues se están presentando unas modificaciones en el mismo.
+
+Reunión 17-5-2022
+En reunión através de videollamada definimos qué elementos mostrar en el index del proyecto.

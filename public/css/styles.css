@@ -248,17 +248,17 @@ footer {
         /* border: solid 2px blue; */
         display: flex;
         flex-wrap: wrap;
-    }
+        justify-content: center;
+       }
 
-    .productos .produc {
-        border-style: outset;
-        height: auto;
-        width: 40%;
-        ;
+    .produc {
+        /* border: solid 2px green; */
+        width: 280px;        
     }
-
-    .produc p,
-    i {
+    .produc a{
+        text-decoration: none;
+    }
+    .produc p,i {
         line-height: 0px;
         text-align: center;
     }
@@ -268,8 +268,7 @@ footer {
     }
 
     .productos .produc img {
-        height: auto;
-        width: 100%;
+       width: 100%;
     }
 
     .productos .produc button {
@@ -333,10 +332,15 @@ footer {
     }
 
     .cuentaCarrito {
-        align-items: flex-end;
+        /* border: solid 2px red; */
         display: flex;
         flex-direction: row;
-        justify-content: flex-end;
+        justify-content: flex-start;
+        margin-right: 30px;
+        margin-top: 1px;        
+    }
+    .cuentaCarrito li{
+        margin-right: 30px;
     }
 
     /* Quita el subrayado de los enlaces */
@@ -382,8 +386,11 @@ footer {
 
     .menu {
         /* border: solid 5px green; */
+        border-top: solid 2px gainsboro;
         display: block;
-        border-top: solid 1px gray;
+        margin-bottom: 5px;
+        margin-top: -7px;
+        height: 60px;
         width: 100%;
     }
 
@@ -391,11 +398,9 @@ footer {
         display: flex;
         flex-direction: row;
         justify-content: center;
-
     }
 
     .name-pr {
-
         border-top: none
     }
 
@@ -403,7 +408,7 @@ footer {
         /* border: solid 5px blue; */
         display: flex;
         flex-wrap: wrap;
-        height: 54%;
+        height: 50%;
         justify-content: center;
         width: 100%;
     }
@@ -417,16 +422,17 @@ footer {
 
     .principal-form-logo img {
         border-radius: 10%;
-        height: 150%;
+        height: 250px;
         width: 130%;
     }
 
     .principal-form-logo {
         /* border: solid 3px greenyellow; */
+        height: 80px;
         margin-bottom: 1%;
         margin-top: 1%;
         margin-left: 1%;
-        width: 10%;
+        width: 5%;
     }
 
     .principal-form-boton {
@@ -461,10 +467,10 @@ footer {
     }
 
     .principal-carrito {
-        /* border: solid 2px blue; */
         align-self: center;
-        display: flex;
-        padding: 20px;
+        /* border: solid 2px blue; */
+        height: 45px;
+        display: inline-block;           
     }
 
     .principal-carrito li {
@@ -529,8 +535,6 @@ footer {
         padding: 2px;
         text-align: center;
     }
-
-
 
     /* para juntar la palabra y el ícono */
     /* .cuentaCarrito a {
@@ -624,7 +628,7 @@ footer {
     .productos h3{
         /* border: solid 2px #c44b52; */
         height: 30px;
-        position: absolute;
+        /* position: absolute; */
     }
     .produc{
         /* border: solid 2px red; */
