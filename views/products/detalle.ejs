@@ -8,28 +8,32 @@
 
 
                     <section class="photos-desc">
+                        <% if (producto.size) { %>
 
-                        <article class="photos-small">
 
-                            <div class="photos-small__div">
-                                <img class="photos-small__photo" src="../img/products/<%=producto.image%>"
-                                    alt="product">
+                            <article class="photos-small">
 
-                            </div>
-                            <div class="photos-small__div">
-                                <img class="photos-small__photo" src="../img/products/<%= producto.image %>"
-                                    alt="product">
-                            </div>
-                            <div class="photos-small__div">
-                                <img class="photos-small__photo" src="../img/products/<%= producto.image %>"
-                                    alt="product">
-                            </div>
-                        </article>
+                                <div class="photos-small__div">
+                                    <img class="photos-small__photo" src="../img/products/<%=producto.image%>"
+                                        alt="product">
 
-                        <div class="photos-desc__div">
-                            <img class="photos-desc__big" src="../img/products/<%= producto.image%>" alt="product">
+                                </div>
+                                <div class="photos-small__div">
+                                    <img class="photos-small__photo" src="../img/products/<%= producto.image %>"
+                                        alt="product">
+                                </div>
+                                <div class="photos-small__div">
+                                    <img class="photos-small__photo" src="../img/products/<%= producto.image %>"
+                                        alt="product">
+                                </div>
+                            </article>
 
-                        </div>
+                            <% } %>
+                                <div class="photos-desc__div">
+                                    <img class="photos-desc__big" src="../img/products/<%= producto.image%>"
+                                        alt="product">
+
+                                </div>
 
 
 
@@ -105,27 +109,29 @@
                                         </section>
                     </article>
                 </article>
+                <% if (producto.size) { %>
 
-                <section class="desc-desc">
-                    <h3 class="desc-desc__title">Descripcion</h3>
-                    <ul>
-                        <li>Material : <%= producto.description.Material %>
-                        </li>
-                        <li>Altura Base : <%= producto.description.Alturabase %>
-                        </li>
-                        <li>Altura Taco : <%= producto.description.Alturataco %>
-                        </li>
-                        <li>Altura Caña : <%= producto.description.Alturacana %>
-                        </li>
-                        <li>Colores : <%= producto.description.Colores %>
-                        </li>
 
-                    </ul>
-                </section>
+                    <section class="desc-desc">
+                        <h3 class="desc-desc__title">Descripcion</h3>
+                        <ul>
+                            <li>Material : <%= producto.description.Material %>
+                            </li>
+                            <li>Altura Base : <%= producto.description.Alturabase %>
+                            </li>
+                            <li>Altura Taco : <%= producto.description.Alturataco %>
+                            </li>
+                            <li>Altura Caña : <%= producto.description.Alturacana %>
+                            </li>
+                            <li>Colores : <%= producto.description.Colores %>
+                            </li>
 
-                <div class="help-button">
-                    <button><i class="fa-solid fa-circle-question"></i> Ayuda</button>
-                </div>
+                        </ul>
+                    </section>
+                    <% } %>
+                        <div class="help-button">
+                            <button><i class="fa-solid fa-circle-question"></i> Ayuda</button>
+                        </div>
 
 
             </main>
