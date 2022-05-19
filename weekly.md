@@ -29,3 +29,6 @@ Aprovechando el espacio cedido en clase, discutimos sobre la retroalimentación 
 
 Reunión 17-5-2022
 En reunión através de videollamada definimos qué elementos mostrar en el index del proyecto.
+
+Reunión 19-5-2022
+En conversación telefónica, discutimos algunos aspectos a mejorar en el index del proyecto tales como el tamaño del video, el tamaño de los div´s que contienen las imágenes y el color del texto de cada uno de los productos.
