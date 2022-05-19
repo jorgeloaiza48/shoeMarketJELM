@@ -55,7 +55,7 @@
 		"id": 3,
 		"name": "LARA NEGRO",
 		"price": 10490,
-		"category": "Borcegos",
+		"category": "Botas",
 		"color": [
 			"Negro",
 			"Crema",
@@ -543,6 +543,331 @@
 		"description": "",
 		"image": "giftCard10000.jpg",
 		"size": ""
+	},
+	{
+		"id": 25,
+		"name": "LARA BLANCO",
+		"price": 10490,
+		"category": "Destacados",
+		"color": [
+			"Negro",
+			"Crema",
+			"Blanco"
+		],
+		"description": {
+			"Material": "Cuero Vacuno",
+			"Alturabase": "6cm",
+			"Alturataco": "6cm",
+			"Alturacana": "13cm",
+			"Colores": "Negro Crema Blanco"
+		},
+		"image": "laraBLanco.jpeg",
+		"size": [
+			"35",
+			"36",
+			"37",
+			"38",
+			"39",
+			"40"
+		]
+	},
+	{
+		"id": 26,
+		"name": "LARA BLANCO",
+		"price": 10490,
+		"category": "Destacados",
+		"color": [
+			"Negro",
+			"Crema",
+			"Blanco"
+		],
+		"description": {
+			"Material": "Cuero Vacuno",
+			"Alturabase": "6cm",
+			"Alturataco": "6cm",
+			"Alturacana": "13cm",
+			"Colores": "Negro Crema Blanco"
+		},
+		"image": "laraBLanco.jpeg",
+		"size": [
+			"35",
+			"36",
+			"37",
+			"38",
+			"39",
+			"40"
+		]
+	},
+	{
+		"id": 27,
+		"name": "LARA BLANCO",
+		"price": 10490,
+		"category": "Destacados",
+		"color": [
+			"Negro",
+			"Crema",
+			"Blanco"
+		],
+		"description": {
+			"Material": "Cuero Vacuno",
+			"Alturabase": "6cm",
+			"Alturataco": "6cm",
+			"Alturacana": "13cm",
+			"Colores": "Negro Crema Blanco"
+		},
+		"image": "laraBLanco.jpeg",
+		"size": [
+			"35",
+			"36",
+			"37",
+			"38",
+			"39",
+			"40"
+		]
+	},
+	{
+		"id": 28,
+		"name": "LARA BLANCO",
+		"price": 10490,
+		"category": "Destacados",
+		"color": [
+			"Negro",
+			"Crema",
+			"Blanco"
+		],
+		"description": {
+			"Material": "Cuero Vacuno",
+			"Alturabase": "6cm",
+			"Alturataco": "6cm",
+			"Alturacana": "13cm",
+			"Colores": "Negro Crema Blanco"
+		},
+		"image": "laraBLanco.jpeg",
+		"size": [
+			"35",
+			"36",
+			"37",
+			"38",
+			"39",
+			"40"
+		]
+	},
+	{
+		"id": 29,
+		"name": "LARA BLANCO",
+		"price": 10490,
+		"category": "Destacados",
+		"color": [
+			"Negro",
+			"Crema",
+			"Blanco"
+		],
+		"description": {
+			"Material": "Cuero Vacuno",
+			"Alturabase": "6cm",
+			"Alturataco": "6cm",
+			"Alturacana": "13cm",
+			"Colores": "Negro Crema Blanco"
+		},
+		"image": "laraBLanco.jpeg",
+		"size": [
+			"35",
+			"36",
+			"37",
+			"38",
+			"39",
+			"40"
+		]
+	},
+	{
+		"id": 30,
+		"name": "LARA BLANCO",
+		"price": 10490,
+		"category": "Destacados",
+		"color": [
+			"Negro",
+			"Crema",
+			"Blanco"
+		],
+		"description": {
+			"Material": "Cuero Vacuno",
+			"Alturabase": "6cm",
+			"Alturataco": "6cm",
+			"Alturacana": "13cm",
+			"Colores": "Negro Crema Blanco"
+		},
+		"image": "laraBLanco.jpeg",
+		"size": [
+			"35",
+			"36",
+			"37",
+			"38",
+			"39",
+			"40"
+		]
+	},
+	{
+		"id": 25,
+		"name": "LARA BLANCO",
+		"price": 10490,
+		"category": "Promociones",
+		"color": [
+			"Negro",
+			"Crema",
+			"Blanco"
+		],
+		"description": {
+			"Material": "Cuero Vacuno",
+			"Alturabase": "6cm",
+			"Alturataco": "6cm",
+			"Alturacana": "13cm",
+			"Colores": "Negro Crema Blanco"
+		},
+		"image": "laraBLanco.jpeg",
+		"size": [
+			"35",
+			"36",
+			"37",
+			"38",
+			"39",
+			"40"
+		]
+	},
+	{
+		"id": 26,
+		"name": "LARA BLANCO",
+		"price": 10490,
+		"category": "Promociones",
+		"color": [
+			"Negro",
+			"Crema",
+			"Blanco"
+		],
+		"description": {
+			"Material": "Cuero Vacuno",
+			"Alturabase": "6cm",
+			"Alturataco": "6cm",
+			"Alturacana": "13cm",
+			"Colores": "Negro Crema Blanco"
+		},
+		"image": "laraBLanco.jpeg",
+		"size": [
+			"35",
+			"36",
+			"37",
+			"38",
+			"39",
+			"40"
+		]
+	},
+	{
+		"id": 27,
+		"name": "LARA BLANCO",
+		"price": 10490,
+		"category": "Promociones",
+		"color": [
+			"Negro",
+			"Crema",
+			"Blanco"
+		],
+		"description": {
+			"Material": "Cuero Vacuno",
+			"Alturabase": "6cm",
+			"Alturataco": "6cm",
+			"Alturacana": "13cm",
+			"Colores": "Negro Crema Blanco"
+		},
+		"image": "laraBLanco.jpeg",
+		"size": [
+			"35",
+			"36",
+			"37",
+			"38",
+			"39",
+			"40"
+		]
+	},
+	{
+		"id": 28,
+		"name": "LARA BLANCO",
+		"price": 10490,
+		"category": "Promociones",
+		"color": [
+			"Negro",
+			"Crema",
+			"Blanco"
+		],
+		"description": {
+			"Material": "Cuero Vacuno",
+			"Alturabase": "6cm",
+			"Alturataco": "6cm",
+			"Alturacana": "13cm",
+			"Colores": "Negro Crema Blanco"
+		},
+		"image": "laraBLanco.jpeg",
+		"size": [
+			"35",
+			"36",
+			"37",
+			"38",
+			"39",
+			"40"
+		]
+	},
+	{
+		"id": 29,
+		"name": "LARA BLANCO",
+		"price": 10490,
+		"category": "Promociones",
+		"color": [
+			"Negro",
+			"Crema",
+			"Blanco"
+		],
+		"description": {
+			"Material": "Cuero Vacuno",
+			"Alturabase": "6cm",
+			"Alturataco": "6cm",
+			"Alturacana": "13cm",
+			"Colores": "Negro Crema Blanco"
+		},
+		"image": "laraBLanco.jpeg",
+		"size": [
+			"35",
+			"36",
+			"37",
+			"38",
+			"39",
+			"40"
+		]
+	},
+	{
+		"id": 30,
+		"name": "LARA BLANCO",
+		"price": 10490,
+		"category": "Promociones",
+		"color": [
+			"Negro",
+			"Crema",
+			"Blanco"
+		],
+		"description": {
+			"Material": "Cuero Vacuno",
+			"Alturabase": "6cm",
+			"Alturataco": "6cm",
+			"Alturacana": "13cm",
+			"Colores": "Negro Crema Blanco"
+		},
+		"image": "laraBLanco.jpeg",
+		"size": [
+			"35",
+			"36",
+			"37",
+			"38",
+			"39",
+			"40"
+		]
 	}
+
 	
 ]
