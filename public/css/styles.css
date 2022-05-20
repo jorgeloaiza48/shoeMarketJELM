@@ -409,7 +409,8 @@ footer {
         display: flex;
         flex-wrap: wrap;
         height: 50%;
-        justify-content: center;
+        justify-content: space-between;
+        padding: 15px;
         width: 100%;
     }
 
@@ -429,17 +430,18 @@ footer {
    
 
     .principal-form-logo img {
-        border-radius: 10%;
+       
         height: 250px;
         width: 130%;
     }
 
     .principal-form-logo {
         /* border: solid 3px greenyellow; */
-        height: 160px;
+        height: 180px;
         margin-bottom: 1%;
         left: 0px;
         position: absolute;
+        top: 44px;
         width: 14%;
        
     }
@@ -448,7 +450,9 @@ footer {
         /* border: solid 1px red; */
         height: 40px;
         margin: auto;
-        margin-left: 180px;
+        margin-left: 280px;
+        padding-top: 2px;
+        margin-bottom: 10px;
         width: 30%;
     }
 
@@ -667,14 +671,12 @@ footer {
         transform: rotate(360deg);
     }
     .section3 {     
-         display: inline-table;      
-        height: 250px;
         margin-top: 15px;
         width: 100%;
         /* border: solid 2px blue; */
     }
     .section3 video{
-      height: 350px;
+      height: 500px;
       width: 100%;
     }
 
