@@ -1,11 +1,10 @@
 const express = require('express')
 const router = express.Router()
-const mainController = require('../controllers/MainController')
 const path = require("path")
 const {body} = require('express-validator')
+const userController = require('../controllers/userController')
 const multer = require("multer")
-const productosRoutes = require("./productosRoutes")
-const userRoutes = require("./userRoutes")
+
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
         cb(null, path.join(__dirname, "../public/img/products"))
@@ -30,26 +29,13 @@ const validations = [
     body('pass2').notEmpty().withMessage('Debes reescribir la contraseña o password')
 ]
 
-//** router de productos **//
-router.use("/productos", productosRoutes)
+// **Creación o registro de usuarios**
+router.get('/registro', userController.register)
+router.post('/registro',upload.single('imagenProducto'),validations, userController.createUser ); 
 
-//* router de user**//
-router.use("/user",userRoutes)
-
-router.get('/',mainController.index)
-router.get('/search',mainController.search)
-
-
-
-// router.get('/descripcion/:id',mainController.descripcion)
-
-
-router.get('/detalle/:id', mainController.detalle)
-
-router.get('/carrito',mainController.carrito)
+router.get('/login',userController.login)
 
 
 
 
 module.exports = router
-

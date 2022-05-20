@@ -1,6 +1,5 @@
 const express = require('express')
 const router = express.Router()
-const mainController = require('../controllers/mainController')
 const ProductsController = require('../controllers/ProductsController')
 const path = require("path")
 
@@ -23,9 +22,15 @@ const upload = multer({ storage })
 
 router.get('/', ProductsController.Allproducts)
 router.post("/", upload.single("photo"), ProductsController.newproduct)
+
+
 router.get("/crear", ProductsController.crearProducto)
-router.get("/editar",ProductsController.editarProducto)
+
 router.get("/:categoria", ProductsController.categoria)
 
+
+router.get("/editar/:id", ProductsController.editarProducto)
+
+router.put("/editar/:id",upload.single("img"), ProductsController.update)
 
 module.exports = router

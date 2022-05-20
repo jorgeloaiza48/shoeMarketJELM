@@ -21,7 +21,7 @@
         <section class="productos">
            <% Destacados.forEach(product=> { %> 
                 <!-- <div class="productos"> -->
-                    <a href="/detalle/<%= product.id %>"><div class="produc"><img src="/img/products/<%= product.image %>"alt="bota"><p><%= product.name %></p><p>$<%= product.price %></p><p><a href="/detalle/<%= product.id %>" class="com-but-main"><button>COMPRAR</button></a></p><p><i class="fa-solid fa-star"></i></p></div></a>
+                    <a href="detalle/<%= product.id %>"><div class="produc"><img src="/img/products/<%= product.image %>"alt="bota"><p><%= product.name %></p><p>$<%= product.price %></p><p><a href="/detalle/<%= product.id %>" class="com-but-main"><button>COMPRAR</button></a></p><p><i class="fa-solid fa-star"></i></p></div></a>
             <% }) %>
                 <!-- </div> -->
         </section>
@@ -39,7 +39,7 @@
         <section class="productos">
         <% Promociones.forEach(product=> { %> 
             <!-- <div class="productos"> -->
-                <a href="/detalle/<%= product.id %>"><div class="produc"><img src="/img/products/<%= product.image %>"alt="bota"><p><%= product.name %></p><p><%= product.price %></p><p><a href="/detalle/<%= product.id %>" class="com-but-main"><button>COMPRAR</button></a></p><p><i class="fa-solid fa-star"></i></p></div></a>
+                <a href="detalle/<%= product.id %>"><div class="produc"><img src="/img/products/<%= product.image %>"alt="bota"><p><%= product.name %></p><p><%= product.price %></p><p><a href="/detalle/<%= product.id %>" class="com-but-main"><button>COMPRAR</button></a></p><p><i class="fa-solid fa-star"></i></p></div></a>
         <% }) %>       
             <!-- </div> -->
           
