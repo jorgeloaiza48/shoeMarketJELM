@@ -891,5 +891,74 @@
 			"39",
 			"40"
 		]
+	},
+	{
+		"id": 32,
+		"name": "JOEL",
+		"price": 15000,
+		"category": "Guillerminas",
+		"color": [
+			"Negro",
+			"Blanco"
+		],
+		"description": {
+			"Material": "1",
+			"Alturabase": "2",
+			"Alturataco": "2",
+			"Alturacana": "2",
+			"Colores": "2"
+		},
+		"image": "photo-1653014839586.jpeg",
+		"size": [
+			"35",
+			"36",
+			"37"
+		]
+	},
+	{
+		"id": 33,
+		"name": "JOEL",
+		"price": 15000,
+		"category": "Guillerminas",
+		"color": [
+			"Negro",
+			"Blanco"
+		],
+		"description": {
+			"Material": "1",
+			"Alturabase": "2",
+			"Alturataco": "2",
+			"Alturacana": "2",
+			"Colores": "2"
+		},
+		"image": "photo-1653014865320.jpeg",
+		"size": [
+			"35",
+			"36",
+			"37"
+		]
+	},
+	{
+		"id": 34,
+		"name": "JOEL",
+		"price": 15000,
+		"category": "Guillerminas",
+		"color": [
+			"Negro",
+			"Blanco"
+		],
+		"description": {
+			"Material": "1",
+			"Alturabase": "2",
+			"Alturataco": "2",
+			"Alturacana": "2",
+			"Colores": "2"
+		},
+		"image": "photo-1653015066695.jpeg",
+		"size": [
+			"35",
+			"36",
+			"37"
+		]
 	}
 ]

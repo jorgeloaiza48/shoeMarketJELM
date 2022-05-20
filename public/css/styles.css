@@ -2035,7 +2035,13 @@ footer {
     margin-left: auto;
     max-width: 570px;
     text-align: center;
-    width: 80%;
+    width: 100%;
+}
+.img-edit-product{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
 }
 
 

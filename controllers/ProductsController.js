@@ -3,16 +3,59 @@ const res = require("express/lib/response")
 const path = require("path")
 const fs = require("fs")
 const { validationResult } = require('express-validator')
+const { parse } = require("path")
 
 let productsFilePath = path.join(__dirname, '../data/SHOEMARKET.json');
 let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));//JSON a JS
 
 
+
 const controller = {
-    
+
     crearProducto: (req, res) => { res.render('products/crearProducto', { title: "Crear Producto" }) },
 
-    editarProducto: (req, res) => { res.render('products/editarProducto', { title: "Editar producto" }) },
+    editarProducto: (req, res) => {
+        let productsFilePath = path.join(__dirname, '../data/SHOEMARKET.json');
+        let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));//JSON a JS
+        let productJSON = fs.readFileSync(productsFilePath, 'utf-8')
+
+        let producto = products.find(product => product.id === parseInt(req.params.id))
+
+        res.render('products/editarProducto', {
+            title: "Editar producto",
+            producto: producto
+        })
+    },
+
+    update: (req, res) => {
+        let productsFilePath = path.join(__dirname, '../data/SHOEMARKET.json');
+        let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));//JSON a JS
+        let productJSON = fs.readFileSync(productsFilePath, 'utf-8')
+
+        products.find(product => {
+            if (product.id === parseInt(req.params.id)) {
+
+                    product.name = req.body.name,
+                    product.price = Number(req.body.price),
+                    product.category = req.body.category,
+                    product.color = req.body.color,
+                    product.description = {
+                        Material: req.body.material,
+                        Alturabase: req.body.base,
+                        Alturataco: req.body.taco,
+                        Alturacana: req.body.cana,
+                        Colores: req.body.colores
+                    },
+                    product.image = req.file.filename,
+                    product.size = req.body.talle
+
+            }
+        })
+        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, "\t"))
+
+        res.redirect("/productos")
+
+    },
 
     Allproducts: (req, res) => {
         //para estos 3 no se puede usar const ya que mas abajo cuando reescribamos los json hay q volver a declarar las variables
@@ -50,7 +93,7 @@ const controller = {
             giftCard: giftCard
         })
     },
-    
+
     newproduct: (req, res) => {
         let productsFilePath = path.join(__dirname, '../data/SHOEMARKET.json');
         let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
@@ -101,7 +144,8 @@ const controller = {
 
         res.render("products/categoria", { categoria: categoria, title: "categoria" })
 
-    }
+    },
+
 
 }
 
