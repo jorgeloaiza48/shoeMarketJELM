@@ -152,20 +152,8 @@ const controller = {
 		let newList = products.filter(product => product.id !== parseInt(req.params.id))
 		fs.writeFileSync(productsFilePath, JSON.stringify(newList));
 		products = newList
-
-
 		res.redirect("/user/admin")
 	},
-
-    eliminarProducto: function (req, res) {
-		// let producToDelete = products.find(product => product.id === parseInt(req.params.id));
-		let newListProducts = products.filter(product => product.id !== parseInt(req.params.id));
-		fs.writeFileSync(productsFilePath,JSON.stringify(newListProducts,null,'\t'));
-		// products = newListProducts;
-		res.redirect('/')
-		
-	}
-
 
 }
 
