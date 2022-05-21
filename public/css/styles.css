@@ -39,9 +39,37 @@ footer {
     text-align: center;
 
 }
+.main-admin{
+    display: block;
+    margin-left: 20px;
+    margin-right: 10px;
+}
+.productos-admin{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.productos-admin img{
+    width: 170px;
+}
+.section-destacados-admin{
+ text-align: center;
+    padding-left: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+   margin-bottom: 20px;
+    width: 50%;
+    
+}
+.all-product-title-admin{
+    width: 100px;
 
-
-
+}
+.admin-but{
+    border-radius: 5px;
+    color: white;
+    background-color: #c44b52;
+}
 
 /* /////////////////////////////Media quiery para 360px   ///////////////////////////// */
 
@@ -1270,7 +1298,7 @@ footer {
     padding: 5px;
     display: flex;
     transition: all 0.5s;
-    width: 100%;
+    width: 90%;
 }
 
 
@@ -1279,7 +1307,7 @@ footer {
     margin-left: auto;
     margin-right: auto;
     padding: 15px;
-    width: 95%;
+    width: 75%;
 }
 
 .photos-small {

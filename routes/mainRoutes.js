@@ -37,7 +37,9 @@ router.use("/productos", productosRoutes)
 router.use("/user",userRoutes)
 
 router.get('/',mainController.index)
+
 router.get('/search',mainController.search)
+
 
 
 

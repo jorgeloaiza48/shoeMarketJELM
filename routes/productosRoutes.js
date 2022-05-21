@@ -1,8 +1,10 @@
-const express = require('express')
-const router = express.Router()
-const productsController = require('../controllers/ProductsController')
-const path = require("path")
+// ************ Require's ************
+const express = require('express');
+const router = express.Router();
+//***********path ****************/
+const path = require('path');
 
+//*********multer ********/
 
 const multer = require("multer")
 
@@ -15,22 +17,29 @@ const storage = multer.diskStorage({
     }
 }
 )
-
 const upload = multer({ storage })
+
+// ************ Controller Require ************
+const productsController = require('../controllers/ProductsController')
 
 
 
 router.get('/', productsController.Allproducts)
-router.post("/", upload.single("photo"), productsController.newproduct)
+
 
 
 router.get("/crear", productsController.crearProducto)
+router.post("/", upload.single("photo"), productsController.newproduct)
+
+
 
 router.get("/:categoria", productsController.categoria)
 
 
 router.get("/editar/:id", productsController.editarProducto)
 
-router.put("/editar/:id", upload.single("img"), productsController.update)
+router.put('/editar/:id',  upload.single("img") ,productsController.update)
+
+router.delete("/delete/:id", productsController.delete)
 
 module.exports = router
