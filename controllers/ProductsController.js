@@ -143,6 +143,19 @@ const controller = {
         })
         res.render("products/categoria", { categoria: categoria, title: "categoria" })
     },
+    delete: (req, res) => {
+		let productsFilePath = path.join(__dirname, '../data/SHOEMARKET.json');
+        let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+        let productJSON = fs.readFileSync(productsFilePath, 'utf-8')
+
+		//let newList = products.find(product => product.id === parseInt(req.params.id));// se puede hacer asi tmb
+		let newList = products.filter(product => product.id !== parseInt(req.params.id))
+		fs.writeFileSync(productsFilePath, JSON.stringify(newList));
+		products = newList
+
+
+		res.redirect("/user/admin")
+	},
 
     eliminarProducto: function (req, res) {
 		// let producToDelete = products.find(product => product.id === parseInt(req.params.id));

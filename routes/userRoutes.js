@@ -35,7 +35,7 @@ router.post('/registro',upload.single('imagenProducto'),validations, userControl
 
 router.get('/login',userController.login)
 
-
+router.get("/admin",userController.adminIndex)
 
 
 module.exports = router
