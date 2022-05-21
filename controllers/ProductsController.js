@@ -51,7 +51,7 @@ const controller = {
 
             }
         })
-        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, "\t"))
+        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, "\t")) //JS a JSON
 
         res.redirect("/productos")
 
@@ -141,10 +141,17 @@ const controller = {
         let categoria = products.filter(cate => {
             return cate.category == req.params.categoria
         })
-
         res.render("products/categoria", { categoria: categoria, title: "categoria" })
-
     },
+
+    eliminarProducto: function (req, res) {
+		// let producToDelete = products.find(product => product.id === parseInt(req.params.id));
+		let newListProducts = products.filter(product => product.id !== parseInt(req.params.id));
+		fs.writeFileSync(productsFilePath,JSON.stringify(newListProducts,null,'\t'));
+		// products = newListProducts;
+		res.redirect('/')
+		
+	}
 
 
 }
