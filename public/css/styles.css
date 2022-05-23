@@ -315,7 +315,7 @@ footer {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-        width: 80%;        
+        max-width: 80%;        
     }
     .produc a{
         text-decoration: none;
@@ -761,7 +761,7 @@ footer {
         /* border: solid 2px blue; */
     }
     .section3 video{
-      
+      height: 700px;
       width: 100%;
     }
 
