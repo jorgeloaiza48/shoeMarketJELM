@@ -39,6 +39,9 @@ footer {
     text-align: center;
 
 }
+
+/* /////////////////////////////admin view  ///////////////////////////// */
+
 .main-admin{
     display: block;
     margin-left: 20px;
@@ -70,6 +73,29 @@ footer {
     color: white;
     background-color: #c44b52;
 }
+/* /////////////////////////////Media quiery admin  ///////////////////////////// */
+@media(min-width:768px) {
+    .section-destacados-admin{
+        width: 30%;
+    }
+    .productos-admin img{
+        width: 200px;
+    }
+}
+@media(min-width:992px) {
+    
+    .productos-admin img{
+        width: 260px;
+    }
+}
+@media(min-width:1200px) {
+    
+    .productos-admin img{
+        width: 300px;
+    }
+}
+
+
 
 /* /////////////////////////////Media quiery para 360px   ///////////////////////////// */
 
@@ -192,10 +218,7 @@ footer {
     }
 
 
-    .main-header {
-        /* border-bottom: solid 1px gray; */
-
-    }
+    
 
     .menu {
         display: none;
