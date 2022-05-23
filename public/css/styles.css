@@ -193,7 +193,7 @@ footer {
 
 
     .main-header {
-        border-bottom: solid 1px gray;
+        /* border-bottom: solid 1px gray; */
 
     }
 
@@ -430,7 +430,7 @@ footer {
 
     .menu {
         /* border: solid 5px green; */
-        border-top: solid 2px gainsboro;
+        /* border-top: solid 2px gainsboro; */
         display: block;
         margin-bottom: 5px;
         margin-top: -7px;
@@ -688,14 +688,15 @@ footer {
        
     }
     .productos .produc{
-        /* border: solid 2px red; */
+        /* border: solid 5px red; */
         display: flex;
         flex-direction: column;
         justify-content: center;
-        max-width: 200px;       
+        max-width: 350px;       
         transition: all 500ms;      
     }
-    .produc img{
+  
+    .productos .produc img{
         width: 100%;
     }
     .produc p{
