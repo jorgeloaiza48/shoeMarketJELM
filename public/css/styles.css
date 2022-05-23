@@ -338,8 +338,7 @@ footer {
         width: 90%;
         /* border: solid 2px blue; */
     }
-    .section3 video{
-      margin: 0px;
+    .section3 video{   
       width: 100%;
     }
 
@@ -504,7 +503,7 @@ footer {
 
     .principal-form-logo {
         /* border: solid 3px greenyellow; */
-        height: 180px;
+        height: 120px;
         margin-bottom: 1%;
         left: 0px;
         position: absolute;
@@ -550,8 +549,10 @@ footer {
     .principal-carrito {
         align-self: center;
         /* border: solid 2px blue; */
+        display: inline-block;    
         height: 45px;
-        display: inline-block;           
+        margin-left: 120px;
+              
     }
 
     .principal-carrito li {
