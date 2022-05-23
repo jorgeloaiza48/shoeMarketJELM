@@ -108,5 +108,16 @@
 		"Domicilio2": "Calle encuéntrela",
 		"Contraseña": "123456",
 		"ConfirmarContraseña": "123456"
+	},
+	{
+		"id": 11,
+		"NombreYapellido": "felipe",
+		"Usuario": "casa",
+		"Email": "joeecasa@gmail.com",
+		"FechaNacimiento": "1993-04-28",
+		"Domicilio1": "1111111111111",
+		"Domicilio2": "1111111",
+		"Contraseña": "1234",
+		"ConfirmarContraseña": "1234"
 	}
 ]
