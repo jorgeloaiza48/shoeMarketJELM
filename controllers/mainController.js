@@ -11,7 +11,7 @@ let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));//JSON a J
 const controller = {
     index: (req, res) => {
         let Promociones = products.filter(function (product) {
-            return product.category == "Promociones";
+            return product.category == "Botas";
         })
         let Destacados = products.filter(function (product) {
             return product.category == "Destacados";

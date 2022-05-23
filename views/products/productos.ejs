@@ -7,15 +7,17 @@
 
             <main>
                 <h3 class="all-product-title" >Botas</h3>
-                    <div class="productos">                       
-                      
-                            <% botas.forEach(product=> { %> 
+                                           
+                <section class="productos">
+                          <% botas.forEach(product=> { %> 
                                 <div class="produc"> 
                                     <%- include("../components/singleProduct",{product:product}) %> 
                                 </div>
                             <% }) %>
+                </section>
+                            
                      
-                    </div>
+                   
                 <h3 class="all-product-title" >TEXANAS</h3>
                     <div class="productos">                       
                        

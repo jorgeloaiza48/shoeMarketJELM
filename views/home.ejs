@@ -1,13 +1,14 @@
 <%- include("./partials/head") %>
-<body>
-<%- include("./partials/header") %>
 
-<!-- *****************************INICIO MAIN****************************************** -->
-    
-   <main>
-       
-    
-        <!-- <section class="section1">
+    <body>
+        <%- include("./partials/header") %>
+
+            <!-- *****************************INICIO MAIN****************************************** -->
+
+            <main>
+
+
+                <!-- <section class="section1">
             <div class="main-section-video">
             
                 <video autoplay loop muted width="100%"> 
@@ -17,60 +18,89 @@
 
             </div>
         </section> -->
-        <h3 >DESTACADOS</h3>
-        <section class="productos">
-           <% Destacados.forEach(product=> { %> 
-                <!-- <div class="productos"> -->
-                    <a href="detalle/<%= product.id %>"><div class="produc"><img src="/img/products/<%= product.image %>"alt="bota"><p><%= product.name %></p><p>$<%= product.price %></p><p><a href="/detalle/<%= product.id %>" class="com-but-main"><button>COMPRAR</button></a></p><p><i class="fa-solid fa-star"></i></p></div></a>
-            <% }) %>
-                <!-- </div> -->
-        </section>
+                <h3>DESTACADOS</h3>
+                <section class="productos">
+                    <% Promociones.forEach(product=> { %>
+                        <!-- <div class="productos"> -->
+                        <a href="detalle/<%= product.id %>">
+                            <div class="produc"><img src="/img/products/<%= product.image %>" alt="bota">
+                                <p>
+                                    <%= product.name %>
+                                </p>
+                                <p>$<%= product.price %>
+                                </p>
+                                <p><a href="/detalle/<%= product.id %>"
+                                        class="com-but-main"><button>COMPRAR</button></a></p>
+                                <p><i class="fa-solid fa-star"></i></p>
+                            </div>
+                        </a>
+                        <% }) %>
+                        
+                            <!-- </div> -->
+                </section>
 
 
-        <section class="section3">
-            <video autoplay loop muted> 
-                <source  src="https://player.vimeo.com/progressive_redirect/playback/686324588/rendition/720p?loc=external&signature=d6b9e6986b56478f7ab61ca9479464a10d79f4f600bf950c804fe828697f1cce"   playsinline type="video/mp4"  />
-                No se puede reproducir el video
-            </video>               
-    
-        </section>
+                <section class="section3">
+                    <video autoplay loop muted>
+                        <source
+                            src="https://player.vimeo.com/progressive_redirect/playback/686324588/rendition/720p?loc=external&signature=d6b9e6986b56478f7ab61ca9479464a10d79f4f600bf950c804fe828697f1cce"
+                            playsinline type="video/mp4" />
+                        No se puede reproducir el video
+                    </video>
 
-        <h3>PROMOCIONES</h3>
-        <section class="productos">
-        <% Promociones.forEach(product=> { %> 
-            <!-- <div class="productos"> -->
-                <a href="detalle/<%= product.id %>"><div class="produc"><img src="/img/products/<%= product.image %>"alt="bota"><p><%= product.name %></p><p><%= product.price %></p><p><a href="/detalle/<%= product.id %>" class="com-but-main"><button>COMPRAR</button></a></p><p><i class="fa-solid fa-star"></i></p></div></a>
-        <% }) %>       
-            <!-- </div> -->
-          
-      </section>
+                </section>
+
+                <h3>PROMOCIONES</h3>
+                <section class="productos">
+                    <% Promociones.forEach(product=> { %>
+                        <!-- <div class="productos"> -->
+                        <a href="detalle/<%= product.id %>">
+                            <div class="produc"><img src="/img/products/<%= product.image %>" alt="bota">
+                                <p>
+                                    <%= product.name %>
+                                </p>
+                                <p>
+                                    <%= product.price %>
+                                </p>
+                                <p><a href="/detalle/<%= product.id %>"
+                                        class="com-but-main"><button>COMPRAR</button></a></p>
+                                <p><i class="fa-solid fa-star"></i></p>
+                            </div>
+                        </a>
+                        <% }) %>
+                            <!-- </div> -->
+
+                </section>
 
 
-      <section class="section3">
-        <video autoplay loop muted > 
-            <source  src="https://player.vimeo.com/progressive_redirect/playback/686324588/rendition/720p?loc=external&signature=d6b9e6986b56478f7ab61ca9479464a10d79f4f600bf950c804fe828697f1cce"   playsinline type="video/mp4"  />
-            No se puede reproducir el video
-        </video>        
-    </section>
+                <section class="section3">
+                    <video autoplay loop muted>
+                        <source
+                            src="https://player.vimeo.com/progressive_redirect/playback/686324588/rendition/720p?loc=external&signature=d6b9e6986b56478f7ab61ca9479464a10d79f4f600bf950c804fe828697f1cce"
+                            playsinline type="video/mp4" />
+                        No se puede reproducir el video
+                    </video>
+                </section>
 
-      
-      <div class="news-letter">
-          <h2>Suscribite a nuestro newsletter</h2>
-          <form>
-            <input type="email" placeholder="Ingresa tu e-mail">
-           <button><i class="fa-solid fa-arrow-right"></i></button>
-          </form>
 
-      </div>
+                <div class="news-letter">
+                    <h2>Suscribite a nuestro newsletter</h2>
+                    <form>
+                        <input type="email" placeholder="Ingresa tu e-mail">
+                        <button><i class="fa-solid fa-arrow-right"></i></button>
+                    </form>
 
-        <div class="help-button">
-          <button><i class="fa-solid fa-circle-question"></i> Ayuda</button>
-        </div>
+                </div>
 
-    </main>
+                <div class="help-button">
+                    <button><i class="fa-solid fa-circle-question"></i> Ayuda</button>
+                </div>
 
-<!-- ********************************FIN MAIN***************************************** -->
-<%- include("./partials/footer") %>
-    
-</body>
-</html>
+            </main>
+
+            <!-- ********************************FIN MAIN***************************************** -->
+            <%- include("./partials/footer") %>
+
+    </body>
+
+    </html>

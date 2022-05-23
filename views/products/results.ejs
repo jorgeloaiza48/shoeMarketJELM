@@ -6,35 +6,33 @@
             <div class="banner"></div>
             <!-- /Banner -->
 
-            <% busqueda.forEach(product=> { %>
+           
 
-                <div class="container products-wrapper">
-                    <div class="row">
-                        <div class="col-12">
-                            <h2 class="products-title">Resultados de la búsqueda: <%= product.name %>
-                            </h2>
-                        </div>
-                        <div class="col-12 col-sm-6 col-lg-3">
-                            <%- include("../components/singleProduct",{product:product}) %>
-                        </div>
+            <section class="productos">
+                <% busqueda.forEach(product=> { %>
+                    <div class="produc">
+                        <%- include("../components/singleProduct",{product:product}) %>
                     </div>
-                </div>
-         <% }) %>
-
-                        <% if (!busqueda[0]) { %>
-                            <div class="col-12">
-                                <h2 class="products-title" style="color: rgb(211, 32, 0);">No hay productos que
-                                    coincidan con esa
-                                    búsqueda</h2>
-                            </div>
-                         <% } %>
+                    <% }) %>
+            </section>
 
 
+          
+
+                <% if (!busqueda[0]) { %>
+                    <div class="col-12">
+                        <h2 class="products-title" style="color: rgb(211, 32, 0);">No hay productos que
+                            coincidan con esa
+                            búsqueda</h2>
+                    </div>
+                    <% } %>
 
 
-                               
 
-     <%- include("../partials/footer") %>
+
+
+
+                        <%- include("../partials/footer") %>
     </body>
 
     </html>
