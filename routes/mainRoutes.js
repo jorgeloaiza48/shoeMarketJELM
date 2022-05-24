@@ -1,6 +1,5 @@
 const express = require('express')
 const router = express.Router()
-//const mainController = require('../controllers/mainController')
 const mainController = require('../controllers/mainController')
 const path = require("path")
 const {body} = require('express-validator')
