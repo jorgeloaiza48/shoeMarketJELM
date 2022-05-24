@@ -34,8 +34,10 @@ const validations = [
 
 //** router de productos **//
 router.use("/productos", productosRoutes)
+
 //* router de user**//
 router.use("/user",userRoutes)
+
 //* router de admin**//
 router.use("/admin",adminRoutes)
 
