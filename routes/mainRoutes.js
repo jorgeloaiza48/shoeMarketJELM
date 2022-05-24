@@ -6,6 +6,7 @@ const {body} = require('express-validator')
 const multer = require("multer")
 const productosRoutes = require("./productosRoutes")
 const userRoutes = require("./userRoutes")
+const adminRoutes = require("./adminRoutes")
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
         cb(null, path.join(__dirname, "../public/img/products"))
@@ -32,18 +33,18 @@ const validations = [
 
 //** router de productos **//
 router.use("/productos", productosRoutes)
-
 //* router de user**//
 router.use("/user",userRoutes)
+//* router de admin**//
+router.use("/admin",adminRoutes)
+
+
 
 router.get('/',mainController.index)
 
 router.get('/search',mainController.search)
 
 
-
-
-// router.get('/descripcion/:id',mainController.descripcion)
 
 
 router.get('/detalle/:id', mainController.detalle)

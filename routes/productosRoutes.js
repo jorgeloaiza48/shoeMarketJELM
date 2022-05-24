@@ -25,11 +25,9 @@ const productsController = require('../controllers/ProductsController')
 
 router.get('/', productsController.Allproducts)
 
-router.get("/crear", productsController.crearProducto)
-router.post("/", upload.single("photo"), productsController.newproduct)
+
 router.get("/:categoria", productsController.categoria)
-router.get("/editar/:id", productsController.editarProducto)
-router.put('/editar/:id',  upload.single("img") ,productsController.update)
-router.delete("/delete/:id", productsController.delete)
+
+
 
 module.exports = router

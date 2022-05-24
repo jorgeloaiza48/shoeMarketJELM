@@ -130,5 +130,38 @@
 		"Domicilio2": "1111111",
 		"Contraseña": "1234",
 		"ConfirmarContraseña": "1234"
+	},
+	{
+		"id": 13,
+		"NombreYapellido": "12312312312",
+		"Usuario": "123111111",
+		"Email": "joeecasa@gmail.com",
+		"FechaNacimiento": "1993-04-28",
+		"Domicilio1": "11111",
+		"Domicilio2": "1111111111",
+		"Contraseña": "111111111",
+		"ConfirmarContraseña": "1111111111"
+	},
+	{
+		"id": 14,
+		"NombreYapellido": "12312312312",
+		"Usuario": "123111111",
+		"Email": "joeecasa@gmail.com",
+		"FechaNacimiento": "1993-04-28",
+		"Domicilio1": "11111",
+		"Domicilio2": "1111111111",
+		"Contraseña": "1111111111",
+		"ConfirmarContraseña": "11111111111"
+	},
+	{
+		"id": 15,
+		"NombreYapellido": "felipe",
+		"Usuario": "felipe",
+		"Email": "joe_cec@hotmail.com",
+		"FechaNacimiento": "1993-04-28",
+		"Domicilio1": "111111111",
+		"Domicilio2": "111111111",
+		"Contraseña": "joelcasa",
+		"ConfirmarContraseña": "joelcasa"
 	}
 ]
