@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-const mainController = require('../controllers/MainController')
+const mainController = require('../controllers/mainController')
 const path = require("path")
 const {body} = require('express-validator')
 const multer = require("multer")

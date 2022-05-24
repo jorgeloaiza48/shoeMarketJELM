@@ -20,29 +20,3 @@ app.use(express.static(publicPath))
 const mainRoutes = require('./routes/mainRoutes')
 app.use('/',mainRoutes)
 
-
- // Pasar poder pisar el method="POST" en el formulario por PUT y DELETE
-
-// app.use(express.static("public"));
-// app.use("/static",express.static(__dirname,))
-
-// app.get("/",(req, res) =>{
-//     res.sendFile(path.join(__dirname,"/views/home.html"))
-// })
-
-
-// app.get('/carrito',(req, res) =>{
-//     res.sendFile(path.resolve(__dirname,'./views/carrito.html'))
-// })
-
-// app.get("/login",(req, res) =>{
-//     res.sendFile(path.join(__dirname,"/views/logIn.html"))
-// })
-
-// app.get("/registro",(req, res) =>{
-//     res.sendFile(path.join(__dirname,"/views/Registro.html"))
-// })
-
-// app.get('/descripciondelproducto',(req, res) =>{
-//     res.sendFile(path.resolve(__dirname,'./views/descripcion.html'))
-// })
