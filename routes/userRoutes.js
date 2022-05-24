@@ -4,7 +4,7 @@ const path = require("path")
 const {body} = require('express-validator')
 //const userController = require('../controllers/userController')
 //const userController = require('../controllers/userController')
-const userController = require('../controllers/userController')
+const userController = require('../controllers/UserController')
 const multer = require("multer")
 
 const storage = multer.diskStorage({
