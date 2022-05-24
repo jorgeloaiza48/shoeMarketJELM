@@ -33,9 +33,11 @@ const controller = {
         let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
         let busqueda = []
-        let formu = req.query.search
+       // let formu = req.query.search
+        let formu = req.query.search.toLowerCase()
+
         products.forEach(product => {
-            if (product.name.includes(formu) || product.category.includes(formu)) {
+            if (product.name.toLowerCase().includes(formu) || product.category.toLowerCase().includes(formu)) {
                 busqueda.push(product)
             }
         });

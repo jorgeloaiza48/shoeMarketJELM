@@ -119,5 +119,16 @@
 		"Domicilio2": "1111111",
 		"Contraseña": "1234",
 		"ConfirmarContraseña": "1234"
+	},
+	{
+		"id": 12,
+		"NombreYapellido": "dani",
+		"Usuario": "daie",
+		"Email": "danie@gmail.com",
+		"FechaNacimiento": "1993-04-28",
+		"Domicilio1": "11111111",
+		"Domicilio2": "1111111",
+		"Contraseña": "1234",
+		"ConfirmarContraseña": "1234"
 	}
 ]
