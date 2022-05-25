@@ -10,7 +10,7 @@ app.use(express.urlencoded({extended:false}))
 app.set('view engine', 'ejs')
 
 //Definiendo pueto y levantando servidor
-let puerto = 4001
+let puerto = 4000
 app.listen(process.env.PORT || puerto, ()=>console.log("Servidor corriendo en el puerto ---> " + puerto))
 
 //configuración para montar en Heroku

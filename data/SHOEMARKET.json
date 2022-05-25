@@ -837,25 +837,18 @@
 	},
 	{
 		"id": 32,
-		"name": "Alpargatas",
-		"price": 25000,
+		"name": "22222222",
+		"price": 11111,
 		"category": "Borcegos",
-		"color": [
-			"Negro",
-			"Rojo"
-		],
+		"color": "Crema",
 		"description": {
-			"Material": "cabuya",
-			"Alturabase": "3 cm",
-			"Alturataco": "1 cm",
-			"Alturacana": "1 cm",
-			"Colores": "azul"
+			"Material": "1",
+			"Alturabase": "1",
+			"Alturataco": "",
+			"Alturacana": "",
+			"Colores": ""
 		},
-		"image": "photo-1653488854030.jpg",
-		"size": [
-			"35",
-			"36",
-			"37"
-		]
+		"image": "img-1653512108526.jpg",
+		"size": "40"
 	}
 ]
