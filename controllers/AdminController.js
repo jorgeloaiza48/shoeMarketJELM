@@ -110,10 +110,7 @@ const controller = {
 
         let producto = products.find(product => product.id === parseInt(req.params.id))
 
-        res.render('admin/editarProducto', {
-            title: "Editar producto",
-            producto: producto
-        })
+        res.render('admin/editarProducto', {title: "Editar producto",producto: producto})
     },
 
     update: (req, res) => {

@@ -25,7 +25,6 @@ router.get("/productos/crear",adminController.crearProducto)
 router.post("/productos/crear", upload.single("photo"), adminController.newproduct)
 
 router.get("/productos/editar/:id", adminController.editarProducto)
-
 router.put('/productos/editar/:id',  upload.single("img") ,adminController.update)
 
 router.delete("/productos/delete/:id", adminController.delete)

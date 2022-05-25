@@ -58,10 +58,15 @@ const controller = {
 
     login: (req, res) => { res.render('users/login', { title: "Login" }) },
 
-    processLogin :(req,res) =>{
+    processLogin :(req,res) =>{ },
 
-    }
-    
+    listarUsuarios :(req,res) =>{
+        let usersFilePath = path.join(__dirname, '../data/users.json');
+        let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));//JSON a JS
+        let usersJSON = fs.readFileSync(productsFilePath, 'utf-8')
+        // let usuarios = users.find(usuario => usuario.id === parseInt(req.params.id))
+        res.render("admin/listaUsuarios",{title:"Edición de usuario",users:users})
+    }       
     
 }
 

@@ -32,3 +32,6 @@ En reunión através de videollamada definimos qué elementos mostrar en el inde
 
 Reunión 19-5-2022
 En conversación telefónica, discutimos algunos aspectos a mejorar en el index del proyecto tales como el tamaño del video, el tamaño de los div´s que contienen las imágenes y el color del texto de cada uno de los productos.
+
+Reunión 24-5-2022
+Vía videollamada analizamos las observaciones realizadas el lunes 23 de mayo después de hacer la presentación del trabajo realizado en el proyecto. Distribuimos la realización de estas observaciones para poner al día el sitio.

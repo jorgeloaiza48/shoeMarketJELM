@@ -1,0 +1,39 @@
+<%- include("../partials/head") %>
+
+    <body>
+        <%- include("../partials/header") %>
+
+            <!-- *****************************INICIO MAIN****************************************** -->
+
+            <main class="main-admin">
+                <h3 class="all-product-title" >Usuarios Registrados</h3>
+                    <div class="productos-admin">                       
+                      
+                            <% users.forEach(usuario=> { %> 
+                                <!-- <div class="produc">  -->
+                                    <section class="section-destacados-admin">
+                                        
+                                            <!-- <img src="../img/products/<%= product.image %>" alt="bota"> -->
+                                            <p> <%= usuario.NombreYapellido %></p>
+                                            <p>$<%= usuario.Usuario %></p>
+                                            <p><a href="/user/editar/<%= usuario.id %>" class="com-but-main"><button class="admin-but">EDITAR</button></a></p>
+                                            <form action="/admin/productos/delete/<%= product.id %>?_method=DELETE" method="POST" >
+                                                <button type="submt" name="delete" id="delete" class="admin-but">BORRAR</button>
+                                            
+                        
+                                            </form>
+                                      
+                                    </section> 
+                                <!-- </div> -->
+                            <% }) %>
+                     
+                    </div>
+                
+
+            </main>
+
+            <!-- ********************************FIN MAIN***************************************** -->
+            <%- include("../partials/footer") %>
+    </body>
+
+    </html>

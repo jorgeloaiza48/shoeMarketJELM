@@ -33,8 +33,13 @@ const validations = [
 router.get('/registro', userController.register)
 router.post('/registro',upload.single('imagenProducto'),validations, userController.createUser ); 
 
+// **Logueo de usuarios**
 router.get('/login',userController.login)
 router.post("/login",userController.processLogin)
+
+// **Edición de usuarios**
+router.get('/editar',userController.listarUsuarios)
+router.post("/editar/:id",userController.editar)
 
 
 module.exports = router

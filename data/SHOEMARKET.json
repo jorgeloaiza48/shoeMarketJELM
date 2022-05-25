@@ -834,5 +834,28 @@
 			"36",
 			"37"
 		]
+	},
+	{
+		"id": 32,
+		"name": "Alpargatas",
+		"price": 25000,
+		"category": "Borcegos",
+		"color": [
+			"Negro",
+			"Rojo"
+		],
+		"description": {
+			"Material": "cabuya",
+			"Alturabase": "3 cm",
+			"Alturataco": "1 cm",
+			"Alturacana": "1 cm",
+			"Colores": "azul"
+		},
+		"image": "photo-1653488854030.jpg",
+		"size": [
+			"35",
+			"36",
+			"37"
+		]
 	}
 ]
