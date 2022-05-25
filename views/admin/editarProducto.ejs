@@ -6,38 +6,38 @@
                 
             <form action="/admin/productos/editar/<%=producto.id%>?_method=PUT" method="post" class="form-create" enctype="multipart/form-data">
                     <div>
-                        <h1 class="crear-title">EDITAR <%= producto.name %>
+                        <h1 class="crear-title">EDITAR: <%= producto.name %>
                         </h1>
                         <img class="img-edit-product" src="../../../img/products/<%= producto.image %>" alt="<%= producto.image %>">
                     </div>
                     <div class="form-create__nombre">
                         <label for="nombre">Nombre del producto *</label>
-                        <input type="text" name="name" id="nombre" placeholder="Nombre del nuevo producto" required
+                        <input type="text" name="name" id="nombre" placeholder="Nombre del nuevo producto" required value="<%= producto.name %>"
                             minlength="4">
                     </div>
                     <div class="form-create__descr">
                         <h3>Descripcion del producto*</h3>
                         <div class="div-desc">
                             <label for="material"> Material</label>
-                            <input type="text" name="material">
+                            <input type="text" name="material" value="<%= producto.description.Material %>">
                         </div>
                         <div class="div-desc">
                             <label for="base"> Altura de la base</label>
-                            <input type="text" name="base">
+                            <input type="text" name="base" value="<%= producto.description.Alturabase %>">
                         </div>
                         <div class="div-desc">
                             <label for="taco">Altura del taco</label>
-                            <input type="text" name="taco">
+                            <input type="text" name="taco" value="<%= producto.description.Alturataco %>">
                         </div>
 
                         <div class="div-desc">
                             <label for="cana">Altura de la caña</label>
-                            <input type="text" name="cana">
+                            <input type="text" name="cana" value="<%= producto.description.Alturacana %>">
                         </div>
 
                         <div class="div-desc">
                             <label for="colores">Colores</label>
-                            <input type="text" name="colores">
+                            <input type="text" name="colores" value="<%= producto.description.Colores %>">
                         </div>
 
 
@@ -53,7 +53,7 @@
                     </div>
                     <div class="form-create__price">
                         <label for="price">Precio *</label><br>
-                        <input type="number" name="price" id="price" placeholder=" Introduzca el precio" required
+                        <input type="number" name="price" id="price" placeholder=" Introduzca el precio" required value="<%= producto.price %>"
                             minlength="4">
                     </div>
                     <div class="form-create__color">
@@ -90,12 +90,21 @@
                         </div>
                         <div class="form-create__cat__div-input">
                             <select name="category" id="categoria" required>
-                                <option value="Botas">Botas</option>
+                                <%  let categories = ['Borcegos', 'Texanas', 'Guillerminas', 'Bucaneras', 'Gift card', 'Botas'] %>
+                                <%  let oneCategory = categories.find(categoria => categoria === producto.category) %>
+                                <option value=""><%= oneCategory %></option>
+                                <%  let newCategory = categories.filter(categoria => categoria !== producto.category)  %>
+                                <!-- <option value="Botas">Botas</option>
                                 <option value="Borcegos">Borcegos</option>
                                 <option value="Texanas">Texanas</option>
                                 <option value="Guillerminas">Guillerminas</option>
                                 <option value="Bucaneras">Bucaneras</option>
-                                <option value="Gift Card">Gift Card</option>
+                                <option value="Gift Card">Gift Card</option> -->
+                                
+                            <% for (const oneCategory of newCategory) { %>
+                                <option value="<%= oneCategory %>" > <%= oneCategory %> </option>
+                            <% } %>  
+
                             </select>
 
 
