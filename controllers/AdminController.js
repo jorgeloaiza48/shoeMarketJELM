@@ -6,8 +6,9 @@ const { validationResult } = require('express-validator')
 
 let productsFilePath = path.join(__dirname, '../data/SHOEMARKET.json');
 let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));//JSON a JS
-
-
+let categories = ['Borcegos', 'Texanas', 'Guillerminas', 'Bucaneras', 'Gift card', 'Botas']
+let sizes = ["35","36", "37", "38", "39", "40"]
+let colores = ["Negro","Crema","Rojo","Blanco"]
 
 
 
@@ -109,8 +110,9 @@ const controller = {
         let productJSON = fs.readFileSync(productsFilePath, 'utf-8')
 
         let producto = products.find(product => product.id === parseInt(req.params.id))
+        
 
-        res.render('admin/editarProducto', {title: "Editar producto",producto: producto})
+        res.render('admin/editarProducto', {title: "Editar producto",producto: producto, categories: categories,sizes:sizes,colores:colores})
     },
 
     update: (req, res) => {
@@ -121,10 +123,10 @@ const controller = {
         products.find(product => {
             if (product.id === parseInt(req.params.id)) {
 
-                    product.name = req.body.name,
-                    product.price = Number(req.body.price),
-                    product.category = req.body.category,
-                    product.color = req.body.color,
+                    product.name = req.body.name
+                    product.price = Number(req.body.price)
+                    product.category = req.body.category
+                    product.color = req.body.color
                     product.description = {
                         Material: req.body.material,
                         Alturabase: req.body.base,
@@ -132,8 +134,9 @@ const controller = {
                         Alturacana: req.body.cana,
                         Colores: req.body.colores
                     },
-                    product.image = req.file.filename,
                     product.size = req.body.talle
+
+                    if(req.file && product.image !== req.file.filename) {product.image === req.file.filename}
 
             }
         })

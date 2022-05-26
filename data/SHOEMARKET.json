@@ -6,8 +6,7 @@
 		"category": "Borcegos",
 		"color": [
 			"Negro",
-			"Crema",
-			"Blanco"
+			"Crema"
 		],
 		"description": {
 			"Material": "Cuero Vacuno",
@@ -22,8 +21,7 @@
 			"36",
 			"37",
 			"38",
-			"39",
-			"40"
+			"39"
 		]
 	},
 	{
@@ -112,7 +110,6 @@
 		"category": "Guillerminas",
 		"color": [
 			"Negro",
-			"Crema",
 			"Rojo"
 		],
 		"description": {
@@ -138,8 +135,6 @@
 		"price": 13990,
 		"category": "Guillerminas",
 		"color": [
-			"Negro",
-			"Crema",
 			"Rojo"
 		],
 		"description": {
@@ -189,11 +184,6 @@
 		"name": "SASHA NEGRO",
 		"price": 12490,
 		"category": "Botas",
-		"color": [
-			"Negro",
-			"Blanco",
-			"Rosa"
-		],
 		"description": {
 			"Material": "PU Sintetico",
 			"Alturabase": "0 cm",
@@ -201,7 +191,7 @@
 			"Alturacana": "40 cm",
 			"Colores": "Negro Crema Rosa"
 		},
-		"image": "sashaNegro.jpeg",
+		"image": "sashaNegra.jpeg",
 		"size": [
 			"35",
 			"36",
@@ -509,7 +499,7 @@
 			"Alturacana": "13cm",
 			"Colores": "Negro Crema Blanco"
 		},
-		"image": "laraBLanco.jpeg",
+		"image": "laraBLanca.jpeg",
 		"size": [
 			"35",
 			"36",
@@ -815,6 +805,22 @@
 			"39",
 			"40"
 		]
+	},
+	{
+		"id": 31,
+		"name": "111111111",
+		"price": 123124,
+		"category": "Bucaneras",
+		"description": {
+			"Material": "1",
+			"Alturabase": "1",
+			"Alturataco": "1",
+			"Alturacana": "1",
+			"Colores": "1"
+		},
+		"image": "img-1653526269267.jpg",
+		"size": [
+			"36"
+		]
 	}
-	
 ]
