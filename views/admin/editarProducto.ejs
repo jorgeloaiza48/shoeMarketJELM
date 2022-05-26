@@ -44,7 +44,7 @@
                     </div>
 
                     <div class="form-create__img">
-                        <label for="photo">Seleccione las foto
+                        <label for="photo">Seleccione la foto
                             <div class="file-select"><input type="file" name="img" accept=".jpg,.jpeg"></div>
                         </label>
 
@@ -59,29 +59,13 @@
                     <div class="form-create__color">
                         <div class="form-create__size__title__div">
                             <label class="form-create__size__title" for="talles">Seleccione los Colores</label>
-                        </div>
-                        
-
-                        <label class="form-create__color__check" for="negro">
-                            <input type="checkbox" name="color" id="negro" value="Negro">
-                            Negro
-                        </label>
-                        <label class="form-create__color__check" for="Rojo">
-                            <input type="checkbox" name="color" id="Rojo" value="Rojo">
-                            Rojo
-                        </label>
-                        <label class="form-create__color__check" for="Crema">
-                            <input type="checkbox" name="color" id="Crema" value="Crema">
-                            Crema
-                        </label>
-                        <label class="form-create__color__check" for="Blanco">
-                            <input type="checkbox" name="color" id="Blanco" value="Blanco">
-                            Blanco
-                        </label>
-                        <label class="form-create__color__check" for="Rosa">
-                            <input type="checkbox" name="color" id="Rosa" value="Rosa">
-                            Rosa
-                        </label>
+                        </div>                                           
+                        <% colores.forEach(color => { %>                            
+                            <label class="form-create__size__check" for="<%= color %> ">
+                                <input <%= producto.color  && producto.color.includes(color) ? "checked" : "" %> type="checkbox" name="color" id="<%= color %>" value="<%= color %>">
+                                  <%= color %>
+                            </label> 
+                        <% }) %>
 
                     </div>
 
@@ -98,12 +82,9 @@
                     
                                 <% categories.forEach(element => { %>
                                  
-                                    <option <%= producto.category == element ? "selected" : "" %>  value="<%= element %>" > <%= element %> </option>
-
-                                    <% }) %>
-
-                          
-
+                              <option <%= producto.category == element ? "selected" : "" %>  value="<%= element %>" > <%= element %> </option>
+                            <% }) %>
+                           
                             </select>
 
 

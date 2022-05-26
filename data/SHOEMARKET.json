@@ -6,8 +6,7 @@
 		"category": "Borcegos",
 		"color": [
 			"Negro",
-			"Crema",
-			"Blanco"
+			"Crema"
 		],
 		"description": {
 			"Material": "Cuero Vacuno",
@@ -22,8 +21,7 @@
 			"36",
 			"37",
 			"38",
-			"39",
-			"40"
+			"39"
 		]
 	},
 	{
@@ -112,7 +110,6 @@
 		"category": "Guillerminas",
 		"color": [
 			"Negro",
-			"Crema",
 			"Rojo"
 		],
 		"description": {
@@ -138,8 +135,6 @@
 		"price": 13990,
 		"category": "Guillerminas",
 		"color": [
-			"Negro",
-			"Crema",
 			"Rojo"
 		],
 		"description": {
@@ -191,6 +186,7 @@
 		"category": "Botas",
 		"color": [
 			"Negro",
+			"Rojo",
 			"Blanco",
 			"Rosa"
 		],
@@ -201,7 +197,7 @@
 			"Alturacana": "40 cm",
 			"Colores": "Negro Crema Rosa"
 		},
-		"image": "sashaNegra.jpeg",
+		"image": "img-1653584586473.jpg",
 		"size": [
 			"35",
 			"36",
@@ -831,7 +827,28 @@
 		"image": "img-1653526269267.jpg",
 		"size": [
 			"36"
-			
+		]
+	},
+	{
+		"id": 32,
+		"name": "Alpargatas",
+		"price": 50000,
+		"category": "Botas",
+		"color": [
+			"Negro",
+			"Rosa"
+		],
+		"description": {
+			"Material": "cuero",
+			"Alturabase": "2 cm",
+			"Alturataco": "2 cm",
+			"Alturacana": "3 cm",
+			"Colores": "azul"
+		},
+		"image": "img-1653584466958.jpeg",
+		"size": [
+			"38",
+			"39"
 		]
 	}
 ]
