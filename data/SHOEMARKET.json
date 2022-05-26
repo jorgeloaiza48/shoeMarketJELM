@@ -815,47 +815,6 @@
 			"39",
 			"40"
 		]
-	},
-	{
-		"id": 31,
-		"name": "Lara JELM",
-		"price": 20000,
-		"category": "Borcegos",
-		"color": "Rojo",
-		"description": {
-			"Material": "cuero",
-			"Alturabase": "2cm",
-			"Alturataco": "3cm",
-			"Alturacana": "2cm",
-			"Colores": "Azul,amarillo"
-		},
-		"image": "photo-1653427198729.jpeg",
-		"size": [
-			"36",
-			"37"
-		]
-	},
-	{
-		"id": 32,
-		"name": "Alpargatas",
-		"price": 25000,
-		"category": "Borcegos",
-		"color": [
-			"Negro",
-			"Rojo"
-		],
-		"description": {
-			"Material": "cabuya",
-			"Alturabase": "3 cm",
-			"Alturataco": "1 cm",
-			"Alturacana": "1 cm",
-			"Colores": "azul"
-		},
-		"image": "photo-1653488854030.jpg",
-		"size": [
-			"35",
-			"36",
-			"37"
-		]
 	}
+	
 ]
