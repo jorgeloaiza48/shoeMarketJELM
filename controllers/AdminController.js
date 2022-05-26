@@ -8,7 +8,7 @@ let productsFilePath = path.join(__dirname, '../data/SHOEMARKET.json');
 let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));//JSON a JS
 let categories = ['Borcegos', 'Texanas', 'Guillerminas', 'Bucaneras', 'Gift card', 'Botas']
 let sizes = ["35","36", "37", "38", "39", "40"]
-let colores = ["Negro","Crema","Rojo","Blanco"]
+let colores = ["Negro","Crema","Rojo","Blanco","Rosa"]
 
 
 
@@ -133,7 +133,8 @@ const controller = {
                         Alturataco: req.body.taco,
                         Alturacana: req.body.cana,
                         Colores: req.body.colores
-                    },
+                    }
+                    // product.image = req.file.filename,
                     product.size = req.body.talle
 
                     if(req.file && product.image !== req.file.filename) {product.image === req.file.filename}
