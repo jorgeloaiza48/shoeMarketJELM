@@ -92,7 +92,8 @@
                             <select name="category" id="categoria" required>
                                 <%  let categories = ['Borcegos', 'Texanas', 'Guillerminas', 'Bucaneras', 'Gift card', 'Botas'] %>
                                 <%  let oneCategory = categories.find(categoria => categoria === producto.category) %>
-                                <option value=""><%= oneCategory %></option>
+                               
+                                <!-- <option value=""><%= oneCategory %></option> -->
                                 <%  let newCategory = categories.filter(categoria => categoria !== producto.category)  %>
                                 <!-- <option value="Botas">Botas</option>
                                 <option value="Borcegos">Borcegos</option>
@@ -102,7 +103,7 @@
                                 <option value="Gift Card">Gift Card</option> -->
                                 
                             <% for (const oneCategory of newCategory) { %>
-                                <option value="<%= oneCategory %>" > <%= oneCategory %> </option>
+                                <option <% producto.category === oneCategory ? "selected": "" %> value="<%= oneCategory %>" > <%= oneCategory %> </option>
                             <% } %>  
 
                             </select>
