@@ -41,6 +41,37 @@ footer {
 }
 
 /*//////////////////////////header 2/********************/
+.form-header {
+    display: flex;
+    justify-content: center;
+}
+
+.lista__productos {
+
+    align-items: center;
+    background: transparent;
+    border-radius: 10px;
+    cursor: pointer;
+    display: none;
+    font-size: 13px;
+    left: -10px;
+    margin-top: 12px;
+    position: absolute;
+    padding-left: 0px;
+    top: 36px;
+    transition: all 0.5s;
+    z-index: 1;
+}
+
+.lista__productos_li {
+    background-color: rgb(255, 255, 255);
+}
+
+
+
+.lista__categorias:hover ul.lista__productos {
+    display: block;
+}
 
 
 .texto2 p {
@@ -53,12 +84,7 @@ footer {
     height: 30px;
 }
 
-.principal-form-logo2 {
-    display: block;
-    margin-right: auto;
-    margin-left: auto;
 
-}
 
 .principal-form-boton2 {
     display: block;
@@ -69,7 +95,7 @@ footer {
 
 }
 
-.principal-form-logo2 img {
+.principal-logo2 img {
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -101,59 +127,66 @@ footer {
 }
 
 @media(min-width:768px) {
-    .principal-form-logo2 {
-        margin-left: 10px;
-        margin-right: 10px;
-        width: 25%;
+    .principal-logo2 {
+        position: relative;
+        left: 22px;
+        bottom: 6px;
+        margin-left: -40px;
+        width: 20%;
     }
 
     .logo-form2 {
         display: flex;
         flex-wrap: wrap;
-        margin-bottom: -15px;
+        position: relative;
+        justify-content: space-evenly;
     }
 
     .principal-form-boton2 {
+        text-align: center;
         width: 80%;
-       
+
     }
+
     .principal-form-boton2 form {
         width: 100%;
-       
+
     }
 
     .cont-search-nav {
+        align-items: center;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        width: 60%;
-       
+        margin-top: 15px;
+        width: 80%;
     }
 
     .cuentaCarrito2 {
         list-style: none;
         display: flex;
         flex-wrap: wrap;
-        justify-content: center
+
     }
-   
+
 
     .cuentaCarrito2 li {
         display: flex;
         align-items: center;
-       
         cursor: pointer;
         border-radius: 10px;
         box-shadow: 2px 2px 3px rgb(0 0 0 / 50%);
         font-size: 13px;
+        margin-top: 5px;
         margin-left: 5px;
         padding: 10px 10px 10px 10px;
         transition: all 0.5s;
+        position: relative;
     }
+
     .menu2 ul li a {
         text-decoration: none;
         color: black;
-       
         cursor: pointer;
         border-radius: 10px;
         box-shadow: 2px 2px 3px rgb(0 0 0 / 50%);
@@ -163,10 +196,11 @@ footer {
         transition: all 0.5s;
 
     }
-    .menu2 ul{
-       margin-right: 50px;
+
+    .menu2 ul {
+        margin-right: 50px;
     }
-   
+
 
     .cuentaCarrito2 li a {
         text-decoration: none;
@@ -176,14 +210,14 @@ footer {
 
 
     }
- 
+
 
     .icono-carrito2 {
         display: none;
     }
 
     .principal-carrito2 {
-
+        margin-left: 19px;
         display: flex;
         flex-wrap: wrap;
 
@@ -197,7 +231,7 @@ footer {
 
     .menu2 ul {
         display: flex;
-        
+
     }
 
     .menu2 li {
@@ -205,19 +239,54 @@ footer {
 
     }
 
-    
+
 }
+
 @media(min-width:992px) {
 
-.menu2 ul li a{
-    margin-left: 30px;
+    .cuentaCarrito2 li {
+        margin-left: 30px;
+    }
+
+    .cont-search-nav {
+        width: 80%;
+        max-width: 900px;
+
+    }
+
+    .principal-logo2 {
+        max-width: 200px;
+    }
+
+    .lista__productos {
+        left: -34px;
+        position: absolute;
+        top: 30px;
+        z-index: 1;
+    }
+
+
+
 }
 
+@media(min-width:1200px) {
 
+    .cont-search-nav {
+        margin-left: -500px;
+    }
+
+    .principal-logo2 {
+        position: relative;
+        left: -100px;
+        bottom: 6px;
+        margin-left: -40px;
+        width: 20%;
+    }
 
 
 
 }
+
 
 
 
@@ -298,301 +367,303 @@ footer {
 /* /////////////////////////////Media quiery para 360px   ///////////////////////////// */
 
 /*@media(min-width:360px) {/*/
-    .credit-cards {
-        background-color: whitesmoke;
+.credit-cards {
+    background-color: whitesmoke;
+}
+
+.credit-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 2px;
+}
+
+.credit-cards img {
+    /* border: solid 2px black; */
+    height: 35px;
+}
+
+.credit-cards .uno {
+    display: none;
+}
+
+.fa-star {
+    transition: all 4s;
+}
+
+.footer-mobile .institucional {
+    display: none;
+}
+
+.footer-mobile .footer-mobile-list {
+    font-size: smaller;
+    justify-content: space-between;
+    line-height: 35%;
+    list-style: none;
+    margin: 0;
+    text-align: center;
+}
+
+.footer-mobile-list {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.footer-mobile-list li {
+    padding: 4px;
+}
+
+.footer-mobile {
+    background-color: whitesmoke;
+    margin: 0;
+}
+
+
+header {
+    background-color: white;
+}
+
+
+.help-button {
+    /* border: solid 3px red; */
+    bottom: 5px;
+    max-width: 28%;
+    position: fixed;
+    right: 3px;
+}
+
+.help-button button {
+    background-color: black;
+    border-radius: 10%;
+    color: white;
+    cursor: pointer;
+    font-size: small;
+    height: 38px;
+    width: 100%;
+}
+
+/* https://stackoverflow.com/questions/16771225/css3-rotate-animation */
+/* Para que el signo de interrogación gire 360 grados */
+.help-button button .fa-circle-question {
+    animation: spin 2s linear signopregunta;
+    -moz-animation: signopregunta 2s linear infinite;
+    -webkit-animation: signopregunta 2s linear infinite;
+
+}
+
+/* https://stackoverflow.com/questions/16771225/css3-rotate-animation */
+/* Para que el signo de interrogación gire 360 grados */
+@-moz-keyframes signopregunta {
+    100% {
+        -moz-transform: rotateY(360deg);
     }
+}
 
-    .credit-cards {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        padding: 2px;
+@-webkit-keyframes signopregunta {
+    100% {
+        -webkit-transform: rotateY(360deg);
     }
+}
 
-    .credit-cards img {
-        /* border: solid 2px black; */
-        height: 35px;
+@keyframes signopregunta {
+    100% {
+        -webkit-transform: rotateY(360deg);
+        transform: rotateY(360deg);
     }
-
-    .credit-cards .uno {
-        display: none;
-    }
-
-    .fa-star {
-        transition: all 4s;
-    }
-
-    .footer-mobile .institucional {
-        display: none;
-    }
-
-    .footer-mobile .footer-mobile-list {
-        font-size: smaller;
-        justify-content: space-between;
-        line-height: 35%;
-        list-style: none;
-        margin: 0;
-        text-align: center;
-    }
-
-    .footer-mobile-list {
-        display: flex;
-        justify-content: space-evenly;
-        flex-wrap: wrap;
-        padding: 10px;
-    }
-
-    .footer-mobile-list li {
-        padding: 4px;
-    }
-
-    .footer-mobile {
-        background-color: whitesmoke;
-        margin: 0;
-    }
+}
 
 
-    header {
-        background-color: white;
-    }
-
-
-    .help-button {
-        /* border: solid 3px red; */
-        bottom: 5px;
-        max-width: 28%;
-        position: fixed;
-        right: 3px;
-    }
-
-    .help-button button {
-        background-color: black;
-        border-radius: 10%;
-        color: white;
-        cursor: pointer;
-        font-size: small;
-        height: 38px;
-        width: 100%;
-    }
-
-    /* https://stackoverflow.com/questions/16771225/css3-rotate-animation */
-    /* Para que el signo de interrogación gire 360 grados */
-    .help-button button .fa-circle-question {
-        animation: spin 2s linear signopregunta;
-        -moz-animation: signopregunta 2s linear infinite;
-        -webkit-animation: signopregunta 2s linear infinite;
-
-    }
-
-    /* https://stackoverflow.com/questions/16771225/css3-rotate-animation */
-    /* Para que el signo de interrogación gire 360 grados */
-    @-moz-keyframes signopregunta {
-        100% {
-            -moz-transform: rotateY(360deg);
-        }
-    }
-
-    @-webkit-keyframes signopregunta {
-        100% {
-            -webkit-transform: rotateY(360deg);
-        }
-    }
-
-    @keyframes signopregunta {
-        100% {
-            -webkit-transform: rotateY(360deg);
-            transform: rotateY(360deg);
-        }
-    }
-
-
-    .icono-carrito {
-        /* border: solid 2px blue; */
-        display: flex;
-        font-size: larger;
-        justify-content: space-around;
-        margin-bottom: 5%;
-        width: 100%;
-    }
+.icono-carrito {
+    /* border: solid 2px blue; */
+    display: flex;
+    font-size: larger;
+    justify-content: space-around;
+    margin-bottom: 5%;
+    width: 100%;
+}
 
 
 
 
-    .menu {
-        display: none;
-    }
+.menu {
+    display: none;
+}
 
-    .news-letter {
-        align-items: center;
-        background-color: whitesmoke;
-        display: flex;
-        flex-direction: column;
-        padding: 1% 2% 4% 2%;
-        /* border: solid 2px red; */
-        width: 100%;
-        
-    }
+.news-letter {
+    align-items: center;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    padding: 1% 2% 4% 2%;
+    /* border: solid 2px red; */
+    width: 100%;
 
-    .news-letter h2 {
-        text-align: center;
-    }
+}
 
-    .principal-form-boton {
-        /* border: solid 2px blue; */
-        display: flex;
-        flex-grow: 0.6;
-    }
+.news-letter h2 {
+    text-align: center;
+}
 
-    .principal-form-boton form {
-        align-self: center;
-        display: flex;
-        justify-content: center;
-    }
+.principal-form-boton {
+    /* border: solid 2px blue; */
+    display: flex;
+    flex-grow: 0.6;
+}
 
-    .principal-form-boton form input {
-        width: 70%;
-    }
+.principal-form-boton form {
+    align-self: center;
+    display: flex;
+    justify-content: center;
+}
 
-
-
-    .principal-carrito {
-        display: none;
-    }
-
-    .principal-form-logo {
-        flex-grow: 0.2;
-        /* border: solid 2px green; */
-    }
-
-    .principal {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        height: 10%;
-        /* border: solid 2px violet; */
-    }
-
-    .principal-form-logo {
-        /* border: solid 2px red; */
-        width: 20%
-    }
-
-    .principal .principal-form-logo img {
-        height: 100%;
-        width: 100%;
-        max-width: 150px;
-        min-width: 120px;
-    }
-
-    /* Aumenta la imagen cuando se pasa el cursor sobre ella y coloca sombra*/
-    .produc:hover {
-        box-shadow: 5px 5px 15px 5px rgb(90, 88, 88);
-        -webkit-transform: scale(1.1);
-        transform: scale(1.1);
-
-    }
-
-    .produc:hover i {
-        color: black;
-        transform: rotate(360deg);
-    }
-
-    .productos {
-       /* border: solid 2px blue;*/
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        width: 100%;
-
-    }
-
-    .produc {
-       /* border: solid 2px green;*/
-        border-radius: 20px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        max-width: 80%;
-    }
-
-    .produc a {
-        text-decoration: none;
-    }
-
-    .produc p,
-    i {
-        line-height: 0px;
-        text-align: center;
-    }
-
-    .produc p {
-        color: black;
-        font-weight: bold;
-        line-height: 5px;
-    }
-
-    .produc i {
-        margin-bottom: 20px;
-    }
-
-    .produc img {
-        width: 100%;
-        border-radius: 20px;
-    }
-
-    .productos .produc button {
-        background-color: white;
-        border-radius: 5px;
-        height: 25px;
-        transition: 0.5s;
-    }
-
-    .section3 {
-        margin-top: 15px;
-        margin-left: auto;
-        margin-right: auto;
-        width: 90%;
-        /* border: solid 2px blue; */
-    }
-
-    .section3 video {
-        width: 100%;
-    }
-
-    .section-destacados {
-        margin-top: 12%;
-    }
-
-    .section-destacados h3 {
-        background-color: white;
-        height: auto;
-        margin-bottom: 10%;
-    }
-    .section-destacados img {
-        width: 80%;
-    }
+.principal-form-boton form input {
+    width: 70%;
+}
 
 
-    .social-nets {
-        display: flex;
-        flex-direction: column;
-        height: 200px;
-        justify-content: space-between;
-        left: 10px;
-        max-width: 38px;
-        position: fixed;
-        right: 20px;
-        top: 250px;
-    }
 
-    .texto {
-        display: none;
-    }
+.principal-carrito {
+    display: none;
+}
 
-    .td {
-        margin: 0;
-        text-align: center;
-    }
+.principal-form-logo {
+    flex-grow: 0.2;
+    /* border: solid 2px green; */
+}
+
+.principal {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 10%;
+    /* border: solid 2px violet; */
+}
+
+.principal-form-logo {
+    /* border: solid 2px red; */
+    width: 20%
+}
+
+.principal .principal-form-logo img {
+    height: 100%;
+    width: 100%;
+    max-width: 150px;
+    min-width: 120px;
+}
+
+/* Aumenta la imagen cuando se pasa el cursor sobre ella y coloca sombra*/
+.produc:hover {
+    box-shadow: 5px 5px 15px 5px rgb(90, 88, 88);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+
+}
+
+.produc:hover i {
+    color: black;
+    transform: rotate(360deg);
+}
+
+.productos {
+    /* border: solid 2px blue;*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+
+}
+
+.produc {
+    /* border: solid 2px green;*/
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    max-width: 80%;
+}
+
+.produc a {
+    text-decoration: none;
+}
+
+.produc p,
+i {
+    line-height: 0px;
+    text-align: center;
+}
+
+.produc p {
+    color: black;
+    font-weight: bold;
+    line-height: 5px;
+}
+
+.produc i {
+    margin-bottom: 20px;
+}
+
+.produc img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.productos .produc button {
+    background-color: white;
+    border-radius: 5px;
+    height: 25px;
+    transition: 0.5s;
+}
+
+.section3 {
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    /* border: solid 2px blue; */
+}
+
+.section3 video {
+    width: 100%;
+}
+
+.section-destacados {
+    margin-top: 12%;
+}
+
+.section-destacados h3 {
+    background-color: white;
+    height: auto;
+    margin-bottom: 10%;
+}
+
+.section-destacados img {
+    width: 80%;
+}
+
+
+.social-nets {
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    justify-content: space-between;
+    left: 10px;
+    max-width: 38px;
+    position: fixed;
+    right: 20px;
+    top: 250px;
+}
+
+.texto {
+    display: none;
+}
+
+.td {
+    margin: 0;
+    text-align: center;
+}
+
 /*}
 
 /* /////////////////////////////Media query para 768px   ///////////////////////////// */
