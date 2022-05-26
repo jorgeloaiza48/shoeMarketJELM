@@ -498,7 +498,7 @@ footer {
     }
 
     .productos {
-        border: solid 2px blue;
+       /* border: solid 2px blue;*/
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -507,7 +507,7 @@ footer {
     }
 
     .produc {
-        border: solid 2px green;
+       /* border: solid 2px green;*/
         border-radius: 20px;
         display: flex;
         flex-direction: column;
