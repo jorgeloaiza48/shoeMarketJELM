@@ -297,7 +297,7 @@ footer {
 
 /* /////////////////////////////Media quiery para 360px   ///////////////////////////// */
 
-@media(min-width:360px) {
+/*@media(min-width:360px) {/*/
     .credit-cards {
         background-color: whitesmoke;
     }
@@ -593,7 +593,7 @@ footer {
         margin: 0;
         text-align: center;
     }
-}
+/*}
 
 /* /////////////////////////////Media query para 768px   ///////////////////////////// */
 

@@ -815,6 +815,23 @@
 			"39",
 			"40"
 		]
+	},
+	{
+		"id": 31,
+		"name": "111111111",
+		"price": 123124,
+		"category": "Bucaneras",
+		"description": {
+			"Material": "1",
+			"Alturabase": "1",
+			"Alturataco": "1",
+			"Alturacana": "1",
+			"Colores": "1"
+		},
+		"image": "img-1653526269267.jpg",
+		"size": [
+			"36"
+			
+		]
 	}
-	
 ]
