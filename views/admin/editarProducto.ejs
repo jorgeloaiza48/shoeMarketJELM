@@ -102,7 +102,7 @@
                                 <option value="Bucaneras">Bucaneras</option>
                                 <option value="Gift Card">Gift Card</option> -->
                                 
-                            <% for (const oneCategory of newCategory) { %>
+                            <% for (const oneCategory of categories) { %>
                                 <option <% producto.category === oneCategory ? "selected": "" %> value="<%= oneCategory %>" > <%= oneCategory %> </option>
                             <% } %>  
 

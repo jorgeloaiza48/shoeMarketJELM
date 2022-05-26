@@ -39,12 +39,7 @@ router.post("/login",userController.processLogin)
 
 // **Edición de usuarios**
 router.get('/editar',userController.listarUsuarios)
-<<<<<<< HEAD
 // router.post("/editar/:id",userController.editar)
-=======
-
-//router.post("/editar/:id",userController.editar)
->>>>>>> a789b04b06ab0e9f9c1a3c04a75eb36b8b86f2a1
 
 
 module.exports = router
