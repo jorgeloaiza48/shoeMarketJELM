@@ -108,7 +108,7 @@ const controller = {
 		let newList = products.filter(product => product.id !== parseInt(req.params.id))
 		fs.writeFileSync(productsFilePath, JSON.stringify(newList));
 		products = newList
-		res.redirect("/admin/productos")
+		res.redirect("/admin/lista/productos")
 	},
     editarProducto: (req, res) => {
         let productsFilePath = path.join(__dirname, '../data/SHOEMARKET.json');
@@ -150,7 +150,7 @@ const controller = {
         })
         fs.writeFileSync(productsFilePath, JSON.stringify(products, null, "\t")) //JS a JSON
 
-        res.redirect("/admin/productos")
+        res.redirect("/admin/lista/productos")
 
     },
 
