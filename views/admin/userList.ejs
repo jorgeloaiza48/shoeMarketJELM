@@ -1,0 +1,185 @@
+<%- include("../partials/head") %>
+
+    <body>
+        <%- include("../partials/header2") %>
+
+            <!-- *****************************INICIO MAIN****************************************** -->
+
+            <main class="main-admin">
+                <h3 class="all-product-title" >Botas</h3>
+                    <div class="productos-admin">                       
+                      
+                            <% botas.forEach(product=> { %> 
+                                <!-- <div class="produc">  -->
+                                    <section class="section-destacados-admin">
+                                        
+                                            <img src="../img/products/<%= product.image %>" alt="bota">
+                                            <p>
+                                                <%= product.name %>
+                                            </p>
+                                            <p>$<%= product.price %>
+                                            </p>
+                                            <p><a href="/admin/productos/editar/<%= product.id %>" class="com-but-main"><button class="admin-but">EDITAR</button></a></p>
+                                            <form action="/admin/productos/delete/<%= product.id %>?_method=DELETE" method="POST" >
+                                                <button type="submt" name="delete" id="delete" class="admin-but">BORRAR</button>
+                                            
+                        
+                                            </form>
+                                      
+                                    </section> 
+                                <!-- </div> -->
+                            <% }) %>
+                     
+                    </div>
+                <h3 class="all-product-title" >TEXANAS</h3>
+                    <div class="productos-admin">                       
+                       
+                            <% texanas.forEach(product=> { %> 
+                                <!-- <div class="produc">  -->
+                                    <section class="section-destacados-admin">
+                                        
+                                        <img src="../img/products/<%= product.image %>" alt="bota">
+                                        <p>
+                                            <%= product.name %>
+                                        </p>
+                                        <p>$<%= product.price %>
+                                        </p>
+                                        <p><a href="/admin/productos/editar/<%= product.id %>" class="com-but-main"><button class="admin-but">EDITAR</button></a></p>
+                                        <form action="/admin/productos/delete/<%= product.id %>?_method=DELETE" method="POST" >
+                                            <button type="submt" name="delete" id="delete" class="admin-but">BORRAR</button>
+                                        
+                    
+                                        </form>
+                                        
+                                  
+                                </section>  
+                                <!-- </div> -->
+                            <% }) %>
+                     
+                    </div>
+                   
+                    <h3 class="all-product-title" >BUCANERAS</h3>
+                    <div class="productos-admin">                       
+                       
+                            <% bucaneras.forEach(product=> { %> 
+                                <!-- <div class="produc">  -->
+                                    <section class="section-destacados-admin">
+                                        
+                                        <img src="../img/products/<%= product.image %>" alt="bota">
+                                        <p>
+                                            <%= product.name %>
+                                        </p>
+                                        <p>$<%= product.price %>
+                                        </p>
+                                        <p><a href="/admin/productos/editar/<%= product.id %>" class="com-but-main"><button class="admin-but">EDITAR</button></a></p>
+                                        <form action="/admin/productos/delete/<%= product.id %>?_method=DELETE" method="POST" >
+                                            <button type="submt" name="delete" id="delete" class="admin-but">BORRAR</button>
+                                        
+                    
+                                        </form>
+                                  
+                                </section> 
+                                <!-- </div> -->
+                            <% }) %>
+                     
+                    </div>
+
+                    <h3 >BORCEGOS</h3>
+                    <div class="productos-admin">                       
+                        
+                            <% borcegos.forEach(product=> { %> 
+                                <!-- <div class="produc">  -->
+                                    <section class="section-destacados-admin">
+                                        
+                                        <img src="../img/products/<%= product.image %>" alt="bota">
+                                        <p>
+                                            <%= product.name %>
+                                        </p>
+                                        <p>$<%= product.price %>
+                                        </p>
+                                        <p><a href="/admin/productos/editar/<%= product.id %>" class="com-but-main"><button class="admin-but">EDITAR</button></a></p>
+                                        <form action="/admin/productos/delete/<%= product.id %>?_method=DELETE" method="POST" >
+                                            <button type="submt" name="delete" id="delete" class="admin-but">BORRAR</button>
+                                        
+                    
+                                        </form>
+                                  
+                                </section>
+                                <!-- </div> -->
+                            <% }) %>
+                     
+                    </div>
+
+                    <h3>GUILLERMINAS</h3>
+                    <div class="productos-admin">                       
+                       
+                            <% guillerminas.forEach(product=> { %> 
+                                <!-- <div class="produc">  -->
+                                    <section class="section-destacados-admin">
+                                        
+                                        <img src="../img/products/<%= product.image %>" alt="bota">
+                                        <p>
+                                            <%= product.name %>
+                                        </p>
+                                        <p>$<%= product.price %>
+                                        </p>
+                                        <p><a href="/admin/productos/editar/<%= product.id %>" class="com-but-main"><button class="admin-but">EDITAR</button></a></p>
+                                        <form action="/admin/productos/delete/<%= product.id %>?_method=DELETE" method="POST" >
+                                            <button type="submt" name="delete" id="delete" class="admin-but">BORRAR</button>
+                                        
+                    
+                                        </form>
+                                  
+                                </section>  
+                                <!-- </div> -->
+                            <% }) %>
+                     
+                    </div>
+
+                    <h3>GIFT-CARD</h3>
+                    <div class="productos-admin">                       
+                       
+                            <% giftCard.forEach(product=> { %> 
+                                <!-- <div class="produc">  -->
+                                    <section class="section-destacados-admin">
+                                        
+                                        <img src="../img/products/<%= product.image %>" alt="bota">
+                                        <p>
+                                            <%= product.name %>
+                                        </p>
+                                        <p>$<%= product.price %>
+                                        </p>
+                                        <p><a href="/admin/productos/editar/<%= product.id %>" class="com-but-main"><button class="admin-but">EDITAR</button></a></p>
+                                        <form action="/admin/productos/delete/<%= product.id %>?_method=DELETE" method="POST" >
+                                            <button type="submt" name="delete" id="delete" class="admin-but">BORRAR</button>
+                                        
+                    
+                                        </form>
+                                  
+                                </section>  
+                                <!-- </div> -->
+                            <% }) %>
+                     
+                    </div>
+                    
+                    
+                                        <div class="news-letter">
+                                            <h2>Suscribite a nuestro newsletter</h2>
+                                            <form>
+                                                <input type="email" placeholder="Ingresa tu e-mail">
+                                                <button><i class="fa-solid fa-arrow-right"></i></button>
+                                            </form>
+
+                                        </div>
+
+                                        <div class="help-button">
+                                            <button><i class="fa-solid fa-circle-question"></i> Ayuda</button>
+                                        </div>
+
+            </main>
+
+            <!-- ********************************FIN MAIN***************************************** -->
+            <%- include("../partials/footer") %>
+    </body>
+
+    </html>

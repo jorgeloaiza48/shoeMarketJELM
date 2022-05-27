@@ -14,7 +14,13 @@ let colores = ["Negro","Crema","Rojo","Blanco","Rosa"]
 
 
 const controller = {
-    
+    index : (req,res) =>{
+        res.render("admin/indexAdmin", {title: "Admin Index"})
+    },
+    userList :(req,res) =>{
+
+    },
+     
      adminProducts: (req, res) => {
         //para estos 3 no se puede usar const ya que mas abajo cuando reescribamos los json hay q volver a declarar las variables
         // y las variables declaradas con const no se pueden modificar
@@ -40,7 +46,7 @@ const controller = {
         let giftCard = products.filter(function (product) {
             return product.category == "Gift Card";
         })
-        res.render("admin/admin", {
+        res.render("admin/adminProductos", {
             products: products,
             botas: botas,
             texanas: texanas,
@@ -122,7 +128,7 @@ const controller = {
 
         products.find(product => {
             if (product.id === parseInt(req.params.id)) {
-console.log(req.file)
+
                     product.name = req.body.name
                     product.price = Number(req.body.price)
                     product.category = req.body.category
@@ -138,6 +144,7 @@ console.log(req.file)
                     product.size = req.body.talle
 
                     if(req.file && product.image !== req.file.filename) {product.image = req.file.filename}
+                    
 
             }
         })
