@@ -18,8 +18,10 @@ const upload = multer({ storage })
 const adminController = require('../controllers/AdminController')
 
 
+router.get("/index", adminController.index)
+router.get("/lista/productos",adminController.adminProducts)
 
-router.get("/productos",adminController.adminProducts)
+router.get("/lista/usuarios",adminController.userList)
 
 router.get("/productos/crear",adminController.crearProducto)
 router.post("/productos/crear", upload.single("photo"), adminController.newproduct)
