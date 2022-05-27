@@ -96,7 +96,7 @@ const controller = {
         let nuevo = JSON.stringify(productoNuevo, null, "\t")
         fs.writeFileSync(productsFilePath, nuevo)
 
-        res.redirect("/admin/productos")
+        res.redirect("/productos")
     },
 
     delete: (req, res) => {

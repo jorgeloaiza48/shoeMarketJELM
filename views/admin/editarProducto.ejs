@@ -45,8 +45,28 @@
 
                     <div class="form-create__img">
                         <label for="photo">Seleccione la foto
-                            <div class="file-select"><input type="file" name="img" accept=".jpg,.jpeg"></div>
+                            <div class="file-select"><input type="file" name="img" accept=".jpg,.jpeg" id="file"></div>
                         </label>
+                        <div id="preview"></div>
+                        
+                        <script>
+                            document.getElementById("file").onchange = function(e) {
+	                        let reader = new FileReader();
+
+                          reader.onload = function(){
+                        let preview = document.getElementById('preview'),
+    		            image = document.createElement('img');
+
+                        image.src = reader.result;
+    
+                        preview.innerHTML = '';
+                        preview.append(image);
+                                                };
+ 
+                        reader.readAsDataURL(e.target.files[0]);
+}    
+                        </script>
+                   
 
 
 

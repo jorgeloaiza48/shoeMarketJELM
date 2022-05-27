@@ -814,23 +814,6 @@
 		]
 	},
 	{
-		"id": 31,
-		"name": "111111111",
-		"price": 123124,
-		"category": "Bucaneras",
-		"description": {
-			"Material": "1",
-			"Alturabase": "1",
-			"Alturataco": "1",
-			"Alturacana": "1",
-			"Colores": "1"
-		},
-		"image": "img-1653526269267.jpg",
-		"size": [
-			"36"
-		]
-	},
-	{
 		"id": 32,
 		"name": "Alpargatas",
 		"price": 45000,
@@ -883,9 +866,134 @@
 			"Alturacana": "2cm",
 			"Colores": "azul"
 		},
-		"image": "photo-1653604465152.jpg",
+		"image": "img-1653664832204.jpg",
 		"size": [
 			"38",
+			"39",
+			"40"
+		]
+	},
+	{
+		"id": 35,
+		"name": "Botas cortas",
+		"price": 85000,
+		"category": "Botas",
+		"color": "Rojo",
+		"description": {
+			"Material": "cuero",
+			"Alturabase": "2cm",
+			"Alturataco": "1 cm",
+			"Alturacana": "1 cm",
+			"Colores": "azul"
+		},
+		"image": "img-1653664428916.jpg",
+		"size": [
+			"35",
+			"36",
+			"37"
+		]
+	},
+	{
+		"id": 36,
+		"name": "Borcegos cortos",
+		"price": 35000,
+		"category": "Borcegos",
+		"color": "Negro",
+		"description": {
+			"Material": "cuero",
+			"Alturabase": "2cm",
+			"Alturataco": "2 cm",
+			"Alturacana": "1 cm",
+			"Colores": ""
+		},
+		"image": "photo-1653668706875.jpg",
+		"size": [
+			"37",
+			"39",
+			"40"
+		]
+	},
+	{
+		"id": 37,
+		"name": "Borcegos cortos",
+		"price": 35000,
+		"category": "Borcegos",
+		"color": "Negro",
+		"description": {
+			"Material": "cuero",
+			"Alturabase": "2cm",
+			"Alturataco": "2 cm",
+			"Alturacana": "1 cm",
+			"Colores": ""
+		},
+		"image": "img-1653669350964.jpg",
+		"size": [
+			"37",
+			"39",
+			"40"
+		]
+	},
+	{
+		"id": 38,
+		"name": "Borcegos Cat",
+		"price": 85000,
+		"category": "Borcegos",
+		"color": "Crema",
+		"description": {
+			"Material": "cuero",
+			"Alturabase": "2cm",
+			"Alturataco": "2 cm",
+			"Alturacana": "1 cm",
+			"Colores": ""
+		},
+		"image": "img-1653669421897.jpg",
+		"size": [
+			"35",
+			"37",
+			"39",
+			"40"
+		]
+	},
+	{
+		"id": 39,
+		"name": "Bucanera negra larga",
+		"price": 75000,
+		"category": "Bucaneras",
+		"color": "Negro",
+		"description": {
+			"Material": "sintético",
+			"Alturabase": "2cm",
+			"Alturataco": "2 cm",
+			"Alturacana": "3 cm",
+			"Colores": ""
+		},
+		"image": "photo-1653669679219.jpg",
+		"size": [
+			"35",
+			"36",
+			"37",
+			"38"
+		]
+	},
+	{
+		"id": 40,
+		"name": "Guillermina5",
+		"price": 39650,
+		"category": "Guillerminas",
+		"color": [
+			"Negro",
+			"Rosa"
+		],
+		"description": {
+			"Material": "Plástico",
+			"Alturabase": "2cm",
+			"Alturataco": "3cm",
+			"Alturacana": "1 cm",
+			"Colores": ""
+		},
+		"image": "photo-1653669866440.jpg",
+		"size": [
+			"35",
 			"39",
 			"40"
 		]

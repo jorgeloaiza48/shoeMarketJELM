@@ -142,45 +142,15 @@ footer {
 
    
 }
-<<<<<<< HEAD
 #preview {
     border:1px solid #ddd;
-    height: 100px;
-    padding:5px;
+    margin:10px;
     border-radius:2px;      
     max-width:200px;
-    
+    padding: 5px;   
   }
   
-  #preview img {width:250px;display:block;}
-=======
-.cuentaCarrito3{
-    display: flex
-    
-}
-.cuentaCarrito3 li {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    border-radius: 10px;
-    box-shadow: 2px 2px 3px rgb(0 0 0 / 50%);
-    font-size: 13px;
-    margin-top: 5px;
-    margin-left: 5px;
-    padding: 10px 10px 10px 10px;
-    transition: all 0.5s;
-    position: relative;
-}
-.cuentaCarrito3 li a {
-    text-decoration: none;
-    color: black;
-    font-size: small;
-    margin-right: 10px;
-
-
-}
-
->>>>>>> f91be88a9158452341adf860a7782ebff2408e0e
+#preview img {width:100%;display:block;}
 
 @media(min-width:768px) {
     .principal-logo2 {
