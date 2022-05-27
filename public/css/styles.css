@@ -125,6 +125,16 @@ footer {
 .menu2 {
     display: none;
 }
+#preview {
+    border:1px solid #ddd;
+    height: 100px;
+    padding:5px;
+    border-radius:2px;      
+    max-width:200px;
+    
+  }
+  
+  #preview img {width:250px;display:block;}
 
 @media(min-width:768px) {
     .principal-logo2 {

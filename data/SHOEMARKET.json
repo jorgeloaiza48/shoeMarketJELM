@@ -6,7 +6,8 @@
 		"category": "Borcegos",
 		"color": [
 			"Negro",
-			"Crema"
+			"Crema",
+			"Blanco"
 		],
 		"description": {
 			"Material": "Cuero Vacuno",
@@ -832,12 +833,9 @@
 	{
 		"id": 32,
 		"name": "Alpargatas",
-		"price": 50000,
+		"price": 45000,
 		"category": "Botas",
-		"color": [
-			"Negro",
-			"Rosa"
-		],
+		"color": "Negro",
 		"description": {
 			"Material": "cuero",
 			"Alturabase": "2 cm",
@@ -846,9 +844,50 @@
 			"Colores": "azul"
 		},
 		"image": "img-1653584466958.jpeg",
+		"size": "37"
+	},
+	{
+		"id": 33,
+		"name": "alpargatas2",
+		"price": 3213,
+		"category": "Borcegos",
+		"color": "Blanco",
+		"description": {
+			"Material": "cuero",
+			"Alturabase": "2cm",
+			"Alturataco": "3cm",
+			"Alturacana": "2cm",
+			"Colores": "azul"
+		},
+		"image": "photo-1653601119165.jpeg",
+		"size": [
+			"37",
+			"38",
+			"39",
+			"40"
+		]
+	},
+	{
+		"id": 34,
+		"name": "Botas cortas",
+		"price": 89000,
+		"category": "Botas",
+		"color": [
+			"Crema",
+			"Rosa"
+		],
+		"description": {
+			"Material": "cuero",
+			"Alturabase": "2cm",
+			"Alturataco": "3cm",
+			"Alturacana": "2cm",
+			"Colores": "azul"
+		},
+		"image": "photo-1653604465152.jpg",
 		"size": [
 			"38",
-			"39"
+			"39",
+			"40"
 		]
 	}
 ]
