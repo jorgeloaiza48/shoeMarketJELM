@@ -813,23 +813,6 @@
 		]
 	},
 	{
-		"id": 31,
-		"name": "111111111",
-		"price": 123124,
-		"category": "Bucaneras",
-		"description": {
-			"Material": "1",
-			"Alturabase": "1",
-			"Alturataco": "1",
-			"Alturacana": "1",
-			"Colores": "1"
-		},
-		"image": "img-1653526269267.jpg",
-		"size": [
-			"36"
-		]
-	},
-	{
 		"id": 32,
 		"name": "Alpargatas",
 		"price": 50000,
@@ -845,7 +828,7 @@
 			"Alturacana": "3 cm",
 			"Colores": "azul"
 		},
-		"image": "img-1653584466958.jpeg",
+		"image": "img-1653652619222.jpg",
 		"size": [
 			"38",
 			"39"

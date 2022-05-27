@@ -122,7 +122,7 @@ const controller = {
 
         products.find(product => {
             if (product.id === parseInt(req.params.id)) {
-
+console.log(req.file)
                     product.name = req.body.name
                     product.price = Number(req.body.price)
                     product.category = req.body.category
@@ -137,7 +137,7 @@ const controller = {
                     // product.image = req.file.filename,
                     product.size = req.body.talle
 
-                    if(req.file && product.image !== req.file.filename) {product.image === req.file.filename}
+                    if(req.file && product.image !== req.file.filename) {product.image = req.file.filename}
 
             }
         })
