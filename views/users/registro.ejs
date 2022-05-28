@@ -14,13 +14,7 @@
                                 <div class="text-aviso"><%= errors.Nombre.msg %></div>
                             <%}%>
                         </div>
-                        <div class="form__usuario">
-                            <label for="usuario">Nombre de usuari@ *</label>
-                            <input type="text" name="usuario" id="usuario" placeholder="Introduzca su Nombre de usuari@" value ="<%= locals.oldData ? oldData.usuario : null%>">
-                            <% if (locals.errors && errors.usuario) {%>
-                                <div class="text-aviso"><%= errors.usuario.msg %></div>
-                            <%}%>
-                        </div>
+                       
                         <div class="form__usuario">
                             <label for="email">Correo electronico *</label>
                             <input type="email" name="email" id="email" placeholder="Introduzca su Correo electronico"  value ="<%= locals.oldData ? oldData.email : null%>" >
@@ -28,27 +22,13 @@
                                 <div class="text-aviso"><%= errors.email.msg %></div>
                             <%}%>
                         </div>
-                        <div class="form__fecha">
-                            <label for="fecha">Fecha de nacimiento</label>
-                            <input type="date" name="fecha" id="fecha" value ="<%= locals.oldData ? oldData.fecha : null%>">
-                            <% if (locals.errors && errors.fecha) {%>
-                                <div class="text-aviso"><%= errors.fecha.msg %></div>
-                            <%}%>
-            
-                        </div>
+                        
                         <div class="form__domicilio">
-                            <label for="domicilio">Domicilio de envio 1 *</label><br>
+                            <label for="domicilio">Domicilio de envio  *</label><br>
                             <input type="text" name="domicilio1" id="domicilio" placeholder=" Introduzca su Domicilio" value ="<%= locals.oldData ? oldData.domicilio1 : null%>">
                             <% if (locals.errors && errors.domicilio1) {%>
                                 <div class="text-aviso"><%= errors.domicilio1.msg %></div>
                             <%}%>
-                        </div>
-                        <div class="form__domicilio">
-                            <label for="domicilio">Domicilio de envio 2  </label><br>
-                            <input type="text" name="domicilio2" id="domicilio" placeholder=" Introduzca su Domicilio" value ="<%= locals.oldData ? oldData.domicilio2 : null%>">
-                            <!-- <% if (locals.errors && errors.domicilio2) {%>
-                                <div class="text-aviso"><%= errors.domicilio2.msg %></div>
-                            <%}%> -->
                         </div>
                         
                             <div class="form__password">
@@ -58,13 +38,7 @@
                                     <div class="text-aviso"><%= errors.pass.msg %></div>
                                 <%}%>
                             </div>
-                            <div class="form__confirm">
-                                <label class="form__confirm__title" for="pass">Confirmar contraseña *</label>
-                                <input type="password" name="pass2" id="pass" placeholder="Introduzca su contraseña nuevamente">
-                                <% if (locals.errors && errors.pass2) {%>
-                                    <div class="text-aviso"><%= errors.pass2.msg %></div>
-                                <%}%>
-                            </div>
+                           
                             <div class="contenedor_button" >
                                 <button class="form__button" type="submit" >Borrar</button>
                                 <button class="form__button" type="submit" >Enviar</button>

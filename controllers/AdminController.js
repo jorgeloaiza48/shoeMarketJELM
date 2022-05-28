@@ -3,7 +3,7 @@ const res = require("express/lib/response")
 const path = require("path")
 const fs = require("fs")
 const { validationResult } = require('express-validator')
-
+const productCrud = require("../models/ProductCrud")
 let productsFilePath = path.join(__dirname, '../data/SHOEMARKET.json');
 let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));//JSON a JS
 let categories = ['Borcegos', 'Texanas', 'Guillerminas', 'Bucaneras', 'Gift card', 'Botas']
@@ -65,15 +65,35 @@ const controller = {
     },
 
     crearProducto: (req, res) => { res.render('admin/crearProducto', { title: "Crear Producto" }) },
-    newproduct: (req, res) => {
-        let productsFilePath = path.join(__dirname, '../data/SHOEMARKET.json');
-        let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-        let productJSON = fs.readFileSync(productsFilePath, 'utf-8')
-        let ultimo = products.length - 1
-        let idnuevo = products[ultimo].id + 1
 
-        let prodForm = {
-            id: idnuevo,
+    newproduct: (req, res) => {
+        const errors = validationResult(req)
+             
+        if (errors.errors.length > 0) {
+            return res.render("admin/crearProducto", {
+                errors: errors.mapped(),
+                old: req.body,
+                title : "Crear Producto"
+            })
+        } 
+
+       
+
+        let productInDb = productCrud.findByField("name", req.body.name)
+
+        if (productInDb) {
+            return res.render("admin/crearProducto", {
+                errors: {
+                    nombre: {
+                        msg: "no se puede crear 2 productos con el mismo nombre"
+                    }
+                },
+                old: req.body,
+                title: "Crear Producto"
+            })
+        }
+
+        let productToCreate = {
             name: req.body.name,
             price: Number(req.body.price),
             category: req.body.category,
@@ -86,23 +106,15 @@ const controller = {
                 Colores: req.body.colores
             },
             image: req.file.filename,
-            size: req.body.talle
+            size: req.body.size
+
         }
 
+        let productCreated = productCrud.create(productToCreate)
 
-        let productoNuevo
 
-        if (productJSON == "") {
-            productoNuevo = ""
-        } else {
-            productoNuevo = JSON.parse(productJSON)
-        }
-        productoNuevo.push(prodForm)
-
-        let nuevo = JSON.stringify(productoNuevo, null, "\t")
-        fs.writeFileSync(productsFilePath, nuevo)
-
-        res.redirect("/productos")
+        res.redirect("/admin/lista/productos")
+    
     },
 
     deleteProduct: (req, res) => {
@@ -178,3 +190,4 @@ const controller = {
 }
 
 module.exports = controller
+
