@@ -3,6 +3,7 @@ const router = express.Router()
 const path = require("path")
 const multer = require("multer")
 
+
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
         cb(null, path.join(__dirname, "../public/img/products"))
@@ -14,7 +15,7 @@ const storage = multer.diskStorage({
 )
 const storage2 = multer.diskStorage({
     destination: function (req, file, cb) {
-        cb(null, path.join(__dirname, "../public/img/user"))
+        cb(null, path.join(__dirname, "../public/img/users"))
     },
     filename: function (req, file, cb) {
         cb(null, file.fieldname + "-" + Date.now() + path.extname(file.originalname))
@@ -35,7 +36,7 @@ router.get("/index", adminController.index)
 router.get("/lista/usuarios",adminController.userList)
 
 router.get("/usuario/editar/:id",adminController.userEdit)
-router.put("/usuario/editar/:id",uploadUser.single("img"),adminController.userUpdate)
+router.put("/usuario/editar/:id",uploadUser.single("photo"),adminController.userUpdate)
 
 router.delete("/usuario/delete/:id",adminController.userDelete)
 

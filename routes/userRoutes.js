@@ -16,12 +16,25 @@ const storage = multer.diskStorage({
 }
 )
 
-const upload = multer({ storage })
+const storage2 = multer.diskStorage({
+    destination: function (req, file, cb) {
+        cb(null, path.join(__dirname, "../public/img/users"))
+    },
+    filename: function (req, file, cb) {
+        cb(null, file.fieldname + "-" + Date.now() + path.extname(file.originalname))
+    }
+}
+)
+
+
+
+const uploadProduct = multer({storage})
+const uploadUser = multer({storage2})
 
 
 // **Creación o registro de usuarios**
 router.get('/registro', userController.register)
-router.post('/registro',upload.single('imagenProducto'),Validations, userController.createUser ); 
+router.post('/registro',uploadUser.single("photo"),Validations, userController.createUser ); 
 
 // **Logueo de usuarios**
 router.get('/login',userController.login)
