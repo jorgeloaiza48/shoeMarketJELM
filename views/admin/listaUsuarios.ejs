@@ -13,11 +13,15 @@
                                 <!-- <div class="produc">  -->
                                     <section class="section-destacados-admin">
                                         
-                                            <!-- <img src="../img/products/<%= product.image %>" alt="bota"> -->
+                                           
                                             <p> <%= usuario.NombreYapellido %></p>
                                             <p>$<%= usuario.Usuario %></p>
-                                            <p><a href="/user/editar/<%= usuario.id %>" class="com-but-main"><button class="admin-but">EDITAR</button></a></p>
-                                            <form action="/admin/productos/delete/<%= product.id %>?_method=DELETE" method="POST" >
+                                          
+
+                                            <p><a href="/usuario/editar/<%= usuario.id %>" class="com-but-main"><button class="admin-but">EDITAR</button></a></p>
+
+
+                                            <form action="usuario/delete/<%= usuario.id %>?_method=DELETE" method="POST" >
                                                 <button type="submt" name="delete" id="delete" class="admin-but">BORRAR</button>
                                             
                         

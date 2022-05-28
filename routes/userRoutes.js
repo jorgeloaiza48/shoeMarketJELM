@@ -28,7 +28,7 @@ router.get('/login',userController.login)
 router.post("/login",userController.processLogin)
 
 // **Edición de usuarios**
-router.get('/editar',userController.listarUsuarios)
+//router.get('/editar',userController.listarUsuarios)
 // router.post("/editar/:id",userController.editar)
 
 
