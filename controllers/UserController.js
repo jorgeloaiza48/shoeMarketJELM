@@ -56,6 +56,17 @@ const controller = {
 
     processLogin :(req,res) =>{ },
 
+    profile :   (req, res) => { 
+		res.render("users/profile",{
+		user : req.session.userLogged
+
+	}) },
+	logout : (req, res) => { 
+		res.clearCookie("userEmail")
+		req.session.destroy() 
+	return res.redirect("/login2")
+	}
+
          
     
 }

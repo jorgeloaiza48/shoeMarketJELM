@@ -1105,6 +1105,13 @@ i {
     }
 
     .text-aviso {
+        margin-left: 10px;
+        margin-bottom: 5px;
+        margin-top: 5px;
+        color: red;
+    }.text-aviso2 {
+        margin-left: 0px;
+        margin-top: 5px;
         color: red;
     }
 
