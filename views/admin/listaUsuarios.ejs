@@ -13,7 +13,7 @@
                                 <!-- <div class="produc">  -->
                                     <section class="section-destacados-admin">
                                                                                   
-                                           <img src="../../img/products/<%= usuario.image %>" alt="foto-usuario" >
+                                           <img src="../../img/user/<%= usuario.image %>" alt="foto-usuario" >
                                             <p><strong>Nombres y apellidos:</strong> <%= usuario.NombreYapellido %></p>
                                             <p><strong>Correo Electrónico:</strong> <%= usuario.Email %></p>
                                             <p><strong>Fecha de nacimiento: </strong> <%= usuario.FechaNacimiento %></p>
@@ -22,7 +22,8 @@
                                             
 
                                             <form action="usuario/delete/<%= usuario.id %>?_method=DELETE" method="POST" >
-                                                <a href="/usuario/editar/<%= usuario.id %>" class="com-but-main"><button class="admin-but">EDITAR</button>
+
+                                                <a href="/usuario/editar/<%= usuario.id %>" class="com-but-main"><button class="admin-but">EDITAR</button></a>
                                                 <button type="submt" name="delete" id="delete" class="admin-but">BORRAR</button>                                                                   
                                             </form>
                                       

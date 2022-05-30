@@ -2,6 +2,7 @@ const req = require("express/lib/request")
 const res = require("express/lib/response")
 const path = require("path")
 const fs = require("fs")
+const bcryptjs = require("bcryptjs")
 const { validationResult } = require('express-validator')
 
 let productsFilePath = path.join(__dirname, '../data/SHOEMARKET.json');
@@ -27,11 +28,11 @@ const controller = {
 
             let userForm = {
                 id: idNuevo,
-                NombreYapellido: req.body.Nombre,
+                NombreYapellido: req.body.nombre,
                 Email: req.body.email,
                 FechaNacimiento: req.body.fecha,
                 Domicilio: req.body.domicilio,
-                Contraseña: req.body.pass,
+                Contraseña: bcryptjs.hashSync(req.body.pass, 10),
                 image: req.file.filename                               
             }
 

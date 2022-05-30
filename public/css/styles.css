@@ -371,7 +371,7 @@ footer {
     text-align: left;
 }
 .section-destacados-admin form{
-    border: solid 2px red;
+    /* border: solid 2px red; */
     display: flex;
     justify-content: space-around;
     margin: 15px;

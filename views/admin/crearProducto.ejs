@@ -15,8 +15,7 @@
 
                 <div class="form-create__nombre">
                     <label for="nombre">Nombre del producto *</label>
-                    <input type="text" name="name" id="nombre" placeholder="Nombre del nuevo producto" 
-                        >
+                    <input  type="text" name="nombre" id="nombre" placeholder="Nombre del nuevo producto" value="<%= locals.old && old.nombre ? old.nombre : ""%>"  >
                         <% if (locals.errors && errors.nombre) {%>
                             <div class="text-aviso"><%= errors.nombre.msg %></div>
                         <%}%>
@@ -25,25 +24,25 @@
                     <h3>Descripcion del producto*</h3>
                     <div class="div-desc">
                         <label for="material"> Material</label>
-                        <input type="text" name="material">
+                        <input value="<%= locals.old && old.material ? old.material: ""%>"  type="text" name="material">
                     </div>
                     <div class="div-desc">
                         <label for="base"> Altura de la base</label>
-                        <input type="text" name="base">
+                        <input value="<%= locals.old && old.base ? old.base: ""%>" type="text" name="base">
                     </div>
                     <div class="div-desc">
                         <label for="taco">Altura del taco</label>
-                        <input type="text" name="taco">
+                        <input value="<%= locals.old && old.taco ? old.taco: ""%>" type="text" name="taco">
                     </div>
 
                     <div class="div-desc">
                         <label for="cana">Altura de la caña</label>
-                        <input type="text" name="cana">
+                        <input value="<%= locals.old && old.cana ? old.cana: ""%>" type="text" name="cana">
                     </div>
 
                     <div class="div-desc">
                         <label for="colores">Colores</label>
-                        <input type="text" name="colores">
+                        <input value="<%= locals.old && old.colores ? old.colores: ""%>" type="text" name="colores">
                     </div>
 
 
@@ -84,7 +83,7 @@
                 
                 <div class="form-create__price">
                     <label for="price">Precio *</label><br>
-                    <input type="number" name="price" id="price" placeholder=" Introduzca el precio" 
+                    <input type="number" name="price" id="price" placeholder=" Introduzca el precio" value="<%= locals.old && old.price ? old.price: ""%>"
                         >
                         <% if (locals.errors && errors.price) {%>
                             <div class="text-aviso"><%= errors.price.msg %></div>
@@ -96,7 +95,7 @@
                     </div>
                     
                     <label class="form-create__color__check" for="negro">
-                        <input type="checkbox" name="color" id="negro" value="Negro">
+                        <input type="checkbox" name="color" id="negro" value="Negro" <%= locals.old && old.color[0] == "Negro" ? "checked": ""%>">
                         Negro
                     </label>
                     <label class="form-create__color__check" for="rojo">

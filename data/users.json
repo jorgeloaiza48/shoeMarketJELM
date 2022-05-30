@@ -1,24 +1,24 @@
 [
 	{
-		"id": 39,
+		"id": 1,
 		"NombreYapellido": "Lina García",
 		"Email": "lina@gmail.com",
 		"FechaNacimiento": "1978-04-12",
 		"Domicilio": "Calle 456",
 		"Contraseña": "gfg465LIGU(/%",
-		"image": "photo-1653864521685.png"
+		"image": "photojoel-1653868863248.jpg"
 	},
 	{
-		"id": 40,
+		"id": 2,
 		"NombreYapellido": "Eliana Montes",
 		"Email": "eliana@gmaiil.com",
 		"FechaNacimiento": "1984-06-12",
 		"Domicilio": "Calle 8",
 		"Contraseña": "xfdsf634(/&JHG",
-		"image": "photo-1653865645572.png"
+		"image": "photojoel-1653868863248.jpg"
 	},
 	{
-		"id": 41,
+		"id": 3,
 		"NombreYapellido": "pedro picapiedra",
 		"Email": "JELM48@MISENA.EDU.CO",
 		"FechaNacimiento": "2003-07-12",
@@ -43,5 +43,41 @@
 		"Domicilio": "calle 567",
 		"Contraseña": ".hu34)P(&/lkhgkl",
 		"image": "photo-1653871469539.png"
+	},
+	{
+		"id": 44,
+		"NombreYapellido": "Joe casas",
+		"Email": "joe@gmail.com",
+		"FechaNacimiento": "1984-06-12",
+		"Domicilio": "cara 22334",
+		"Contraseña": "$2a$10$cH0lvrFGIDXVpyAUqz4hkuWOlJzSEHA3onhZAH4g8IEDqMFX8n7RC",
+		"image": "photoJoe casas-1653872277068.png"
+	},
+	{
+		"id": 45,
+		"NombreYapellido": "Pepino Gómez",
+		"Email": "pepino@yahoo.com",
+		"FechaNacimiento": "1963-07-05",
+		"Domicilio": "Calle 4555",
+		"Contraseña": "$2a$10$bcVaKePXQaMsAj2IpFHcBeqrFuLJVF6aGpf.YjYmlB8cKBB.Pp1jy",
+		"image": "photoPepino Gómez-1653873409924.png"
+	},
+	{
+		"id": 46,
+		"NombreYapellido": "Superman",
+		"Email": "super@hotmail.com",
+		"FechaNacimiento": "2003-06-12",
+		"Domicilio": "cara223434",
+		"Contraseña": "$2a$10$tTv.3XRn2gCXCumMMwhl7.8bNQcymFiSAtwzgzb.4Sg9s8GrjgImu",
+		"image": "photoSuperman-1653873919854.png"
+	},
+	{
+		"id": 47,
+		"NombreYapellido": "Batmanlñp",
+		"Email": "batman@gmail.com",
+		"FechaNacimiento": "2005-03-05",
+		"Domicilio": "calle45678989",
+		"Contraseña": "$2a$10$veOuaV6LsgF/6lt.rdETn.aPG2u/VvNDFC9acWEN3d.rwjEVM5Pry",
+		"image": "photoBatmanlñp-1653874018830.png"
 	}
 ]

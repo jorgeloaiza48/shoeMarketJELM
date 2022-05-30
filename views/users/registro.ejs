@@ -7,20 +7,14 @@
                            
                         <div class="form__nombre">
                             <label for="nombre">Nombre y Apellido *</label>
-                            <input type="text" name="Nombre" id="nombre" placeholder=" Introduzca su Nombre y apellido" class="xdsf is-invalid"
-                            value ="<%= locals.oldData ? oldData.Nombre : null%>"
+                            <input type="text" name="nombre" id="nombre" placeholder=" Introduzca su Nombre y apellido" class="xdsf is-invalid"
+                            value ="<%= locals.oldData ? oldData.nombre : null%>"
                             >
-                            <% if (locals.errors && errors.Nombre) {%>
-                                <div class="text-aviso"><%= errors.Nombre.msg %></div>
+                            <% if (locals.errors && errors.nombre) {%>
+                                <div class="text-aviso"><%= errors.nombre.msg %></div>
                             <%}%>
                         </div>
-                        <!-- <div class="form__usuario">
-                            <label for="usuario">Nombre de usuari@ *</label>
-                            <input type="text" name="usuario" id="usuario" placeholder="Introduzca su Nombre de usuari@" value ="<%= locals.oldData ? oldData.usuario : null%>">
-                            <% if (locals.errors && errors.usuario) {%>
-                                <div class="text-aviso"><%= errors.usuario.msg %></div>
-                            <%}%>
-                        </div> -->
+                       
                         <div class="form__usuario">
                             <label for="email">Correo electronico *</label>
                             <input type="email" name="email" id="email" placeholder="Introduzca su Correo electronico"  value ="<%= locals.oldData ? oldData.email : null%>" >
@@ -51,13 +45,7 @@
                                     <div class="text-aviso"><%= errors.pass.msg %></div>
                                 <%}%>
                             </div>
-                            <!-- <div class="form__confirm">
-                                <label class="form__confirm__title" for="pass">Confirmar contraseña *</label>
-                                <input type="password" name="pass2" id="pass" placeholder="Introduzca su contraseña nuevamente">
-                                <% if (locals.errors && errors.pass2) {%>
-                                    <div class="text-aviso"><%= errors.pass2.msg %></div>
-                                <%}%>
-                            </div> -->
+                          
                             <div class="form-create__img">
                                 <label for="photo">Seleccione la foto </label>
                                     <input type="file" name="photo" accept=".jpg,.jpeg,.png,.gif" id="file">

@@ -24,6 +24,7 @@ const storage2 = multer.diskStorage({
 }
 )
 const upload = multer({ storage })
+
 const uploadUser = multer ({storage2})
 
 
@@ -37,6 +38,7 @@ router.get("/index", adminController.index)
 router.get("/lista/usuarios",adminController.userList)
 
 router.get("/usuario/editar/:id",adminController.userEdit)
+
 router.put("/usuario/editar/:id",uploadUser.single("photo"),adminController.userUpdate)
 
 router.delete("/usuario/delete/:id",adminController.userDelete)
