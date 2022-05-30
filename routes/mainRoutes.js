@@ -8,10 +8,6 @@ const productosRoutes = require("./productosRoutes")
 const userRoutes = require("./userRoutes")
 const adminRoutes = require("./adminRoutes")
 
-
-
-
-
 //** router de productos **//
 router.use("/productos", productosRoutes)
 
@@ -22,20 +18,11 @@ router.use("/user",userRoutes)
 router.use("/admin",adminRoutes)
 
 
-
 router.get('/',mainController.index)
-
 router.get('/search',mainController.search)
 
-
-
-
 router.get('/detalle/:id', mainController.detalle)
-
 router.get('/carrito',mainController.carrito)
-
-
-
 
 module.exports = router
 

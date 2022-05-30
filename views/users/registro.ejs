@@ -7,14 +7,20 @@
                            
                         <div class="form__nombre">
                             <label for="nombre">Nombre y Apellido *</label>
-                            <input type="text" name="Nombre" id="nombre" placeholder=" Introduzca su Nombre y apellido" class="xdsf is-invalid"
+                            <input type="text" name="nombre" id="nombre" placeholder=" Introduzca su Nombre y apellido" class="xdsf is-invalid"
                             value ="<%= locals.oldData ? oldData.Nombre : null%>"
                             >
                             <% if (locals.errors && errors.Nombre) {%>
                                 <div class="text-aviso"><%= errors.Nombre.msg %></div>
                             <%}%>
                         </div>
-                       
+                        <!-- <div class="form__usuario">
+                            <label for="usuario">Nombre de usuari@ *</label>
+                            <input type="text" name="usuario" id="usuario" placeholder="Introduzca su Nombre de usuari@" value ="<%= locals.oldData ? oldData.usuario : null%>">
+                            <% if (locals.errors && errors.usuario) {%>
+                                <div class="text-aviso"><%= errors.usuario.msg %></div>
+                            <%}%>
+                        </div> -->
                         <div class="form__usuario">
                             <label for="email">Correo electronico *</label>
                             <input type="email" name="email" id="email" placeholder="Introduzca su Correo electronico"  value ="<%= locals.oldData ? oldData.email : null%>" >
@@ -22,15 +28,22 @@
                                 <div class="text-aviso"><%= errors.email.msg %></div>
                             <%}%>
                         </div>
-                        
+                        <div class="form__fecha">
+                            <label for="fecha">Fecha de nacimiento *</label>
+                            <input type="date" name="fecha" id="fecha" value ="<%= locals.oldData ? oldData.fecha : null%>">
+                            <% if (locals.errors && errors.fecha) {%>
+                                <div class="text-aviso"><%= errors.fecha.msg %></div>
+                            <%}%>
+            
+                        </div>
                         <div class="form__domicilio">
-                            <label for="domicilio">Domicilio de envio  *</label><br>
-                            <input type="text" name="domicilio1" id="domicilio" placeholder=" Introduzca su Domicilio" value ="<%= locals.oldData ? oldData.domicilio1 : null%>">
-                            <% if (locals.errors && errors.domicilio1) {%>
-                                <div class="text-aviso"><%= errors.domicilio1.msg %></div>
+                            <label for="domicilio">Domicilio de envio *</label><br>
+                            <input type="text" name="domicilio" id="domicilio" placeholder=" Introduzca su Domicilio" value ="<%= locals.oldData ? oldData.domicilio : null%>">
+                            <% if (locals.errors && errors.domicilio) {%>
+                                <div class="text-aviso"><%= errors.domicilio.msg %></div>
                             <%}%>
                         </div>
-                        
+                       
                             <div class="form__password">
                                 <label class="form__password__title" for="pass">Contraseña *</label><br>
                                 <input type="password" name="pass" id="pass" placeholder="Introduzca su contraseña">
@@ -38,18 +51,40 @@
                                     <div class="text-aviso"><%= errors.pass.msg %></div>
                                 <%}%>
                             </div>
-                           
+                            <!-- <div class="form__confirm">
+                                <label class="form__confirm__title" for="pass">Confirmar contraseña *</label>
+                                <input type="password" name="pass2" id="pass" placeholder="Introduzca su contraseña nuevamente">
+                                <% if (locals.errors && errors.pass2) {%>
+                                    <div class="text-aviso"><%= errors.pass2.msg %></div>
+                                <%}%>
+                            </div> -->
+                            <div class="form-create__img">
+                                <label for="photo">Seleccione la foto </label>
+                                    <input type="file" name="photo" accept=".jpg,.jpeg,.png,.gif" id="file">
+                                    <% if (locals.errors && errors.photo) {%>
+                                        <div class="text-aviso"><%= errors.photo.msg %></div>
+                                    <%}%><hr>                                           
+                                    <div id="preview"></div>
+                                    
+                                    <script>
+                                        document.getElementById("file").onchange = function(e) {
+                                        let reader = new FileReader();            
+                                        reader.onload = function(){
+                                        let preview = document.getElementById('preview'),
+                                        image = document.createElement('img');
+                                        image.src = reader.result;             
+                                        preview.innerHTML = '';
+                                        preview.append(image);
+                                                              };
+                                        reader.readAsDataURL(e.target.files[0]);
+                                           }    
+                                    </script>
+
                             <div class="contenedor_button" >
                                 <button class="form__button" type="submit" >Borrar</button>
                                 <button class="form__button" type="submit" >Enviar</button>
             
-                            </div>
-            
-            
-            
-            
-            
-            
+                            </div>                                          
             
                     </form>
             

@@ -8,20 +8,24 @@ const Validations = require("../middlewares/Validations")
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
-        cb(null, path.join(__dirname, "../public/img/products"))
+        cb(null, path.join(__dirname, "../public/img/user"))
     },
     filename: function (req, file, cb) {
-        cb(null, file.fieldname + "-" + Date.now() + path.extname(file.originalname))
+        cb(null, file.fieldname + req.body.nombre +"-" + Date.now() + path.extname(file.originalname))
     }
 }
 )
 
-const upload = multer({ storage })
+
+
+
+const upload = multer({storage})
+
 
 
 // **Creación o registro de usuarios**
 router.get('/registro', userController.register)
-router.post('/registro',upload.single('imagenProducto'),Validations, userController.createUser ); 
+router.post('/registro',upload.single("photo"),Validations, userController.createUser ); 
 
 // **Logueo de usuarios**
 router.get('/login',userController.login)

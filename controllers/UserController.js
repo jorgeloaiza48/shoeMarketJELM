@@ -15,12 +15,10 @@ const controller = {
     createUser: function (req, res) {
         let usersFilePath = path.join(__dirname, '../data/users.json');
         let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8')); //de JSON a JS
-
-
         let resultValidation = validationResult(req)
         
         if (resultValidation.errors.length > 0) {
-            return res.render("users/registro", { errors: resultValidation.mapped(),oldData:req.body, title: "Registro" })//mapped convierte un array en un objeto literal
+            return res.render("users/registro", { errors: resultValidation.mapped(),oldData:req.body, title: "Registro de usuario" })//mapped convierte un array en un objeto literal
         }
 
         else {
@@ -30,13 +28,11 @@ const controller = {
             let userForm = {
                 id: idNuevo,
                 NombreYapellido: req.body.Nombre,
-                Usuario: req.body.usuario,
                 Email: req.body.email,
                 FechaNacimiento: req.body.fecha,
-                Domicilio1: req.body.domicilio1,
-                Domicilio2: req.body.domicilio2,
-                Contraseña: req.body.pass,
-                ConfirmarContraseña: req.body.pass2
+                Domicilio: req.body.domicilio,
+                Contraseña: req.body.password,
+                image: req.file.filename                               
             }
 
             let NewUser = []
