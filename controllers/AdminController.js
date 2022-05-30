@@ -69,6 +69,7 @@ const controller = {
     newproduct: (req, res) => {
         const errors = validationResult(req)
              
+        console.log(req.body)
         if (errors.errors.length > 0) {
             return res.render("admin/crearProducto", {
                 errors: errors.mapped(),
@@ -76,7 +77,6 @@ const controller = {
                 title : "Crear Producto"
             })
         } 
-
        
 
         let productInDb = productCrud.findByField("name", req.body.name)
