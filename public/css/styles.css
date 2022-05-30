@@ -73,8 +73,18 @@ footer {
 .lista__categorias:hover ul.lista__productos {
     display: block;
 }
+.logo-form2 {
+    /* border: solid 1px red; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    height: 120px;
+    padding:10px;
+}
 
-
+.texto2{
+    display: none;
+}
 .texto2 p {
     display: flex;
     align-items: center;
@@ -111,10 +121,10 @@ footer {
 }
 
 .principal-logo2 img {
-    display: block;
-    margin-left: auto;
+    /* border: solid 1px blue;  */
+    height: 90px;
     margin-right: auto;
-    width: 150px;
+    width: 20%px;
 }
 
 .input-header {
@@ -123,9 +133,12 @@ footer {
 }
 
 .icono-carrito2 {
-
+    /* border: solid 2px green; */
+    bottom: 0;
     display: flex;
     justify-content: space-around;
+    position: relative;
+    width: 100%;
 }
 
 .icono-carrito2 i {
@@ -135,6 +148,13 @@ footer {
 
 .principal-carrito2 {
     display: none;
+}
+.principal-form-boton2 {    
+    /* border: solid 2px violet;     */
+     width: 100%;
+}
+.principal-form-boton2 input{
+    width: 200px;
 }
 .cont-search-nav3{
     display: flex;
@@ -162,16 +182,16 @@ footer {
     }
 
     .logo-form2 {
+        /* border: solid 1px red; */
         display: flex;
         flex-wrap: wrap;
         position: relative;
         justify-content: space-evenly;
     }
 
-    .principal-form-boton2 {
+    .principal-form-boton2 {        
         text-align: center;
         width: 80%;
-
     }
 
     .principal-form-boton2 form {
@@ -338,13 +358,22 @@ footer {
 }
 
 .section-destacados-admin {
+    border: solid 2px blue;
     text-align: center;
     padding-left: 0px;
     padding-top: 10px;
     padding-bottom: 10px;
     margin-bottom: 20px;
-    width: 50%;
-
+    width: 90%;
+}
+.section-destacados-admin p{
+   padding-left: 11px;
+    text-align: left;
+}
+.section-destacados-admin form{
+    border: solid 2px red;
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .all-product-title-admin {

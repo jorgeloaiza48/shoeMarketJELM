@@ -8,10 +8,10 @@
                         <div class="form__nombre">
                             <label for="nombre">Nombre y Apellido *</label>
                             <input type="text" name="nombre" id="nombre" placeholder=" Introduzca su Nombre y apellido" class="xdsf is-invalid"
-                            value ="<%= locals.oldData ? oldData.Nombre : null%>"
+                            value ="<%= locals.oldData ? oldData.nombre : null%>"
                             >
-                            <% if (locals.errors && errors.Nombre) {%>
-                                <div class="text-aviso"><%= errors.Nombre.msg %></div>
+                            <% if (locals.errors && errors.nombre) {%>
+                                <div class="text-aviso"><%= errors.nombre.msg %></div>
                             <%}%>
                         </div>
                        
