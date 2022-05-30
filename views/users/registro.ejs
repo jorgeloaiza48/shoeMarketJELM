@@ -28,7 +28,6 @@
                                 <div class="text-aviso"><%= errors.email.msg %></div>
                             <%}%>
                         </div>
-<<<<<<< HEAD
                         <div class="form__fecha">
                             <label for="fecha">Fecha de nacimiento *</label>
                             <input type="date" name="fecha" id="fecha" value ="<%= locals.oldData ? oldData.fecha : null%>">
@@ -45,17 +44,6 @@
                             <%}%>
                         </div>
                        
-=======
-                        
-                        <div class="form__domicilio">
-                            <label for="domicilio">Domicilio de envio  *</label><br>
-                            <input type="text" name="domicilio1" id="domicilio" placeholder=" Introduzca su Domicilio" value ="<%= locals.oldData ? oldData.domicilio1 : null%>">
-                            <% if (locals.errors && errors.domicilio1) {%>
-                                <div class="text-aviso"><%= errors.domicilio1.msg %></div>
-                            <%}%>
-                        </div>
-                        
->>>>>>> 2765e9506b1d922dc91ddcbcd0ad96d30280e41f
                             <div class="form__password">
                                 <label class="form__password__title" for="pass">Contraseña *</label><br>
                                 <input type="password" name="pass" id="pass" placeholder="Introduzca su contraseña">

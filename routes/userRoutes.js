@@ -34,7 +34,7 @@ const uploadUser = multer({storage2})
 
 // **Creación o registro de usuarios**
 router.get('/registro', userController.register)
-router.post('/registro',uploadUser.single("photo"),Validations, userController.createUser ); 
+router.post('/registro',uploadProduct.single("photo"),Validations, userController.createUser ); 
 
 // **Logueo de usuarios**
 router.get('/login',userController.login)
