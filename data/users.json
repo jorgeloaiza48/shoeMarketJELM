@@ -25,5 +25,23 @@
 		"Domicilio": "Calle 23",
 		"Contraseña": "fgd365436;JGHKJ)=(/(",
 		"image": "photo-1653866100375.png"
+	},
+	{
+		"id": 42,
+		"NombreYapellido": "carlos Alberto",
+		"Email": "carlos@htomail.com",
+		"FechaNacimiento": "1986-04-23",
+		"Domicilio": "carrera 14",
+		"Contraseña": ".uhlñiuhKUFY=()&/6456",
+		"image": "photo-1653871218269.png"
+	},
+	{
+		"id": 43,
+		"NombreYapellido": "Lucho Gómez",
+		"Email": "lucho@yahoo.com",
+		"FechaNacimiento": "1986-05-12",
+		"Domicilio": "calle 567",
+		"Contraseña": ".hu34)P(&/lkhgkl",
+		"image": "photo-1653871469539.png"
 	}
 ]

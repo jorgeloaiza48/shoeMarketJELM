@@ -373,7 +373,9 @@ footer {
 .section-destacados-admin form{
     border: solid 2px red;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
+    margin: 15px;
+    padding: 10px;
 }
 
 .all-product-title-admin {
