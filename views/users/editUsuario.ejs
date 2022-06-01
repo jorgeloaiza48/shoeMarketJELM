@@ -2,80 +2,61 @@
 <body>
 <%- include("../partials/header") %>
                 <main class="main-register">
-                 
-                    <form  action="/user/registro" method="POST" class="form-Reg" enctype="multipart/form-data">
-                           
-                        <div class="form__nombre">
-                            <label for="nombre">Nombre y Apellido *</label>
-                            <input type="text" name="Nombre" id="nombre" placeholder=" Introduzca su Nombre y apellido" class="xdsf is-invalid"
-                            value ="<%= locals.oldData ? oldData.Nombre : null%>"
-                            >
-                            <% if (locals.errors && errors.Nombre) {%>
-                                <div class="text-aviso"><%= errors.Nombre.msg %></div>
-                            <%}%>
-                        </div>
-                        <div class="form__usuario">
-                            <label for="usuario">Nombre de usuari@ *</label>
-                            <input type="text" name="usuario" id="usuario" placeholder="Introduzca su Nombre de usuari@" value ="<%= locals.oldData ? oldData.usuario : null%>">
-                            <% if (locals.errors && errors.usuario) {%>
-                                <div class="text-aviso"><%= errors.usuario.msg %></div>
-                            <%}%>
-                        </div>
-                        <div class="form__usuario">
-                            <label for="email">Correo electronico *</label>
-                            <input type="email" name="email" id="email" placeholder="Introduzca su Correo electronico"  value ="<%= locals.oldData ? oldData.email : null%>" >
-                            <% if (locals.errors && errors.email) {%>
-                                <div class="text-aviso"><%= errors.email.msg %></div>
-                            <%}%>
-                        </div>
-                        <div class="form__fecha">
-                            <label for="fecha">Fecha de nacimiento</label>
-                            <input type="date" name="fecha" id="fecha" value ="<%= locals.oldData ? oldData.fecha : null%>">
-                            <% if (locals.errors && errors.fecha) {%>
-                                <div class="text-aviso"><%= errors.fecha.msg %></div>
-                            <%}%>
-            
-                        </div>
-                        <div class="form__domicilio">
-                            <label for="domicilio">Domicilio de envio 1 *</label><br>
-                            <input type="text" name="domicilio1" id="domicilio" placeholder=" Introduzca su Domicilio" value ="<%= locals.oldData ? oldData.domicilio1 : null%>">
-                            <% if (locals.errors && errors.domicilio1) {%>
-                                <div class="text-aviso"><%= errors.domicilio1.msg %></div>
-                            <%}%>
-                        </div>
-                        <div class="form__domicilio">
-                            <label for="domicilio">Domicilio de envio 2  </label><br>
-                            <input type="text" name="domicilio2" id="domicilio" placeholder=" Introduzca su Domicilio" value ="<%= locals.oldData ? oldData.domicilio2 : null%>">
-                            <!-- <% if (locals.errors && errors.domicilio2) {%>
-                                <div class="text-aviso"><%= errors.domicilio2.msg %></div>
-                            <%}%> -->
+                
+                    <form action="/admin/usuario/editar/<%= usuario.id%>?_method=PUT" method="post" enctype="multipart/form-data" class="form-edit-user" >
+                        <div class="form-edit-user-img">
+                            <img src="/img/user/<%= usuario.image %>" alt="foto-usuario" >
                         </div>
                         
-                            <div class="form__password">
-                                <label class="form__password__title" for="pass">Contraseña *</label><br>
-                                <input type="password" name="pass" id="pass" placeholder="Introduzca su contraseña">
-                                <% if (locals.errors && errors.pass) {%>
-                                    <div class="text-aviso"><%= errors.pass.msg %></div>
-                                <%}%>
-                            </div>
-                            <div class="form__confirm">
-                                <label class="form__confirm__title" for="pass">Confirmar contraseña *</label>
-                                <input type="password" name="pass2" id="pass" placeholder="Introduzca su contraseña nuevamente">
-                                <% if (locals.errors && errors.pass2) {%>
-                                    <div class="text-aviso"><%= errors.pass2.msg %></div>
-                                <%}%>
-                            </div>
-                            <div class="contenedor_button" >
-                                <button class="form__button" type="submit" >Borrar</button>
-                                <button class="form__button" type="submit" >Enviar</button>
-            
-                            </div>
-            
-            
-            
-            
-            
-            
+                    <div class="form-edit-user-data">
+                        <p><strong>ID :</strong> <%= usuario.id%></p>
+
+                        <div class="form__nombre">
+                            <label for="nombre">Nombre y Apellido</label>
+                            <input type="text" name="Nombre" id="nombre" placeholder=" Introduzca su Nombre y apellido" 
+                            value ="<%= usuario.NombreYapellido%>" >                                                      
+                        </div>
+
+                         <div class="form__nombre"><label for="email">Correo electronico</label>
+                            <input type="email" name="email" id="email" placeholder="Introduzca su Correo electronico"  value ="<%= usuario.Email %>" >
+                         </div>
+
+                        <div class="form__nombre"><label for="fecha">Fecha de nacimiento</label>
+                            <input type="date" name="fecha" id="fecha" value ="<%= usuario.FechaNacimiento %>">                                      
+                        </div>
+
+                         <div class="form__nombre"><label for="domicilio">Domicilio de envio </label><br>
+                            <input type="text" name="domicilio" id="domicilio" value ="<%= usuario.Domicilio %>">
+                        </div>
+                        <div class="form__nombre">
+                            <label for="photo">Nueva foto de perfil</label><br>
+                                    <input type="file" name="photo" accept=".jpg,.jpeg,.png,.gif" id="file">
+                                   <hr>                                           
+                                    <div id="preview"></div>
+                                   <script>
+                                        document.getElementById("file").onchange = function(e) {
+                                        let reader = new FileReader();            
+                                        reader.onload = function(){
+                                        let preview = document.getElementById('preview'),
+                                        image = document.createElement('img');
+                                        image.src = reader.result;             
+                                        preview.innerHTML = '';
+                                        preview.append(image);
+                                                              };
+                                        reader.readAsDataURL(e.target.files[0]);
+                                           }    
+                                    </script>
+                           </div>         
+                    </div>                                    
+
+                         <div class="contenedor_button" >
+                            <button class="form__button" type="submit" >Borrar</button>
+
+                           
+                            <button class="form__button" type="submit" >Enviar</button>
+                          
+        
+                        </div>                   
             
                     </form>
             

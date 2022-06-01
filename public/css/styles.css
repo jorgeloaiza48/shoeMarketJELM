@@ -172,6 +172,12 @@ footer {
   
 #preview img {width:100%;display:block;}
 
+.div-form-delete-edit-users{
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+}
+
 @media(min-width:768px) {
     .principal-logo2 {
         position: relative;
@@ -346,13 +352,17 @@ footer {
 }
 
 .productos-admin {
+    border: solid 2px red;
+    border-radius: 5px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    border-radius: 5px;
+    padding: 5px;
+    margin: 15px;
+  
 }
 
-.productos-admin img {
+.section-destacados-admin img {
     border-radius: 20px;
     width: 150px;
 }
@@ -360,11 +370,11 @@ footer {
 .section-destacados-admin {
     border: solid 2px blue;
     text-align: center;
-    padding-left: 0px;
+    /* padding-left: 0px;
     padding-top: 10px;
     padding-bottom: 10px;
-    margin-bottom: 20px;
-    width: 90%;
+    margin-bottom: 20px; */
+    width: 100%;
 }
 .section-destacados-admin p{
    padding-left: 11px;
@@ -397,13 +407,49 @@ footer {
 
 /* /////////////////////////////Media quiery admin  ///////////////////////////// */
 @media(min-width:768px) {
-    .section-destacados-admin {
-        width: 30%;
+.section-destacados-admin {
+        height: 10%;
+        width: 20%;
     }
+.section-destacados-admin img {
+    height: 300px;
+    max-width: 100%;
+}
+.contenedor_button{
+    /* border: solid 4px green; */
+    display: flex;
+    width: 60%; 
+}
+.form-edit-user{
+    border: solid 1px red;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+    width: 50%;
+}
+.form-edit-user-img img{
+    /* border: solid 5px violet; */
+    max-width: 280px;
+}
+.form-edit-user-data{
+    border: solid 2px blue;    
+    margin-left: 10px;
+    width: 50%;
+}
+.form-edit-user-data p{    
+    text-align: center;
+}
+.form-edit-user-data .form__nombre input{
+    border: solid 1px black;
+}
 
-    .productos-admin img {
-        width: 200px;
-    }
+
+.main-register{
+    display: flex;
+    justify-content: center;
+}
+
 }
 
 @media(min-width:992px) {

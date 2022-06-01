@@ -4,25 +4,23 @@ const path = require("path")
 const fs = require("fs")
 const { validationResult } = require('express-validator')
 const productCrud = require("../models/ProductCrud")
+const { title } = require("process")
 let productsFilePath = path.join(__dirname, '../data/SHOEMARKET.json');
 let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));//JSON a JS
 let categories = ['Borcegos', 'Texanas', 'Guillerminas', 'Bucaneras', 'Gift card', 'Botas']
 let sizes = ["35", "36", "37", "38", "39", "40"]
 let colores = ["Negro", "Crema", "Rojo", "Blanco", "Rosa"]
 
-
+let usersFilePath = path.join(__dirname, '../data/users.json');
+let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));//JSON a JS
 
 
 const controller = {
     index: (req, res) => {
         res.render("admin/indexAdmin", { title: "Admin Index" })
     },
-    userList: (req, res) => {
-
-        let usersFilePath = path.join(__dirname, '../data/users.json');
-        let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));//JSON a JS
+    userList: (req, res) => {        
         let usersJSON = fs.readFileSync(productsFilePath, 'utf-8')
-        // let usuarios = users.find(usuario => usuario.id === parseInt(req.params.id))
         res.render("admin/listaUsuarios", { title: "Edición de usuario", users: users })
 
     },
@@ -162,28 +160,38 @@ const controller = {
                 product.size = req.body.talle
 
                 if (req.file && product.image !== req.file.filename) { product.image = req.file.filename }
-
-
             }
         })
         fs.writeFileSync(productsFilePath, JSON.stringify(products, null, "\t")) //JS a JSON
-
-        res.redirect("/admin/lista/productos")
+        res.redirect("/admin/lista/usuarios")
 
     },
     userEdit: (req, res) => {
+        let usuario = users.find(usuario => usuario.id === parseInt(req.params.id))
+        res.render("users/editUsuario",{title:"Editar usuario", usuario: usuario })},
 
-    },
     userUpdate: (req, res) => {
-
-    },
+        users.find(user => {
+            if (user.id === parseInt(req.params.id)) {
+                user.NombreYapellido = req.body.Nombre
+                user.Email = req.body.email
+                user.FechaNacimiento = req.body.fecha
+                user.Domicilio = req.body.domicilio                                   
+                            
+                if (req.file && user.image !== req.file.filename) {user.image = req.file.filename}
+            }
+        })
+        fs.writeFileSync(usersFilePath, JSON.stringify(users, null, "\t")) //JS a JSON
+        res.send("Usuario Editado con éxito")
+     },
+    
     userDelete: (req, res) => {
         let usersFilePath = path.join(__dirname, '../data/users.json');
         let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8')); //de JSON a JS
         //let newList = products.find(product => product.id === parseInt(req.params.id));// se puede hacer asi tmb
         let newList = users.filter(user => user.id !== parseInt(req.params.id))
         fs.writeFileSync(usersFilePath, JSON.stringify(newList));
-        users = newList
+        // users = newList
         res.redirect("/admin/lista/usuarios")
     },
 
