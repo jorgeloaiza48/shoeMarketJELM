@@ -9,10 +9,10 @@
 
 const path = require('path');
 const fs = require("fs");
-const pathfileName = path.join(__dirname, "../src/data/users.json")// esta es otra forma o sino poniendo dentro de cada metodo
+const pathfileName = path.join(__dirname, "../data/users.json")// esta es otra forma o sino poniendo dentro de cada metodo
 
 const User = {
-    fileName: "../data/users.json",
+    fileName: pathfileName,
     getData: function () {
         return JSON.parse(fs.readFileSync(this.fileName, "utf-8"))
         
@@ -42,10 +42,11 @@ const User = {
     },
     findByField: function (field,text) {
         let allUsers = this.findAll()//obtengo primero a todos los usuarios
+       
         let userFound = allUsers.find(oneUser => 
             oneUser[field] === text)
           
-
+            
         return userFound
         // este metodo para buscar por cualquier campo que yo quiera, como primer
         //parametro pasamos el campo ( id,fullname,email,etc) y como segundo parametro lo que
@@ -78,14 +79,15 @@ const User = {
 module.exports = User
 
 
-console.log("usuario",User.create({
+// console.log("usuario",User.create({
     
-    "NombreYapellido": "Joel",
-    "Usuario": "JOeecasa",
-    "Email": "joecasa@gmail.com",
-    "FechaNacimiento": "4/11/2022",
-    "Domicilio1": "rhoncus dui vel sem sed sagittis nam congue risus semper porta volutpat quam pede",
-    "Domicilio2": "tortor sollicitudin mi sit amet lobortis sapien sapien non mi integer ac neque duis bibendum",
-    "Contraseña": "HDopWnYHR",
-    "ConfirmacionContraseña": "8ETyCSLXlz"
-}))
+//     "NombreYapellido": "Joel",
+//     "Usuario": "JOeecasa",
+//     "Email": "joecasa@gmail.com",
+//     "FechaNacimiento": "4/11/2022",
+//     "Domicilio1": "rhoncus dui vel sem sed sagittis nam congue risus semper porta volutpat quam pede",
+//     "Domicilio2": "tortor sollicitudin mi sit amet lobortis sapien sapien non mi integer ac neque duis bibendum",
+//     "Contraseña": "HDopWnYHR",
+//     "ConfirmacionContraseña": "8ETyCSLXlz"
+// }))
+

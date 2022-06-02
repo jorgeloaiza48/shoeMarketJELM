@@ -1,16 +1,14 @@
 <%- include("../partials/head") %>
 <body>
-<%- include("../partials/header") %>   
+<%- include("../partials/header2") %>   
             <main>
-<h2><%= user.nombre %> </h2>
-<p><%= user.email %> </p>
+<h2><%= user.NombreYapellido %> </h2>
+<p><%= user.Email %> </p>
 <div>
 
-    <img class="img-profile" src="../../images/users/<%=user.avatar%>" alt="">
+    <img class="img-profile" src="../img/user/<%=user.image%>" alt="no anda">
 </div>
 </main>
-<%- include('partials/footer') %>
-    <!-- /footer -->
+<%- include("../partials/footer") %>
 </body>
-
 </html>

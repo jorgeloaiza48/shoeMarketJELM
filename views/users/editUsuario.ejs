@@ -1,71 +1,81 @@
 <%- include("../partials/head") %>
-<body>
-<%- include("../partials/header") %>
-                <main class="main-register">
-                
-                    <form action="/admin/usuario/editar/<%= usuario.id%>?_method=PUT" method="post" enctype="multipart/form-data" class="form-edit-user" >
-                        <div class="form-edit-user-img">
-                            <img src="/img/user/<%= usuario.image %>" alt="foto-usuario" >
-                        </div>
-                        
+
+    <body>
+        <%- include("../partials/header2") %>
+            <main class="main-register">
+
+                <form action="/admin/usuario/editar/<%= usuario.id%>?_method=PUT" method="post" class="form-edit-user"
+                    enctype="multipart/form-data" >
+                    <div class="form-edit-user-img">
+                        <img src="/img/user/<%= usuario.image %>" alt="foto-usuario">
+                    </div>
+
                     <div class="form-edit-user-data">
-                        <p><strong>ID :</strong> <%= usuario.id%></p>
+                        <p><strong>ID :</strong>
+                            <%= usuario.id%>
+                        </p>
 
                         <div class="form__nombre">
                             <label for="nombre">Nombre y Apellido</label>
-                            <input type="text" name="Nombre" id="nombre" placeholder=" Introduzca su Nombre y apellido" 
-                            value ="<%= usuario.NombreYapellido%>" >                                                      
+                            <input type="text" name="Nombre" id="nombre" placeholder=" Introduzca su Nombre y apellido"
+                                value="<%= usuario.NombreYapellido%>">
                         </div>
 
-                         <div class="form__nombre"><label for="email">Correo electronico</label>
-                            <input type="email" name="email" id="email" placeholder="Introduzca su Correo electronico"  value ="<%= usuario.Email %>" >
-                         </div>
+                        <div class="form__nombre"><label for="email">Correo electronico</label>
+                            <input type="email" name="email" id="email" placeholder="Introduzca su Correo electronico"
+                                value="<%= usuario.Email %>">
+                        </div>
 
                         <div class="form__nombre"><label for="fecha">Fecha de nacimiento</label>
-                            <input type="date" name="fecha" id="fecha" value ="<%= usuario.FechaNacimiento %>">                                      
+                            <input type="date" name="fecha" id="fecha" value="<%= usuario.FechaNacimiento %>">
                         </div>
 
-                         <div class="form__nombre"><label for="domicilio">Domicilio de envio </label><br>
-                            <input type="text" name="domicilio" id="domicilio" value ="<%= usuario.Domicilio %>">
+                        <div class="form__nombre"><label for="domicilio">Domicilio de envio </label><br>
+                            <input type="text" name="domicilio" id="domicilio" value="<%= usuario.Domicilio %>">
                         </div>
+
                         <div class="form__nombre">
-                            <label for="photo">Nueva foto de perfil</label><br>
-                                    <input type="file" name="photo" accept=".jpg,.jpeg,.png,.gif" id="file">
-                                   <hr>                                           
-                                    <div id="preview"></div>
-                                   <script>
-                                        document.getElementById("file").onchange = function(e) {
-                                        let reader = new FileReader();            
-                                        reader.onload = function(){
+                            <label for="photo">Nueva foto de perfil
+                                <input type="file" name="photo" accept=".jpg,.jpeg">
+                                <hr>
+                            </label><br>
+                            <div id="preview"></div>
+                               <script>
+                                document.getElementById("file").onchange = function (e) {
+                                    let reader = new FileReader();
+                                    reader.onload = function () {
                                         let preview = document.getElementById('preview'),
-                                        image = document.createElement('img');
-                                        image.src = reader.result;             
+                                            image = document.createElement('img');
+                                        image.src = reader.result;
                                         preview.innerHTML = '';
                                         preview.append(image);
-                                                              };
-                                        reader.readAsDataURL(e.target.files[0]);
-                                           }    
-                                    </script>
-                           </div>         
-                    </div>                                    
+                                    };
+                                    reader.readAsDataURL(e.target.files[0]);
+                                }    
+                                </script>
 
-                         <div class="contenedor_button" >
-                            <button class="form__button" type="submit" >Borrar</button>
+                            </div>
+                        </div>
+                    </div>
 
-                           
-                            <button class="form__button" type="submit" >Enviar</button>
-                          
-        
-                        </div>                   
-            
-                    </form>
-            
-                    <div class="help-button">
-                        <button><i class="fa-solid fa-circle-question"></i> Ayuda</button>
-                      </div>
-            
-                </main>
-            
-                <%- include("../partials/footer") %>
-</body>
-</html>
+                    <div class="contenedor_button">
+                        <button class="form__button" type="submit">Borrar</button>
+
+
+                        <button class="form__button" type="submit">Enviar</button>
+
+
+                    </div>
+
+                </form>
+
+                <div class="help-button">
+                    <button><i class="fa-solid fa-circle-question"></i> Ayuda</button>
+                </div>
+
+            </main>
+
+            <%- include("../partials/footer") %>
+    </body>
+
+    </html>

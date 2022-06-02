@@ -2,6 +2,7 @@ const req = require("express/lib/request")
 const res = require("express/lib/response")
 const path = require("path")
 const fs = require("fs")
+const userCrud = require("../models/UserCrud")
 const bcryptjs = require("bcryptjs")
 const { validationResult } = require('express-validator')
 
@@ -55,17 +56,51 @@ const controller = {
 
     login: (req, res) => { res.render('users/login', { title: "Login" }) },
 
-    processLogin :(req,res) =>{ },
+    processLogin :(req,res) =>{
+		const errors = validationResult(req)
+        
+		let userToLogin = userCrud.findByField("Email", req.body.email)
+       
+		if (userToLogin) {
+			let isOkpassword = bcryptjs.compareSync(req.body.password, userToLogin.Contraseña)
+			if (isOkpassword) {
+				req.session.userLogged = userToLogin
+                console.log("userloged",req.session.userLogged)
+				if(req.body.record){
+					res.cookie("userEmail", req.body.email, {maxAge : (1000 * 60)*2})
+				}
+				return res.redirect("/user/profile")
+			} 
+			res.render("users/login", {
+				errors: {
+					email: {
+						msg: "la credenciales son invalidas"
+					}
+				},old : req.body, title : " login"
+			}
+            )
+		}
+
+		res.render("users/login", {
+			errors: {
+				email: {
+					msg: " No se encuentra ese email en nuestra base de datos"
+				}
+			},old : req.body, title : " login"
+		})
+
+	},
 
     profile :   (req, res) => { 
+        
 		res.render("users/profile",{
-		user : req.session.userLogged
+		user : req.session.userLogged,title:"perfil"
 
 	}) },
 	logout : (req, res) => { 
 		res.clearCookie("userEmail")
 		req.session.destroy() 
-	return res.redirect("/login2")
+	return res.redirect("/user/login")
 	}
 
          

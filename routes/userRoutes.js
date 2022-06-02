@@ -7,6 +7,7 @@ const multer = require("multer")
 const userController = require('../controllers/UserController')
 const Validations = require("../middlewares/Validations")
 
+
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
         cb(null, path.join(__dirname, "../public/img/user"))
@@ -34,6 +35,9 @@ router.post('/registro',upload.single("photo"),Validations, userController.creat
 // **Logueo de usuarios**
 router.get('/login',userController.login)
 router.post("/login",userController.processLogin)
+
+
+router.get("/profile",userController.profile)
 
 // **Edición de usuarios**
 //router.get('/editar',userController.listarUsuarios)

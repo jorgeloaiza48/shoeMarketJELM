@@ -2270,7 +2270,12 @@ i {
     margin-bottom: 20px;
 
 }
-
+.usuario_record{
+    display: block;
+    padding-left: 20px;
+    text-align: left;
+    color: #585656
+}
 .form__usuario input {
     border: none;
     border-radius: 7px;
