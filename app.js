@@ -13,7 +13,7 @@ app.use(session({secret: " shhhh",
 resave: false,
 saveUninitialized: true}))
 //Definiendo pueto y levantando servidor
-let puerto = 4000
+let puerto = 4001
 app.listen(process.env.PORT || puerto, ()=>console.log("Servidor corriendo en el puerto ---> " + puerto))
 
 //configuración para montar en Heroku

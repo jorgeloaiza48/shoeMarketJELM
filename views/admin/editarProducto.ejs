@@ -2,18 +2,21 @@
 
     <body>
         <%- include("../partials/header2") %>
-        <main class="main-register">
-                
-            <form action="/admin/productos/editar/<%=producto.id%>?_method=PUT" method="post" class="form-create" enctype="multipart/form-data">
+            <main class="main-register">
+
+                <form action="/admin/productos/editar/<%=producto.id%>?_method=PUT" method="post" class="form-create"
+                    enctype="multipart/form-data">
                     <div>
-                        <h1 class="crear-title"><%= producto.name %>
+                        <h1 class="crear-title">
+                            <%= producto.name %>
                         </h1>
-                        <img class="img-edit-product" src="../../../img/products/<%= producto.image %>" alt="<%= producto.image %>">
+                        <img class="img-edit-product" src="../../../img/products/<%= producto.image %>"
+                            alt="<%= producto.image %>">
                     </div>
                     <div class="form-create__nombre">
                         <label for="nombre">Nombre del producto *</label>
-                        <input type="text" name="name" id="nombre" placeholder="Nombre del nuevo producto" required value="<%= producto.name %>"
-                            minlength="4">
+                        <input type="text" name="name" id="nombre" placeholder="Nombre del nuevo producto" required
+                            value="<%= producto.name %>" minlength="4">
                     </div>
                     <div class="form-create__descr">
                         <h3>Descripcion del producto*</h3>
@@ -48,44 +51,45 @@
                             <div class="file-select"><input type="file" name="img" accept=".jpg,.jpeg" id="file"></div>
                         </label>
                         <div id="preview"></div>
-                        
+
                         <script>
-                            document.getElementById("file").onchange = function(e) {
-	                        let reader = new FileReader();
+                            document.getElementById("file").onchange = function (e) {
+                                let reader = new FileReader();
 
-                          reader.onload = function(){
-                        let preview = document.getElementById('preview'),
-    		            image = document.createElement('img');
+                                reader.onload = function () {
+                                    let preview = document.getElementById('preview'),
+                                        image = document.createElement('img');
 
-                        image.src = reader.result;
-    
-                        preview.innerHTML = '';
-                        preview.append(image);
-                                                };
- 
-                        reader.readAsDataURL(e.target.files[0]);
-}    
+                                    image.src = reader.result;
+
+                                    preview.innerHTML = '';
+                                    preview.append(image);
+                                };
+
+                                reader.readAsDataURL(e.target.files[0]);
+                            }    
                         </script>
-                   
+
 
 
 
                     </div>
                     <div class="form-create__price">
                         <label for="price">Precio *</label><br>
-                        <input type="number" name="price" id="price" placeholder=" Introduzca el precio" required value="<%= producto.price %>"
-                            minlength="4">
+                        <input type="number" name="price" id="price" placeholder=" Introduzca el precio" required
+                            value="<%= producto.price %>" minlength="4">
                     </div>
                     <div class="form-create__color">
                         <div class="form-create__size__title__div">
                             <label class="form-create__size__title" for="talles">Seleccione los Colores</label>
-                        </div>                                           
-                        <% colores.forEach(color => { %>                            
+                        </div>
+                        <% colores.forEach(color=> { %>
                             <label class="form-create__size__check" for="<%= color %> ">
-                                <input <%= producto.color  && producto.color.includes(color) ? "checked" : "" %> type="checkbox" name="color" id="<%= color %>" value="<%= color %>">
-                                  <%= color %>
-                            </label> 
-                        <% }) %>
+                                <input <%=producto.color && producto.color.includes(color) ? "checked" : "" %>
+                                type="checkbox" name="color" id="<%= color %>" value="<%= color %>">
+                                        <%= color %>
+                            </label>
+                            <% }) %>
 
                     </div>
 
@@ -95,16 +99,18 @@
                         </div>
                         <div class="form-create__cat__div-input">
                             <select name="category" id="categoria" required>
-                                
-                                
-                                <option value="" disabled >Seleccione</option>
-                             
-                    
-                                <% categories.forEach(element => { %>
-                                 
-                              <option <%= producto.category == element ? "selected" : "" %>  value="<%= element %>" > <%= element %> </option>
-                            <% }) %>
-                           
+
+
+                                <option value="" disabled>Seleccione</option>
+
+
+                                <% categories.forEach(element=> { %>
+
+                                    <option <%=producto.category==element ? "selected" : "" %> value="<%= element %>" >
+                                            <%= element %>
+                                    </option>
+                                    <% }) %>
+
                             </select>
 
 
@@ -113,25 +119,26 @@
                     </div>
 
                     <div class="form-create__size">
-                        
+
                         <div class="form-create__size__title__div">
                             <label class="form-create__size__title" for="talles">Seleccione los talles</label>
                         </div>
-                        <% sizes.forEach(size => { %>
-                            
-                            <label class="form-create__size__check" for="<%= size %> ">
-                                <input <%= producto.size  && producto.size.includes(size) ? "checked" : "" %> type="checkbox" name="talle" id="<%= size %>" value="<%= size %>">
-                                <%= size %>
-                            </label>
-                        <% }) %>
+                        <% sizes.forEach(size=> { %>
 
-                       
+                            <label class="form-create__size__check" for="<%= size %> ">
+                                <input <%=producto.size && producto.size.includes(size) ? "checked" : "" %>
+                                type="checkbox" name="talle" id="<%= size %>" value="<%= size %>">
+                                        <%= size %>
+                            </label>
+                            <% }) %>
+
+
                     </div>
 
                     <div class="contenedor_button">
-                
-                    <button class="form__button" type="submit">Borrar</button>
-                    <button type="submit" class="form__button">enviar</button>
+
+                        <button class="form__button" type="submit">Borrar</button>
+                        <button type="submit" class="form__button">enviar</button>
 
                     </div>
                 </form>
