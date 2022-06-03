@@ -2,10 +2,6 @@ const {body} = require('express-validator')
 // const { path } = require('express/lib/application')
 const path = require('path')
 
-
-
-
-
 const validations = [
     body('nombre').notEmpty().withMessage('Debe introducir un nombre y apellido').bail().isLength({min:8}).withMessage('El nombre y apellido debe ser por lo menos de 8 caracteres'),
     body('email').notEmpty().withMessage('Debe introducir un correo electrónico').bail().isEmail().withMessage('Debe ingresar una dirección de correo válida'),

@@ -1,13 +1,5 @@
 [
 	{
-		"id": 1,
-		"NombreYapellido": "Joe casas",
-		"Email": "joe@gmail.com",
-		"FechaNacimiento": "1984-06-12",
-		"Domicilio": "222222222222",
-		"Contraseña": "$2a$10$cH0lvrFGIDXVpyAUqz4hkuWOlJzSEHA3onhZAH4g8IEDqMFX8n7RC"
-	},
-	{
 		"id": 2,
 		"NombreYapellido": "Pepino Gómez",
 		"Email": "pepino@yahoo.com",
@@ -35,31 +27,13 @@
 		"image": "photoLinterna verde-1654005561251.jpg"
 	},
 	{
-		"id": 5,
-		"NombreYapellido": "Joe casas",
-		"Email": "jorge.loaiza@utp.edu.co",
-		"FechaNacimiento": "1989-05-12",
-		"Domicilio": "cra 9",
-		"Contraseña": "$2a$10$wcD3r.rZfc0Vhft4htqRG.hfoiNT8tVpUF5HtyWMX0ABbn.PzC1cC",
-		"image": "photoJoe casas-1654007837934.png"
-	},
-	{
-		"id": 6,
-		"NombreYapellido": "Batman Y Julia",
-		"Email": "eliana@gmaiil.com",
-		"FechaNacimiento": "1632-06-12",
-		"Domicilio": "calle 100",
-		"Contraseña": "$2a$10$6Fu/A4dOdIOPiMefiTAc9u6EmUB5rVy9BylfCK4K7XQt8aw9OSAjO",
-		"image": "photoBatman Y Julia-1654008016950.jpg"
-	},
-	{
 		"id": 7,
 		"NombreYapellido": "Aquaman Y julia",
 		"Email": "aguaman@hotmail.com",
 		"FechaNacimiento": "5698-04-12",
 		"Domicilio": "calle sdfsd5656",
 		"Contraseña": "$2a$10$dIU6In.Pu1A/jZ2bQeKaQeoJ0TWNVv.OgacWx9JK..VpNTRcjRPEK",
-		"image": "photoAquaman Y julia-1654008091529.jpg"
+		"image": "photo-1654261148593.jpg"
 	},
 	{
 		"id": 8,
@@ -89,116 +63,6 @@
 		"image": "photojoelaaaaaaa-1654132258698.jpg"
 	},
 	{
-		"id": 11,
-		"NombreYapellido": "Joel",
-		"Usuario": "JOeecasa",
-		"Email": "joecasa@gmail.com",
-		"FechaNacimiento": "4/11/2022",
-		"Domicilio1": "rhoncus dui vel sem sed sagittis nam congue risus semper porta volutpat quam pede",
-		"Domicilio2": "tortor sollicitudin mi sit amet lobortis sapien sapien non mi integer ac neque duis bibendum",
-		"Contraseña": "HDopWnYHR",
-		"ConfirmacionContraseña": "8ETyCSLXlz"
-	},
-	{
-		"id": 12,
-		"NombreYapellido": "Joel",
-		"Usuario": "JOeecasa",
-		"Email": "joecasa@gmail.com",
-		"FechaNacimiento": "4/11/2022",
-		"Domicilio1": "rhoncus dui vel sem sed sagittis nam congue risus semper porta volutpat quam pede",
-		"Domicilio2": "tortor sollicitudin mi sit amet lobortis sapien sapien non mi integer ac neque duis bibendum",
-		"Contraseña": "HDopWnYHR",
-		"ConfirmacionContraseña": "8ETyCSLXlz"
-	},
-	{
-		"id": 13,
-		"NombreYapellido": "Joel",
-		"Usuario": "JOeecasa",
-		"Email": "joecasa@gmail.com",
-		"FechaNacimiento": "4/11/2022",
-		"Domicilio1": "rhoncus dui vel sem sed sagittis nam congue risus semper porta volutpat quam pede",
-		"Domicilio2": "tortor sollicitudin mi sit amet lobortis sapien sapien non mi integer ac neque duis bibendum",
-		"Contraseña": "HDopWnYHR",
-		"ConfirmacionContraseña": "8ETyCSLXlz"
-	},
-	{
-		"id": 14,
-		"NombreYapellido": "Joel",
-		"Usuario": "JOeecasa",
-		"Email": "joecasa@gmail.com",
-		"FechaNacimiento": "4/11/2022",
-		"Domicilio1": "rhoncus dui vel sem sed sagittis nam congue risus semper porta volutpat quam pede",
-		"Domicilio2": "tortor sollicitudin mi sit amet lobortis sapien sapien non mi integer ac neque duis bibendum",
-		"Contraseña": "HDopWnYHR",
-		"ConfirmacionContraseña": "8ETyCSLXlz"
-	},
-	{
-		"id": 15,
-		"NombreYapellido": "Joel",
-		"Usuario": "JOeecasa",
-		"Email": "joecasa@gmail.com",
-		"FechaNacimiento": "4/11/2022",
-		"Domicilio1": "rhoncus dui vel sem sed sagittis nam congue risus semper porta volutpat quam pede",
-		"Domicilio2": "tortor sollicitudin mi sit amet lobortis sapien sapien non mi integer ac neque duis bibendum",
-		"Contraseña": "HDopWnYHR",
-		"ConfirmacionContraseña": "8ETyCSLXlz"
-	},
-	{
-		"id": 16,
-		"NombreYapellido": "Joel",
-		"Usuario": "JOeecasa",
-		"Email": "joecasa@gmail.com",
-		"FechaNacimiento": "4/11/2022",
-		"Domicilio1": "rhoncus dui vel sem sed sagittis nam congue risus semper porta volutpat quam pede",
-		"Domicilio2": "tortor sollicitudin mi sit amet lobortis sapien sapien non mi integer ac neque duis bibendum",
-		"Contraseña": "HDopWnYHR",
-		"ConfirmacionContraseña": "8ETyCSLXlz"
-	},
-	{
-		"id": 17,
-		"NombreYapellido": "Joel",
-		"Usuario": "JOeecasa",
-		"Email": "joecasa@gmail.com",
-		"FechaNacimiento": "4/11/2022",
-		"Domicilio1": "rhoncus dui vel sem sed sagittis nam congue risus semper porta volutpat quam pede",
-		"Domicilio2": "tortor sollicitudin mi sit amet lobortis sapien sapien non mi integer ac neque duis bibendum",
-		"Contraseña": "HDopWnYHR",
-		"ConfirmacionContraseña": "8ETyCSLXlz"
-	},
-	{
-		"id": 18,
-		"NombreYapellido": "Joel",
-		"Usuario": "JOeecasa",
-		"Email": "joecasa@gmail.com",
-		"FechaNacimiento": "4/11/2022",
-		"Domicilio1": "rhoncus dui vel sem sed sagittis nam congue risus semper porta volutpat quam pede",
-		"Domicilio2": "tortor sollicitudin mi sit amet lobortis sapien sapien non mi integer ac neque duis bibendum",
-		"Contraseña": "HDopWnYHR",
-		"ConfirmacionContraseña": "8ETyCSLXlz"
-	},
-	{
-		"id": 19,
-		"NombreYapellido": "Joel",
-		"Usuario": "JOeecasa",
-		"Email": "joecasa@gmail.com",
-		"FechaNacimiento": "4/11/2022",
-		"Domicilio1": "rhoncus dui vel sem sed sagittis nam congue risus semper porta volutpat quam pede",
-		"Domicilio2": "tortor sollicitudin mi sit amet lobortis sapien sapien non mi integer ac neque duis bibendum",
-		"Contraseña": "HDopWnYHR",
-		"ConfirmacionContraseña": "8ETyCSLXlz"
-	},
-	{
-		"id": 20,
-		"NombreYapellido": "Joel",
-		"Usuario": "JOeecasa",
-		"Email": "joecasa@gmail.com",
-		"FechaNacimiento": "4/11/2022",
-		"Domicilio1": "rhoncus dui vel sem sed sagittis nam congue risus semper porta volutpat quam pede",
-		"Domicilio2": "tortor sollicitudin mi sit amet lobortis sapien sapien non mi integer ac neque duis bibendum",
-		"Contraseña": "HDopWnYHR",
-		"ConfirmacionContraseña": "8ETyCSLXlz"
-	},
-	{
 		"id": 21,
 		"NombreYapellido": "Joel",
 		"Usuario": "JOeecasa",
@@ -211,17 +75,6 @@
 	},
 	{
 		"id": 22,
-		"NombreYapellido": "Joel",
-		"Usuario": "JOeecasa",
-		"Email": "joecasa@gmail.com",
-		"FechaNacimiento": "4/11/2022",
-		"Domicilio1": "rhoncus dui vel sem sed sagittis nam congue risus semper porta volutpat quam pede",
-		"Domicilio2": "tortor sollicitudin mi sit amet lobortis sapien sapien non mi integer ac neque duis bibendum",
-		"Contraseña": "HDopWnYHR",
-		"ConfirmacionContraseña": "8ETyCSLXlz"
-	},
-	{
-		"id": 23,
 		"NombreYapellido": "Joel",
 		"Usuario": "JOeecasa",
 		"Email": "joecasa@gmail.com",
@@ -288,17 +141,6 @@
 	},
 	{
 		"id": 29,
-		"NombreYapellido": "Joel",
-		"Usuario": "JOeecasa",
-		"Email": "joecasa@gmail.com",
-		"FechaNacimiento": "4/11/2022",
-		"Domicilio1": "rhoncus dui vel sem sed sagittis nam congue risus semper porta volutpat quam pede",
-		"Domicilio2": "tortor sollicitudin mi sit amet lobortis sapien sapien non mi integer ac neque duis bibendum",
-		"Contraseña": "HDopWnYHR",
-		"ConfirmacionContraseña": "8ETyCSLXlz"
-	},
-	{
-		"id": 30,
 		"NombreYapellido": "Joel",
 		"Usuario": "JOeecasa",
 		"Email": "joecasa@gmail.com",
@@ -441,199 +283,48 @@
 		"ConfirmacionContraseña": "8ETyCSLXlz"
 	},
 	{
-		"id": 43,
-		"NombreYapellido": "Joel",
-		"Usuario": "JOeecasa",
-		"Email": "joecasa@gmail.com",
-		"FechaNacimiento": "4/11/2022",
-		"Domicilio1": "rhoncus dui vel sem sed sagittis nam congue risus semper porta volutpat quam pede",
-		"Domicilio2": "tortor sollicitudin mi sit amet lobortis sapien sapien non mi integer ac neque duis bibendum",
-		"Contraseña": "HDopWnYHR",
-		"ConfirmacionContraseña": "8ETyCSLXlz"
-	},
-	{
-		"id": 44,
-		"NombreYapellido": "Joel",
-		"Usuario": "JOeecasa",
-		"Email": "joecasa@gmail.com",
-		"FechaNacimiento": "4/11/2022",
-		"Domicilio1": "rhoncus dui vel sem sed sagittis nam congue risus semper porta volutpat quam pede",
-		"Domicilio2": "tortor sollicitudin mi sit amet lobortis sapien sapien non mi integer ac neque duis bibendum",
-		"Contraseña": "HDopWnYHR",
-		"ConfirmacionContraseña": "8ETyCSLXlz"
-	},
-	{
-		"id": 45,
-		"NombreYapellido": "Joel",
-		"Usuario": "JOeecasa",
-		"Email": "joecasa@gmail.com",
-		"FechaNacimiento": "4/11/2022",
-		"Domicilio1": "rhoncus dui vel sem sed sagittis nam congue risus semper porta volutpat quam pede",
-		"Domicilio2": "tortor sollicitudin mi sit amet lobortis sapien sapien non mi integer ac neque duis bibendum",
-		"Contraseña": "HDopWnYHR",
-		"ConfirmacionContraseña": "8ETyCSLXlz"
-	},
-	{
-		"id": 46,
-		"NombreYapellido": "Joel",
-		"Usuario": "JOeecasa",
-		"Email": "joecasa@gmail.com",
-		"FechaNacimiento": "4/11/2022",
-		"Domicilio1": "rhoncus dui vel sem sed sagittis nam congue risus semper porta volutpat quam pede",
-		"Domicilio2": "tortor sollicitudin mi sit amet lobortis sapien sapien non mi integer ac neque duis bibendum",
-		"Contraseña": "HDopWnYHR",
-		"ConfirmacionContraseña": "8ETyCSLXlz"
-	},
-	{
-		"id": 47,
-		"NombreYapellido": "Joel",
-		"Usuario": "JOeecasa",
-		"Email": "joecasa@gmail.com",
-		"FechaNacimiento": "4/11/2022",
-		"Domicilio1": "rhoncus dui vel sem sed sagittis nam congue risus semper porta volutpat quam pede",
-		"Domicilio2": "tortor sollicitudin mi sit amet lobortis sapien sapien non mi integer ac neque duis bibendum",
-		"Contraseña": "HDopWnYHR",
-		"ConfirmacionContraseña": "8ETyCSLXlz"
-	},
-	{
-		"id": 48,
-		"NombreYapellido": "Joel",
-		"Usuario": "JOeecasa",
-		"Email": "joecasa@gmail.com",
-		"FechaNacimiento": "4/11/2022",
-		"Domicilio1": "rhoncus dui vel sem sed sagittis nam congue risus semper porta volutpat quam pede",
-		"Domicilio2": "tortor sollicitudin mi sit amet lobortis sapien sapien non mi integer ac neque duis bibendum",
-		"Contraseña": "HDopWnYHR",
-		"ConfirmacionContraseña": "8ETyCSLXlz"
-	},
-	{
-		"id": 49,
-		"NombreYapellido": "Joel",
-		"Usuario": "JOeecasa",
-		"Email": "joecasa@gmail.com",
-		"FechaNacimiento": "4/11/2022",
-		"Domicilio1": "rhoncus dui vel sem sed sagittis nam congue risus semper porta volutpat quam pede",
-		"Domicilio2": "tortor sollicitudin mi sit amet lobortis sapien sapien non mi integer ac neque duis bibendum",
-		"Contraseña": "HDopWnYHR",
-		"ConfirmacionContraseña": "8ETyCSLXlz"
-	},
-	{
-		"id": 50,
-		"NombreYapellido": "Joel",
-		"Usuario": "JOeecasa",
-		"Email": "joecasa@gmail.com",
-		"FechaNacimiento": "4/11/2022",
-		"Domicilio1": "rhoncus dui vel sem sed sagittis nam congue risus semper porta volutpat quam pede",
-		"Domicilio2": "tortor sollicitudin mi sit amet lobortis sapien sapien non mi integer ac neque duis bibendum",
-		"Contraseña": "HDopWnYHR",
-		"ConfirmacionContraseña": "8ETyCSLXlz"
-	},
-	{
-		"id": 51,
-		"NombreYapellido": "Joel",
-		"Usuario": "JOeecasa",
-		"Email": "joecasa@gmail.com",
-		"FechaNacimiento": "4/11/2022",
-		"Domicilio1": "rhoncus dui vel sem sed sagittis nam congue risus semper porta volutpat quam pede",
-		"Domicilio2": "tortor sollicitudin mi sit amet lobortis sapien sapien non mi integer ac neque duis bibendum",
-		"Contraseña": "HDopWnYHR",
-		"ConfirmacionContraseña": "8ETyCSLXlz"
-	},
-	{
-		"id": 52,
-		"NombreYapellido": "Joel",
-		"Usuario": "JOeecasa",
-		"Email": "joecasa@gmail.com",
-		"FechaNacimiento": "4/11/2022",
-		"Domicilio1": "rhoncus dui vel sem sed sagittis nam congue risus semper porta volutpat quam pede",
-		"Domicilio2": "tortor sollicitudin mi sit amet lobortis sapien sapien non mi integer ac neque duis bibendum",
-		"Contraseña": "HDopWnYHR",
-		"ConfirmacionContraseña": "8ETyCSLXlz"
-	},
-	{
-		"id": 53,
-		"NombreYapellido": "Joel",
-		"Usuario": "JOeecasa",
-		"Email": "joecasa@gmail.com",
-		"FechaNacimiento": "4/11/2022",
-		"Domicilio1": "rhoncus dui vel sem sed sagittis nam congue risus semper porta volutpat quam pede",
-		"Domicilio2": "tortor sollicitudin mi sit amet lobortis sapien sapien non mi integer ac neque duis bibendum",
-		"Contraseña": "HDopWnYHR",
-		"ConfirmacionContraseña": "8ETyCSLXlz"
-	},
-	{
-		"id": 54,
-		"NombreYapellido": "Joel",
-		"Usuario": "JOeecasa",
-		"Email": "joecasa@gmail.com",
-		"FechaNacimiento": "4/11/2022",
-		"Domicilio1": "rhoncus dui vel sem sed sagittis nam congue risus semper porta volutpat quam pede",
-		"Domicilio2": "tortor sollicitudin mi sit amet lobortis sapien sapien non mi integer ac neque duis bibendum",
-		"Contraseña": "HDopWnYHR",
-		"ConfirmacionContraseña": "8ETyCSLXlz"
-	},
-	{
-		"id": 55,
-		"NombreYapellido": "Joel",
-		"Usuario": "JOeecasa",
-		"Email": "joecasa@gmail.com",
-		"FechaNacimiento": "4/11/2022",
-		"Domicilio1": "rhoncus dui vel sem sed sagittis nam congue risus semper porta volutpat quam pede",
-		"Domicilio2": "tortor sollicitudin mi sit amet lobortis sapien sapien non mi integer ac neque duis bibendum",
-		"Contraseña": "HDopWnYHR",
-		"ConfirmacionContraseña": "8ETyCSLXlz"
-	},
-	{
-		"id": 56,
-		"NombreYapellido": "Joel",
-		"Usuario": "JOeecasa",
-		"Email": "joecasa@gmail.com",
-		"FechaNacimiento": "4/11/2022",
-		"Domicilio1": "rhoncus dui vel sem sed sagittis nam congue risus semper porta volutpat quam pede",
-		"Domicilio2": "tortor sollicitudin mi sit amet lobortis sapien sapien non mi integer ac neque duis bibendum",
-		"Contraseña": "HDopWnYHR",
-		"ConfirmacionContraseña": "8ETyCSLXlz"
-	},
-	{
-		"id": 57,
-		"NombreYapellido": "Joel",
-		"Usuario": "JOeecasa",
-		"Email": "joecasa@gmail.com",
-		"FechaNacimiento": "4/11/2022",
-		"Domicilio1": "rhoncus dui vel sem sed sagittis nam congue risus semper porta volutpat quam pede",
-		"Domicilio2": "tortor sollicitudin mi sit amet lobortis sapien sapien non mi integer ac neque duis bibendum",
-		"Contraseña": "HDopWnYHR",
-		"ConfirmacionContraseña": "8ETyCSLXlz"
-	},
-	{
-		"id": 58,
-		"NombreYapellido": "Joel",
-		"Usuario": "JOeecasa",
-		"Email": "joecasa@gmail.com",
-		"FechaNacimiento": "4/11/2022",
-		"Domicilio1": "rhoncus dui vel sem sed sagittis nam congue risus semper porta volutpat quam pede",
-		"Domicilio2": "tortor sollicitudin mi sit amet lobortis sapien sapien non mi integer ac neque duis bibendum",
-		"Contraseña": "HDopWnYHR",
-		"ConfirmacionContraseña": "8ETyCSLXlz"
-	},
-	{
-		"id": 59,
-		"NombreYapellido": "Joel",
-		"Usuario": "JOeecasa",
-		"Email": "joecasa@gmail.com",
-		"FechaNacimiento": "4/11/2022",
-		"Domicilio1": "rhoncus dui vel sem sed sagittis nam congue risus semper porta volutpat quam pede",
-		"Domicilio2": "tortor sollicitudin mi sit amet lobortis sapien sapien non mi integer ac neque duis bibendum",
-		"Contraseña": "HDopWnYHR",
-		"ConfirmacionContraseña": "8ETyCSLXlz"
-	},
-	{
 		"id": 60,
 		"NombreYapellido": "joel casa",
 		"Email": "joeecasa@gmail.com",
 		"FechaNacimiento": "1993-04-28",
 		"Domicilio": "joelcasa",
 		"Contraseña": "$2a$10$zzaI3kJnc/jp9iMQoIcHweJxsA41h.l/nGyT/38qT.My7/dWa/LxG",
-		"image": "photojoel casa-1654137447548.jpg"
+		"image": "photo-1654202763889.jpg"
+	},
+	{
+		"id": 61,
+		"NombreYapellido": "Leono y Pantro",
+		"Email": "leono@yahoo.com",
+		"FechaNacimiento": "1986-05-12",
+		"Domicilio": "calle tercer mundo",
+		"Contraseña": "$2a$10$nfqGvJc02mD/Vvtnjs.Gsuzw/N34OEPTFb/V1DpcC.qXBmuzgnvvi",
+		"image": "photoLeono y Pantro-1654203047677.png"
+	},
+	{
+		"id": 62,
+		"NombreYapellido": "Pipe lón",
+		"Email": "pipe@gmail.com",
+		"FechaNacimiento": "2006-07-23",
+		"Domicilio": "transversal 600",
+		"Contraseña": "$2a$10$HhhmwqwBFPDx2vdliovU3e..7GR2jZhMNjxK.N0j9CDlg0AQAxWsG",
+		"image": "photoPipe lón-1654203686749.png"
+	},
+	{
+		"id": 63,
+		"NombreYapellido": "Pepe Roni",
+		"Email": "pepe@gmail.com",
+		"FechaNacimiento": "2306-05-12",
+		"Domicilio": "calle 34",
+		"Contraseña": "$2a$10$oHu5d2KQ4ZpnSmDl7oA2gOZGoVtWvlB5Y9.LISyB7/pCb/FcBQRJO",
+		"image": "photoPepe Roni-1654258572339.png"
+	},
+	{
+		"id": 64,
+		"NombreYapellido": "San cudo",
+		"Email": "zancudo@gmail.com",
+		"FechaNacimiento": "1956-02-04",
+		"Domicilio": "Carrera 8789",
+		"Contraseña": "$2a$10$qRmVvjzX8Wk/4El.S19DH.4bkXF14YZO.NOtDcn4VBq.YM7yzb54C",
+		"image": "photoSan cudo-1654261767946.png"
 	}
 ]

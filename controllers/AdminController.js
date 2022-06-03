@@ -5,6 +5,8 @@ const fs = require("fs")
 const { validationResult } = require('express-validator')
 const productCrud = require("../models/ProductCrud")
 const { title } = require("process")
+
+
 let productsFilePath = path.join(__dirname, '../data/SHOEMARKET.json');
 let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));//JSON a JS
 let categories = ['Borcegos', 'Texanas', 'Guillerminas', 'Bucaneras', 'Gift card', 'Botas']
@@ -195,8 +197,7 @@ const controller = {
         let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8')); //de JSON a JS
         //let newList = products.find(product => product.id === parseInt(req.params.id));// se puede hacer asi tmb
         let newList = users.filter(user => user.id !== parseInt(req.params.id))
-        fs.writeFileSync(usersFilePath, JSON.stringify(newList));
-        // users = newList
+        fs.writeFileSync(usersFilePath, JSON.stringify(newList));                
         res.redirect("/admin/lista/usuarios")
     },
 

@@ -35,3 +35,6 @@ En conversación telefónica, discutimos algunos aspectos a mejorar en el index 
 
 Reunión 24-5-2022
 Vía videollamada analizamos las observaciones realizadas el lunes 23 de mayo después de hacer la presentación del trabajo realizado en el proyecto. Distribuimos la realización de estas observaciones para poner al día el sitio.
+
+Reunión 2-6-2022
+Estuvimos hablando sobre la organización del quinto SPRINT 

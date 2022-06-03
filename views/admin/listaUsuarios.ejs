@@ -4,7 +4,7 @@
         <%- include("../partials/header2") %>
 
             <!-- *****************************INICIO MAIN****************************************** -->
-
+            
             <main class="main-admin">
                 <h3 class="all-product-title" >Usuarios Registrados</h3>
                     <div class="productos-admin">                       
@@ -15,10 +15,10 @@
                                                                                   
                                            <img src="../../img/user/<%= usuario.image %>" alt="foto-usuario" >
                                             <P><STRONG>ID: </STRONG><%= usuario.id %></P>
-                                            <p><strong>Nombres y apellidos:</strong> <%= usuario.NombreYapellido %></p>
-                                            <p><strong>Correo Electrónico:</strong> <%= usuario.Email %></p>
-                                            <p><strong>Fecha de nacimiento: </strong> <%= usuario.FechaNacimiento %></p>
-                                            <p><strong>Dirección: </strong> <%= usuario.Domicilio %></p>
+                                            <p><strong>Nombres y apellidos:</strong><br> <%= usuario.NombreYapellido %></p>
+                                            <p><strong>Correo Electrónico:</strong><br> <%= usuario.Email %></p>
+                                            <p><strong>Fecha de nacimiento: </strong><br> <%= usuario.FechaNacimiento %></p>
+                                            <p><strong>Dirección: </strong><br> <%= usuario.Domicilio %></p>
                                         
                                             
                                             <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -39,8 +39,7 @@
                                         <button type="submit" name="editar" id="delete" class="admin-but">EDITAR</button>
                                      </form>
                                  </div>      
-                             
-                                            
+                                                                  
                                     </section> 
                                 <!-- </div> -->
                             <% }) %>
@@ -52,10 +51,7 @@
 
             <!-- ********************************FIN MAIN***************************************** -->
             <%- include("../partials/footer") %>
-            <script src="/views/admin/userDeleteConfirm.js"></script>
-            <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-           
-            
+            <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>            
             
     </body>
 
