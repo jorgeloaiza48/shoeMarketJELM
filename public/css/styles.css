@@ -159,10 +159,30 @@ footer {
 #preview img {width:100%;display:block;}
 
 .div-form-delete-edit-users{
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
+    /* border: solid 2px red; */
+    display: flex;   
+    justify-content: center; 
+    height: 45px;    
+    margin: 2px;
+    position: inherit;
 }
+
+.div-form-delete-edit-users form {
+    /* border: solid 2px green;   */
+    width: 25%;   
+}
+.div-form-delete-edit-users button{
+    margin-top: -20px;  
+}
+.div-form-delete-edit-users button p{
+    color: black;
+    text-align: center;
+    margin-top: 5px;
+}
+
+
+
+
 
 @media(min-width:768px) {
     .principal-logo2 {
@@ -338,30 +358,26 @@ justify-content: center;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 15px;
+    padding: 5px;
     margin: 15px;  
 }
 
 .section-destacados-admin img {
-    /* border: solid 2px green; */
+    border: solid 2px green;
     border-radius: 20px;
-    height: 50%;
-    width: 100%;
+    height: 80px;
+    width: 60%;
 }
 
 .section-destacados-admin {
-    /* border: solid 2px blue; */
-    margin: 15px;
-    /* padding: 10px; */
-    text-align: center;
-    /* padding-left: 0px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    margin-bottom: 20px; */
-    width: 100%;
+    border: solid 2px gainsboro;
+    height: 2%;
+    margin: 5px;
+    text-align: center;   
+    width: 45%;
 }
 .section-destacados-admin p{
-   padding-left: 11px;
+  font-size:x-small;
     text-align: left;
 }
 .section-destacados-admin form{
