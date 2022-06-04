@@ -920,29 +920,7 @@
 			"38"
 		]
 	},
-	{
-		"id": 40,
-		"name": "Guillermina5",
-		"price": 39650,
-		"category": "Guillerminas",
-		"color": [
-			"Negro",
-			"Rosa"
-		],
-		"description": {
-			"Material": "Plástico",
-			"Alturabase": "2cm",
-			"Alturataco": "3cm",
-			"Alturacana": "1 cm",
-			"Colores": ""
-		},
-		"image": "photo-1653669866440.jpg",
-		"size": [
-			"35",
-			"39",
-			"40"
-		]
-	},
+	
 	{
 		"id": 41,
 		"name": "justo 123",
