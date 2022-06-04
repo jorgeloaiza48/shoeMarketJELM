@@ -1,14 +1,31 @@
 <%- include("../partials/head") %>
-<body>
-<%- include("../partials/header2") %>   
-            <main>
-<h2><%= user.NombreYapellido %> </h2>
-<p><%= user.Email %> </p>
-<div>
 
-    <img class="img-profile" src="../img/user/<%=user.image%>" alt="no anda">
-</div>
-</main>
-<%- include("../partials/footer") %>
-</body>
-</html>
+    <body>
+        <%- include("../partials/header2") %>
+            <main class="prof-main">
+                <h2>
+                    Hola
+                    <%= user.nombre %>
+                </h2>
+                <p>
+                    <%= user.email %>
+                </p>
+                <div>
+
+                    <img class="img-profile" src="../img/user/<%=user.image%>" alt="no anda">
+                </div>
+
+                <form class="prof-form" action="/admin/usuario/editar/<%=user.id %>" method="get">
+                    <button type="submit" name="editar" id="editar" class="profile-but">Editar mi usuario</button>
+                </form>
+                <form class="prof-form" action="/user/logout" method="get">
+                    <button type="submit" name="logout" id="logout" class="profile-but">Cerrar sesion</button>
+                </form>
+                </div>
+               
+
+            </main>
+            <%- include("../partials/footer") %>
+    </body>
+
+    </html>

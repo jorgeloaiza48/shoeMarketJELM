@@ -69,7 +69,7 @@ const controller = {
     newproduct: (req, res) => {
         const errors = validationResult(req)
 
-        console.log(req.body)
+       
         if (errors.errors.length > 0) {
             return res.render("admin/crearProducto", {
                 errors: errors.mapped(),
@@ -162,7 +162,7 @@ const controller = {
                 product.size = req.body.talle
 
                 if (req.file && product.image !== req.file.filename) { product.image = req.file.filename }
-                console.log(req.file)
+                
             }
         })
         fs.writeFileSync(productsFilePath, JSON.stringify(products, null, "\t")) //JS a JSON
@@ -185,7 +185,7 @@ const controller = {
                 user.Domicilio = req.body.domicilio
 
                 if (req.file && user.image !== req.file.filename) { user.image = req.file.filename }
-                console.log(req.file)
+                
             }
         })
         fs.writeFileSync(usersFilePath, JSON.stringify(users, null, "\t")) //JS a JSON

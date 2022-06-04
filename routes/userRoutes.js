@@ -6,6 +6,8 @@ const multer = require("multer")
 
 const userController = require('../controllers/UserController')
 const Validations = require("../middlewares/Validations")
+const guestMiddleware = require("../middlewares/GuestMiddleware")
+const authMiddleware = require("../middlewares/AuthMiddleware")
 
 
 const storage = multer.diskStorage({
@@ -26,18 +28,20 @@ const upload = multer({storage})
 
 
 // **Creación o registro de usuarios**
-router.get('/registro', userController.register)
+router.get('/registro',guestMiddleware, userController.register)
 router.post('/registro',upload.single("photo"),Validations, userController.createUser ); 
 
 // **Eliminación de usuarios**
 // router.post('/borrar',userController.borrarUsuario); 
 
 // **Logueo de usuarios**
-router.get('/login',userController.login)
+router.get('/login',guestMiddleware,userController.login)
 router.post("/login",userController.processLogin)
 
 
-router.get("/profile",userController.profile)
+router.get("/profile",authMiddleware,userController.profile)
+
+router.get("/logout",userController.logout)
 
 // **Edición de usuarios**
 //router.get('/editar',userController.listarUsuarios)

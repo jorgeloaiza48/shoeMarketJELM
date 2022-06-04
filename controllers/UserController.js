@@ -25,15 +25,16 @@ const controller = {
 
         else {
             let ultimoElemento = users.length - 1
+            
             let idNuevo = users[ultimoElemento].id + 1
 
             let userForm = {
                 id: idNuevo,
-                NombreYapellido: req.body.nombre,
-                Email: req.body.email,
-                FechaNacimiento: req.body.fecha,
-                Domicilio: req.body.domicilio,
-                Contraseña: bcryptjs.hashSync(req.body.pass, 10),
+                nombre: req.body.nombre,
+                email: req.body.email,
+                fechaNacimiento: req.body.fecha,
+                domicilio: req.body.domicilio,
+                contraseña: bcryptjs.hashSync(req.body.pass, 10),
                 image: req.file.filename                               
             }
 
@@ -59,13 +60,13 @@ const controller = {
     processLogin :(req,res) =>{
 		const errors = validationResult(req)
         
-		let userToLogin = userCrud.findByField("Email", req.body.email)
+		let userToLogin = userCrud.findByField("email", req.body.email)
        
 		if (userToLogin) {
-			let isOkpassword = bcryptjs.compareSync(req.body.password, userToLogin.Contraseña)
+			let isOkpassword = bcryptjs.compareSync(req.body.password, userToLogin.contraseña)
 			if (isOkpassword) {
 				req.session.userLogged = userToLogin
-                console.log("userloged",req.session.userLogged)
+                
 				if(req.body.record){
 					res.cookie("userEmail", req.body.email, {maxAge : (1000 * 60)*2})
 				}
