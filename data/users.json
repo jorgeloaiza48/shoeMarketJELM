@@ -6,7 +6,11 @@
 		"fechaNacimiento": "1993-04-28",
 		"domicilio": "la ",
 		"contraseña": "$2a$10$7y5dGTrMrpP8Z4R8xriiUOn1f/2RErsCkQKzlvbtUhuk6S6bJ5TZK",
-		"image": "photo-1654365294578.jpg"
+		"image": "photo-1654552991635.jpg",
+		"NombreYapellido": "aaaa",
+		"Email": "joeecasa@gmail.com",
+		"FechaNacimiento": "",
+		"Domicilio": ""
 	},
 	{
 		"id": 2,

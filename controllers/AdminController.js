@@ -68,7 +68,7 @@ const controller = {
 
     newproduct: (req, res) => {
         const errors = validationResult(req)
-
+        console.log(req.file)
        
         if (errors.errors.length > 0) {
             return res.render("admin/crearProducto", {
@@ -90,6 +90,7 @@ const controller = {
                 },
                 old: req.body,
                 title: "Crear Producto"
+                
             })
         }
 
@@ -109,7 +110,7 @@ const controller = {
             size: req.body.size
 
         }
-
+       
         let productCreated = productCrud.create(productToCreate)
 
 

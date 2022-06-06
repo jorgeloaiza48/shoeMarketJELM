@@ -52,11 +52,11 @@
                 <div class="form-create__img">
                     <label for="photo">Seleccione la foto </label>
                    
-                        <input type="file" name="photo" accept=".jpg,.jpeg"  id="file">    
+                        <input type="file" name="img" accept=".jpg,.jpeg"  id="file">    
                    
                     </div>
-                          <% if (locals.errors && errors.photo) {%>
-                              <div class="text-aviso"><%= errors.photo.msg %></div>
+                          <% if (locals.errors && errors.img) {%>
+                              <div class="text-aviso"><%= errors.img.msg %></div>
                           <%}%>
                      
 
@@ -95,7 +95,7 @@
                     </div>
                     
                     <label class="form-create__color__check" for="negro">
-                        <input type="checkbox" name="color" id="negro" value="Negro" <%= locals.old && old.color[0] == "Negro" ? "checked": ""%>">
+                        <input type="checkbox" name="color" id="negro" value="Negro">
                         Negro
                     </label>
                     <label class="form-create__color__check" for="rojo">

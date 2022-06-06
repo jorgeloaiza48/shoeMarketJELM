@@ -195,7 +195,7 @@
 			"Alturacana": "40 cm",
 			"Colores": "Negro Crema Rosa"
 		},
-		"image": "img-1653653488621.jpeg",
+		"image": "sashaNegra.jpeg",
 		"size": [
 			"35",
 			"36",
@@ -364,9 +364,7 @@
 		"name": "HAILEY NEGRO",
 		"price": 13990,
 		"category": "Texanas",
-		"color": [
-			"Negro"
-		],
+		"color": "Negro",
 		"description": {
 			"Material": "Cuero Vacuno",
 			"Alturabase": "0cm",
@@ -891,7 +889,7 @@
 			"Alturacana": "1 cm",
 			"Colores": ""
 		},
-		"image": "img-1653669421897.jpg",
+		"image": "img-1654553015820.jpg",
 		"size": [
 			"35",
 			"37",
@@ -920,7 +918,6 @@
 			"38"
 		]
 	},
-	
 	{
 		"id": 41,
 		"name": "justo 123",
