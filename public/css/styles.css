@@ -68,14 +68,9 @@ footer {
 .lista__productos_li {
     background-color: rgb(255, 255, 255);
 }
-
-
-
 .lista__categorias:hover ul.lista__productos {
     display: block;
 }
-
-
 .texto2 p {
     display: flex;
     align-items: center;
@@ -85,10 +80,6 @@ footer {
     margin-bottom: 0px;
     height: 30px;
 }
-
-
-
-
 .principal-form-boton2 form button {
     background-color: black;
     border-radius: 10%;
@@ -177,12 +168,9 @@ footer {
 .div-form-delete-edit-users button p{
     color: black;
     text-align: center;
+    margin-left: -1px;
     margin-top: 5px;
 }
-
-
-
-
 
 @media(min-width:768px) {
     .principal-logo2 {
@@ -193,6 +181,16 @@ footer {
         width: 20%;
     }
 
+ 
+  }
+.nombre-correo-fecha{
+    /* border: solid 2px blue; */
+    display: block;    
+}
+.domicilio-contraseña-foto{
+    /* border: solid 2px green; */
+    width: 80%;
+}
     .logo-form2 {
         /* border: solid 1px red; */
         display: flex;
@@ -362,10 +360,12 @@ footer {
     margin: 15px;  
 }
 
+
 .section-destacados-admin img {
-    border: solid 2px green;
+    /* border: solid 2px green; */
     border-radius: 20px;
     height: 80px;
+    margin-top: 5px;
     width: 60%;
 }
 
@@ -378,7 +378,8 @@ footer {
 }
 .section-destacados-admin p{
   font-size:x-small;
-    text-align: left;
+  margin-left: 4px;
+  text-align: left;
 }
 .section-destacados-admin form{
     /* border: solid 2px red; */

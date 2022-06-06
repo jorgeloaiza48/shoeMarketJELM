@@ -36,23 +36,23 @@
 
                         <div class="form__nombre">
                             <label for="photo">Nueva foto de perfil
-                                <input type="file" name="photo" accept=".jpg,.jpeg">
+                                <input type="file" name="photo" accept=".jpg,.jpeg,.png,.gif" id="file">
                                 <hr>
-                            </label><br>
+                            </label>
                             <div id="preview"></div>
-                               <script>
-                                document.getElementById("file").onchange = function (e) {
-                                    let reader = new FileReader();
-                                    reader.onload = function () {
-                                        let preview = document.getElementById('preview'),
-                                            image = document.createElement("photo");
-                                        image.src = reader.result;
-                                        preview.innerHTML = '';
-                                        preview.append(image);
-                                    };
-                                    reader.readAsDataURL(e.target.files[0]);
-                                }    
-                                </script>
+                            <script>
+                                document.getElementById("file").onchange = function(e) {
+                                let reader = new FileReader();            
+                                reader.onload = function(){
+                                let preview = document.getElementById('preview'),
+                                image = document.createElement('img');
+                                image.src = reader.result;             
+                                preview.innerHTML = '';
+                                preview.append(image);
+                                                      };
+                                reader.readAsDataURL(e.target.files[0]);
+                                   }    
+                            </script>
 
                             
                         </div>
