@@ -107,9 +107,32 @@ transition: 0.5s;
 .lista__productos_li {
     background-color: rgb(255, 255, 255);
 }
+
+
+
 .lista__categorias:hover ul.lista__productos {
     display: block;
 }
+
+.lista__profile-li{
+    align-items: center;
+    background: transparent;
+    border-radius: 10px;
+    cursor: pointer;
+    display: none;
+    font-size: 13px;
+    left: -10px;
+    margin-top: 12px;
+    position: absolute;
+    padding-left: 0px;
+    top: 36px;
+    transition: all 0.5s;
+    z-index: 1;
+}
+.lista__profile:hover .lista__profile-li {
+    display: block;
+}
+
 .texto2 p {
     display: flex;
     align-items: center;
@@ -119,6 +142,10 @@ transition: 0.5s;
     margin-bottom: 0px;
     height: 30px;
 }
+
+
+
+
 .principal-form-boton2 form button {
     background-color: black;
     border-radius: 10%;
@@ -207,12 +234,14 @@ transition: 0.5s;
 .div-form-delete-edit-users button p{
     color: black;
     text-align: center;
-    margin-left: -1px;
     margin-top: 5px;
 }
 
-@media(min-width:768px) {
 
+
+
+
+@media(min-width:768px) {
     .principal-logo2 {
         position: relative;
         left: 22px;
@@ -221,16 +250,6 @@ transition: 0.5s;
         width: 20%;
     }
 
- 
-  
-.nombre-correo-fecha{
-    /* border: solid 2px blue; */
-    display: block;    
-}
-.domicilio-contraseña-foto{
-    /* border: solid 2px green; */
-    width: 80%;
-}
     .logo-form2 {
         /* border: solid 1px red; */
         display: flex;
@@ -401,12 +420,10 @@ transition: 0.5s;
     margin: 15px;  
 }
 
-
 .section-destacados-admin img {
-    /* border: solid 2px green; */
+    border: solid 2px green;
     border-radius: 20px;
     height: 80px;
-    margin-top: 5px;
     width: 60%;
 }
 
@@ -419,8 +436,7 @@ transition: 0.5s;
 }
 .section-destacados-admin p{
   font-size:x-small;
-  margin-left: 4px;
-  text-align: left;
+    text-align: left;
 }
 .section-destacados-admin form{
     /* border: solid 2px red; */

@@ -48,10 +48,11 @@
 
                 </div>
 
-              
+                <script src="/previewPhotoCreateProduct.js"></script>
                 <div class="form-create__img">
-                    <label for="photo">Seleccione la foto del producto </label>
-                    <input type="file" name="photo" accept=".jpg,.jpeg"  id="file">    
+                    <label for="photo">Seleccione la foto </label>
+                   
+                        <input type="file" name="img" accept=".jpg,.jpeg"  id="file">    
                    
                     </div>
                           <% if (locals.errors && errors.img) {%>
@@ -94,7 +95,7 @@
                     </div>
                     
                     <label class="form-create__color__check" for="negro">
-                        <input type="checkbox" name="color" id="negro" value="Negro" >
+                        <input type="checkbox" name="color" id="negro" value="Negro">
                         Negro
                     </label>
                     <label class="form-create__color__check" for="rojo">

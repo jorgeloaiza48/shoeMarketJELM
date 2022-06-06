@@ -2,9 +2,9 @@
 <body>
 <%- include("../partials/header2") %>
                 <main class="main-register">
-                
-                    <form  action="/user/registro" method="POST" class="form-Reg" enctype="multipart/form-data" >
-                        <div class="nombre-correo-fecha">   
+                 
+                    <form  action="/user/registro" method="POST" class="form-Reg" enctype="multipart/form-data">
+                           
                         <div class="form__nombre">
                             <label for="nombre">Nombre y Apellido *</label>
                             <input type="text" name="nombre" id="nombre" placeholder=" Introduzca su Nombre y apellido" class="xdsf is-invalid"
@@ -28,10 +28,8 @@
                             <% if (locals.errors && errors.fecha) {%>
                                 <div class="text-aviso"><%= errors.fecha.msg %></div>
                             <%}%>
+            
                         </div>
-                        </div>
-                        
-                        <div class="domicilio-contraseña-foto">
                         <div class="form__domicilio">
                             <label for="domicilio">Domicilio de envio *</label><br>
                             <input type="text" name="domicilio" id="domicilio" placeholder=" Introduzca su Domicilio" value ="<%= locals.oldData ? oldData.domicilio : null%>">
@@ -70,8 +68,6 @@
                                            }    
                                     </script>
 
-                            </div>
-
                             <div class="contenedor_button" >
                                 <button class="form__button" type="submit" >Borrar</button>
                                 <button class="form__button" type="submit" >Enviar</button>
@@ -79,7 +75,7 @@
                             </div>                                          
             
                     </form>
-         
+            
                     <div class="help-button">
                         <button><i class="fa-solid fa-circle-question"></i> Ayuda</button>
                       </div>
