@@ -212,6 +212,7 @@ transition: 0.5s;
 }
 
 @media(min-width:768px) {
+
     .principal-logo2 {
         position: relative;
         left: 22px;
@@ -221,7 +222,7 @@ transition: 0.5s;
     }
 
  
-  }
+  
 .nombre-correo-fecha{
     /* border: solid 2px blue; */
     display: block;    
