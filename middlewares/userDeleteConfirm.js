@@ -6,14 +6,14 @@ alert = require('alert')
 
 const userDeleteConfirm = function(req,res,next){
     
-    //  let mensaje = confirm("Hola")
-    // if(mensaje == true){
-    //     alert("Hiciste click en Si")
-    //     next()
-    // }
+     let mensaje = confirm("Hola")
+    if(mensaje == true){
+        alert("Hiciste click en Si")
+        next()
+    }
 
-    if(3>2){
-    next()}
+    // if(3>2){
+    // next()}
      else{
         // res.render("../views/admin/listaUsuarios", { title: "Edición de usuario", users: users })
         res.redirect("/admin/lista/usuarios")
