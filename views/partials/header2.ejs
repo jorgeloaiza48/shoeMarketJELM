@@ -31,22 +31,32 @@
 
                 <nav class="menu__lista">
                     <ul class="cuentaCarrito2">
-                        <li class="lista__categorias" >CATEGORIAS ▼
+                        <li class="lista__categorias">Categorias ▼
                             <ul class="lista__productos">
-                                <li class="lista__productos_li" ><a href="/productos/Bucaneras">BUCANERAS </a></li>
-                                <li class="lista__productos_li" ><a href="/productos/Borcegos">BORCEGOS </a></li>
-                                <li class="lista__productos_li" ><a href="/productos/Botas">BOTAS </a></li>
-                                <li class="lista__productos_li" ><a href="/productos/Texanas">TEXANAS </a></li>
-                                <li class="lista__productos_li" ><a href="/productos/Guillerminas">GUILLERMINAS </a></li>
-                                <li class="lista__productos_li" ><a href="/productos/Gift Card">GIFT-CARD </a></li>
+                                <li class="lista__productos_li"><a href="/productos/Bucaneras">Bucaneras </a></li>
+                                <li class="lista__productos_li"><a href="/productos/Borcegos">Borcegos </a></li>
+                                <li class="lista__productos_li"><a href="/productos/Botas">Botas </a></li>
+                                <li class="lista__productos_li"><a href="/productos/Texanas">Texanas </a></li>
+                                <li class="lista__productos_li"><a href="/productos/Guillerminas">Guillerminas </a></li>
+                                <li class="lista__productos_li"><a href="/productos/Gift Card">Gift-Card </a></li>
                             </ul>
                         </li>
                         <li><a href="/productos">PRODUCTOS </a>
-                        <li><a href="/user/registro">REGISTRARSE</a><i class="fa-solid fa-user-plus"></i></li>
-                        <li><a href="/user/login">INICIAR SESIÓN</a><i class="fa-solid fa-right-to-bracket"></i></li>
                         <li><a href="/carrito">CARRITO</a><i class="fa-solid fa-cart-shopping"></i></li>
-                    </ul>
 
+                        <% if (locals.isLogged) { %>
+                            <li class="lista__profile">Hola <%= locals.userLogged.nombre %> ▼
+                                    <ul class="lista__profile-down">
+                                        <li class="lista__profile-li" v><a href="/user/profile">Mi Perfil</a></li>
+                                        <li class="lista__profile-li"><a href="/user/logout">logout</a></li>
+                                    </ul>
+                            </li>
+                            <% } else { %>
+                                <li><a href="/user/registro">REGISTRARSE</a><i class="fa-solid fa-user-plus"></i></li>
+                                <li><a href="/user/login">INICIAR SESIÓN</a><i class="fa-solid fa-right-to-bracket"></i>
+                                </li>
+                                <% } %>
+                    </ul>
             </div>
         </div>
     </div>
@@ -55,7 +65,7 @@
     <div class="menu2">
         <nav class="nav-header2">
 
-           
+
 
         </nav>
     </div>

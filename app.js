@@ -3,6 +3,15 @@ const path = require("path")
 const app = express()
 const methodOverride =  require('method-override'); 
 const session = require("express-session")
+const cookies = require("cookie-parser")
+const mainRoutes = require('./routes/mainRoutes')
+const userLoggedMiddleware = require("./middlewares/UserLoggedMiddleware")
+
+const publicPath = path.resolve(__dirname,'./public')
+//Definiendo pueto y levantando servidor
+let puerto = 4000
+app.listen(process.env.PORT || puerto, ()=>console.log("Servidor corriendo en el puerto ---> " + puerto))
+
 app.use(methodOverride('_method'));// Pasar poder usar los métodos PUT y DELETE
 //permite capturar la información que se envía desde un formulario vía post en req.body
 app.use(express.urlencoded({extended:false}))
@@ -12,14 +21,9 @@ app.set('view engine', 'ejs')
 app.use(session({secret: " shhhh",
 resave: false,
 saveUninitialized: true}))
-//Definiendo pueto y levantando servidor
-let puerto = 4000
-app.listen(process.env.PORT || puerto, ()=>console.log("Servidor corriendo en el puerto ---> " + puerto))
 
+app.use(cookies())
+app.use(userLoggedMiddleware)
 //configuración para montar en Heroku
-const publicPath = path.resolve(__dirname,'./public')
 app.use(express.static(publicPath))
-
-const mainRoutes = require('./routes/mainRoutes')
 app.use('/',mainRoutes)
-

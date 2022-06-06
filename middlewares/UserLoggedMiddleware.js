@@ -1,6 +1,6 @@
-const User = require ("../../models/UserCrud") // traigo para poder buscar el usuario para usarlo para autologuearse
+const User = require ("../models/UserCrud") // traigo para poder buscar el usuario para usarlo para autologuearse
 
-const userLoggedMiddleware = function (req, res, next) {
+function userLoggedMiddleware (req, res, next) {
     res.locals.isLogged = false
     let emailInCookie = req.cookies.userEmail;
     let userFromCookie = User.findByField("email",emailInCookie)
