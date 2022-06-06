@@ -14,7 +14,8 @@ app.listen(process.env.PORT || puerto, ()=>console.log("Servidor corriendo en el
 
 //permite capturar la información que se envía desde un formulario vía post en req.body
 app.use(express.urlencoded({extended:false}))
-app.use(methodOverride('_method'));// Pasar poder usar los métodos PUT y DELETE
+app.use(methodOverride('_method'));// Pasar poder usar los métodos PUT y DELETE......
+
 
 //Configurando EJS
 app.set('view engine', 'ejs')
