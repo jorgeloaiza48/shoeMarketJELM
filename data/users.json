@@ -20,6 +20,14 @@
 		"domicilio": "la crujia 3790",
 		"contraseña": "$2a$10$vMX2Zv81dc2pJcpAWR89guUS4TCJVv2kbAr9p9ixQ7IEcrBxKQE3y",
 		"image": "photousuario 2-1654366607044.jpg"
+	},
+	{
+		"id": 3,
+		"nombre": "joel casa",
+		"email": "joeecasa@gmail.com",
+		"fechaNacimiento": "1993-12-28",
+		"domicilio": "aaaaaaaaaaaaaaa",
+		"contraseña": "$2a$10$3BmvVip6mVVYt7.98gx7Z.RN4mpXG0j5lzg47zBJDLnEv//zudWBq",
+		"image": "photojoel casa-1654570053496.jpg"
 	}
-	
 ]

@@ -95,12 +95,14 @@
                     </div>
                     <% colores.forEach(color=> { %>
                         <label class="form-create__size__check" for="<%= color %> ">
-                            <input <%= old.color && old.color.includes(color) ? "checked" : "" %>
+                            <input <%= locals.old && old.color && old.color.includes(color) ? "checked" : "" %>
                             type="checkbox" name="color" id="<%= color %>" value="<%= color %>">
                                     <%= color %>
                         </label>
                         <% }) %>
-
+                        <% if (locals.errors && errors.color) {%>
+                            <div class="text-aviso2"><%= errors.color.msg %></div>
+                        <%}%>
                 </div>
 
                 <div class="form-create__cat">
@@ -112,7 +114,7 @@
 
                             <option value="" disabled selected>Seleccione</option>
                             <% categories.forEach(element=> { %>
-                                <option <%= old.category == element ? "selected" : "" %> value="<%= element %>" >
+                                <option <%= locals.old && old.category == element ? "selected" : "" %> value="<%= element %>" >
                                         <%= element %>
                                 </option>
                                 <% }) %>
@@ -134,7 +136,7 @@
                     <% sizes.forEach(size=> { %>
 
                         <label class="form-create__size__check" for="<%= size %> ">
-                            <input <%= old.size && old.size.includes(size) ? "checked" : " " %>
+                            <input <%= locals.old && old.size && old.size.includes(size) ? "checked" : " " %>
                             type="checkbox" name="size" id="<%= size %>" value="<%= size %>">
                                     <%= size %>
                         </label>

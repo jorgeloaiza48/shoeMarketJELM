@@ -20,7 +20,9 @@ const controller = {
         let resultValidation = validationResult(req)
         
         if (resultValidation.errors.length > 0) {
-            return res.render("users/registro", { errors: resultValidation.mapped(),oldData:req.body, title: "Registro de usuario" })//mapped convierte un array en un objeto literal
+            return res.render("users/registro", { errors: resultValidation.mapped(),
+                oldData:req.body, 
+                title: "Registro de usuario" })//mapped convierte un array en un objeto literal
         }
 
         else {

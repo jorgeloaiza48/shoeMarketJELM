@@ -90,13 +90,14 @@ const controller = {
                     }
                 },
                 old: req.body,
-                title: "Crear Producto"
+                title: "Crear Producto",
+                categories: categories, sizes: sizes, colores: colores
                 
             })
         }
 
         let productToCreate = {
-            name: req.body.name,
+            name: req.body.nombre,
             price: Number(req.body.price),
             category: req.body.category,
             color: req.body.color,

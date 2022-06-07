@@ -483,7 +483,7 @@ transition: 0.5s;
 .contenedor_button{
     /* border: solid 4px green; */
     display: flex;
-    width: 60%; 
+    
 }
 .form-edit-user{
     border: solid 1px red;
