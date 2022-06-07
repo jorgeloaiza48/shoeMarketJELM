@@ -31,7 +31,7 @@
 
                 <nav class="menu__lista">
                     <ul class="cuentaCarrito2">
-                        <li class="lista__categorias">Categorias ▼
+                        <li class="lista__categorias">Categorias <i class="fa-solid fa-circle-arrow-down"></i>
                             <ul class="lista__productos">
                                 <li class="lista__productos_li"><a href="/productos/Bucaneras">Bucaneras </a></li>
                                 <li class="lista__productos_li"><a href="/productos/Borcegos">Borcegos </a></li>
@@ -41,8 +41,9 @@
                                 <li class="lista__productos_li"><a href="/productos/Gift Card">Gift-Card </a></li>
                             </ul>
                         </li>
-                        <li><a href="/productos">PRODUCTOS </a>
-                        <li><a href="/carrito">CARRITO</a><i class="fa-solid fa-cart-shopping"></i></li>
+                        <li><a href="/productos">Productos</a><i class="fa-brands fa-product-hunt"></i></li>
+
+                        <li><a href="/carrito">Carrito</a><i class="fa-solid fa-cart-shopping"></i></li>
 
                         <% if (locals.isLogged) { %>
                             <li class="lista__profile">Hola <%= locals.userLogged.nombre %> ▼
@@ -52,8 +53,8 @@
                                     </ul>
                             </li>
                             <% } else { %>
-                                <li><a href="/user/registro">REGISTRARSE</a><i class="fa-solid fa-user-plus"></i></li>
-                                <li><a href="/user/login">INICIAR SESIÓN</a><i class="fa-solid fa-right-to-bracket"></i>
+                                <li><a href="/user/registro">Registrarse</a><i class="fa-solid fa-user-plus"></i></li>
+                                <li><a href="/user/login">Iniciar Sesion</a><i class="fa-solid fa-right-to-bracket"></i>
                                 </li>
                                 <% } %>
                     </ul>
