@@ -64,17 +64,18 @@ const controller = {
         })
     },
 
-    crearProducto: (req, res) => { res.render('admin/crearProducto', { title: "Crear Producto" }) },
+    crearProducto: (req, res) => { res.render('admin/crearProducto', { title: "Crear Producto", categories: categories, sizes: sizes, colores: colores }) },
 
     newproduct: (req, res) => {
         const errors = validationResult(req)
-        console.log(req.file)
        
+       console.log(req.body)
         if (errors.errors.length > 0) {
             return res.render("admin/crearProducto", {
                 errors: errors.mapped(),
                 old: req.body,
-                title: "Crear Producto"
+                title: "Crear Producto",
+                categories: categories, sizes: sizes, colores: colores
             })
         }
 

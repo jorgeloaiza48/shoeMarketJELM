@@ -91,35 +91,16 @@
                 </div>
                 <div class="form-create__color">
                     <div class="form-create__size__title__div">
-                        <label class="form-create__size__title" for="talles">Seleccione el color</label>
+                        <label class="form-create__size__title" for="talles">Seleccione los Colores</label>
                     </div>
-                    
-                    <label class="form-create__color__check" for="negro">
-                        <input type="checkbox" name="color" id="negro" value="Negro">
-                        Negro
-                    </label>
-                    <label class="form-create__color__check" for="rojo">
-                        <input type="checkbox" name="color" id="rojo" value="Rojo">
-                        Rojo
-                    </label>
-                    <label class="form-create__color__check" for="crema">
-                        <input type="checkbox" name="color" id="crema" value="Crema">
-                        Crema
-                    </label>
-                    <label class="form-create__color__check" for="blanco">
-                        <input type="checkbox" name="color" id="blanco" value="Blanco">
-                        Blanco
-                    </label>
-                    <label class="form-create__color__check" for="rosa">
-                        <input type="checkbox" name="color" id="rosa" value="Rosa">
-                        Rosa
-                    </label>
-                    <div>
-                        <% if (locals.errors && errors.color) {%>
-                            <div class="text-aviso"><%= errors.color.msg %></div>
-                        <%}%>
-                    </div>
-                   
+                    <% colores.forEach(color=> { %>
+                        <label class="form-create__size__check" for="<%= color %> ">
+                            <input <%= old.color && old.color.includes(color) ? "checked" : "" %>
+                            type="checkbox" name="color" id="<%= color %>" value="<%= color %>">
+                                    <%= color %>
+                        </label>
+                        <% }) %>
+
                 </div>
 
                 <div class="form-create__cat">
@@ -128,13 +109,14 @@
                     </div>
                     <div class="form-create__cat__div-input">
                         <select name="category" id="categoria" >
-                            <option value="" disabled selected >Seleccione</option>
-                            <option value="Botas">Botas</option>
-                            <option value="Borcegos">Borcegos</option>
-                            <option value="Texanas">Texanas</option>
-                            <option value="Guillerminas">Guillerminas</option>
-                            <option value="Bucaneras">Bucaneras</option>
-                            <option value="Gift Card">Gift Card</option>
+
+                            <option value="" disabled selected>Seleccione</option>
+                            <% categories.forEach(element=> { %>
+                                <option <%= old.category == element ? "selected" : "" %> value="<%= element %>" >
+                                        <%= element %>
+                                </option>
+                                <% }) %>
+
                         </select>
                         <% if (locals.errors && errors.category) {%>
                             <div class="text-aviso2"><%= errors.category.msg %></div>
@@ -143,36 +125,22 @@
                     </div>
 
                 </div>
-
+                
                 <div class="form-create__size">
+
                     <div class="form-create__size__title__div">
                         <label class="form-create__size__title" for="talles">Seleccione los talles</label>
                     </div>
+                    <% sizes.forEach(size=> { %>
 
-                    <label class="form-create__size__check" for="35">
-                        <input type="checkbox" name="size" id="35" value="35">
-                        35
-                    </label>
-                    <label class="form-create__size__check" for="36">
-                        <input type="checkbox" name="size" id="36" value="36">
-                        36
-                    </label>
-                    <label class="form-create__size__check" for="37">
-                        <input type="checkbox" name="size" id="37" value="37">
-                        37
-                    </label>
-                    <label class="form-create__size__check" for="38">
-                        <input type="checkbox" name="size" id="38" value="38">
-                        38
-                    </label>
-                    <label class="form-create__size__check" for="39">
-                        <input type="checkbox" name="size" id="39" value="39">
-                        39
-                    </label>
-                    <label class="form-create__size__check" for="40">
-                        <input type="checkbox" name="size" id="40" value="40">
-                        40
-                    </label>
+                        <label class="form-create__size__check" for="<%= size %> ">
+                            <input <%= old.size && old.size.includes(size) ? "checked" : " " %>
+                            type="checkbox" name="size" id="<%= size %>" value="<%= size %>">
+                                    <%= size %>
+                        </label>
+                        <% }) %>
+
+
                 </div>
                 <div>
                     <% if (locals.errors && errors.size) {%>
