@@ -64,20 +64,6 @@ transition: 0.5s;
     background-color: #1c1819;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*//////////////////////////header 2/********************/
 .form-header {
     display: flex;
@@ -107,20 +93,48 @@ transition: 0.5s;
 .lista__productos_li {
     background-color: rgb(255, 255, 255);
 }
+
+
+
 .lista__categorias:hover ul.lista__productos {
     display: block;
 }
+
+.lista__profile-down{
+    align-items: center;
+    background: transparent;
+    border-radius: 10px;
+    cursor: pointer;
+    display:block;
+    font-size: 13px;
+    left: 7px;
+    margin-top: 12px;
+    position: absolute;
+    padding-left: 0px;
+    top: 26px;
+    transition: all 0.5s;
+    z-index: 1;
+}
+
+.lista__profile:hover .lista__profile-down {
+    display: block;
+}
+
 .texto2 p {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgb(209, 202, 202);
+    background-color: rgb(232 207 207);
     margin-top: 0px;
     margin-bottom: 0px;
     height: 30px;
 }
+.texto2 i{
+    margin-left: 5px;
+
+}
 .principal-form-boton2 form button {
-    background-color: black;
+    background-color: rgb(232 207 207);
     border-radius: 10%;
     height: 90%;
     position: relative;
@@ -129,7 +143,7 @@ transition: 0.5s;
 }
 
 .principal-form-boton2 form button .fa-search {
-    color: white;
+    color: rgb(44, 44, 44);
     cursor: pointer;
 }
 
@@ -211,8 +225,9 @@ transition: 0.5s;
     margin-top: 5px;
 }
 
-@media(min-width:768px) {
 
+
+@media(min-width:768px) {
     .principal-logo2 {
         position: relative;
         left: 22px;
@@ -220,17 +235,21 @@ transition: 0.5s;
         margin-left: -40px;
         width: 20%;
     }
-
- 
-  
-.nombre-correo-fecha{
-    /* border: solid 2px blue; */
-    display: block;    
-}
-.domicilio-contraseña-foto{
-    /* border: solid 2px green; */
-    width: 80%;
-}
+    .lista__profile-down{
+        align-items: center;
+        background: transparent;
+        border-radius: 10px;
+        cursor: pointer;
+        display:none;
+        font-size: 13px;
+        left: 31px;
+        margin-top: 12px;
+        position: absolute;
+        padding-left: 0px;
+        top: 26px;
+        transition: all 0.5s;
+        z-index: 1;
+    }
     .logo-form2 {
         /* border: solid 1px red; */
         display: flex;
@@ -338,6 +357,21 @@ transition: 0.5s;
 
 @media(min-width:992px) {
 
+    .lista__profile-down{
+        align-items: center;
+        background: transparent;
+        border-radius: 10px;
+        cursor: pointer;
+        display:none;
+        font-size: 13px;
+        left: 7px;
+        margin-top: 12px;
+        position: absolute;
+        padding-left: 0px;
+        top: 26px;
+        transition: all 0.5s;
+        z-index: 1;
+    }
     .cuentaCarrito2 li {
         margin-left: 30px;
     }
@@ -401,13 +435,12 @@ transition: 0.5s;
     margin: 15px;  
 }
 
-
 .section-destacados-admin img {
     /* border: solid 2px green; */
     border-radius: 20px;
     height: 80px;
     margin-top: 5px;
-    width: 60%;
+    max-width: 70%;
 }
 
 .section-destacados-admin {
@@ -419,7 +452,7 @@ transition: 0.5s;
 }
 .section-destacados-admin p{
   font-size:x-small;
-  margin-left: 4px;
+  margin-left: 5px;
   text-align: left;
 }
 .section-destacados-admin form{
@@ -449,6 +482,11 @@ transition: 0.5s;
 
 /* /////////////////////////////Media quiery admin  ///////////////////////////// */
 @media(min-width:768px) {
+    .admin-but:hover {
+        background-color: black;
+        color: white;
+    }
+    
 .section-destacados-admin {
     border: solid 2px gray;
     padding-bottom: 2px;
@@ -467,7 +505,7 @@ transition: 0.5s;
 .contenedor_button{
     /* border: solid 4px green; */
     display: flex;
-    width: 60%; 
+    
 }
 .form-edit-user{
     border: solid 1px red;
@@ -1764,9 +1802,6 @@ i {
         height: 50%;
         padding: 10px;
     }
-
-
-
 }
 
 @media (min-width: 992px) {
@@ -2750,7 +2785,7 @@ i {
 
     font-weight: bold;
     margin-bottom: 10px;
-    margin-left: 0px;
+    margin-left: 10px;
     padding-bottom: 10px;
 
 
@@ -2852,3 +2887,4 @@ i {
 .form-create input[type="text"]:focus:required:valid {
     border: 2px solid green;
 }
+

@@ -1,20 +1,38 @@
 [
 	{
+		"id": 2,
+		"nombre": "usuario 2",
+		"email": "joe_cec@hotmail.com",
+		"fechaNacimiento": "1993-04-28",
+		"domicilio": "la crujia 3790",
+		"contraseña": "$2a$10$vMX2Zv81dc2pJcpAWR89guUS4TCJVv2kbAr9p9ixQ7IEcrBxKQE3y",
+		"image": "photousuario 2-1654366607044.jpg"
+	},
+	{
 		"id": 3,
-		"NombreYapellido": "Batman Pérez Ochoa",
-		"Email": "batman@gmail.com",
-		"FechaNacimiento": "2005-03-05",
-		"Domicilio": "calle45",
-		"Contraseña": "$2a$10$veOuaV6LsgF/6lt.rdETn.aPG2u/VvNDFC9acWEN3d.rwjEVM5Pry",
-		"image": "photo-1654637377340.png"
+		"nombre": "joel casa",
+		"email": "joeecasa@gmail.com",
+		"fechaNacimiento": "1993-12-28",
+		"domicilio": "aaaaaaaaaaaaaaa",
+		"contraseña": "$2a$10$3BmvVip6mVVYt7.98gx7Z.RN4mpXG0j5lzg47zBJDLnEv//zudWBq",
+		"image": "photojoel casa-1654570053496.jpg"
 	},
 	{
 		"id": 4,
-		"NombreYapellido": "Linterna verde madura",
-		"Email": "linterna@hotmail.com",
-		"FechaNacimiento": "2006-05-23",
-		"Domicilio": "Diagonal 90",
-		"Contraseña": "$2a$10$munjftHAlsGXOdh740iOC.OFrr0jRMmuc0Pu8tEKzurjfmXZP6PjW",
-		"image": "photoLinterna verde-1654005561251.jpg"
+		"nombre": "Jorge Loaiza",
+		"email": "jelm48@hotmail.com",
+		"fechaNacimiento": "2022-06-07",
+		"domicilio": "Calle 23",
+		"contraseña": "$2a$10$TSvu.aLmgbpepfvR6y1XPOK9olHOsfNCaK6sxbbq7jp2caKyIWKOO",
+		"image": "photoJorge Loaiza-1654642778951.png"
+	},
+	{
+		"id": 5,
+		"nombre": "Juana de Arco",
+		"email": "juana@gmail.com",
+		"fechaNacimiento": "2022-06-07",
+		"domicilio": "calle 100",
+		"contraseña": "$2a$10$cXmPkyT9uAAW.GfR2zBC7uaW8vmu3l5DLMh.R8Ivmk2AaDKUkovAa",
+		"image": "photoJuana de Arco-1654644157892.png"
 	}
 ]

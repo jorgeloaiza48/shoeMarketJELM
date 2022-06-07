@@ -15,14 +15,10 @@
                                                                                   
                                            <img src="../../img/user/<%= usuario.image %>" alt="foto-usuario" >
                                             <P><STRONG>ID: </STRONG><%= usuario.id %></P>
-                                            <p><strong>Nombres y apellidos:</strong><br> <%= usuario.NombreYapellido %></p>
-                                            <p><strong>Correo Electrónico:</strong><br> <%= usuario.Email %></p>
-                                            <p><strong>Fecha de nacimiento: </strong><br> <%= usuario.FechaNacimiento %></p>
-                                            <p><strong>Dirección: </strong><br> <%= usuario.Domicilio %></p>
-                                        
-                                            
-                                            <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-                                            
+                                            <p><strong>Nombres y apellidos:</strong><br> <%= usuario.nombre %></p>
+                                            <p><strong>Correo Electrónico:</strong><br> <%= usuario.email %></p>
+                                            <p><strong>Fecha de nacimiento: </strong><br> <%= usuario.fechaNacimiento %></p>
+                                            <p><strong>Dirección: </strong><br> <%= usuario.domicilio %></p>                                                                                                                                                                   
                                             
                                         
                                             <!-- <form action="/usuario/delete/<%= usuario.id %>?_method=DELETE" method="POST" >
