@@ -114,22 +114,23 @@ transition: 0.5s;
     display: block;
 }
 
-.lista__profile-li{
+.lista__profile-down{
     align-items: center;
     background: transparent;
     border-radius: 10px;
     cursor: pointer;
-    display: none;
+    display:block;
     font-size: 13px;
-    left: -10px;
+    left: 7px;
     margin-top: 12px;
     position: absolute;
     padding-left: 0px;
-    top: 36px;
+    top: 26px;
     transition: all 0.5s;
     z-index: 1;
 }
-.lista__profile:hover .lista__profile-li {
+
+.lista__profile:hover .lista__profile-down {
     display: block;
 }
 
@@ -137,17 +138,21 @@ transition: 0.5s;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgb(209, 202, 202);
+    background-color: rgb(232 207 207);
     margin-top: 0px;
     margin-bottom: 0px;
     height: 30px;
+}
+.texto2 i{
+    margin-left: 5px;
+
 }
 
 
 
 
 .principal-form-boton2 form button {
-    background-color: black;
+    background-color: rgb(232 207 207);
     border-radius: 10%;
     height: 90%;
     position: relative;
@@ -156,7 +161,7 @@ transition: 0.5s;
 }
 
 .principal-form-boton2 form button .fa-search {
-    color: white;
+    color: rgb(44, 44, 44);
     cursor: pointer;
 }
 
@@ -249,7 +254,21 @@ transition: 0.5s;
         margin-left: -40px;
         width: 20%;
     }
-
+    .lista__profile-down{
+        align-items: center;
+        background: transparent;
+        border-radius: 10px;
+        cursor: pointer;
+        display:none;
+        font-size: 13px;
+        left: 31px;
+        margin-top: 12px;
+        position: absolute;
+        padding-left: 0px;
+        top: 26px;
+        transition: all 0.5s;
+        z-index: 1;
+    }
     .logo-form2 {
         /* border: solid 1px red; */
         display: flex;
@@ -357,6 +376,21 @@ transition: 0.5s;
 
 @media(min-width:992px) {
 
+    .lista__profile-down{
+        align-items: center;
+        background: transparent;
+        border-radius: 10px;
+        cursor: pointer;
+        display:none;
+        font-size: 13px;
+        left: 7px;
+        margin-top: 12px;
+        position: absolute;
+        padding-left: 0px;
+        top: 26px;
+        transition: all 0.5s;
+        z-index: 1;
+    }
     .cuentaCarrito2 li {
         margin-left: 30px;
     }
