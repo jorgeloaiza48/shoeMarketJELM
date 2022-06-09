@@ -1,5 +1,7 @@
-# grupo_4_Shoe_Market
-Shoe Market es un proyecto de desarrollo que consiste en la realización de un sitio web (E-commerce) dedicado a la comercialización de calzado femenino. El objetivo principal de este proyecto es brindar una oferta variada y de calidad en diferentes diseños y estilos de calzado conservando y siguiendo los estándares de eficacia del producto que garanticen la satisfacción de los clientes. Así mismo, se pretende que los clientes puedan tener una experiencia cómoda en el proceso de compra de los productos pues se les facilitará dicho proceso mediante el e-commerce en cuestión.
+Proyecto integrador realizado durante el curso de Desarrollo Web Full Stack de Digital House: https://www.digitalhouse.com/ar/.
+
+
+Shoe Market es un proyecto de desarrollo que consiste en la realización de un sitio web (E-commerce)  dedicado a la comercialización de calzado femenino. El objetivo principal de este proyecto es brindar una oferta variada y de calidad en diferentes diseños y estilos de calzado conservando y siguiendo los estándares de eficacia del producto que garanticen la satisfacción de los clientes. Así mismo, se pretende que los clientes puedan tener una experiencia cómoda en el proceso de compra de los productos pues se les facilitará dicho proceso mediante el e-commerce en cuestión.
 
 
 Equipo de trabajo:
