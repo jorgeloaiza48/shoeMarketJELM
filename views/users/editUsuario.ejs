@@ -1,11 +1,12 @@
 <%- include("../partials/head") %>
 
+
     <body>
+        
         <%- include("../partials/header2") %>
             <main class="main-register">
 
-                <form action="/admin/usuario/editar/<%= usuario.id%>?_method=PUT" method="post" class="form-edit-user"
-                    enctype="multipart/form-data" >
+                <form action="/admin/usuario/editar/<%= usuario.id%>?_method=PUT" method="post" enctype="multipart/form-data" class="formEditUser" >
                     <div class="form-edit-user-img">
                         <img src="/img/user/<%= usuario.image %>" alt="foto-usuario">
                     </div>
@@ -16,27 +17,27 @@
                         </p>
 
                         <div class="form__nombre">
-                            <label for="nombre">Nombre y Apellido</label>
+                            <label for="nombre">Nombre y Apellido:</label>
                             <input type="text" name="Nombre" id="nombre" placeholder=" Introduzca su Nombre y apellido"
-                                value="<%= usuario.NombreYapellido%>">
+                                value="<%= usuario.nombre%>" class="input">
                         </div>
 
-                        <div class="form__nombre"><label for="email">Correo electronico</label>
+                        <div class="form__nombre"><label for="email">Correo electrónico:</label>
                             <input type="email" name="email" id="email" placeholder="Introduzca su Correo electronico"
-                                value="<%= usuario.Email %>">
+                                value="<%= usuario.email %>" class="input">
                         </div>
 
-                        <div class="form__nombre"><label for="fecha">Fecha de nacimiento</label>
-                            <input type="date" name="fecha" id="fecha" value="<%= usuario.FechaNacimiento %>">
+                        <div class="form__nombre"><label for="fecha">Fecha de nacimiento:</label>
+                            <input type="date" name="fecha" id="fecha" value="<%= usuario.fechaNacimiento %>" class="input">
                         </div>
 
-                        <div class="form__nombre"><label for="domicilio">Domicilio de envio </label><br>
-                            <input type="text" name="domicilio" id="domicilio" value="<%= usuario.Domicilio %>">
+                        <div class="form__nombre"><label for="domicilio">Domicilio de envio:</label><br>
+                            <input type="text" name="domicilio" id="domicilio" value="<%= usuario.domicilio %>" class="input">
                         </div>
 
                         <div class="form__nombre">
-                            <label for="photo">Nueva foto de perfil
-                                <input type="file" name="photo" accept=".jpg,.jpeg">
+                            <label for="photo">Nueva foto de perfil:
+                                <input type="file" name="photo" accept=".jpg,.jpeg" id="file" class="input">
                                 <hr>
                             </label><br>
                             <div id="preview"></div>

@@ -178,9 +178,6 @@ transition: 0.5s;
     display: none;
 }
 
-
-
-
 .principal-form-boton2 {    
     
      width: 100%;
@@ -188,9 +185,7 @@ transition: 0.5s;
 
 .cont-search-nav3{
     display: flex;
-    align-items: center;
-
-   
+    align-items: center;  
 }
 #preview {
     border:1px solid #ddd;
@@ -225,9 +220,67 @@ transition: 0.5s;
     margin-top: 5px;
 }
 
+.formEditUser{
+    border: solid 2px gainsboro;
+    border-radius: 10px;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 70%;
+}
+.formEditUser .form-edit-user-img img{
+/* border: solid 2px blue; */
+border-radius: 10px;
+display: block;
+margin:auto;
+margin-top: 10px ;
+width: 90%;
+}
+.form-edit-user-data p{
+    text-align: center;
+}
+.form__nombre .input{
+    border: solid 2px black;
+    border-radius: 10px;
+}
+
+@media(min-width:576px){
+
+    .section-destacados-admin{
+        border-radius: 20px;
+    }
+    .section-destacados-admin img {
+        /* border: solid 2px red; */
+        border-radius: 20px;
+        width: 200px;
+    }
+    .productos-admin .section-destacados-admin p {
+        font-size: small;
+    }
+ }
 
 
 @media(min-width:768px) {
+
+  .section-destacados-admin{
+        border-radius: 20px;
+    }
+    .section-destacados-admin img {
+        /* border: solid 2px red; */
+        border-radius: 20px;
+        width: 100%;
+    }
+    .productos-admin .section-destacados-admin p {
+        font-size: medium;
+    }
+
+
+    .section-destacados-admin img {
+        /* border: solid 2px red; */
+        border-radius: 20px;
+        width: 250rem;
+    }
+
     .principal-logo2 {
         position: relative;
         left: 22px;
@@ -445,6 +498,7 @@ transition: 0.5s;
 
 .section-destacados-admin {
     border: solid 2px gainsboro;
+    border-radius: 20px;
     height: 2%;
     margin: 5px;
     text-align: center;   
@@ -497,32 +551,28 @@ transition: 0.5s;
     height: 220px;
     max-width: 90%;
 }
-.section-destacados-admin p{
+    .section-destacados-admin p{
     color: #585656;
     font-size:small;
    
-}
-.contenedor_button{
+    }
+    .contenedor_button{
     /* border: solid 4px green; */
     display: flex;
-    
-}
-.form-edit-user{
-    border: solid 1px red;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-bottom: 20px;
+    }
+    .formEditUser{
+        border: solid 2px gainsboro;
+        margin-bottom: 20px;
+        width: 70%;
+    }
+    .formEditUser .form-edit-user-img img{
+    /* border: solid 2px red; */
     width: 50%;
-}
-.form-edit-user-img img{
-    /* border: solid 5px violet; */
-    max-width: 280px;
-}
+       }
 .form-edit-user-data{
-    border: solid 2px blue;    
-    margin-left: 10px;
-    width: 50%;
+    /* border: solid 2px gray;     */
+    margin: 0 auto;
+    width: 90%;
 }
 .form-edit-user-data p{    
     text-align: center;
@@ -531,11 +581,10 @@ transition: 0.5s;
     border: solid 1px black;
 }
 
-
-.main-register{
+/* .main-register{
     display: flex;
     justify-content: center;
-}
+} */
 
 }
 
