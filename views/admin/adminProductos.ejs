@@ -14,12 +14,18 @@
                                     <section class="section-destacados-admin">
                                         
                                             <img src="../../img/products/<%= product.image %>" alt="bota">
-                                            <p><%= product.name %></p>
-                                            <p>$<%= product.price %></p>
-                                            <p><a href="/admin/productos/editar/<%= product.id %>" class="com-but-main"><button class="admin-but">EDITAR</button></a></p>
+                                            <p><strong>Nombre:</strong> <%= product.name %></p>
+                                            <p><strong>Precio:</strong> $<%= product.price %></p>
+                                            <div class="product-edit">
+                                                <form action="/admin/productos/editar/<%= product.id %>" method="get" >
+                                                    <button type="submt" name="editar" id="editar" class="admin-but"><p>EDITAR</p></button>                                                                  
+                                                </form>
+                                                
+                                                <!-- <a href="/admin/productos/editar/<%= product.id %>" class="com-but-main"><button class="admin-but">EDITAR</button></a> -->
                                             <form action="/admin/productos/delete/<%= product.id %>?_method=DELETE" method="POST" >
-                                                <button type="submt" name="delete" id="delete" class="admin-but">BORRAR</button>                                                                  
+                                                <button type="submt" name="delete" id="delete" class="admin-but"><p>BORRAR</p></button>                                                                  
                                             </form>
+                                        </div>
                                       
                                     </section> 
                                 <!-- </div> -->
@@ -30,25 +36,24 @@
                     <div class="productos-admin">                       
                        
                             <% texanas.forEach(product=> { %> 
-                                <!-- <div class="produc">  -->
-                                    <section class="section-destacados-admin">
+                                <section class="section-destacados-admin">
                                         
-                                        <img src="../../img/products/<%= product.image %>" alt="bota">
-                                        <p>
-                                            <%= product.name %>
-                                        </p>
-                                        <p>$<%= product.price %>
-                                        </p>
-                                        <p><a href="/admin/productos/editar/<%= product.id %>" class="com-but-main"><button class="admin-but">EDITAR</button></a></p>
-                                        <form action="/admin/productos/delete/<%= product.id %>?_method=DELETE" method="POST" >
-                                            <button type="submt" name="delete" id="delete" class="admin-but">BORRAR</button>
-                                        
-                    
+                                    <img src="../../img/products/<%= product.image %>" alt="bota">
+                                    <p><strong>Nombre:</strong> <%= product.name %></p>
+                                    <p><strong>Precio:</strong> $<%= product.price %></p>
+                                    <div class="product-edit">
+                                        <form action="/admin/productos/editar/<%= product.id %>" method="get" >
+                                            <button type="submt" name="editar" id="editar" class="admin-but"><p>EDITAR</p></button>                                                                  
                                         </form>
                                         
-                                  
-                                </section>  
-                                <!-- </div> -->
+                                        <!-- <a href="/admin/productos/editar/<%= product.id %>" class="com-but-main"><button class="admin-but">EDITAR</button></a> -->
+                                    <form action="/admin/productos/delete/<%= product.id %>?_method=DELETE" method="POST" >
+                                        <button type="submt" name="delete" id="delete" class="admin-but"><p>BORRAR</p></button>                                                                  
+                                    </form>
+                                </div>
+                              
+                            </section>
+                               
                             <% }) %>
                      
                     </div>
@@ -57,24 +62,23 @@
                     <div class="productos-admin">                       
                        
                             <% bucaneras.forEach(product=> { %> 
-                                <!-- <div class="produc">  -->
-                                    <section class="section-destacados-admin">
+                                <section class="section-destacados-admin">
                                         
-                                        <img src="../../img/products/<%= product.image %>" alt="bota">
-                                        <p>
-                                            <%= product.name %>
-                                        </p>
-                                        <p>$<%= product.price %>
-                                        </p>
-                                        <p><a href="/admin/productos/editar/<%= product.id %>" class="com-but-main"><button class="admin-but">EDITAR</button></a></p>
-                                        <form action="/admin/productos/delete/<%= product.id %>?_method=DELETE" method="POST" >
-                                            <button type="submt" name="delete" id="delete" class="admin-but">BORRAR</button>
-                                        
-                    
+                                    <img src="../../img/products/<%= product.image %>" alt="bota">
+                                    <p><strong>Nombre:</strong> <%= product.name %></p>
+                                    <p><strong>Precio:</strong> $<%= product.price %></p>
+                                    <div class="product-edit">
+                                        <form action="/admin/productos/editar/<%= product.id %>" method="get" >
+                                            <button type="submt" name="editar" id="editar" class="admin-but"><p>EDITAR</p></button>                                                                  
                                         </form>
-                                  
-                                </section> 
-                                <!-- </div> -->
+                                        
+                                        <!-- <a href="/admin/productos/editar/<%= product.id %>" class="com-but-main"><button class="admin-but">EDITAR</button></a> -->
+                                    <form action="/admin/productos/delete/<%= product.id %>?_method=DELETE" method="POST" >
+                                        <button type="submt" name="delete" id="delete" class="admin-but"><p>BORRAR</p></button>                                                                  
+                                    </form>
+                                </div>
+                              
+                            </section>
                             <% }) %>
                      
                     </div>
@@ -83,24 +87,23 @@
                     <div class="productos-admin">                       
                         
                             <% borcegos.forEach(product=> { %> 
-                                <!-- <div class="produc">  -->
-                                    <section class="section-destacados-admin">
+                                <section class="section-destacados-admin">
                                         
-                                        <img src="../../img/products/<%= product.image %>" alt="bota">
-                                        <p>
-                                            <%= product.name %>
-                                        </p>
-                                        <p>$<%= product.price %>
-                                        </p>
-                                        <p><a href="/admin/productos/editar/<%= product.id %>" class="com-but-main"><button class="admin-but">EDITAR</button></a></p>
-                                        <form action="/admin/productos/delete/<%= product.id %>?_method=DELETE" method="POST" >
-                                            <button type="submt" name="delete" id="delete" class="admin-but">BORRAR</button>
-                                        
-                    
+                                    <img src="../../img/products/<%= product.image %>" alt="bota">
+                                    <p><strong>Nombre:</strong> <%= product.name %></p>
+                                    <p><strong>Precio:</strong> $<%= product.price %></p>
+                                    <div class="product-edit">
+                                        <form action="/admin/productos/editar/<%= product.id %>" method="get" >
+                                            <button type="submt" name="editar" id="editar" class="admin-but"><p>EDITAR</p></button>                                                                  
                                         </form>
-                                  
-                                </section>
-                                <!-- </div> -->
+                                        
+                                        <!-- <a href="/admin/productos/editar/<%= product.id %>" class="com-but-main"><button class="admin-but">EDITAR</button></a> -->
+                                    <form action="/admin/productos/delete/<%= product.id %>?_method=DELETE" method="POST" >
+                                        <button type="submt" name="delete" id="delete" class="admin-but"><p>BORRAR</p></button>                                                                  
+                                    </form>
+                                </div>
+                              
+                            </section>
                             <% }) %>
                      
                     </div>
@@ -109,24 +112,23 @@
                     <div class="productos-admin">                       
                        
                             <% guillerminas.forEach(product=> { %> 
-                                <!-- <div class="produc">  -->
-                                    <section class="section-destacados-admin">
+                                <section class="section-destacados-admin">
                                         
-                                        <img src="../../img/products/<%= product.image %>" alt="bota">
-                                        <p>
-                                            <%= product.name %>
-                                        </p>
-                                        <p>$<%= product.price %>
-                                        </p>
-                                        <p><a href="/admin/productos/editar/<%= product.id %>" class="com-but-main"><button class="admin-but">EDITAR</button></a></p>
-                                        <form action="/admin/productos/delete/<%= product.id %>?_method=DELETE" method="POST" >
-                                            <button type="submt" name="delete" id="delete" class="admin-but">BORRAR</button>
-                                        
-                    
+                                    <img src="../../img/products/<%= product.image %>" alt="bota">
+                                    <p><strong>Nombre:</strong> <%= product.name %></p>
+                                    <p><strong>Precio:</strong> $<%= product.price %></p>
+                                    <div class="product-edit">
+                                        <form action="/admin/productos/editar/<%= product.id %>" method="get" >
+                                            <button type="submt" name="editar" id="editar" class="admin-but"><p>EDITAR</p></button>                                                                  
                                         </form>
-                                  
-                                </section>  
-                                <!-- </div> -->
+                                        
+                                        <!-- <a href="/admin/productos/editar/<%= product.id %>" class="com-but-main"><button class="admin-but">EDITAR</button></a> -->
+                                    <form action="/admin/productos/delete/<%= product.id %>?_method=DELETE" method="POST" >
+                                        <button type="submt" name="delete" id="delete" class="admin-but"><p>BORRAR</p></button>                                                                  
+                                    </form>
+                                </div>
+                              
+                            </section>
                             <% }) %>
                      
                     </div>
@@ -135,24 +137,23 @@
                     <div class="productos-admin">                       
                        
                             <% giftCard.forEach(product=> { %> 
-                                <!-- <div class="produc">  -->
-                                    <section class="section-destacados-admin">
+                                <section class="section-destacados-admin">
                                         
-                                        <img src="../../img/products/<%= product.image %>" alt="bota">
-                                        <p>
-                                            <%= product.name %>
-                                        </p>
-                                        <p>$<%= product.price %>
-                                        </p>
-                                        <p><a href="/admin/productos/editar/<%= product.id %>" class="com-but-main"><button class="admin-but">EDITAR</button></a></p>
-                                        <form action="/admin/productos/delete/<%= product.id %>?_method=DELETE" method="POST" >
-                                            <button type="submt" name="delete" id="delete" class="admin-but">BORRAR</button>
-                                        
-                    
+                                    <img src="../../img/products/<%= product.image %>" alt="bota">
+                                    <p><strong>Nombre:</strong> <%= product.name %></p>
+                                    <p><strong>Precio:</strong> $<%= product.price %></p>
+                                    <div class="product-edit">
+                                        <form action="/admin/productos/editar/<%= product.id %>" method="get" >
+                                            <button type="submt" name="editar" id="editar" class="admin-but"><p>EDITAR</p></button>                                                                  
                                         </form>
-                                  
-                                </section>  
-                                <!-- </div> -->
+                                        
+                                        <!-- <a href="/admin/productos/editar/<%= product.id %>" class="com-but-main"><button class="admin-but">EDITAR</button></a> -->
+                                    <form action="/admin/productos/delete/<%= product.id %>?_method=DELETE" method="POST" >
+                                        <button type="submt" name="delete" id="delete" class="admin-but"><p>BORRAR</p></button>                                                                  
+                                    </form>
+                                </div>
+                              
+                            </section>
                             <% }) %>
                      
                     </div>

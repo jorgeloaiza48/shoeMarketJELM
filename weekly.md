@@ -38,3 +38,9 @@ Vía videollamada analizamos las observaciones realizadas el lunes 23 de mayo de
 
 Reunión 2-6-2022
 Estuvimos hablando sobre la organización del quinto SPRINT 
+
+Reunión 10-6-2022
+Mediante video llamada estuvimos hablando sobre la organización de las vistas.
+
+Raunión 11-6-2022
+Por unos cinco minutos se discutió sobre las vistas.

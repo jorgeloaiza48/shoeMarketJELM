@@ -12,34 +12,7 @@
 			"Alturacana": "13cm",
 			"Colores": "Negro Crema Blanco"
 		},
-		"image": "laraNegro.jpeg",
-		"size": [
-			"35",
-			"36",
-			"37",
-			"38",
-			"39",
-			"40"
-		]
-	},
-	{
-		"id": 4,
-		"name": "LARA BLANCO",
-		"price": 10490,
-		"category": "Borcegos",
-		"color": [
-			"Negro",
-			"Crema",
-			"Blanco"
-		],
-		"description": {
-			"Material": "Cuero Vacuno",
-			"Alturabase": "6cm",
-			"Alturataco": "6cm",
-			"Alturacana": "13cm",
-			"Colores": "Negro Crema Blanco"
-		},
-		"image": "img-1653653499617.jpeg",
+		"image": "img-1654980250260.jpg",
 		"size": [
 			"35",
 			"36",
@@ -54,9 +27,7 @@
 		"name": "LONDON NEGRO",
 		"price": 10990,
 		"category": "Borcegos",
-		"color": [
-			"Negro"
-		],
+		"color": "Negro",
 		"description": {
 			"Material": "Cuero Vacuno",
 			"Alturabase": "6cm",
@@ -64,7 +35,7 @@
 			"Alturacana": "20cm",
 			"Colores": "Negro"
 		},
-		"image": "londonNegro.jpeg",
+		"image": "img-1654980271716.jpg",
 		"size": [
 			"35",
 			"36",
@@ -91,7 +62,7 @@
 			"Alturacana": "0cm",
 			"Colores": "Negro Rojo Crema"
 		},
-		"image": "maddyNegro.jpeg",
+		"image": "img-1654980626750.jpg",
 		"size": [
 			"35",
 			"36",
@@ -117,7 +88,7 @@
 			"Alturacana": "0cm",
 			"Colores": "Negro Rojo Crema"
 		},
-		"image": "maddyCrema.jpeg",
+		"image": "img-1654980674389.jpg",
 		"size": [
 			"35",
 			"36",
@@ -132,9 +103,7 @@
 		"name": "MADDY ROJO",
 		"price": 13990,
 		"category": "Guillerminas",
-		"color": [
-			"Rojo"
-		],
+		"color": "Rojo",
 		"description": {
 			"Material": "Razo",
 			"Alturabase": "5.5cm",
@@ -142,7 +111,7 @@
 			"Alturacana": "0cm",
 			"Colores": "Negro Rojo Crema"
 		},
-		"image": "maddyRojo.jpeg",
+		"image": "img-1654980733194.jpg",
 		"size": [
 			"35",
 			"36",
@@ -157,9 +126,7 @@
 		"name": "RIANNE NEGRO",
 		"price": 18990,
 		"category": "Bucaneras",
-		"color": [
-			"Negro"
-		],
+		"color": "Negro",
 		"description": {
 			"Material": "Cuero Vacuno",
 			"Alturabase": "5.5cm",
@@ -167,7 +134,7 @@
 			"Alturacana": "39cm",
 			"Colores": "Negro"
 		},
-		"image": "rianneNegro.jpeg",
+		"image": "img-1654980008910.jpg",
 		"size": [
 			"35",
 			"36",
@@ -195,7 +162,7 @@
 			"Alturacana": "40 cm",
 			"Colores": "Negro Crema Rosa"
 		},
-		"image": "sashaNegra.jpeg",
+		"image": "img-1654979804131.jpg",
 		"size": [
 			"35",
 			"36",
@@ -222,7 +189,7 @@
 			"Alturacana": "40cm",
 			"Colores": "Negro Crema Rosa"
 		},
-		"image": "sashaCrema.jpeg",
+		"image": "img-1654979897982.jpg",
 		"size": [
 			"35",
 			"36",
@@ -237,9 +204,7 @@
 		"name": "TIZIANA NEGRO",
 		"price": 25000,
 		"category": "Bucaneras",
-		"color": [
-			"Negro"
-		],
+		"color": "Negro",
 		"description": {
 			"Material": "Cuero Vacuno",
 			"Alturabase": "5.5cm",
@@ -247,7 +212,7 @@
 			"Alturacana": "39cm",
 			"Colores": "Negro"
 		},
-		"image": "tizianaNegro.jpeg",
+		"image": "img-1654980141527.jpg",
 		"size": [
 			"35",
 			"36",
@@ -262,9 +227,7 @@
 		"name": "BELLA NEGRO",
 		"price": 16990,
 		"category": "Botas",
-		"color": [
-			"Negro"
-		],
+		"color": "Negro",
 		"description": {
 			"Material": "Cuero Vacuno",
 			"Alturabase": "5.5cm",
@@ -272,7 +235,7 @@
 			"Alturacana": "25cm",
 			"Colores": "Negro"
 		},
-		"image": "bellaNegro.jpeg",
+		"image": "img-1654979917718.jpg",
 		"size": [
 			"35",
 			"36",
@@ -287,9 +250,7 @@
 		"name": "HARD NEGRO",
 		"price": 14990,
 		"category": "Botas",
-		"color": [
-			"Negro"
-		],
+		"color": "Negro",
 		"description": {
 			"Material": "Cuero Vacuno",
 			"Alturabase": "6cm",
@@ -297,7 +258,7 @@
 			"Alturacana": "50cm",
 			"Colores": "Negro"
 		},
-		"image": "hardNegro.jpeg",
+		"image": "img-1654979966101.jpg",
 		"size": [
 			"35",
 			"36",
@@ -323,7 +284,7 @@
 			"Alturacana": "15cm",
 			"Colores": "Negro Blanco"
 		},
-		"image": "rockNegro.jpeg",
+		"image": "img-1654980344522.jpg",
 		"size": [
 			"35",
 			"36",
@@ -349,7 +310,7 @@
 			"Alturacana": "15cm",
 			"Colores": "Negro Blanco"
 		},
-		"image": "rockBlanco.jpeg",
+		"image": "img-1654980395663.jpg",
 		"size": [
 			"35",
 			"36",
@@ -372,7 +333,7 @@
 			"Alturacana": "35cm",
 			"Colores": "Negro Crema"
 		},
-		"image": "haileyNegro.jpeg",
+		"image": "img-1654979989180.jpg",
 		"size": [
 			"35",
 			"36",
@@ -769,55 +730,12 @@
 			"Alturacana": "2cm",
 			"Colores": "azul"
 		},
-		"image": "photo-1653601119165.jpeg",
+		"image": "img-1654980422104.jpg",
 		"size": [
 			"37",
 			"38",
 			"39",
 			"40"
-		]
-	},
-	{
-		"id": 34,
-		"name": "Botas cortas",
-		"price": 89000,
-		"category": "Botas",
-		"color": [
-			"Crema",
-			"Rosa"
-		],
-		"description": {
-			"Material": "cuero",
-			"Alturabase": "2cm",
-			"Alturataco": "3cm",
-			"Alturacana": "2cm",
-			"Colores": "azul"
-		},
-		"image": "img-1653664832204.jpg",
-		"size": [
-			"38",
-			"39",
-			"40"
-		]
-	},
-	{
-		"id": 35,
-		"name": "Botas cortas",
-		"price": 85000,
-		"category": "Botas",
-		"color": "Rojo",
-		"description": {
-			"Material": "cuero",
-			"Alturabase": "2cm",
-			"Alturataco": "1 cm",
-			"Alturacana": "1 cm",
-			"Colores": "azul"
-		},
-		"image": "img-1653664428916.jpg",
-		"size": [
-			"35",
-			"36",
-			"37"
 		]
 	},
 	{
@@ -833,7 +751,7 @@
 			"Alturacana": "1 cm",
 			"Colores": ""
 		},
-		"image": "img-1654188355173.jpg",
+		"image": "img-1654980463995.jpg",
 		"size": [
 			"37",
 			"39",
@@ -853,7 +771,7 @@
 			"Alturacana": "1 cm",
 			"Colores": ""
 		},
-		"image": "img-1653669350964.jpg",
+		"image": "img-1654980481795.jpg",
 		"size": [
 			"37",
 			"39",
@@ -873,7 +791,7 @@
 			"Alturacana": "1 cm",
 			"Colores": ""
 		},
-		"image": "img-1654553015820.jpg",
+		"image": "img-1654980500171.jpg",
 		"size": [
 			"35",
 			"37",
@@ -906,6 +824,29 @@
 			"36",
 			"37",
 			"38"
+		]
+	},
+	{
+		"id": 42,
+		"name": "Bota cuasual",
+		"price": 52000,
+		"category": "Botas",
+		"color": [
+			"Crema",
+			"Rojo"
+		],
+		"description": {
+			"Material": "cuero",
+			"Alturabase": "3 cm",
+			"Alturataco": "2 cm",
+			"Alturacana": "1 cm",
+			"Colores": "amarillo"
+		},
+		"image": "img-1654979710936.jpg",
+		"size": [
+			"35",
+			"36",
+			"37"
 		]
 	}
 ]
