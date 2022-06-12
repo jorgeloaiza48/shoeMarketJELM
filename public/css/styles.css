@@ -264,6 +264,7 @@ width: 90%;
 
   .section-destacados-admin{
         border-radius: 20px;
+        width: 50%;
     }
     .section-destacados-admin img {
         /* border: solid 2px red; */
@@ -273,14 +274,7 @@ width: 90%;
     .productos-admin .section-destacados-admin p {
         font-size: medium;
     }
-
-
-    .section-destacados-admin img {
-        /* border: solid 2px red; */
-        border-radius: 20px;
-        width: 250rem;
-    }
-
+ 
     .principal-logo2 {
         position: relative;
         left: 22px;
@@ -563,16 +557,19 @@ width: 90%;
         background-color: black;
         color: white;
     }
-    
-.section-destacados-admin {
-    border: solid 2px gray;
-    padding-bottom: 2px;
-    padding-top: 5px;
-    width: 20%;
+    .admin-but{  
+        line-height: 1px;                        
+    }
+    .section-destacados-admin {
+        border: solid 2px gainsboro;
+        margin: 10px;
+        padding-bottom: 2px;
+        padding-top: 5px;
+        width: 45%;
     }
 .section-destacados-admin img {
     height: 220px;
-    max-width: 90%;
+    max-width: 250px;
 }
     .section-destacados-admin p{
     color: #585656;
@@ -1476,6 +1473,25 @@ i {
 /* /////////////////////////////Media quiery para 992px   ///////////////////////////// */
 
 @media (min-width: 992px) {
+    .admin-but{  
+        line-height: 1px;                        
+    }
+    .section-destacados-admin {
+        border: solid 2px gainsboro;
+        margin: 10px;
+        padding-bottom: 2px;
+        padding-top: 5px;
+        width: 30%;
+    }
+.section-destacados-admin img {
+    height: 220px;
+    max-width: 250px;
+}
+    .section-destacados-admin p{
+    color: #585656;
+    font-size:small;
+   
+    }
 
     /* Para el efecto en el menú */
     .cuentaCarrito li,
