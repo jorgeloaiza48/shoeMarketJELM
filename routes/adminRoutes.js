@@ -29,7 +29,7 @@ const upload = multer({ storage })
 
 const adminController = require('../controllers/AdminController')
 
-router.get("/index", adminController.index)
+router.get("/", adminController.index)
 
 router.get("/lista/usuarios", adminController.userList)
 

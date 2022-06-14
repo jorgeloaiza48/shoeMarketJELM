@@ -39,37 +39,42 @@ footer {
     text-align: center;
 
 }
+
 /*//////////////////////////profile/********************/
-.prof-main{
+.prof-main {
     margin-top: 20px;
     margin-bottom: 20px;
     text-align: center;
-   
+
 }
-.img-profile{
+
+.img-profile {
     width: 150px;
     margin-bottom: 20px;
 
 }
-.profile-but{
-background-color: white;
-border-radius: 5px;
-margin-bottom: 10px;
-height: 25px;
-transition: 0.5s;
+
+.profile-but {
+    background-color: white;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    height: 25px;
+    transition: 0.5s;
 }
 
-.prof-form:hover .profile-but{
+.prof-form:hover .profile-but {
     color: white;
     background-color: #1c1819;
 }
-@media(min-width:576px){
-    .prof-main{
+
+@media(min-width:576px) {
+    .prof-main {
         margin-left: 55px;
         text-align: left;
 
     }
 }
+
 /*//////////////////////////header 2/********************/
 .form-header {
     display: flex;
@@ -88,7 +93,7 @@ transition: 0.5s;
     display: none;
     font-size: 13px;
     left: -10px;
-    margin-top: 12px;
+    margin-top: 5px;
     position: absolute;
     padding-left: 0px;
     top: 36px;
@@ -106,12 +111,12 @@ transition: 0.5s;
     display: block;
 }
 
-.lista__profile-down{
+.lista__profile-down {
     align-items: center;
     background: transparent;
     border-radius: 10px;
     cursor: pointer;
-    display:block;
+    display: block;
     font-size: 13px;
     left: 7px;
     margin-top: 12px;
@@ -135,10 +140,12 @@ transition: 0.5s;
     margin-bottom: 0px;
     height: 30px;
 }
-.texto2 i{
+
+.texto2 i {
     margin-left: 5px;
 
 }
+
 .principal-form-boton2 form button {
     background-color: rgb(232 207 207);
     border-radius: 10%;
@@ -184,49 +191,55 @@ transition: 0.5s;
     display: none;
 }
 
-.principal-form-boton2 {    
-    
-     width: 100%;
+.principal-form-boton2 {
+
+    width: 100%;
 }
 
-.cont-search-nav3{
+.cont-search-nav3 {
     display: flex;
-    align-items: center;  
+    align-items: center;
 }
-#preview {
-    border:1px solid #ddd;
-    margin:10px;
-    border-radius:2px;      
-    max-width:200px;
-    padding: 5px;   
-  }
-  
-#preview img {width:100%;display:block;}
 
-.div-form-delete-edit-users{
+#preview {
+    border: 1px solid #ddd;
+    margin: 10px;
+    border-radius: 2px;
+    max-width: 200px;
+    padding: 5px;
+}
+
+#preview img {
+    width: 100%;
+    display: block;
+}
+
+.div-form-delete-edit-users {
     /* border: solid 2px red; */
-    display: flex;   
-    justify-content: center; 
-    height: 45px;    
+    display: flex;
+    justify-content: center;
+    height: 45px;
     margin: 2px;
     position: inherit;
 }
 
 .div-form-delete-edit-users form {
     /* border: solid 2px green;   */
-    width: 25%;   
+    width: 25%;
 }
-.div-form-delete-edit-users button{
-    margin-top: -20px;  
+
+.div-form-delete-edit-users button {
+    margin-top: -20px;
 }
-.div-form-delete-edit-users button p{
+
+.div-form-delete-edit-users button p {
     color: black;
     text-align: center;
     margin-left: -1px;
-    margin-top: 5px;
+    
 }
 
-.formEditUser{
+.formEditUser {
     border: solid 2px gainsboro;
     border-radius: 10px;
     margin: 0 auto;
@@ -234,33 +247,38 @@ transition: 0.5s;
     margin-bottom: 20px;
     width: 70%;
 }
-.formEditUser .form-edit-user-img img{
-/* border: solid 2px blue; */
-border-radius: 10px;
-display: block;
-margin:auto;
-margin-top: 10px ;
-width: 90%;
-max-width: 200px;
+
+.formEditUser .form-edit-user-img img {
+    /* border: solid 2px blue; */
+    border-radius: 10px;
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    width: 90%;
+    max-width: 200px;
 }
-.form-edit-user-data p{
+
+.form-edit-user-data p {
     text-align: center;
 }
-.form__nombre .input{
+
+.form__nombre .input {
     border: solid 2px black;
     border-radius: 10px;
 }
 
-@media(min-width:576px){
+@media(min-width:576px) {
 
-    .section-destacados-admin{
+    .section-destacados-admin {
         border-radius: 20px;
     }
+
     .section-destacados-admin img {
         /* border: solid 2px red; */
         border-radius: 20px;
         max-width: 100px;
     }
+
     .productos-admin .section-destacados-admin p {
         font-size: small;
     }
@@ -269,19 +287,21 @@ max-width: 200px;
 
 @media(min-width:768px) {
 
-  .section-destacados-admin{
+    .section-destacados-admin {
         border-radius: 20px;
         width: 50%;
     }
+
     .section-destacados-admin img {
         /* border: solid 2px red; */
         border-radius: 20px;
         width: 100%;
     }
+
     .productos-admin .section-destacados-admin p {
         font-size: medium;
     }
- 
+
     .principal-logo2 {
         position: relative;
         left: 22px;
@@ -289,12 +309,13 @@ max-width: 200px;
         margin-left: -40px;
         width: 20%;
     }
-    .lista__profile-down{
+
+    .lista__profile-down {
         align-items: center;
         background: transparent;
         border-radius: 10px;
         cursor: pointer;
-        display:none;
+        display: none;
         font-size: 13px;
         left: 31px;
         margin-top: 12px;
@@ -304,6 +325,7 @@ max-width: 200px;
         transition: all 0.5s;
         z-index: 1;
     }
+
     .logo-form2 {
         /* border: solid 1px red; */
         display: flex;
@@ -312,7 +334,7 @@ max-width: 200px;
         justify-content: space-evenly;
     }
 
-    .principal-form-boton2 {        
+    .principal-form-boton2 {
         text-align: center;
         width: 80%;
     }
@@ -330,12 +352,14 @@ max-width: 200px;
         margin-top: 15px;
         width: 80%;
     }
+
     .cuentaCarrito2 {
         list-style: none;
         display: flex;
         flex-wrap: wrap;
 
     }
+
     .cuentaCarrito2 li {
         /* display: flex; */
         align-items: center;
@@ -411,12 +435,12 @@ max-width: 200px;
 
 @media(min-width:992px) {
 
-    .lista__profile-down{
+    .lista__profile-down {
         align-items: center;
         background: transparent;
         border-radius: 10px;
         cursor: pointer;
-        display:none;
+        display: none;
         font-size: 13px;
         left: 7px;
         margin-top: 12px;
@@ -426,6 +450,7 @@ max-width: 200px;
         transition: all 0.5s;
         z-index: 1;
     }
+
     .cuentaCarrito2 li {
         margin-left: 30px;
     }
@@ -450,8 +475,8 @@ max-width: 200px;
 }
 
 @media(min-width:1200px) {
-  
-    
+
+
     .productos-admin img {
         width: 300px;
     }
@@ -476,12 +501,41 @@ max-width: 200px;
 
 
 /* /////////////////////////////admin view  ///////////////////////////// */
+.admin-list{
+    text-align: center;
+    padding-left: 0px;
+}
+.admin-list li {
+    color: black;
+    font-size: 25px;
+    margin-bottom: 20px;
+    list-style: none;
+    
+    text-align: center;
 
+}
+.admin-list a{
+    text-decoration: none;
+}
+.admin-list a button{
+    color: black;
+    background-color: white;
+    border: 1px solid #585656;
+    border-radius: 10px;
+    transition: all 0.8s;
+}
+.admin-list a button:hover{
+color: white;
+background-color: black;
+}
+.admin-title{
+    text-align: center;
+}
 .main-admin {
     display: block;
-    margin-left: 20px;
-    margin-right: 10px;
+   
 }
+
 .productos-admin {
     /* border: solid 2px red; */
     border-radius: 5px;
@@ -489,51 +543,58 @@ max-width: 200px;
     flex-wrap: wrap;
     justify-content: center;
     padding: 5px;
-    margin: 15px;  
+    margin: 15px;
 }
-.product-edit{
+
+.product-edit {
     /* border: solid 2px blue; */
-    display: flex; 
+    display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
 
 }
-.product-edit form{
-   /* border: solid 2px violet; */
-   width: 8px;  
+
+.product-edit form {
+    /* border: solid 2px violet; */
+    width: 8px;
 }
-.admin-but{
+
+.admin-but {
     /* border: solid 2px red; */
     font-size: small;
-    padding: 2px;      
+    padding: 2px;
 }
-.admin-but p{
+
+.admin-but p {
     font-size: small;
     margin: 1px;
-    
+
 }
+
 .section-destacados-admin img {
     /* border: solid 2px green; */
     border-radius: 20px;
-    height: 80px;
+  
     margin-top: 5px;
     max-width: 70%;
 }
 
 .section-destacados-admin {
-    border: solid 2px gainsboro;
     border-radius: 20px;
     height: 2%;
     margin: 5px;
-    text-align: center;   
+    text-align: center;
+    max-width: 350px;
     width: 45%;
 }
-.section-destacados-admin p{
-  font-size:x-small;
-  margin-left: 5px;
-  text-align: left;
+
+.section-destacados-admin p {
+    font-size: x-small;
+    margin-left: 5px;
+    text-align: left;
 }
-.section-destacados-admin form{
+
+.section-destacados-admin form {
     /* border: solid 2px red; */
     display: flex;
     justify-content: space-around;
@@ -564,54 +625,63 @@ max-width: 200px;
         background-color: black;
         color: white;
     }
-    .admin-but{  
-        line-height: 1px;                        
+
+    .admin-but {
+        line-height: 1px;
     }
+
     .section-destacados-admin {
-        border: solid 2px gainsboro;
+        
         margin: 10px;
         padding-bottom: 2px;
         padding-top: 5px;
         width: 45%;
     }
-.section-destacados-admin img {
-    height: 220px;
-    max-width: 250px;
-}
-    .section-destacados-admin p{
-    color: #585656;
-    font-size:small;
-   
+
+    .section-destacados-admin img {
+        height: 220px;
+        max-width: 250px;
     }
-    .contenedor_button{
-    /* border: solid 4px green; */
-    display: flex;
+
+    .section-destacados-admin p {
+        color: #000000;
+        font-size: small;
+
     }
-    .formEditUser{
+
+    .contenedor_button {
+        /* border: solid 4px green; */
+        display: flex;
+    }
+
+    .formEditUser {
         border: solid 2px gainsboro;
         background-color: rgb(232, 207, 207);
         margin-bottom: 20px;
         width: 70%;
         max-width: 380px;
     }
-    .formEditUser .form-edit-user-img img{
-    /* border: solid 2px red; */
-    width: 50%;
-       }
-.form-edit-user-data{
-    /* border: solid 2px gray;     */
-    margin: 0 auto;
-    width: 90%;
-}
 
-.form-edit-user-data p{    
-    text-align: center;
-}
-.form-edit-user-data .form__nombre input{
-    border: solid 1px black;
-}
+    .formEditUser .form-edit-user-img img {
+        /* border: solid 2px red; */
+        width: 50%;
+    }
 
-/* .main-register{
+    .form-edit-user-data {
+        /* border: solid 2px gray;     */
+        margin: 0 auto;
+        width: 90%;
+    }
+
+    .form-edit-user-data p {
+        text-align: center;
+    }
+
+    .form-edit-user-data .form__nombre input {
+        border: solid 1px black;
+    }
+
+    /* .main-register{
     display: flex;
     justify-content: center;
 } */
@@ -870,6 +940,7 @@ i {
 .produc img {
     width: 100%;
     border-radius: 20px;
+    max-width: 260px;
 }
 
 .productos .produc button {
@@ -1345,7 +1416,9 @@ i {
         margin-bottom: 5px;
         margin-top: 5px;
         color: red;
-    }.text-aviso2 {
+    }
+
+    .text-aviso2 {
         margin-left: 0px;
         margin-top: 5px;
         color: red;
@@ -1482,24 +1555,27 @@ i {
 /* /////////////////////////////Media quiery para 992px   ///////////////////////////// */
 
 @media (min-width: 992px) {
-    .admin-but{  
-        line-height: 1px;                        
+    .admin-but {
+        line-height: 1px;
     }
+
     .section-destacados-admin {
-        border: solid 2px gainsboro;
+        
         margin: 10px;
         padding-bottom: 2px;
         padding-top: 5px;
         width: 30%;
     }
-.section-destacados-admin img {
-    height: 220px;
-    max-width: 250px;
-}
-    .section-destacados-admin p{
-    color: #585656;
-    font-size:small;
-   
+
+    .section-destacados-admin img {
+        height: 220px;
+        max-width: 250px;
+    }
+
+    .section-destacados-admin p {
+        color: #000000;
+        font-size: small;
+
     }
 
     /* Para el efecto en el menú */
@@ -2445,12 +2521,14 @@ i {
     margin-bottom: 20px;
 
 }
-.usuario_record{
+
+.usuario_record {
     display: block;
     padding-left: 20px;
     text-align: left;
     color: #585656
 }
+
 .form__usuario input {
     border: none;
     border-radius: 7px;
@@ -2709,6 +2787,7 @@ i {
 }
 
 .img-edit-product {
+    border-radius: 10px;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -2977,4 +3056,3 @@ i {
 .form-create input[type="text"]:focus:required:valid {
     border: 2px solid green;
 }
-
