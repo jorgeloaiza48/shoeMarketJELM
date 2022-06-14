@@ -8,7 +8,6 @@
 		"contraseña": "$2a$10$vMX2Zv81dc2pJcpAWR89guUS4TCJVv2kbAr9p9ixQ7IEcrBxKQE3y",
 		"image": "photousuario 2-1654366607044.jpg"
 	},
-	
 	{
 		"id": 4,
 		"nombre": "Jorge Loaiza",
@@ -35,5 +34,18 @@
 		"domicilio": "fgdfgdfg",
 		"contraseña": "$2a$10$XlIt6/SdzVZZERb8tNCkf.A0gf1OyMwjx7mzqvfJsdJFjerPwpbvC",
 		"image": "photoCaludia pipa-1654819499924.png"
+	},
+	{
+		"id": 7,
+		"nombre": "joel casa",
+		"email": "joeecasa@gmail.com",
+		"fechaNacimiento": "1993-04-28",
+		"domicilio": "la cr",
+		"contraseña": "$2a$10$pVDze0hYW4GnaaeEXD2ae.bFq6nMvlWG19QoQOHsTfVCAVVEMD7hy",
+		"image": "photo-1655216555874.jpg",
+		"NombreYapellido": "joel casa",
+		"Email": "joeecasa@gmail.com",
+		"FechaNacimiento": "1993-04-28",
+		"Domicilio": "la cr"
 	}
 ]

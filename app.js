@@ -24,6 +24,7 @@ saveUninitialized: true}))
 
 app.use(cookies())
 app.use(userLoggedMiddleware)
+
 //configuración para montar en Heroku
 app.use(express.static(publicPath))
 app.use('/',mainRoutes)

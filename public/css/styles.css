@@ -41,9 +41,9 @@ footer {
 }
 /*//////////////////////////profile/********************/
 .prof-main{
-    margin-left: 55px;
     margin-top: 20px;
     margin-bottom: 20px;
+    text-align: center;
    
 }
 .img-profile{
@@ -63,7 +63,13 @@ transition: 0.5s;
     color: white;
     background-color: #1c1819;
 }
+@media(min-width:576px){
+    .prof-main{
+        margin-left: 55px;
+        text-align: left;
 
+    }
+}
 /*//////////////////////////header 2/********************/
 .form-header {
     display: flex;
@@ -235,6 +241,7 @@ display: block;
 margin:auto;
 margin-top: 10px ;
 width: 90%;
+max-width: 200px;
 }
 .form-edit-user-data p{
     text-align: center;
@@ -582,8 +589,10 @@ width: 90%;
     }
     .formEditUser{
         border: solid 2px gainsboro;
+        background-color: rgb(232, 207, 207);
         margin-bottom: 20px;
         width: 70%;
+        max-width: 380px;
     }
     .formEditUser .form-edit-user-img img{
     /* border: solid 2px red; */
