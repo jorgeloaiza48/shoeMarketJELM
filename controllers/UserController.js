@@ -26,6 +26,15 @@ const controller = {
         }
 
         else {
+            
+            let emailEncontrado = undefined
+            emailEncontrado = users.find(elemento => elemento.email === req.body.email)
+            
+            if(emailEncontrado != undefined){console.log("Ya existe el email en el JSON de usuarios "),res.send("Email ya existe")} 
+        
+            else{
+           
+
             let ultimoElemento = users.length - 1
             
             let idNuevo = users[ultimoElemento].id + 1
@@ -53,6 +62,8 @@ const controller = {
 
             fs.writeFileSync(usersFilePath, JSON.stringify(NewUser, null, "\t")) //de JS a JSON
             res.redirect("/user/login")
+        }
+          
         }
 
     },
