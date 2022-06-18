@@ -70,7 +70,7 @@ const controller = {
 			if (isOkpassword) {
 
 				req.session.userLogged = userToLogin
-                console.log(userToLogin)
+            
                 
                 req.session.isAdmin = userToLogin.role == "admin"
 				if(req.body.record){

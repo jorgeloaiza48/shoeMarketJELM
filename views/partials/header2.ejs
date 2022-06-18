@@ -45,7 +45,7 @@
 
                         <li><a href="/carrito">Carrito</a><i class="fa-solid fa-cart-shopping"></i></li>
                         <% if (locals.isAdmin) { %>
-                            <li class="lista__productos_li" ><a href="/admin">Admin</a></li>
+                            <li class="lista__productos_li" ><a href="/admin">Admin</a><i class="fa-solid fa-lock"></i></li>
                             <% } %>
                         <% if (locals.isLogged) { %>
                             <li class="lista__profile">Hola <%= locals.userLogged.nombre %> ▼
