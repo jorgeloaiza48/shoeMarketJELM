@@ -1,19 +1,5 @@
 [
 	{
-		"id": 1,
-		"nombre": "joel casa",
-		"email": "joeecasa@gmail.com",
-		"fechaNacimiento": "1993-04-28",
-		"domicilio": "calle 123",
-		"contraseña": "$2a$10$5GbSHLHn2YfIlMyaqaJhB.sfNInJR2.mbMGhmvSx9Od0iWmEMTwyK",
-		"image": "photo-1655571361655.jpeg",
-		"role": "Admin",
-		"NombreYapellido": "joel casa",
-		"Email": "joeecasa@gmail.com",
-		"FechaNacimiento": "1993-04-28",
-		"Domicilio": "calle 123"
-	},
-	{
 		"id": 2,
 		"nombre": "Jorge Loaiza",
 		"email": "jelm48@misena.edu.co",
@@ -42,5 +28,19 @@
 		"contraseña": "$2a$10$dz6m9uECpgZ.RYcLpAw4l.yukVdcqdUbDfRGmJ.Cd6Zq5WZm03LAe",
 		"image": "photo-1655571361655.jpeg",
 		"role": "Cliente"
+	},
+	{
+		"id": 5,
+		"nombre": "joel casa",
+		"email": "joeecasa@gmail.com",
+		"fechaNacimiento": "1993-04-28",
+		"domicilio": "calle123",
+		"contraseña": "$2a$10$NAE3BKXSa1Alk5/6DOKJkO8dmH63Yx2Z2fU3kb1dUMdj/Zu.lt6lu",
+		"image": "photo-1655595411950.jpeg",
+		"role": "Cliente",
+		"NombreYapellido": "joel casa",
+		"Email": "joeecasa@gmail.com",
+		"FechaNacimiento": "1993-04-28",
+		"Domicilio": "calle123"
 	}
 ]

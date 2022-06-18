@@ -17,12 +17,6 @@
         <%= usuario.domicilio %>
     </p>
 
-
-    <!-- <form action="/usuario/delete/<%= usuario.id %>?_method=DELETE" method="POST" >
-                        <a href="/usuario/editar/<%= usuario.id %>" class="com-but-main"><button class="admin-but">EDITAR</button></a>
-                        <button type="submit" name="delete" id="delete" class="admin-but">BORRAR</button>
-                    </form>
-              -->
     <div class="div-form-delete-edit-users">
         <form action="/admin/usuario/delete/<%= usuario.id %>?_method=DELETE" method="POST">
             <button type="submit" name="delete" id="delete" class="admin-but">

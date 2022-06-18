@@ -6,6 +6,7 @@ const cookies = require("cookie-parser")
 const session = require("express-session")
 const userLoggedMiddleware = require("./middlewares/UserLoggedMiddleware")
 const adminLoggedMiddleware = require('./middlewares/AdminLoggedMiddleware');
+
 const publicPath = path.resolve(__dirname,'./public')
 
 
@@ -24,6 +25,7 @@ app.use(express.static(publicPath))
 app.use(cookies())
 app.use(userLoggedMiddleware)
 app.use(adminLoggedMiddleware);
+
 
 //permite capturar la información que se envía desde un formulario vía post en req.body
 app.use(express.urlencoded({extended:false}))

@@ -14,17 +14,17 @@
     <p><strong>Dirección: </strong><br>
         <%= locals.userLogged.domicilio %>
     </p>
-
+    
     <div class="div-form-delete-edit-users">
-        <form action="/admin/usuario/delete/<%= locals.userLogged.id %>?_method=DELETE" method="POST">
+        <form action="/admin/usuario/delete/<%= locals.userLogged.id %>?_method=DELETE" method="POST" >
             <button type="submit" name="delete" id="delete" class="admin-but">
-                <strong>BORRAR</strong>
+                <p><strong>BORRAR</strong></p>
             </button>
         </form>
 
         <form action="/admin/usuario/editar/<%= locals.userLogged.id %>" method="get">
             <button type="submit" name="editar" id="delete" class="admin-but">
-                <strong>EDITAR</strong>
+                <p><strong>EDITAR</strong></p>
             </button>
         </form>
     </div>
