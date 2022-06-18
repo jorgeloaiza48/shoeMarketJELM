@@ -108,7 +108,10 @@ text-align: center;
     margin-bottom: 20px;
     margin-left: 35px;
 }
-
+.img-header{
+    width: 30px;
+    border-radius: 20px;
+}
 
 .lista__productos {
 
@@ -311,6 +314,7 @@ text-align: center;
     border: solid 2px black;
     border-radius: 10px;
 }
+
 .form-edit_select{
     border-radius: 10px;
     border: 1px black solid;
@@ -379,8 +383,9 @@ text-align: center;
         z-index: 1;
     }
     .lista__profile-down img{
-        width: 30px;
+        border-radius: 20px;
         margin-left: 5px;
+        width: 30px;
     }
     .lista__profile-down__admin {
         align-items: center;

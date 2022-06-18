@@ -22,8 +22,18 @@
             </div>
             <div class="icono-carrito2">
                 <a href="/carrito"><i class="fa-solid fa-cart-shopping"></i></a>
-                <a href="/user/registro"><i class="fa-solid fa-user-plus"></i></a>
-                <a href="#"><i class="fa-solid fa-bars"></i></a>
+                <% if (locals.isAdmin) { %>
+                    <a href="/admin"><i class="fa-solid fa-lock"></i></a>
+                    <% } %>
+                    <% if (locals.isLogged) { %>
+                        <a href="/user/profile"><img class="img-header" src="/img/user/<%=locals.userLogged.image%>" alt=""></a>
+                
+                    <% } else { %>
+                        <a href="/user/registro"><i class="fa-solid fa-user-plus"></i></a>
+                        <% } %>
+
+                 <a href="#"> <i class="fa-solid fa-bars"></i></a>
+
             </div>
 
 
@@ -45,29 +55,35 @@
 
                         <li><a href="/carrito">Carrito</a><i class="fa-solid fa-cart-shopping"></i></li>
                         <% if (locals.isAdmin) { %>
-                            <li class="lista__profile" ><a href="/admin">Admin</a> <i class="fa-solid fa-lock"></i>
+                            <li class="lista__profile"><a href="/admin">Admin</a> <i class="fa-solid fa-lock"></i>
                                 <ul class="lista__profile-down__admin">
                                     <li class="lista__profile-li" v><a href="/admin">Panel del control</a></li>
-                                    <li class="lista__profile-li"><a href="/admin/lista/usuarios">Usuarios Registrados</a></li>
+                                    <li class="lista__profile-li"><a href="/admin/lista/usuarios">Usuarios
+                                            Registrados</a></li>
                                     <li class="lista__profile-li"><a href="/admin/lista/productos">Productos</a></li>
-                                    <li class="lista__profile-li"><a href="/admin/productos/crear">Carga de productos</a></li>
+                                    <li class="lista__profile-li"><a href="/admin/productos/crear">Carga de
+                                            productos</a></li>
                                     <li class="lista__profile-li"><a href="/user/profile">Mi perfil</a></li>
                                 </ul>
                             </li>
                             <% } %>
-                        <% if (locals.isLogged) { %>
-                            <li class="lista__profile">Hola <%= locals.userLogged.nombre %> ▼
-                                    <ul class="lista__profile-down">
-                                        <li class="lista__profile-li" v><a href="/user/profile">Mi Perfil <img src="/img/user/<%=locals.userLogged.image%>" alt=""></a></li>
-                                        <li class="lista__profile-li"><a href="/user/logout">logout</a></li>
-                                        
-                                    </ul>
-                            </li>
-                            <% } else { %>
-                                <li><a href="/user/registro">Registrarse</a><i class="fa-solid fa-user-plus"></i></li>
-                                <li><a href="/user/login">Iniciar Sesion</a><i class="fa-solid fa-right-to-bracket"></i>
-                                </li>
-                                <% } %>
+                                <% if (locals.isLogged) { %>
+                                    <li class="lista__profile">Hola <%= locals.userLogged.nombre %> ▼
+                                            <ul class="lista__profile-down">
+                                                <li class="lista__profile-li" v><a href="/user/profile">Mi Perfil <img
+                                                            src="/img/user/<%=locals.userLogged.image%>" alt=""></a>
+                                                </li>
+                                                <li class="lista__profile-li"><a href="/user/logout">logout</a></li>
+
+                                            </ul>
+                                    </li>
+                                    <% } else { %>
+                                        <li><a href="/user/registro">Registrarse</a><i
+                                                class="fa-solid fa-user-plus"></i></li>
+                                        <li><a href="/user/login">Iniciar Sesion</a><i
+                                                class="fa-solid fa-right-to-bracket"></i>
+                                        </li>
+                                        <% } %>
                     </ul>
             </div>
         </div>
