@@ -2,47 +2,25 @@
 
     <body>
         <%- include("../partials/header2") %>
-            <main class="prof-main">
-                <div class="profile-contain">
-                    <div>
-                        <img class="img-profile" src="../img/user/<%=user.image%>" alt="no anda">
-                    </div>
-                    <h2>
-                        Hola
-                        <%= user.nombre %>
-                    </h2>
-                </div>
-                
-                <div class="profile-info">
 
-                    <ul class="profile-info__ul">
-                        <li class="profile-info__li">
-                            Nombre Completo : <%= user.nombre %> 
-                        </li>
-                        <li class="profile-info__li">
-                            Correo electronico : <%= user.email %> 
-                        </li>
-                        <li class="profile-info__li">
-                            Domicilio : <%= user.domicilio %> 
-                        </li>
-                        <li class="profile-info__li">
-                            Fecha de nacimiento : <%= user.fechaNacimiento %> 
-                        </li>
-                    </ul>
-                
+            <!-- *****************************INICIO MAIN****************************************** -->
+
+            <main class="main-admin">
+                <div class="productos-admin">
+
+                     
+                    <%- include('../components/singleUserLogged') %> 
+                       
+    
                 </div>
 
-                <form class="prof-form" action="/admin/usuario/editar/<%=user.id %>" method="get">
-                    <button type="submit" name="editar" id="editar" class="profile-but">Editar mi usuario</button>
-                </form>
-                <form class="prof-form" action="/user/logout" method="get">
-                    <button type="submit" name="logout" id="logout" class="profile-but">Cerrar sesion</button>
-                </form>
-                </div>
-               
 
             </main>
+
+            <!-- ********************************FIN MAIN***************************************** -->
             <%- include("../partials/footer") %>
+                <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     </body>
 
     </html>

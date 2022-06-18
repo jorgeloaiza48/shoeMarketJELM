@@ -27,6 +27,7 @@ const controller = {
         res.render("admin/listaUsuarios", { title: "Edición de usuario", users: users })
 
     },
+    
 
     adminProducts: (req, res) => {
         //para estos 3 no se puede usar const ya que mas abajo cuando reescribamos los json hay q volver a declarar las variables

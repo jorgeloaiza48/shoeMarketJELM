@@ -33,8 +33,7 @@ const controller = {
                 title: "Registro de usuario" })//mapped convierte un array en un objeto literal
         } else {
             let userToProcess = userCrud.findByField("email", req.body.email)
-            console.log(errors)
-            
+         
             if (userToProcess != undefined) {
                 return res.render("users/registro", { errors: {
 					email: {
@@ -75,9 +74,9 @@ const controller = {
             fs.writeFileSync(usersFilePath, JSON.stringify(NewUser, null, "\t")) //de JS a JSON
             res.redirect("/user/login")                 
         }
-        }//else 1
+        }
 
-    },//funcion principal
+    },
 
     login: (req, res) => { res.render('users/login', { title: "Login" }) },
 

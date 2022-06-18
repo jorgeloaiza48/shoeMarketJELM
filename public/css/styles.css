@@ -44,6 +44,10 @@ footer {
     display: block;
 text-align: center;
 }
+
+
+
+
 /*//////////////////////////profile/********************/
 .profile-contain{
     display: flex;
@@ -336,7 +340,7 @@ text-align: center;
     }
 
     .productos-admin .section-destacados-admin p {
-        font-size: small;
+        font-size: medium;
     }
 }
 
@@ -670,9 +674,8 @@ background-color: black;
 .section-destacados-admin img {
     /* border: solid 2px green; */
     border-radius: 20px;
-  
     margin-top: 5px;
-    max-width: 70%;
+    max-width: 35%;
 }
 
 .section-destacados-admin {
@@ -680,12 +683,17 @@ background-color: black;
     height: 2%;
     margin: 5px;
     text-align: center;
-    max-width: 350px;
-    width: 45%;
+    max-width: 450px;
+    width: 70%;
+    transition: 0.5s;
+}
+.section-destacados-admin:hover{
+    box-shadow: 5px 5px 15px 5px rgb(90, 88, 88);
+    
 }
 
 .section-destacados-admin p {
-    font-size: x-small;
+    font-size: small;
     margin-left: 5px;
     text-align: left;
 }
@@ -719,7 +727,7 @@ background-color: black;
 @media(min-width:768px) {
     .admin-but:hover {
         background-color: black;
-        color: white;
+        color: rgb(255, 255, 255);
     }
 
     .admin-but {
@@ -732,11 +740,6 @@ background-color: black;
         padding-bottom: 2px;
         padding-top: 5px;
         width: 45%;
-    }
-
-    .section-destacados-admin img {
-        height: 220px;
-        max-width: 250px;
     }
 
     .section-destacados-admin p {
@@ -784,12 +787,6 @@ background-color: black;
 
 }
 
-@media(min-width:992px) {
-
-    .productos-admin img {
-        width: 260px;
-    }
-}
 
 
 /* /////////////////////////////Media quiery para 360px   ///////////////////////////// */
@@ -1655,18 +1652,7 @@ i {
         line-height: 1px;
     }
 
-    .section-destacados-admin {
-        
-        margin: 10px;
-        padding-bottom: 2px;
-        padding-top: 5px;
-        width: 30%;
-    }
 
-    .section-destacados-admin img {
-        height: 220px;
-        max-width: 250px;
-    }
 
     .section-destacados-admin p {
         color: #000000;

@@ -7,7 +7,11 @@
 		"domicilio": "calle 123",
 		"contraseña": "$2a$10$5GbSHLHn2YfIlMyaqaJhB.sfNInJR2.mbMGhmvSx9Od0iWmEMTwyK",
 		"image": "photo-1655571361655.jpeg",
-		"role": "Admin"
+		"role": "Admin",
+		"NombreYapellido": "joel casa",
+		"Email": "joeecasa@gmail.com",
+		"FechaNacimiento": "1993-04-28",
+		"Domicilio": "calle 123"
 	},
 	{
 		"id": 2,
@@ -16,7 +20,7 @@
 		"fechaNacimiento": "2022-06-09",
 		"domicilio": "calle 100",
 		"contraseña": "$2a$10$GGeork8FP40Kiph00PXYuuyIWiTr9LU/VkHeredilaUiPeQ6wtEiO",
-		"image": "photoJorge Loaiza-1655559055392.jpg",
+		"image": "photoAlan Brito-1655560600726.jpg",
 		"role": "Cliente"
 	},
 	{
@@ -26,7 +30,7 @@
 		"fechaNacimiento": "2022-06-09",
 		"domicilio": "calle 100",
 		"contraseña": "$2a$10$vQYMBfN88CwkD9h31J.SgOAXA3DC9tlZtk2fFj2OVwGaQ6HwpQVoe",
-		"image": "photoJorge Loaiza-1655559159256.jpg",
+		"image": "photoAlan Brito-1655560600726.jpg",
 		"role": "Cliente"
 	},
 	{
@@ -36,8 +40,7 @@
 		"fechaNacimiento": "1993-04-28",
 		"domicilio": "calle123",
 		"contraseña": "$2a$10$dz6m9uECpgZ.RYcLpAw4l.yukVdcqdUbDfRGmJ.Cd6Zq5WZm03LAe",
-		"image": "photocliente1234-1655571072660.jpg",
+		"image": "photo-1655571361655.jpeg",
 		"role": "Cliente"
 	}
-	
 ]

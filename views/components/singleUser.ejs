@@ -1,0 +1,40 @@
+<section class="section-destacados-admin">
+
+    <img src="../../img/user/<%= usuario.image %>" alt="foto-usuario">
+    <P><STRONG>ID: </STRONG>
+        <%= usuario.id %>
+    </P>
+    <p><strong>Nombres y apellidos:</strong><br>
+        <%= usuario.nombre %>
+    </p>
+    <p><strong>Correo Electrónico:</strong><br>
+        <%= usuario.email %>
+    </p>
+    <p><strong>Fecha de nacimiento: </strong><br>
+        <%= usuario.fechaNacimiento %>
+    </p>
+    <p><strong>Dirección: </strong><br>
+        <%= usuario.domicilio %>
+    </p>
+
+
+    <!-- <form action="/usuario/delete/<%= usuario.id %>?_method=DELETE" method="POST" >
+                        <a href="/usuario/editar/<%= usuario.id %>" class="com-but-main"><button class="admin-but">EDITAR</button></a>
+                        <button type="submit" name="delete" id="delete" class="admin-but">BORRAR</button>
+                    </form>
+              -->
+    <div class="div-form-delete-edit-users">
+        <form action="/admin/usuario/delete/<%= usuario.id %>?_method=DELETE" method="POST">
+            <button type="submit" name="delete" id="delete" class="admin-but">
+                <strong>BORRAR</strong>
+            </button>
+        </form>
+
+        <form action="/admin/usuario/editar/<%= usuario.id %>" method="get">
+            <button type="submit" name="editar" id="delete" class="admin-but">
+                <strong>EDITAR</strong>
+            </button>
+        </form>
+    </div>
+
+</section>
