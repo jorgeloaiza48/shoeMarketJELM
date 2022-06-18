@@ -37,7 +37,8 @@ const controller = {
                 fechaNacimiento: req.body.fecha,
                 domicilio: req.body.domicilio,
                 contraseña: bcryptjs.hashSync(req.body.pass, 10),
-                image: req.file.filename                               
+                image: req.file.filename,
+                role : "cliente"                               
             }
 
             let NewUser = []
@@ -67,8 +68,11 @@ const controller = {
 		if (userToLogin) {
 			let isOkpassword = bcryptjs.compareSync(req.body.password, userToLogin.contraseña)
 			if (isOkpassword) {
+
 				req.session.userLogged = userToLogin
+                console.log(userToLogin)
                 
+                req.session.isAdmin = userToLogin.role == "admin"
 				if(req.body.record){
 					res.cookie("userEmail", req.body.email, {maxAge : (1000 * 60)*2})
 				}

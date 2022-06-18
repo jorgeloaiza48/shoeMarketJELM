@@ -40,6 +40,10 @@ footer {
 
 }
 
+.image-404{
+    display: block;
+text-align: center;
+}
 /*//////////////////////////profile/********************/
 .prof-main {
     margin-top: 20px;

@@ -1,51 +1,12 @@
 [
 	{
-		"id": 2,
-		"nombre": "usuario 2",
-		"email": "joe_cec@hotmail.com",
-		"fechaNacimiento": "1993-04-28",
-		"domicilio": "la crujia 3790",
-		"contraseña": "$2a$10$vMX2Zv81dc2pJcpAWR89guUS4TCJVv2kbAr9p9ixQ7IEcrBxKQE3y",
-		"image": "photousuario 2-1654366607044.jpg"
-	},
-	{
-		"id": 4,
-		"nombre": "Jorge Loaiza",
-		"email": "jelm48@hotmail.com",
-		"fechaNacimiento": "2022-06-07",
-		"domicilio": "Calle 23",
-		"contraseña": "$2a$10$TSvu.aLmgbpepfvR6y1XPOK9olHOsfNCaK6sxbbq7jp2caKyIWKOO",
-		"image": "photoJorge Loaiza-1654642778951.png"
-	},
-	{
-		"id": 5,
-		"nombre": "Juana de Arco",
-		"email": "juana@gmail.com",
-		"fechaNacimiento": "2022-06-07",
-		"domicilio": "calle 100",
-		"contraseña": "$2a$10$cXmPkyT9uAAW.GfR2zBC7uaW8vmu3l5DLMh.R8Ivmk2AaDKUkovAa",
-		"image": "photoJuana de Arco-1654644157892.png"
-	},
-	{
-		"id": 6,
-		"nombre": "Caludia pipa",
-		"email": "claudia@hotmail.com",
-		"fechaNacimiento": "2022-06-09",
-		"domicilio": "fgdfgdfg",
-		"contraseña": "$2a$10$XlIt6/SdzVZZERb8tNCkf.A0gf1OyMwjx7mzqvfJsdJFjerPwpbvC",
-		"image": "photoCaludia pipa-1654819499924.png"
-	},
-	{
-		"id": 7,
+		"id": 1,
 		"nombre": "joel casa",
 		"email": "joeecasa@gmail.com",
 		"fechaNacimiento": "1993-04-28",
-		"domicilio": "la cr",
-		"contraseña": "$2a$10$pVDze0hYW4GnaaeEXD2ae.bFq6nMvlWG19QoQOHsTfVCAVVEMD7hy",
-		"image": "photo-1655216555874.jpg",
-		"NombreYapellido": "joel casa",
-		"Email": "joeecasa@gmail.com",
-		"FechaNacimiento": "1993-04-28",
-		"Domicilio": "la cr"
+		"domicilio": "jo",
+		"contraseña": "$2a$10$5GbSHLHn2YfIlMyaqaJhB.sfNInJR2.mbMGhmvSx9Od0iWmEMTwyK",
+		"image": "photojoel casa-1655511434835.jpg",
+		"role": "admin"
 	}
 ]
