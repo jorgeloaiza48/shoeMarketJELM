@@ -1,5 +1,6 @@
 <%- include("../partials/head") %>
 <body>
+    
 <%- include("../partials/header2") %>
                 <main class="main-register">
                  
@@ -67,10 +68,10 @@
                                         reader.readAsDataURL(e.target.files[0]);
                                            }    
                                     </script>
-
+                    
                             <div class="contenedor_button" >
                                 <button class="form__button" type="submit" >Borrar</button>
-                                <button class="form__button" type="submit" >Enviar</button>
+                                <button class="form__button" type="submit">Enviar</button>
             
                             </div>                                          
             
@@ -81,7 +82,10 @@
                       </div>
             
                 </main>
-            
+               
                 <%- include("../partials/footer") %>
+               
+                <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+                <script src="/controllers/UserController.js"></script>
 </body>
 </html>

@@ -5,6 +5,13 @@ const fs = require("fs")
 const userCrud = require("../models/UserCrud")
 const bcryptjs = require("bcryptjs")
 const { validationResult } = require('express-validator')
+const {body} = require('express-validator')
+const { error } = require("console")
+const Swal = require("sweetalert2")
+alert = require('alert')
+
+
+
 
 let productsFilePath = path.join(__dirname, '../data/SHOEMARKET.json');
 let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));//JSON a JS
@@ -25,18 +32,24 @@ const controller = {
                 title: "Registro de usuario" })//mapped convierte un array en un objeto literal
         }
 
-        else {
-            
-            let emailEncontrado = undefined
-            emailEncontrado = users.find(elemento => elemento.email === req.body.email)
-            
-            if(emailEncontrado != undefined){console.log("Ya existe el email en el JSON de usuarios "),res.send("Email ya existe")} 
+        else { //else 1                                                                                          
+           let email = users.find(elemento => elemento.email === req.body.email)
+        //    console.log("Tipo de la variable email1 " + typeof email)
         
+            if(typeof email != 'undefined'){
+              console.log("Email ya existe")
+            //   body('email').custom((value,{req})=>{
+            //     if(typeof email != 'undefined'){
+            //     throw new Error ('Las extensiones permitidas son ')}
+            //     })
+            //     return true
+            }
             else{
-           
+                console.log("Tipo de la variable email2 " + typeof email)
+                console.log("Email no existe")
+            
 
             let ultimoElemento = users.length - 1
-            
             let idNuevo = users[ultimoElemento].id + 1
 
             let userForm = {
@@ -62,12 +75,11 @@ const controller = {
             }
 
             fs.writeFileSync(usersFilePath, JSON.stringify(NewUser, null, "\t")) //de JS a JSON
-            res.redirect("/user/login")
+            res.redirect("/user/login")                 
         }
-          
-        }
+        }//else 1
 
-    },
+    },//funcion principal
 
     login: (req, res) => { res.render('users/login', { title: "Login" }) },
 

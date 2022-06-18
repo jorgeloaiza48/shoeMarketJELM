@@ -28,5 +28,15 @@
 		"contraseña": "$2a$10$vQYMBfN88CwkD9h31J.SgOAXA3DC9tlZtk2fFj2OVwGaQ6HwpQVoe",
 		"image": "photoJorge Loaiza-1655559159256.jpg",
 		"role": "cliente"
+	},
+	{
+		"id": 4,
+		"nombre": "Jorge Loaiza fdfd",
+		"email": "jsdsds48@misena.edu.co",
+		"fechaNacimiento": "2022-06-08",
+		"domicilio": "calle 100",
+		"contraseña": "$2a$10$x0ETLYHurDiS0ZKPyVOSYeMQGCv0jHK.YpQs9V4Q3lcUj7iuYxKZC",
+		"image": "photoJorge Loaiza fdfd-1655587157730.jpg",
+		"role": "cliente"
 	}
 ]
