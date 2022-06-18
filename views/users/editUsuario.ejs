@@ -35,6 +35,18 @@
                             <input type="text" name="domicilio" id="domicilio" value="<%= usuario.domicilio %>" class="input">
                         </div>
 
+                        <% if (locals.isAdmin) { %>
+                            <div class="form__nombre"><label for="rol">Rol</label><br>
+                          <select name="rol" class="form-edit_select">
+                          <% locals.rols.forEach(rol => { %>
+                            <option <%= rol == usuario.role ? "selected" : "" %> value="<%= usuario.role %>"> <%= rol %></option>
+                         <% }) %>
+                            
+                          </select>
+                        
+                         
+                        <% } %>
+
                         <div class="form__nombre">
                             <label for="photo">Nueva foto de perfil:
                                 <input type="file" name="photo" accept=".jpg,.jpeg" id="file" class="input">
@@ -60,9 +72,7 @@
                     </div>
 
                     <div class="contenedor_button">
-                        <button class="form__button" type="submit">Borrar</button>
-
-
+                    
                         <button class="form__button" type="submit">Enviar</button>
 
 

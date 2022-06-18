@@ -60,7 +60,7 @@ const controller = {
                 domicilio: req.body.domicilio,
                 contraseña: bcryptjs.hashSync(req.body.pass, 10),
                 image: req.file.filename,
-                role : "cliente"                               
+                role : "Cliente"                               
             }
 
             let NewUser = []
@@ -95,7 +95,7 @@ const controller = {
 				req.session.userLogged = userToLogin
             
                 
-                req.session.isAdmin = userToLogin.role == "admin"
+                req.session.isAdmin = userToLogin.role == "Admin"
 				if(req.body.record){
 					res.cookie("userEmail", req.body.email, {maxAge : (1000 * 60)*2})
 				}

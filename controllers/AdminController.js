@@ -12,6 +12,7 @@ let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));//JSON a J
 let categories = ['Borcegos', 'Texanas', 'Guillerminas', 'Bucaneras', 'Gift card', 'Botas']
 let sizes = ["35", "36", "37", "38", "39", "40"]
 let colores = ["Negro", "Crema", "Rojo", "Blanco", "Rosa"]
+let rols = ["Admin","Cliente","Vendedor"]
 
 let usersFilePath = path.join(__dirname, '../data/users.json');
 let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));//JSON a JS
@@ -174,7 +175,7 @@ const controller = {
     },
     userEdit: (req, res) => {
         let usuario = users.find(usuario => usuario.id === parseInt(req.params.id))
-        res.render("users/editUsuario", { title: "Editar usuario", usuario: usuario })
+        res.render("users/editUsuario", { title: "Editar usuario", usuario: usuario,rols:rols })
     },
 
     userUpdate: (req, res) => {

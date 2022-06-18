@@ -4,10 +4,14 @@
 		"nombre": "joel casa",
 		"email": "joeecasa@gmail.com",
 		"fechaNacimiento": "1993-04-28",
-		"domicilio": "jo",
+		"domicilio": "calle 123",
 		"contraseña": "$2a$10$5GbSHLHn2YfIlMyaqaJhB.sfNInJR2.mbMGhmvSx9Od0iWmEMTwyK",
-		"image": "photojoel casa-1655511434835.jpg",
-		"role": "admin"
+		"image": "photo-1655571361655.jpeg",
+		"role": "Admin",
+		"NombreYapellido": "joel casa",
+		"Email": "joeecasa@gmail.com",
+		"FechaNacimiento": "1993-04-28",
+		"Domicilio": "calle 123"
 	},
 	{
 		"id": 2,
@@ -17,7 +21,7 @@
 		"domicilio": "calle 100",
 		"contraseña": "$2a$10$GGeork8FP40Kiph00PXYuuyIWiTr9LU/VkHeredilaUiPeQ6wtEiO",
 		"image": "photoJorge Loaiza-1655559055392.jpg",
-		"role": "cliente"
+		"role": "Cliente"
 	},
 	{
 		"id": 3,
@@ -27,16 +31,16 @@
 		"domicilio": "calle 100",
 		"contraseña": "$2a$10$vQYMBfN88CwkD9h31J.SgOAXA3DC9tlZtk2fFj2OVwGaQ6HwpQVoe",
 		"image": "photoJorge Loaiza-1655559159256.jpg",
-		"role": "cliente"
+		"role": "Cliente"
 	},
 	{
 		"id": 4,
-		"nombre": "Jorge Loaiza fdfd",
-		"email": "jsdsds48@misena.edu.co",
-		"fechaNacimiento": "2022-06-08",
-		"domicilio": "calle 100",
-		"contraseña": "$2a$10$x0ETLYHurDiS0ZKPyVOSYeMQGCv0jHK.YpQs9V4Q3lcUj7iuYxKZC",
-		"image": "photoJorge Loaiza fdfd-1655587157730.jpg",
-		"role": "cliente"
+		"nombre": "cliente1234",
+		"email": "joe_cec@gmail.com",
+		"fechaNacimiento": "1993-04-28",
+		"domicilio": "calle123",
+		"contraseña": "$2a$10$dz6m9uECpgZ.RYcLpAw4l.yukVdcqdUbDfRGmJ.Cd6Zq5WZm03LAe",
+		"image": "photocliente1234-1655571072660.jpg",
+		"role": "Cliente"
 	}
 ]
