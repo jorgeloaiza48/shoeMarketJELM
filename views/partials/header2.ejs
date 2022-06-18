@@ -44,12 +44,15 @@
                         <li><a href="/productos">Productos</a><i class="fa-brands fa-product-hunt"></i></li>
 
                         <li><a href="/carrito">Carrito</a><i class="fa-solid fa-cart-shopping"></i></li>
-
+                        <% if (locals.isAdmin) { %>
+                            <li class="lista__productos_li" ><a href="/admin">Admin</a><i class="fa-solid fa-lock"></i></li>
+                            <% } %>
                         <% if (locals.isLogged) { %>
                             <li class="lista__profile">Hola <%= locals.userLogged.nombre %> ▼
                                     <ul class="lista__profile-down">
                                         <li class="lista__profile-li" v><a href="/user/profile">Mi Perfil</a></li>
                                         <li class="lista__profile-li"><a href="/user/logout">logout</a></li>
+                                        
                                     </ul>
                             </li>
                             <% } else { %>

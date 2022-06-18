@@ -40,17 +40,43 @@ footer {
 
 }
 
+.image-404{
+    display: block;
+text-align: center;
+}
 /*//////////////////////////profile/********************/
+.profile-contain{
+    display: flex;
+    justify-content: space-around;
+    max-width: 550px;
+}
 .prof-main {
     margin-top: 20px;
     margin-bottom: 20px;
     text-align: center;
+    margin-left: auto ;
+    margin-right: auto;
+
+}
+.profile-info__ul{
+    border: 1px solid red;
+    max-width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1px;
+}
+.profile-info__li{
+    list-style: none;
+    margin-bottom: 5px;
+    font-size: 25px;
 
 }
 
+
 .img-profile {
-    width: 150px;
+    width: 120px;
     margin-bottom: 20px;
+    border-radius: 70px;
 
 }
 
