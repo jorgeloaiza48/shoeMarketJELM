@@ -7,11 +7,7 @@
 		"domicilio": "calle 123",
 		"contraseña": "$2a$10$5GbSHLHn2YfIlMyaqaJhB.sfNInJR2.mbMGhmvSx9Od0iWmEMTwyK",
 		"image": "photo-1655571361655.jpeg",
-		"role": "Admin",
-		"NombreYapellido": "joel casa",
-		"Email": "joeecasa@gmail.com",
-		"FechaNacimiento": "1993-04-28",
-		"Domicilio": "calle 123"
+		"role": "Admin"
 	},
 	{
 		"id": 2,
@@ -36,11 +32,12 @@
 	{
 		"id": 4,
 		"nombre": "cliente1234",
-		"email": "joe_cec@gmail.com",
+		"email": "joe_cec@hotmail.com",
 		"fechaNacimiento": "1993-04-28",
 		"domicilio": "calle123",
 		"contraseña": "$2a$10$dz6m9uECpgZ.RYcLpAw4l.yukVdcqdUbDfRGmJ.Cd6Zq5WZm03LAe",
 		"image": "photocliente1234-1655571072660.jpg",
 		"role": "Cliente"
 	}
+	
 ]

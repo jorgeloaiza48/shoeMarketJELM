@@ -24,32 +24,30 @@ const controller = {
     createUser: function (req, res) {
         let usersFilePath = path.join(__dirname, '../data/users.json');
         let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8')); //de JSON a JS
-        let resultValidation = validationResult(req)
-        
-        if (resultValidation.errors.length > 0) {
-            return res.render("users/registro", { errors: resultValidation.mapped(),
+        let errors = validationResult(req)
+
+       
+        if (errors.errors.length > 0) {
+            return res.render("users/registro", { errors: errors.mapped(),
                 oldData:req.body, 
                 title: "Registro de usuario" })//mapped convierte un array en un objeto literal
-        }
-
-        else { //else 1                                                                                          
-           let email = users.find(elemento => elemento.email === req.body.email)
-        //    console.log("Tipo de la variable email1 " + typeof email)
-        
-            if(typeof email != 'undefined'){
-              console.log("Email ya existe")
-            //   body('email').custom((value,{req})=>{
-            //     if(typeof email != 'undefined'){
-            //     throw new Error ('Las extensiones permitidas son ')}
-            //     })
-            //     return true
-            }
-            else{
-                console.log("Tipo de la variable email2 " + typeof email)
-                console.log("Email no existe")
+        } else {
+            let userToProcess = userCrud.findByField("email", req.body.email)
+            console.log(errors)
             
+            if (userToProcess != undefined) {
+                return res.render("users/registro", { errors: {
+					email: {
+						msg: "El Correo electronico ya se encuentra registrado"
+					}
+				},
+                    oldData:req.body, 
+                    title: "Registro de usuario" })//mapped convierte un array en un objeto literal
+        } else{
+                
 
             let ultimoElemento = users.length - 1
+
             let idNuevo = users[ultimoElemento].id + 1
 
             let userForm = {
