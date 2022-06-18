@@ -45,12 +45,20 @@
 
                         <li><a href="/carrito">Carrito</a><i class="fa-solid fa-cart-shopping"></i></li>
                         <% if (locals.isAdmin) { %>
-                            <li class="lista__productos_li" ><a href="/admin">Admin</a><i class="fa-solid fa-lock"></i></li>
+                            <li class="lista__profile" ><a href="/admin">Admin</a> <i class="fa-solid fa-lock"></i>
+                                <ul class="lista__profile-down__admin">
+                                    <li class="lista__profile-li" v><a href="/admin">Panel del control</a></li>
+                                    <li class="lista__profile-li"><a href="/admin/lista/usuarios">Usuarios Registrados</a></li>
+                                    <li class="lista__profile-li"><a href="/admin/lista/productos">Productos</a></li>
+                                    <li class="lista__profile-li"><a href="/admin/productos/crear">Carga de productos</a></li>
+                                    <li class="lista__profile-li"><a href="/user/profile">Mi perfil</a></li>
+                                </ul>
+                            </li>
                             <% } %>
                         <% if (locals.isLogged) { %>
                             <li class="lista__profile">Hola <%= locals.userLogged.nombre %> ▼
                                     <ul class="lista__profile-down">
-                                        <li class="lista__profile-li" v><a href="/user/profile">Mi Perfil</a></li>
+                                        <li class="lista__profile-li" v><a href="/user/profile">Mi Perfil <img src="/img/user/<%=locals.userLogged.image%>" alt=""></a></li>
                                         <li class="lista__profile-li"><a href="/user/logout">logout</a></li>
                                         
                                     </ul>

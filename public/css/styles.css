@@ -156,6 +156,25 @@ text-align: center;
 .lista__profile:hover .lista__profile-down {
     display: block;
 }
+.lista__profile-down__admin {
+    align-items: center;
+    background: transparent;
+    border-radius: 10px;
+    cursor: pointer;
+    display: block;
+    font-size: 13px;
+    left: 7px;
+    margin-top: 12px;
+    position: absolute;
+    padding-left: 0px;
+    top: 26px;
+    transition: all 0.5s;
+    z-index: 1;
+}
+
+.lista__profile:hover .lista__profile-down__admin {
+    display: block;
+}
 
 .texto2 p {
     display: flex;
@@ -292,6 +311,13 @@ text-align: center;
     border: solid 2px black;
     border-radius: 10px;
 }
+.form-edit_select{
+    border-radius: 10px;
+    border: 1px black solid;
+    margin-left: 10px;
+    margin-top: 10px;
+
+}
 
 @media(min-width:576px) {
 
@@ -343,15 +369,35 @@ text-align: center;
         cursor: pointer;
         display: none;
         font-size: 13px;
-        left: 31px;
+        left: -4px;
         margin-top: 12px;
         position: absolute;
         padding-left: 0px;
         top: 26px;
         transition: all 0.5s;
+        width: 119px;
         z-index: 1;
     }
-
+    .lista__profile-down img{
+        width: 30px;
+        margin-left: 5px;
+    }
+    .lista__profile-down__admin {
+        align-items: center;
+        background: transparent;
+        border-radius: 10px;
+        cursor: pointer;
+        display: none;
+        font-size: 13px;
+        left: -6px;
+        margin-top: 12px;
+        position: absolute;
+        padding-left: 0px;
+        top: 26px;
+        transition: all 0.5s;
+        width: 91px;
+        z-index: 1;
+    }
     .logo-form2 {
         /* border: solid 1px red; */
         display: flex;
@@ -427,6 +473,7 @@ text-align: center;
 
 
     }
+    
 
 
     .icono-carrito2 {
@@ -468,13 +515,31 @@ text-align: center;
         cursor: pointer;
         display: none;
         font-size: 13px;
-        left: 7px;
+        left: -31px;
         margin-top: 12px;
         position: absolute;
         padding-left: 0px;
         top: 26px;
         transition: all 0.5s;
         z-index: 1;
+        width: 146px;
+       
+    }
+    .lista__profile-down__admin {
+        align-items: center;
+        background: transparent;
+        border-radius: 10px;
+        cursor: pointer;
+        display: none;
+        font-size: 13px;
+        left: -31px;
+        margin-top: 12px;
+        position: absolute;
+        padding-left: 0px;
+        top: 26px;
+        transition: all 0.5s;
+        z-index: 1;
+        width: 113px;
     }
 
     .cuentaCarrito2 li {
