@@ -28,9 +28,12 @@ const controller = {
 
        
         if (errors.errors.length > 0) {
+            
             return res.render("users/registro", { errors: errors.mapped(),
-                oldData:req.body, 
-                title: "Registro de usuario" })//mapped convierte un array en un objeto literal
+                oldData: req.body, 
+                title: "Registro de usuario" 
+            
+            })//mapped convierte un array en un objeto literal
         } else {
             let userToProcess = userCrud.findByField("email", req.body.email)
          

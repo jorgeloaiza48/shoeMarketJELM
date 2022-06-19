@@ -7,14 +7,24 @@
                     <form  action="/user/registro" method="POST" class="form-Reg" enctype="multipart/form-data">
                            
                         <div class="form__nombre">
-                            <label for="nombre">Nombre y Apellido *</label>
-                            <input type="text" name="nombre" id="nombre" placeholder=" Introduzca su Nombre y apellido" class="xdsf is-invalid"
+                            <label for="nombre">Nombre *</label>
+                            <input type="text" name="nombre" id="nombre" placeholder=" Introduzca su Nombre" class="xdsf is-invalid"
                             value ="<%= locals.oldData ? oldData.nombre : null%>"
                             >
                             <% if (locals.errors && errors.nombre) {%>
                                 <div class="text-aviso"><%= errors.nombre.msg %></div>
                             <%}%>
                         </div>
+                        <div class="form__nombre">
+                            <label for="apeillido">Apellido *</label>
+                            <input type="text" name="apellido" id="apellido" placeholder=" Introduzca su apellido" class="xdsf is-invalid"
+                            value ="<%= locals.oldData ? oldData.apellido : null%>"
+                            >
+                            <% if (locals.errors && errors.apellido) {%>
+                                <div class="text-aviso"><%= errors.apellido.msg %></div>
+                            <%}%>
+                        </div>
+
                        
                         <div class="form__usuario">
                             <label for="email">Correo electronico *</label>
@@ -48,11 +58,12 @@
                             </div>
                           
                             <div class="form-create__img">
-                                <label for="photo">Seleccione la foto </label>
+                                <label class="form-create__img__title" for="photo">Seleccione la foto </label>
                                     <input type="file" name="photo" accept=".jpg,.jpeg,.png,.gif" id="file">
                                     <% if (locals.errors && errors.photo) {%>
                                         <div class="text-aviso"><%= errors.photo.msg %></div>
-                                    <%}%><hr>                                           
+                                    <%}%><hr>  
+
                                     <div id="preview"></div>
                                     
                                     <script>
