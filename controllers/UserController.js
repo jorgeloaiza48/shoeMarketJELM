@@ -106,7 +106,7 @@ const controller = {
 			res.render("users/login", {
 				errors: {
 					email: {
-						msg: "la credenciales son invalidas"
+						msg: "Las credenciales son inválidas"
 					}
 				},old : req.body, title : " login"
 			}

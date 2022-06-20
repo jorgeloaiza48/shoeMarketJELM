@@ -29,7 +29,7 @@ Sitios de referencia:
 
 3-https://www.santinicycling.com/tour-de-france/en/ : Si bien es una web que no tiene nada que ver con el rubro de nuestro proyecto, nos llamo la atencion como muestran sus prodcutos de manera grande y clara.
 
-4-https://robin-noguier.com/ : Nos parecio excelente la funcionalidad que tiene su home, la forma en que vas pasando y cambiando de producto.
+4-https://robin-noguier.com/ : Nos pareció excelente la funcionalidad que tiene su home, la forma en que vas pasando y cambiando de producto.
 
 5-https://www.rickysarkany.com/ : Es 100% un modelo a seguir dentro de nuestro proyecto, es un e-commerce dedicado a los mismos productos y clientes a los cuales apuntamos nosotros. Tienen un estilo muy marcado y se destacan por su buen marketing
 

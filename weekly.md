@@ -44,3 +44,6 @@ Mediante video llamada estuvimos hablando sobre la organización de las vistas.
 
 Raunión 11-6-2022
 Por unos cinco minutos se discutió sobre las vistas.
+
+Reunión 19-6-2022
+Atráves de comunicaión virtual, se definió el proceso de logueo y las rutas destinadas para los usuarios según su perfil y sesión.

@@ -118,5 +118,29 @@
 		"image": "photo-1655693528565.jpg",
 		"role": "Admin",
 		"estado": "Inactivo"
+	},
+	{
+		"id": 12,
+		"nombre": "Daniel",
+		"apellido": "Duque",
+		"email": "Daniel@digitalhouse.com",
+		"fechaNacimiento": "2022-07-01",
+		"domicilio": "calle 100",
+		"contraseña": "$2a$10$LajSMsZIHzi/8YAmnZOiLun18hSTO7cO5WNLaDzx29lu0XszuvwQ2",
+		"image": "photoDaniel-1655744586256.png",
+		"role": "Admin",
+		"estado": "activo"
+	},
+	{
+		"id": 13,
+		"nombre": "Gian",
+		"apellido": "Quaranta",
+		"email": "Gian@digitalhouse.com",
+		"fechaNacimiento": "2022-06-09",
+		"domicilio": "cra 9",
+		"contraseña": "$2a$10$vot4aTI7Nze9xmSfc1Cxx.YIDMMJLMBs53o5gOIMsjrsZaxf71zKe",
+		"image": "photoGian-1655744721715.png",
+		"role": "Cliente",
+		"estado": "activo"
 	}
 ]
