@@ -13,6 +13,7 @@ let categories = ['Borcegos', 'Texanas', 'Guillerminas', 'Bucaneras', 'Gift card
 let sizes = ["35", "36", "37", "38", "39", "40"]
 let colores = ["Negro", "Crema", "Rojo", "Blanco", "Rosa"]
 let rols = ["Admin","Cliente","Vendedor"]
+let estados = ["Activo","Inactivo"]
 
 let usersFilePath = path.join(__dirname, '../data/users.json');
 let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));//JSON a JS
@@ -176,7 +177,7 @@ const controller = {
     },
     userEdit: (req, res) => {
         let usuario = users.find(usuario => usuario.id === parseInt(req.params.id))
-        res.render("users/editUsuario", { title: "Editar usuario", usuario: usuario,rols:rols })
+        res.render("users/editUsuario", { title: "Editar usuario", usuario: usuario,rols:rols,estados:estados})
     },
 
     userUpdate: (req, res) => {
@@ -184,10 +185,15 @@ const controller = {
         let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));//JSON a JS
         users.find(user => {
             if (user.id === parseInt(req.params.id)) {
-                user.NombreYapellido = req.body.Nombre
-                user.Email = req.body.email
-                user.FechaNacimiento = req.body.fecha
-                user.Domicilio = req.body.domicilio
+                user.nombre = req.body.Nombre
+                user.apellido = req.body.apellido
+                user.email = req.body.email
+                user.fechaNacimiento = req.body.fecha
+                user.domicilio = req.body.domicilio
+                user.estado = req.body.estado
+                user.role = req.body.rol
+                console.log("Este es el estado que viene del body -->" + req.body.estado)
+                console.log("Este es el rol que viene del body -->" + req.body.rol)
 
                 if (req.file && user.image !== req.file.filename) { user.image = req.file.filename }
                 
@@ -201,8 +207,14 @@ const controller = {
         let usersFilePath = path.join(__dirname, '../data/users.json');
         let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8')); //de JSON a JS
         //let newList = products.find(product => product.id === parseInt(req.params.id));// se puede hacer asi tmb
-        let newList = users.filter(user => user.id !== parseInt(req.params.id))
-        fs.writeFileSync(usersFilePath, JSON.stringify(newList));                
+        // let newList = users.filter(user => user.id !== parseInt(req.params.id))
+        // let userDelete = users.find(user => user.id === parseInt(req.params.id))
+        users.forEach(function(user){
+            if(user.id === parseInt(req.params.id)){
+                user.estado = "Inactivo"
+            } 
+        });         
+        fs.writeFileSync(usersFilePath, JSON.stringify(users));                
         res.redirect("/admin/lista/usuarios")
     },
 

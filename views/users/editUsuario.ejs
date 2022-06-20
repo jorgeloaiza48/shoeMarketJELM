@@ -17,9 +17,15 @@
                         </p>
 
                         <div class="form__nombre">
-                            <label for="nombre">Nombre y Apellido:</label>
+                            <label for="nombre">Nombres:</label>
                             <input type="text" name="Nombre" id="nombre" placeholder=" Introduzca su Nombre y apellido"
                                 value="<%= usuario.nombre%>" class="input">
+                        </div>
+
+                        <div class="form__nombre">
+                            <label for="nombre">Apellido:</label>
+                            <input type="text" name="apellido" id="nombre" placeholder=" Introduzca su Nombre y apellido"
+                                value="<%= usuario.apellido%>" class="input">
                         </div>
 
                         <div class="form__nombre"><label for="email">Correo electrónico:</label>
@@ -34,6 +40,19 @@
                         <div class="form__nombre"><label for="domicilio">Domicilio de envio:</label><br>
                             <input type="text" name="domicilio" id="domicilio" value="<%= usuario.domicilio %>" class="input">
                         </div>
+
+                        <% if (locals.isAdmin) { %>
+                            <div class="form__nombre"><label for="rol">Estado</label><br>
+                          <select name="estado" class="form-edit_select">
+                          <% locals.estados.forEach(estado => { %>
+                            <option <%= estado == usuario.estado ? "selected" : "" %> value="<%= usuario.estado %>"> <%= estado %></option>
+                         <% }) %>
+                            
+                          </select>
+                        
+                         
+                        <% } %>
+                       
 
                         <% if (locals.isAdmin) { %>
                             <div class="form__nombre"><label for="rol">Rol</label><br>
@@ -58,7 +77,7 @@
                                     let reader = new FileReader();
                                     reader.onload = function () {
                                         let preview = document.getElementById('preview'),
-                                            image = document.createElement("photo");
+                                            image = document.createElement("img");
                                         image.src = reader.result;
                                         preview.innerHTML = '';
                                         preview.append(image);

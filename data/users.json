@@ -2,45 +2,121 @@
 	{
 		"id": 2,
 		"nombre": "Jorge Loaiza",
+		"apellido": "Toro",
 		"email": "jelm48@misena.edu.co",
 		"fechaNacimiento": "2022-06-09",
 		"domicilio": "calle 100",
 		"contraseña": "$2a$10$GGeork8FP40Kiph00PXYuuyIWiTr9LU/VkHeredilaUiPeQ6wtEiO",
 		"image": "photoAlan Brito-1655560600726.jpg",
-		"role": "Cliente"
+		"role": "Cliente",
+		"estado": "Inactivo"
 	},
 	{
 		"id": 3,
 		"nombre": "Jorge Loaiza",
+		"apellido": "Toro",
 		"email": "jelm480364112@misena.edu.co",
 		"fechaNacimiento": "2022-06-09",
 		"domicilio": "calle 100",
 		"contraseña": "$2a$10$vQYMBfN88CwkD9h31J.SgOAXA3DC9tlZtk2fFj2OVwGaQ6HwpQVoe",
 		"image": "photoAlan Brito-1655560600726.jpg",
-		"role": "Cliente"
+		"role": "Cliente",
+		"estado": "Inactivo"
 	},
 	{
 		"id": 4,
 		"nombre": "cliente1234",
+		"apellido": "Toro",
 		"email": "joe_cec@hotmail.com",
 		"fechaNacimiento": "1993-04-28",
 		"domicilio": "calle123",
 		"contraseña": "$2a$10$dz6m9uECpgZ.RYcLpAw4l.yukVdcqdUbDfRGmJ.Cd6Zq5WZm03LAe",
 		"image": "photo-1655571361655.jpeg",
-		"role": "Cliente"
+		"role": "Cliente",
+		"estado": "activo"
 	},
 	{
 		"id": 5,
 		"nombre": "joel casa",
+		"apellido": "Toro",
 		"email": "joeecasa@gmail.com",
 		"fechaNacimiento": "1993-04-28",
 		"domicilio": "calle123",
 		"contraseña": "$2a$10$NAE3BKXSa1Alk5/6DOKJkO8dmH63Yx2Z2fU3kb1dUMdj/Zu.lt6lu",
 		"image": "photo-1655595411950.jpeg",
 		"role": "Cliente",
-		"NombreYapellido": "joel casa",
-		"Email": "joeecasa@gmail.com",
-		"FechaNacimiento": "1993-04-28",
-		"Domicilio": "calle123"
+		"estado": "activo"
+	},
+	{
+		"id": 6,
+		"nombre": "Jorge ",
+		"apellido": "Toro",
+		"email": "jelm48@hotmail.com",
+		"fechaNacimiento": "2022-06-03",
+		"domicilio": "calle 76767",
+		"contraseña": "$2a$10$/sAGzXWQVDFzXtr3/NG1Oehw/1rz8uzpUetC6TdobLCUCC7ZbTwCe",
+		"image": "photoJorge -1655684808467.jpg",
+		"role": "Admin",
+		"estado": "activo"
+	},
+	{
+		"id": 7,
+		"nombre": "alan",
+		"apellido": "Toro",
+		"email": "je4454lm48@misena.edu.co",
+		"fechaNacimiento": "2022-06-03",
+		"domicilio": "calle 100",
+		"contraseña": "$2a$10$K2SNFWGqMIl3evrymDj2eOhRQ0EG06z2iUmIqmxFQW4Dsp54EQkLK",
+		"image": "photoalan-1655685042082.jpg",
+		"role": "Admin",
+		"estado": "Inactivo"
+	},
+	{
+		"id": 8,
+		"nombre": "Agua ",
+		"apellido": "Toro",
+		"email": "aguacate@gmail.com",
+		"fechaNacimiento": "2022-06-01",
+		"domicilio": "calle aguacate",
+		"contraseña": "$2a$10$OxjG/pEiR8TDLmTntAPTc.NV9d0/gYSHcVwMV2935rg.8NcI8kOSS",
+		"image": "photoAgua -1655687816310.jpg",
+		"role": "Cliente",
+		"estado": "Inactivo"
+	},
+	{
+		"id": 9,
+		"nombre": "Carlos",
+		"apellido": "Toro",
+		"email": "carlostoro@gmail.com",
+		"fechaNacimiento": "2022-06-22",
+		"domicilio": "transversal 090",
+		"contraseña": "$2a$10$YOt5L4cn/det.6wYpXc9nuXivgDYGJj36eJtXz5EGUasTN653nOmK",
+		"image": "photoCarlos-1655688186336.jpg",
+		"role": "Cliente",
+		"estado": "activo"
+	},
+	{
+		"id": 10,
+		"nombre": "Gordo",
+		"apellido": "Flacos",
+		"email": "gordoflaco@misena.edu.co",
+		"fechaNacimiento": "2022-06-11",
+		"domicilio": "Diagonal 904646",
+		"contraseña": "$2a$10$7Cgga40wiwRgLix5fboaPeyK9spDWH4sEzDKqsHDe72Xg7keEgyC2",
+		"image": "photoGordo-1655688342970.jpg",
+		"role": "Cliente",
+		"estado": "Inactivo"
+	},
+	{
+		"id": 11,
+		"nombre": "Tavo",
+		"apellido": "Lucas",
+		"email": "gustavolucas@hotmail.com",
+		"fechaNacimiento": "2022-06-17",
+		"domicilio": "calle 565656",
+		"contraseña": "$2a$10$BG2Q2mM15CXrghHBZDO5aO42V.PWUKoPkPcdDuXdKwumQfjPdFs5i",
+		"image": "photo-1655693528565.jpg",
+		"role": "Admin",
+		"estado": "Inactivo"
 	}
 ]
