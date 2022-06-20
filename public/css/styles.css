@@ -716,19 +716,21 @@ background-color: black;
     border-radius: 5px;
     height: 25px;
     transition: 0.5s;
+    
 }
 
 .admin-but:hover {
     background-color: black;
     color: white;
 }
+.admin-but:hover p{
+    color: rgb(255, 255, 255);
+}
 
 /* /////////////////////////////Media quiery admin  ///////////////////////////// */
 @media(min-width:768px) {
-    .admin-but:hover {
-        background-color: black;
-        color: rgb(255, 255, 255);
-    }
+   
+    
 
     .admin-but {
         line-height: 1px;

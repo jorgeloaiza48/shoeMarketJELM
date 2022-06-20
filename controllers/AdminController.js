@@ -166,6 +166,7 @@ const controller = {
                 }
                 // product.image = req.file.filename,
                 product.size = req.body.talle
+            
 
                 if (req.file && product.image !== req.file.filename) { product.image = req.file.filename }
                 
@@ -192,8 +193,6 @@ const controller = {
                 user.domicilio = req.body.domicilio
                 user.estado = req.body.estado
                 user.role = req.body.rol
-                console.log("Este es el estado que viene del body -->" + req.body.estado)
-                console.log("Este es el rol que viene del body -->" + req.body.rol)
 
                 if (req.file && user.image !== req.file.filename) { user.image = req.file.filename }
                 
@@ -203,7 +202,7 @@ const controller = {
         res.redirect("/user/login")
     },
 
-    userDelete: (req, res) => {
+    userSoftDelete: (req, res) => {
         let usersFilePath = path.join(__dirname, '../data/users.json');
         let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8')); //de JSON a JS
         //let newList = products.find(product => product.id === parseInt(req.params.id));// se puede hacer asi tmb

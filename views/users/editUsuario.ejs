@@ -45,7 +45,7 @@
                             <div class="form__nombre"><label for="rol">Estado</label><br>
                           <select name="estado" class="form-edit_select">
                           <% locals.estados.forEach(estado => { %>
-                            <option <%= estado == usuario.estado ? "selected" : "" %> value="<%= usuario.estado %>"> <%= estado %></option>
+                            <option <%= estado == usuario.estado ? "selected" : "" %> value="<%= estado %>"> <%= estado %></option>
                          <% }) %>
                             
                           </select>
@@ -58,7 +58,7 @@
                             <div class="form__nombre"><label for="rol">Rol</label><br>
                           <select name="rol" class="form-edit_select">
                           <% locals.rols.forEach(rol => { %>
-                            <option <%= rol == usuario.role ? "selected" : "" %> value="<%= usuario.role %>"> <%= rol %></option>
+                            <option <%= rol == usuario.role ? "selected" : "" %> value="<%= rol %>"> <%= rol %></option>
                          <% }) %>
                             
                           </select>
