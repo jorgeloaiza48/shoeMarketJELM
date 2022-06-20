@@ -7,7 +7,7 @@ const path = require("path")
 const productosRoutes = require("./productosRoutes")
 const userRoutes = require("./userRoutes")
 const adminRoutes = require("./adminRoutes")
-const newsletterMiddleware = require('../middlewares/newsLetterMiddleware')
+const newsletterMiddleware = require('../middlewares/newslettermiddleware')
 
 //** router de productos **//
 router.use("/productos", productosRoutes)
