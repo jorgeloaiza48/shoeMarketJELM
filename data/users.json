@@ -37,10 +37,7 @@
 		"domicilio": "calle123",
 		"contraseña": "$2a$10$NAE3BKXSa1Alk5/6DOKJkO8dmH63Yx2Z2fU3kb1dUMdj/Zu.lt6lu",
 		"image": "photo-1655595411950.jpeg",
-		"role": "Cliente",
-		"NombreYapellido": "joel casa",
-		"Email": "joeecasa@gmail.com",
-		"FechaNacimiento": "1993-04-28",
-		"Domicilio": "calle123"
+		"role": "Admin"
+		
 	}
 ]
