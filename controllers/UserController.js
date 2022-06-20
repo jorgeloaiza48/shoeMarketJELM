@@ -55,12 +55,14 @@ const controller = {
             let userForm = {
                 id: idNuevo,
                 nombre: req.body.nombre,
+                apellido: req.body.apellido,
                 email: req.body.email,
                 fechaNacimiento: req.body.fecha,
                 domicilio: req.body.domicilio,
                 contraseña: bcryptjs.hashSync(req.body.pass, 10),
                 image: req.file.filename,
-                role : "Cliente"                               
+                role : "Cliente",   
+                estado: "Activo"                            
             }
 
             let NewUser = []
@@ -96,6 +98,7 @@ const controller = {
             
                 
                 req.session.isAdmin = userToLogin.role == "Admin"
+                
 				if(req.body.record){
 					res.cookie("userEmail", req.body.email, {maxAge : (1000 * 60)*2})
 				}

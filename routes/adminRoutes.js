@@ -40,7 +40,7 @@ router.get("/usuario/editar/:id", adminController.userEdit)
 
 router.put("/usuario/editar/:id", upload.single("photo"), adminController.userUpdate)
 
-router.delete("/usuario/delete/:id", adminController.userDelete)
+router.delete("/usuario/delete/:id", adminController.userSoftDelete)
 
 router.get("/lista/productos",adminMiddleware, adminController.adminProducts)
 
