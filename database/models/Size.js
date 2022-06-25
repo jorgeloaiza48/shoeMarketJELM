@@ -34,7 +34,7 @@ const Size = sequelize.define(alias,cols,config)
 Size.associate = function(models){
     Size.belongsToMany(models.Product, {
         as: "productos",
-        through: "products_size",
+        through: models.Product_size,
         foreignKey: "sizes_id",
         otherKey: "products_id",
         otherKey : "quantity",

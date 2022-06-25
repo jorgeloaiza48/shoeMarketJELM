@@ -217,13 +217,13 @@ const controller = {
         fs.writeFileSync(usersFilePath, JSON.stringify(users));                
         res.redirect("/admin/lista/usuarios")
     },
-    // list : (req,res) =>{
-    //     db.Product.findAll()
-    //     .then(function(products){
-    //         return res.render("prueba",{products:products})
-    //     })
+    list : (req,res) =>{
+        db.Product.findAll()
+        .then(function(products){
+            return res.render("prueba",{products:products,title:"pruebs"})
+        })
 
-    // }
+    }
 
 }
 
