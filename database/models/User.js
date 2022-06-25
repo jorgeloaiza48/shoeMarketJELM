@@ -60,7 +60,7 @@ module.exports = (sequelize, dataTypes) => {
         }
     let config = {
         timestamps: true,
-        underscored: true 
+        underscored: true      
     }
 
     const User = sequelize.define(alias, cols, config)

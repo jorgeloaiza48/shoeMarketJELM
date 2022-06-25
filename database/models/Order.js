@@ -8,6 +8,8 @@ module.exports = (sequelize, dataTypes) => {
                 primaryKey: true
             },
             create_time: {
+                type: dataTypes.DATE,
+                allowNull: false
                 },
             paymentType_id:{
                 type: dataTypes.INTEGER,
@@ -44,7 +46,7 @@ module.exports = (sequelize, dataTypes) => {
         underscored: true 
     }
 
-    const User = sequelize.define(alias, cols, config)
+    const Order = sequelize.define(alias, cols, config)
 
     Order.associate = function (models) {
         Order.belongsTo(models.User, { 
@@ -57,7 +59,7 @@ module.exports = (sequelize, dataTypes) => {
         });   
         Order.belongsToMany(models.Product, {
             as: "productos",
-            through: models.Product_order,
+            through: "product_order",
             foreignKey: "order_id",
             otherKey: "products_id",
             timestamps: true

@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes) => {
-    const alias = "Product_size",//// el alias es el nombre del modelo y se crea en singular y mayuscula
+    const alias = "Product_sizes",//// el alias es el nombre del modelo y se crea en singular y mayuscula
         cols = {
             id: {
                 type: dataTypes.INTEGER,
@@ -33,7 +33,7 @@ module.exports = (sequelize, dataTypes) => {
         let config = {
             timestamps : true,
             underscored : true, // tiraba error entonces pusimos estas dos cosas en config
-            tableName : "product_size"
+            tableName : "product_sizes"
                 
         }
 
