@@ -33,7 +33,7 @@ module.exports = (sequelize, dataTypes) => {
         let config = {
             timestamps : true,
             underscored : true, // tiraba error entonces pusimos estas dos cosas en config
-            tableName : "product_size"
+            tableName : "products_sizes"
                 
         }
 
