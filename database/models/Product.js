@@ -27,12 +27,6 @@ module.exports = (sequelize, dataTypes) => {
                 allowNull: true,
                 defaultValue: null
             },
-            Image: {
-                type: dataTypes.STRING(45),
-                allowNull: true,
-                defaultValue: null
-
-            },
             category_id: {
                 type: dataTypes.INTEGER,
                 allowNull: false,
@@ -46,7 +40,7 @@ module.exports = (sequelize, dataTypes) => {
                 type: dataTypes.DECIMAL(10, 2),
                 allowNull: true
             },
-            Color: {
+            color: {
                 type: dataTypes.STRING(45),
                 allowNull: true
             },
@@ -58,7 +52,8 @@ module.exports = (sequelize, dataTypes) => {
         }
     let config = {
         timestamps: true,
-        underscored: true // tiraba error entonces pusimos estas dos cosas en config
+        underscored: true, // tiraba error entonces pusimos estas dos cosas en config
+        tableName : "products"
 
     }
 
@@ -82,23 +77,24 @@ module.exports = (sequelize, dataTypes) => {
 
         Product.belongsToMany(models.Size, {
             as: "talles",
-            through: "product_size",
+            through: "products_size",
             foreignKey: "products_id",
-            otherKey: "size_id",
-            timestamps: false
+            otherKey: "sizes_id",
+            timestamps: true
         });
 
-        Product.belongsToMany(models.Order, {
-            as: "ordenes",
-            through: "product_order",
-            foreignKey: "products_id",
-            otherKey: "order_id",
-            otherKey: "quantity",
-            timestamps: false
-        });
+        // Product.belongsToMany(models.Order, {
+        //     as: "ordenes",
+        //     through: "product_order",
+        //     foreignKey: "products_id",
+        //     otherKey: "order_id",
+        //     otherKey: "quantity",
+        //     timestamps: true
+        // });
 
 
 
-        return Product;
+        
     }
+    return Product;
 }

@@ -29,7 +29,8 @@ module.exports = (sequelize, dataTypes) => {
         }
         let config = {
             timestamps : true,
-            underscored : true // tiraba error entonces pusimos estas dos cosas en config
+            underscored : true, // tiraba error entonces pusimos estas dos cosas en config
+            tableName : "images"
                 
         }
 

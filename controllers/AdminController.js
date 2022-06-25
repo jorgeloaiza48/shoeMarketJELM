@@ -5,6 +5,7 @@ const fs = require("fs")
 const { validationResult } = require('express-validator')
 const productCrud = require("../models/ProductCrud")
 const { title } = require("process")
+const db = require("../database/models/index")
 
 
 let productsFilePath = path.join(__dirname, '../data/SHOEMARKET.json');
@@ -216,6 +217,13 @@ const controller = {
         fs.writeFileSync(usersFilePath, JSON.stringify(users));                
         res.redirect("/admin/lista/usuarios")
     },
+    // list : (req,res) =>{
+    //     db.Product.findAll()
+    //     .then(function(products){
+    //         return res.render("prueba",{products:products})
+    //     })
+
+    // }
 
 }
 

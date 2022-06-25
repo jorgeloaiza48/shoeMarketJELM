@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes) => {
-    const alias = "Line",//// el alias es el nombre del modelo y se crea en singular y mayuscula
+    const alias = "Product_size",//// el alias es el nombre del modelo y se crea en singular y mayuscula
         cols = {
             id: {
                 type: dataTypes.INTEGER,
@@ -17,27 +17,28 @@ module.exports = (sequelize, dataTypes) => {
                 type: dataTypes.DATE,
                 allowNull: true,
             },
-            name: {
-                type: dataTypes.STRING(45),
+            quantity: {
+                type: dataTypes.INTEGER,
+                allowNull: false
+            },
+            products_id :{
+                type : dataTypes.INTEGER,
+                allowNull: false
+            },
+            sizes_id :{
+                type : dataTypes.INTEGER,
                 allowNull: false
             }
         }
         let config = {
             timestamps : true,
             underscored : true, // tiraba error entonces pusimos estas dos cosas en config
-            tableName : "lines"
+            tableName : "product_size"
                 
         }
 
-const Line = sequelize.define(alias,cols,config)
+const Product_size = sequelize.define(alias,cols,config)
 
-Line.associate = function(models){
-    Line.hasMany(models.Product,
-        {
-            as : "productos",
-            foreignKey : "line_id"
-        })
-}
 
-    return Line;
+    return Product_size;
 }
