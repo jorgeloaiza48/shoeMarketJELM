@@ -71,12 +71,10 @@ module.exports = (sequelize, dataTypes) => {
             foreignKey: "roles_id"
         });
 
-        User.belongsTo(models.Order, {
+        User.hasMany(models.Order, {
             as: "ordenes",
             foreignKey: "user_id"
-        });
-
-        
-        return User;
+        });               
     }
+    return User;
 }
