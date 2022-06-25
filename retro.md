@@ -8,3 +8,4 @@ Es importante mejorar la distribución de tareas y tiempos apoyándonos en la he
 
 
 
+![Starfish Retrospective Template](https://user-images.githubusercontent.com/94260133/174683595-4d3f8017-da7f-406c-829b-93a19315ed13.png)
