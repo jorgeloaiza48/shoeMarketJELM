@@ -54,6 +54,8 @@ router.put('/productos/editar/:id', upload.single("img"), adminController.update
 
 router.delete("/productos/delete/:id", adminController.deleteProduct)
 
+router.get("/prueba",adminController.list)
+
 
 
 module.exports = router

@@ -1,0 +1,23 @@
+<%- include("./partials/head") %>
+
+    <body>
+        <%- include("./partials/header2") %>
+
+<p>
+
+
+<% products.forEach(element => { %>
+    <ul>
+        <li><%= element.name %> </li>
+        <li><%= element.color %> </li>
+    </ul>
+ 
+<% }) %>
+</p>
+
+
+        <%- include("./partials/footer") %>
+
+    </body>
+
+    </html>
