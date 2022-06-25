@@ -93,6 +93,7 @@ module.exports = (sequelize, dataTypes) => {
             through: "product_order",
             foreignKey: "products_id",
             otherKey: "order_id",
+            otherKey: "quantity",
             timestamps: false
         });
 
