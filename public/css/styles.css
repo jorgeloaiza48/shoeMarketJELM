@@ -3162,3 +3162,77 @@ i {
 .form-create input[type="text"]:focus:required:valid {
     border: 2px solid green;
 }
+
+
+
+
+/*///////////contact//////////////////*/
+.contact-p_contain{
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15%;
+    padding-right: 15%;
+   
+    
+    
+}
+.contact-title {
+    font-size: 40px;
+    text-align: center;
+    
+}
+
+.contact-p {
+    line-height: 32px;
+    font-size: 20px;
+    max-width: 750px;
+    
+    
+
+}
+.contact-form{
+    margin-left: 15% ;
+    margin-right: 15%;
+    margin-bottom: 40px;
+
+}
+.contact-form label{
+    text-align: center;
+}
+.contact-form__input {
+    border: none;
+    background-color: #eee;
+    border-radius: 10px;
+    display: block;
+    margin-bottom: 20px;
+    padding: 10px;
+    width: 100%;
+    max-width: 750px;
+}
+.contact-form__button{
+    background-color: rgb(255, 255, 255);
+    border: 1px solid grey;
+    border-radius: 10px;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    transition: all 0.8s;
+}
+.contact-form__button:hover{
+    background-color: rgb(0, 0, 0);
+    color: white;
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+@media (min-width: 1200px) {
+    .contact-p_contain{
+       padding-left: 28%;
+    }
+    .contact-form{
+        padding-left: 13%;
+     }
+}
+
+
+
+/*///////////contact//////////////////*/
