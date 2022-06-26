@@ -21,19 +21,19 @@
         <input class="contact-form__input" type="text" name="name" placeholder="Nombre y apellido" value="<%= locals.old && old.name ? old.name : ""  %>"> 
     </label>
     <% if (locals.errors && errors.name) { %>
-        <p> <%= errors.name.msg %> </p>
+        <p class="form-contact__error"> <%= errors.name.msg %> </p>
     <% } %>
     <label for="email">
         <input class="contact-form__input" type="email" name="email" placeholder="Correo electronico" value="<%= locals.old && old.email ? old.email : ""  %>">
     </label>
     <% if (locals.errors && errors.email) { %>
-        <p> <%= errors.email.msg %> </p>
+        <p class="form-contact__error"> <%= errors.email.msg %> </p>
     <% } %>
     <label for="msg">
         <textarea  class="contact-form__input" name="msg"  cols="30" rows="10" placeholder="introduzca su mensaje" ></textarea>
     </label>
     <% if (locals.errors && errors.msg) { %>
-        <p> <%= errors.msg.msg %> </p>
+        <p class="form-contact__error"> <%= errors.msg.msg %> </p>
     <% } %>
     <div class="contact-form__button-contain">
         <label for="button"> 

@@ -3223,7 +3223,9 @@ i {
     -webkit-transform: scale(1.2);
     transform: scale(1.2);
 }
-
+.form-contact__error{
+    color: red
+}
 @media (min-width: 1200px) {
     .contact-p_contain{
        padding-left: 28%;

@@ -69,7 +69,7 @@ const controller = {
         const pathLogContact = path.join(__dirname, "../logs/contact.json")
         const errors = validationResult(req)
         let old = req.body
-        console.log(req.body)
+       
 
         if(!errors.isEmpty()){
             res.render("contact",{errors:errors.mapped(), old : old, title : "Contacto"})
@@ -90,7 +90,7 @@ const controller = {
        
                
        
-               res.render("msgSuccess",{title:"Contacto"})
+               res.redirect("/")
         }
         
         
