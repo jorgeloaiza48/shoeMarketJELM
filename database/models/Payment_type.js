@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes) => {
-    const alias = "PaymentType",
+    const alias = "Payment_type",
         cols = {
             id: {
                 type: dataTypes.INTEGER,
@@ -7,7 +7,7 @@ module.exports = (sequelize, dataTypes) => {
                 autoIncrement: true,
                 primaryKey: true
             },
-            paymentType:{
+            payment_type:{
                 type: dataTypes.STRING(45),
                 allowNull: false
             },
@@ -30,15 +30,15 @@ module.exports = (sequelize, dataTypes) => {
         underscored: true      
     }
 
-    const PaymentType = sequelize.define(alias, cols, config)
+    const Payment_type = sequelize.define(alias, cols, config)
 
-    PaymentType.associate = function (models) {
-        PaymentType.hasMany(models.Order, {
+    Payment_type.associate = function (models) {
+        Payment_type.hasMany(models.Order, {
             as: "ordenes",
-            foreignKey:"paymentTypes_id" 
+            foreignKey:"payment_types_id" 
             
         });
             
     }
-    return PaymentType;
+    return Payment_type;
 }

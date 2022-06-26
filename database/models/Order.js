@@ -53,9 +53,9 @@ module.exports = (sequelize, dataTypes) => {
             as: "usuarios",
             foreignKey: "users_id"
         });
-        Order.belongsTo(models.PaymentType, {
+        Order.belongsTo(models.Payment_type, {
             as: "tiposDePago",
-            foreignKey: "paymentTypes_id"
+            foreignKey: "payment_types_id"
         });   
         Order.belongsToMany(models.Product, {
             as: "productos",
