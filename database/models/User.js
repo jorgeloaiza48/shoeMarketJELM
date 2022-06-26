@@ -60,14 +60,14 @@ module.exports = (sequelize, dataTypes) => {
         }
     let config = {
         timestamps: true,
-        underscored: true 
+        underscored: true      
     }
 
     const User = sequelize.define(alias, cols, config)
 
     User.associate = function (models) {
         User.belongsTo(models.Role, {
-            as: "usuarios",
+            as: "roles",
             foreignKey: "roles_id"
         });
 

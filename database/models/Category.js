@@ -35,7 +35,7 @@ Category.associate = function(models){
     Category.hasMany(models.Product,
         {
             as : "productos",
-            foreignKey : "category_id"
+            foreignKey : "categories_id"
         })
 }
 

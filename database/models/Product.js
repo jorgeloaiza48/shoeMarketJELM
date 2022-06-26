@@ -27,7 +27,7 @@ module.exports = (sequelize, dataTypes) => {
                 allowNull: true,
                 defaultValue: null
             },
-            category_id: {
+            categories_id: {
                 type: dataTypes.INTEGER,
                 allowNull: false,
 
@@ -44,7 +44,7 @@ module.exports = (sequelize, dataTypes) => {
                 type: dataTypes.STRING(45),
                 allowNull: true
             },
-            line_id: {
+            lines_id: {
                 type: dataTypes.INTEGER,
                 allowNull: false,
 
@@ -62,12 +62,12 @@ module.exports = (sequelize, dataTypes) => {
     Product.associate = function (models) {
         Product.belongsTo(models.Category, {
             as: "categorias",
-            foreignKey: "category_id"
+            foreignKey: "categories_id"
         });
 
         Product.belongsTo(models.Line, {
             as: "lineas",
-            foreignKey: "line_id"
+            foreignKey: "lines_id"
         });
 
         Product.hasMany(models.Image, {
@@ -83,14 +83,13 @@ module.exports = (sequelize, dataTypes) => {
             timestamps: true
         });
 
-        // Product.belongsToMany(models.Order, {
-        //     as: "ordenes",
-        //     through: "product_order",
-        //     foreignKey: "products_id",
-        //     otherKey: "order_id",
-        //     otherKey: "quantity",
-        //     timestamps: true
-        // });
+        Product.belongsToMany(models.Order, {
+            as: "ordenes",
+            through: "products_orders",
+            foreignKey: "products_id",
+            otherKey: "orders_id",
+            timestamps: true
+        });
 
 
 

@@ -8,8 +8,10 @@ module.exports = (sequelize, dataTypes) => {
                 primaryKey: true
             },
             create_time: {
+                type: dataTypes.DATE,
+                allowNull: false
                 },
-            paymentType_id:{
+            paymentTypes_id:{
                 type: dataTypes.INTEGER,
                 allowNull: false            
             },
@@ -21,7 +23,7 @@ module.exports = (sequelize, dataTypes) => {
                 type: dataTypes.STRING(45),
                 allowNull: false                                
             },
-            user_id:{
+            users_id:{
                 type: dataTypes.INTEGER,
                 allowNull: false                                
                 
@@ -44,21 +46,21 @@ module.exports = (sequelize, dataTypes) => {
         underscored: true 
     }
 
-    const User = sequelize.define(alias, cols, config)
+    const Order = sequelize.define(alias, cols, config)
 
     Order.associate = function (models) {
         Order.belongsTo(models.User, { 
-            as: "orden",
-            foreignKey: "user_id"
+            as: "usuarios",
+            foreignKey: "users_id"
         });
         Order.belongsTo(models.PaymentType, {
-            as: "tipoDePago",
-            foreignKey: "paymentType_id"
+            as: "tiposDePago",
+            foreignKey: "paymentTypes_id"
         });   
         Order.belongsToMany(models.Product, {
             as: "productos",
-            through: models.Product_order,
-            foreignKey: "order_id",
+            through: "products_orders",
+            foreignKey: "orders_id",
             otherKey: "products_id",
             timestamps: true
         });                 
