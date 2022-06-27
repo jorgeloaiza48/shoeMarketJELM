@@ -42,5 +42,7 @@ const Product_size = sequelize.define(alias,cols,config)
 
 
 
+
+
     return Product_size;
 }

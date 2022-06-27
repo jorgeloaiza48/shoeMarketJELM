@@ -83,6 +83,7 @@ module.exports = (sequelize, dataTypes) => {
             timestamps: true
         });
 
+
         Product.belongsToMany(models.Order, {
             as: "ordenes",
             through: "products_orders",
