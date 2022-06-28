@@ -35,7 +35,7 @@ Line.associate = function(models){
     Line.hasMany(models.Product,
         {
             as : "productos",
-            foreignKey : "lines_id"
+            foreignKey : "line_id"
         })
 }
 

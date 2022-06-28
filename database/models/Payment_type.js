@@ -35,7 +35,7 @@ module.exports = (sequelize, dataTypes) => {
     Payment_type.associate = function (models) {
         Payment_type.hasMany(models.Order, {
             as: "ordenes",
-            foreignKey:"payment_types_id" 
+            foreignKey:"payment_type_id" 
             
         });
             

@@ -40,7 +40,7 @@ module.exports = (sequelize, dataTypes) => {
                 allowNull: true,
                 defaultValue: null
             },
-            roles_id:{
+            rol_id:{
                 type: dataTypes.INTEGER,
                 allowNull: false
             },
@@ -69,7 +69,7 @@ module.exports = (sequelize, dataTypes) => {
     User.associate = function (models) {
         User.belongsTo(models.Rol, {
             as: "roles",
-            foreignKey: "roles_id"
+            foreignKey: "rol_id"
         });
 
         User.hasMany(models.Order, {

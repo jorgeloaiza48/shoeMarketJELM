@@ -35,7 +35,7 @@ Rol.associate = function(models){
     Rol.hasMany(models.User,
         {
             as : "usuarios",
-            foreignKey : "roles_id"
+            foreignKey : "rol_id"
         })
 }
 
