@@ -8,8 +8,13 @@
 
 <% products.forEach(element => { %>
     <ul>
-        <li><%= element.name %> </li>
-        <li><%= element.color %> </li>
+        
+        <li class="prueba">nombre <%= element.name %></li>
+        <li class="prueba"> categoria <%= element.categorias.name %></li>
+        <li class="prueba"> cantidad talle<%= element.productosTalles.quantity %></li>
+        <li class="prueba">linea <%= element.lineas.name %></li>
+        <li class="prueba"> color <%= element.color %></li>
+        
     </ul>
  
 <% }) %>
