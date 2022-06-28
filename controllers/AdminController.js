@@ -6,6 +6,7 @@ const { validationResult } = require('express-validator')
 const productCrud = require("../models/ProductCrud")
 const { title } = require("process")
 const db = require("../database/models/index")
+const dbb = require("../database/models")
 
 
 let productsFilePath = path.join(__dirname, '../data/SHOEMARKET.json');
@@ -24,10 +25,13 @@ const controller = {
     index: (req, res) => {
         res.render("admin/indexAdmin", { title: "Admin Index" })
     },
-    userList: (req, res) => {
-        let usersJSON = fs.readFileSync(productsFilePath, 'utf-8')
-        res.render("admin/listaUsuarios", { title: "Edición de usuario", users: users })
-
+    userList: (req, res) => {        
+            dbb.User.findAll()
+                .then(users => {
+                    res.render('admin/listaUsuarios.ejs', {users,title: "Listado de usuarios"})
+                })
+        // let usersJSON = fs.readFileSync(productsFilePath, 'utf-8')
+        // res.render("admin/listaUsuarios", { title: "Edición de usuario", users: users })        
     },
 
 

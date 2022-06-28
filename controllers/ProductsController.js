@@ -11,11 +11,7 @@ let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));//JSON a J
 
 
 const controller = {
-
     
-
-    
-
     Allproducts: (req, res) => {
         //para estos 3 no se puede usar const ya que mas abajo cuando reescribamos los json hay q volver a declarar las variables
         // y las variables declaradas con const no se pueden modificar
