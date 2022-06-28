@@ -8,13 +8,13 @@
 
 <% products.forEach(element => { %>
     <ul>
-        
         <li class="prueba">nombre <%= element.name %></li>
         <li class="prueba"> categoria <%= element.categorias.name %></li>
-        <li class="prueba"> cantidad talle<%= element.productosTalles.quantity %></li>
+        <li class="prueba"> cantidad talle<%= element.talles.id %></li>
         <li class="prueba">linea <%= element.lineas.name %></li>
         <li class="prueba"> color <%= element.color %></li>
         
+        <!-- `talles`.`id` AS `talles.id`, `talles`.`created_at` AS `talles.created_at`, `talles`.`updated_at` AS `talles.updated_at`, `talles`.`size` AS `talles.size`, `talles`.`created_at` AS `talles.createdAt`, `talles`.`updated_at` AS `talles.updatedAt`, `talles->Product_size`.`id` AS `talles.Product_size.id`, `talles->Product_size`.`created_at` AS `talles.Product_size.created_at`, `talles->Product_size`.`updated_at` AS `talles.Product_size.updated_at`, `talles->Product_size`.`quantity` AS `talles.Product_size.quantity`, `talles->Product_size`.`product_id` AS `talles.Product_size.product_id`, `talles->Product_size`.`size_id` AS `talles.Product_size.size_id`, `talles->Product_size`.`created_at` AS `talles.Product_size.createdAt`, `talles->Product_size`.`updated_at` AS `talles.Product_size.updatedAt`, -->
     </ul>
  
 <% }) %>

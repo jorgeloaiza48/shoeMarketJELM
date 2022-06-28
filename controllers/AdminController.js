@@ -222,7 +222,7 @@ const controller = {
             include: [
                 { association: "categorias" },
                 { association: "lineas" },
-                { association: "productosTalles" },
+                { association: "talles" },
                 { association: "ordenes" },
                 { association: "fotos" }
             ]
