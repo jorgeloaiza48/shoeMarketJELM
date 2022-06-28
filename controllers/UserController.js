@@ -9,6 +9,8 @@ const {body} = require('express-validator')
 const { error } = require("console")
 const Swal = require("sweetalert2")
 alert = require('alert')
+const db = require("../database/models")
+const { DATE } = require("sequelize")
 
 
 
@@ -27,14 +29,13 @@ const controller = {
         let errors = validationResult(req)
 
        
-        if (errors.errors.length > 0) {
-            
+        if (errors.errors.length > 0) {            
             return res.render("users/registro", { errors: errors.mapped(),
                 oldData: req.body, 
                 title: "Registro de usuario" 
             
             })//mapped convierte un array en un objeto literal
-        } else {
+        } else { //else2
             let userToProcess = userCrud.findByField("email", req.body.email)
          
             if (userToProcess != undefined) {
@@ -45,42 +46,49 @@ const controller = {
 				},
                     oldData:req.body, 
                     title: "Registro de usuario" })//mapped convierte un array en un objeto literal
-        } else{
-                
-
-            let ultimoElemento = users.length - 1
-
-            let idNuevo = users[ultimoElemento].id + 1
-
-            let userForm = {
-                id: idNuevo,
-                nombre: req.body.nombre,
-                apellido: req.body.apellido,
-                email: req.body.email,
-                fechaNacimiento: req.body.fecha,
-                domicilio: req.body.domicilio,
-                contraseña: bcryptjs.hashSync(req.body.pass, 10),
-                image: req.file.filename,
-                role : "Cliente",   
-                estado: "Activo"                            
-            }
-
-            let NewUser = []
-            let UsersJSON = fs.readFileSync(usersFilePath, 'utf-8')
-
-            if (UsersJSON == "") {
-                NewUser.push(userForm)
-            }
-            else {
-                NewUser = JSON.parse(UsersJSON) //de JSON a JS
-                NewUser.push(userForm)
-            }
-
-            fs.writeFileSync(usersFilePath, JSON.stringify(NewUser, null, "\t")) //de JS a JSON
-            res.redirect("/user/login")                 
-        }
-        }
-
+        } else{       //else1         
+        //     let ultimoElemento = users.length - 1
+        //     let idNuevo = users[ultimoElemento].id + 1
+        //     let userForm = {
+        //         id: idNuevo,
+        //         nombre: req.body.nombre,
+        //         apellido: req.body.apellido,
+        //         email: req.body.email,
+        //         fechaNacimiento: req.body.fecha,
+        //         domicilio: req.body.domicilio,
+        //         contraseña: bcryptjs.hashSync(req.body.pass, 10),
+        //         image: req.file.filename,
+        //         role : "Cliente",   
+        //         estado: "Activo"                            
+        //     }
+        //     let NewUser = []
+        //     let UsersJSON = fs.readFileSync(usersFilePath, 'utf-8')
+        //     if (UsersJSON == "") {
+        //         NewUser.push(userForm)
+        //     }
+        //     else {
+        //         NewUser = JSON.parse(UsersJSON) //de JSON a JS
+        //         NewUser.push(userForm)
+        //     }
+        //     fs.writeFileSync(usersFilePath, JSON.stringify(NewUser, null, "\t")) //de JS a JSON
+        //     res.redirect("/user/login") 
+        db.User.create({
+            document:123456,
+            first_name:req.body.nombre,
+            last_name:req.body.apellido,
+            email:req.body.email,
+            password:req.body.pass,
+            create_time:new DATE(),
+            date_of_birth:req.body.fecha,
+            image:"asdddsd",
+            roles_id:1,
+            updated_at:new DATE(),
+            created_at:new DATE()
+        })
+        res.send("Usuario Creado")
+                        
+         }//else1
+      } //else2
     },
 
     login: (req, res) => { res.render('users/login', { title: "Login" }) },
