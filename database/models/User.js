@@ -55,6 +55,10 @@ module.exports = (sequelize, dataTypes) => {
                 type: dataTypes.DATE,
                 allowNull: true,
                 defaultValue: null
+            },
+            adress:{
+                type: dataTypes.STRING(45),
+                allowNull: false
             }
            
         }
