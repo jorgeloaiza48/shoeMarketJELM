@@ -14,8 +14,8 @@ let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));//JSON a J
 let categories = ['Borcegos', 'Texanas', 'Guillerminas', 'Bucaneras', 'Gift card', 'Botas']
 let sizes = ["35", "36", "37", "38", "39", "40"]
 let colores = ["Negro", "Crema", "Rojo", "Blanco", "Rosa"]
-let rols = ["Admin","Cliente","Vendedor"]
-let estados = ["Activo","Inactivo"]
+let rols = ["Admin", "Cliente", "Vendedor"]
+let estados = ["Activo", "Inactivo"]
 
 let usersFilePath = path.join(__dirname, '../data/users.json');
 let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));//JSON a JS
@@ -33,7 +33,7 @@ const controller = {
         // let usersJSON = fs.readFileSync(productsFilePath, 'utf-8')
         // res.render("admin/listaUsuarios", { title: "Edición de usuario", users: users })        
     },
-    
+
 
     adminProducts: (req, res) => {
         //para estos 3 no se puede usar const ya que mas abajo cuando reescribamos los json hay q volver a declarar las variables
@@ -76,8 +76,8 @@ const controller = {
 
     newproduct: (req, res) => {
         const errors = validationResult(req)
-       
-       console.log(req.body)
+
+        console.log(req.body)
         if (errors.errors.length > 0) {
             return res.render("admin/crearProducto", {
                 errors: errors.mapped(),
@@ -100,7 +100,7 @@ const controller = {
                 old: req.body,
                 title: "Crear Producto",
                 categories: categories, sizes: sizes, colores: colores
-                
+
             })
         }
 
@@ -120,7 +120,7 @@ const controller = {
             size: req.body.size
 
         }
-       
+
         let productCreated = productCrud.create(productToCreate)
 
 
@@ -171,10 +171,10 @@ const controller = {
                 }
                 // product.image = req.file.filename,
                 product.size = req.body.talle
-            
+
 
                 if (req.file && product.image !== req.file.filename) { product.image = req.file.filename }
-                
+
             }
         })
         fs.writeFileSync(productsFilePath, JSON.stringify(products, null, "\t")) //JS a JSON
@@ -183,7 +183,7 @@ const controller = {
     },
     userEdit: (req, res) => {
         let usuario = users.find(usuario => usuario.id === parseInt(req.params.id))
-        res.render("users/editUsuario", { title: "Editar usuario", usuario: usuario,rols:rols,estados:estados})
+        res.render("users/editUsuario", { title: "Editar usuario", usuario: usuario, rols: rols, estados: estados })
     },
 
     userUpdate: (req, res) => {
@@ -200,7 +200,7 @@ const controller = {
                 user.role = req.body.rol
 
                 if (req.file && user.image !== req.file.filename) { user.image = req.file.filename }
-                
+
             }
         })
         fs.writeFileSync(usersFilePath, JSON.stringify(users, null, "\t")) //JS a JSON
@@ -213,19 +213,27 @@ const controller = {
         //let newList = products.find(product => product.id === parseInt(req.params.id));// se puede hacer asi tmb
         // let newList = users.filter(user => user.id !== parseInt(req.params.id))
         // let userDelete = users.find(user => user.id === parseInt(req.params.id))
-        users.forEach(function(user){
-            if(user.id === parseInt(req.params.id)){
+        users.forEach(function (user) {
+            if (user.id === parseInt(req.params.id)) {
                 user.estado = "Inactivo"
-            } 
-        });         
-        fs.writeFileSync(usersFilePath, JSON.stringify(users));                
+            }
+        });
+        fs.writeFileSync(usersFilePath, JSON.stringify(users));
         res.redirect("/admin/lista/usuarios")
     },
-    list : (req,res) =>{
-        db.Product.findAll()
-        .then(function(products){
-            return res.render("prueba",{products:products,title:"pruebs"})
+    list: (req, res) => {
+        db.Product.findAll({
+            include: [
+                { association: "categorias" },
+                { association: "lineas" },
+                { association: "productosTalles" },
+                { association: "ordenes" },
+                { association: "fotos" }
+            ]
         })
+            .then(function (products) {
+                return res.render("prueba", { products: products, title: "prueba" })
+            })
 
     }
 

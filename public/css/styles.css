@@ -20,7 +20,9 @@ gris claro rgb(231, 241, 241);
  */
 
 
-
+.prueba{
+    margin-left: 50px;
+}
 
 * {
     box-sizing: border-box;

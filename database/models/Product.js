@@ -27,7 +27,7 @@ module.exports = (sequelize, dataTypes) => {
                 allowNull: true,
                 defaultValue: null
             },
-            categories_id: {
+            category_id: {
                 type: dataTypes.INTEGER,
                 allowNull: false,
 
@@ -44,7 +44,7 @@ module.exports = (sequelize, dataTypes) => {
                 type: dataTypes.STRING(45),
                 allowNull: true
             },
-            lines_id: {
+            line_id: {
                 type: dataTypes.INTEGER,
                 allowNull: false,
 
@@ -53,7 +53,7 @@ module.exports = (sequelize, dataTypes) => {
     let config = {
         timestamps: true,
         underscored: true, // tiraba error entonces pusimos estas dos cosas en config
-        tableName : "products"
+        tableName: "products"
 
     }
 
@@ -62,38 +62,37 @@ module.exports = (sequelize, dataTypes) => {
     Product.associate = function (models) {
         Product.belongsTo(models.Category, {
             as: "categorias",
-            foreignKey: "categories_id"
+            foreignKey: "category_id"
         });
 
         Product.belongsTo(models.Line, {
             as: "lineas",
-            foreignKey: "lines_id"
+            foreignKey: "line_id"
         });
 
         Product.hasMany(models.Image, {
             as: "fotos",
-            foreignKey: "products_id"
+            foreignKey: "product_id"
         });
 
-        Product.belongsToMany(models.Size, {
-            as: "talles",
-            through: models.Product_size,
-            foreignKey: "products_id",
-            otherKey: "sizes_id",
-            timestamps: true
-        });
+
+        Product.hasMany(models.Product_size,
+            {
+                as: "productosTalles",
+                foreignKey: "product_id"
+            })
 
         Product.belongsToMany(models.Order, {
             as: "ordenes",
             through: "products_orders",
-            foreignKey: "products_id",
-            otherKey: "orders_id",
+            foreignKey: "product_id",
+            otherKey: "order_id",
             timestamps: true
         });
 
 
 
-        
+
     }
     return Product;
 }

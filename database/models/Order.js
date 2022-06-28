@@ -11,7 +11,7 @@ module.exports = (sequelize, dataTypes) => {
                 type: dataTypes.DATE,
                 allowNull: false
                 },
-            paymentTypes_id:{
+            payment_type_id:{
                 type: dataTypes.INTEGER,
                 allowNull: false            
             },
@@ -23,7 +23,7 @@ module.exports = (sequelize, dataTypes) => {
                 type: dataTypes.STRING(45),
                 allowNull: false                                
             },
-            users_id:{
+            user_id:{
                 type: dataTypes.INTEGER,
                 allowNull: false                                
                 
@@ -51,17 +51,17 @@ module.exports = (sequelize, dataTypes) => {
     Order.associate = function (models) {
         Order.belongsTo(models.User, { 
             as: "usuarios",
-            foreignKey: "users_id"
+            foreignKey: "user_id"
         });
         Order.belongsTo(models.Payment_type, {
             as: "tiposDePago",
-            foreignKey: "payment_types_id"
+            foreignKey: "payment_type_id"
         });   
         Order.belongsToMany(models.Product, {
             as: "productos",
             through: "products_orders",
-            foreignKey: "orders_id",
-            otherKey: "products_id",
+            foreignKey: "order_id",
+            otherKey: "product_id",
             timestamps: true
         });                 
         

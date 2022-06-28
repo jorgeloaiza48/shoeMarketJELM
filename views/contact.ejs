@@ -30,7 +30,7 @@
         <p class="form-contact__error"> <%= errors.email.msg %> </p>
     <% } %>
     <label for="msg">
-        <textarea  class="contact-form__input" name="msg"  cols="30" rows="10" placeholder="introduzca su mensaje" ></textarea>
+        <textarea  class="contact-form__input" name="msg" cols="30" rows="10" placeholder="introduzca su mensaje" ><%= locals.old && old.msg ? old.msg : "" %></textarea>
     </label>
     <% if (locals.errors && errors.msg) { %>
         <p class="form-contact__error"> <%= errors.msg.msg %> </p>
