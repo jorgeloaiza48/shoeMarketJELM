@@ -41,11 +41,11 @@ Size.belongsToMany(models.Product, {
 });
 
 
-    // Size.hasMany(models.Product_size,
-    //     {
-    //         as: "productosTalles",
-    //         foreignKey: "product_id"
-    //     })
+    Size.hasMany(models.Product_size,
+        {
+            as: "productosTalles",
+            foreignKey: "product_id"
+        })
 }
 
     return Size;

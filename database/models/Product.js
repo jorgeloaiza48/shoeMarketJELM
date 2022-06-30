@@ -76,11 +76,11 @@ module.exports = (sequelize, dataTypes) => {
         });
 
 
-        // Product.hasMany(models.Product_size,
-        //     {
-        //         as: "productosTalles",
-        //         foreignKey: "product_id"
-        //     })
+        Product.hasMany(models.Product_size,
+            {
+                as: "productosTalles",
+                foreignKey: "product_id"
+            })
 
             Product.belongsToMany(models.Size, {
                 as: "talles",
