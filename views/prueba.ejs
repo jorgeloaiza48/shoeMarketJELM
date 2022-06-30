@@ -9,8 +9,9 @@
 <% products.forEach(element => { %>
     <ul>
         <li class="prueba">nombre <%= element.name %></li>
+        <li class="prueba">precio <%= element.price %></li>
         <li class="prueba"> categoria <%= element.categorias.name %></li>
-        <li class="prueba"> cantidad talle<%= element.talles.id %></li>
+        <li class="prueba"> cantidad talle<%= element.talles %></li>
         <li class="prueba">linea <%= element.lineas.name %></li>
         <li class="prueba"> color <%= element.color %></li>
         
