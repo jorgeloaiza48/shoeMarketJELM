@@ -8,25 +8,27 @@
         <%= usuario.first_name %>
     </p>
     <p><strong>Apellido:</strong><br>
-        <%= usuario.apellido %>
+        <%= usuario.last_name %>
     </p>
     <p><strong>Correo Electrónico:</strong><br>
         <%= usuario.email %>
     </p>
     <p><strong>Fecha de nacimiento: </strong><br>
-        <%= usuario.fechaNacimiento %>
+        <%= usuario.date_of_birth %>
+        
     </p>
     <p><strong>Dirección: </strong><br>
-        <%= usuario.domicilio %>
+        <%= usuario.adress %>
     </p>
     <p><strong>Rol: </strong><br>
-        <%= usuario.role %>
+        <%= usuario.rol_id.name %>
     </p>
 
     <p><strong>Estado: </strong><br>
         <%= usuario.estado %>
     </p>
 
+    
     <div class="div-form-delete-edit-users">
         <form action="/admin/usuario/delete/<%= usuario.id %>?_method=DELETE" method="POST">
             <button type="submit" name="delete" id="delete" class="admin-but">
