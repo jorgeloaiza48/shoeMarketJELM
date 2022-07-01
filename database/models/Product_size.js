@@ -54,9 +54,5 @@ Product_size.associate = function(models){
 }
 
 
-
-
-
-
     return Product_size;
 }

@@ -235,10 +235,12 @@ const controller = {
                 { association: "lineas" },
                 { association: "productosTalles" },
                 { association: "ordenes" },
-                { association: "fotos" }
+                { association: "fotos" },
+                { association: "talles" }
             ]
         })
             .then(function (products) {
+                //return res.json(products)
                 return res.render("prueba", { products: products, title: "prueba" })
             })
 
