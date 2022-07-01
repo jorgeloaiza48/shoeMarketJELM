@@ -19,7 +19,8 @@ module.exports = (sequelize, dataTypes) => {
             },
             size: {
                 type: dataTypes.DECIMAL(10,2),
-                allowNull: false
+                allowNull: false,
+                unique: true
             }
         }
         let config = {
