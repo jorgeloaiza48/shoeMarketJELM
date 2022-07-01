@@ -8,7 +8,6 @@ const { validationResult } = require('express-validator')
 const {body} = require('express-validator')
 const { error } = require("console")
 const Swal = require("sweetalert2")
-alert = require('alert')
 const db = require("../database/models")
 const { DATE } = require("sequelize")
 

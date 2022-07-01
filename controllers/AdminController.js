@@ -28,8 +28,8 @@ const controller = {
     userList: (req, res) => {        
             db.User.findAll({
                 include: [
-                    { association: "roles" },
-                    { association: "ordenes" },
+                    { association: "Rol" },
+                    { association: "Order" }
                     
                 ]}
             )
