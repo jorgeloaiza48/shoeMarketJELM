@@ -45,38 +45,52 @@ const controller = {
     adminProducts: (req, res) => {
         //para estos 3 no se puede usar const ya que mas abajo cuando reescribamos los json hay q volver a declarar las variables
         // y las variables declaradas con const no se pueden modificar
-        let productsFilePath = path.join(__dirname, '../data/SHOEMARKET.json');
-        let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));//JSON a JS
-        let productJSON = fs.readFileSync(productsFilePath, 'utf-8')
+        // let productsFilePath = path.join(__dirname, '../data/SHOEMARKET.json');
+        // let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));//JSON a JS
+        // let productJSON = fs.readFileSync(productsFilePath, 'utf-8')
 
-        let botas = products.filter(function (product) {
-            return product.category == "Botas";
+        // let botas = products.filter(function (product) {
+        //     return product.category == "Botas";
+        // })
+        // let texanas = products.filter(function (product) {
+        //     return product.category == "Texanas";
+        // })
+        // let bucaneras = products.filter(function (product) {
+        //     return product.category == "Bucaneras";
+        // })
+        // let borcegos = products.filter(function (product) {
+        //     return product.category == "Borcegos";
+        // })
+        // let guillerminas = products.filter(function (product) {
+        //     return product.category == "Guillerminas";
+        // })
+        // let giftCard = products.filter(function (product) {
+        //     return product.category == "Gift Card";
+        // })
+        // res.render("admin/adminProductos", {
+        //     products: products,
+        //     botas: botas,
+        //     texanas: texanas,
+        //     bucaneras: bucaneras,
+        //     borcegos: borcegos,
+        //     guillerminas: guillerminas,
+        //     title: "Admin",
+        //     giftCard: giftCard
+        // })
+        db.Product.findAll({
+            include: [
+                { association: "categorias" },
+                { association: "lineas" },
+                { association: "productosTalles" },
+                { association: "ordenes" },
+                { association: "fotos" },
+                { association: "talles" }
+            ]
         })
-        let texanas = products.filter(function (product) {
-            return product.category == "Texanas";
+        .then(products =>{
+            return res.render("admin/adminProductos",{products:products, title : "AdminProducts"})
         })
-        let bucaneras = products.filter(function (product) {
-            return product.category == "Bucaneras";
-        })
-        let borcegos = products.filter(function (product) {
-            return product.category == "Borcegos";
-        })
-        let guillerminas = products.filter(function (product) {
-            return product.category == "Guillerminas";
-        })
-        let giftCard = products.filter(function (product) {
-            return product.category == "Gift Card";
-        })
-        res.render("admin/adminProductos", {
-            products: products,
-            botas: botas,
-            texanas: texanas,
-            bucaneras: bucaneras,
-            borcegos: borcegos,
-            guillerminas: guillerminas,
-            title: "Admin",
-            giftCard: giftCard
-        })
+
     },
 
     crearProducto: (req, res) => { res.render('admin/crearProducto', { title: "Crear Producto", categories: categories, sizes: sizes, colores: colores }) },

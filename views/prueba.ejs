@@ -7,7 +7,12 @@
 
 
                 <% products.forEach(element=> { %>
+                    <% element.fotos.forEach(foto => { %>
+                        <img src="/img/products/<%= foto.name %>" alt="">
+                     
+                    <% }) %>
                     <ul>
+                        
                         <li class="prueba">nombre <%= element.name %>
                         </li>
                         <li class="prueba">precio <%= element.price %>
@@ -24,6 +29,7 @@
                         </li>
                         <li class="prueba"> color <%= element.color %>
                         </li>
+                        
                     </ul>
 
                     <% }) %>

@@ -77,13 +77,15 @@ const controller = {
             last_name:req.body.apellido,
             email:req.body.email,
             password:req.body.pass,
-            create_time:new DATE(),
             date_of_birth:req.body.fecha,
             image:"asdddsd",
             roles_id:1,
-            updated_at:new DATE(),
-            created_at:new DATE()
-        })
+            adress: req.body.domicilio
+             // updated_at:Date.now(),
+            // created_at: Date.now()
+        },
+        {include:[{association:"Rol"}]}
+        )
         res.send("Usuario Creado")
                         
          }//else1
