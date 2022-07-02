@@ -33,10 +33,6 @@ module.exports = (sequelize, dataTypes) => {
                 allowNull: false,
 
             },
-            create_time: {
-                type: dataTypes.DATE,
-                allowNull: false
-            },
             price: {
                 type: dataTypes.DECIMAL(10, 2),
                 allowNull: true
@@ -45,10 +41,9 @@ module.exports = (sequelize, dataTypes) => {
                 type: dataTypes.STRING(45),
                 allowNull: true
             },
-            line_id: {
-                type: dataTypes.INTEGER,
-                allowNull: false,
-
+            status : {
+                type : dataTypes.STRING(45),
+                allowNull : false
             }
         }
     let config = {
@@ -66,10 +61,10 @@ module.exports = (sequelize, dataTypes) => {
             foreignKey: "category_id"
         });
 
-        Product.belongsTo(models.Line, {
-            as: "lineas",
-            foreignKey: "line_id"
-        });
+        // Product.belongsTo(models.Line, {
+        //     as: "lineas",
+        //     foreignKey: "line_id"
+        // });
 
         Product.hasMany(models.Image, {
             as: "fotos",

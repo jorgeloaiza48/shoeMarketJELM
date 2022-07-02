@@ -6,6 +6,7 @@ const { validationResult } = require('express-validator')
 const productCrud = require("../models/ProductCrud")
 const { title } = require("process")
 const db = require("../database/models/index")
+const Product = require("../database/models/Product")
 
 
 
@@ -25,18 +26,19 @@ const controller = {
     index: (req, res) => {
         res.render("admin/indexAdmin", { title: "Admin Index" })
     },
-    userList: (req, res) => {        
-            db.User.findAll({
-                include: [
-                    { association: "roles" },
-                    { association: "ordenes" },
-                    
-                ]}
-            )
-                .then(users => {
-                    console.log(users)
-                   return res.render('admin/listaUsuarios.ejs', {users,title: "Listado de usuarios"})
-                })
+    userList: (req, res) => {
+        db.User.findAll({
+            include: [
+                { association: "roles" },
+                { association: "ordenes" },
+
+            ]
+        }
+        )
+            .then(users => {
+                console.log(users)
+                return res.render('admin/listaUsuarios.ejs', { users, title: "Listado de usuarios" })
+            })
         // let usersJSON = fs.readFileSync(productsFilePath, 'utf-8')
         // res.render("admin/listaUsuarios", { title: "Edición de usuario", users: users })        
     },
@@ -87,66 +89,133 @@ const controller = {
                 { association: "talles" }
             ]
         })
-        .then(products =>{
-            return res.render("admin/adminProductos",{products:products, title : "AdminProducts"})
-        })
+            .then(products => {
+
+
+
+                return res.render("admin/adminProductos", { products: products, title: "AdminProducts" })
+            })
 
     },
 
-    crearProducto: (req, res) => { res.render('admin/crearProducto', { title: "Crear Producto", categories: categories, sizes: sizes, colores: colores }) },
+    crearProducto: (req, res) => {
+        db.Category.findAll({
+            include: [
+                { association: "productos" },
+            ]
+        })
+            .then(categorias => {
+
+                return res.render('admin/crearProducto', { title: "Crear Producto", products: products, categories: categorias, sizes: sizes, colores: colores })
+            })
+
+        // res.render('admin/crearProducto', { title: "Crear Producto", categories: categories, sizes: sizes, colores: colores }) 
+
+    },
 
     newproduct: (req, res) => {
         const errors = validationResult(req)
 
-        console.log(req.body)
-        if (errors.errors.length > 0) {
-            return res.render("admin/crearProducto", {
-                errors: errors.mapped(),
-                old: req.body,
-                title: "Crear Producto",
-                categories: categories, sizes: sizes, colores: colores
-            })
-        }
 
+        let categories = db.Category.findAll()
+        let sizes = db.Size.findAll()
 
-        let productInDb = productCrud.findByField("name", req.body.name)
-
-        if (productInDb) {
-            return res.render("admin/crearProducto", {
-                errors: {
-                    nombre: {
-                        msg: "no se puede crear 2 productos con el mismo nombre"
-                    }
-                },
-                old: req.body,
-                title: "Crear Producto",
-                categories: categories, sizes: sizes, colores: colores
-
-            })
-        }
-
-        let productToCreate = {
+        promise.all([categories, sizes]) 
+        .then(function( [categorias,talles]) {
+            console.log(talles)
+            
+            if (errors.errors.length > 0) {
+                return res.render("admin/crearProducto", {
+                    errors: errors.mapped(),
+                    old: req.body,
+                    title: "Crear Producto",
+                    categories: categorias, sizes: talles, colores: colores
+                })
+            }
+            
+            db.Product.create({             
             name: req.body.nombre,
-            price: Number(req.body.price),
-            category: req.body.category,
+            description: req.body.description,
+            category_id : req.body.category,
+            price: req.body.price,
             color: req.body.color,
-            description: {
-                Material: req.body.material,
-                Alturabase: req.body.base,
-                Alturataco: req.body.taco,
-                Alturacana: req.body.cana,
-                Colores: req.body.colores
-            },
-            image: req.file.filename,
-            size: req.body.size
+            status: "Active",
+            fotos : {
+                name : req.file.filename},
+        },{
+            include : [
+                { association : "fotos"},
+                { association : "talles"},
+            ]
+        })
+        .then(product =>{
+          return res.redirect("/admin/lista/productos")
+        })
 
-        }
 
-        let productCreated = productCrud.create(productToCreate)
+        })
+
+        
+     
+
+// db.Product.findAll({
+        //          where : { name : "Lara Negro"}
+        // })
+        // .then(product=>{
+        //    let productInDb2 = product
+        //    console.log(product)
+        //    let productInDb = productCrud.findByField("name", req.body.name)
+        //    if (productInDb) {
+        //     return res.render("admin/crearProducto", {
+        //         errors: {
+        //             nombre: {
+        //                 msg: "no se puede crear 2 productos con el mismo nombre"
+        //             }
+        //         },
+        //         old: req.body,
+        //         title: "Crear Producto",
+        //         categories: categories, sizes: sizes, colores: colores
+
+        //     })
+        // }
 
 
-        res.redirect("/admin/lista/productos")
+        // })
+        // let productInDb = productCrud.findByField("name", "LONDON NEGRO")
+        //    if (productInDb) {
+        //     return res.render("admin/crearProducto", {
+        //         errors: {
+        //             nombre: {
+        //                 msg: "no se puede crear 2 productos con el mismo nombre"
+        //             }
+        //         },
+        //         old: req.body,
+        //         title: "Crear Producto",
+        //         categories: categories, sizes: sizes, colores: colores
 
+        //     })
+        // }
+        // let productToCreate = {
+        //     name: req.body.nombre,
+        //     price: Number(req.body.price),
+        //     category: req.body.category,
+        //     color: req.body.color,
+        //     description: {
+        //         Material: req.body.material,
+        //         Alturabase: req.body.base,
+        //         Alturataco: req.body.taco,
+        //         Alturacana: req.body.cana,
+        //         Colores: req.body.colores
+        //     },
+        //     image: req.file.filename,
+        //     size: req.body.size
+
+        // }
+
+        // let productCreated = productCrud.create(productToCreate)
+
+
+        
     },
 
     deleteProduct: (req, res) => {
@@ -251,11 +320,17 @@ const controller = {
                 { association: "ordenes" },
                 { association: "fotos" },
                 { association: "talles" }
-            ]
+            ],
+            where: { name: "Lara Negro" }
+
+
         })
             .then(function (products) {
                 //return res.json(products)
                 return res.render("prueba", { products: products, title: "prueba" })
+            })
+            .catch(function (err) {
+                console.log(err)
             })
 
     }

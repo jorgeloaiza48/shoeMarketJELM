@@ -14,41 +14,24 @@
             <form action="/admin/productos/crear" method="POST" class="form-create" enctype="multipart/form-data">
 
                 <div class="form-create__nombre">
-                    <label for="nombre">Nombre del producto *</label>
+                    <label for="nombre">Nombre y color *</label>
                     <input  type="text" name="nombre" id="nombre" placeholder="Nombre del nuevo producto" value="<%= locals.old && old.nombre ? old.nombre : ""%>"  >
                         <% if (locals.errors && errors.nombre) {%>
                             <div class="text-aviso"><%= errors.nombre.msg %></div>
                         <%}%>
                 </div>
                 <div class="form-create__descr">
-                    <h3>Descripcion del producto*</h3>
-                    <div class="div-desc">
-                        <label for="material"> Material</label>
-                        <input value="<%= locals.old && old.material ? old.material: ""%>"  type="text" name="material">
-                    </div>
-                    <div class="div-desc">
-                        <label for="base"> Altura de la base</label>
-                        <input value="<%= locals.old && old.base ? old.base: ""%>" type="text" name="base">
-                    </div>
-                    <div class="div-desc">
-                        <label for="taco">Altura del taco</label>
-                        <input value="<%= locals.old && old.taco ? old.taco: ""%>" type="text" name="taco">
-                    </div>
-
-                    <div class="div-desc">
-                        <label for="cana">Altura de la caña</label>
-                        <input value="<%= locals.old && old.cana ? old.cana: ""%>" type="text" name="cana">
-                    </div>
-
-                    <div class="div-desc">
-                        <label for="colores">Colores</label>
-                        <input value="<%= locals.old && old.colores ? old.colores: ""%>" type="text" name="colores">
-                    </div>
-
+                    <label for="description">Descripcion del producto*</label>
+                    <textarea name="description"  cols="1" rows="1"><%= locals.old && old.description ? old.description : "" %></textarea>
+                    <% if (locals.errors && errors.description) { %>
+                        <p class="form-contact__error">
+                            <div class="text-aviso"><%= errors.description.msg %></div>
+                        </p>
+                        <% } %>
 
                 </div>
 
-                <script src="/previewPhotoCreateProduct.js"></script>
+                
                 <div class="form-create__img">
                     <label for="photo">Seleccione la foto </label>
                    
@@ -89,21 +72,7 @@
                             <div class="text-aviso"><%= errors.price.msg %></div>
                         <%}%>
                 </div>
-                <div class="form-create__color">
-                    <div class="form-create__size__title__div">
-                        <label class="form-create__size__title" for="talles">Seleccione los Colores</label>
-                    </div>
-                    <% colores.forEach(color=> { %>
-                        <label class="form-create__size__check" for="<%= color %> ">
-                            <input <%= locals.old && old.color && old.color.includes(color) ? "checked" : "" %>
-                            type="checkbox" name="color" id="<%= color %>" value="<%= color %>">
-                                    <%= color %>
-                        </label>
-                        <% }) %>
-                        <% if (locals.errors && errors.color) {%>
-                            <div class="text-aviso2"><%= errors.color.msg %></div>
-                        <%}%>
-                </div>
+                
 
                 <div class="form-create__cat">
                     <div class="form-create__cat-div">
@@ -114,8 +83,8 @@
 
                             <option value="" disabled selected>Seleccione</option>
                             <% categories.forEach(element=> { %>
-                                <option <%= locals.old && old.category == element ? "selected" : "" %> value="<%= element %>" >
-                                        <%= element %>
+                                <option <%= locals.old && old.category == element.name ? "selected" : "" %> value="<%= element.id %>" >
+                                        <%= element.name %>
                                 </option>
                                 <% }) %>
 
@@ -127,18 +96,25 @@
                     </div>
 
                 </div>
+                <div class="form-create__nombre">
+                    <label for="color">Color del producto *</label>
+                    <input  type="text" name="color" id="color" placeholder="Nombre del nuevo producto" value="<%= locals.old && old.nombre ? old.nombre : ""%>"  >
+                        <% if (locals.errors && errors.color) {%>
+                            <div class="text-aviso"><%= errors.color.msg %></div>
+                        <%}%>
+                </div>
                 
                 <div class="form-create__size">
 
                     <div class="form-create__size__title__div">
                         <label class="form-create__size__title" for="talles">Seleccione los talles</label>
                     </div>
-                    <% sizes.forEach(size=> { %>
+                    <% sizes.forEach(talle=> { %>
 
                         <label class="form-create__size__check" for="<%= size %> ">
-                            <input <%= locals.old && old.size && old.size.includes(size) ? "checked" : " " %>
-                            type="checkbox" name="size" id="<%= size %>" value="<%= size %>">
-                                    <%= size %>
+                            <input <%= locals.old && old.size && old.size.size.includes(size) ? "checked" : " " %>
+                            type="checkbox" name="size" id="<%= size.size %>" value="<%= size.id %>">
+                                    <%= talle.size %>
                         </label>
                         <% }) %>
 
