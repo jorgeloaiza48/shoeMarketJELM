@@ -29,10 +29,6 @@ module.exports = (sequelize, dataTypes) => {
                 type: dataTypes.STRING(32),
                 allowNull: false
             },
-            create_time: {
-                type: dataTypes.DATE,
-                allowNull: false
-            },
             date_of_birth: {
                 type: dataTypes.DATE,
                 allowNull: false
@@ -44,7 +40,8 @@ module.exports = (sequelize, dataTypes) => {
             },
             rol_id:{
                 type: dataTypes.INTEGER,
-                allowNull: false
+                allowNull: false,
+                foreignKey: true
             },
             updated_at: {
                 field: "updated_at",
@@ -74,12 +71,12 @@ module.exports = (sequelize, dataTypes) => {
 
     User.associate = function (models) {
         User.belongsTo(models.Rol, {
-            as: "roles",
+            as: "Rol",
             foreignKey: "rol_id"
         });
 
         User.hasMany(models.Order, {
-            as: "ordenes",
+            as: "Order",
             foreignKey: "user_id"
         });               
     }

@@ -26,19 +26,18 @@ const controller = {
     index: (req, res) => {
         res.render("admin/indexAdmin", { title: "Admin Index" })
     },
-    userList: (req, res) => {
-        db.User.findAll({
-            include: [
-                { association: "roles" },
-                { association: "ordenes" },
-
-            ]
-        }
-        )
-            .then(users => {
-                console.log(users)
-                return res.render('admin/listaUsuarios.ejs', { users, title: "Listado de usuarios" })
-            })
+    userList: (req, res) => {        
+            db.User.findAll({
+                include: [
+                    { association: "Rol" },
+                    { association: "Order" }
+                    
+                ]}
+            )
+                .then(users => {
+                    console.log(users)
+                   return res.render('admin/listaUsuarios.ejs', {users,title: "Listado de usuarios"})
+                })
         // let usersJSON = fs.readFileSync(productsFilePath, 'utf-8')
         // res.render("admin/listaUsuarios", { title: "Edición de usuario", users: users })        
     },
