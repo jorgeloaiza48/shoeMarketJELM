@@ -15,7 +15,7 @@ let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));//JSON a J
 let categories = ['Borcegos', 'Texanas', 'Guillerminas', 'Bucaneras', 'Gift card', 'Botas']
 let sizes = ["35", "36", "37", "38", "39", "40"]
 let colores = ["Negro", "Crema", "Rojo", "Blanco", "Rosa"]
-let rols = ["Admin", "Cliente", "Vendedor"]
+let roles = ["admin", "cliente", "vendedor","invitado"]
 let estados = ["Activo", "Inactivo"]
 
 let usersFilePath = path.join(__dirname, '../data/users.json');
@@ -26,19 +26,18 @@ const controller = {
     index: (req, res) => {
         res.render("admin/indexAdmin", { title: "Admin Index" })
     },
-    userList: (req, res) => {
-        db.User.findAll({
-            include: [
-                { association: "Rol" },
-                { association: "Order" }
-
-            ]
-        }
-        )
-            .then(users => {
-                console.log(users)
-                return res.render('admin/listaUsuarios.ejs', { users, title: "Listado de usuarios" })
-            })
+    userList: (req, res) => {        
+            db.User.findAll({
+                include: [
+                    { association: "roles" },
+                    { association: "Order" }
+                    
+                ]}
+            )
+                .then(users => {
+                    console.log(users)
+                   return res.render('admin/listaUsuarios.ejs', {users,title: "Listado de usuarios"})
+                })
         // let usersJSON = fs.readFileSync(productsFilePath, 'utf-8')
         // res.render("admin/listaUsuarios", { title: "Edición de usuario", users: users })        
     },
@@ -338,29 +337,56 @@ const controller = {
 
     },
     userEdit: (req, res) => {
-        let usuario = users.find(usuario => usuario.id === parseInt(req.params.id))
-        res.render("users/editUsuario", { title: "Editar usuario", usuario: usuario, rols: rols, estados: estados })
+        db.User.findByPk(req.params.id)
+        .then(function(usuario){res.render("users/editUsuario", { title: "Editar usuario", usuario:usuario,estados:estados,roles})})
+        
+        //  let usuario = users.find(usuario => usuario.id === parseInt(req.params.id))
+        // res.render("users/editUsuario", { title: "Editar usuario", usuario: usuario, rols: rols, estados: estados })
     },
 
     userUpdate: (req, res) => {
-        let usersFilePath = path.join(__dirname, '../data/users.json');
-        let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));//JSON a JS
-        users.find(user => {
-            if (user.id === parseInt(req.params.id)) {
-                user.nombre = req.body.Nombre
-                user.apellido = req.body.apellido
-                user.email = req.body.email
-                user.fechaNacimiento = req.body.fecha
-                user.domicilio = req.body.domicilio
-                user.estado = req.body.estado
-                user.role = req.body.rol
+        // let usersFilePath = path.join(__dirname, '../data/users.json');
+        // let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));//JSON a JS
+        // users.find(user => {
+        //     if (user.id === parseInt(req.params.id)) {
+        //         user.nombre = req.body.Nombre
+        //         user.apellido = req.body.apellido
+        //         user.email = req.body.email
+        //         user.fechaNacimiento = req.body.fecha
+        //         user.domicilio = req.body.domicilio
+        //         user.estado = req.body.estado
+        //         user.role = req.body.rol
 
-                if (req.file && user.image !== req.file.filename) { user.image = req.file.filename }
+        //         if (req.file && user.image !== req.file.filename) { user.image = req.file.filename }
 
-            }
-        })
-        fs.writeFileSync(usersFilePath, JSON.stringify(users, null, "\t")) //JS a JSON
-        res.redirect("/user/login")
+        //     }
+        // })
+        // fs.writeFileSync(usersFilePath, JSON.stringify(users, null, "\t")) //JS a JSON
+       
+        db.User.update({         
+            document : 123456,
+            first_name:req.body.Nombre,
+            last_name:req.body.apellido,
+            email:req.body.email,
+            // password:req.body.pass,
+            date_of_birth:req.body.fecha,
+            // image: req.file.filename,
+            // rol_id:1,
+            image : req.file.filename,
+            adress : req.body.domicilio,
+            updated_at : Date.now()
+            // created_at: Date.now(),
+            // Status: "Activo"
+            // if (req.file && user.image !== req.file.filename) { user.image = req.file.filename }
+            // console.log(user)
+        },{
+            where:{id:req.params.id}
+         })
+         
+         .then(()=> {
+            return res.redirect('/user/login')})            
+        .catch(error => res.send(error))       
+              
     },
 
     userSoftDelete: (req, res) => {

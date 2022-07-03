@@ -23,8 +23,8 @@ const controller = {
 },
 
     createUser: function (req, res) {
-        let usersFilePath = path.join(__dirname, '../data/users.json');
-        let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8')); //de JSON a JS
+        // let usersFilePath = path.join(__dirname, '../data/users.json');
+        // let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8')); //de JSON a JS
         let errors = validationResult(req)
 
        
@@ -78,15 +78,16 @@ const controller = {
             email:req.body.email,
             password:req.body.pass,
             date_of_birth:req.body.fecha,
-            image:"asdddsd",
-            roles_id:1,
-            adress: req.body.domicilio
-             // updated_at:Date.now(),
-            // created_at: Date.now()
+            image: req.file.filename,
+            rol_id:1,
+            adress: req.body.domicilio,
+            updated_at:Date.now(),
+            created_at: Date.now(),
+            Status: "Activo"
         },
-        {include:[{association:"Rol"}]}
-        )
-        res.send("Usuario Creado")
+         {include:[{association:"roles"}]}
+               )
+        res.redirect("login")
                         
          }//else1
       } //else2

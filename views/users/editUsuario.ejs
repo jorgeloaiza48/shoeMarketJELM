@@ -19,13 +19,13 @@
                         <div class="form__nombre">
                             <label for="nombre">Nombres:</label>
                             <input type="text" name="Nombre" id="nombre" placeholder=" Introduzca su Nombre y apellido"
-                                value="<%= usuario.nombre%>" class="input">
+                                value="<%= usuario.first_name%>" class="input">
                         </div>
 
                         <div class="form__nombre">
                             <label for="nombre">Apellido:</label>
                             <input type="text" name="apellido" id="nombre" placeholder=" Introduzca su Nombre y apellido"
-                                value="<%= usuario.apellido%>" class="input">
+                                value="<%= usuario.last_name%>" class="input">
                         </div>
 
                         <div class="form__nombre"><label for="email">Correo electrónico:</label>
@@ -34,18 +34,18 @@
                         </div>
 
                         <div class="form__nombre"><label for="fecha">Fecha de nacimiento:</label>
-                            <input type="date" name="fecha" id="fecha" value="<%= usuario.fechaNacimiento %>" class="input">
+                            <input type="date" name="fecha" id="fecha" value="<%= usuario.date_of_birth %>" class="input">
                         </div>
 
                         <div class="form__nombre"><label for="domicilio">Domicilio de envio:</label><br>
-                            <input type="text" name="domicilio" id="domicilio" value="<%= usuario.domicilio %>" class="input">
+                            <input type="text" name="domicilio" id="domicilio" value="<%= usuario.adress %>" class="input">
                         </div>
 
                         <% if (locals.isAdmin) { %>
                             <div class="form__nombre"><label for="rol">Estado</label><br>
                           <select name="estado" class="form-edit_select">
                           <% locals.estados.forEach(estado => { %>
-                            <option <%= estado == usuario.estado ? "selected" : "" %> value="<%= estado %>"> <%= estado %></option>
+                            <option <%= estado == usuario.Status ? "selected" : "" %> value="<%= estado %>"> <%= estado %></option>
                          <% }) %>
                             
                           </select>
@@ -57,8 +57,8 @@
                         <% if (locals.isAdmin) { %>
                             <div class="form__nombre"><label for="rol">Rol</label><br>
                           <select name="rol" class="form-edit_select">
-                          <% locals.rols.forEach(rol => { %>
-                            <option <%= rol == usuario.role ? "selected" : "" %> value="<%= rol %>"> <%= rol %></option>
+                          <% locals.roles.forEach(rol => { %>
+                            <option <%= rol == usuario.roles ? "selected" : "" %> value="<%= rol %>"> <%= rol %></option>
                          <% }) %>
                             
                           </select>
