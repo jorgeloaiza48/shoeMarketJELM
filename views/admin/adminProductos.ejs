@@ -16,18 +16,20 @@
                                  
                                     <section class="section-destacados-admin">
                                     
-                                            <% product.fotos.forEach(foto => { %>
-                                                <img src="../../img/products/<%= foto.name %>" alt="bota">
+                                    
+                                                <img src="../../img/products/<%= product.image %>" alt="bota">
                                              
-                                            <% }) %>
-                                            
+                                    
                                             <p><strong>Nombre:</strong> <%= product.name %></p>
                                             <p><strong>Precio:</strong> $<%= product.price %></p>
+                                            <p><strong>Estado:</strong> <%= product.status %></p>
+                                           
+
                                             <div class="product-edit">
                                                 <form action="/admin/productos/editar/<%= product.id %>" method="get" >
                                                     <button type="submt" name="editar" id="editar" class="admin-but"><p>EDITAR</p></button>                                                                  
                                                 </form>
-                                            <form action="/admin/productos/delete/<%= product.id %>?_method=DELETE" method="POST" >
+                                            <form action="/admin/productos/delete/<%= product.id %>" method="POST" >
                                                 <button type="submt" name="delete" id="delete" class="admin-but"><p>BORRAR</p></button>                                                                  
                                             </form>
                                         </div>
@@ -37,20 +39,17 @@
                             <% }) %>
                      
                     </div>
-                    <h3 class="all-product-title" >Borcegos</h3>
+                    <h3 class="all-product-title" >Bucaneras</h3>
                     <div class="productos-admin">                       
                       
                             <% products.forEach(product=> { %> 
                                 
                                 
-                                <% if (product.categorias.name === "Borcegos") { %>
+                                <% if (product.categorias.name === "Bucaneras") { %>
                                  
                                     <section class="section-destacados-admin">
                                     
-                                            <% product.fotos.forEach(foto => { %>
-                                                <img src="../../img/products/<%= foto.name %>" alt="bota">
-                                             
-                                            <% }) %>
+                                        <img src="../../img/products/<%= product.image %>" alt="bota">
                                             
                                             <p><strong>Nombre:</strong> <%= product.name %></p>
                                             <p><strong>Precio:</strong> $<%= product.price %></p>
@@ -58,7 +57,7 @@
                                                 <form action="/admin/productos/editar/<%= product.id %>" method="get" >
                                                     <button type="submt" name="editar" id="editar" class="admin-but"><p>EDITAR</p></button>                                                                  
                                                 </form>
-                                            <form action="/admin/productos/delete/<%= product.id %>?_method=DELETE" method="POST" >
+                                            <form action="/admin/productos/delete/<%= product.id %>" method="POST" >
                                                 <button type="submt" name="delete" id="delete" class="admin-but"><p>BORRAR</p></button>                                                                  
                                             </form>
                                         </div>

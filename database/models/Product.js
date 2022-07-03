@@ -44,6 +44,9 @@ module.exports = (sequelize, dataTypes) => {
             status : {
                 type : dataTypes.STRING(45),
                 allowNull : false
+            },
+            image : {
+                type: dataTypes.STRING(45)
             }
         }
     let config = {
@@ -66,10 +69,10 @@ module.exports = (sequelize, dataTypes) => {
         //     foreignKey: "line_id"
         // });
 
-        Product.hasMany(models.Image, {
-            as: "fotos",
-            foreignKey: "product_id"
-        });
+        // Product.hasMany(models.Image, {
+        //     as: "fotos",
+        //     foreignKey: "product_id"
+        // });
 
 
         Product.hasMany(models.Product_size,

@@ -52,7 +52,7 @@ router.get("/productos/editar/:id", adminController.editarProducto)//le saque el
 
 router.put('/productos/editar/:id', upload.single("img"), adminController.update)
 
-router.delete("/productos/delete/:id", adminController.deleteProduct)
+router.post("/productos/delete/:id", adminController.deleteProduct)
 
 router.get("/prueba",adminController.list)
 

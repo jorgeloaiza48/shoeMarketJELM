@@ -20,30 +20,7 @@
                     </div>
                     <div class="form-create__descr">
                         <h3>Descripcion del producto*</h3>
-                        <div class="div-desc">
-                            <label for="material"> Material</label>
-                            <input type="text" name="material" value="<%= producto.description.Material %>">
-                        </div>
-                        <div class="div-desc">
-                            <label for="base"> Altura de la base</label>
-                            <input type="text" name="base" value="<%= producto.description.Alturabase %>">
-                        </div>
-                        <div class="div-desc">
-                            <label for="taco">Altura del taco</label>
-                            <input type="text" name="taco" value="<%= producto.description.Alturataco %>">
-                        </div>
-
-                        <div class="div-desc">
-                            <label for="cana">Altura de la caña</label>
-                            <input type="text" name="cana" value="<%= producto.description.Alturacana %>">
-                        </div>
-
-                        <div class="div-desc">
-                            <label for="colores">Colores</label>
-                            <input type="text" name="colores" value="<%= producto.description.Colores %>">
-                        </div>
-
-
+                    
                     </div>
 
                     <div class="form-create__img">
@@ -92,6 +69,32 @@
                             <% }) %>
 
                     </div>
+                    <div class="form-create__cat">
+                        <div class="form-create__cat-div">
+                            <label for="category">Selecciona el estado</label>
+                        </div>
+                        <div class="form-create__cat__div-input">
+                            <select name="status" id="status" >
+
+
+                                <option value="" disabled>Seleccione</option>
+
+
+                                <
+
+                                    <option <%=producto.status == "Enabled" ? "selected" : "" %> value="Enabled" >
+                                            Activo
+                                    </option>
+                                    <option <%=producto.status == "Disabled" ? "selected" : "" %> value="Disabled" >
+                                        Desactivo
+                                </option>
+
+                            </select>
+
+
+                        </div>
+
+                    </div>
 
                     <div class="form-create__cat">
                         <div class="form-create__cat-div">
@@ -106,8 +109,8 @@
 
                                 <% categories.forEach(element=> { %>
 
-                                    <option <%=producto.category==element ? "selected" : "" %> value="<%= element %>" >
-                                            <%= element %>
+                                    <option <%=producto.categorias.name == element.name ? "selected" : "" %> value="<%= element.id %>" >
+                                            <%= element.name %>
                                     </option>
                                     <% }) %>
 

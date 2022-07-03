@@ -26,18 +26,19 @@ const controller = {
     index: (req, res) => {
         res.render("admin/indexAdmin", { title: "Admin Index" })
     },
-    userList: (req, res) => {        
-            db.User.findAll({
-                include: [
-                    { association: "Rol" },
-                    { association: "Order" }
-                    
-                ]}
-            )
-                .then(users => {
-                    console.log(users)
-                   return res.render('admin/listaUsuarios.ejs', {users,title: "Listado de usuarios"})
-                })
+    userList: (req, res) => {
+        db.User.findAll({
+            include: [
+                { association: "Rol" },
+                { association: "Order" }
+
+            ]
+        }
+        )
+            .then(users => {
+                console.log(users)
+                return res.render('admin/listaUsuarios.ejs', { users, title: "Listado de usuarios" })
+            })
         // let usersJSON = fs.readFileSync(productsFilePath, 'utf-8')
         // res.render("admin/listaUsuarios", { title: "Edición de usuario", users: users })        
     },
@@ -81,10 +82,8 @@ const controller = {
         db.Product.findAll({
             include: [
                 { association: "categorias" },
-                { association: "lineas" },
                 { association: "productosTalles" },
                 { association: "ordenes" },
-                { association: "fotos" },
                 { association: "talles" }
             ]
         })
@@ -105,7 +104,7 @@ const controller = {
         })
             .then(categorias => {
 
-                return res.render('admin/crearProducto', { title: "Crear Producto", products: products, categories: categorias, sizes: sizes, colores: colores })
+                return res.render('admin/crearProducto', { title: "Crear Producto", categories: categorias, sizes: sizes, colores: colores })
             })
 
         // res.render('admin/crearProducto', { title: "Crear Producto", categories: categories, sizes: sizes, colores: colores }) 
@@ -114,50 +113,65 @@ const controller = {
 
     newproduct: (req, res) => {
         const errors = validationResult(req)
-
+        let nombre = function () {
+            if (req.body && req.body.nombre) {
+                return req.body.nombre
+            } else {
+                return ""
+            }
+        }
+        let img = function () {
+            if (req.file) { return req.file.filename }
+        }
+        let newProduct = {
+            name: req.body.nombre,
+            description: req.body.description,
+            category_id: req.body.category,
+            price: req.body.price,
+            color: req.body.color,
+            status: "Enabled",
+            image: img()
+        }
 
         let categories = db.Category.findAll()
         let sizes = db.Size.findAll()
+        let productInDb = db.Product.findAll({ where: { name: nombre() } })
+        Promise.all([categories, sizes, productInDb])
+            .then(function ([categorias, talles, productoInDb]) {
+                if (errors.errors.length > 0) {
+                    return res.render("admin/crearProducto", {
+                        errors: errors.mapped(),
+                        old: req.body,
+                        title: "Crear Producto",
+                        categories: categorias, sizes: talles, colores: colores
+                    })
+                }
+                if (productoInDb) {
+                    return res.render("admin/crearProducto", {
+                        old: req.body,
+                        title: "Crear Producto",
+                        categories: categorias, sizes: talles, colores: colores,
+                        errors: { nombre: { msg: "no se puede crear 2 productos con el mismo nombre" } }
+                    })
 
-        promise.all([categories, sizes]) 
-        .then(function( [categorias,talles]) {
-            console.log(talles)
+                }
+
+            })
             
-            if (errors.errors.length > 0) {
-                return res.render("admin/crearProducto", {
-                    errors: errors.mapped(),
-                    old: req.body,
-                    title: "Crear Producto",
-                    categories: categorias, sizes: talles, colores: colores
-                })
-            }
-            
-            db.Product.create({             
-            name: req.body.nombre,
-            description: req.body.description,
-            category_id : req.body.category,
-            price: req.body.price,
-            color: req.body.color,
-            status: "Active",
-            fotos : {
-                name : req.file.filename},
-        },{
-            include : [
-                { association : "fotos"},
-                { association : "talles"},
-            ]
-        })
-        .then(product =>{
-          return res.redirect("/admin/lista/productos")
-        })
 
 
-        })
+        // db.Product.create({ newProduct })
+        //     .then(() => {
+        //         return res.redirect("/admin/lista/productos")
+        //     })
 
-        
-     
 
-// db.Product.findAll({
+
+
+
+
+
+        // db.Product.findAll({
         //          where : { name : "Lara Negro"}
         // })
         // .then(product=>{
@@ -214,60 +228,113 @@ const controller = {
         // let productCreated = productCrud.create(productToCreate)
 
 
-        
+
     },
 
     deleteProduct: (req, res) => {
-        let productsFilePath = path.join(__dirname, '../data/SHOEMARKET.json');
-        let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-        let productJSON = fs.readFileSync(productsFilePath, 'utf-8')
+        // let productsFilePath = path.join(__dirname, '../data/SHOEMARKET.json');
+        // let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+        // let productJSON = fs.readFileSync(productsFilePath, 'utf-8')
 
-        //let newList = products.find(product => product.id === parseInt(req.params.id));// se puede hacer asi tmb
-        let newList = products.filter(product => product.id !== parseInt(req.params.id))
-        fs.writeFileSync(productsFilePath, JSON.stringify(newList));
-        products = newList
-        res.redirect("/admin/lista/productos")
+        // //let newList = products.find(product => product.id === parseInt(req.params.id));// se puede hacer asi tmb
+        // let newList = products.filter(product => product.id !== parseInt(req.params.id))
+        // fs.writeFileSync(productsFilePath, JSON.stringify(newList));
+        // products = newList
+        // res.redirect("/admin/lista/productos")
+
+        db.Product.update({
+            status: "Disabled"
+        }, {
+            where: { id: req.params.id }
+        })
+            .then(() => {
+                return res.redirect("/admin/lista/productos")
+            })
+
+
+
     },
     editarProducto: (req, res) => {
-        let productsFilePath = path.join(__dirname, '../data/SHOEMARKET.json');
-        let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));//JSON a JS
-        let productJSON = fs.readFileSync(productsFilePath, 'utf-8')
+        // let productsFilePath = path.join(__dirname, '../data/SHOEMARKET.json');
+        // let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));//JSON a JS
+        // let productJSON = fs.readFileSync(productsFilePath, 'utf-8')
 
-        let producto = products.find(product => product.id === parseInt(req.params.id))
+        // let producto = products.find(product => product.id === parseInt(req.params.id))
 
 
-        res.render('admin/editarProducto', { title: "Editar producto", producto: producto, categories: categories, sizes: sizes, colores: colores })
+        // res.render('admin/editarProducto', { title: "Editar producto", producto: producto, categories: categories, sizes: sizes, colores: colores })
+
+        let categoriesInDb = db.Category.findAll()
+        let productInDb = db.Product.findByPk(req.params.id, {
+            include: [
+                { association: "categorias" },
+                { association: "productosTalles" },
+                { association: "ordenes" },
+                { association: "talles" }
+            ]
+        })
+        Promise.all([categoriesInDb, productInDb])
+            .then(function ([categorias, producto]) {
+
+                return res.render('admin/editarProducto', { title: "Crear Producto", producto: producto, categories: categorias, sizes: sizes, colores: colores })
+
+            })
+        // res.render('admin/crearProducto', { title: "Crear Producto", categories: categories, sizes: sizes, colores: colores }) 
+
+
     },
 
     update: (req, res) => {
-        let productsFilePath = path.join(__dirname, '../data/SHOEMARKET.json');
-        let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));//JSON a JS
-        let productJSON = fs.readFileSync(productsFilePath, 'utf-8')
+        // let productsFilePath = path.join(__dirname, '../data/SHOEMARKET.json');
+        // let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));//JSON a JS
+        // let productJSON = fs.readFileSync(productsFilePath, 'utf-8')
 
-        products.find(product => {
-            if (product.id === parseInt(req.params.id)) {
+        // products.find(product => {
+        //     if (product.id === parseInt(req.params.id)) {
 
-                product.name = req.body.name
-                product.price = Number(req.body.price)
-                product.category = req.body.category
-                product.color = req.body.color
-                product.description = {
-                    Material: req.body.material,
-                    Alturabase: req.body.base,
-                    Alturataco: req.body.taco,
-                    Alturacana: req.body.cana,
-                    Colores: req.body.colores
-                }
-                // product.image = req.file.filename,
-                product.size = req.body.talle
+        //         product.name = req.body.name
+        //         product.price = Number(req.body.price)
+        //         product.category = req.body.category
+        //         product.color = req.body.color
+        //         product.description = {
+        //             Material: req.body.material,
+        //             Alturabase: req.body.base,
+        //             Alturataco: req.body.taco,
+        //             Alturacana: req.body.cana,
+        //             Colores: req.body.colores
+        //         }
+        //         // product.image = req.file.filename,
+        //         product.size = req.body.talle
 
 
-                if (req.file && product.image !== req.file.filename) { product.image = req.file.filename }
+        //         if (req.file && product.image !== req.file.filename) { product.image = req.file.filename }
 
-            }
+        //     }
+        // })
+        // fs.writeFileSync(productsFilePath, JSON.stringify(products, null, "\t")) //JS a JSON
+        // res.redirect("/admin/lista/productos")
+        let img = function () {
+            if (req.file) { return req.file.filename }
+        }
+        let newProduct = {
+            name: req.body.name,
+            description: req.body.description,
+            category_id: req.body.category,
+            price: req.body.price,
+            color: req.body.color,
+            status: req.body.status,
+            image: img(),
+            status: req.body.status
+
+        }
+
+        db.Product.update(newProduct, {
+            where: { id: req.params.id }
         })
-        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, "\t")) //JS a JSON
-        res.redirect("/admin/lista/productos")
+            .then(() => {
+                return res.redirect("/admin/lista/productos")
+            })
+
 
     },
     userEdit: (req, res) => {
@@ -317,7 +384,7 @@ const controller = {
                 { association: "lineas" },
                 { association: "productosTalles" },
                 { association: "ordenes" },
-                { association: "fotos" },
+
                 { association: "talles" }
             ],
             where: { name: "Lara Negro" }

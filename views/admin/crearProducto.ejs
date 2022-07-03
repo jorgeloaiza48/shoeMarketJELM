@@ -35,7 +35,7 @@
                 <div class="form-create__img">
                     <label for="photo">Seleccione la foto </label>
                    
-                        <input type="file" name="img" accept=".jpg,.jpeg"  id="file">    
+                        <input type="file" name="img" accept=".jpg,.jpeg"  id="file" >    
                    
                     </div>
                           <% if (locals.errors && errors.img) {%>
@@ -110,10 +110,11 @@
                         <label class="form-create__size__title" for="talles">Seleccione los talles</label>
                     </div>
                     <% sizes.forEach(talle=> { %>
+                   
 
-                        <label class="form-create__size__check" for="<%= size %> ">
-                            <input <%= locals.old && old.size && old.size.size.includes(size) ? "checked" : " " %>
-                            type="checkbox" name="size" id="<%= size.size %>" value="<%= size.id %>">
+                        <label class="form-create__size__check" for="<%= talle.size %> ">
+                            <input <%= locals.old && old.size && old.size.includes(talle.id) ? "checked" : "" %>
+                            type="checkbox" name="size"  value="<%= talle.id %>">
                                     <%= talle.size %>
                         </label>
                         <% }) %>
