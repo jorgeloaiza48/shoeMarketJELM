@@ -1,5 +1,4 @@
 [
-
 	{
 		"id": 1,
 		"nombre": "joel",
@@ -20,7 +19,7 @@
 		"fechaNacimiento": "1993-04-28",
 		"domicilio": "calle falsa 123",
 		"contraseña": "$2a$10$EIoHllR9Q8n1ithPxPkI0enpq8JwFMAqSmIwSTAD6RGR6z1acKafC",
-		"image": "photoDaniel-1655741165816.jpg",
+		"image": "photo-1656792997454.jpg",
 		"role": "Admin",
 		"estado": "Activo"
 	},

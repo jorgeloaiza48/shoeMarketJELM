@@ -58,6 +58,10 @@ module.exports = (sequelize, dataTypes) => {
             adress:{
                 type: dataTypes.STRING(45),
                 allowNull: false
+            },
+            Status:{
+                type:dataTypes.STRING(20),
+                allowNull: false
             }
            
         }
@@ -71,7 +75,7 @@ module.exports = (sequelize, dataTypes) => {
 
     User.associate = function (models) {
         User.belongsTo(models.Rol, {
-            as: "Rol",
+            as: "roles",
             foreignKey: "rol_id"
         });
 
