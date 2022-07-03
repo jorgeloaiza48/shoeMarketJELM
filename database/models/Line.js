@@ -32,13 +32,13 @@ module.exports = (sequelize, dataTypes) => {
 
 const Line = sequelize.define(alias,cols,config)
 
-Line.associate = function(models){
-    Line.hasMany(models.Product,
-        {
-            as : "productos",
-            foreignKey : "line_id"
-        })
-}
+// Line.associate = function(models){
+//     Line.hasMany(models.Product,
+//         {
+//             as : "productos",
+//             foreignKey : "line_id"
+//         })
+// }
 
     return Line;
 }
