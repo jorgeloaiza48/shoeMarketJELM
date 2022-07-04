@@ -71,6 +71,7 @@ const controller = {
         //     }
         //     fs.writeFileSync(usersFilePath, JSON.stringify(NewUser, null, "\t")) //de JS a JSON
         //     res.redirect("/user/login") 
+        
         db.User.create({
             document:123456,
             first_name:req.body.nombre,
