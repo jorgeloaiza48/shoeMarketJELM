@@ -159,10 +159,10 @@ const controller = {
             
 
 
-        // db.Product.create({ newProduct })
-        //     .then(() => {
-        //         return res.redirect("/admin/lista/productos")
-        //     })
+        db.Product.create({ newProduct })
+             .then(() => {
+               return res.redirect("/admin/lista/productos")
+        })
 
 
 
@@ -323,7 +323,6 @@ const controller = {
             color: req.body.color,
             status: req.body.status,
             image: img(),
-            status: req.body.status
 
         }
 

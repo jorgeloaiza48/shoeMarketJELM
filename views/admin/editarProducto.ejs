@@ -14,13 +14,14 @@
                             alt="<%= producto.image %>">
                     </div>
                     <div class="form-create__nombre">
-                        <label for="nombre">Nombre del producto *</label>
+                        <label for="nombre">Nombre y color *</label>
                         <input type="text" name="name" id="nombre" placeholder="Nombre del nuevo producto" required
-                            value="<%= producto.name %>" minlength="4">
+                            value="<%= producto.name %>">
                     </div>
                     <div class="form-create__descr">
-                        <h3>Descripcion del producto*</h3>
-                    
+                        <label for="description">Descripcion del producto*</label>
+                        <textarea name="description" id="description" cols="30"
+                            rows="10"> <%= producto.description %> </textarea>
                     </div>
 
                     <div class="form-create__img">
@@ -47,46 +48,28 @@
                             }    
                         </script>
 
-
-
-
                     </div>
                     <div class="form-create__price">
                         <label for="price">Precio *</label><br>
-                        <input type="number" name="price" id="price" placeholder=" Introduzca el precio" required
-                            value="<%= producto.price %>" minlength="4">
+                        <input type="number" name="price" value="<%= producto.price %>">
                     </div>
-                    <div class="form-create__color">
-                        <div class="form-create__size__title__div">
-                            <label class="form-create__size__title" for="talles">Seleccione los Colores</label>
-                        </div>
-                        <% colores.forEach(color=> { %>
-                            <label class="form-create__size__check" for="<%= color %> ">
-                                <input <%=producto.color && producto.color.includes(color) ? "checked" : "" %>
-                                type="checkbox" name="color" id="<%= color %>" value="<%= color %>">
-                                        <%= color %>
-                            </label>
-                            <% }) %>
+                    <div class="form-create__price">
+                        <label for="color">Color *</label><br>
+                        <input type="text" name="color" value="<%= producto.color %>">
+                    </div>
 
-                    </div>
                     <div class="form-create__cat">
                         <div class="form-create__cat-div">
-                            <label for="category">Selecciona el estado</label>
+                            <label for="status">Selecciona el estado</label>
                         </div>
                         <div class="form-create__cat__div-input">
-                            <select name="status" id="status" >
-
-
+                            <select name="status" id="status">
                                 <option value="" disabled>Seleccione</option>
-
-
-                                <
-
-                                    <option <%=producto.status == "Enabled" ? "selected" : "" %> value="Enabled" >
-                                            Activo
-                                    </option>
-                                    <option <%=producto.status == "Disabled" ? "selected" : "" %> value="Disabled" >
-                                        Desactivo
+                                <option <%=producto.status=="Enabled" ? "selected" : "" %> value="Enabled" >
+                                    Activo
+                                </option>
+                                <option <%=producto.status=="Disabled" ? "selected" : "" %> value="Disabled" >
+                                    Desactivo
                                 </option>
 
                             </select>
@@ -109,7 +92,8 @@
 
                                 <% categories.forEach(element=> { %>
 
-                                    <option <%=producto.categorias.name == element.name ? "selected" : "" %> value="<%= element.id %>" >
+                                    <option <%=producto.categorias.name==element.name ? "selected" : "" %> value="<%=
+                                            element.id %>" >
                                             <%= element.name %>
                                     </option>
                                     <% }) %>
@@ -121,26 +105,11 @@
 
                     </div>
 
-                    <div class="form-create__size">
 
-                        <div class="form-create__size__title__div">
-                            <label class="form-create__size__title" for="talles">Seleccione los talles</label>
-                        </div>
-                        <% sizes.forEach(size=> { %>
-
-                            <label class="form-create__size__check" for="<%= size %> ">
-                                <input <%=producto.size && producto.size.includes(size) ? "checked" : "" %>
-                                type="checkbox" name="talle" id="<%= size %>" value="<%= size %>">
-                                        <%= size %>
-                            </label>
-                            <% }) %>
-
-
-                    </div>
 
                     <div class="contenedor_button">
 
-                        
+
                         <button type="submit" class="form__button">Editar Producto</button>
 
                     </div>

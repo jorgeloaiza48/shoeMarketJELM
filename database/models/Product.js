@@ -35,7 +35,7 @@ module.exports = (sequelize, dataTypes) => {
             },
             price: {
                 type: dataTypes.DECIMAL(10, 2),
-                allowNull: true
+                allowNull: false
             },
             color: {
                 type: dataTypes.STRING(45),

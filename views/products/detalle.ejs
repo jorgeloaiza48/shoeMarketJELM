@@ -8,7 +8,7 @@
 
 
                     <section class="photos-desc">
-                        <% if (producto.size) { %>
+                        <% if (producto.color) { %>
 
 
                             <article class="photos-small">
@@ -29,6 +29,7 @@
                             </article>
 
                             <% } %>
+
                                 <div class="photos-desc__div">
                                     <img class="photos-desc__big" src="../img/products/<%= producto.image%>"
                                         alt="product">
@@ -60,36 +61,9 @@
                             <p class="name-pr__off">20% OFF abonando con transferencia</p>
 
                         </section>
+                        
+                                
                         <% if (producto.color) { %>
-
-                            <section class="select">
-                                <h3 class="selec-color__title">Seleciona un color</h3>
-                                <form action="#">
-                                    <select name="color" id="color" class="selec-color__form" required>
-
-                                        <% if (producto.color[0]) { %>
-                                            <option value="color1">
-                                                <%= producto.color[0] %>
-                                            </option>
-                                            <% } %>
-                                                <% if (producto.color[1]) { %>
-                                                    <option value="color2">
-                                                        <%= producto.color[1] %>
-                                                    </option>
-                                                    <% } %>
-                                                        <% if (producto.color[2]) { %>
-                                                            <option value="color3">
-                                                                <%= producto.color[2] %>
-                                                            </option>
-                                                            <% } %>
-
-
-                                    </select>
-                                </form>
-                            </section>
-                            <% } %>
-                                <% if (producto.size) { %>
-
                                     <section class="art-size">
                                         <h3 class="art-size__title">Selecciona el talle</h4>
                                             <div class="size">
@@ -109,24 +83,13 @@
                                         </section>
                     </article>
                 </article>
-                <% if (producto.size) { %>
+                <% if (producto.description) { %>
 
 
                     <section class="desc-desc">
                         <h3 class="desc-desc__title">Descripcion</h3>
-                        <ul>
-                            <li>Material : <%= producto.description.Material %>
-                            </li>
-                            <li>Altura Base : <%= producto.description.Alturabase %>
-                            </li>
-                            <li>Altura Taco : <%= producto.description.Alturataco %>
-                            </li>
-                            <li>Altura Caña : <%= producto.description.Alturacana %>
-                            </li>
-                            <li>Colores : <%= producto.description.Colores %>
-                            </li>
-
-                        </ul>
+                        <p class="desc-p"><%= producto.description %></p>
+                         
                     </section>
                     <% } %>
                         <div class="help-button">

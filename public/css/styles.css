@@ -1767,8 +1767,12 @@ i {
         transition: all 0.5s;
         border-radius: 20px;
         width: 150px;
+        margin-top: 20px;
     }
-
+.desc-p{
+    margin-left: 55px;
+    font-size: 20px
+}
 
     .produc_img_bueno {
         border: solid 1px red;

@@ -6,27 +6,44 @@
             <!-- *****************************INICIO MAIN****************************************** -->
 
             <main>
-
+                <% if (productos.length != 0) { %>
+                 
+                    <h3 class="all-product-title" ><%=categoria.name  %> </h3>
                 <section class="productos">
-                    <% categoria.forEach(product=> { %>
-                        <div class="produc">
-                            <%- include("../components/singleProduct",{product:product}) %>
-                        </div>
-                        <% }) %>
+                     
+                <% productos.forEach(product=> { %>
+                    <div class="produc">
+                        <a href="../detalle/<%= product.id %>">
+                            <img src="../img/products/<%= product.image %>" alt="bota">
+                            <p>
+                                <%= product.name %>
+                            </p>
+                            <p>$<%= product.price %>
+                            </p>
+                        
+                            <p><a href="../detalle/<%= product.id %>" class="com-but-main"><button>COMPRAR</button></a></p>
+                            <p><i class="fa-solid fa-star"></i></p>
+                        </a>
+                    </div>
+                    <% }) %>
                 </section>
+                
+                        
+                    <% }  else { %>
+                        <h3 class="all-product-title" >No tenemos productos en esta categoria en este momento</h3> 
+                        <% }   %>
+                        <div class="news-letter">
+                            <h2>Suscribite a nuestro newsletter</h2>
+                            <form>
+                                <input type="email" placeholder="Ingresa tu e-mail">
+                                <button><i class="fa-solid fa-arrow-right"></i></button>
+                            </form>
 
-                <div class="news-letter">
-                    <h2>Suscribite a nuestro newsletter</h2>
-                    <form>
-                        <input type="email" placeholder="Ingresa tu e-mail">
-                        <button><i class="fa-solid fa-arrow-right"></i></button>
-                    </form>
+                        </div>
 
-                </div>
-
-                <div class="help-button">
-                    <button><i class="fa-solid fa-circle-question"></i> Ayuda</button>
-                </div>
+                        <div class="help-button">
+                            <button><i class="fa-solid fa-circle-question"></i> Ayuda</button>
+                        </div>
 
             </main>
 

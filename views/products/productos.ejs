@@ -6,86 +6,92 @@
             <!-- *****************************INICIO MAIN****************************************** -->
 
             <main>
-                <h3 class="all-product-title" >Botas</h3>
-                                           
+                <h3 class="all-product-title">Botas</h3>
+                
+
                 <section class="productos">
-                          <% botas.forEach(product=> { %> 
-                                <div class="produc"> 
-                                    <%- include("../components/singleProduct",{product:product}) %> 
-                                </div>
-                            <% }) %>
+                    <% productos.forEach(product=> { %>
+                        <% if (product.categorias.name === "Botas" ) { %>
+                            <div class="produc">
+                                <%- include("../components/singleProduct",{product:product}) %>
+                            </div>
+                            <% } %>
+                                <% }) %>
                 </section>
-                            
-                    
-                   
-                <h3 class="all-product-title" >TEXANAS</h3>
-                    <div class="productos">                       
-                       
-                            <% texanas.forEach(product=> { %> 
-                                <div class="produc"> 
-                                    <%- include("../components/singleProduct",{product:product}) %> 
-                                </div>
-                            <% }) %>
-                     
-                    </div>
-                   
-                    <h3 class="all-product-title" >BUCANERAS</h3>
-                    <div class="productos">                       
-                       
-                            <% bucaneras.forEach(product=> { %> 
-                                <div class="produc"> 
-                                    <%- include("../components/singleProduct",{product:product}) %> 
-                                </div>
-                            <% }) %>
-                     
-                    </div>
 
-                    <h3 class="all-product-title" >BORCEGOS</h3>
-                    <div class="productos">                       
-                        
-                            <% borcegos.forEach(product=> { %> 
-                                <div class="produc"> 
-                                    <%- include("../components/singleProduct",{product:product}) %> 
-                                </div>
-                            <% }) %>
-                     
-                    </div>
 
-                    <h3>GUILLERMINAS</h3>
-                    <div class="productos">                       
-                       
-                            <% guillerminas.forEach(product=> { %> 
-                                <div class="produc"> 
-                                    <%- include("../components/singleProduct",{product:product}) %> 
-                                </div>
-                            <% }) %>
-                     
-                    </div>
+                <h3 class="all-product-title">Botas</h3>
 
-                    <h3>GIFT-CARD</h3>
-                    <div class="productos">                       
-                       
-                            <% giftCard.forEach(product=> { %> 
-                                <div class="produc"> 
-                                    <%- include("../components/singleProduct",{product:product}) %> 
-                                </div>
-                            <% }) %>
-                     
-                    </div>
-                    
-                    
-                                        <div class="news-letter">
-                                            <h2>Suscribite a nuestro newsletter</h2>
-                                            <form>
-                                                <input type="email" placeholder="Ingresa tu e-mail">
-                                                <button><i class="fa-solid fa-arrow-right"></i></button>
-                                            </form>
 
-                                        </div>
+                <section class="productos">
+                    <% productos.forEach(product=> { %>
+                        <% if (product.categorias.name=== "Bucaneras" ) { %>
+                            <div class="produc">
+                                <%- include("../components/singleProduct",{product:product}) %>
+                            </div>
+                            <% } %>
+                                <% }) %>
+                </section>
+                <h3 class="all-product-title">Texanas</h3>
 
-                                        <div class="help-button">
-                                            <button><i class="fa-solid fa-circle-question"></i> Ayuda</button>
-                                        </div>
+                <section class="productos">
+                    <% productos.forEach(product=> { %>
+                        <% if (product.categorias.name==="Texanas" ) { %>
+                            <div class="produc">
+                                <%- include("../components/singleProduct",{product:product}) %>
+                            </div>
+                            <% } %>
+                                <% }) %>
+                </section>
+                <h3 class="all-product-title">Guillerminas</h3>
+                 
+               
+                <section class="productos">
+                    <% productos.forEach(product=> { %>
+                        <% if (product.categorias.name==="Guillerminas" ) { %>
+                            <div class="produc">
+                                <%- include("../components/singleProduct",{product:product}) %>
+                            </div>
+                            <% } %>
+                                <% }) %>
+                </section>
+
+                <h3 class="all-product-title">Borcegos</h3>
+
+                <section class="productos">
+                    <% productos.forEach(product=> { %>
+                        <% if (product.categorias.name==="Borcegos" ) { %>
+                            <div class="produc">
+                                <%- include("../components/singleProduct",{product:product}) %>
+                            </div>
+                            <% } %>
+                                <% }) %>
+                </section>
+                <h3 class="all-product-title">Gift-Card</h3>
+                <section class="productos">
+                    <% productos.forEach(product=> { %>
+                        <% if (product.categorias.name==="Gift-Card" ) { %>
+                            <div class="produc">
+                                <%- include("../components/singleProduct",{product:product}) %>
+                            </div>
+                            <% } %>
+                                <% }) %>
+                </section>
+
+
+
+                <div class="news-letter">
+                    <h2>Suscribite a nuestro newsletter</h2>
+                    <form>
+                        <input type="email" placeholder="Ingresa tu e-mail">
+                        <button><i class="fa-solid fa-arrow-right"></i></button>
+                    </form>
+
+                </div>
+
+                <div class="help-button">
+                    <button><i class="fa-solid fa-circle-question"></i> Ayuda</button>
+                </div>
 
             </main>
 
