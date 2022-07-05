@@ -47,3 +47,6 @@ Por unos cinco minutos se discutió sobre las vistas.
 
 Reunión 19-6-2022
 Atráves de comunicaión virtual, se definió el proceso de logueo y las rutas destinadas para los usuarios según su perfil y sesión.
+
+Reunión 4-7-2022
+Por medio de llamada de voz discutimos el manejo de la carga de imagen cuando se hace un cambio en los datos del usuario.

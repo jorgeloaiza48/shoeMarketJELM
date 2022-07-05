@@ -362,7 +362,9 @@ const controller = {
         //     }
         // })
         // fs.writeFileSync(usersFilePath, JSON.stringify(users, null, "\t")) //JS a JSON
-       
+        let img = function () {
+            if (req.file) { return req.file.filename }
+        }
         db.User.update({         
             document : 123456,
             first_name:req.body.Nombre,
@@ -370,14 +372,13 @@ const controller = {
             email:req.body.email,
             // password:req.body.pass,
             date_of_birth:req.body.fecha,
-            // image: req.file.filename,
+            image: img(),
             // rol_id:1,
-            image : req.file.filename,
+            //image : req.file.filename,
             adress : req.body.domicilio,
-            updated_at : Date.now()
-            // created_at: Date.now(),
+            updated_at : Date.now(),
             // Status: "Activo"
-            // if (req.file && user.image !== req.file.filename) { user.image = req.file.filename }
+            //if (req.file && image !== req.file.filename) { image = req.file.filename }
             // console.log(user)
         },{
             where:{id:req.params.id}
