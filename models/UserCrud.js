@@ -44,9 +44,8 @@ const User = {
         let allUsers = this.findAll()//obtengo primero a todos los usuarios
        
         let userFound = allUsers.find(oneUser => 
-            oneUser[field] === text)
-          
-            
+            oneUser[field] === text)        
+                        
         return userFound
         // este metodo para buscar por cualquier campo que yo quiera, como primer
         //parametro pasamos el campo ( id,fullname,email,etc) y como segundo parametro lo que
