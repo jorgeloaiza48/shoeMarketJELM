@@ -104,27 +104,8 @@
                         <%}%>
                 </div>
                 
-                <div class="form-create__size">
-
-                    <div class="form-create__size__title__div">
-                        <label class="form-create__size__title" for="talles">Seleccione los talles</label>
-                    </div>
-                    <% sizes.forEach(talle=> { %>
+                
                    
-
-                        <label class="form-create__size__check" for="<%= talle.size %> ">
-                            <input <%= locals.old && old.size && old.size.includes(talle.id) ? "checked" : "" %>
-                            type="checkbox" name="size"  value="<%= talle.id %>">
-                                    <%= talle.size %>
-                        </label>
-                        <% }) %>
-
-
-                </div>
-                <div>
-                    <% if (locals.errors && errors.size) {%>
-                        <div class="text-aviso"><%= errors.size.msg %></div>
-                    <%}%>
                 </div>
                 <div class="contenedor_button">
                     <button class="form__button" type="delete">Borrar</button>

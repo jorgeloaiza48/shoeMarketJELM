@@ -20,7 +20,7 @@
         </section> -->
                 <h3>DESTACADOS</h3>
                 <section class="productos">
-                    <% Promociones.forEach(product=> { %>
+                    <% productos.forEach(product=> { %>
                         <!-- <div class="productos"> -->
                         <a href="detalle/<%= product.id %>">
                             <div class="produc"><img src="/img/products/<%= product.image %>" alt="bota">
@@ -52,7 +52,7 @@
 
                 <h3>PROMOCIONES</h3>
                 <section class="productos">
-                    <% Promociones.forEach(product=> { %>
+                    <% productos.forEach(product=> { %>
                         <!-- <div class="productos"> -->
                         <a href="detalle/<%= product.id %>">
                             <div class="produc"><img src="/img/products/<%= product.image %>" alt="bota">

@@ -323,7 +323,6 @@ const controller = {
             color: req.body.color,
             status: req.body.status,
             image: img(),
-            status: req.body.status
 
         }
 

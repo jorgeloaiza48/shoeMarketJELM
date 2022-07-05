@@ -7,20 +7,70 @@
 
             <main>
                 <h3 class="all-product-title">Botas</h3>
+                
 
                 <section class="productos">
                     <% productos.forEach(product=> { %>
-                        <% if (product.categorias.name==="Botas" ) { %>
+                        <% if (product.categorias.name === "Botas" ) { %>
                             <div class="produc">
                                 <%- include("../components/singleProduct",{product:product}) %>
                             </div>
                             <% } %>
                                 <% }) %>
                 </section>
-                <h3 class="all-product-title">Bucaneras</h3>
+
+
+                <h3 class="all-product-title">Botas</h3>
+
+
                 <section class="productos">
                     <% productos.forEach(product=> { %>
-                        <% if (product.categorias.name==="Bucaneras" ) { %>
+                        <% if (product.categorias.name=== "Bucaneras" ) { %>
+                            <div class="produc">
+                                <%- include("../components/singleProduct",{product:product}) %>
+                            </div>
+                            <% } %>
+                                <% }) %>
+                </section>
+                <h3 class="all-product-title">Texanas</h3>
+
+                <section class="productos">
+                    <% productos.forEach(product=> { %>
+                        <% if (product.categorias.name==="Texanas" ) { %>
+                            <div class="produc">
+                                <%- include("../components/singleProduct",{product:product}) %>
+                            </div>
+                            <% } %>
+                                <% }) %>
+                </section>
+                <h3 class="all-product-title">Guillerminas</h3>
+                 
+               
+                <section class="productos">
+                    <% productos.forEach(product=> { %>
+                        <% if (product.categorias.name==="Guillerminas" ) { %>
+                            <div class="produc">
+                                <%- include("../components/singleProduct",{product:product}) %>
+                            </div>
+                            <% } %>
+                                <% }) %>
+                </section>
+
+                <h3 class="all-product-title">Borcegos</h3>
+
+                <section class="productos">
+                    <% productos.forEach(product=> { %>
+                        <% if (product.categorias.name==="Borcegos" ) { %>
+                            <div class="produc">
+                                <%- include("../components/singleProduct",{product:product}) %>
+                            </div>
+                            <% } %>
+                                <% }) %>
+                </section>
+                <h3 class="all-product-title">Gift-Card</h3>
+                <section class="productos">
+                    <% productos.forEach(product=> { %>
+                        <% if (product.categorias.name==="Gift-Card" ) { %>
                             <div class="produc">
                                 <%- include("../components/singleProduct",{product:product}) %>
                             </div>

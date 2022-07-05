@@ -1,9 +1,9 @@
 module.exports = {
   "development": {
-    "username": "root",
-    "password": "George4810008968",
-    "database": "shoemarket",
-    "host": "127.0.0.1",
+    "username": "rdPFvYiYwX",
+    "password": "AvapkRmZXc",
+    "database": "rdPFvYiYwX",
+    "host": "remotemysql.com",
     "dialect": "mysql"
   },
   "test": {

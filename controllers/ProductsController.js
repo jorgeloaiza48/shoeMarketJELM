@@ -78,21 +78,16 @@ const controller = {
         //     return cate.category == req.params.categoria
         // })
         // res.render("products/categoria", { categoria: categoria, title: "categoria" })
-        db.Product.findAll({
-            include: [
-                { association: "categorias" }
-            ],
-            where : {
-                cate
-            }
-        })
-         .then(function(productos){
-            productos.forEach(producto => {
-                return producto.categorias.name == parseInt(req.params.categoria)
+
+        let productInDb = db.Product.findAll({where : {
+            category_id : req.params.categoria
+        }})
+            
+        let categoriesInDb = db.Category.findByPk(req.params.categoria)
+        Promise.all([categoriesInDb, productInDb])
+            .then(function ([categoria, productos]) {
+                res.render("products/categoria",{productos:productos,title : "categoria",categoria:categoria})
             })
-         }).then((producto)=>
-         res.json(producto))
-         //res.render("products/categoria", { producto: producto, title: "categoria" }))
 
 
 
