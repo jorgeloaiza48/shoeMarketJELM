@@ -12,8 +12,6 @@ const db = require("../database/models")
 const { DATE } = require("sequelize")
 
 
-
-
 let productsFilePath = path.join(__dirname, '../data/SHOEMARKET.json');
 let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));//JSON a JS
 
@@ -35,9 +33,30 @@ const controller = {
             
             })//mapped convierte un array en un objeto literal
         } else { //else2
-            let userToProcess = userCrud.findByField("email", req.body.email)
-         
-            if (userToProcess != undefined) {
+            // let userToProcess = userCrud.findByField(req.body.email) 
+            // console.log("Valor de userToProcess----->>>" + userToProcess)
+            //****************************************************************/
+            db.User.findOrCreate({
+                where: {email:req.body.email},
+                defaults:{
+                    document:123456,
+                    first_name:req.body.nombre,
+                    last_name:req.body.apellido,
+                    email:req.body.email,
+                    password:req.body.pass,
+                    date_of_birth:req.body.fecha,
+                    image: req.file.filename,
+                    rol_id:1,
+                    adress: req.body.domicilio,
+                    updated_at:Date.now(),
+                    created_at: Date.now(),
+                    Status: "Activo"
+                }
+                
+            })
+                .then(([user,created]) => {
+                                                                                           
+            if (created != true) {
                 return res.render("users/registro", { errors: {
 					email: {
 						msg: "El Correo electronico ya se encuentra registrado"
@@ -71,26 +90,11 @@ const controller = {
         //     }
         //     fs.writeFileSync(usersFilePath, JSON.stringify(NewUser, null, "\t")) //de JS a JSON
         //     res.redirect("/user/login") 
-        
-        db.User.create({
-            document:123456,
-            first_name:req.body.nombre,
-            last_name:req.body.apellido,
-            email:req.body.email,
-            password:req.body.pass,
-            date_of_birth:req.body.fecha,
-            image: req.file.filename,
-            rol_id:1,
-            adress: req.body.domicilio,
-            updated_at:Date.now(),
-            created_at: Date.now(),
-            Status: "Activo"
-        },
-         {include:[{association:"roles"}]}
-               )
+                
         res.redirect("login")
                         
          }//else1
+        })
       } //else2
     },
 

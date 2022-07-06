@@ -3,12 +3,13 @@
 // 3. buscar a un usuario por su id // findByPK
 // 4. editar la info de un usuario
 // 5 . eliminar a un usuario de la base de datos
-
+const db = require("../database/models")
 
 //CRUD
 
 const path = require('path');
 const fs = require("fs");
+const { text } = require("express");
 const pathfileName = path.join(__dirname, "../data/users.json")// esta es otra forma o sino poniendo dentro de cada metodo
 
 const User = {
@@ -40,13 +41,35 @@ const User = {
         return userFound
 
     },
-    findByField: function (field,text) {
-        let allUsers = this.findAll()//obtengo primero a todos los usuarios
-       
-        let userFound = allUsers.find(oneUser => 
-            oneUser[field] === text)        
-                        
-        return userFound
+    findByField: function (text) {
+        // db.User.findAll({
+        //     include: [
+        //         { association: "roles" },
+        //         { association: "Order" }                
+        //     ]}
+        // )
+        //     .then(users => {
+        //         // console.log("Lo correos de los usuarios ----->>> " + users.email)
+        //          //return users})
+        //     //    console.log("Lo correos de los usuarios ----->>> " + users.email)})
+        //     //    .catch(function(error){console.log("Error " + error)})
+        //         console.log("Esta es la variable user ----->>>" + users)
+        //       users.filter(usuario => { return usuario.email == text                 
+        //     }) 
+                         
+             
+        //     }) 
+                
+            //   let emailFound = users.find(oneEmail => oneEmail.email===text)
+            //   console.log("emailFound que está en UserCrud --->>>" + emailFound)
+            //   return emailFound 
+              
+            
+        // let allUsers = this.findAll()//obtengo primero a todos los usuarios
+        // let userFound = allUsers.find(oneUser => 
+        // oneUser[field] === text)                            
+        // return userFound
+
         // este metodo para buscar por cualquier campo que yo quiera, como primer
         //parametro pasamos el campo ( id,fullname,email,etc) y como segundo parametro lo que
         // tiene que decir en ese campo.
