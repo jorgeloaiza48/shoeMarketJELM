@@ -30,7 +30,7 @@ const controller = {
             db.User.findAll({
                 include: [
                     { association: "roles" },
-                    { association: "Order" }
+                    { association: "order" }
                     
                 ]}
             )
@@ -93,6 +93,22 @@ const controller = {
                 return res.render("admin/adminProductos", { products: products, title: "AdminProducts" })
             })
 
+    },
+    adminProductsDisabled : (req,res)=>{
+        db.Product.findAll({
+            include: [
+                { association: "categorias" },
+                { association: "productosTalles" },
+                { association: "ordenes" },
+                { association: "talles" }
+            ]
+        })
+            .then(products => {
+
+
+
+                return res.render("admin/adminProductosDesactivos", { products: products, title: "AdminProducts" })
+            })
     },
 
     crearProducto: (req, res) => {
@@ -230,7 +246,7 @@ const controller = {
 
     },
 
-    deleteProduct: (req, res) => {
+    disableProduct: (req, res) => {
         // let productsFilePath = path.join(__dirname, '../data/SHOEMARKET.json');
         // let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
         // let productJSON = fs.readFileSync(productsFilePath, 'utf-8')
@@ -251,6 +267,16 @@ const controller = {
             })
 
 
+
+    },
+    deleteProduct: (req,res)=>{
+        db.Product.destroy({where : {
+            id : req.params.id
+        }})
+            .then(()=> {
+                res.redirect("/admin/lista/productosDesactivos")
+
+            })
 
     },
     editarProducto: (req, res) => {
