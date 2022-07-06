@@ -11,7 +11,7 @@
 
                 <section class="productos">
                     <% productos.forEach(product=> { %>
-                        <% if (product.categorias.name === "Botas" ) { %>
+                        <% if (product.categorias.name === "Botas" && product.status === "Enabled" ) { %>
                             <div class="produc">
                                 <%- include("../components/singleProduct",{product:product}) %>
                             </div>
@@ -25,7 +25,7 @@
 
                 <section class="productos">
                     <% productos.forEach(product=> { %>
-                        <% if (product.categorias.name=== "Bucaneras" ) { %>
+                        <% if (product.categorias.name=== "Bucaneras" && product.status === "Enabled" ) { %>
                             <div class="produc">
                                 <%- include("../components/singleProduct",{product:product}) %>
                             </div>
@@ -36,7 +36,7 @@
 
                 <section class="productos">
                     <% productos.forEach(product=> { %>
-                        <% if (product.categorias.name==="Texanas" ) { %>
+                        <% if (product.categorias.name==="Texanas" && product.status === "Enabled") { %>
                             <div class="produc">
                                 <%- include("../components/singleProduct",{product:product}) %>
                             </div>
@@ -48,7 +48,7 @@
                
                 <section class="productos">
                     <% productos.forEach(product=> { %>
-                        <% if (product.categorias.name==="Guillerminas" ) { %>
+                        <% if (product.categorias.name==="Guillerminas" && product.status === "Enabled") { %>
                             <div class="produc">
                                 <%- include("../components/singleProduct",{product:product}) %>
                             </div>
@@ -60,7 +60,7 @@
 
                 <section class="productos">
                     <% productos.forEach(product=> { %>
-                        <% if (product.categorias.name==="Borcegos" ) { %>
+                        <% if (product.categorias.name==="Borcegos" && product.status === "Enabled") { %>
                             <div class="produc">
                                 <%- include("../components/singleProduct",{product:product}) %>
                             </div>
@@ -70,7 +70,7 @@
                 <h3 class="all-product-title">Gift-Card</h3>
                 <section class="productos">
                     <% productos.forEach(product=> { %>
-                        <% if (product.categorias.name==="Gift-Card" ) { %>
+                        <% if (product.categorias.name==="Gift-Card" && product.status === "Enabled") { %>
                             <div class="produc">
                                 <%- include("../components/singleProduct",{product:product}) %>
                             </div>

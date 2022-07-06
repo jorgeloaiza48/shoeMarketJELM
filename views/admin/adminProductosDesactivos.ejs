@@ -12,7 +12,7 @@
                     <% products.forEach(product=> { %>
 
 
-                        <% if (product.categorias.name==="Botas" && product.status === "Enabled") { %>
+                        <% if (product.categorias.name==="Botas" && product.status === "Disabled") { %>
 
                             <section class="section-destacados-admin">
 
@@ -36,13 +36,13 @@
 
                                 <div class="product-edit">
                                     <form action="/admin/productos/editar/<%= product.id %>" method="get">
-                                        <button type="submt" name="editar" id="editar" class="admin-but">
+                                        <button type="submit" name="editar" id="editar" class="admin-but">
                                             <p>EDITAR</p>
                                         </button>
                                     </form>
-                                    <form action="/admin/productos/disable/<%= product.id %>" method="POST">
-                                        <button type="submt" name="delete" id="delete" class="admin-but">
-                                            <p>DESACTIVAR</p>
+                                    <form action="/admin/productos/delete/<%= product.id %>" method="POST">
+                                        <button type="submit" name="delete" id="delete" class="admin-but">
+                                            <p>BORRAR</p>
                                         </button>
                                     </form>
                                 </div>
@@ -58,7 +58,7 @@
                     <% products.forEach(product=> { %>
 
 
-                        <% if (product.categorias.name==="Bucaneras" && product.status === "Enabled") { %>
+                        <% if (product.categorias.name==="Bucaneras" && product.status === "Disabled") { %>
 
                             <section class="section-destacados-admin">
 
@@ -78,13 +78,13 @@
                                 </p>
                                 <div class="product-edit">
                                     <form action="/admin/productos/editar/<%= product.id %>" method="get">
-                                        <button type="submt" name="editar" id="editar" class="admin-but">
+                                        <button type="submit" name="editar" id="editar" class="admin-but">
                                             <p>EDITAR</p>
                                         </button>
                                     </form>
-                                    <form action="/admin/productos/disable/<%= product.id %>" method="POST">
-                                        <button type="submt" name="delete" id="delete" class="admin-but">
-                                            <p>DESACTIVAR</p>
+                                    <form action="/admin/productos/delete/<%= product.id %>" method="POST">
+                                        <button type="submit" name="delete" id="delete" class="admin-but">
+                                            <p>BORRAR</p>
                                         </button>
                                     </form>
                                 </div>
@@ -100,7 +100,7 @@
                     <% products.forEach(product=> { %>
 
 
-                        <% if (product.categorias.name==="Borcegos" && product.status === "Enabled" ) { %>
+                        <% if (product.categorias.name==="Borcegos" && product.status === "Disabled" ) { %>
 
                             <section class="section-destacados-admin">
 
@@ -124,13 +124,13 @@
 
                                 <div class="product-edit">
                                     <form action="/admin/productos/editar/<%= product.id %>" method="get">
-                                        <button type="submt" name="editar" id="editar" class="admin-but">
+                                        <button type="submit" name="editar" id="editar" class="admin-but">
                                             <p>EDITAR</p>
                                         </button>
                                     </form>
-                                    <form action="/admin/productos/disable/<%= product.id %>" method="POST">
-                                        <button type="submt" name="delete" id="delete" class="admin-but">
-                                            <p>DESACTIVAR</p>
+                                    <form action="/admin/productos/delete/<%= product.id %>" method="POST">
+                                        <button type="submit" name="delete" id="delete" class="admin-but">
+                                            <p>BORRAR</p>
                                         </button>
                                     </form>
                                 </div>
@@ -146,7 +146,7 @@
                     <% products.forEach(product=> { %>
 
 
-                        <% if (product.categorias.name==="Guillerminas" && product.status === "Enabled") { %>
+                        <% if (product.categorias.name==="Guillerminas" && product.status === "Disabled") { %>
 
                             <section class="section-destacados-admin">
 
@@ -170,13 +170,13 @@
 
                                 <div class="product-edit">
                                     <form action="/admin/productos/editar/<%= product.id %>" method="get">
-                                        <button type="submt" name="editar" id="editar" class="admin-but">
+                                        <button type="submit" name="editar" id="editar" class="admin-but">
                                             <p>EDITAR</p>
                                         </button>
                                     </form>
-                                    <form action="/admin/productos/disable<%= product.id %>" method="POST">
-                                        <button type="submt" name="delete" id="delete" class="admin-but">
-                                            <p>DESACTIVAR</p>
+                                    <form action="/admin/productos/delete/<%= product.id %>" method="POST">
+                                        <button type="submit" name="delete" id="delete" class="admin-but">
+                                            <p>BORRAR</p>
                                         </button>
                                     </form>
                                 </div>
@@ -192,7 +192,7 @@
                     <% products.forEach(product=> { %>
 
 
-                        <% if (product.categorias.name==="Texanas"&& product.status === "Enabled" ) { %>
+                        <% if (product.categorias.name==="Texanas"&& product.status === "Disabled" ) { %>
 
                             <section class="section-destacados-admin">
 
@@ -216,13 +216,13 @@
 
                                 <div class="product-edit">
                                     <form action="/admin/productos/editar/<%= product.id %>" method="get">
-                                        <button type="submt" name="editar" id="editar" class="admin-but">
+                                        <button type="submit" name="editar" id="editar" class="admin-but">
                                             <p>EDITAR</p>
                                         </button>
                                     </form>
-                                    <form action="/admin/productos/disable/<%= product.id %>" method="POST">
-                                        <button type="submt" name="delete" id="delete" class="admin-but">
-                                            <p>DESACTIVAR</p>
+                                    <form action="/admin/productos/delete/<%= product.id %>" method="POST">
+                                        <button type="submit" name="delete" id="delete" class="admin-but">
+                                            <p>BORRAR</p>
                                         </button>
                                     </form>
                                 </div>
@@ -238,7 +238,7 @@
                     <% products.forEach(product=> { %>
 
 
-                        <% if (product.categorias.name==="Gift-Card" && product.status === "Enabled") { %>
+                        <% if (product.categorias.name==="Gift-Card" && product.status === "Disabled") { %>
 
                             <section class="section-destacados-admin">
 
@@ -261,13 +261,13 @@
 
                                 <div class="product-edit">
                                     <form action="/admin/productos/editar/<%= product.id %>" method="get">
-                                        <button type="submt" name="editar" id="editar" class="admin-but">
+                                        <button type="submit" name="editar" id="editar" class="admin-but">
                                             <p>EDITAR</p>
                                         </button>
                                     </form>
-                                    <form action="/admin/productos/disable/<%= product.id %>" method="POST">
-                                        <button type="submt" name="delete" id="delete" class="admin-but">
-                                            <p>DESACTIVAR</p>
+                                    <form action="/admin/productos/delete/<%= product.id %>?_method=DELETE" method="POST">
+                                        <button type="submit" name="delete" id="delete" class="admin-but">
+                                            <p>BORRAR DEFINITIVAMENTE</p>
                                         </button>
                                     </form>
                                 </div>
