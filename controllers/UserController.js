@@ -43,7 +43,7 @@ const controller = {
                     first_name:req.body.nombre,
                     last_name:req.body.apellido,
                     email:req.body.email,
-                    password:req.body.pass,
+                    password:bcryptjs.hashSync(req.body.pass, 10),
                     date_of_birth:req.body.fecha,
                     image: req.file.filename,
                     rol_id:1,
@@ -103,39 +103,49 @@ const controller = {
     processLogin :(req,res) =>{
 		const errors = validationResult(req)
         
-		let userToLogin = userCrud.findByField("email", req.body.email)
+		// let userToLogin = userCrud.findByField("email", req.body.email)
+        //************************************************************************ */
+       db.User.findOne({
+            where:{email:req.body.email}
+        }).then((userToLogin) => {
+                      
+        //************************************************************************ */
        
-		if (userToLogin) {
-			let isOkpassword = bcryptjs.compareSync(req.body.password, userToLogin.contraseña)
-			if (isOkpassword) {
+		if (userToLogin != null) {
+			let isOkpassword = bcryptjs.compareSync(req.body.password, userToLogin.password)
+           if (isOkpassword) {
 
 				req.session.userLogged = userToLogin
             
                 
-                req.session.isAdmin = userToLogin.role == "Admin"
+                req.session.isAdmin = userToLogin.rol_id == 2
                 
 				if(req.body.record){
 					res.cookie("userEmail", req.body.email, {maxAge : (1000 * 60)*2})
 				}
 				return res.redirect("/user/profile")
 			} 
+            else{//**
 			res.render("users/login", {
 				errors: {
 					email: {
 						msg: "Las credenciales son inválidas"
 					}
 				},old : req.body, title : " login"
-			}
-            )
+			   }
+               ) 
+            }//**
 		}
-
-		res.render("users/login", {
-			errors: {
-				email: {
-					msg: " No se encuentra ese email en nuestra base de datos"
-				}
-			},old : req.body, title : " login"
-		})
+        else{
+            res.render("users/login", {
+                errors: {
+                    email: {
+                        msg: " No se encuentra ese email en nuestra base de datos"
+                    }
+                },old : req.body, title : " login"
+            })
+        }
+    }) //then		
 
 	},
 
@@ -145,6 +155,7 @@ const controller = {
 		user : req.session.userLogged,title:"perfil"
 
 	}) },
+    
 	logout : (req, res) => { 
 		res.clearCookie("userEmail")
 		req.session.destroy() 

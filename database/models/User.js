@@ -26,7 +26,7 @@ module.exports = (sequelize, dataTypes) => {
                 unique: true
             },
             password: {
-                type: dataTypes.STRING(32),
+                type: dataTypes.STRING(100),
                 allowNull: false
             },
             date_of_birth: {
@@ -80,7 +80,7 @@ module.exports = (sequelize, dataTypes) => {
         });
 
         User.hasMany(models.Order, {
-            as: "Order",
+            as: "order",
             foreignKey: "user_id"
         });               
     }

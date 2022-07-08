@@ -41,28 +41,10 @@ const User = {
         return userFound
 
     },
-    findByField: function (text) {
-        // db.User.findAll({
-        //     include: [
-        //         { association: "roles" },
-        //         { association: "Order" }                
-        //     ]}
-        // )
-        //     .then(users => {
-        //         // console.log("Lo correos de los usuarios ----->>> " + users.email)
-        //          //return users})
-        //     //    console.log("Lo correos de los usuarios ----->>> " + users.email)})
-        //     //    .catch(function(error){console.log("Error " + error)})
-        //         console.log("Esta es la variable user ----->>>" + users)
-        //       users.filter(usuario => { return usuario.email == text                 
-        //     }) 
-                         
-             
-        //     }) 
-                
-            //   let emailFound = users.find(oneEmail => oneEmail.email===text)
-            //   console.log("emailFound que está en UserCrud --->>>" + emailFound)
-            //   return emailFound 
+    findByField: function (field, text) {                      
+        //   let emailFound = users.find(oneEmail => oneEmail.email===text)
+        //   console.log("emailFound que está en UserCrud --->>>" + emailFound)
+        //   return emailFound 
               
             
         // let allUsers = this.findAll()//obtengo primero a todos los usuarios
