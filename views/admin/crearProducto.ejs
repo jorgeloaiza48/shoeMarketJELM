@@ -79,12 +79,12 @@
                         <label for="category">Selecciona la categoria</label>
                     </div>
                     <div class="form-create__cat__div-input">
-                        <select name="category" id="categoria" >
+                        <select name="category" id="category" >
 
                             <option value="" disabled selected>Seleccione</option>
-                            <% categories.forEach(element=> { %>
-                                <option <%= locals.old && old.category == element.name ? "selected" : "" %> value="<%= element.id %>" >
-                                        <%= element.name %>
+                            <% categories.forEach(categoria=> { %>
+                                <option <%= locals.old && old.category == categoria.id ? "selected" : "" %> value="<%= categoria.id %>" >
+                                        <%= categoria.name %>
                                 </option>
                                 <% }) %>
 
@@ -98,7 +98,7 @@
                 </div>
                 <div class="form-create__nombre">
                     <label for="color">Color del producto *</label>
-                    <input  type="text" name="color" id="color" placeholder="Nombre del nuevo producto" value="<%= locals.old && old.nombre ? old.nombre : ""%>"  >
+                    <input  type="text" name="color" id="color" placeholder="Nombre del nuevo producto" value="<%= locals.old && old.color ? old.color : ""%>"  >
                         <% if (locals.errors && errors.color) {%>
                             <div class="text-aviso"><%= errors.color.msg %></div>
                         <%}%>
