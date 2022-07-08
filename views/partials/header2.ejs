@@ -70,7 +70,7 @@
                             </li>
                             <% } %>
                                 <% if (locals.isLogged) { %>
-                                    <li class="lista__profile">Hola <%= locals.userLogged.nombre %> ▼
+                                    <li class="lista__profile">Hola <%= locals.userLogged.first_name %> ▼
                                             <ul class="lista__profile-down">
                                                 <li class="lista__profile-li" v><a href="/user/profile">Mi Perfil <img
                                                             src="/img/user/<%=locals.userLogged.image%>" alt=""></a>

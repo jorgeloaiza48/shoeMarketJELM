@@ -42,14 +42,14 @@ router.put("/usuario/editar/:id", upload.single("photo"), adminController.userUp
 
 router.delete("/usuario/delete/:id", adminController.userSoftDelete)
 
-router.get("/lista/productos", adminController.adminProducts)//le saque el admin adminMiddleware
-router.get("/lista/productosinactivos", adminController.productsDisabled)//le saque el admin adminMiddleware
+router.get("/lista/productos",adminMiddleware, adminController.adminProducts)//le saque el admin adminMiddleware
+router.get("/lista/productosinactivos",adminMiddleware, adminController.productsDisabled)//le saque el admin adminMiddleware
 
-router.get("/productos/crear", adminController.crearProducto)//le saque el admin adminMiddleware
+router.get("/productos/crear",adminMiddleware, adminController.crearProducto)//le saque el admin adminMiddleware
 
 router.post("/productos/crear", upload.single("img"), validationProducts, adminController.newproduct)
 
-router.get("/productos/editar/:id", adminController.editarProducto)//le saque el admin adminMiddleware
+router.get("/productos/editar/:id", adminMiddleware,adminController.editarProducto)//le saque el admin adminMiddleware
 
 router.put('/productos/editar/:id', upload.single("img"), adminController.update)
 
