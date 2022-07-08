@@ -29,19 +29,19 @@
                                     <% if (product.status==="Enabled" ) { %>
                                         Activo
                                         <% } else { %>
-                                            Desactivo
+                                            Inactivo
                                             <% }%>
                                 </p>
 
 
                                 <div class="product-edit">
                                     <form action="/admin/productos/editar/<%= product.id %>" method="get">
-                                        <button type="submt" name="editar" id="editar" class="admin-but">
+                                        <button type="submit" name="editar" id="editar" class="admin-but">
                                             <p>EDITAR</p>
                                         </button>
                                     </form>
-                                    <form action="/admin/productos/disable/<%= product.id %>" method="POST">
-                                        <button type="submt" name="delete" id="delete" class="admin-but">
+                                    <form action="/admin/productos/disable/<%= product.id%>?_method=PUT" method="POST">
+                                        <button type="submit" name="delete" id="delete" class="admin-but">
                                             <p>DESACTIVAR</p>
                                         </button>
                                     </form>
@@ -82,8 +82,8 @@
                                             <p>EDITAR</p>
                                         </button>
                                     </form>
-                                    <form action="/admin/productos/disable/<%= product.id %>" method="POST">
-                                        <button type="submt" name="delete" id="delete" class="admin-but">
+                                    <form action="/admin/productos/disable/<%= product.id%>?_method=PUT" method="POST">
+                                        <button type="submit" name="delete" id="delete" class="admin-but">
                                             <p>DESACTIVAR</p>
                                         </button>
                                     </form>
@@ -128,8 +128,8 @@
                                             <p>EDITAR</p>
                                         </button>
                                     </form>
-                                    <form action="/admin/productos/disable/<%= product.id %>" method="POST">
-                                        <button type="submt" name="delete" id="delete" class="admin-but">
+                                    <form action="/admin/productos/disable/<%= product.id%>?_method=PUT" method="POST">
+                                        <button type="submit" name="delete" id="delete" class="admin-but">
                                             <p>DESACTIVAR</p>
                                         </button>
                                     </form>
@@ -174,8 +174,8 @@
                                             <p>EDITAR</p>
                                         </button>
                                     </form>
-                                    <form action="/admin/productos/disable<%= product.id %>" method="POST">
-                                        <button type="submt" name="delete" id="delete" class="admin-but">
+                                    <form action="/admin/productos/disable/<%= product.id%>?_method=PUT" method="POST">
+                                        <button type="submit" name="delete" id="delete" class="admin-but">
                                             <p>DESACTIVAR</p>
                                         </button>
                                     </form>
@@ -220,8 +220,8 @@
                                             <p>EDITAR</p>
                                         </button>
                                     </form>
-                                    <form action="/admin/productos/disable/<%= product.id %>" method="POST">
-                                        <button type="submt" name="delete" id="delete" class="admin-but">
+                                    <form action="/admin/productos/disable/<%= product.id%>?_method=PUT" method="POST">
+                                        <button type="submit" name="delete" id="delete" class="admin-but">
                                             <p>DESACTIVAR</p>
                                         </button>
                                     </form>
@@ -265,8 +265,8 @@
                                             <p>EDITAR</p>
                                         </button>
                                     </form>
-                                    <form action="/admin/productos/disable/<%= product.id %>" method="POST">
-                                        <button type="submt" name="delete" id="delete" class="admin-but">
+                                    <form action="/admin/productos/disable/<%= product.id%>?_method=PUT" method="POST">
+                                        <button type="submit" name="delete" id="delete" class="admin-but">
                                             <p>DESACTIVAR</p>
                                         </button>
                                     </form>

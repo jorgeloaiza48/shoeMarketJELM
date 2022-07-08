@@ -15,7 +15,7 @@ let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));//JSON a J
 let categories = ['Borcegos', 'Texanas', 'Guillerminas', 'Bucaneras', 'Gift card', 'Botas']
 let sizes = ["35", "36", "37", "38", "39", "40"]
 let colores = ["Negro", "Crema", "Rojo", "Blanco", "Rosa"]
-let roles = ["admin", "cliente", "vendedor","invitado"]
+let roles = ["admin", "cliente", "vendedor", "invitado"]
 let estados = ["Activo", "Inactivo"]
 
 let usersFilePath = path.join(__dirname, '../data/users.json');
@@ -26,18 +26,19 @@ const controller = {
     index: (req, res) => {
         res.render("admin/indexAdmin", { title: "Admin Index" })
     },
-    userList: (req, res) => {        
-            db.User.findAll({
-                include: [
-                    { association: "roles" },
-                    { association: "order" }
-                    
-                ]}
-            )
-                .then(users => {
-                    console.log(users)
-                   return res.render('admin/listaUsuarios.ejs', {users,title: "Listado de usuarios"})
-                })
+    userList: (req, res) => {
+        db.User.findAll({
+            include: [
+                { association: "roles" },
+                { association: "order" }
+
+            ]
+        }
+        )
+            .then(users => {
+                console.log(users)
+                return res.render('admin/listaUsuarios.ejs', { users, title: "Listado de usuarios" })
+            })
         // let usersJSON = fs.readFileSync(productsFilePath, 'utf-8')
         // res.render("admin/listaUsuarios", { title: "Edición de usuario", users: users })        
     },
@@ -87,14 +88,11 @@ const controller = {
             ]
         })
             .then(products => {
-
-
-
                 return res.render("admin/adminProductos", { products: products, title: "AdminProducts" })
             })
 
     },
-    adminProductsDisabled : (req,res)=>{
+    productsDisabled: (req, res) => {
         db.Product.findAll({
             include: [
                 { association: "categorias" },
@@ -104,10 +102,7 @@ const controller = {
             ]
         })
             .then(products => {
-
-
-
-                return res.render("admin/adminProductosDesactivos", { products: products, title: "AdminProducts" })
+                return res.render("admin/adminProductosInactivos", { products: products, title: "AdminProducts" })
             })
     },
 
@@ -126,59 +121,110 @@ const controller = {
 
     },
 
-    newproduct: (req, res) => {
+    newproduct: async (req, res) => {
+
         const errors = validationResult(req)
-        let nombre = function () {
-            if (req.body && req.body.nombre) {
-                return req.body.nombre
-            } else {
-                return ""
+
+        let categories = await db.Category.findAll()
+
+        if (errors.errors.length > 0) {
+            if (errors.errors.length > 0) {
+                console.log(errors)
+                return res.render("admin/crearProducto", {
+                    errors: errors.mapped(),
+                    old: req.body,
+                    title: "Crear Producto",
+                    categories: categories
+                })
             }
-        }
-        let img = function () {
-            if (req.file) { return req.file.filename }
-        }
-        let newProduct = {
-            name: req.body.nombre,
-            description: req.body.description,
-            category_id: req.body.category,
-            price: req.body.price,
-            color: req.body.color,
-            status: "Enabled",
-            image: img()
-        }
 
-        let categories = db.Category.findAll()
-        let sizes = db.Size.findAll()
-        let productInDb = db.Product.findAll({ where: { name: nombre() } })
-        Promise.all([categories, sizes, productInDb])
-            .then(function ([categorias, talles, productoInDb]) {
-                if (errors.errors.length > 0) {
-                    return res.render("admin/crearProducto", {
-                        errors: errors.mapped(),
-                        old: req.body,
-                        title: "Crear Producto",
-                        categories: categorias, sizes: talles, colores: colores
-                    })
-                }
-                if (productoInDb) {
-                    return res.render("admin/crearProducto", {
-                        old: req.body,
-                        title: "Crear Producto",
-                        categories: categorias, sizes: talles, colores: colores,
-                        errors: { nombre: { msg: "no se puede crear 2 productos con el mismo nombre" } }
-                    })
+
+        } else {
+            db.Product.findOrCreate({
+                where: { name: req.body.nombre },
+                defaults: {
+                    name: req.body.nombre,
+                    description: req.body.description,
+                    category_id: req.body.category,
+                    price: req.body.price,
+                    color: req.body.color,
+                    status: "Enabled",
+                    image: req.file.filename
 
                 }
-
             })
-            
+                .then(([product, created]) => {
+                    if (created != true) {
+                        
+                        return res.render("admin/crearProducto", {
+                            old: req.body,
+                            title: "Crear Producto",
+                            categories: categories,
+                            errors: { nombre: { msg: "No se puede crear 2 productos con el mismo nombre" } }
+
+                        })
+                    } else {
+                        return res.redirect("/admin/lista/productos")
+                    }
 
 
-        db.Product.create({ newProduct })
-             .then(() => {
-               return res.redirect("/admin/lista/productos")
-        })
+
+                })
+
+        }
+
+
+        // let nombre = function () {
+        //     if (req.body && req.body.nombre) {
+        //         return req.body.nombre
+        //     } else {
+        //         return ""
+        //     }
+        // }
+        // let img = function () {
+        //     if (req.file) { return req.file.filename }
+        // }
+        // let newProduct = {
+        //     name: req.body.nombre,
+        //     description: req.body.description,
+        //     category_id: req.body.category,
+        //     price: req.body.price,
+        //     color: req.body.color,
+        //     status: "Enabled",
+        //     image: img()
+        // }
+
+        // //let categories = db.Category.findAll()
+        // let sizes = db.Size.findAll()
+        // let productInDb = db.Product.findAll({ where: { name: nombre() } })
+        // Promise.all([categories, sizes, productInDb])
+        //     .then(function ([categorias, talles, productoInDb]) {
+        //         if (errors.errors.length > 0) {
+        //             return res.render("admin/crearProducto", {
+        //                 errors: errors.mapped(),
+        //                 old: req.body,
+        //                 title: "Crear Producto",
+        //                 categories: categorias, sizes: talles, colores: colores
+        //             })
+        //         }
+        //         if (productoInDb) {
+        //             return res.render("admin/crearProducto", {
+        //                 old: req.body,
+        //                 title: "Crear Producto",
+        //                 categories: categorias, sizes: talles, colores: colores,
+        //                 errors: { nombre: { msg: "no se puede crear 2 productos con el mismo nombre" } }
+        //             })
+
+        //         }
+
+        //     })
+
+
+
+        // db.Product.create({ newProduct })
+        //      .then(() => {
+        //        return res.redirect("/admin/lista/productos")
+        // })
 
 
 
@@ -269,12 +315,14 @@ const controller = {
 
 
     },
-    deleteProduct: (req,res)=>{
-        db.Product.destroy({where : {
-            id : req.params.id
-        }})
-            .then(()=> {
-                res.redirect("/admin/lista/productosDesactivos")
+    deleteProduct: (req, res) => {
+        db.Product.destroy({
+            where: {
+                id: req.params.id
+            }
+        })
+            .then(() => {
+                res.redirect("/admin/lista/productosInactivos")
 
             })
 
@@ -363,8 +411,8 @@ const controller = {
     },
     userEdit: (req, res) => {
         db.User.findByPk(req.params.id)
-        .then(function(usuario){res.render("users/editUsuario", { title: "Editar usuario", usuario:usuario,estados:estados,roles})})
-        
+            .then(function (usuario) { res.render("users/editUsuario", { title: "Editar usuario", usuario: usuario, estados: estados, roles }) })
+
         //  let usuario = users.find(usuario => usuario.id === parseInt(req.params.id))
         // res.render("users/editUsuario", { title: "Editar usuario", usuario: usuario, rols: rols, estados: estados })
     },
@@ -390,29 +438,30 @@ const controller = {
         let img = function () {
             if (req.file) { return req.file.filename }
         }
-        db.User.update({         
-            document : 123456,
-            first_name:req.body.Nombre,
-            last_name:req.body.apellido,
-            email:req.body.email,
+        db.User.update({
+            document: 123456,
+            first_name: req.body.Nombre,
+            last_name: req.body.apellido,
+            email: req.body.email,
             // password:req.body.pass,
-            date_of_birth:req.body.fecha,
+            date_of_birth: req.body.fecha,
             image: img(),
             // rol_id:1,
             //image : req.file.filename,
-            adress : req.body.domicilio,
-            updated_at : Date.now(),
+            adress: req.body.domicilio,
+            updated_at: Date.now(),
             // Status: "Activo"
             //if (req.file && image !== req.file.filename) { image = req.file.filename }
             // console.log(user)
-        },{
-            where:{id:req.params.id}
-         })
-         
-         .then(()=> {
-            return res.redirect('/user/login')})            
-        .catch(error => res.send(error))       
-              
+        }, {
+            where: { id: req.params.id }
+        })
+
+            .then(() => {
+                return res.redirect('/user/login')
+            })
+            .catch(error => res.send(error))
+
     },
 
     userSoftDelete: (req, res) => {

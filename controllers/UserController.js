@@ -46,7 +46,7 @@ const controller = {
                     password:req.body.pass,
                     date_of_birth:req.body.fecha,
                     image: req.file.filename,
-                    rol_id:1,
+                    rol_id: 1,
                     adress: req.body.domicilio,
                     updated_at:Date.now(),
                     created_at: Date.now(),
