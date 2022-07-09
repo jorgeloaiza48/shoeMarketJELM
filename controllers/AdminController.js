@@ -15,7 +15,7 @@ let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));//JSON a J
 let categories = ['Borcegos', 'Texanas', 'Guillerminas', 'Bucaneras', 'Gift card', 'Botas']
 let sizes = ["35", "36", "37", "38", "39", "40"]
 let colores = ["Negro", "Crema", "Rojo", "Blanco", "Rosa"]
-let roles = ["admin", "cliente", "vendedor", "invitado"]
+// let roles = ["admin", "cliente", "vendedor", "invitado"]
 let estados = ["Activo", "Inactivo"]
 
 let usersFilePath = path.join(__dirname, '../data/users.json');
@@ -410,8 +410,16 @@ const controller = {
 
     },
     userEdit: (req, res) => {
-        db.User.findByPk(req.params.id)
-            .then(function (usuario) { res.render("users/editUsuario", { title: "Editar usuario", usuario: usuario, estados: estados, roles }) })
+        let usuario = db.User.findByPk(req.params.id,{
+            include: [
+                // { association: "user" },
+                { association: "roles" }
+                
+            ]
+        })
+        let roles = db.Rol.findAll()
+        Promise.all([usuario, roles])
+            .then(function ([usuario,roles]) { res.render("users/editUsuario", { title: "Editar usuario", usuario: usuario, estados: estados, roles }) })
 
         //  let usuario = users.find(usuario => usuario.id === parseInt(req.params.id))
         // res.render("users/editUsuario", { title: "Editar usuario", usuario: usuario, rols: rols, estados: estados })
@@ -435,10 +443,15 @@ const controller = {
         //     }
         // })
         // fs.writeFileSync(usersFilePath, JSON.stringify(users, null, "\t")) //JS a JSON
+        let rol = 0
+        if(req.body.rol === "admin"){rol=2}
+        else if(req.body.rol === "cliente"){rol=1}
+        else{rol=3}
+        
         let img = function () {
             if (req.file) { return req.file.filename }
         }
-        db.User.update({
+        let userUpdate = {
             document: 123456,
             first_name: req.body.Nombre,
             last_name: req.body.apellido,
@@ -446,22 +459,17 @@ const controller = {
             // password:req.body.pass,
             date_of_birth: req.body.fecha,
             image: img(),
-            // rol_id:1,
-            //image : req.file.filename,
+            rol_id:rol,
             adress: req.body.domicilio,
             updated_at: Date.now(),
-            // Status: "Activo"
-            //if (req.file && image !== req.file.filename) { image = req.file.filename }
-            // console.log(user)
-        }, {
+            Status: req.body.estado 
+        }
+        db.User.update(userUpdate,{
             where: { id: req.params.id }
+        }).then(() => {
+            return res.redirect('/user/login')
         })
-
-            .then(() => {
-                return res.redirect('/user/login')
-            })
-            .catch(error => res.send(error))
-
+                
     },
 
     userSoftDelete: (req, res) => {
