@@ -58,7 +58,7 @@
                             <div class="form__nombre"><label for="rol">Rol</label><br>
                           <select name="rol" class="form-edit_select">
                           <% locals.roles.forEach(rol => { %>
-                            <option <%= rol == usuario.roles ? "selected" : "" %> value="<%= rol %>"> <%= rol %></option>
+                            <option <%= rol.name == usuario.roles.name ? "selected" : "" %> value="<%= rol.name %>"> <%= rol.name %></option>
                          <% }) %>
                             
                           </select>

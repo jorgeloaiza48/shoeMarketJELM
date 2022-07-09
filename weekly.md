@@ -50,3 +50,6 @@ Atráves de comunicaión virtual, se definió el proceso de logueo y las rutas d
 
 Reunión 4-7-2022
 Por medio de llamada de voz discutimos el manejo de la carga de imagen cuando se hace un cambio en los datos del usuario.
+
+9-7-2022
+Vía telefónica, aclaramos mutuamente unas dudas para organizar el CRUD de usuarios y Productos.
