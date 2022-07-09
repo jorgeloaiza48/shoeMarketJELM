@@ -14,40 +14,8 @@
 
                         <% if (product.categorias.name==="Botas" && product.status === "Enabled") { %>
 
-                            <section class="section-destacados-admin">
-
-
-                                <img src="../../img/products/<%= product.image %>" alt="bota">
-
-
-                                <p><strong>Nombre:</strong>
-                                    <%= product.name %>
-                                </p>
-                                <p><strong>Precio:</strong> $<%= product.price %>
-                                </p>
-                                <p><strong>Estado:</strong>
-                                    <% if (product.status==="Enabled" ) { %>
-                                        Activo
-                                        <% } else { %>
-                                            Inactivo
-                                            <% }%>
-                                </p>
-
-
-                                <div class="product-edit">
-                                    <form action="/admin/productos/editar/<%= product.id %>" method="get">
-                                        <button type="submit" name="editar" id="editar" class="admin-but">
-                                            <p>EDITAR</p>
-                                        </button>
-                                    </form>
-                                    <form action="/admin/productos/disable/<%= product.id%>?_method=PUT" method="POST">
-                                        <button type="submit" name="delete" id="delete" class="admin-but">
-                                            <p>DESACTIVAR</p>
-                                        </button>
-                                    </form>
-                                </div>
-
-                            </section>
+                            <%- include("../components/adminProductEnable",{product:product}) %>
+                            
                             <% } %>
                                 <% }) %>
 
@@ -56,40 +24,10 @@
                 <div class="productos-admin">
 
                     <% products.forEach(product=> { %>
-
-
                         <% if (product.categorias.name==="Bucaneras" && product.status === "Enabled") { %>
 
-                            <section class="section-destacados-admin">
+                            <%- include("../components/adminProductEnable",{product:product}) %>
 
-                                <img src="../../img/products/<%= product.image %>" alt="bota">
-
-                                <p><strong>Nombre:</strong>
-                                    <%= product.name %>
-                                </p>
-                                <p><strong>Precio:</strong> $<%= product.price %>
-                                </p>
-                                <p><strong>Estado:</strong>
-                                    <% if (product.status==="Enabled" ) { %>
-                                        Activo
-                                        <% } else { %>
-                                            Desactivo
-                                            <% }%>
-                                </p>
-                                <div class="product-edit">
-                                    <form action="/admin/productos/editar/<%= product.id %>" method="get">
-                                        <button type="submt" name="editar" id="editar" class="admin-but">
-                                            <p>EDITAR</p>
-                                        </button>
-                                    </form>
-                                    <form action="/admin/productos/disable/<%= product.id%>?_method=PUT" method="POST">
-                                        <button type="submit" name="delete" id="delete" class="admin-but">
-                                            <p>DESACTIVAR</p>
-                                        </button>
-                                    </form>
-                                </div>
-
-                            </section>
                             <% } %>
                                 <% }) %>
 
@@ -102,40 +40,7 @@
 
                         <% if (product.categorias.name==="Borcegos" && product.status === "Enabled" ) { %>
 
-                            <section class="section-destacados-admin">
-
-
-                                <img src="../../img/products/<%= product.image %>" alt="bota">
-
-
-                                <p><strong>Nombre:</strong>
-                                    <%= product.name %>
-                                </p>
-                                <p><strong>Precio:</strong> $<%= product.price %>
-                                </p>
-                                <p><strong>Estado:</strong>
-                                    <% if (product.status==="Enabled" ) { %>
-                                        Activo
-                                        <% } else { %>
-                                            Desactivo
-                                            <% }%>
-                                </p>
-
-
-                                <div class="product-edit">
-                                    <form action="/admin/productos/editar/<%= product.id %>" method="get">
-                                        <button type="submt" name="editar" id="editar" class="admin-but">
-                                            <p>EDITAR</p>
-                                        </button>
-                                    </form>
-                                    <form action="/admin/productos/disable/<%= product.id%>?_method=PUT" method="POST">
-                                        <button type="submit" name="delete" id="delete" class="admin-but">
-                                            <p>DESACTIVAR</p>
-                                        </button>
-                                    </form>
-                                </div>
-
-                            </section>
+                            < <%- include("../components/adminProductEnable",{product:product}) %>
                             <% } %>
                                 <% }) %>
 
@@ -148,40 +53,7 @@
 
                         <% if (product.categorias.name==="Guillerminas" && product.status === "Enabled") { %>
 
-                            <section class="section-destacados-admin">
-
-
-                                <img src="../../img/products/<%= product.image %>" alt="bota">
-
-
-                                <p><strong>Nombre:</strong>
-                                    <%= product.name %>
-                                </p>
-                                <p><strong>Precio:</strong> $<%= product.price %>
-                                </p>
-                                <p><strong>Estado:</strong>
-                                    <% if (product.status==="Enabled" ) { %>
-                                        Activo
-                                        <% } else { %>
-                                            Desactivo
-                                            <% }%>
-                                </p>
-
-
-                                <div class="product-edit">
-                                    <form action="/admin/productos/editar/<%= product.id %>" method="get">
-                                        <button type="submt" name="editar" id="editar" class="admin-but">
-                                            <p>EDITAR</p>
-                                        </button>
-                                    </form>
-                                    <form action="/admin/productos/disable/<%= product.id%>?_method=PUT" method="POST">
-                                        <button type="submit" name="delete" id="delete" class="admin-but">
-                                            <p>DESACTIVAR</p>
-                                        </button>
-                                    </form>
-                                </div>
-
-                            </section>
+                            < <%- include("../components/adminProductEnable",{product:product}) %>
                             <% } %>
                                 <% }) %>
 
@@ -194,40 +66,7 @@
 
                         <% if (product.categorias.name==="Texanas"&& product.status === "Enabled" ) { %>
 
-                            <section class="section-destacados-admin">
-
-
-                                <img src="../../img/products/<%= product.image %>" alt="bota">
-
-
-                                <p><strong>Nombre:</strong>
-                                    <%= product.name %>
-                                </p>
-                                <p><strong>Precio:</strong> $<%= product.price %>
-                                </p>
-                                <p><strong>Estado:</strong>
-                                    <% if (product.status==="Enabled" ) { %>
-                                        Activo
-                                        <% } else { %>
-                                            Desactivo
-                                            <% }%>
-                                </p>
-
-
-                                <div class="product-edit">
-                                    <form action="/admin/productos/editar/<%= product.id %>" method="get">
-                                        <button type="submt" name="editar" id="editar" class="admin-but">
-                                            <p>EDITAR</p>
-                                        </button>
-                                    </form>
-                                    <form action="/admin/productos/disable/<%= product.id%>?_method=PUT" method="POST">
-                                        <button type="submit" name="delete" id="delete" class="admin-but">
-                                            <p>DESACTIVAR</p>
-                                        </button>
-                                    </form>
-                                </div>
-
-                            </section>
+                            <%- include("../components/adminProductEnable",{product:product}) %>
                             <% } %>
                                 <% }) %>
 
@@ -240,39 +79,7 @@
 
                         <% if (product.categorias.name==="Gift-Card" && product.status === "Enabled") { %>
 
-                            <section class="section-destacados-admin">
-
-
-                                <img src="../../img/products/<%= product.image %>" alt="bota">
-
-
-                                <p><strong>Nombre:</strong>
-                                    <%= product.name %>
-                                </p>
-                                <p><strong>Precio:</strong> $<%= product.price %>
-                                </p>
-                                <p><strong>Estado:</strong>
-                                    <% if (product.status==="Enabled" ) { %>
-                                        Activo
-                                        <% } else { %>
-                                            Desactivo
-                                            <% }%>
-                                </p>
-
-                                <div class="product-edit">
-                                    <form action="/admin/productos/editar/<%= product.id %>" method="get">
-                                        <button type="submt" name="editar" id="editar" class="admin-but">
-                                            <p>EDITAR</p>
-                                        </button>
-                                    </form>
-                                    <form action="/admin/productos/disable/<%= product.id%>?_method=PUT" method="POST">
-                                        <button type="submit" name="delete" id="delete" class="admin-but">
-                                            <p>DESACTIVAR</p>
-                                        </button>
-                                    </form>
-                                </div>
-
-                            </section>
+                            <%- include("../components/adminProductEnable",{product:product}) %>
                             <% } %>
                                 <% }) %>
 

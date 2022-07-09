@@ -108,6 +108,7 @@ text-align: center;
 }
 
 /*//////////////////////////header 2/********************/
+
 .form-header {
     display: flex;
     justify-content: center;
@@ -328,7 +329,16 @@ text-align: center;
     margin-top: 10px;
 
 }
+.initials{
+    background-color: #e8cfcf;
+    color: black;
+    border-radius: 50px;
+    font-size: 18px;
+    padding: 6px;
+    font-weight: 600;
+    text-decoration: none;
 
+}
 @media(min-width:576px) {
 
     .section-destacados-admin {
@@ -348,7 +358,11 @@ text-align: center;
 
 
 @media(min-width:768px) {
-
+    .initials{
+        font-size: 13px;
+    
+    
+    }
     .section-destacados-admin {
         border-radius: 20px;
         width: 50%;

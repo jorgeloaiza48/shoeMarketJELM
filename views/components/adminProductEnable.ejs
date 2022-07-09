@@ -1,0 +1,30 @@
+<section class="section-destacados-admin">
+
+    <img src="../../img/products/<%= product.image %>" alt="bota">
+
+    <p><strong>Nombre:</strong>
+        <%= product.name %>
+    </p>
+    <p><strong>Precio:</strong> $<%= product.price %>
+    </p>
+    <p><strong>Estado:</strong>
+        <% if (product.status==="Enabled" ) { %>
+            Activo
+            <% } else { %>
+                Desactivo
+                <% }%>
+    </p>
+    <div class="product-edit">
+        <form action="/admin/productos/editar/<%= product.id %>" method="get">
+            <button type="submt" name="editar" id="editar" class="admin-but">
+                <p>EDITAR</p>
+            </button>
+        </form>
+        <form action="/admin/productos/disable/<%= product.id%>?_method=PUT" method="POST">
+            <button type="submit" name="delete" id="delete" class="admin-but">
+                <p>DESACTIVAR</p>
+            </button>
+        </form>
+    </div>
+
+</section>

@@ -13,7 +13,7 @@
                     <% productos.forEach(product=> { %>
                         <% if (product.categorias.name === "Botas" && product.status === "Enabled" ) { %>
                             <div class="produc">
-                                <%- include("../components/singleProduct",{product:product}) %>
+                                <%- include("../components/listProduct",{product:product}) %>
                             </div>
                             <% } %>
                                 <% }) %>
@@ -27,7 +27,7 @@
                     <% productos.forEach(product=> { %>
                         <% if (product.categorias.name=== "Bucaneras" && product.status === "Enabled" ) { %>
                             <div class="produc">
-                                <%- include("../components/singleProduct",{product:product}) %>
+                                <%- include("../components/listProduct",{product:product}) %>
                             </div>
                             <% } %>
                                 <% }) %>
@@ -38,7 +38,7 @@
                     <% productos.forEach(product=> { %>
                         <% if (product.categorias.name==="Texanas" && product.status === "Enabled") { %>
                             <div class="produc">
-                                <%- include("../components/singleProduct",{product:product}) %>
+                                <%- include("../components/listProduct",{product:product}) %>
                             </div>
                             <% } %>
                                 <% }) %>
@@ -50,7 +50,7 @@
                     <% productos.forEach(product=> { %>
                         <% if (product.categorias.name==="Guillerminas" && product.status === "Enabled") { %>
                             <div class="produc">
-                                <%- include("../components/singleProduct",{product:product}) %>
+                                <%- include("../components/listProduct",{product:product}) %>
                             </div>
                             <% } %>
                                 <% }) %>
@@ -62,7 +62,7 @@
                     <% productos.forEach(product=> { %>
                         <% if (product.categorias.name==="Borcegos" && product.status === "Enabled") { %>
                             <div class="produc">
-                                <%- include("../components/singleProduct",{product:product}) %>
+                                <%- include("../components/listProduct",{product:product}) %>
                             </div>
                             <% } %>
                                 <% }) %>
@@ -72,7 +72,7 @@
                     <% productos.forEach(product=> { %>
                         <% if (product.categorias.name==="Gift-Card" && product.status === "Enabled") { %>
                             <div class="produc">
-                                <%- include("../components/singleProduct",{product:product}) %>
+                                <%- include("../components/listProduct",{product:product}) %>
                             </div>
                             <% } %>
                                 <% }) %>
