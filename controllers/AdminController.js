@@ -443,11 +443,7 @@ const controller = {
         //     }
         // })
         // fs.writeFileSync(usersFilePath, JSON.stringify(users, null, "\t")) //JS a JSON
-        let rol = 0
-        if(req.body.rol === "admin"){rol=2}
-        else if(req.body.rol === "cliente"){rol=1}
-        else{rol=3}
-        
+                
         let img = function () {
             if (req.file) { return req.file.filename }
         }
@@ -459,7 +455,7 @@ const controller = {
             // password:req.body.pass,
             date_of_birth: req.body.fecha,
             image: img(),
-            rol_id:rol,
+            rol_id:req.body.rol,
             adress: req.body.domicilio,
             updated_at: Date.now(),
             Status: req.body.estado 
