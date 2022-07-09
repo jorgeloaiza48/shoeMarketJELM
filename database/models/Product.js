@@ -75,19 +75,19 @@ module.exports = (sequelize, dataTypes) => {
         // });
 
 
-        Product.hasMany(models.Product_size,
-            {
-                as: "productosTalles",
-                foreignKey: "product_id"
-            })
+        // Product.hasMany(models.Product_size,
+        //     {
+        //         as: "productosTalles",
+        //         foreignKey: "product_id"
+        //     })
 
-            Product.belongsToMany(models.Size, {
-                as: "talles",
-                through: models.Product_size,
-                foreignKey: "product_id",
-                otherKey: "size_id",
-                timestamps: true
-            });
+            // Product.belongsToMany(models.Size, {
+            //     as: "talles",
+            //     through: models.Product_size,
+            //     foreignKey: "product_id",
+            //     otherKey: "size_id",
+            //     timestamps: true
+            // });
 
         Product.belongsToMany(models.Order, {
             as: "ordenes",
