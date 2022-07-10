@@ -219,6 +219,7 @@ const controller = {
         //     }
         // })
         // fs.writeFileSync(usersFilePath, JSON.stringify(users, null, "\t")) //JS a JSON
+                
         let img = function () {
             if (req.file) { return req.file.filename }
         }
@@ -230,8 +231,7 @@ const controller = {
             // password:req.body.pass,
             date_of_birth: req.body.fecha,
             image: img(),
-            // rol_id:1,
-            //image : req.file.filename,
+            rol_id:req.body.rol,
             adress: req.body.domicilio,
             updated_at: Date.now(),
             // Status: "Activo"
