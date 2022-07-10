@@ -2,7 +2,7 @@ const req = require("express/lib/request")
 const res = require("express/lib/response")
 const path = require("path")
 const fs = require("fs")
-const userCrud = require("../models/UserCrud")
+//const userCrud = require("../models/UserCrud")
 const bcryptjs = require("bcryptjs")
 const { validationResult } = require('express-validator')
 const {body} = require('express-validator')
@@ -12,8 +12,8 @@ const db = require("../database/models")
 const { DATE } = require("sequelize")
 
 
-let productsFilePath = path.join(__dirname, '../data/SHOEMARKET.json');
-let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));//JSON a JS
+//let productsFilePath = path.join(__dirname, '../data/SHOEMARKET.json');
+//let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));//JSON a JS
 
 const controller = {
     register: (req, res) => { 
@@ -48,9 +48,9 @@ const controller = {
                     image: req.file.filename,
                     rol_id: 1,
                     adress: req.body.domicilio,
-                    updated_at:Date.now(),
+                   updated_at:Date.now(),
                     created_at: Date.now(),
-                    Status: "Activo"
+                    status: "Activo"
                 }
                 
             })
@@ -108,14 +108,19 @@ const controller = {
        db.User.findOne({
             where:{email:req.body.email}
         }).then((userToLogin) => {
-                      
+                     
         //************************************************************************ */
        
 		if (userToLogin != null) {
 			let isOkpassword = bcryptjs.compareSync(req.body.password, userToLogin.password)
+            
+            
            if (isOkpassword) {
+            
 
 				req.session.userLogged = userToLogin
+                
+                
             
                 
                 req.session.isAdmin = userToLogin.rol_id == 2
@@ -123,6 +128,7 @@ const controller = {
 				if(req.body.record){
 					res.cookie("userEmail", req.body.email, {maxAge : (1000 * 60)*2})
 				}
+                
 				return res.redirect("/user/profile")
 			} 
             else{//**

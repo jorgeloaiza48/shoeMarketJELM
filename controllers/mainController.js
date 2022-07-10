@@ -13,9 +13,8 @@ const controller = {
       db.Product.findAll({ 
         include: [
             { association: "categorias" },
-            { association: "productosTalles" },
             { association: "ordenes" },
-            { association: "talles" }
+           
         ],
         limit : 6,
         order : sequelize.random()
@@ -29,6 +28,18 @@ const controller = {
     carrito: (req, res) => { res.render('products/carrito', { title: "Carrito de compras" }) },
 
     search: (req, res) => {
+        db.Product.findAll({ 
+            include: [
+                { association: "categorias" },
+                { association: "ordenes" },
+            ],
+            
+    
+         })
+
+
+
+
         let productsFilePath = path.join(__dirname, '../data/SHOEMARKET.json');
         let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 

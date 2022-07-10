@@ -15,9 +15,8 @@ const controller = {
          db.Product.findAll({
             include: [
                 { association: "categorias" },
-                { association: "productosTalles" },
                 { association: "ordenes" },
-                { association: "talles" }
+                
             ], where : {
                 status : "Enabled"
             }

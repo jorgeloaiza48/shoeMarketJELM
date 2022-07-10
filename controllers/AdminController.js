@@ -41,9 +41,7 @@ const controller = {
         db.Product.findAll({
             include: [
                 { association: "categorias" },
-                { association: "productosTalles" },
                 { association: "ordenes" },
-                { association: "talles" }
             ]
         })
             .then(products => {
@@ -55,9 +53,7 @@ const controller = {
         db.Product.findAll({
             include: [
                 { association: "categorias" },
-                { association: "productosTalles" },
                 { association: "ordenes" },
-                { association: "talles" }
             ]
         })
             .then(products => {
@@ -69,6 +65,7 @@ const controller = {
         db.Category.findAll({
             include: [
                 { association: "productos" },
+                
             ]
         })
             .then(categorias => {
@@ -157,10 +154,10 @@ const controller = {
         let categoriesInDb = db.Category.findAll()
         let productInDb = db.Product.findByPk(req.params.id, {
             include: [
-                { association: "categorias" },
-                { association: "productosTalles" },
+                 { association: "categorias" },
+         
+                
                 { association: "ordenes" },
-                { association: "talles" }
             ]
         })
         Promise.all([categoriesInDb, productInDb])
@@ -269,11 +266,7 @@ const controller = {
         db.Product.findAll({
             include: [
                 { association: "categorias" },
-                { association: "lineas" },
-                { association: "productosTalles" },
                 { association: "ordenes" },
-
-                { association: "talles" }
             ],
             where: { name: "Lara Negro" }
 
