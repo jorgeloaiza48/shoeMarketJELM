@@ -27,7 +27,8 @@ module.exports = (sequelize, dataTypes) => {
         }
     let config = {
         timestamps: true,
-        underscored: true      
+        underscored: true,
+        tablename : "payment_types"      
     }
 
     const Payment_type = sequelize.define(alias, cols, config)

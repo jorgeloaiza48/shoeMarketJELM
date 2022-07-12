@@ -7,10 +7,6 @@ module.exports = (sequelize, dataTypes) => {
                 autoIncrement: true,
                 primaryKey: true
             },
-            create_time: {
-                type: dataTypes.DATE,
-                allowNull: false
-                },
             payment_type_id:{
                 type: dataTypes.INTEGER,
                 allowNull: false            
@@ -43,7 +39,8 @@ module.exports = (sequelize, dataTypes) => {
         }
     let config = {
         timestamps: true,
-        underscored: true 
+        underscored: true,
+        tablename : "orders"
     }
 
     const Order = sequelize.define(alias, cols, config)
