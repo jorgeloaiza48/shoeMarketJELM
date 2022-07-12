@@ -5,6 +5,7 @@ const fs = require("fs")
 const { validationResult } = require('express-validator')
 const { title } = require("process")
 const db = require("../database/models/index")
+const { REPL_MODE_STRICT } = require("repl")
 
 
 
@@ -155,8 +156,6 @@ const controller = {
         let productInDb = db.Product.findByPk(req.params.id, {
             include: [
                  { association: "categorias" },
-         
-                
                 { association: "ordenes" },
             ]
         })
@@ -196,13 +195,17 @@ const controller = {
 
     },
     userEdit: (req, res) => {
-        let roles = db.Rol.findAll()
+        let rol = db.Rol.findAll()
         let user = db.User.findByPk(req.params.id,{
             include: [ { association: "roles" } ]
         })
-        Promise.all([roles,user])
-            .then(function (roles,usuario) { res.render("users/editUsuario", { title: "Editar usuario", usuario: usuario, estados: estados, roles }) })
+        Promise.all([rol,user])
+            .then(function ([roles,usuario]) { res.render("users/editUsuario", { title: "Editar usuario", usuario: usuario, estados: estados, roles: roles }) })
 
+
+
+
+            
     },
 
     userUpdate: (req, res) => {
