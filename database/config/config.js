@@ -6,13 +6,13 @@ module.exports = {
     "host"    : "cxmgkzhk95kfgbq4.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",               //remotemysql.com
     "dialect": "mysql"
   },
-  "test": {
-    "username": "root",
-    "password": "Joelcasa2022",
-    "database": "shoemarket",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
-  },
+  // "test": {
+  //   "username": "root",
+  //   "password": "Joelcasa2022",
+  //   "database": "shoemarket",
+  //   "host": "127.0.0.1",
+  //   "dialect": "mysql"
+  // },
   "production": {
     "username": "grupo4fourcoding",
     "password": "grupo4fourcoding",

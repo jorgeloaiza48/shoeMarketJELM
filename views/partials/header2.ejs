@@ -26,7 +26,8 @@
                     <a href="/admin"><i class="fa-solid fa-lock"></i></a>
                     <% } %>
                     <% if (locals.isLogged) { %>
-                        <a href="/user/profile"><img class="img-header" src="/img/user/<%=locals.userLogged.image%>" alt=""></a>
+                        <a class="initials" href="/user/profile"><span ><%= locals.userLogged.first_name[0].toUpperCase() + locals.userLogged.last_name[0].toUpperCase() %> </span></a>
+                        
                 
                     <% } else { %>
                         <a href="/user/registro"><i class="fa-solid fa-user-plus"></i></a>
@@ -44,11 +45,11 @@
                     <ul class="cuentaCarrito2">
                         <li class="lista__categorias">Categorias <i class="fa-solid fa-circle-arrow-down"></i>
                             <ul class="lista__productos">
-                                <li class="lista__productos_li"><a href="/productos/7">Bucaneras </a></li>
-                                <li class="lista__productos_li"><a href="/productos/3">Borcegos </a></li>
-                                <li class="lista__productos_li"><a href="/productos/1">Botas </a></li>
+                                <li class="lista__productos_li"><a href="/productos/2">Bucaneras </a></li>
+                                <li class="lista__productos_li"><a href="/productos/1">Borcegos </a></li>
+                                <li class="lista__productos_li"><a href="/productos/4">Botas </a></li>
                                 <li class="lista__productos_li"><a href="/productos/6">Texanas </a></li>
-                                <li class="lista__productos_li"><a href="/productos/4">Guillerminas </a></li>
+                                <li class="lista__productos_li"><a href="/productos/3">Guillerminas </a></li>
                                 <li class="lista__productos_li"><a href="/productos/5">Gift-Card </a></li>
                             </ul>
                         </li>
@@ -70,7 +71,7 @@
                             </li>
                             <% } %>
                                 <% if (locals.isLogged) { %>
-                                    <li class="lista__profile">Hola <%= locals.userLogged.first_name %> ▼
+                                    <li class="lista__profile">Hola <span class="initials"><%= locals.userLogged.first_name[0].toUpperCase() + locals.userLogged.last_name[0].toUpperCase() %> </span>▼
                                             <ul class="lista__profile-down">
                                                 <li class="lista__profile-li" v><a href="/user/profile">Mi Perfil <img
                                                             src="/img/user/<%=locals.userLogged.image%>" alt=""></a>
