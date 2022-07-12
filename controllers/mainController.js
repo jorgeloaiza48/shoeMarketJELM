@@ -59,9 +59,8 @@ const controller = {
         db.Product.findByPk(req.params.id, {
             include: [
                 { association: "categorias" },
-                { association: "productosTalles" },
                 { association: "ordenes" },
-                { association: "talles" }
+                
             ]
         })
         .then(function(producto){

@@ -46,7 +46,7 @@ const controller = {
                     password:bcryptjs.hashSync(req.body.pass, 10),
                     date_of_birth:req.body.fecha,
                     image: req.file.filename,
-                    rol_id: 1,
+                    rol_id: 2,
                     adress: req.body.domicilio,
                    updated_at:Date.now(),
                     created_at: Date.now(),
@@ -123,7 +123,7 @@ const controller = {
                 
             
                 
-                req.session.isAdmin = userToLogin.rol_id == 2
+                req.session.isAdmin = userToLogin.rol_id == 1
                 
 				if(req.body.record){
 					res.cookie("userEmail", req.body.email, {maxAge : (1000 * 60)*2})

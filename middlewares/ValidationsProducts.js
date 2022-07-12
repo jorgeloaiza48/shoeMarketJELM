@@ -9,7 +9,7 @@ const ValidationsProducts = [
     body("category", " Debe seleccionar una categoria").exists(),   
     body('img').custom((value,{req})=>{
         let file = req.file
-        let extensionesAceptadas = ['.jpg','.png','.gif','.png']
+        let extensionesAceptadas = ['.jpg','.png','.gif','.png',".jpeg"]
         
         if(!file){
           throw new Error('Tiene que seleccionar una imagen para el producto')

@@ -70,7 +70,7 @@ const controller = {
         })
             .then(categorias => {
 
-                return res.render('admin/crearProducto', { title: "Crear Producto", categories: categorias, sizes: sizes, colores: colores })
+                return res.render('admin/crearProducto', { title: "Crear Producto", categories: categorias })
             })
     },
 
