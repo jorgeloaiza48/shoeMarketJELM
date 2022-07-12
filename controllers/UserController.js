@@ -10,6 +10,7 @@ const { error } = require("console")
 const Swal = require("sweetalert2")
 const db = require("../database/models")
 const { DATE } = require("sequelize")
+const Op = require('Sequelize').Op
 
 
 //let productsFilePath = path.join(__dirname, '../data/SHOEMARKET.json');
@@ -37,9 +38,9 @@ const controller = {
             // console.log("Valor de userToProcess----->>>" + userToProcess)
             //****************************************************************/
             db.User.findOrCreate({
-                where: {email:req.body.email},
+                where: { [Op.or]: [{email:req.body.email},{document:req.body.documento}]},
                 defaults:{
-                    document:123456,
+                    document:req.body.documento,
                     first_name:req.body.nombre,
                     last_name:req.body.apellido,
                     email:req.body.email,
@@ -48,23 +49,36 @@ const controller = {
                     image: req.file.filename,
                     rol_id: 2,
                     adress: req.body.domicilio,
-                   updated_at:Date.now(),
+                    updated_at:Date.now(),
                     created_at: Date.now(),
                     status: "Activo"
                 }
                 
             })
                 .then(([user,created]) => {
-                                                                                           
-            if (created != true) {
+                                                                                       
+            if(created != true && user.document == req.body.documento){
                 return res.render("users/registro", { errors: {
-					email: {
-						msg: "El Correo electronico ya se encuentra registrado"
-					}
+                   
+                    documento: {msg: "Ya hay un usuario registrado con este número de identificación."}
+                   
 				},
                     oldData:req.body, 
-                    title: "Registro de usuario" })//mapped convierte un array en un objeto literal
-        } else{       //else1         
+                    title: "Registro de usuario" 
+                })
+            }
+
+            else if(created != true && user.email == req.body.email){
+                return res.render("users/registro", { errors: {
+                   email: { msg: "El Correo electronico ya se encuentra registrado." },
+                   
+                 },
+                     oldData:req.body, 
+                     title: "Registro de usuario" 
+                 })
+            }
+
+                else{       //else1         
         //     let ultimoElemento = users.length - 1
         //     let idNuevo = users[ultimoElemento].id + 1
         //     let userForm = {

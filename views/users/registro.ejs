@@ -7,6 +7,16 @@
                     <form  action="/user/registro" method="POST" class="form-Reg" enctype="multipart/form-data">
                            
                         <div class="form__nombre">
+                            <label for="documento">Documento de identidad *</label>
+                            <input type="text" name="documento" id="documento" placeholder=" Introduzca su número de identificación" class="xdsf is-invalid"
+                            value ="<%= locals.oldData ? oldData.documento : null%>"
+                            >
+                            <% if (locals.errors && errors.documento) {%>
+                                <div class="text-aviso"><%= errors.documento.msg %></div>
+                            <%}%>
+                        </div>
+
+                        <div class="form__nombre">
                             <label for="nombre">Nombre *</label>
                             <input type="text" name="nombre" id="nombre" placeholder=" Introduzca su Nombre" class="xdsf is-invalid"
                             value ="<%= locals.oldData ? oldData.nombre : null%>"
@@ -97,6 +107,7 @@
                 <%- include("../partials/footer") %>
                
                 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-                <script src="/controllers/UserController.js"></script>
+                <script src="/userDeleteConfirm.js"></script>
+               
 </body>
 </html>
