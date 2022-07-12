@@ -28,7 +28,7 @@ const controller = {
         }
         )
             .then(users => {
-                console.log(users)
+               
                 return res.render('admin/listaUsuarios.ejs', { users, title: "Listado de usuarios" })
             })
         // let usersJSON = fs.readFileSync(productsFilePath, 'utf-8')
@@ -163,7 +163,7 @@ const controller = {
         Promise.all([categoriesInDb, productInDb])
             .then(function ([categorias, producto]) {
 
-                return res.render('admin/editarProducto', { title: "Crear Producto", producto: producto, categories: categorias, sizes: sizes, colores: colores })
+                return res.render('admin/editarProducto', { title: "Crear Producto", producto: producto, categories: categorias })
 
             })
         

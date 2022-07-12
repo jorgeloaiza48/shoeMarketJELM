@@ -6,101 +6,29 @@
             <!-- *****************************INICIO MAIN****************************************** -->
 
             <main class="main-admin">
-                <% products.find(product=> { %>
-                    <%  product.categorias.name === "Botas" && product.status === "Disabled" %>
-                    
-                <h3 class="all-product-title"><%= product.categorias.name %> </h3>
-               
-                <% }) %>
+
+
+
+
                 <div class="productos-admin">
 
                     <% products.forEach(product=> { %>
 
-                        <% if (product.categorias.name==="Botas" && product.status === "Disabled") { %>
+                        <% if (product.status ==="Disabled" ) { %>
 
-                            <%- include("../components/adminProductDisable",{product:product}) %>
+                            <% if (product > 0) { %>
 
-                            <% } %>
-                                <% }) %>
+                                <h3>no hay prd</h3>
 
-                </div>
-                <h3 class="all-product-title">Bucaneras</h3>
-                <div class="productos-admin">
+                                <% } else {%>
 
-                    <% products.forEach(product=> { %>
-
-
-                        <% if (product.categorias.name==="Bucaneras" && product.status === "Disabled") { %>
-
-                            <%- include("../components/adminProductDisable",{product:product}) %>
-                            <% } %>
-                                <% }) %>
+                                    <%- include("../components/adminProductDisable",{product:product}) %>
+                                        <% } %>
+                         <% } %>
+                    <% }) %>
 
                 </div>
-                <h3 class="all-product-title">Borcegos</h3>
-                <div class="productos-admin">
-
-                    <% products.forEach(product=> { %>
-
-
-                        <% if (product.categorias.name==="Borcegos" && product.status === "Disabled" ) { %>
-                            <%- include("../components/adminProductDisable",{product:product}) %>
-                            <% } %>
-                                <% }) %>
-
-                </div>
-                <h3 class="all-product-title">Guillerminas</h3>
-                <div class="productos-admin">
-
-                    <% products.forEach(product=> { %>
-
-
-                        <% if (product.categorias.name==="Guillerminas" && product.status === "Disabled") { %>
-
-                            <%- include("../components/adminProductDisable",{product:product}) %>
-                            <% } %>
-                                <% }) %>
-
-                </div>
-                <h3 class="all-product-title">Texanas</h3>
-                <div class="productos-admin">
-
-                    <% products.forEach(product=> { %>
-
-
-                        <% if (product.categorias.name==="Texanas"&& product.status === "Disabled" ) { %>
-
-                            
-                            <% } %>
-                                <% }) %>
-
-                </div>
-                <h3 class="all-product-title">Gift-Card</h3>
-                <div class="productos-admin">
-
-                    <% products.forEach(product=> { %>
-
-
-                        <% if (product.categorias.name==="Gift-Card" && product.status === "Disabled") { %>
-
-                            <%- include("../components/adminProductDisable",{product:product}) %>
-                            <% } %>
-                                <% }) %>
-
-                </div>
-                <div class="news-letter">
-                    <h2>Suscribite a nuestro newsletter</h2>
-                    <form>
-                        <input type="email" placeholder="Ingresa tu e-mail">
-                        <button><i class="fa-solid fa-arrow-right"></i></button>
-                    </form>
-
-                </div>
-
-                <div class="help-button">
-                    <button><i class="fa-solid fa-circle-question"></i> Ayuda</button>
-                </div>
-
+                
             </main>
 
             <!-- ********************************FIN MAIN***************************************** -->

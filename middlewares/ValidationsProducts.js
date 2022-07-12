@@ -4,8 +4,7 @@ const path = require("path")
 const ValidationsProducts = [
     body('nombre', "Debe introducir un nombre").notEmpty(),
     body("description").notEmpty().withMessage("Debe introducir una descripcion").bail().isLength({min : 10}).withMessage("Debe introducir minimo 10 caracteres"),
-    body("price","Debe introducir un precio").notEmpty(),
-    body("color").notEmpty().withMessage("Debe introducir el color que haya puesto en el titulo"),  
+    body("price","Debe introducir un precio").notEmpty(),  
     body("category", " Debe seleccionar una categoria").exists(),   
     body('img').custom((value,{req})=>{
         let file = req.file
