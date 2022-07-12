@@ -196,8 +196,12 @@ const controller = {
 
     },
     userEdit: (req, res) => {
-        db.User.findByPk(req.params.id)
-            .then(function (usuario) { res.render("users/editUsuario", { title: "Editar usuario", usuario: usuario, estados: estados, roles }) })
+        let roles = db.Rol.findAll()
+        let user = db.User.findByPk(req.params.id,{
+            include: [ { association: "roles" } ]
+        })
+        Promise.all([roles,user])
+            .then(function (roles,usuario) { res.render("users/editUsuario", { title: "Editar usuario", usuario: usuario, estados: estados, roles }) })
 
     },
 
