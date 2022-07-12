@@ -1,45 +1,33 @@
-//const User = require ("../models/UserCrud") // traigo para poder buscar el usuario para usarlo para autologuearse
-const db = require("../database/models/index")
+const db = require('../database/models/index.js');
 
-function userLoggedMiddleware (req, res, next) {
-    
-    res.locals.isLogged = false
-    let emailInCookie = function(){
-        if(req.cookies.userEmail){
-            return req.cookies.userEmail
-        } else {
-            return ""
-        }
+const userLoggedMiddleware = (req, res, next) => {
+    res.locals.isLogged = false;
 
+    let cookieEmail = req.cookies.userEmail;
 
+    let userLogged = req.session.userLogged;
+
+    if(cookieEmail){
+        db.User.findOne({
+            where :{
+                email : cookieEmail
+            }
+        })
+        .then(userProfile=>{
+            return userLogged = userProfile;
+        })
+        .catch(err =>{
+            console.log('OCURRIÓ UN ERROR EN USER LOGGED: '+err )
+        })
     };
-    db.User.findOne({
-        where:{email: emailInCookie() }
-    }).then((user)=>{
 
-        
+    if(userLogged){
+        res.locals.isLogged = true;
+        res.locals.userLogged = userLogged;
+    };
     
-    //let userFromCookie = User.findByField("email",emailInCookie)
-    
-     if(user){ //// si tengo un usuario en la cookie entonces lo paso a req.session
-         req.session.userLogged = user
-         
-     }
-    if (req.session.userLogged) {
-         res.locals.isLogged = true
-         
-         res.locals.userLogged = req.session.userLogged
-         console.log("usuario en sesion",req.session.userLogged);
-         
-         // para poder usar la session dentro de una vista lo tenemos q pasar como parametro del render
-         // como aca no estamos pasando nada la pasamos a una variable local que se puede utilizar de manera global
-         
-     }
-     
-     
-    })
-    
-     next()
+    next();
 
-}
-module.exports = userLoggedMiddleware
+};
+
+module.exports = userLoggedMiddleware;
