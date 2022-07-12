@@ -1,16 +1,9 @@
 module.exports = {
   "development": {
-    "username": "c28sqwv991td8shu",
-    "password": "q0accczyukdbzzrl",
-    "database": "rnj9ky0w22h0cycz",
-    "host": "cxmgkzhk95kfgbq4.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
-    "dialect": "mariadb"
-  },
-  "test": {
-    "username": "rdPFvYiYwX",
-    "password": "AvapkRmZXc",
-    "database": "rdPFvYiYwX",
-    "host": "remotemysql.com",
+    "username": "c28sqwv991td8shu",   //rdPFvYiYwX
+    "password": "q0accczyukdbzzrl", //AvapkRmZXc
+    "database": "rnj9ky0w22h0cycz",           //rdPFvYiYwX
+    "host"    : "cxmgkzhk95kfgbq4.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",               //remotemysql.com
     "dialect": "mysql"
   },
   // "test": {
