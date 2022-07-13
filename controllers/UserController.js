@@ -10,7 +10,7 @@ const { error } = require("console")
 const Swal = require("sweetalert2")
 const db = require("../database/models")
 const { DATE } = require("sequelize")
-const Op = require('Sequelize').Op
+const Op = require('sequelize').Op
 
 
 //let productsFilePath = path.join(__dirname, '../data/SHOEMARKET.json');
