@@ -12,8 +12,7 @@ const db = require("../database/models/index")
 
 let roles = ["admin", "cliente", "vendedor", "invitado"]
 let estados = ["Activo", "Inactivo"]
-let usersFilePath = path.join(__dirname, '../data/users.json');
-let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));//JSON a JS
+
 
 
 const controller = {
