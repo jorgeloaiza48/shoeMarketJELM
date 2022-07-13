@@ -33,13 +33,51 @@ const controller = {
                 title: "Registro de usuario" 
             
             })//mapped convierte un array en un objeto literal
-        } else { //else2
-            // let userToProcess = userCrud.findByField(req.body.email) 
-            // console.log("Valor de userToProcess----->>>" + userToProcess)
-            //****************************************************************/
-            db.User.findOrCreate({
-                where: { [Op.or]: [{email:req.body.email},{document:req.body.documento}]},
-                defaults:{
+        } 
+        
+        
+        else { //else2
+            ///********************************* */
+            let dni = db.User.findOne({
+                where:{document:req.body.documento}
+            })
+            let correo = db.User.findOne({
+                where:{email:req.body.email}
+            })
+            Promise.all([dni,correo])
+                .then(function ([documento,email]) {
+            if(documento != null && email != null){
+                return res.render("users/registro", { errors: {
+                   
+                    documento: {msg: "Ya hay un usuario registrado con este número de identificación."},
+                    email: { msg: "El Correo electronico ya se encuentra registrado." }
+                   
+				},
+                    oldData:req.body, 
+                    title: "Registro de usuario" 
+                })
+            }
+            else if(documento != null && email == null){
+                return res.render("users/registro", { errors: {
+                   
+                    documento: {msg: "Ya hay un usuario registrado con este número de identificación."}
+                   
+				},
+                    oldData:req.body, 
+                    title: "Registro de usuario" 
+                })
+            }
+            else if(documento == null && email != null){
+                return res.render("users/registro", { errors: {
+                    email: { msg: "El Correo electronico ya se encuentra registrado." },
+                    
+                  },
+                      oldData:req.body, 
+                      title: "Registro de usuario" 
+                  })
+            }
+            else{
+                db.User.create({
                     document:req.body.documento,
                     first_name:req.body.nombre,
                     last_name:req.body.apellido,
@@ -52,64 +90,15 @@ const controller = {
                     updated_at:Date.now(),
                     created_at: Date.now(),
                     status: "Activo"
-                }
-                
-            })
-                .then(([user,created]) => {
-                                                                                       
-            if(created != true && user.document == req.body.documento){
-                return res.render("users/registro", { errors: {
-                   
-                    documento: {msg: "Ya hay un usuario registrado con este número de identificación."}
-                   
-				},
-                    oldData:req.body, 
-                    title: "Registro de usuario" 
                 })
+                res.redirect("login")
             }
-
-            else if(created != true && user.email == req.body.email){
-                return res.render("users/registro", { errors: {
-                   email: { msg: "El Correo electronico ya se encuentra registrado." },
-                   
-                 },
-                     oldData:req.body, 
-                     title: "Registro de usuario" 
-                 })
-            }
-
-                else{       //else1         
-        //     let ultimoElemento = users.length - 1
-        //     let idNuevo = users[ultimoElemento].id + 1
-        //     let userForm = {
-        //         id: idNuevo,
-        //         nombre: req.body.nombre,
-        //         apellido: req.body.apellido,
-        //         email: req.body.email,
-        //         fechaNacimiento: req.body.fecha,
-        //         domicilio: req.body.domicilio,
-        //         contraseña: bcryptjs.hashSync(req.body.pass, 10),
-        //         image: req.file.filename,
-        //         role : "Cliente",   
-        //         estado: "Activo"                            
-        //     }
-        //     let NewUser = []
-        //     let UsersJSON = fs.readFileSync(usersFilePath, 'utf-8')
-        //     if (UsersJSON == "") {
-        //         NewUser.push(userForm)
-        //     }
-        //     else {
-        //         NewUser = JSON.parse(UsersJSON) //de JSON a JS
-        //         NewUser.push(userForm)
-        //     }
-        //     fs.writeFileSync(usersFilePath, JSON.stringify(NewUser, null, "\t")) //de JS a JSON
-        //     res.redirect("/user/login") 
-                
-        res.redirect("login")
-                        
-         }//else1
-        })
-      } //else2
+        })//.then
+        }//else2
+            // let userToProcess = userCrud.findByField(req.body.email) 
+            // console.log("Valor de userToProcess----->>>" + userToProcess)
+            //****************************************************************/
+            // 
     },
 
     login: (req, res) => { res.render('users/login', { title: "Login" }) },
@@ -132,11 +121,7 @@ const controller = {
            if (isOkpassword) {
             
 
-				req.session.userLogged = userToLogin
-                
-                
-            
-                
+				req.session.userLogged = userToLogin                                                          
                 req.session.isAdmin = userToLogin.rol_id == 1
                 
 				if(req.body.record){
