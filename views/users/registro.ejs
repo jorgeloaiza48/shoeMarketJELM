@@ -8,9 +8,9 @@
                            
                         <div class="form__nombre">
                             <label for="documento">Documento de identidad *</label>
-                            <input type="text" name="documento" id="documento" placeholder=" Introduzca su número de identificación" class="xdsf is-invalid"
-                            value ="<%= locals.oldData ? oldData.documento : null%>"
-                            >
+                            <input type="text" name="documento" id="documento" placeholder="Mínimo 5 números, Máximo 10" class="xdsf is-invalid"
+                            value ="<%= locals.oldData ? oldData.documento : null%>" title="hola"
+                            >                            
                             <% if (locals.errors && errors.documento) {%>
                                 <div class="text-aviso"><%= errors.documento.msg %></div>
                             <%}%>
@@ -37,7 +37,7 @@
 
                        
                         <div class="form__usuario">
-                            <label for="email">Correo electronico *</label>
+                            <label for="email">Correo electrónico *</label>
                             <input type="email" name="email" id="email" placeholder="Introduzca su Correo electronico"  value ="<%= locals.oldData ? oldData.email : null%>" >
                             <% if (locals.errors && errors.email) {%>
                                 <div class="text-aviso"><%= errors.email.msg %></div>
@@ -52,7 +52,7 @@
             
                         </div>
                         <div class="form__domicilio">
-                            <label for="domicilio">Domicilio de envio *</label><br>
+                            <label for="domicilio">Domicilio de envío *</label><br>
                             <input type="text" name="domicilio" id="domicilio" placeholder=" Introduzca su Domicilio" value ="<%= locals.oldData ? oldData.domicilio : null%>">
                             <% if (locals.errors && errors.domicilio) {%>
                                 <div class="text-aviso"><%= errors.domicilio.msg %></div>
