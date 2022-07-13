@@ -4,6 +4,6 @@ module.exports = {
     "password": "q0accczyukdbzzrl", //AvapkRmZXc
     "database": "rnj9ky0w22h0cycz",           //rdPFvYiYwX
     "host"    : "cxmgkzhk95kfgbq4.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",               //remotemysql.com
-    "dialect": "mysql"
+    "dialect": "mariadb"
   }
 }
