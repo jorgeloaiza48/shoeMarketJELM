@@ -5,67 +5,69 @@ const fs = require("fs")
 const { validationResult } = require('express-validator')
 const db = require("../database/models")
 const sequelize = db.sequelize;
+const { Op } = require("sequelize");
+const { categoria } = require("./ProductsController")
 
 
 
 const controller = {
     index: (req, res) => {
-      db.Product.findAll({ 
-        include: [
-            { association: "categorias" },
-            { association: "ordenes" },
-           
-        ],
-        limit : 6,
-        order : sequelize.random()
+        db.Product.findAll({
+            include: [
+                { association: "categorias" },
+                { association: "ordenes" },
 
-     }).then(function(productos){
-        return res.render("home", { productos, title: "Shoe Market" })
-     })
+            ],
+            limit: 6,
+            order: sequelize.random()
+
+        }).then(function (productos) {
+            return res.render("home", { productos, title: "Shoe Market" })
+        })
 
     },
     descripcion: (req, res) => { res.render('products/descripcion', { title: "Descripcion" }) },
     carrito: (req, res) => { res.render('products/carrito', { title: "Carrito de compras" }) },
 
     search: (req, res) => {
-        db.Product.findAll({ 
+        let search = req.query.search.toLowerCase()
+        db.Product.findAll({
             include: [
                 { association: "categorias" },
                 { association: "ordenes" },
             ],
-            
-    
-         })
+            where: {
+                [Op.or]: [
+                    {
+                        name: { [Op.like]: `%${search}%` }
+                    },
+                    {
+                        '$categorias.name$': { [Op.like]: `%${search}%` }
+                    },
+                    {
+                        color : { [Op.like]: `%${search}%` }
+                    }
+                ]
 
-
-
-
-        let productsFilePath = path.join(__dirname, '../data/SHOEMARKET.json');
-        let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-
-        let busqueda = []
-        // let formu = req.query.search
-        let formu = req.query.search.toLowerCase()
-
-        products.forEach(product => {
-            if (product.name.toLowerCase().includes(formu) || product.category.toLowerCase().includes(formu)) {
-                busqueda.push(product)
-            }
-        });
-
-        res.render("products/results", { busqueda: busqueda, title: "hola" })
+            }, order : [
+                ["name","ASC"]
+            ]
+        })
+            .then(products => {
+                res.render("products/results", { products: products, title: "Busqueda" })
+            })
     },
     detalle: (req, res) => {
         db.Product.findByPk(req.params.id, {
             include: [
                 { association: "categorias" },
                 { association: "ordenes" },
-                
+
             ]
         })
-        .then(function(producto){
-            return res.render("products/detalle", {producto,title : "Detalle del producto"})
-        })
+            .then(function (producto) {
+                return res.render("products/detalle", { producto, title: "Detalle del producto" })
+            })
     },
     contact: (req, res) => {
         res.render("contact", {
