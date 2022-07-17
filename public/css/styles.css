@@ -48,8 +48,15 @@ text-align: center;
 }
 
 
-
-
+.is-invalid {
+    color: #842029;
+  }
+.errorNombre{
+    margin-left: 10px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    color: red;
+}
 /*//////////////////////////profile/********************/
 .profile-contain{
     display: flex;
