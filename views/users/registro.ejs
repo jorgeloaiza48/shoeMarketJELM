@@ -5,12 +5,13 @@
                 <main class="main-register">
                  
                     <form  action="/user/registro" method="POST" class="form-Reg" enctype="multipart/form-data">
-                           
+                        
                         <div class="form__nombre">
                             <label for="documento">Documento de identidad *</label>
-                            <input type="text" name="documento" id="documento" placeholder="Mínimo 5 números, Máximo 10" class="xdsf is-invalid"
+                            <input type="text" name="documento" id="documento" placeholder="Mínimo 5 números, Máximo 10"
                             value ="<%= locals.oldData ? oldData.documento : null%>" title="hola"
-                            >                            
+                            >  
+                                                      
                             <% if (locals.errors && errors.documento) {%>
                                 <div class="text-aviso"><%= errors.documento.msg %></div>
                             <%}%>
@@ -18,16 +19,17 @@
 
                         <div class="form__nombre">
                             <label for="nombre">Nombre *</label>
-                            <input type="text" name="nombre" id="nombre" placeholder=" Introduzca su Nombre" class="xdsf is-invalid"
+                            <input type="text" name="nombre" id="nombre" placeholder=" Introduzca su Nombre"
                             value ="<%= locals.oldData ? oldData.nombre : null%>"
                             >
+                            <ul class="errorNombre"></ul>
                             <% if (locals.errors && errors.nombre) {%>
                                 <div class="text-aviso"><%= errors.nombre.msg %></div>
                             <%}%>
                         </div>
                         <div class="form__nombre">
                             <label for="apeillido">Apellido *</label>
-                            <input type="text" name="apellido" id="apellido" placeholder=" Introduzca su apellido" class="xdsf is-invalid"
+                            <input type="text" name="apellido" id="apellido" placeholder=" Introduzca su apellido"
                             value ="<%= locals.oldData ? oldData.apellido : null%>"
                             >
                             <% if (locals.errors && errors.apellido) {%>
@@ -69,7 +71,7 @@
                           
                             <div class="form-create__img">
                                 <label class="form-create__img__title" for="photo">Seleccione la foto </label>
-                                    <input type="file" name="photo" accept=".jpg,.jpeg,.png,.gif" id="file">
+                                    <input type="file" id="photo" name="photo" accept=".jpg,.jpeg,.png,.gif" id="file">
                                     <% if (locals.errors && errors.photo) {%>
                                         <div class="text-aviso"><%= errors.photo.msg %></div>
                                     <%}%><hr>  
@@ -91,8 +93,8 @@
                                     </script>
                     
                             <div class="contenedor_button" >
-                                <button class="form__button" type="submit" >Borrar</button>
-                                <button class="form__button" type="submit">Enviar</button>
+                                <!-- <button class="form__button" type="delete" >Borrar</button> -->
+                                <button class="form__button" id="sub_button" type="submit">Enviar</button>
             
                             </div>                                          
             
@@ -107,7 +109,8 @@
                 <%- include("../partials/footer") %>
                
                 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-                <script src="/userDeleteConfirm.js"></script>
+                
+                <script src="/js/registro.js"></script>
                
 </body>
 </html>
