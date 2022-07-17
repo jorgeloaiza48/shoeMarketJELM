@@ -24,8 +24,9 @@ const controller = {
     createUser: function (req, res) {
         // let usersFilePath = path.join(__dirname, '../data/users.json');
         // let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8')); //de JSON a JS
-        let errors = validationResult(req)
+        
 
+        let errors = validationResult(req)
        
         if (errors.errors.length > 0) {            
             return res.render("users/registro", { errors: errors.mapped(),
@@ -91,7 +92,8 @@ const controller = {
                     created_at: Date.now(),
                     status: "Activo"
                 })
-                res.redirect("login")
+                
+                res.redirect("loginRegister")
             }
         })//.then
         }//else2
@@ -102,6 +104,8 @@ const controller = {
     },
 
     login: (req, res) => { res.render('users/login', { title: "Login" }) },
+    loginRegister: (req, res) => { res.render('users/loginRegister', { title: "Login" }) },
+    
 
     processLogin :(req,res) =>{
 		const errors = validationResult(req)
