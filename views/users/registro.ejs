@@ -22,7 +22,10 @@
                             <input type="text" name="nombre" id="nombre" placeholder=" Introduzca su Nombre"
                             value ="<%= locals.oldData ? oldData.nombre : null%>"
                             >
-                            <ul class="errorNombre"></ul>
+                            <ul class="errorNombre">
+                                <li id="liErrorNombre1" class="none">Debe introducir un nombre</li>
+                                <li id="liErrorNombre2" class="none">Debe introducir al menos 2 caracteres</li>
+                            </ul>
                             <% if (locals.errors && errors.nombre) {%>
                                 <div class="text-aviso"><%= errors.nombre.msg %></div>
                             <%}%>
@@ -93,13 +96,8 @@
                                     </script>
                     
                             <div class="contenedor_button" >
-<<<<<<< HEAD
-                                <button class="form__button" >Borrar</button>
-                                <button class="form__button" type="submit">Enviar</button>
-=======
                                 <!-- <button class="form__button" type="delete" >Borrar</button> -->
                                 <button class="form__button" id="sub_button" type="submit">Enviar</button>
->>>>>>> a23efb837f956b0c2c3982cf76cf3e5e3dcfc515
             
                             </div>                                          
             
@@ -112,15 +110,10 @@
                 </main>
                
                 <%- include("../partials/footer") %>
-<<<<<<< HEAD
-                <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
-                              
-=======
                
                 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
                 
                 <script src="/js/registro.js"></script>
                
->>>>>>> a23efb837f956b0c2c3982cf76cf3e5e3dcfc515
 </body>
 </html>

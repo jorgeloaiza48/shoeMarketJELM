@@ -51,6 +51,12 @@ text-align: center;
 .is-invalid {
     color: #842029;
   }
+  .show{
+    display: block;
+  }
+.none{
+    display: none;
+}
 .errorNombre{
     margin-left: 10px;
     margin-bottom: 5px;
@@ -2595,7 +2601,12 @@ i {
     margin-top: 5px;
     color: red;
 }
-
+.error{
+    background-color:#db55559c
+}
+.ok{
+    background-color:#db55559c
+}
 .form-Reg {
     background-color: rgb(232, 207, 207);
     border-radius: 10px;
