@@ -60,7 +60,7 @@ router.put('/productos/disable/:id', adminController.disableProduct)
 router.delete("/productos/delete/:id", adminController.deleteProduct)
 
 
-router.get("/prueba",adminController.list)
+
 
 
 

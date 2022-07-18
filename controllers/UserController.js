@@ -150,7 +150,7 @@ const controller = {
             res.render("users/login", {
                 errors: {
                     email: {
-                        msg: " No se encuentra ese email en nuestra base de datos"
+                        msg: " Las credenciales son inválidas"
                     }
                 },old : req.body, title : " login"
             })

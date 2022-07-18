@@ -14,7 +14,6 @@
                             <ul class="errorDocumento">
                                 <li id="liErrorDocumento1" class="none">Debe introducir un documento</li>
                                 <li id="liErrorDocumento2" class="none">Debe introducir minimo 5 numeros y maximo 10</li>
-                                <li id="liErrorDocumento3" class="none">No se permite ingresar letras</li>
                             </ul>
                                                       
                             <% if (locals.errors && errors.documento) {%>
@@ -90,7 +89,7 @@
                                     <div id="preview"></div>
                                     
                                     <script>
-                                        document.getElementById("file").onchange = function(e) {
+                                        document.getElementById("photo").onchange = function(e) {
                                         let reader = new FileReader();            
                                         reader.onload = function(){
                                         let preview = document.getElementById('preview'),
