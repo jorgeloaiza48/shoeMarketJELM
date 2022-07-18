@@ -82,7 +82,7 @@
                           
                             <div class="form-create__img">
                                 <label class="form-create__img__title" for="photo">Seleccione la foto </label>
-                                    <input type="file" id="photo" name="photo" accept=".jpg,.jpeg,.png,.gif" id="file">
+                                    <input type="file" name="photo" accept=".jpg,.jpeg,.png,.gif" id="file">
                                     <% if (locals.errors && errors.photo) {%>
                                         <div class="text-aviso"><%= errors.photo.msg %></div>
                                     <%}%><hr>  

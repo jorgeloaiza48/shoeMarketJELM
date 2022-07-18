@@ -1,6 +1,12 @@
 <%- include("../partials/head") %>
 <body>
-    <script>swal.fire("Usuario creado con éxito")</script>
+    <script>
+    swal.fire({
+        title: "Usuario creado con éxito",
+        icon: "success",
+        button: "Aceptar"
+    })
+    </script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <%- include("../partials/header2") %>   
                 <main class="main-login">
