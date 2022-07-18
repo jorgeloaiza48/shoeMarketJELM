@@ -57,11 +57,11 @@ text-align: center;
 .none{
     display: none;
 }
-.errorNombre{
-    margin-left: 10px;
+.errorText{
+    margin-left: -28px;
     margin-bottom: 5px;
     margin-top: 5px;
-    color: red;
+    color:#d93f3f
 }
 /*//////////////////////////profile/********************/
 .profile-contain{
@@ -331,6 +331,14 @@ text-align: center;
 }
 
 .form__nombre .input {
+    border: solid 2px black;
+    border-radius: 10px;
+}
+.form__apellido .input {
+    border: solid 2px black;
+    border-radius: 10px;
+}
+.form__documento .input {
     border: solid 2px black;
     border-radius: 10px;
 }
@@ -2604,6 +2612,9 @@ i {
 .error{
     background-color:#db55559c
 }
+.formulario-e{
+    background-color:#db55559c
+}
 .ok{
     background-color:#db55559c
 }
@@ -2637,6 +2648,64 @@ i {
 
 
 .form__nombre input {
+    border: none;
+    border-radius: 7px;
+    font-size: 15px;
+    margin-top: 15px;
+    margin-left: 10px;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    padding-left: 5px;
+    width: 85%;
+
+}
+.form__apellido {
+    margin-bottom: 20px;
+    margin-top: 0px;
+    padding-top: 20px;
+
+}
+
+.form__apellido label {
+
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    padding-bottom: 10px;
+
+}
+
+
+.form__apellido input {
+    border: none;
+    border-radius: 7px;
+    font-size: 15px;
+    margin-top: 15px;
+    margin-left: 10px;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    padding-left: 5px;
+    width: 85%;
+
+}
+.form__documento {
+    margin-bottom: 20px;
+    margin-top: 0px;
+    padding-top: 20px;
+
+}
+
+.form__documento label {
+
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    padding-bottom: 10px;
+
+}
+
+
+.form__documento input {
     border: none;
     border-radius: 7px;
     font-size: 15px;

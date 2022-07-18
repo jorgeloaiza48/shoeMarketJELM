@@ -6,11 +6,16 @@
                  
                     <form  action="/user/registro" method="POST" class="form-Reg" enctype="multipart/form-data">
                         
-                        <div class="form__nombre">
+                        <div class="form__documento">
                             <label for="documento">Documento de identidad *</label>
-                            <input type="text" name="documento" id="documento" placeholder="Mínimo 5 números, Máximo 10"
+                            <input type="number" name="documento" id="documento" placeholder="Mínimo 5 números, Máximo 10"
                             value ="<%= locals.oldData ? oldData.documento : null%>" title="hola"
                             >  
+                            <ul class="errorDocumento">
+                                <li id="liErrorDocumento1" class="none">Debe introducir un documento</li>
+                                <li id="liErrorDocumento2" class="none">Debe introducir minimo 5 numeros y maximo 10</li>
+                                <li id="liErrorDocumento3" class="none">No se permite ingresar letras</li>
+                            </ul>
                                                       
                             <% if (locals.errors && errors.documento) {%>
                                 <div class="text-aviso"><%= errors.documento.msg %></div>
@@ -19,9 +24,8 @@
 
                         <div class="form__nombre">
                             <label for="nombre">Nombre *</label>
-                            <input type="text" name="nombre" id="nombre" placeholder=" Introduzca su Nombre"
-                            value ="<%= locals.oldData ? oldData.nombre : null%>"
-                            >
+                            <input type="text" name="nombre" id="nombre" placeholder="Introduzca su Nombre"
+                            value ="<%= locals.oldData ? oldData.nombre : null%>">
                             <ul class="errorNombre">
                                 <li id="liErrorNombre1" class="none">Debe introducir un nombre</li>
                                 <li id="liErrorNombre2" class="none">Debe introducir al menos 2 caracteres</li>
@@ -30,11 +34,15 @@
                                 <div class="text-aviso"><%= errors.nombre.msg %></div>
                             <%}%>
                         </div>
-                        <div class="form__nombre">
+                        <div class="form__apellido">
                             <label for="apeillido">Apellido *</label>
                             <input type="text" name="apellido" id="apellido" placeholder=" Introduzca su apellido"
                             value ="<%= locals.oldData ? oldData.apellido : null%>"
                             >
+                            <ul class="errorApellido">
+                                <li id="liErrorApellido1" class="none">Debe introducir un Apellido</li>
+                                <li id="liErrorApellido2" class="none">Debe introducir al menos 2 caracteres</li>
+                            </ul>
                             <% if (locals.errors && errors.apellido) {%>
                                 <div class="text-aviso"><%= errors.apellido.msg %></div>
                             <%}%>
