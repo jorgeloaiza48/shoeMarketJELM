@@ -32,6 +32,7 @@ const adminController = require('../controllers/AdminController')
 router.get("/",adminMiddleware, adminController.index)
 
 router.get("/lista/usuarios",adminMiddleware, adminController.userList)
+router.get("/lista/usuariosinactivos",adminMiddleware, adminController.disableduserList)
 
 
 
@@ -41,6 +42,7 @@ router.get("/usuario/editar/:id", adminController.userEdit)
 router.put("/usuario/editar/:id", upload.single("photo"), adminController.userUpdate)
 
 router.delete("/usuario/delete/:id", adminController.userSoftDelete)
+router.delete("/usuario/delete/forever/:id", adminController.userForeverDelete)
 
 router.get("/lista/productos",adminMiddleware, adminController.adminProducts)//le saque el admin adminMiddleware
 router.get("/lista/productosinactivos",adminMiddleware, adminController.productsDisabled)//le saque el admin adminMiddleware

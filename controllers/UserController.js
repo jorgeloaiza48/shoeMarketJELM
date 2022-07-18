@@ -104,6 +104,7 @@ const controller = {
     },
 
     login: (req, res) => { res.render('users/login', { title: "Login" }) },
+    
     loginRegister: (req, res) => { res.render('users/loginRegister', { title: "Login" }) },
     
 

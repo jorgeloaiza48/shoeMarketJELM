@@ -6,12 +6,12 @@
             <!-- *****************************INICIO MAIN****************************************** -->
 
             <main class="main-admin">
-                <h3 class="all-product-title">Usuarios Registrados Activos</h3>
+                <h3 class="all-product-title">Usuarios Registrados Inactivos</h3>
                 <div class="productos-admin">
 
                     <% users.forEach(usuario=> { %>
-                        <% if (usuario.status === "Activo") { %>
-                            <%- include('../components/singleUser', {usuario : usuario}) %> 
+                        <% if (usuario.status === "Inactivo") { %>
+                            <%- include('../components/singleUserDisabled', {usuario : usuario}) %> 
                         <% } %>
                     <% }) %>
 

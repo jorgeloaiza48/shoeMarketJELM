@@ -24,16 +24,25 @@ const controller = {
             include: [
                 { association: "roles" },
                 { association: "order" }
-
             ]
-        }
-        )
-            .then(users => {
-               
+        } )
+            .then(users => {               
                 return res.render('admin/listaUsuarios.ejs', { users, title: "Listado de usuarios" })
             })
-        // let usersJSON = fs.readFileSync(productsFilePath, 'utf-8')
-        // res.render("admin/listaUsuarios", { title: "Edición de usuario", users: users })        
+        
+    },
+
+    disableduserList: (req, res) => {
+        db.User.findAll({
+            include: [
+                { association: "roles" },
+                { association: "order" }
+            ]
+        } )
+            .then(users => {               
+                return res.render('admin/listaUsuariosInactivos.ejs', { users, title: "Listado de usuarios inactivos" })
+            })
+        
     },
 
 
@@ -241,9 +250,7 @@ const controller = {
             rol_id:req.body.rol,
             adress: req.body.domicilio,
             updated_at: Date.now(),
-            // Status: "Activo"
-            //if (req.file && image !== req.file.filename) { image = req.file.filename }
-            // console.log(user)
+            status: req.body.estado            
         }, {
             where: { id: req.params.id }
         })
@@ -256,19 +263,32 @@ const controller = {
     },
 
     userSoftDelete: (req, res) => {
-        let usersFilePath = path.join(__dirname, '../data/users.json');
-        let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8')); //de JSON a JS
-        //let newList = products.find(product => product.id === parseInt(req.params.id));// se puede hacer asi tmb
-        // let newList = users.filter(user => user.id !== parseInt(req.params.id))
-        // let userDelete = users.find(user => user.id === parseInt(req.params.id))
-        users.forEach(function (user) {
-            if (user.id === parseInt(req.params.id)) {
-                user.estado = "Inactivo"
-            }
-        });
-        fs.writeFileSync(usersFilePath, JSON.stringify(users));
-        res.redirect("/admin/lista/usuarios")
+        db.User.update({
+            updated_at: Date.now(),
+            status: "Inactivo"
+            }, {
+            where: { id: req.params.id }
+        })
+            .then(() => {
+                return res.redirect('/admin/lista/usuarios')
+            })
+            .catch(error => res.send(error))
+        
     },
+
+    userForeverDelete:(req, res) => {
+        db.User.destroy({
+            where: {
+                id: req.params.id
+            }
+        })
+            .then(() => {
+                res.redirect("/admin/lista/usuariosinactivos")
+
+            })
+
+    },
+
     list: (req, res) => {
         db.Product.findAll({
             include: [

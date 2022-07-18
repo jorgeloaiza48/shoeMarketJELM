@@ -698,8 +698,9 @@ background-color: black;
 
 .admin-but {
     /* border: solid 2px red; */
-    font-size: small;
-    padding: 2px;
+    font-size: large;
+    padding: 20px;
+    width: 250%;
 }
 
 .admin-but p {
