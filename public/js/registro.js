@@ -26,7 +26,7 @@ window.onload = function () {
             liErrorDocumento1.classList.add("none")
             documento.classList.remove("error")  
         }
-        if (documento.value.length < 5 || documento.value.length >= 10 && documento.value.length > 0) {
+        if (documento.value.length >= 0 && (documento.value.length < 5 || documento.value.length >= 10 )) {
             liErrorDocumento2.classList.remove("none")
             liErrorDocumento2.classList.add("show")
             liErrorDocumento2.classList.add("errorText")
@@ -34,15 +34,6 @@ window.onload = function () {
         } else {
             liErrorDocumento2.classList.add("none")
             documento.classList.remove("error")
-        }
-        if (isNaN(documento.value) === true) {
-            liErrorDocumento3.classList.remove("none")
-            liErrorDocumento3.classList.add("show")
-            liErrorDocumento3.classList.add("errorText")
-            documento.classList.add("error")
-        } else {
-            liErrorDocumento3.classList.add("none")
-            documento.classList.remove("error")  
         }
     })
 
