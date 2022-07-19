@@ -6,14 +6,23 @@
             <!-- *****************************INICIO MAIN****************************************** -->
 
             <main class="main-admin">
-                <h3 class="all-product-title">Usuarios Registrados Inactivos</h3>
+                <% let cantidadInactivos = 0 %>
+                <% users.forEach(usuario=> { %>
+                    <% if (usuario.status === "Inactivo") { %>
+                        <% cantidadInactivos = cantidadInactivos + 1 %>        
+                    <% } %>
+                <% }) %>
+                <h3 class="all-product-title">Usuarios Registrados Inactivos (<%= cantidadInactivos %>)</h3>
                 <div class="productos-admin">
-
+                    
+                    
                     <% users.forEach(usuario=> { %>
                         <% if (usuario.status === "Inactivo") { %>
                             <%- include('../components/singleUserDisabled', {usuario : usuario}) %> 
+                            <% cantidadInactivos += cantidadInactivos%>        
                         <% } %>
                     <% }) %>
+                    
 
                 </div>
 

@@ -31,9 +31,9 @@
   
     
     <div class="div-form-delete-edit-users">
-        <form action="/admin/usuario/delete/forever/<%= usuario.id %>?_method=DELETE" method="POST" class="form-user-delete-forever">
+        <form action="/admin/usuario/activar/<%= usuario.id %>?_method=PUT" method="POST" class="form-user-delete-forever">
             <button type="submit" name="delete" id="delete" class="admin-but">
-                <strong>ELIMINAR</strong>
+                <strong>ACTIVAR</strong>
             </button>
         </form>
 

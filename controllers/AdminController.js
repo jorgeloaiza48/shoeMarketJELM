@@ -210,32 +210,11 @@ const controller = {
         })
         Promise.all([rol,user])
             .then(function ([roles,usuario]) { res.render("users/editUsuario", { title: "Editar usuario", usuario: usuario, estados: estados, roles: roles }) })
-
-
-
-
             
     },
 
     userUpdate: (req, res) => {
-        // let usersFilePath = path.join(__dirname, '../data/users.json');
-        // let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));//JSON a JS
-        // users.find(user => {
-        //     if (user.id === parseInt(req.params.id)) {
-        //         user.nombre = req.body.Nombre
-        //         user.apellido = req.body.apellido
-        //         user.email = req.body.email
-        //         user.fechaNacimiento = req.body.fecha
-        //         user.domicilio = req.body.domicilio
-        //         user.estado = req.body.estado
-        //         user.role = req.body.rol
-
-        //         if (req.file && user.image !== req.file.filename) { user.image = req.file.filename }
-
-        //     }
-        // })
-        // fs.writeFileSync(usersFilePath, JSON.stringify(users, null, "\t")) //JS a JSON
-                
+                        
         let img = function () {
             if (req.file) { return req.file.filename }
         }
@@ -287,6 +266,19 @@ const controller = {
 
             })
 
+    },
+    userActivar:(req, res) => {
+        db.User.update({
+            updated_at: Date.now(),
+            status: "Activo"
+            }, {
+            where: { id: req.params.id }
+        })
+            .then(() => {
+                return res.redirect('/admin/lista/usuariosinactivos')
+            })
+            .catch(error => res.send(error))
+        
     },
 
     list: (req, res) => {

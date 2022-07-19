@@ -6,7 +6,13 @@
             <!-- *****************************INICIO MAIN****************************************** -->
 
             <main class="main-admin">
-                <h3 class="all-product-title">Usuarios Registrados Activos</h3>
+                <% let cantidadActivos = 0 %>
+                <% users.forEach(usuario=> { %>
+                    <% if (usuario.status === "Activo") { %>
+                        <% cantidadActivos = cantidadActivos + 1 %>        
+                    <% } %>
+                <% }) %>
+                <h3 class="all-product-title">Usuarios Registrados Activos (<%= cantidadActivos%>)</h3>
                 <div class="productos-admin">
 
                     <% users.forEach(usuario=> { %>

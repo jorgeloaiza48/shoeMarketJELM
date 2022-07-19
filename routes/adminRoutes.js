@@ -40,9 +40,10 @@ router.get("/lista/usuariosinactivos",adminMiddleware, adminController.disabledu
 router.get("/usuario/editar/:id", adminController.userEdit)
 
 router.put("/usuario/editar/:id", upload.single("photo"), adminController.userUpdate)
+router.put("/usuario/activar/:id", adminController.userActivar)
 
 router.delete("/usuario/delete/:id", adminController.userSoftDelete)
-router.delete("/usuario/delete/forever/:id", adminController.userForeverDelete)
+// router.delete("/usuario/delete/forever/:id", adminController.userForeverDelete)
 
 router.get("/lista/productos",adminMiddleware, adminController.adminProducts)//le saque el admin adminMiddleware
 router.get("/lista/productosinactivos",adminMiddleware, adminController.productsDisabled)//le saque el admin adminMiddleware
