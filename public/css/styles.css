@@ -123,10 +123,20 @@ text-align: center;
 /*//////////////////////////header 2/********************/
 
 .form-header {
+    /* border: solid 1px black; */
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
     margin-left: 35px;
+}
+.form-header input{
+    border: solid 1px black;
+}
+.form-header button{
+   margin-top: 17px;
+   margin-left: -2px;
+   font-size: 22px;
+   
 }
 .img-header{
     width: 30px;
@@ -270,14 +280,16 @@ text-align: center;
 }
 
 #preview {
-    border: 1px solid #ddd;
-    margin: 10px;
+    border: 5px solid #ddd;
+    height: fit-content;
+    margin-left: 150px;
     border-radius: 2px;
     max-width: 200px;
     padding: 5px;
 }
 
 #preview img {
+  
     width: 100%;
     display: block;
 }
@@ -381,7 +393,6 @@ text-align: center;
 @media(min-width:768px) {
     .initials{
         font-size: 13px;
-    
     
     }
     .section-destacados-admin {
@@ -1312,7 +1323,7 @@ i {
     .principal-form-boton form button .fa-search {
         color: white;
     }
-
+   
     .principal-carrito {
         align-self: center;
         /* border: solid 2px blue; */
@@ -2586,7 +2597,7 @@ i {
         margin-top: 0px;
 
     }
-
+    
 }
 
 
@@ -2623,102 +2634,44 @@ i {
 }
 .form-Reg {
     background-color: rgb(232, 207, 207);
+    border: solid 5px gainsboro;
     border-radius: 10px;
-    max-width: 380px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;     
+    height: 500px;   
     margin: 20px;
     margin-left: auto;
     margin-right: auto;
-    padding: 5px;
-    width: 90%;
+    padding: 25px;
+    width: 60%;
 
 }
-
-.form__nombre {
+form div{
+    /* border: solid 2px rgb(43, 198, 226); */
+    height: 15%;
     margin-bottom: 20px;
     margin-top: 0px;
     padding-top: 20px;
-
+    width: 40%;
 }
-
-.form__nombre label {
-
+form label {
     font-weight: bold;
     margin-bottom: 10px;
     margin-left: 10px;
     padding-bottom: 10px;
-
 }
 
-
-.form__nombre input {
+form input {
     border: none;
     border-radius: 7px;
     font-size: 15px;
     margin-top: 15px;
-    margin-left: 10px;
+    margin-left: 8px;
     padding-bottom: 8px;
     padding-top: 8px;
     padding-left: 5px;
     width: 85%;
-
-}
-.form__apellido {
-    margin-bottom: 20px;
-    margin-top: 0px;
-    padding-top: 20px;
-
-}
-
-.form__apellido label {
-
-    font-weight: bold;
-    margin-bottom: 10px;
-    margin-left: 10px;
-    padding-bottom: 10px;
-
-}
-
-
-.form__apellido input {
-    border: none;
-    border-radius: 7px;
-    font-size: 15px;
-    margin-top: 15px;
-    margin-left: 10px;
-    padding-bottom: 8px;
-    padding-top: 8px;
-    padding-left: 5px;
-    width: 85%;
-
-}
-.form__documento {
-    margin-bottom: 20px;
-    margin-top: 0px;
-    padding-top: 20px;
-
-}
-
-.form__documento label {
-
-    font-weight: bold;
-    margin-bottom: 10px;
-    margin-left: 10px;
-    padding-bottom: 10px;
-
-}
-
-
-.form__documento input {
-    border: none;
-    border-radius: 7px;
-    font-size: 15px;
-    margin-top: 15px;
-    margin-left: 10px;
-    padding-bottom: 8px;
-    padding-top: 8px;
-    padding-left: 5px;
-    width: 85%;
-
 }
 
 .form-error{
@@ -2730,11 +2683,11 @@ i {
     background-color: rgb(232, 207, 207);
     border-radius: 15px;
 }
-
+/* 
 .form__usuario {
     margin-bottom: 20px;
 
-}
+} */
 
 .usuario_record {
     display: block;

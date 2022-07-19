@@ -80,7 +80,7 @@
                             </div>
                           
                             <div class="form-create__img">
-                                <label class="form-create__img__title" for="photo">Seleccione la foto </label>
+                                <label class="form-create__img__title" for="photo">Seleccione la foto de perfil</label>
                                     <input type="file" name="photo" accept=".jpg,.jpeg,.png,.gif" id="file">
                                     <% if (locals.errors && errors.photo) {%>
                                         <div class="text-aviso"><%= errors.photo.msg %></div>
@@ -101,20 +101,21 @@
                                         reader.readAsDataURL(e.target.files[0]);
                                            }    
                                     </script>
-                    
+                            </div>
                             <div class="contenedor_button" >
-                                <!-- <button class="form__button" type="delete" >Borrar</button> -->
+                                <button class="form__button" type="delete" >Borrar datos</button>
                                 <button class="form__button" id="sub_button" type="submit">Enviar</button>
             
                             </div>                                          
             
                     </form>
             
-                    <div class="help-button">
-                        <button><i class="fa-solid fa-circle-question"></i> Ayuda</button>
-                      </div>
+                   
             
                 </main>
+                <div class="help-button">
+                    <button><i class="fa-solid fa-circle-question"></i> Ayuda</button>
+                  </div>
                
                 <%- include("../partials/footer") %>
                
