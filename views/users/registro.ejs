@@ -17,7 +17,7 @@
                             </ul>
                                                       
                             <% if (locals.errors && errors.documento) {%>
-                                <div class="text-aviso"><%= errors.documento.msg %></div>
+                                <div class="text-aviso"><p><%= errors.documento.msg %></p></div>
                             <%}%>
                         </div>
 
@@ -30,7 +30,7 @@
                                 <li id="liErrorNombre2" class="none">Debe introducir al menos 2 caracteres</li>
                             </ul>
                             <% if (locals.errors && errors.nombre) {%>
-                                <div class="text-aviso"><%= errors.nombre.msg %></div>
+                                <div class="text-aviso"><p><%= errors.nombre.msg %></p></div>
                             <%}%>
                         </div>
                         <div class="form__apellido">
@@ -43,7 +43,7 @@
                                 <li id="liErrorApellido2" class="none">Debe introducir al menos 2 caracteres</li>
                             </ul>
                             <% if (locals.errors && errors.apellido) {%>
-                                <div class="text-aviso"><%= errors.apellido.msg %></div>
+                                <div class="text-aviso"><p><%= errors.apellido.msg %></p></div>
                             <%}%>
                         </div>
 
@@ -52,14 +52,14 @@
                             <label for="email">Correo electrónico *</label>
                             <input type="email" name="email" id="email" placeholder="Introduzca su Correo electronico"  value ="<%= locals.oldData ? oldData.email : null%>" >
                             <% if (locals.errors && errors.email) {%>
-                                <div class="text-aviso"><%= errors.email.msg %></div>
+                                <div class="text-aviso"><p><%= errors.email.msg %></p></div>
                             <%}%>
                         </div>
                         <div class="form__fecha">
                             <label for="fecha">Fecha de nacimiento *</label>
                             <input type="date" name="fecha" id="fecha" value ="<%= locals.oldData ? oldData.fecha : null%>">
                             <% if (locals.errors && errors.fecha) {%>
-                                <div class="text-aviso"><%= errors.fecha.msg %></div>
+                                <div class="text-aviso"><p><%= errors.fecha.msg %></p></div>
                             <%}%>
             
                         </div>
@@ -67,7 +67,7 @@
                             <label for="domicilio">Domicilio de envío *</label><br>
                             <input type="text" name="domicilio" id="domicilio" placeholder=" Introduzca su Domicilio" value ="<%= locals.oldData ? oldData.domicilio : null%>">
                             <% if (locals.errors && errors.domicilio) {%>
-                                <div class="text-aviso"><%= errors.domicilio.msg %></div>
+                                <div class="text-aviso"><p><%= errors.domicilio.msg %></p></div>
                             <%}%>
                         </div>
                        
@@ -75,7 +75,7 @@
                                 <label class="form__password__title" for="pass">Contraseña *</label><br>
                                 <input type="password" name="pass" id="pass" placeholder="Introduzca su contraseña">
                                 <% if (locals.errors && errors.pass) {%>
-                                    <div class="text-aviso"><%= errors.pass.msg %></div>
+                                    <div class="text-aviso"><p><%= errors.pass.msg %></p></div>
                                 <%}%>
                             </div>
                           
@@ -83,7 +83,7 @@
                                 <label class="form-create__img__title" for="photo">Seleccione la foto de perfil</label>
                                     <input type="file" name="photo" accept=".jpg,.jpeg,.png,.gif" id="file">
                                     <% if (locals.errors && errors.photo) {%>
-                                        <div class="text-aviso"><%= errors.photo.msg %></div>
+                                        <div class="text-aviso"><p><%= errors.photo.msg %></p></div>
                                     <%}%><hr>  
 
                                     <div id="preview"></div>
@@ -103,7 +103,7 @@
                                     </script>
                             </div>
                             <div class="contenedor_button" >
-                                <button class="form__button" type="delete" >Borrar datos</button>
+                                <button class="form__button" id="boton-limpiar-form">Limpiar formulario</button>
                                 <button class="form__button" id="sub_button" type="submit">Enviar</button>
             
                             </div>                                          
@@ -119,9 +119,9 @@
                
                 <%- include("../partials/footer") %>
                
-                <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-                
+                <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>                
                 <script src="/js/registro.js"></script>
+                <script src="/js/limpiarFormulario.js"></script>
                
 </body>
 </html>

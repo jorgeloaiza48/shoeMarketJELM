@@ -1562,12 +1562,12 @@ i {
         -webkit-transform: scale(1.5);
     }
 
-    .text-aviso {
+    /* .text-aviso {
         margin-left: 10px;
-        margin-bottom: 5px;
+        margin-bottom: 100px;
         margin-top: 5px;
         color: red;
-    }
+    } */
 
     .text-aviso2 {
         margin-left: 0px;
@@ -2609,10 +2609,13 @@ i {
 
 /*-------------------------------------- REGISTRO   -----------------------------------*/
 .text-aviso {
+    /* border: solid 2px blue; */
     margin-left: 10px;
-    margin-bottom: 5px;
-    margin-top: 5px;
+    /* margin-bottom: 1px; */
+    margin-top: -55px;
     color: red;
+    width: fit-content;
+    /* text-align:justify; */
 }
 
 .text-aviso2 {
@@ -2643,7 +2646,7 @@ i {
     margin: 20px;
     margin-left: auto;
     margin-right: auto;
-    padding: 25px;
+    padding: 10px;
     width: 60%;
 
 }
@@ -2673,6 +2676,21 @@ form input {
     padding-left: 5px;
     width: 85%;
 }
+.form__usuario p{
+    color: red;
+    margin-left: 2px;
+    margin-top: 35px;
+}
+.form__domicilio p{
+    color: red;
+    margin-left: 2px;
+    margin-top: 35px;
+}
+.form-create__img p{
+    color: red;
+    margin-left: 2px;
+    margin-top: 25px;
+}
 
 .form-error{
     color: #842029; 
@@ -2680,9 +2698,55 @@ form input {
 
 }
 .form-login {
+    border: solid 5px gainsboro;
     background-color: rgb(232, 207, 207);
     border-radius: 15px;
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;  
 }
+.form-login .usuario__nombre{
+    width: 80%;
+}
+.form-login .usuario__pass{
+    width: 80%;
+}
+.form-login .usuario_record_div{
+    height: 30px;
+    display: flex;   
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 0px;
+    width: 50%;
+}
+.form-login .usuario_record_div label{
+    /* border: solid 2px green; */
+    width: 70%;
+}
+.form-login .usuario_record_div .checkbox{
+    /* border: solid 25px green; */
+    padding: 0px;
+    margin-top: 0px;
+}
+.form-login .section-login__button{
+    height: 50px;
+    width: 50%;
+}
+.form-login .recordame-enviar{
+    display: flex;
+    justify-content: space-between;
+    height: fit-content;
+    width: 80%;
+}
+.form-login .section-login__button{
+    margin-top: 0px;
+    padding: 0px;
+}
+.form-login .section-login__button .button-login{
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
 /* 
 .form__usuario {
     margin-bottom: 20px;
@@ -2978,6 +3042,7 @@ form input {
     margin-bottom: 20px;
     margin-top: 0px;
     padding-top: 20px;
+    width: 90%;
 
 }
 
@@ -3000,7 +3065,7 @@ form input {
     padding-bottom: 8px;
     padding-top: 8px;
     padding-left: 5px;
-    width: 85%;
+    width: 95%;
 
 }
 
@@ -3016,14 +3081,11 @@ form input {
     margin-left: 10px;
     padding: 10px;
     height: 100px;
-    width: 90%;
+    width: 100%;
 }
 
 .form-create__descr label {
-
     font-weight: bold;
-
-
 }
 
 .div-desc {
@@ -3068,6 +3130,7 @@ form input {
 
 .form-create__price {
     margin-bottom: 20px;
+    width: 100%;
 }
 
 .form-create__price input {
@@ -3195,6 +3258,8 @@ form input {
     justify-content: space-around;
     margin-top: 20px;
     margin-bottom: 20px;
+    margin-left: 110px;
+   
 }
 
 .form-create input:hover {
@@ -3293,6 +3358,7 @@ form input {
 .form-contact__error{
     color: red
 }
+
 @media (min-width: 1200px) {
     .contact-p_contain{
        padding-left: 28%;

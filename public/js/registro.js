@@ -86,13 +86,10 @@ window.onload = function () {
 // form.addEventListener("submit",function(event){
 //     event.preventDefault()
 
-<<<<<<< HEAD
 
 // form.addEventListener("submit",function(event){
 //      event.preventDefault()
 
-=======
->>>>>>> 340a035f99fc0eacf7550e033971afb1a1f3885b
 // })
 
 
