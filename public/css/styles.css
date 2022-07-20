@@ -202,8 +202,10 @@ text-align: center;
 .texto2{
     align-items: center;
     /* border: solid 2px black; */
-   margin: 10px;
-    width:95%;
+    /* margin: 15px; */
+    display: flex;
+    justify-content: center;
+    width:100%;
 }
 .texto2 p {
     display: flex;
@@ -214,6 +216,7 @@ text-align: center;
     /* margin-top: 0px;
     margin-bottom: 0px; */
     height: 30px;
+    width:95%;
 }
 
 .texto2 i {
@@ -371,6 +374,9 @@ text-align: center;
 
 }
 @media(min-width:576px) {
+    .principal-form-boton2 form button {
+        width: 8%;
+    }
 
     .section-destacados-admin {
         border-radius: 20px;
@@ -800,11 +806,6 @@ background-color: black;
         font-size: small;
 
     }
-
-    /* .contenedor_button {
-        border: solid 4px green;
-        display: flex;
-    } */
 
     .formEditUser {
         border: solid 2px gainsboro;
@@ -2726,7 +2727,7 @@ i {
 .form-login .usuario_record_div .checkbox{
     /* border: solid 25px green; */
     padding: 0px;
-    margin-top: 0px;
+    margin-top: 10px;
 }
 .form-login .section-login__button{
     height: 50px;
@@ -2875,7 +2876,7 @@ i {
 
 .contenedor_button {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     margin-top: 20px;
     margin-bottom: 20px;
 }
