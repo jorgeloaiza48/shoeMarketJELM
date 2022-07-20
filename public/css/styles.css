@@ -120,9 +120,7 @@ text-align: center;
     justify-content:center;
     margin: 10px;
 }
-.form-header input{
-    /* border: solid 1px black; */
-}
+
 .form-header button{
    margin-top: 17px;
    margin-left: -2px;
