@@ -1705,7 +1705,7 @@ i {
     .admin-but {
         line-height: 1px;
     }
-
+   
 
 
     .section-destacados-admin p {
@@ -1817,7 +1817,7 @@ i {
 .desc-p{
     margin-left: 55px;
     font-size: 20px
-}
+   }
 
     .produc_img_bueno {
         border: solid 1px red;
@@ -2875,7 +2875,7 @@ i {
 
 .contenedor_button {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     margin-top: 20px;
     margin-bottom: 20px;
 }
