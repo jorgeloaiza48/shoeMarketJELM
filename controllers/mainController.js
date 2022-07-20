@@ -58,11 +58,15 @@ const controller = {
             })
     },
     detalle: (req, res) => {
-        db.Product.findByPk(req.params.id, {
+        db.Product.findOne({
+            where : {
+                id : req.params.id,
+                status : "Enabled"
+            }
+        }, {
             include: [
                 { association: "categorias" },
                 { association: "ordenes" },
-
             ]
         })
             .then(function (producto) {

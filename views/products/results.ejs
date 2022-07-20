@@ -10,20 +10,13 @@
 
             <section class="productos">
                 <% products.forEach(product=> { %>
-                    <%- include("../components/productHome",{product:product}) %>
-                    <% }) %>
+                    <% if (product.status === "Enabled") { %>
+                        <%- include("../components/productHome",{product:product}) %>
+                    <% } %>
+                 <% }) %>
             </section>
+        <%- include("../partials/footer") %>
 
-
-          
-
-                
-
-
-
-
-
-                        <%- include("../partials/footer") %>
     </body>
 
     </html>

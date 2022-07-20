@@ -10,21 +10,13 @@
                  
                     <h3 class="all-product-title" ><%=categoria.name  %> </h3>
                 <section class="productos">
-                     
+
                 <% productos.forEach(product=> { %>
-                    <div class="produc">
-                        <a href="../detalle/<%= product.id %>">
-                            <img src="../img/products/<%= product.image %>" alt="bota">
-                            <p>
-                                <%= product.name %>
-                            </p>
-                            <p>$<%= product.price %>
-                            </p>
-                        
-                            <p><a href="../detalle/<%= product.id %>" class="com-but-main"><button>COMPRAR</button></a></p>
-                            <p><i class="fa-solid fa-star"></i></p>
-                        </a>
-                    </div>
+                    <% if (product.status === "Enabled") { %>
+                        <div class="produc">
+                            <%- include("../components/listProduct",{product:product}) %>
+                        </div>
+                        <% } %>
                     <% }) %>
                 </section>
                 
