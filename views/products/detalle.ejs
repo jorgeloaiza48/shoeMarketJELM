@@ -8,15 +8,14 @@
 
 
                     <section class="photos-desc">
+                        <% if (producto) { %>
+                         
+                        
                         <% if (producto.color) { %>
-
-
                             <article class="photos-small">
-
                                 <div class="photos-small__div">
                                     <img class="photos-small__photo" src="../img/products/<%=producto.image%>"
                                         alt="product">
-
                                 </div>
                                 <div class="photos-small__div">
                                     <img class="photos-small__photo" src="../img/products/<%= producto.image %>"
@@ -29,74 +28,65 @@
                             </article>
 
                             <% } %>
-
                                 <div class="photos-desc__div">
                                     <img class="photos-desc__big" src="../img/products/<%= producto.image%>"
                                         alt="product">
-
                                 </div>
-
-
-
                     </section>
 
-
-
                     <article class="descr-prod">
-
                         <section class="name-pr">
                             <h3 class="name-pr__title">
                                 <%=producto.name %>
-
                             </h3>
-
                             <p class="name-pr__price">$<%= producto.price %>
                             </p>
-
-
                             <p class="name-pr__cuota">12 cuotas sin interes <i class="fa-solid fa-credit-card"></i>
                             </p>
-
-
                             <p class="name-pr__off">20% OFF abonando con transferencia</p>
-
                         </section>
-                        
-                                
                         <% if (producto.color) { %>
-                                    <section class="art-size">
-                                        <h3 class="art-size__title">Selecciona el talle</h4>
-                                            <div class="size">
-                                                <button class="size__35">35</button>
-                                                <button class="size__36">36</button>
-                                                <button class="size__37">37</button>
-                                                <button class="size__38">38</button>
-                                                <button class="size__39">39</button>
-                                                <button class="size__39">40</button>
-                                            </div>
-
-                                    </section>
-                                    <% } %>
-
-                                        <section class="desc-comp">
-                                            <button type="submit" class="desc-comp__but">Agregar al carrito</button>
-                                        </section>
+                            <section class="art-size">
+                                <h3 class="art-size__title">Selecciona el talle</h4>
+                                    <div class="size">
+                                        <button class="size__35">35</button>
+                                        <button class="size__36">36</button>
+                                        <button class="size__37">37</button>
+                                        <button class="size__38">38</button>
+                                        <button class="size__39">39</button>
+                                        <button class="size__39">40</button>
+                                    </div>
+                            </section>
+                            <% } %>
+                                <section class="desc-comp">
+                                    <button type="submit" class="desc-comp__but">Agregar al carrito</button>
+                                </section>
                     </article>
                 </article>
                 <% if (producto.description) { %>
-
-
                     <section class="desc-desc">
                         <h3 class="desc-desc__title">Descripcion</h3>
-                        <p class="desc-p"><%= producto.description %></p>
-                         
+                        <p class="desc-p">
+                            <%= producto.description %>
+                        </p>
                     </section>
                     <% } %>
                         <div class="help-button">
                             <button><i class="fa-solid fa-circle-question"></i> Ayuda</button>
                         </div>
+                        <% } else { %>
+                            <section class="not-prod-section">
 
+                                <div>
 
+                                    <h3 class="all-product-title" >No tenemos ese producto en este momento</h3>
+
+                                </div>
+                            <div class="not-prod-div">
+                                <a class="not-prod-a" href="/"><button class="des-but" >Ir a la pagina Principal</button></a>   
+                            </div>
+                        </section>
+                            <% }  %>
             </main>
             <%- include("../partials/footer") %>
     </body>

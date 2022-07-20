@@ -12,11 +12,10 @@
                 <h3>DESTACADOS</h3>
                 <section class="productos">
                     <% productos.forEach(product=> { %>
-                        
-                        <%- include("./components/productHome",{product:product}) %>
+                        <% if (product.status === "Enabled") { %>
+                            <%- include("./components/productHome",{product:product}) %>
+                       <% } %>
                         <% }) %>
-                        
-                            <
                 </section>
 
 
@@ -27,20 +26,16 @@
                             playsinline type="video/mp4" />
                         No se puede reproducir el video
                     </video>
-
                 </section>
 
                 <h3>PROMOCIONES</h3>
                 <section class="productos">
                     <% productos.forEach(product=> { %>
-                        
+                        <% if (product.status === "Enabled") { %>
                             <%- include("./components/productHome",{product:product}) %>
+                            <% } %>
                         <% }) %>
-                            
-
                 </section>
-
-
                 <section class="section3">
                     <video autoplay loop muted>
                         <source
