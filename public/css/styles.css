@@ -112,25 +112,16 @@ text-align: center;
     background-color: #1c1819;
 }
 
-@media(min-width:576px) {
-    .prof-main {
-        margin-left: 55px;
-        text-align: left;
-
-    }
-}
-
 /*//////////////////////////header 2/********************/
 
 .form-header {
     /* border: solid 1px black; */
     display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-    margin-left: 35px;
+    justify-content:center;
+    margin: 10px;
 }
 .form-header input{
-    border: solid 1px black;
+    /* border: solid 1px black; */
 }
 .form-header button{
    margin-top: 17px;
@@ -208,14 +199,20 @@ text-align: center;
 .lista__profile:hover .lista__profile-down__admin {
     display: block;
 }
-
+.texto2{
+    align-items: center;
+    /* border: solid 2px black; */
+   margin: 10px;
+    width:95%;
+}
 .texto2 p {
     display: flex;
     align-items: center;
+    font-size: small;
     justify-content: center;
     background-color: rgb(232 207 207);
-    margin-top: 0px;
-    margin-bottom: 0px;
+    /* margin-top: 0px;
+    margin-bottom: 0px; */
     height: 30px;
 }
 
@@ -227,10 +224,12 @@ text-align: center;
 .principal-form-boton2 form button {
     background-color: rgb(232 207 207);
     border-radius: 10%;
-    height: 90%;
-    position: relative;
+    height: 80%;
+    margin: 0px;
+    width: 15%;
+    /* position: relative;
     right: 33px;
-    width: 33px;
+    width: 33px; */
 }
 
 .principal-form-boton2 form button .fa-search {
@@ -270,7 +269,13 @@ text-align: center;
 }
 
 .principal-form-boton2 {
-
+    /* border: solid 2px red; */
+    height: 55px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+.principal-form-boton2 .form-header .input-header{
+    height: 30px;
     width: 100%;
 }
 
@@ -282,7 +287,7 @@ text-align: center;
 #preview {
     border: 5px solid #ddd;
     height: fit-content;
-    margin-left: 150px;
+    margin-left: 25px;
     border-radius: 2px;
     max-width: 200px;
     padding: 5px;
@@ -321,11 +326,12 @@ text-align: center;
 
 .formEditUser {
     border: solid 2px gainsboro;
+    background-color: rgb(232, 207, 207);
     border-radius: 10px;
     margin: 0 auto;
     margin-top: 20px;
     margin-bottom: 20px;
-    width: 70%;
+    width: 90%;
 }
 
 .formEditUser .form-edit-user-img img {
@@ -337,22 +343,14 @@ text-align: center;
     width: 90%;
     max-width: 200px;
 }
-
+.formEditUser input{
+    border: solid 2px black;
+    border-radius: 5px;
+    margin: 15px;
+    width:80%;
+}
 .form-edit-user-data p {
     text-align: center;
-}
-
-.form__nombre .input {
-    border: solid 2px black;
-    border-radius: 10px;
-}
-.form__apellido .input {
-    border: solid 2px black;
-    border-radius: 10px;
-}
-.form__documento .input {
-    border: solid 2px black;
-    border-radius: 10px;
 }
 
 .form-edit_select{
@@ -386,6 +384,11 @@ text-align: center;
 
     .productos-admin .section-destacados-admin p {
         font-size: medium;
+    }
+    .prof-main {
+        margin-left: 55px;
+        text-align: left;
+
     }
 }
 
@@ -798,10 +801,10 @@ background-color: black;
 
     }
 
-    .contenedor_button {
-        /* border: solid 4px green; */
+    /* .contenedor_button {
+        border: solid 4px green;
         display: flex;
-    }
+    } */
 
     .formEditUser {
         border: solid 2px gainsboro;
@@ -966,10 +969,6 @@ header {
     margin-bottom: 5%;
     width: 100%;
 }
-
-
-
-
 .menu {
     display: none;
 }
@@ -1706,7 +1705,7 @@ i {
     .admin-but {
         line-height: 1px;
     }
-
+   
 
 
     .section-destacados-admin p {
@@ -1818,7 +1817,7 @@ i {
 .desc-p{
     margin-left: 55px;
     font-size: 20px
-}
+   }
 
     .produc_img_bueno {
         border: solid 1px red;
@@ -2654,34 +2653,35 @@ i {
     background-color: rgb(232, 207, 207);
     border: solid 5px gainsboro;
     border-radius: 10px;
-    display: flex;
+    /* display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;     
-    height: 500px;   
+    justify-content: space-around;      */
+    /* height: 500px;    */
     margin: 20px;
     margin-left: auto;
     margin-right: auto;
     padding: 10px;
-    width: 60%;
+    width: 90%;
 
 }
-form div{
+.form-Reg div{
     /* border: solid 2px rgb(43, 198, 226); */
     height: 15%;
     margin-bottom: 20px;
     margin-top: 0px;
     padding-top: 20px;
-    width: 40%;
+    width: 90%;
 }
-form label {
+.form-Reg label {
     font-weight: bold;
     margin-bottom: 10px;
     margin-left: 10px;
     padding-bottom: 10px;
 }
 
-form input {
-    border: none;
+.form-Reg input {
+    /* border: solid 2px rebeccapurple; */
+    /* border: none; */
     border-radius: 7px;
     font-size: 15px;
     margin-top: 15px;
@@ -2689,7 +2689,7 @@ form input {
     padding-bottom: 8px;
     padding-top: 8px;
     padding-left: 5px;
-    width: 85%;
+    width: 100%;
 }
 .form__usuario p{
     color: red;
@@ -2775,7 +2775,7 @@ form input {
     color: #585656
 }
 
-.form__usuario input {
+/* .form__usuario input {
     border: none;
     border-radius: 7px;
     font-size: 15px;
@@ -2786,9 +2786,9 @@ form input {
     padding-left: 5px;
     width: 85%;
 
-}
+} */
 
-.form__usuario label {
+/* .form__usuario label {
 
     font-weight: bold;
     margin-bottom: 10px;
@@ -2797,9 +2797,9 @@ form input {
 
 
 
-}
+} */
 
-.form__fecha input {
+/* .form__fecha input {
     border-radius: 7px;
     border: none;
     color: rgb(122, 117, 117);
@@ -2811,19 +2811,19 @@ form input {
     padding-top: 8px;
     padding-bottom: 8px;
     width: 85%;
-}
+} */
 
-.form__fecha label {
+/* .form__fecha label {
     font-weight: bold;
     margin-bottom: 10px;
     margin-left: 10px;
-}
+} */
 
-.form__domicilio {
+/* .form__domicilio {
     margin-bottom: 20px;
-}
+} */
 
-.form__domicilio input {
+/* .form__domicilio input {
     border: none;
     border-radius: 7px;
     font-size: 15px;
@@ -2834,20 +2834,17 @@ form input {
     padding-left: 5px;
     width: 85%;
 
-}
+} */
 
-.form__domicilio label {
+/* .form__domicilio label {
 
     font-weight: bold;
     margin-bottom: 10px;
     margin-left: 10px;
     padding-bottom: 10px;
-
-
-
 }
-
-.form__password input {
+ */
+/* .form__password input {
     border: none;
     border-radius: 7px;
     font-size: 15px;
@@ -2858,15 +2855,15 @@ form input {
     padding-bottom: 8px;
     padding-left: 5px;
     width: 85%;
-}
+} */
 
-.form__password__title {
+/* .form__password__title {
     font-weight: bold;
     margin-bottom: 10px;
     margin-left: 10px;
     padding-bottom: 10px;
 
-}
+} */
 
 .form__confirm input {
     border: none;
@@ -2893,11 +2890,17 @@ form input {
 
 .contenedor_button {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     margin-top: 20px;
     margin-bottom: 20px;
 }
-
+.contenedor_button_user_edit{
+    /* border: solid 2px blue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
 .form-Reg input:hover {
 
     box-shadow: 0 0 5px 0 rgb(228, 56, 101);
@@ -3096,7 +3099,7 @@ form input {
     margin-left: 10px;
     padding: 10px;
     height: 100px;
-    width: 100%;
+    width: 85%;
 }
 
 .form-create__descr label {
@@ -3124,7 +3127,7 @@ form input {
 
 }
 
-.form-create__img {
+/* .form-create__img {
     margin-left: 10px;
     margin-bottom: 10px;
     padding-bottom: 10px;
@@ -3141,7 +3144,7 @@ form input {
 .form-create__img input {
     margin-top: 10px;
 
-}
+} */
 
 .form-create__price {
     margin-bottom: 20px;
@@ -3268,14 +3271,14 @@ form input {
 
 
 
-.contenedor_button {
+/* .contenedor_button {
     display: flex;
     justify-content: space-around;
     margin-top: 20px;
     margin-bottom: 20px;
     margin-left: 110px;
    
-}
+} */
 
 .form-create input:hover {
 
