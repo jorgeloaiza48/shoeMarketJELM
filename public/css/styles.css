@@ -112,14 +112,6 @@ text-align: center;
     background-color: #1c1819;
 }
 
-@media(min-width:576px) {
-    .prof-main {
-        margin-left: 55px;
-        text-align: left;
-
-    }
-}
-
 /*//////////////////////////header 2/********************/
 
 .form-header {
@@ -334,11 +326,12 @@ text-align: center;
 
 .formEditUser {
     border: solid 2px gainsboro;
+    background-color: rgb(232, 207, 207);
     border-radius: 10px;
     margin: 0 auto;
     margin-top: 20px;
     margin-bottom: 20px;
-    width: 70%;
+    width: 90%;
 }
 
 .formEditUser .form-edit-user-img img {
@@ -350,22 +343,14 @@ text-align: center;
     width: 90%;
     max-width: 200px;
 }
-
+.formEditUser input{
+    border: solid 2px black;
+    border-radius: 5px;
+    margin: 15px;
+    width:80%;
+}
 .form-edit-user-data p {
     text-align: center;
-}
-
-.form__nombre .input {
-    border: solid 2px black;
-    border-radius: 10px;
-}
-.form__apellido .input {
-    border: solid 2px black;
-    border-radius: 10px;
-}
-.form__documento .input {
-    border: solid 2px black;
-    border-radius: 10px;
 }
 
 .form-edit_select{
@@ -2894,7 +2879,13 @@ i {
     margin-top: 20px;
     margin-bottom: 20px;
 }
-
+.contenedor_button_user_edit{
+    /* border: solid 2px blue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
 .form-Reg input:hover {
 
     box-shadow: 0 0 5px 0 rgb(228, 56, 101);
@@ -3093,7 +3084,7 @@ i {
     margin-left: 10px;
     padding: 10px;
     height: 100px;
-    width: 100%;
+    width: 85%;
 }
 
 .form-create__descr label {
