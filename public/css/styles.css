@@ -398,12 +398,12 @@ text-align: center;
     }
 }
 
-
 @media(min-width:768px) {
+          
     .initials{
-        font-size: 13px;
-    
+        font-size: 13px;    
     }
+    
     .section-destacados-admin {
         border-radius: 20px;
         width: 50%;
@@ -786,7 +786,6 @@ background-color: black;
 
 /* /////////////////////////////Media quiery admin  ///////////////////////////// */
 @media(min-width:768px) {
-   
     
 
     .admin-but {
@@ -2095,7 +2094,6 @@ i {
     .main-carrito {
         display: flex;
 
-
     }
 
     .descuento-flex {
@@ -2654,16 +2652,11 @@ i {
     background-color: rgb(232, 207, 207);
     border: solid 5px gainsboro;
     border-radius: 10px;
-    /* display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;      */
-    /* height: 500px;    */
     margin: 20px;
     margin-left: auto;
     margin-right: auto;
     padding: 10px;
     width: 90%;
-
 }
 .form-Reg div{
     /* border: solid 2px rgb(43, 198, 226); */
@@ -2775,96 +2768,6 @@ i {
     text-align: left;
     color: #585656
 }
-
-/* .form__usuario input {
-    border: none;
-    border-radius: 7px;
-    font-size: 15px;
-    margin-left: 10px;
-    margin-top: 15px;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    padding-left: 5px;
-    width: 85%;
-
-} */
-
-/* .form__usuario label {
-
-    font-weight: bold;
-    margin-bottom: 10px;
-    margin-left: 10px;
-    padding-bottom: 10px;
-
-
-
-} */
-
-/* .form__fecha input {
-    border-radius: 7px;
-    border: none;
-    color: rgb(122, 117, 117);
-    display: block;
-    font-size: 15px;
-    margin-bottom: 20px;
-    margin-top: 10px;
-    margin-left: 10px;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    width: 85%;
-} */
-
-/* .form__fecha label {
-    font-weight: bold;
-    margin-bottom: 10px;
-    margin-left: 10px;
-} */
-
-/* .form__domicilio {
-    margin-bottom: 20px;
-} */
-
-/* .form__domicilio input {
-    border: none;
-    border-radius: 7px;
-    font-size: 15px;
-    margin-left: 10px;
-    margin-top: 15px;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    padding-left: 5px;
-    width: 85%;
-
-} */
-
-/* .form__domicilio label {
-
-    font-weight: bold;
-    margin-bottom: 10px;
-    margin-left: 10px;
-    padding-bottom: 10px;
-}
- */
-/* .form__password input {
-    border: none;
-    border-radius: 7px;
-    font-size: 15px;
-    margin-left: 10px;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    padding-left: 5px;
-    width: 85%;
-} */
-
-/* .form__password__title {
-    font-weight: bold;
-    margin-bottom: 10px;
-    margin-left: 10px;
-    padding-bottom: 10px;
-
-} */
 
 .form__confirm input {
     border: none;
