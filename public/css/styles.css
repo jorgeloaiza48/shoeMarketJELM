@@ -120,7 +120,6 @@ text-align: center;
     justify-content:center;
     margin: 10px;
 }
-
 .form-header button{
    margin-top: 17px;
    margin-left: -2px;
@@ -200,8 +199,10 @@ text-align: center;
 .texto2{
     align-items: center;
     /* border: solid 2px black; */
-   margin: 10px;
-    width:95%;
+    /* margin: 15px; */
+    display: flex;
+    justify-content: center;
+    width:100%;
 }
 .texto2 p {
     display: flex;
@@ -212,6 +213,7 @@ text-align: center;
     /* margin-top: 0px;
     margin-bottom: 0px; */
     height: 30px;
+    width:95%;
 }
 
 .texto2 i {
@@ -369,6 +371,9 @@ text-align: center;
 
 }
 @media(min-width:576px) {
+    .principal-form-boton2 form button {
+        width: 8%;
+    }
 
     .section-destacados-admin {
         border-radius: 20px;
@@ -390,12 +395,61 @@ text-align: center;
     }
 }
 
-
 @media(min-width:768px) {
-    .initials{
-        font-size: 13px;
-    
+        .form-Reg .contenedor_button {
+        /* border: solid 2px blue; */
+        display: flex;
+        justify-content: space-around;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        width: 80%;
     }
+    main .form-Reg {
+        background-color: rgb(232, 207, 207);
+        border: solid 5px gainsboro;
+        border-radius: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        margin: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 10px;
+        width: 80%;
+    }
+    main .form-Reg div{
+        /* border: solid 2px rgb(43, 198, 226); */
+        height: 15%;
+        margin-bottom: 20px;
+        margin-top: 0px;
+        padding-top: 20px;
+        width: 45%;
+    }
+    main .form-Reg label {
+        font-weight: bold;
+        margin-bottom: 10px;
+        margin-left: 10px;
+        padding-bottom: 10px;
+    }
+    
+    main .form-Reg input {
+        /* border: solid 2px rebeccapurple; */
+        /* border: none; */
+        border-radius: 7px;
+        font-size: 15px;
+        margin-top: 15px;
+        margin-left: 8px;
+        padding-bottom: 8px;
+        padding-top: 8px;
+        padding-left: 5px;
+        width: 90%;
+    }
+          
+    
+    .initials{
+        font-size: 13px;    
+    }
+    
     .section-destacados-admin {
         border-radius: 20px;
         width: 50%;
@@ -779,8 +833,6 @@ background-color: black;
 /* /////////////////////////////Media quiery admin  ///////////////////////////// */
 @media(min-width:768px) {
    
-    
-
     .admin-but {
         line-height: 1px;
     }
@@ -798,11 +850,6 @@ background-color: black;
         font-size: small;
 
     }
-
-    /* .contenedor_button {
-        border: solid 4px green;
-        display: flex;
-    } */
 
     .formEditUser {
         border: solid 2px gainsboro;
@@ -1151,6 +1198,7 @@ i {
 /* /////////////////////////////Media query para 768px   ///////////////////////////// */
 
 @media (min-width: 768px) {
+    
     .art-size__title {
         text-align: center;
     }
@@ -2089,9 +2137,10 @@ i {
 
 
 @media (min-width: 768px) {
+  
+
     .main-carrito {
         display: flex;
-
 
     }
 
@@ -2518,6 +2567,7 @@ i {
 
 
 @media (min-width: 768px) {
+   
     .main-descr {
         display: flex;
     }
@@ -2620,14 +2670,24 @@ i {
 /* ////////////////////////////////////FINALIZA DESCRIPCION DEL PRODUCTO////////////////////////////////////////*/
 
 /*-------------------------------------- REGISTRO   -----------------------------------*/
-.text-aviso {
+main form .text-aviso {
     /* border: solid 2px blue; */
+    height: 10px;
     margin-left: 10px;
     /* margin-bottom: 1px; */
-    margin-top: -55px;
+    /* margin-top: 5px; */
     color: red;
-    width: fit-content;
-    /* text-align:justify; */
+    width: 100%;   
+    display: flex;
+justify-content: start;
+align-items:stretch;
+margin: 0px;
+}
+main form .text-aviso p{
+    /* border: solid 2px blue; */
+    margin-top: -18px;
+    margin-left: 10px;
+    
 }
 
 .text-aviso2 {
@@ -2651,16 +2711,11 @@ i {
     background-color: rgb(232, 207, 207);
     border: solid 5px gainsboro;
     border-radius: 10px;
-    /* display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;      */
-    /* height: 500px;    */
     margin: 20px;
     margin-left: auto;
     margin-right: auto;
     padding: 10px;
     width: 90%;
-
 }
 .form-Reg div{
     /* border: solid 2px rgb(43, 198, 226); */
@@ -2739,7 +2794,7 @@ i {
 .form-login .usuario_record_div .checkbox{
     /* border: solid 25px green; */
     padding: 0px;
-    margin-top: 0px;
+    margin-top: 10px;
 }
 .form-login .section-login__button{
     height: 50px;
@@ -2773,96 +2828,6 @@ i {
     color: #585656
 }
 
-/* .form__usuario input {
-    border: none;
-    border-radius: 7px;
-    font-size: 15px;
-    margin-left: 10px;
-    margin-top: 15px;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    padding-left: 5px;
-    width: 85%;
-
-} */
-
-/* .form__usuario label {
-
-    font-weight: bold;
-    margin-bottom: 10px;
-    margin-left: 10px;
-    padding-bottom: 10px;
-
-
-
-} */
-
-/* .form__fecha input {
-    border-radius: 7px;
-    border: none;
-    color: rgb(122, 117, 117);
-    display: block;
-    font-size: 15px;
-    margin-bottom: 20px;
-    margin-top: 10px;
-    margin-left: 10px;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    width: 85%;
-} */
-
-/* .form__fecha label {
-    font-weight: bold;
-    margin-bottom: 10px;
-    margin-left: 10px;
-} */
-
-/* .form__domicilio {
-    margin-bottom: 20px;
-} */
-
-/* .form__domicilio input {
-    border: none;
-    border-radius: 7px;
-    font-size: 15px;
-    margin-left: 10px;
-    margin-top: 15px;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    padding-left: 5px;
-    width: 85%;
-
-} */
-
-/* .form__domicilio label {
-
-    font-weight: bold;
-    margin-bottom: 10px;
-    margin-left: 10px;
-    padding-bottom: 10px;
-}
- */
-/* .form__password input {
-    border: none;
-    border-radius: 7px;
-    font-size: 15px;
-    margin-left: 10px;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    padding-left: 5px;
-    width: 85%;
-} */
-
-/* .form__password__title {
-    font-weight: bold;
-    margin-bottom: 10px;
-    margin-left: 10px;
-    padding-bottom: 10px;
-
-} */
-
 .form__confirm input {
     border: none;
     border-radius: 7px;
@@ -2888,7 +2853,7 @@ i {
 
 .contenedor_button {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     margin-top: 20px;
     margin-bottom: 20px;
 }
@@ -3266,17 +3231,6 @@ i {
     transition: all 0.8s;
 
 }
-
-
-
-/* .contenedor_button {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-left: 110px;
-   
-} */
 
 .form-create input:hover {
 
