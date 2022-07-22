@@ -121,9 +121,10 @@ text-align: center;
     margin: 10px;
 }
 .form-header button{
+   /* border: solid 1px  red; */
    margin-top: 17px;
    margin-left: -2px;
-   font-size: 22px;
+   /* font-size: 2px; */
    
 }
 .img-header{
@@ -277,6 +278,13 @@ text-align: center;
 .principal-form-boton2 .form-header .input-header{
     height: 30px;
     width: 100%;
+}
+.principal-form-boton2 .form-header button{
+    height: 30px;
+    width:12%
+}
+.fa-search{
+    font-size: medium;
 }
 
 .cont-search-nav3 {

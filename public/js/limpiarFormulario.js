@@ -1,4 +1,4 @@
-window.onload = function () {
+window.addEventListener('load',function () {
     let boton_limpiar_form = document.querySelector("#boton-limpiar-form")
     let register_form = document.querySelector('.form-Reg')
     let preview = document.getElementById('preview')
@@ -10,4 +10,4 @@ window.onload = function () {
         })
 
 
-}
+})
