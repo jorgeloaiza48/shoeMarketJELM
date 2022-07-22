@@ -1,4 +1,5 @@
 window.onload = function () {
+    console.log("hola")
     let form = document.querySelector(".form-Reg")
     let documento = document.querySelector("#documento");
     let nombre = document.querySelector("#nombre");
@@ -13,7 +14,10 @@ window.onload = function () {
     let errors = []
     let errorNombre = document.querySelector(".errorNombre")
 
+    
+
     documento.addEventListener("keyup", function (event) {
+        console.log("hola");
         let liErrorDocumento1 = document.querySelector("#liErrorDocumento1")
         let liErrorDocumento2 = document.querySelector("#liErrorDocumento2")
         let liErrorDocumento3 = document.querySelector("#liErrorDocumento3")

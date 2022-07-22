@@ -1,8 +1,10 @@
 window.onload = function () {
+   
     let boton_limpiar_form = document.querySelector("#boton-limpiar-form")
     let register_form = document.querySelector('.form-Reg')
     let foto_perfil = document.querySelector('#file')
     let preview = document.getElementById('preview')
+    
 
     boton_limpiar_form.addEventListener("click",function(event){
         event.preventDefault()
