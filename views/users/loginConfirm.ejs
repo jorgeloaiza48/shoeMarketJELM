@@ -1,12 +1,5 @@
 <%- include("../partials/head") %>
 <body>
-    <script>
-        swal.fire({
-            title: "Usuario creado con éxito",
-            icon: "success",
-            button: "Aceptar"
-        })
-        </script>
 <%- include("../partials/header2") %>   
                 <main class="main-login">
                     <section class="section-login">
@@ -20,6 +13,10 @@
                                     <label for="email">Correo Electrónico:</label>
                                     <input type="email" name="email" id="email" value="<%= locals.old && old.email ? old.email : ""%>"
                                     placeholder="Correo electrónico" >
+                                    <ul class="errorDocumento">
+                                        <li id="liErrorDocumento1" class="none">Debe introducir un documento</li>
+                                        <li id="liErrorDocumento2" class="none">El campo Correo electrónico debe contener una dirección válida. Ejemplo: usuario@gmail.com"</li>
+                                    </ul>
                                     <% if (locals.errors && errors.email ) { %>
 
                                         <p class="form-error">
@@ -67,6 +64,17 @@
 
                 </main>
                 <%- include("../partials/footer") %>
+
+                <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+                <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+                <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/css/toastr.css" rel="stylesheet"/>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/js/toastr.js"></script>
+                <script src="https://unpkg.com/native-toast@2.0.0/dist/native-toast.min.js"></script>
+                <script src="https://unpkg.com/browse/native-toast@2.0.0/dist/native-toast.min.js"></script>            
+                <script src="https://unpkg.com/native-toast@2.0.0/dist/native-toast.cjs.js"></script>
+                <script src="/js/userCreateConfirm.js"></script>
+                <script src="/js/loginValidation.js"></script>
+               
                 
 </body>
 </html>

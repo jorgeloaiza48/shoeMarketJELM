@@ -396,7 +396,8 @@ text-align: center;
 
 }
 @media(min-width:576px) {
-    .principal-form-boton2 form button {
+    .principal-form-boton2 .form-header button {
+        /* border: solid 2px blue; */
         width: 8%;
     }
 
@@ -1773,6 +1774,12 @@ i {
 /* /////////////////////////////Media quiery para 992px   ///////////////////////////// */
 
 @media (min-width: 992px) {
+
+    .principal-form-boton2 .form-header button {
+        /* border: solid 2px blue; */
+        width: 6%;
+    }
+
     .admin-but {
         line-height: 1px;
     }
