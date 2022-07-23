@@ -31,7 +31,7 @@ window.addEventListener("load", function (event) {
     let iconoColorOK = document.querySelector("#iconoColorOK")
     let iconoColorX = document.querySelector("#iconoColorX")
 
-
+let errores = []
 
     nombre.addEventListener("keyup", function (event) {
 
@@ -44,13 +44,14 @@ window.addEventListener("load", function (event) {
             iconoNombreX.classList.add("fa-circle-xmark")
             iconoNombreOK.classList.remove("fa-regular")
             iconoNombreOK.classList.remove("fa-circle-check")
-
+            
         } else {
             liErrorNombreProd1.classList.add("none")
             nombre.classList.remove("error")
             nombre.classList.add("valid")
             iconoNombreX.classList.remove("fa-regular")
             iconoNombreX.classList.remove("fa-circle-xmark")
+            
         }
         if (nombre.value.length < 5) {
             liErrorNombreProd2.classList.remove("none")
@@ -61,6 +62,7 @@ window.addEventListener("load", function (event) {
             iconoNombreX.classList.add("fa-circle-xmark")
             iconoNombreOK.classList.remove("fa-regular")
             iconoNombreOK.classList.remove("fa-circle-check")
+            
 
         } else {
             liErrorNombreProd2.classList.add("none")
@@ -88,6 +90,7 @@ window.addEventListener("load", function (event) {
             iconoDescripcionX.classList.add("fa-circle-xmark")
             iconoDescripcionOK.classList.remove("fa-regular")
             iconoDescripcionOK.classList.remove("fa-circle-check")
+            errores.push("error")
 
         } else {
             liErrorDescripcionProd1.classList.add("none")
@@ -106,6 +109,7 @@ window.addEventListener("load", function (event) {
             iconoDescripcionX.classList.add("fa-circle-xmark")
             iconoDescripcionOK.classList.remove("fa-regular")
             iconoDescripcionOK.classList.remove("fa-circle-check")
+            
         } else {
             liErrorDescripcionProd2.classList.add("none")
             description.classList.remove("error")
@@ -114,7 +118,7 @@ window.addEventListener("load", function (event) {
             iconoDescripcionX.classList.remove("fa-circle-xmark")
             iconoDescripcionOK.classList.add("fa-regular")
             iconoDescripcionOK.classList.add("fa-circle-check")
-
+            
         }
     })
 
@@ -183,8 +187,23 @@ window.addEventListener("load", function (event) {
         }
 
     })
-    
+    form.addEventListener("submit",function(event){
+        
+        if(nombre.value.length < 5){3
+            event.preventDefault()
+        }
+        if(description.value.length < 20){3
+            event.preventDefault()
+        }
+        if(precio.value === ""){
+            event.preventDefault()
+        }
+        if(color.value.length < 3){
+            event.preventDefault()
+        }
+        
 
+    })
 })
 
 
