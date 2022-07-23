@@ -2,122 +2,192 @@
 
     <body>
         <%- include("../partials/header2") %>
-        <header>
-
-            <h1 class="crear-title">Crear producto</h1>
-
-        </header>
-
-        <main class="main-register">
 
 
-            <form action="/admin/productos/crear" method="POST" class="form-create" enctype="multipart/form-data">
 
-                <div class="form-create__nombre">
-                    <label for="nombre">Nombre y color *</label>
-                    <input  type="text" name="nombre" id="nombre" placeholder="Nombre del nuevo producto" value="<%= locals.old && old.nombre ? old.nombre : ""%>"  >
+
+
+
+            <main class="main-register main-relative">
+
+
+                <h1 class="crear-title">Crear producto </h1>
+
+
+
+
+               
+
+
+
+
+                <form action="/admin/productos/crear" method="POST" class="form-create form-create-prod"
+                    enctype="multipart/form-data">
+
+
+                    <div class="form-create__nombre">
+                        <label class="label-relative" for="nombre">Nombre y color *
+                            <i class="iconoNombre-create-prod-OK" id="iconoNombreOK"></i>
+                            <i class="iconoNombre-create-prod-X" id="iconoNombreX"></i>
+                        </label>
+
+                        <input type="text" name="nombre" id="nombre-create-prod" placeholder="Nombre del nuevo producto"
+                            value="<%= locals.old && old.nombre ? old.nombre : ""%>">
+
                         <% if (locals.errors && errors.nombre) {%>
-                            <div class="text-aviso"><%= errors.nombre.msg %></div>
-                        <%}%>
-                </div>
-                <div class="form-create__descr">
-                    <label for="description">Descripcion del producto*</label>
-                    <textarea name="description"  cols="1" rows="1"><%= locals.old && old.description ? old.description : "" %></textarea>
-                    <% if (locals.errors && errors.description) { %>
-                        <p class="form-contact__error">
-                            <div class="text-aviso"><%= errors.description.msg %></div>
-                        </p>
-                        <% } %>
-
-                </div>
-
-                
-                <div class="form-create__img">
-                    <label for="photo">Seleccione la foto </label>
-                   
-                        <input type="file" name="img" accept=".jpg,.jpeg,.png"  id="file" >    
-                   
+                            <div class="text-aviso">
+                                <%= errors.nombre.msg %>
+                            </div>
+                            <%}%>
                     </div>
-                          <% if (locals.errors && errors.img) {%>
-                              <div class="text-aviso"><%= errors.img.msg %></div>
-                          <%}%>
-                     
+                    <ul>
+                        <li class="none" id="liErrorNombreProd1">Debe introducir un nombre para el producto</li>
+                        <li class="none" id="liErrorNombreProd2">Debe tener al menos 5 caracteres</li>
 
-                        <div id="preview"></div>
-                    
-                        <script>
-                            document.getElementById("file").onchange = function(e) {
-	                        let reader = new FileReader();
+                    </ul>
+                    <div class="form-create__descr">
+                        <label class="label-relative" for="description">Descripcion del producto*
+                            <i class="iconoDescripcion-create-prod-OK" id="iconoDescripcionOK"></i>
+                            <i class="iconoDescripcion-create-prod-X" id="iconoDescripcionX"></i>
+                        </label>
+                        <textarea id="description" name="description" cols="1"
+                            rows="1"><%= locals.old && old.description ? old.description : "" %></textarea>
 
-                          reader.onload = function(){
-                        let preview = document.getElementById('preview'),
-    		            image = document.createElement('img');
 
-                        image.src = reader.result;
-    
-                        preview.innerHTML = '';
-                        preview.append(image);
-                                                };
- 
-                        reader.readAsDataURL(e.target.files[0]);
-}    
-                        </script>
-                
-                
-                <div class="form-create__price">
-                    <label for="price">Precio *</label><br>
-                    <input type="number" name="price" id="price" placeholder=" Introduzca el precio" value="<%= locals.old && old.price ? old.price: ""%>"
-                        >
-                        <% if (locals.errors && errors.price) {%>
-                            <div class="text-aviso"><%= errors.price.msg %></div>
-                        <%}%>
-                </div>
-                
-
-                <div class="form-create__cat">
-                    <div class="form-create__cat-div">
-                        <label for="category">Selecciona la categoria</label>
-                    </div>
-                    <div class="form-create__cat__div-input">
-                        <select name="category" id="category" >
-
-                            <option value="" disabled selected>Seleccione</option>
-                            <% categories.forEach(categoria=> { %>
-                                <option <%= locals.old && old.category == categoria.id ? "selected" : "" %> value="<%= categoria.id %>" >
-                                        <%= categoria.name %>
-                                </option>
-                                <% }) %>
-
-                        </select>
-                        <% if (locals.errors && errors.category) {%>
-                            <div class="text-aviso2"><%= errors.category.msg %></div>
-                        <%}%>
+                        <% if (locals.errors && errors.description) { %>
+                            <p class="form-contact__error">
+                            <div class="text-aviso">
+                                <%= errors.description.msg %>
+                            </div>
+                            </p>
+                            <% } %>
 
                     </div>
+                    <ul>
+                        <li class="none" id="liErrorDescripcionProd1">Debe introducir una descripcion para el producto
+                        </li>
+                        <li class="none" id="liErrorDescripcionProd2">Debe tener al menos 20 caracteres</li>
 
-                </div>
-                <div class="form-create__nombre">
-                    <label for="color">Color del producto *</label>
-                    <input  type="text" name="color" id="color" placeholder="Nombre del nuevo producto" value="<%= locals.old && old.color ? old.color : ""%>"  >
-                        <% if (locals.errors && errors.color) {%>
-                            <div class="text-aviso"><%= errors.color.msg %></div>
+                    </ul>
+
+                    <div class="form-create__img">
+                        <label for="photo">Seleccione la foto </label>
+
+                        <input type="file" id="img-create-prod" name="img" accept=".jpg,.jpeg,.png" id="file">
+
+                    </div>
+                    <ul class="img-errores-create-prod">
+
+                    </ul>
+                    <% if (locals.errors && errors.img) {%>
+                        <div class="text-aviso">
+                            <%= errors.img.msg %>
+                        </div>
                         <%}%>
-                </div>
-                
-                
-                   
-                </div>
-                <div class="contenedor_button">
-                    <button class="form__button" type="delete">Borrar</button>
-                    <button class="form__button" type="submit">Enviar</button>
-
-                </div>
-            </form>
 
 
-        </main>
+                            <div id="preview"></div>
 
-          <%- include("../partials/footer") %>
+                            <script>
+                                document.getElementById("img-create-prod").onchange = function (e) {
+                                    let reader = new FileReader();
+
+                                    reader.onload = function () {
+                                        let preview = document.getElementById('preview'),
+                                            image = document.createElement('img');
+
+                                        image.src = reader.result;
+
+                                        preview.innerHTML = '';
+                                        preview.append(image);
+                                    };
+
+                                    reader.readAsDataURL(e.target.files[0]);
+                                }    
+                            </script>
+
+
+                            <div class="form-create__price">
+                                <label class="label-relative" for="price">Precio *
+                                    <i class="iconoPrecio-create-prod-OK" id="iconoPrecioOK"></i>
+                                    <i class="iconoPrecio-create-prod-X" id="iconoPrecioX"></i>
+                                </label><br>
+                                <input type="number" name="price" id="price" placeholder=" Introduzca el precio"
+                                    value="<%= locals.old && old.price ? old.price: ""%>">
+
+                                <% if (locals.errors && errors.price) {%>
+                                    <div class="text-aviso">
+                                        <%= errors.price.msg %>
+                                    </div>
+                                    <%}%>
+                            </div>
+                            <ul>
+                                <li class="none" id="liErrorPrecioProd1">Debe introducir un precio para el producto</li>
+
+                            </ul>
+
+                            <div class="form-create__cat">
+                                <div class="form-create__cat-div">
+                                    <label for="category">Selecciona la categoria</label>
+                                </div>
+                                <div class="form-create__cat__div-input">
+                                    <select name="category" id="category-create-prod">
+
+                                        <option value="" disabled selected>Seleccione</option>
+                                        <% categories.forEach(categoria=> { %>
+                                            <option <%=locals.old && old.category==categoria.id ? "selected" : "" %>
+                                                value="<%= categoria.id %>" >
+                                                    <%= categoria.name %>
+                                            </option>
+                                            <% }) %>
+
+                                    </select>
+                                    <% if (locals.errors && errors.category) {%>
+                                        <div class="text-aviso2">
+                                            <%= errors.category.msg %>
+                                        </div>
+                                        <%}%>
+
+                                </div>
+                                <ul class="category-errores-create-prod">
+
+                                </ul>
+                            </div>
+                            <div class="form-create__nombre">
+                                <label class="label-relative" for="color">Color del producto *
+                                    <i class="iconoColor-create-prod-OK" id="iconoColorOK"></i>
+                                    <i class="iconoColor-create-prod-X" id="iconoColorX"></i>
+                                </label>
+                                <input type="text" name="color" id="color-create-prod"
+                                    placeholder="Nombre del nuevo producto"
+                                    value="<%= locals.old && old.color ? old.color : ""%>">
+                                <% if (locals.errors && errors.color) {%>
+                                    <div class="text-aviso">
+                                        <%= errors.color.msg %>
+                                    </div>
+                                    <%}%>
+                            </div>
+                            <ul>
+                                <li class="none" id="liErrorColorProd1">Debe introducir un color para el producto</li>
+                                <li class="none" id="liErrorColorProd2">Debe tener al menos 3 caracteres</li>
+
+
+                            </ul>
+
+
+
+                            <div class="contenedor_button">
+                                <button class="form__button" type="reset">Borrar</button>
+                                <button class="form__button" type="submit">Enviar</button>
+
+                            </div>
+                </form>
+
+
+            </main>
+
+            <%- include("../partials/footer") %>
+                <script src="/js/cargaProductos.js"></script>
     </body>
 
     </html>

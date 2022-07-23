@@ -48,8 +48,8 @@ text-align: center;
 }
 
 
-.is-invalid {
-    color: #842029;
+.valid {
+    background-color: #c0db9f;
   }
   .show{
     display: block;
@@ -63,6 +63,72 @@ text-align: center;
     margin-top: 5px;
     color:#d93f3f
 }
+.errorTextLi{
+    margin-left: -28px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    color:#d93f3f;
+    list-style: none;
+}
+.label-relative{
+    position: relative
+}
+.iconoNombre-create-prod-OK{
+    position: absolute;
+    bottom: -29px;
+    left: 280px;
+    color: green;
+}
+.iconoNombre-create-prod-X{
+    position: absolute;
+    bottom: -29px;
+    left: 280px;
+    color: rgb(255 1 1)
+}
+.iconoDescripcion-create-prod-OK{
+    position: absolute;
+    bottom: -106px;
+    left: 291px;
+    color: green;
+}
+.iconoDescripcion-create-prod-X{
+    position: absolute;
+    bottom: -106px;
+    left: 291px;
+    color: rgb(255 1 1)
+}
+.iconoPrecio-create-prod-OK{
+    position: absolute;
+    bottom: -30px;
+    left: 284px;
+    color: green;
+}
+.iconoPrecio-create-prod-X{
+    position: absolute;
+    bottom:  -30px;
+    left: 284px;
+    color: rgb(255 1 1)
+}
+
+.iconoColor-create-prod-OK{
+    position: absolute;
+    bottom: -30px;
+    left: 284px;
+    color: green;
+}
+.iconoColor-create-prod-X{
+    position: absolute;
+    bottom:  -30px;
+    left: 284px;
+    color: rgb(255 1 1)
+}
+
+
+
+
+
+
+
 /*//////////////////////////profile/********************/
 .profile-contain{
     display: flex;
@@ -900,9 +966,9 @@ background-color: black;
         text-align: center;
     }
 
-    .form-edit-user-data .form__nombre input {
+    /* .form-edit-user-data .form__nombre input {
         /* border: solid 1px black; */
-    }
+    /* } */ 
 
     /* .main-register{
     display: flex;
@@ -2728,16 +2794,16 @@ main form .text-aviso p{
     color: red;
 }
 .error{
-    background-color:#db55559c
+    background-color:#db55555c
 }
 .errores{
-    background-color:#db55559c
+    background-color:#db55555c
 }
 .formulario-e{
-    background-color:#db55559c
+    background-color:#db55555c
 }
 .ok{
-    background-color:#db55559c
+    background-color:#db55555c
 }
 .form-Reg {
     background-color: rgb(232, 207, 207);
