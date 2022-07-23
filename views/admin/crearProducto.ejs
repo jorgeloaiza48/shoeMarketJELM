@@ -73,9 +73,12 @@
                     <div class="form-create__img">
                         <label for="photo">Seleccione la foto </label>
 
-                        <input type="file" id="img-create-prod " name="img" accept=".jpg,.jpeg,.png" id="file">
+                        <input type="file" id="img-create-prod" name="img" accept=".jpg,.jpeg,.png" id="file">
 
                     </div>
+                    <ul class="img-errores-create-prod">
+
+                    </ul>
                     <% if (locals.errors && errors.img) {%>
                         <div class="text-aviso">
                             <%= errors.img.msg %>
@@ -86,7 +89,7 @@
                             <div id="preview"></div>
 
                             <script>
-                                document.getElementById("file").onchange = function (e) {
+                                document.getElementById("img-create-prod").onchange = function (e) {
                                     let reader = new FileReader();
 
                                     reader.onload = function () {
@@ -146,7 +149,9 @@
                                         <%}%>
 
                                 </div>
+                                <ul class="category-errores-create-prod">
 
+                                </ul>
                             </div>
                             <div class="form-create__nombre">
                                 <label class="label-relative" for="color">Color del producto *

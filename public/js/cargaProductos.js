@@ -6,6 +6,8 @@ window.addEventListener("load", function (event) {
     let form = document.querySelector(".form-create")
 
     let img = document.querySelector("#img-create-prod");
+   
+    
     let category = document.querySelector("#category-create-prod");
 
     let nombre = document.querySelector("#nombre-create-prod");
@@ -187,6 +189,8 @@ let errores = []
         }
 
     })
+    
+
     form.addEventListener("submit",function(event){
         
         if(nombre.value.length < 5){3
@@ -201,7 +205,14 @@ let errores = []
         if(color.value.length < 3){
             event.preventDefault()
         }
-        
+        if(img.value === ""){
+            document.querySelector(".img-errores-create-prod").innerHTML += "<li class=errorTextLi>" + "Debe introducir una imagen"+ "</li>"
+            event.preventDefault()
+        }
+        if(category.value === ""){
+            document.querySelector(".category-errores-create-prod").innerHTML += "<li class=errorTextLi>" + "Debe introducir una categoria"+ "</li>"
+            event.preventDefault()
+        }
 
     })
 })
