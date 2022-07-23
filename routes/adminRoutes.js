@@ -48,7 +48,7 @@ router.delete("/usuario/delete/:id", adminController.userSoftDelete)
 router.get("/lista/productos",adminMiddleware, adminController.adminProducts)//le saque el admin adminMiddleware
 router.get("/lista/productosinactivos",adminMiddleware, adminController.productsDisabled)//le saque el admin adminMiddleware
 
-router.get("/productos/crear",adminMiddleware, adminController.crearProducto)//le saque el admin adminMiddleware
+router.get("/productos/crear", adminController.crearProducto)//le saque el admin adminMiddleware
 
 router.post("/productos/crear", upload.single("img"), validationProducts, adminController.newproduct)
 
