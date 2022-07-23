@@ -121,9 +121,10 @@ text-align: center;
     margin: 10px;
 }
 .form-header button{
+   /* border: solid 1px  red; */
    margin-top: 17px;
    margin-left: -2px;
-   font-size: 22px;
+   /* font-size: 2px; */
    
 }
 .img-header{
@@ -213,7 +214,7 @@ text-align: center;
     /* margin-top: 0px;
     margin-bottom: 0px; */
     height: 30px;
-    width:95%;
+    width:100%;
 }
 
 .texto2 i {
@@ -277,6 +278,13 @@ text-align: center;
 .principal-form-boton2 .form-header .input-header{
     height: 30px;
     width: 100%;
+}
+.principal-form-boton2 .form-header button{
+    height: 30px;
+    width:12%
+}
+.fa-search{
+    font-size: medium;
 }
 
 .cont-search-nav3 {
@@ -344,10 +352,27 @@ text-align: center;
     max-width: 200px;
 }
 .formEditUser input{
-    border: solid 2px black;
-    border-radius: 5px;
-    margin: 15px;
-    width:80%;
+    /* border: solid 2px black; */
+    border: none;
+    border-radius: 7px;
+    font-size: 15px;
+    margin-top: 10px;
+    margin-left: 2px;
+    margin-bottom: 20px;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    padding-left: 5px;
+    width: 95%;
+}
+.formEditUser label{
+    /* border: solid 2px green; */
+    margin-left: 4px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+
+
+
 }
 .form-edit-user-data p {
     text-align: center;
@@ -875,7 +900,7 @@ background-color: black;
     }
 
     .form-edit-user-data .form__nombre input {
-        border: solid 1px black;
+        /* border: solid 1px black; */
     }
 
     /* .main-register{
@@ -2734,7 +2759,7 @@ main form .text-aviso p{
 
 .form-Reg input {
     /* border: solid 2px rebeccapurple; */
-    /* border: none; */
+    border: none;
     border-radius: 7px;
     font-size: 15px;
     margin-top: 15px;
