@@ -9,10 +9,13 @@
             
                             <!-- <div class="usuario"> -->
             
-                                <div class="usuario__nombre">
-                                    <label for="email">Correo Electrónico:</label>
+                                <div class="usuario__nombre ">
+                                    <label for="email">Correo Electrónico:
+                                    <i id="email-check"></i>                                                                             
+                                    </label>
+                                    
                                     <input type="email" name="email" id="email" value="<%= locals.old && old.email ? old.email : ""%>"
-                                    placeholder="Correo electrónico" >
+                                    placeholder="Correo electrónico">
                                     <ul class="errorDocumento">
                                         <li id="liErrorDocumento1" class="none">Debe introducir una dirección de email.</li>
                                         <li id="liErrorDocumento2" class="none">El campo Correo electrónico debe contener una dirección válida. Ejemplo: usuario@gmail.com</li>

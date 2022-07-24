@@ -4,6 +4,13 @@ window.addEventListener('load',function () {
     let recordame = document.querySelector("#record")
     let boton_enviar = document.querySelector('.button-login')
     let form = document.querySelector('.form-login')
+
+    let iconoEmailOK = document.querySelector("#iconoEmailOK")
+    let iconoEmailX = document.querySelector("#iconoEmailX")
+    let input_email = document.querySelector("#email")
+
+    let email_check = document.querySelector("#email-check")
+
   
     password.disabled = true
     recordame.disabled = true
@@ -17,7 +24,8 @@ window.addEventListener('load',function () {
                     liErrorDocumento1.classList.remove("none")
                     liErrorDocumento1.classList.add("show")
                     liErrorDocumento1.classList.add("errorText")
-                    liErrorDocumento2.classList.add("none")
+                    liErrorDocumento2.classList.add("none")  
+                    email_check.classList.add("none")                                                                    
                     email.classList.add("error")
                     password.disabled = true
                 }
@@ -28,11 +36,16 @@ window.addEventListener('load',function () {
                   liErrorDocumento2.classList.add("show")
                   liErrorDocumento2.classList.add("errorText")
                   email.classList.add("error")
+                  email_check.classList.remove("fa-circle-check") 
+                  email_check.classList.remove("fa-solid") 
                     
                 }
                   else{
                     password.disabled = false;
                     liErrorDocumento2.classList.add("none")
+                    email_check.classList.add("show")
+                    email_check.classList.add("fa-circle-check")
+                    email_check.classList.add("fa-solid")
                     // toastr.info("El campo Correo electrónico debe contener una dirección válida. Ejemplo: usuario@gmail.com");
                    
                         }
