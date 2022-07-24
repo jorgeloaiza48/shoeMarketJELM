@@ -201,7 +201,7 @@ text-align: center;
 .lista__productos {
 
     align-items: center;
-    background: transparent;
+    
     border-radius: 10px;
     cursor: pointer;
     display: none;
@@ -227,7 +227,7 @@ text-align: center;
 
 .lista__profile-down {
     align-items: center;
-    background: transparent;
+
     border-radius: 10px;
     cursor: pointer;
     display: block;
@@ -246,7 +246,7 @@ text-align: center;
 }
 .lista__profile-down__admin {
     align-items: center;
-    background: transparent;
+    
     border-radius: 10px;
     cursor: pointer;
     display: block;
@@ -579,7 +579,7 @@ text-align: center;
 
     .lista__profile-down {
         align-items: center;
-        background: transparent;
+        
         border-radius: 10px;
         cursor: pointer;
         display: none;
@@ -600,7 +600,7 @@ text-align: center;
     }
     .lista__profile-down__admin {
         align-items: center;
-        background: transparent;
+    
         border-radius: 10px;
         cursor: pointer;
         display: none;
@@ -726,7 +726,7 @@ text-align: center;
 
     .lista__profile-down {
         align-items: center;
-        background: transparent;
+        
         border-radius: 10px;
         cursor: pointer;
         display: none;
@@ -743,7 +743,7 @@ text-align: center;
     }
     .lista__profile-down__admin {
         align-items: center;
-        background: transparent;
+        
         border-radius: 10px;
         cursor: pointer;
         display: none;
@@ -3166,8 +3166,19 @@ main form .text-aviso p{
     padding-bottom: 10px;
 
 }
-
-
+.label-create-prod-img{
+    font-weight: bold;
+    margin-left: 10px;
+}
+.div-create-prod-img{
+    margin-bottom: 15px;
+}
+.input-create-prod-img{
+    margin-left: 10px;
+}
+.label-create-prod-descr{
+    margin-left: 10px;
+}
 .form-create__nombre input {
     border: none;
     border-radius: 7px;

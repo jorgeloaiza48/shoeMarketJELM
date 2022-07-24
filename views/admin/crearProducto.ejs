@@ -46,7 +46,7 @@
 
                     </ul>
                     <div class="form-create__descr">
-                        <label class="label-relative" for="description">Descripcion del producto*
+                        <label  class="label-relative label-create-prod-descr" for="description">Descripcion del producto*
                             <i class="iconoDescripcion-create-prod-OK" id="iconoDescripcionOK"></i>
                             <i class="iconoDescripcion-create-prod-X" id="iconoDescripcionX"></i>
                         </label>
@@ -71,12 +71,16 @@
                     </ul>
 
                     <div class="form-create__img">
-                        <label for="photo">Seleccione la foto </label>
+                        <div class="div-create-prod-img">
+                            <label class="label-create-prod-img" for="photo">Seleccione la foto </label>
 
-                        <input type="file" id="img-create-prod" name="img" accept=".jpg,.jpeg,.png" id="file">
+                        </div>
+
+                        <input class="input-create-prod-img" type="file" id="img-create-prod" name="img" accept=".jpg,.jpeg,.png" id="file">
 
                     </div>
-                    <ul class="img-errores-create-prod">
+                    <ul>
+                        <li class="none" id="liErrorimgProd1">Debe introducir una imagen</li>
 
                     </ul>
                     <% if (locals.errors && errors.img) {%>
@@ -149,8 +153,9 @@
                                         <%}%>
 
                                 </div>
-                                <ul class="category-errores-create-prod">
-
+                                <ul>
+                                    <li class="none" id="liErrorCategoriaProd1">Debe elegir una categoria para el producto</li>
+    
                                 </ul>
                             </div>
                             <div class="form-create__nombre">
