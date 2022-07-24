@@ -14,20 +14,41 @@
                             alt="<%= producto.image %>">
                     </div>
                     <div class="form-create__nombre">
-                        <label for="nombre">Nombre y color *</label>
-                        <input type="text" name="name" id="nombre" placeholder="Nombre del nuevo producto" required
-                            value="<%= producto.name %>">
+                        <label class="label-relative" for="nombre">Nombre y color *
+                            <i class="iconoNombre-edit-prod-OK" id="iconoEditNombreOK"></i>
+                            <i class="iconoNombre-edit-prod-X" id="iconoEditNombreX"></i>
+                        </label>
+                        <input type="text" name="name" id="nombre-edit-prod" placeholder="Nombre del nuevo producto"
+                            required value="<%= producto.name %>">
                     </div>
+                    <ul>
+                        <li class="none" id="liErrorNombreEditProd1">Debe introducir un nombre para el producto</li>
+                        <li class="none" id="liErrorNombreEditProd2">Debe tener al menos 5 caracteres</li>
+                    </ul>
                     <div class="form-create__descr">
-                        <label for="description">Descripcion del producto*</label>
-                        <textarea name="description" id="description" cols="30"
+                        <label class="label-relative" for="description">Descripcion del producto*
+                            <i class="iconoDescripcion-edit-prod-OK" id="iconoEditDescripcionOK"></i>
+                            <i class="iconoDescripcion-edit-prod-X" id="iconoEditDescripcionX"></i>
+                        </label>
+                        <textarea name="description" id="descriptionEditProd" cols="30"
                             rows="10"> <%= producto.description %> </textarea>
                     </div>
+                    <ul>
+                        <li class="none" id="liErrorDescripcionEditProd1">Debe introducir una descripcion para el
+                            producto
+                        </li>
+                        <li class="none" id="liErrorDescripcionEditProd2">Debe tener al menos 20 caracteres</li>
+
+                    </ul>
 
                     <div class="form-create__img">
-                        <label for="photo">Seleccione la foto
-                            <div class="file-select"><input type="file" name="img" accept=".jpg,.jpeg" id="file"></div>
+                        <label class="label-relative"  for="photo">Seleccione la foto
+                            <div class="file-select"><input type="file" name="img" accept=".jpg,.jpeg" id="img-edit-prod"></div>
                         </label>
+                        <ul>
+                            <li class="none" id="liErrorimgEditProd1">Debe introducir una imagen</li>
+
+                        </ul>
                         <div id="preview"></div>
 
                         <script>
@@ -49,14 +70,31 @@
                         </script>
 
                     </div>
+
                     <div class="form-create__price">
-                        <label for="price">Precio *</label><br>
-                        <input type="number" name="price" value="<%= producto.price %>">
+                        <label class="label-relative" for="price">Precio *
+                            <i class="iconoPrecio-edit-prod-OK" id="iconoEditPrecioOK"></i>
+                            <i class="iconoPrecio-edit-prod-X" id="iconoEditPrecioX"></i>
+                        </label><br>
+                        <input type="number" name="price" id="priceEditProd" value="<%= producto.price %>">
                     </div>
+                    <ul>
+                        <li class="none" id="liErrorPrecioEditProd1">Debe introducir un precio para el producto</li>
+
+                    </ul>
                     <div class="form-create__price">
-                        <label for="color">Color *</label><br>
-                        <input type="text" name="color" value="<%= producto.color %>">
+                        <label class="label-relative" for="color">Color *
+                            <i class="iconoColor-edit-prod-OK" id="iconoEditColorOK"></i>
+                            <i class="iconoColor-edit-prod-X" id="iconoEditColorX"></i>
+                        </label><br>
+                        <input type="text" id="color-edit-prod" name="color" value="<%= producto.color %>">
                     </div>
+                    <ul>
+                        <li class="none" id="liErrorEditColorProd1">Debe introducir un color para el producto</li>
+                        <li class="none" id="liErrorEditColorProd2">Debe tener al menos 3 caracteres</li>
+
+
+                    </ul>
 
                     <div class="form-create__cat">
                         <div class="form-create__cat-div">
@@ -84,7 +122,7 @@
                             <label for="category">Selecciona la categoria</label>
                         </div>
                         <div class="form-create__cat__div-input">
-                            <select name="category" id="categoria" required>
+                            <select name="category" id="category-edit-prod" required>
 
 
                                 <option value="" disabled>Seleccione</option>
@@ -102,6 +140,11 @@
 
 
                         </div>
+                        <ul>
+                            <li class="none" id="liErrorCategoriaEditProd1">Debe elegir una categoria para el producto
+                            </li>
+
+                        </ul>
 
                     </div>
 
@@ -112,6 +155,8 @@
 
                         <button type="submit" class="form__button">Editar Producto</button>
 
+
+
                     </div>
                 </form>
 
@@ -119,6 +164,7 @@
             </main>
 
             <%- include("../partials/footer") %>
+                <script src="/js/editarProductos.js"></script>
     </body>
 
     </html>

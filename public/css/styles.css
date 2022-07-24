@@ -85,6 +85,19 @@ text-align: center;
     left: 280px;
     color: rgb(255 1 1)
 }
+.iconoNombre-edit-prod-OK{
+    position: absolute;
+    bottom: -29px;
+    left: 280px;
+    color: green;
+}
+.iconoNombre-edit-prod-X{
+    position: absolute;
+    bottom: -29px;
+    left: 280px;
+    color: rgb(255 1 1)
+}
+
 .iconoDescripcion-create-prod-OK{
     position: absolute;
     bottom: -106px;
@@ -92,6 +105,18 @@ text-align: center;
     color: green;
 }
 .iconoDescripcion-create-prod-X{
+    position: absolute;
+    bottom: -106px;
+    left: 291px;
+    color: rgb(255 1 1)
+}
+.iconoDescripcion-edit-prod-OK{
+    position: absolute;
+    bottom: -106px;
+    left: 291px;
+    color: green;
+}
+.iconoDescripcion-edit-prod-X{
     position: absolute;
     bottom: -106px;
     left: 291px;
@@ -109,6 +134,18 @@ text-align: center;
     left: 284px;
     color: rgb(255 1 1)
 }
+.iconoPrecio-edit-prod-OK{
+    position: absolute;
+    bottom: -30px;
+    left: 284px;
+    color: green;
+}
+.iconoPrecio-edit-prod-X{
+    position: absolute;
+    bottom:  -30px;
+    left: 284px;
+    color: rgb(255 1 1)
+}
 
 .iconoColor-create-prod-OK{
     position: absolute;
@@ -117,6 +154,18 @@ text-align: center;
     color: green;
 }
 .iconoColor-create-prod-X{
+    position: absolute;
+    bottom:  -30px;
+    left: 284px;
+    color: rgb(255 1 1)
+}
+.iconoColor-edit-prod-OK{
+    position: absolute;
+    bottom: -30px;
+    left: 284px;
+    color: green;
+}
+.iconoColor-edit-prod-X{
     position: absolute;
     bottom:  -30px;
     left: 284px;
@@ -3374,20 +3423,13 @@ main form .text-aviso p{
 
 }
 
-.form-create input:hover {
-
-    box-shadow: 0 0 5px 0 rgb(228, 56, 101);
-
-}
 
 .form-create input {
     outline: none;
     transition: all 0.5s;
 }
 
-.form-create label:hover {
-    color: rgb(228, 56, 101);
-}
+
 
 
 .form__button:hover {
@@ -3398,14 +3440,6 @@ main form .text-aviso p{
 
 }
 
-/* .form-create__descr:hover {
-    color: rgb(228, 56, 101);
-} */
-
-
-.form-create input[type="text"]:focus:required:valid {
-    border: 2px solid green;
-}
 
 
 

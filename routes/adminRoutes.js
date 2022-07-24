@@ -52,7 +52,7 @@ router.get("/productos/crear", adminController.crearProducto)//le saque el admin
 
 router.post("/productos/crear", upload.single("img"), validationProducts, adminController.newproduct)
 
-router.get("/productos/editar/:id",adminMiddleware, adminController.editarProducto)//le saque el admin adminMiddleware
+router.get("/productos/editar/:id", adminController.editarProducto)//le saque el admin adminMiddleware
 
 router.put('/productos/editar/:id', upload.single("img"), adminController.update)
 

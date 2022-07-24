@@ -171,7 +171,7 @@ const controller = {
         Promise.all([categoriesInDb, productInDb])
             .then(function ([categorias, producto]) {
 
-                return res.render('admin/editarProducto', { title: "Crear Producto", producto: producto, categories: categorias })
+                return res.render('admin/editarProducto', { title: "Editar Producto", producto: producto, categories: categorias })
 
             })
         
