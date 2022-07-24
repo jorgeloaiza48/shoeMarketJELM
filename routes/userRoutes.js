@@ -35,7 +35,7 @@ router.post('/registro',upload.single("photo"),Validations, userController.creat
 // router.post('/borrar',userController.borrarUsuario); 
 
 // **Logueo de usuarios**
-router.get('/loginRegister',guestMiddleware,userController.loginRegister)
+router.get('/loginConfirm',guestMiddleware,userController.loginRegister)
 router.get('/login',guestMiddleware,userController.login)
 router.post("/login",userController.processLogin)
 

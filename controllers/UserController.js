@@ -93,7 +93,7 @@ const controller = {
                     status: "Activo"
                 })
                 
-                res.redirect("loginRegister")
+                res.redirect("loginConfirm")
             }
         })//.then
         }//else2
@@ -105,7 +105,7 @@ const controller = {
 
     login: (req, res) => { res.render('users/login', { title: "Login" }) },
     
-    loginRegister: (req, res) => { res.render('users/loginRegister', { title: "Login" }) },
+    loginRegister: (req, res) => { res.render('users/loginConfirm', { title: "Login" }) },
     
 
     processLogin :(req,res) =>{
