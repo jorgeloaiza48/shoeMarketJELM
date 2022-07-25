@@ -141,6 +141,20 @@ const controller = {
             where: { id: req.params.id }
         })
             .then(() => {
+                return res.redirect("/admin/lista/productosInactivos")
+            })
+
+
+
+    },
+    enableProduct: (req, res) => {
+        
+        db.Product.update({
+            status: "Enabled"
+        }, {
+            where: { id: req.params.id }
+        })
+            .then(() => {
                 return res.redirect("/admin/lista/productos")
             })
 

@@ -21,12 +21,12 @@
     <div class="product-edit">
         <form action="/admin/productos/editar/<%= product.id %>" method="get">
             <button type="submit" name="editar" id="editar" class="admin-but">
-                <p>EDITAR</p>
+                EDITAR
             </button>
         </form>
-        <form action="/admin/productos/delete/<%= product.id %>?_method=DELETE" method="POST">
+        <form action="/admin/productos/enable/<%= product.id%>?_method=PUT" method="POST">
             <button type="submit" name="delete" id="delete" class="admin-but">
-                <p>ELIMINAR</p>
+                ACTIVAR
             </button>
         </form>
     </div>
