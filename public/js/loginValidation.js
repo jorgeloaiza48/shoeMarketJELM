@@ -12,9 +12,9 @@ window.addEventListener('load',function () {
     let email_check = document.querySelector("#email-check")
 
   
-    password.disabled = true
-    recordame.disabled = true
-    boton_enviar.disabled = true
+    // password.disabled = true
+    // recordame.disabled = true
+    // boton_enviar.disabled = true
 
     let liErrorDocumento1 = document.querySelector("#liErrorDocumento1")
     let liErrorDocumento2 = document.querySelector("#liErrorDocumento2")
@@ -27,10 +27,10 @@ window.addEventListener('load',function () {
                     liErrorDocumento2.classList.add("none")  
                     email_check.classList.add("none")                                                                    
                     email.classList.add("error")
-                    password.disabled = true
+                    // password.disabled = true
                 }
                 else if(!(/^([\da-z_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/).test(email.value)){
-                  password.disabled = true;
+                  // password.disabled = true;
                   liErrorDocumento1.classList.add("none")
                   liErrorDocumento2.classList.remove("none")
                   liErrorDocumento2.classList.add("show")
@@ -41,11 +41,14 @@ window.addEventListener('load',function () {
                     
                 }
                   else{
-                    password.disabled = false;
+                    // password.disabled = false;
                     liErrorDocumento2.classList.add("none")
                     email_check.classList.add("show")
                     email_check.classList.add("fa-circle-check")
-                    email_check.classList.add("fa-solid")
+                    email_check.classList.add("fa-solid") 
+                    documento.classList.remove("error")                                      
+                    documento.classList.add("valid")
+                    
                     // toastr.info("El campo Correo electrónico debe contener una dirección válida. Ejemplo: usuario@gmail.com");
                    
                         }

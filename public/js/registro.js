@@ -162,6 +162,7 @@
 
       let liErrorFile1 = document.querySelector("#liErrorFile1")
      
+      let documento_check = document.querySelector("#documento-check")
       
 
                   
@@ -178,13 +179,20 @@
             liErrorDocumento2.classList.add("show")
             liErrorDocumento1.classList.remove("show")
             liErrorDocumento1.classList.add("none")   
-            nombre.disabled = true;                   
+            nombre.disabled = true;  
+            documento.classList.remove("valid")                                      
+            documento.classList.add("error")                 
         }
                              
           else{
             nombre.disabled = false;
             liErrorDocumento2.classList.remove("show")
             liErrorDocumento2.classList.add("none")
+            documento.classList.remove("error")                                      
+            documento.classList.add("valid")
+            // documento_check.classList.add("show")
+            // documento_check.classList.add("fa-circle-check")
+            // documento_check.classList.add("fa-solid") 
             // toastr.info("Recuerde que el campo Documento de identidad debe contener mínimo 2 números y máximo 10.");
           }
 
@@ -208,7 +216,9 @@
                 liErrorNombre2.classList.add("none")
                 liErrorNombre3.classList.remove("none")
                 liErrorNombre3.classList.add("show")  
-                apellido.disabled = true;       
+                apellido.disabled = true;  
+                nombre.classList.remove("valid")                                      
+                nombre.classList.add("error")            
             }
             else if(nombre.value.length >= 2 && /\d/.test(nombre.value) || nombre.value.length >= 2 && /[°¡¿`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/.test(nombre.value)){
               apellido.disabled = true;
@@ -218,6 +228,8 @@
               liErrorNombre2.classList.add("none")  
               liErrorNombre3.classList.remove("none")
               liErrorNombre3.classList.add("show")  
+              nombre.classList.remove("valid")                                      
+              nombre.classList.add("error") 
             }
             else if(nombre.value.length < 2){
               liErrorNombre1.classList.remove("show")
@@ -225,7 +237,9 @@
               liErrorNombre2.classList.remove("none")
               liErrorNombre2.classList.add("show")
               liErrorNombre3.classList.remove("show")
-              liErrorNombre3.classList.add("none")  
+              liErrorNombre3.classList.add("none") 
+              nombre.classList.remove("valid")                                      
+              nombre.classList.add("error")  
             }
             else{
               apellido.disabled = false;
@@ -235,6 +249,9 @@
               liErrorNombre2.classList.add("none")
               liErrorNombre3.classList.remove("show")
               liErrorNombre3.classList.add("none")  
+              nombre.classList.remove("error")                                      
+              nombre.classList.add("valid")
+              
 
                 // toastr.info("Recuerde que el campo Nombre debe contener mínimo 2 letras y no puede contener números.");
               }
@@ -248,7 +265,9 @@
                 liErrorApellido2.classList.add("none")     
                 liErrorApellido3.classList.remove("show")
                 liErrorApellido3.classList.add("none")                         
-                email.disabled = true;                   
+                email.disabled = true;   
+               apellido.classList.remove("valid")                                      
+               apellido.classList.add("error")                
             }
             else if(apellido.value.length < 2 && /\d/.test(apellido.value) || apellido.value.length < 2 && /[°¡¿`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/.test(apellido.value)){
                 liErrorApellido1.classList.remove("show")
@@ -257,7 +276,10 @@
                 liErrorApellido2.classList.add("none")
                 liErrorApellido3.classList.remove("none")
                 liErrorApellido3.classList.add("show")  
-                email.disabled = true;       
+                email.disabled = true;     
+                apellido.classList.remove("valid")                                      
+                apellido.classList.add("error")   
+                
             }
             else if(apellido.value.length >= 2 && /\d/.test(apellido.value) || apellido.value.length >= 2 && /[°¡¿`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/.test(apellido.value)){
               email.disabled = true;
@@ -267,6 +289,9 @@
               liErrorApellido2.classList.add("none")  
               liErrorApellido3.classList.remove("none")
               liErrorApellido3.classList.add("show")  
+              apellido.classList.remove("valid")                                      
+              apellido.classList.add("error") 
+              
             }
             else if(apellido.value.length < 2){
               email.disabled = true;
@@ -275,7 +300,10 @@
               liErrorApellido2.classList.remove("none")
               liErrorApellido2.classList.add("show")
               liErrorApellido3.classList.remove("show")
-              liErrorApellido3.classList.add("none")  
+              liErrorApellido3.classList.add("none") 
+              apellido.classList.remove("valid")                                      
+              apellido.classList.add("error")  
+             
             }
             else{
               email.disabled = false;
@@ -285,6 +313,8 @@
               liErrorApellido2.classList.add("none")
               liErrorApellido3.classList.remove("show")
               liErrorApellido3.classList.add("none")  
+              apellido.classList.remove("error")                                      
+              apellido.classList.add("valid")
 
                 // toastr.info("Recuerde que el campo Nombre debe contener mínimo 2 letras y no puede contener números.");
               }
@@ -298,13 +328,17 @@
               liErrorEmail2.classList.remove("show")
               liErrorEmail2.classList.add("none")
               fecha.disabled = true;
+              email.classList.remove("valid")                                      
+              email.classList.add("error") 
             }
             else if(!(/^([\da-z_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/).test(email.value)){
               fecha.disabled = true;
               liErrorEmail1.classList.remove("show")
               liErrorEmail1.classList.add("none")
               liErrorEmail2.classList.remove("none")
-              liErrorEmail2.classList.add("show")            
+              liErrorEmail2.classList.add("show")   
+              email.classList.remove("valid")                                      
+              email.classList.add("error")          
             }
             else{
                 liErrorEmail1.classList.remove("show")
@@ -312,6 +346,8 @@
                 liErrorEmail2.classList.remove("show")
                 liErrorEmail2.classList.add("none")             
                 fecha.disabled = false;
+                email.classList.remove("error")                                      
+                email.classList.add("valid") 
               }
                 // toastr.info("El campo Correo electrónico debe contener una dirección válida. Ejemplo: usuario@gmail.com");
               
@@ -327,6 +363,8 @@
               liErrorFecha1.classList.add("show")
               liErrorFecha2.classList.remove("show")
               liErrorFecha2.classList.add("none")
+              fecha.classList.remove("valid")                                      
+              fecha.classList.add("error") 
             //   toastr.info("La edad no puede ser inferior a 18. Verifique la fecha ingresada.");
             }
             else{
@@ -335,6 +373,8 @@
               liErrorFecha1.classList.add("none")
               liErrorFecha2.classList.remove("show")
               liErrorFecha2.classList.add("none")
+              fecha.classList.remove("error")                                      
+              fecha.classList.add("valid") 
             }            
             
           })
@@ -349,6 +389,8 @@
               liErrorFecha1.classList.add("show")
               liErrorFecha2.classList.remove("show")
               liErrorFecha2.classList.add("none")
+              fecha.classList.remove("valid")                                      
+              fecha.classList.add("fecha") 
             //   toastr.info("La edad no puede ser inferior a 18. Verifique la fecha ingresada.");
             }
             else{
@@ -357,32 +399,13 @@
               liErrorFecha1.classList.add("none")
               liErrorFecha2.classList.remove("show")
               liErrorFecha2.classList.add("none")
+              fecha.classList.remove("error")                                      
+              fecha.classList.add("valid") 
             }            
             
           })
 
-           
-        //    domicilio.addEventListener('focus',function() {
-        
-        //     toastr.options = {
-        //       "closeButton": false,
-        //       "debug": false,
-        //       "newestOnTop": false,
-        //       "progressBar": false,
-        //       "positionClass": "toast-top-full-width",
-        //       "preventDuplicates": false,
-        //       "onclick": null,
-        //       "showDuration": "50",
-        //       "hideDuration": "3000",
-        //       "timeOut": "10000",
-        //       "extendedTimeOut": "1000",
-        //       "showEasing": "swing",
-        //       "hideEasing": "linear",
-        //       "showMethod": "fadeIn"
-        //               }
-        //       toastr.info("El domicilio debe contener mínimo 10 caracteres");
-        //     }) 
-
+                   
           domicilio.addEventListener("keyup",function(){
             if(domicilio.value === ""){
               pass.disabled = true
@@ -390,6 +413,8 @@
               liErrorDomicilio1.classList.add("show")
               liErrorDomicilio2.classList.remove("show")
               liErrorDomicilio2.classList.add("none")
+              domicilio.classList.remove("valid")                                      
+              domicilio.classList.add("error") 
             }
             else if(domicilio.value.length < 10 ){
               pass.disabled = true
@@ -397,11 +422,15 @@
               liErrorDomicilio1.classList.add("none")
               liErrorDomicilio2.classList.remove("none")
               liErrorDomicilio2.classList.add("show")
+              domicilio.classList.remove("valid")                                      
+              domicilio.classList.add("error")
             }
             else{
               pass.disabled = false
               liErrorDomicilio2.classList.remove("show")
               liErrorDomicilio2.classList.add("none")
+              domicilio.classList.remove("error")                                      
+              domicilio.classList.add("valid")
               }
 
           }) 
@@ -413,6 +442,8 @@
               liErrorPassword2.classList.remove("show")
               liErrorPassword2.classList.add("none")
               file.disabled = true
+              pass.classList.remove("valid")                                      
+              pass.classList.add("error")
             }
             else if(/(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9])(?=.{8,})/.test(pass.value)){
                 sub_button.disabled = false
@@ -421,6 +452,8 @@
                 liErrorPassword2.classList.remove("show")
                 liErrorPassword2.classList.add("none")
                 file.disabled = false
+                pass.classList.remove("error")                                      
+                pass.classList.add("valid")
                 }
             else{
               // sub_button.disabled = true
@@ -429,6 +462,8 @@
               liErrorPassword2.classList.remove("none")
               liErrorPassword2.classList.add("show")
               file.disabled = true
+              pass.classList.remove("valid")                                      
+              pass.classList.add("error")
             //   toastr.info("La contraeeña Debe tener almenos una letra en minúscula, una en mayúscula, un número y un carácter especial como @ o #, y debe ser de almenos 8 caracteres.")
             }
           })
@@ -440,12 +475,16 @@
               liErrorFile1.classList.add("show")
               // sub_button.disabled = true
               sub_button.style.visibility = "hidden"
+              file.classList.remove("valid")                                      
+              file.classList.add("error")
             }
             else{
               liErrorFile1.classList.remove("show")
               liErrorFile1.classList.add("none")
               // sub_button.disabled = false
               sub_button.style.visibility = "visible"
+              file.classList.remove("error")                                      
+              file.classList.add("valid")
             }
           })
 

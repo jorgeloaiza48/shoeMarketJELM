@@ -10,11 +10,11 @@
                             <!-- <div class="usuario"> -->
             
                                 <div class="usuario__nombre ">
-                                    <label for="email">Correo Electrónico:
-                                    <i id="email-check"></i>                                                                             
+                                    <label class="label-relative" for="email" "><strong>Correo Electrónico:</strong>
+                                    <i class="email-check" id="email-check"></i>                                                                             
                                     </label>
                                     
-                                    <input type="email" name="email" id="email" value="<%= locals.old && old.email ? old.email : ""%>"
+                                    <input  type="email" name="email" id="email" value="<%= locals.old && old.email ? old.email : ""%>"
                                     placeholder="Correo electrónico">
                                     <ul class="errorDocumento">
                                         <li id="liErrorDocumento1" class="none">Debe introducir una dirección de email.</li>
@@ -30,7 +30,7 @@
             
                                 </div>
                                 <div class="usuario__pass">
-                                    <label for="password">Contraseña:</label>
+                                    <label for="password"><strong>Contraseña:</strong></label>
                                     <input type="password" name="password" id="password" placeholder="Contraseña" > 
                                     <ul class="errorDocumento">
                                         <li id="liErrorPassword1" class="none">Debe introducir una contraseña para iniciar sesión.</li>
@@ -51,7 +51,7 @@
                             <div class="recordame-enviar">
 
                             <div class="usuario_record_div">
-                                <label  class="usuario_record" for="record">Recordame </label>
+                                <label  class="usuario_record" for="record"><strong>Recordame</strong></label>
                                 <input type="checkbox" name="record" id="record" class="checkbox">                               
                             </div>
             

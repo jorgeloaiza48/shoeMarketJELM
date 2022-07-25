@@ -7,15 +7,15 @@
                     <form  action="/user/registro" method="POST" class="form-Reg" enctype="multipart/form-data">
                         
                         <div class="form__documento">
-                            <label for="documento">Documento de identidad *</label>
+                            <label class="label-relative for="documento">Documento de identidad *
+                                <i class="email-check" id="documento-check"></i> 
+                            </label>
                             <input type="number" name="documento" id="documento" placeholder="Mínimo 5 números, Máximo 10"
                             value ="<%= locals.oldData ? oldData.documento : null%>" title="hola"
                             >  
-                            <ul class="errorDocumento">
+                            <ul class="errorRegister">
                                 <li id="liErrorDocumento1" class="none">Debe introducir un documento.</li>
-                                <li id="liErrorDocumento2" class="none">Debe introducir mínimo 5 números y máximo 10.</li>
-                                
-                               
+                                <li id="liErrorDocumento2" class="none">Debe introducir mínimo 5 números y máximo 10.</li>                                                               
                             </ul>
                                                       
                             <% if (locals.errors && errors.documento) {%>
@@ -24,10 +24,12 @@
                         </div>
 
                         <div class="form__nombre">
-                            <label for="nombre">Nombre *</label>
+                            <label for="nombre">Nombre *
+                                <i class="email-check" id="documento-check"></i>
+                            </label>
                             <input type="text" name="nombre" id="nombre" placeholder="Introduzca su Nombre"
                             value ="<%= locals.oldData ? oldData.nombre : null%>">
-                            <ul class="errorNombre">
+                            <ul class="errorRegister">
                                 <li id="liErrorNombre1" class="none">Debe introducir un nombre.</li>
                                 <li id="liErrorNombre2" class="none">Debe introducir al menos 2 letras.</li>
                                 <li id="liErrorNombre3" class="none">El nombre no puede contener números ni caracteres especiales.</li>
@@ -41,9 +43,9 @@
                             <input type="text" name="apellido" id="apellido" placeholder=" Introduzca su apellido"
                             value ="<%= locals.oldData ? oldData.apellido : null%>"
                             >
-                            <ul class="errorApellido">
-                                <li id="liErrorApellido1" class="none">Debe introducir un Apellido</li>
-                                <li id="liErrorApellido2" class="none">Debe introducir al menos 2 letras</li>
+                            <ul class="errorRegister">
+                                <li id="liErrorApellido1" class="none">Debe introducir un Apellido.</li>
+                                <li id="liErrorApellido2" class="none">Debe introducir al menos 2 letras.</li>
                                 <li id="liErrorApellido3" class="none">El apellido no puede contener números ni caracteres especiales.</li>
                             </ul>
                             <% if (locals.errors && errors.apellido) {%>
@@ -55,7 +57,7 @@
                         <div class="form__usuario">
                             <label for="email">Correo electrónico *</label>
                             <input type="email" name="email" id="email" placeholder="Introduzca su Correo electronico"  value ="<%= locals.oldData ? oldData.email : null%>" >
-                            <ul class="errorEmail">
+                            <ul class="errorRegister">
                                 <li id="liErrorEmail1" class="none">Debe introducir una dirección de E-mail.</li>
                                 <li id="liErrorEmail2" class="none">Debe introducir una dirección de correo electrónico válida. Ejemplo: usuario@ejemplo.com</li>                               
                             </ul>
@@ -66,7 +68,7 @@
                         <div class="form__fecha">
                             <label for="fecha">Fecha de nacimiento *</label>
                             <input type="date" name="fecha" id="fecha" value ="<%= locals.oldData ? oldData.fecha : null%>">
-                            <ul class="errorFecha">
+                            <ul class="errorRegister">
                                 <li id="liErrorFecha1" class="none">La edad no puede ser inferior a 18. Verifique la fecha ingresada.</li>                          
                                 <li id="liErrorFecha2" class="none">Debe introducir una fecha.</li>                          
                             </ul>
@@ -79,7 +81,7 @@
                         <div class="form__domicilio">
                             <label for="domicilio">Domicilio de envío *</label><br>
                             <input type="text" name="domicilio" id="domicilio" placeholder=" Introduzca su Domicilio" value ="<%= locals.oldData ? oldData.domicilio : null%>">
-                            <ul class="errorDomicilio">
+                            <ul class="errorRegister">
                                 <li id="liErrorDomicilio1" class="none">Debe ingresar una dirección de entrega.</li>                          
                                 <li id="liErrorDomicilio2" class="none">La dirección debe tener mínimo 10 caracteres.</li>                          
                             </ul>
@@ -91,9 +93,9 @@
                             <div class="form__password">
                                 <label class="form__password__title" for="pass">Contraseña *</label><br>
                                 <input type="password" name="pass" id="pass" placeholder="Introduzca su contraseña">
-                                <ul class="errorPassword">
+                                <ul class="errorRegister">
                                     <li id="liErrorPassword1" class="none">Debe ingresar una contraseña con almenos una letra en minúscula, una en mayúscula, un número y un carácter especial como @ o #, y debe ser de almenos 8 caracteres.</li>                          
-                                    <li id="liErrorPassword2" class="none">La contraseña no cumple con los requerimientos exigidos(una letra en minúscula, una en mayúscula, un número y un carácter especial como @ o #, y debe ser de almenos 8 caracteres.).</li>                          
+                                    <li id="liErrorPassword2" class="none">La contraseña no cumple con los requerimientos exigidos(una letra en minúscula, una en mayúscula, un número y un carácter especial como @ o #, y debe ser de almenos 8 caracteres).</li>                          
                                 </ul>
                                 <% if (locals.errors && errors.pass) {%>
                                     <div class="text-aviso"><p><%= errors.pass.msg %></p></div>
@@ -103,7 +105,7 @@
                             <div class="form-create__img">
                                 <label class="form-create__img__title" for="photo">Seleccione la foto de perfil</label>
                                     <input type="file" name="photo" accept=".jpg,.jpeg,.png,.gif" id="file">
-                                    <ul class="errorFile">
+                                    <ul class="errorRegister">
                                         <li id="liErrorFile1" class="none">Debe seleccionar un archivo con extensión válida(.jpg, .jpeg, .png, .gif).</li>                                                                                                         
                                     </ul>
                                     <% if (locals.errors && errors.photo) {%>

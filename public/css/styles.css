@@ -174,9 +174,15 @@ text-align: center;
 
 #email-check{
     position: absolute;
-    right: 60px;
-    top: 398px;          
+    right: -45px;
+    top: 60px;          
 }
+#documento-check{
+    position: absolute;
+    right: -57px;
+    top: 45px;          
+}
+
 
 /*//////////////////////////profile/********************/
 .profile-contain{
@@ -511,11 +517,15 @@ text-align: center;
 
 }
 @media(min-width:576px) {
-
+    #documento-check{
+        position: absolute;
+        right: -230px;
+        top: 45px;          
+    }
     #email-check{
         position: absolute;
-        right: 170px;
-        top: 398px;    
+        right: -45px;
+        top: 60px;    
       
     }
     .principal-form-boton2 .form-header button {
@@ -999,8 +1009,8 @@ background-color: black;
 @media(min-width:768px) {
     #email-check{
         position: absolute;
-        right: 265px;
-        top: 318px;          
+        right: -45px;
+        top: 60px;          
     }
     .admin-but {
         line-height: 1px;
@@ -1919,8 +1929,8 @@ i {
 @media (min-width: 992px) {
     #email-check{
         position: absolute;
-        right: 375px;
-        top: 318px;          
+        right: -45px;
+        top: 60px;          
     }
 
     .principal-form-boton2 .form-header button {
@@ -2924,6 +2934,16 @@ main form .text-aviso p{
     padding-left: 5px;
     width: 100%;
 }
+   
+.errorRegister{
+    /* border: solid 2px red; */
+    color: red;    
+    font-size: small;
+    margin-left: 10px;
+    margin-top: 2px;    
+    padding-left: 0px;    
+   }
+
 .form__usuario p{
     color: red;
     margin-left: 2px;
@@ -3115,7 +3135,9 @@ main form .text-aviso p{
     text-align: center;
     width: 100%;
 }
-
+.usuario__nombre label{
+    position: relative;
+}
 
 .usuario__nombre input {
     border: 1px solid rgb(124, 118, 119);
@@ -3508,8 +3530,8 @@ main form .text-aviso p{
 @media (min-width: 1400px) {
     #email-check{
         position: absolute;
-        right: 580px;
-        top: 317px;          
+        right: -45px;
+        top: 60px;          
     }
     
 }
