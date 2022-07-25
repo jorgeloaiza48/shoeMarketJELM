@@ -46,8 +46,6 @@ footer {
     display: block;
 text-align: center;
 }
-
-
 .valid {
     background-color: #c0db9f;
   }
@@ -71,7 +69,7 @@ text-align: center;
     list-style: none;
 }
 .label-relative{
-    position: relative
+    position: relative;
 }
 .iconoNombre-create-prod-OK{
     position: absolute;
@@ -2879,7 +2877,9 @@ main form .text-aviso p{
     margin-left: 10px;
     
 }
-
+.fa-circle-check{
+    color: green;
+}
 .text-aviso2 {
     margin-left: 0px;
     margin-top: 5px;

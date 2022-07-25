@@ -7,8 +7,8 @@
                     <form  action="/user/registro" method="POST" class="form-Reg" enctype="multipart/form-data">
                         
                         <div class="form__documento">
-                            <label class="label-relative for="documento">Documento de identidad *
-                                <i class="email-check" id="documento-check"></i> 
+                            <label class="label-relative" for="documento">Documento de identidad *
+                                <i id="documento-check"></i> 
                             </label>
                             <input type="number" name="documento" id="documento" placeholder="Mínimo 5 números, Máximo 10"
                             value ="<%= locals.oldData ? oldData.documento : null%>" title="hola"

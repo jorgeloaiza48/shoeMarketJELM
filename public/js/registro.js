@@ -190,9 +190,9 @@
             liErrorDocumento2.classList.add("none")
             documento.classList.remove("error")                                      
             documento.classList.add("valid")
-            // documento_check.classList.add("show")
-            // documento_check.classList.add("fa-circle-check")
-            // documento_check.classList.add("fa-solid") 
+            documento_check.classList.add("show")
+            documento_check.classList.add("fa-circle-check")
+            documento_check.classList.add("fa-solid") 
             // toastr.info("Recuerde que el campo Documento de identidad debe contener mínimo 2 números y máximo 10.");
           }
 
