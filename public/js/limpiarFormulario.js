@@ -28,6 +28,15 @@ window.addEventListener('load',function () {
     let boton_limpiar_form = document.querySelector("#boton-limpiar-form")
     let register_form = document.querySelector('.form-Reg')
     let preview = document.getElementById('preview')
+
+    let documento = document.querySelector('#documento');
+    let nombre = document.querySelector("#nombre");
+    let apellido = document.querySelector("#apellido");
+    let email = document.querySelector("#email");
+    let fecha = document.querySelector("#fecha")
+    let domicilio = document.querySelector("#domicilio");
+    let pass = document.querySelector("#pass");
+    let file = document.querySelector("#file")
     
 
     boton_limpiar_form.addEventListener("click",function(event){
@@ -77,6 +86,15 @@ window.addEventListener('load',function () {
 
         liErrorFile1.classList.remove("show")
         liErrorFile1.classList.add("none")
+
+        documento.classList.remove("valid")                                               
+        nombre.classList.remove("valid")                                              
+        apellido.classList.remove("valid")                                              
+        email.classList.remove("valid")                                              
+        fecha.classList.remove("valid")                                              
+        domicilio.classList.remove("valid")                                              
+        pass.classList.remove("valid")                                                
+        file.classList.remove("valid")                                              
 
         sub_button.style.visibility = "hidden"
         

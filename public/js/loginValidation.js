@@ -46,8 +46,8 @@ window.addEventListener('load',function () {
                     email_check.classList.add("show")
                     email_check.classList.add("fa-circle-check")
                     email_check.classList.add("fa-solid") 
-                    documento.classList.remove("error")                                      
-                    documento.classList.add("valid")
+                    email.classList.remove("error")                                      
+                    email.classList.add("valid")
                     
                     // toastr.info("El campo Correo electrónico debe contener una dirección válida. Ejemplo: usuario@gmail.com");
                    
