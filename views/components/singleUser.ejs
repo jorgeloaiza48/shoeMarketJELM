@@ -31,15 +31,15 @@
   
     
     <div class="div-form-delete-edit-users">
+        
+                <form action="/admin/usuario/editar/<%= usuario.id %>" method="get">
+                    <button type="submit" name="editar" id="delete" class="admin-but">
+                        <strong>EDITAR</strong>
+                    </button>
+                </form>
         <form action="/admin/usuario/delete/<%= usuario.id %>?_method=DELETE" method="POST">
             <button type="submit" name="delete" id="delete" class="admin-but">
                 <strong>DESACTIVAR</strong>
-            </button>
-        </form>
-
-        <form action="/admin/usuario/editar/<%= usuario.id %>" method="get">
-            <button type="submit" name="editar" id="delete" class="admin-but">
-                <strong>EDITAR</strong>
             </button>
         </form>
     </div>

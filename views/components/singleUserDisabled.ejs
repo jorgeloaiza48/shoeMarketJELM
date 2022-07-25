@@ -31,17 +31,17 @@
   
     
     <div class="div-form-delete-edit-users">
+        <form action="/admin/usuario/editar/<%= usuario.id %>" method="get">
+            <button type="submit" name="editar" id="delete" class="admin-but">
+                <strong>EDITAR</strong>
+            </button>
+        </form>
         <form action="/admin/usuario/activar/<%= usuario.id %>?_method=PUT" method="POST" class="form-user-delete-forever">
             <button type="submit" name="delete" id="delete" class="admin-but">
                 <strong>ACTIVAR</strong>
             </button>
         </form>
 
-        <form action="/admin/usuario/editar/<%= usuario.id %>" method="get">
-            <button type="submit" name="editar" id="delete" class="admin-but">
-                <strong>EDITAR</strong>
-            </button>
-        </form>
         
     </div>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>

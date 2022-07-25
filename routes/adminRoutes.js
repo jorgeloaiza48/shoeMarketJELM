@@ -57,6 +57,7 @@ router.get("/productos/editar/:id", adminController.editarProducto)//le saque el
 router.put('/productos/editar/:id', upload.single("img"), adminController.update)
 
 router.put('/productos/disable/:id', adminController.disableProduct)
+router.put('/productos/enable/:id', adminController.enableProduct)
 
 router.delete("/productos/delete/:id", adminController.deleteProduct)
 
