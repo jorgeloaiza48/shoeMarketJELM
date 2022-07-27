@@ -10,11 +10,13 @@
                             <!-- <div class="usuario"> -->
             
                                 <div class="usuario__nombre">
-                                    <label for="email">Correo Electrónico:</label>
+                                    <label for="email"><strong>Correo Electrónico:</strong>
+                                        <i class="email-check" id="email-check"></i>     
+                                    </label>
                                     <input type="email" name="email" id="email" value="<%= locals.old && old.email ? old.email : ""%>"
                                     placeholder="Correo electrónico" >
                                     <ul class="errorDocumento">
-                                        <li id="liErrorDocumento1" class="none">Debe introducir un documento</li>
+                                        <li id="liErrorDocumento1" class="none">Debe introducir una dirección de email.</li>
                                         <li id="liErrorDocumento2" class="none">El campo Correo electrónico debe contener una dirección válida. Ejemplo: usuario@gmail.com"</li>
                                     </ul>
                                     <% if (locals.errors && errors.email ) { %>
@@ -27,8 +29,12 @@
             
                                 </div>
                                 <div class="usuario__pass">
-                                    <label for="password">Contraseña:</label>
+                                    <label for="password"><strong>Contraseña:</strong></label>
                                     <input type="password" name="password" id="password" placeholder="Contraseña" > 
+                                    <ul class="errorDocumento">
+                                        <li id="liErrorPassword1" class="none">Debe introducir una contraseña para iniciar sesión.</li>
+                                        <li id="liErrorPassword2" class="none">La contraseña Debe tener almenos una letra en minúscula, una en mayúscula, un número y un carácter especial como @ o #, y debe ser de almenos 8 caracteres.</li>
+                                    </ul>
                                     <% if (locals.errors && errors.password ) { %>
 
                                         <p class="form-error">
