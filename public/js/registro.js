@@ -357,7 +357,16 @@
             let fechaHoy = new Date()                   
             let = fecha_nacimiento = new Date(fecha.value)
             let edad = fechaHoy.getFullYear()- fecha_nacimiento.getFullYear()
-           if(edad < 18){
+            if(fecha.value === ""){
+              domicilio.disabled = true
+              liErrorFecha2.classList.remove("none")
+              liErrorFecha2.classList.add("show")
+              liErrorFecha.classList.remove("show")
+              liErrorFecha2.classList.add("none")
+              fecha.classList.remove("valid")                                      
+              fecha.classList.add("error") 
+            }
+           else if(edad < 18){
               domicilio.disabled = true
               liErrorFecha1.classList.remove("none")
               liErrorFecha1.classList.add("show")

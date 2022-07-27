@@ -57,6 +57,8 @@ window.addEventListener('load',function () {
                     email.classList.add("valid")
                     liErrorDocumento3.classList.remove("errorText")
                     liErrorDocumento3.classList.add("none")
+                    liErrorDocumento1.classList.remove("show")
+                    liErrorDocumento1.classList.add("none")
                     
                     // toastr.info("El campo Correo electrónico debe contener una dirección válida. Ejemplo: usuario@gmail.com");
                    
@@ -99,7 +101,7 @@ window.addEventListener('load',function () {
                   liErrorPassword2.classList.add("none")
                   password.classList.add("error")
                 }
-                else if(password.value != "" && email.value == ""){
+                else if(password.value != "" && email.value === ""){
                   event.preventDefault()
                   liErrorDocumento1.classList.remove("none")
                   liErrorDocumento1.classList.add("show")

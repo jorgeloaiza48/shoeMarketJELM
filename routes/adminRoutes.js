@@ -34,9 +34,6 @@ router.get("/",adminMiddleware, adminController.index)
 router.get("/lista/usuarios",adminMiddleware, adminController.userList)
 router.get("/lista/usuariosinactivos",adminMiddleware, adminController.disableduserList)
 
-
-
-
 router.get("/usuario/editar/:id", adminController.userEdit)
 
 router.put("/usuario/editar/:id", upload.single("photo"), adminController.userUpdate)

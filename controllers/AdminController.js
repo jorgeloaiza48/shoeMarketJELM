@@ -7,9 +7,6 @@ const { title } = require("process")
 const db = require("../database/models/index")
 
 
-
-
-
 let roles = ["admin", "cliente", "vendedor", "invitado"]
 let estados = ["Activo", "Inactivo"]
 
