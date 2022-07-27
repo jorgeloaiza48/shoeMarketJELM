@@ -5,57 +5,57 @@ window.addEventListener("load", function (event) {
 
     let form = document.querySelector(".form-create")
 
-    
-    
-    
+
+
+
     let nombre = document.querySelector("#nombre-create-prod");
     let liErrorNombreProd1 = document.querySelector("#liErrorNombreProd1")
     let liErrorNombreProd2 = document.querySelector("#liErrorNombreProd2")
     let iconoNombreOK = document.querySelector("#iconoNombreOK")
     let iconoNombreX = document.querySelector("#iconoNombreX")
-    
+
     let description = document.querySelector("#description");
     let liErrorDescripcionProd1 = document.querySelector("#liErrorDescripcionProd1")
     let liErrorDescripcionProd2 = document.querySelector("#liErrorDescripcionProd2")
     let iconoDescripcionOK = document.querySelector("#iconoDescripcionOK")
     let iconoDescripcionX = document.querySelector("#iconoDescripcionX")
-    
+
     let precio = document.querySelector("#price")
     let liErrorPrecioProd1 = document.querySelector("#liErrorPrecioProd1")
     let iconoPrecioOK = document.querySelector("#iconoPrecioOK")
     let iconoPrecioX = document.querySelector("#iconoPrecioX")
-    
+
     let color = document.querySelector("#color-create-prod");
     let liErrorColorProd1 = document.querySelector("#liErrorColorProd1")
     let liErrorColorProd2 = document.querySelector("#liErrorColorProd2")
     let iconoColorOK = document.querySelector("#iconoColorOK")
     let iconoColorX = document.querySelector("#iconoColorX")
-    
+
     let img = document.querySelector("#img-create-prod");
     let liErrorimgProd1 = document.querySelector("#liErrorimgProd1")
-    
+
     let category = document.querySelector("#category-create-prod");
     let liErrorCategoriaProd1 = document.querySelector("#liErrorCategoriaProd1")
-    
+
     nombre.addEventListener("keyup", function (event) {
-        
-    if (nombre.value === "") {
-        liErrorNombreProd1.classList.remove("none")
-        liErrorNombreProd1.classList.add("show")
-        liErrorNombreProd1.classList.add("errorText")
-        nombre.classList.add("error")
-        iconoNombreX.classList.add("fa-regular")
+
+        if (nombre.value === "") {
+            liErrorNombreProd1.classList.remove("none")
+            liErrorNombreProd1.classList.add("show")
+            liErrorNombreProd1.classList.add("errorText")
+            nombre.classList.add("error")
+            iconoNombreX.classList.add("fa-regular")
             iconoNombreX.classList.add("fa-circle-xmark")
             iconoNombreOK.classList.remove("fa-regular")
             iconoNombreOK.classList.remove("fa-circle-check")
-            
+
         } else {
             liErrorNombreProd1.classList.add("none")
             nombre.classList.remove("error")
             nombre.classList.add("valid")
             iconoNombreX.classList.remove("fa-regular")
             iconoNombreX.classList.remove("fa-circle-xmark")
-            
+
         }
         if (nombre.value.length < 5) {
             liErrorNombreProd2.classList.remove("none")
@@ -66,7 +66,7 @@ window.addEventListener("load", function (event) {
             iconoNombreX.classList.add("fa-circle-xmark")
             iconoNombreOK.classList.remove("fa-regular")
             iconoNombreOK.classList.remove("fa-circle-check")
-            
+
 
         } else {
             liErrorNombreProd2.classList.add("none")
@@ -81,7 +81,7 @@ window.addEventListener("load", function (event) {
 
     })
 
-   
+
 
     description.addEventListener("keyup", function (event) {
 
@@ -113,7 +113,7 @@ window.addEventListener("load", function (event) {
             iconoDescripcionX.classList.add("fa-circle-xmark")
             iconoDescripcionOK.classList.remove("fa-regular")
             iconoDescripcionOK.classList.remove("fa-circle-check")
-            
+
         } else {
             liErrorDescripcionProd2.classList.add("none")
             description.classList.remove("error")
@@ -122,7 +122,7 @@ window.addEventListener("load", function (event) {
             iconoDescripcionX.classList.remove("fa-circle-xmark")
             iconoDescripcionOK.classList.add("fa-regular")
             iconoDescripcionOK.classList.add("fa-circle-check")
-            
+
         }
     })
 
@@ -148,7 +148,7 @@ window.addEventListener("load", function (event) {
             iconoPrecioOK.classList.add("fa-circle-check")
 
         }
-        
+
     })
     color.addEventListener("keyup", function (event) {
 
@@ -191,8 +191,8 @@ window.addEventListener("load", function (event) {
         }
 
     })
-    category.addEventListener("change",function(event){
-        if(category.value === ""){
+    category.addEventListener("change", function (event) {
+        if (category.value === "") {
             liErrorCategoriaProd1.classList.remove("none")
             liErrorCategoriaProd1.classList.add("show")
             liErrorCategoriaProd1.classList.add("errorText")
@@ -202,8 +202,8 @@ window.addEventListener("load", function (event) {
         }
 
     })
-    img.addEventListener("change",function(event){
-        if(img.value === ""){
+    img.addEventListener("change", function (event) {
+        if (img.value === "") {
             liErrorimgProd1.classList.remove("none")
             liErrorimgProd1.classList.add("show")
             liErrorimgProd1.classList.add("errorText")
@@ -213,11 +213,12 @@ window.addEventListener("load", function (event) {
         }
 
     })
-    
 
-    form.addEventListener("submit",function(event){
-        
-        if(nombre.value.length < 5){3
+
+    form.addEventListener("submit", function (event) {
+
+        if (nombre.value.length < 5) {
+            3
             event.preventDefault()
             liErrorNombreProd2.classList.remove("none")
             liErrorNombreProd2.classList.add("show")
@@ -228,7 +229,8 @@ window.addEventListener("load", function (event) {
             iconoNombreOK.classList.remove("fa-regular")
             iconoNombreOK.classList.remove("fa-circle-check")
         }
-        if(description.value.length < 20){3
+        if (description.value.length < 20) {
+            3
             event.preventDefault()
             liErrorDescripcionProd2.classList.remove("none")
             liErrorDescripcionProd2.classList.add("show")
@@ -239,7 +241,7 @@ window.addEventListener("load", function (event) {
             iconoDescripcionOK.classList.remove("fa-regular")
             iconoDescripcionOK.classList.remove("fa-circle-check")
         }
-        if(precio.value === ""){
+        if (precio.value === "") {
             event.preventDefault()
             liErrorPrecioProd1.classList.remove("none")
             liErrorPrecioProd1.classList.add("show")
@@ -250,7 +252,7 @@ window.addEventListener("load", function (event) {
             iconoPrecioOK.classList.remove("fa-regular")
             iconoPrecioOK.classList.remove("fa-circle-check")
         }
-        if(color.value.length < 3){
+        if (color.value.length < 3) {
             event.preventDefault()
             liErrorColorProd1.classList.remove("none")
             liErrorColorProd1.classList.add("show")
@@ -262,18 +264,18 @@ window.addEventListener("load", function (event) {
             iconoColorOK.classList.remove("fa-circle-check")
 
         }
-        if(img.value === ""){
+        if (img.value === "") {
             event.preventDefault()
             liErrorimgProd1.classList.remove("none")
             liErrorimgProd1.classList.add("show")
             liErrorimgProd1.classList.add("errorText")
         }
-        if(category.value === ""){
+        if (category.value === "") {
             event.preventDefault()
             liErrorCategoriaProd1.classList.remove("none")
             liErrorCategoriaProd1.classList.add("show")
             liErrorCategoriaProd1.classList.add("errorText")
-            
+
         }
 
     })

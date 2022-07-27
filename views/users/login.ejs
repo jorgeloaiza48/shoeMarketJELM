@@ -11,7 +11,8 @@
             
                                 <div class="usuario__nombre ">
                                     <label class="label-relative" for="email" "><strong>Correo Electrónico:</strong>
-                                    <i class="email-check" id="email-check"></i>                                                                             
+                                    <i class="icono-emailOK" id="emailCheckOK"></i>
+                                    <i class="icono-emailX" id="emailCheckX"></i>                                                                              
                                     </label>
                                     
                                     <input  type="email" name="email" id="email" value="<%= locals.old && old.email ? old.email : ""%>"
@@ -31,7 +32,9 @@
             
                                 </div>
                                 <div class="usuario__pass">
-                                    <label for="password"><strong>Contraseña:</strong></label>
+                                    <label class="label-relative" for="password"><strong>Contraseña:</strong>
+                                        <i class="icono-passwordOK" id="passwordCheckOK"></i>
+                                        <i class="icono-passwordX" id="passwordCheckX"></i> </label>
                                     <input type="password" name="password" id="password" placeholder="Contraseña" > 
                                     <ul class="errorDocumento">
                                         <li id="liErrorPassword1" class="none">Debe introducir una contraseña para iniciar sesión.</li>

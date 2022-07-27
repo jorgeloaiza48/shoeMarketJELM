@@ -169,6 +169,30 @@ text-align: center;
     left: 284px;
     color: rgb(255 1 1)
 }
+.icono-emailOK{
+    position: absolute;
+    bottom: -54px;
+    left: 172px;
+    color: green;
+}
+.icono-emailX{
+    position: absolute;
+    bottom: -54px;
+    left: 172px;
+    color: rgb(164, 34, 34)
+}
+.icono-passwordOK{
+    position: absolute;
+    bottom: -45px;
+    left: 145px;
+    color: green;
+}
+.icono-passwordX{
+    position: absolute;
+    bottom: -45px;
+    left: 145px;
+    color: rgb(164, 34, 34)
+}
 
 #email-check{
     position: absolute;
@@ -3064,20 +3088,20 @@ main form .text-aviso p{
     align-items: center;
     
 }
-.form-Reg input:hover {
+/* .form-Reg input:hover {
 
     box-shadow: 0 0 5px 0 rgb(228, 56, 101);
 
-}
+} */
 
 .form-Reg input {
     outline: none;
     transition: all 0.5s;
 }
 
-.form-Reg label:hover {
+/* .form-Reg label:hover {
     color: rgb(228, 56, 101);
-}
+} */
 
 
 
@@ -3160,11 +3184,6 @@ main form .text-aviso p{
 
 }
 
-.form-login input:hover {
-
-    box-shadow: 0 0 5px 0 rgb(162, 16, 55);
-
-}
 
 .form-login input {
     outline: none;
@@ -3178,9 +3197,9 @@ main form .text-aviso p{
 
 }
 
-.form-login input[type="text"]:focus:required:valid {
+/* .form-login input[type="text"]:focus:required:valid {
     border: 2px solid green;
-}
+} */
 
 /* .form-login input[type="text"]:required:invalid {
     border: 2px solid red;
