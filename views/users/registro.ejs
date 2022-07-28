@@ -10,12 +10,13 @@
                             <label class="label-relative" for="documento">Documento de identidad *
                                 <i id="documento-check"></i> 
                             </label>
-                            <input type="number" name="documento" id="documento" placeholder="Mínimo 5 números, Máximo 10"
+                            <input type="text" name="documento" id="documento" placeholder="Mínimo 5 números, Máximo 10"
                             value ="<%= locals.oldData ? oldData.documento : null%>" title="hola"
                             >  
                             <ul class="errorRegister">
-                                <li id="liErrorDocumento1" class="none">Debe introducir un documento.</li>
+                                <li id="liErrorDocumento1" class="none">Digite un documento. No se permite letras ni caracteres especiales.</li>
                                 <li id="liErrorDocumento2" class="none">Debe introducir mínimo 5 números y máximo 10.</li>                                                               
+                                                                                              
                             </ul>
                                                       
                             <% if (locals.errors && errors.documento) {%>
@@ -24,8 +25,8 @@
                         </div>
 
                         <div class="form__nombre">
-                            <label for="nombre">Nombre *
-                                <i class="email-check" id="documento-check"></i>
+                            <label class="label-relative" for="nombre">Nombre *
+                                <i id="nombre-check"></i>
                             </label>
                             <input type="text" name="nombre" id="nombre" placeholder="Introduzca su Nombre"
                             value ="<%= locals.oldData ? oldData.nombre : null%>">
@@ -39,7 +40,7 @@
                             <%}%>
                         </div>
                         <div class="form__apellido">
-                            <label for="apeillido">Apellido *</label>
+                            <label class="label-relative for="apeillido">Apellido *  <i id="apellido-check"></i></label>
                             <input type="text" name="apellido" id="apellido" placeholder=" Introduzca su apellido"
                             value ="<%= locals.oldData ? oldData.apellido : null%>"
                             >
@@ -55,7 +56,7 @@
 
                        
                         <div class="form__usuario">
-                            <label for="email">Correo electrónico *</label>
+                            <label class="label-relative" for="email">Correo electrónico * <i id="email-check"></i></label>
                             <input type="email" name="email" id="email" placeholder="Introduzca su Correo electronico"  value ="<%= locals.oldData ? oldData.email : null%>" >
                             <ul class="errorRegister">
                                 <li id="liErrorEmail1" class="none">Debe introducir una dirección de E-mail.</li>
@@ -66,11 +67,12 @@
                             <%}%>
                         </div>
                         <div class="form__fecha">
-                            <label for="fecha">Fecha de nacimiento *</label>
-                            <input type="date" name="fecha" id="fecha" value ="<%= locals.oldData ? oldData.fecha : null%>">
+                            <label class="label-relative" for="fecha">Fecha de nacimiento * <i id="fecha-check"></i></label>
+                            <input type="date" name="fecha" id="fecha" value ="<%= locals.oldData ? oldData.fecha : null%>" >
                             <ul class="errorRegister">
                                 <li id="liErrorFecha1" class="none">La edad no puede ser inferior a 18. Verifique la fecha ingresada.</li>                          
-                                <li id="liErrorFecha2" class="none">Debe introducir una fecha.</li>                          
+                                <li id="liErrorFecha2" class="none">Debe introducir una fecha.</li>  
+                                <li id="liErrorFecha3" class="none">El día no puede ser cero.</li>                        
                             </ul>
                           
                             <% if (locals.errors && errors.fecha) {%>
@@ -79,7 +81,7 @@
             
                         </div>
                         <div class="form__domicilio">
-                            <label for="domicilio">Domicilio de envío *</label><br>
+                            <label class="label-relative" for="domicilio">Domicilio de envío * <i id="domicilio-check"></i></label><br>
                             <input type="text" name="domicilio" id="domicilio" placeholder=" Introduzca su Domicilio" value ="<%= locals.oldData ? oldData.domicilio : null%>">
                             <ul class="errorRegister">
                                 <li id="liErrorDomicilio1" class="none">Debe ingresar una dirección de entrega.</li>                          
@@ -91,7 +93,7 @@
                         </div>
                        
                             <div class="form__password">
-                                <label class="form__password__title" for="pass">Contraseña *</label><br>
+                                <label class="label-relative" for="pass">Contraseña * <i id="password-check"></i></label><br>
                                 <input type="password" name="pass" id="pass" placeholder="Introduzca su contraseña">
                                 <ul class="errorRegister">
                                     <li id="liErrorPassword1" class="none">Debe ingresar una contraseña con almenos una letra en minúscula, una en mayúscula, un número y un carácter especial como @ o #, y debe ser de almenos 8 caracteres.</li>                          
@@ -103,7 +105,7 @@
                             </div>
                           
                             <div class="form-create__img">
-                                <label class="form-create__img__title" for="photo">Seleccione la foto de perfil</label>
+                                <label class="label-relative" for="photo">Seleccione la foto de perfil * <i id="file-check"></i></label>
                                     <input type="file" name="photo" accept=".jpg,.jpeg,.png,.gif" id="file">
                                     <ul class="errorRegister">
                                         <li id="liErrorFile1" class="none">Debe seleccionar un archivo con extensión válida(.jpg, .jpeg, .png, .gif).</li>                                                                                                         

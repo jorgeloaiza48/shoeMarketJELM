@@ -37,6 +37,15 @@ window.addEventListener('load',function () {
     let domicilio = document.querySelector("#domicilio");
     let pass = document.querySelector("#pass");
     let file = document.querySelector("#file")
+
+    let documento_check = document.querySelector("#documento-check")
+    let nombre_check = document.querySelector("#nombre-check")
+    let apellido_check = document.querySelector("#apellido-check")
+    let email_check = document.querySelector("#email-check")
+    let fecha_check = document.querySelector("#fecha-check")
+    let domicilio_check = document.querySelector("#domicilio-check")
+    let password_check = document.querySelector("#password-check")
+    let file_check = document.querySelector("#file-check")
     
 
     boton_limpiar_form.addEventListener("click",function(event){
@@ -94,7 +103,58 @@ window.addEventListener('load',function () {
         fecha.classList.remove("valid")                                              
         domicilio.classList.remove("valid")                                              
         pass.classList.remove("valid")                                                
-        file.classList.remove("valid")                                              
+        file.classList.remove("valid")  
+        
+        documento_check.classList.remove("fa-circle-check")
+        documento_check.classList.remove("fa-solid") 
+        nombre_check.classList.remove("fa-circle-check")
+        nombre_check.classList.remove("fa-solid") 
+        apellido_check.classList.remove("fa-circle-check")
+        apellido_check.classList.remove("fa-solid") 
+        email_check.classList.remove("fa-circle-check")
+        email_check.classList.remove("fa-solid") 
+        fecha_check.classList.remove("fa-circle-check")
+        fecha_check.classList.remove("fa-solid") 
+        domicilio_check.classList.remove("fa-circle-check")
+        domicilio_check.classList.remove("fa-solid") 
+        password_check.classList.remove("fa-circle-check")
+        password_check.classList.remove("fa-solid") 
+        file_check.classList.remove("fa-circle-check")
+        file_check.classList.remove("fa-solid") 
+
+        documento_check.classList.remove("fa-circle-xmark")
+        documento_check.classList.remove("fa-solid") 
+        nombre_check.classList.remove("fa-circle-xmark")
+        nombre_check.classList.remove("fa-solid") 
+        apellido_check.classList.remove("fa-circle-xmark")
+        apellido_check.classList.remove("fa-solid") 
+        email_check.classList.remove("fa-circle-xmark")
+        email_check.classList.remove("fa-solid") 
+        fecha_check.classList.remove("fa-circle-xmark")
+        fecha_check.classList.remove("fa-solid") 
+        domicilio_check.classList.remove("fa-circle-xmark")
+        domicilio_check.classList.remove("fa-solid") 
+        password_check.classList.remove("fa-circle-xmark")
+        password_check.classList.remove("fa-solid") 
+        file_check.classList.remove("fa-circle-xmark")
+        file_check.classList.remove("fa-solid") 
+
+        documento.classList.remove("error") 
+        nombre.classList.remove("error")  
+        apellido.classList.remove("error")  
+        email.classList.remove("error")  
+        fecha.classList.remove("error")  
+        domicilio.classList.remove("error")  
+        pass.classList.remove("error")   
+        file.classList.remove("error")  
+        
+        nombre.disabled = true;  
+        apellido.disabled = true;
+        email.disabled = true;
+        fecha.disabled = true;
+        domicilio.disabled = true;
+        pass.disabled = true;
+        file.disabled = true;
 
         sub_button.style.visibility = "hidden"
         

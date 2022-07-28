@@ -194,16 +194,49 @@ text-align: center;
     color: rgb(164, 34, 34)
 }
 
-#email-check{
-    position: absolute;
-    right: -45px;
-    top: 60px;          
-}
+
 #documento-check{
     position: absolute;
     right: -57px;
     top: 45px;          
 }
+#nombre-check{
+    position: absolute;
+    right: -180px;
+    top: 45px
+}
+#apellido-check{
+    position: absolute;
+    right: -180px;
+    top: 44px
+}
+#email-check{
+    position: absolute;
+    right: -100px;
+    top: 46px;          
+}
+#fecha-check{
+    position: absolute;
+    right: -89px;
+    top: 45px;   
+    z-index: 5;       
+}
+#domicilio-check{
+    position: absolute;
+    right: -98px;
+    top: 45px;       
+}
+#password-check{
+    position: absolute;
+    right: -155px;
+    top: 45px;  
+}
+#file-check{
+    position: absolute;
+    right: -42px;
+    top: 45px;  
+}
+
 
 
 /*//////////////////////////profile/********************/
@@ -544,12 +577,12 @@ text-align: center;
         right: -230px;
         top: 45px;          
     }
-    #email-check{
+    /* #email-check{
         position: absolute;
         right: -45px;
         top: 60px;    
       
-    }
+    } */
     .principal-form-boton2 .form-header button {
         /* border: solid 2px blue; */
         width: 8%;
@@ -690,7 +723,7 @@ text-align: center;
         padding: 10px;
         width: 80%;
     }
-    main .form-Reg div{
+    .main-register .form-Reg div{
         /* border: solid 2px rgb(43, 198, 226); */
         height: 15%;
         margin-bottom: 20px;
@@ -3007,6 +3040,10 @@ main form .text-aviso p{
 .fa-circle-check{
     color: green;
 }
+.fa-circle-xmark{
+    color: rgb(236, 46, 46);
+}
+
 .text-aviso2 {
     margin-left: 0px;
     margin-top: 5px;
@@ -3424,25 +3461,6 @@ main form .text-aviso p{
     padding-top: 6px;
 
 }
-
-/* .form-create__img {
-    margin-left: 10px;
-    margin-bottom: 10px;
-    padding-bottom: 10px;
-
-
-}
-.form-create__img__title{
-    font-weight: bold;
-    margin-left: 10px;
-    margin-bottom: 10px;
-    padding-bottom: 10px;
-}
-
-.form-create__img input {
-    margin-top: 10px;
-
-} */
 
 .form-create__price {
     margin-bottom: 20px;
