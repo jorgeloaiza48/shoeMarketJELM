@@ -197,43 +197,48 @@ text-align: center;
 
 #documento-check{
     position: absolute;
-    right: -57px;
+    right: -75px;
     top: 45px;          
 }
 #nombre-check{
     position: absolute;
-    right: -180px;
+    right: -199px;
     top: 45px
 }
 #apellido-check{
     position: absolute;
-    right: -180px;
+    right: -199px;
     top: 44px
 }
 #email-check{
     position: absolute;
-    right: -100px;
+    right: -124px;
     top: 46px;          
 }
 #fecha-check{
     position: absolute;
-    right: -89px;
-    top: 45px;   
-    z-index: 5;       
+    right: -107px;
+    top: 45px;            
+}
+/* Elimina el ícono del campo fecha o date */
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
 }
 #domicilio-check{
     position: absolute;
-    right: -98px;
+    right: -120px;
     top: 45px;       
 }
 #password-check{
     position: absolute;
-    right: -155px;
+    right: -178px;
     top: 45px;  
 }
 #file-check{
     position: absolute;
-    right: -42px;
+    right: -62px;
     top: 45px;  
 }
 
@@ -571,18 +576,6 @@ text-align: center;
     text-decoration: none;
 
 }
-@media(min-width:576px) {
-    #documento-check{
-        position: absolute;
-        right: -230px;
-        top: 45px;          
-    }
-    /* #email-check{
-        position: absolute;
-        right: -45px;
-        top: 60px;    
-      
-    } */
     .principal-form-boton2 .form-header button {
         /* border: solid 2px blue; */
         width: 8%;
@@ -607,21 +600,8 @@ text-align: center;
         text-align: left;
 
     }
-}
-/* .principal-userList360{
-   border: solid 2px blue;
-   height: 80px;
-   margin: 20px;
-   width: 95%;
-}
-.principal-userList360 div{
-    display: block;
-}
-.principal-userList360 .principal-userList-img img{
-    border: solid 2px green;
-    height: 100%;
-    width: 100%;                       
-} */
+
+
 .principal-userList-encabezados{
     display: none;
 }
@@ -702,7 +682,7 @@ text-align: center;
     .div-form-delete-edit-users button p {
         font-size: xx-small;
     }  
-      .form-Reg .contenedor_button {
+     .main-register .form-Reg .contenedor_button {
         /* border: solid 2px blue; */
         display: flex;
         justify-content: space-around;
@@ -710,7 +690,7 @@ text-align: center;
         margin-bottom: 20px;
         width: 80%;
     }
-    main .form-Reg {
+    .main-register .form-Reg {
         background-color: rgb(232, 207, 207);
         border: solid 5px gainsboro;
         border-radius: 10px;
@@ -721,24 +701,26 @@ text-align: center;
         margin-left: auto;
         margin-right: auto;
         padding: 10px;
-        width: 80%;
+        max-width: 800px;
     }
     .main-register .form-Reg div{
         /* border: solid 2px rgb(43, 198, 226); */
-        height: 15%;
+        height: 35%;
         margin-bottom: 20px;
         margin-top: 0px;
         padding-top: 20px;
-        width: 45%;
+        width: 50%;      
     }
-    main .form-Reg label {
+    .main-register .form-Reg label {
         font-weight: bold;
         margin-bottom: 10px;
         margin-left: 10px;
         padding-bottom: 10px;
+       
+        /* width: 90%; */
     }
     
-    main .form-Reg input {
+    .main-register .form-Reg input {
         /* border: solid 2px rebeccapurple; */
         /* border: none; */
         border-radius: 7px;
@@ -748,7 +730,8 @@ text-align: center;
         padding-bottom: 8px;
         padding-top: 8px;
         padding-left: 5px;
-        width: 90%;
+        
+        max-width: 225px;
     }
           
     
@@ -921,12 +904,59 @@ text-align: center;
         list-style: none;
 
     }
-
-
 }
+@media(min-width: 537px) {
+    #email-check{
+        position: absolute;
+        right: -280px;
+        top: 5px;
+    }
+}
+@media(min-width: 452px) {
+    #nombre-check{
+        position: absolute;
+        right: -280px;
+        top: 5px;
+    }
+}
+@media(min-width: 453px) {
+    #apellido-check{
+        position: absolute;
+        right: -280px;
+        top: 5px;
+    }
+}
+@media(min-width: 554px) {
+    #fecha-check{
+        position: absolute;
+        right: -280px;
+        top: 5px;
+    }
+}
+@media(min-width: 591px) {
+    #documento-check{
+        position: absolute;
+        right: -278px;
+        top: 5px;
+    }
+}
+@media(min-width: 606px) {
+    #file-check{
+        position: absolute;
+        right: -279px;
+        top: 5px;
+    }
+}
+
+
 
 @media(min-width:992px) {
 
+    #email-check{
+        position: absolute;
+        right: -450px;
+        top: 15px;
+    }
     .lista__profile-down {
         align-items: center;
         
@@ -983,6 +1013,8 @@ text-align: center;
     }
 
 }
+    
+
 
 @media(min-width: 1200px) {
 /* No quiere moverse el check en esta media query */
@@ -1018,7 +1050,6 @@ text-align: center;
 
 
 }
-
 
 
 
@@ -1154,6 +1185,47 @@ background-color: black;
 
 /* /////////////////////////////Media quiery admin  ///////////////////////////// */
 @media(min-width:768px) {
+    
+    #documento-check{
+        position: absolute;
+        right: -75px;
+        top: 45px;          
+    }
+    #nombre-check{
+        position: absolute;
+        right: -230px;
+        top: 5px
+    }
+    #apellido-check{
+        position: absolute;
+        right: -230px;
+        top: 5px
+    }
+    #email-check{
+        position: absolute;
+        right: -68px;
+        top: 46px;          
+    }
+    #fecha-check{
+        position: absolute;
+        right: -54px;
+        top: 45px;            
+    }
+    #domicilio-check{
+        position: absolute;
+        right: -65px;
+        top: 45px;            
+    }
+    #password-check{
+        position: absolute;
+        right: -120px;
+        top: 45px;            
+    }
+    #file-check{
+        position: absolute;
+        right: -25px;
+        top: 48px;            
+    }
     #vista-usuarios{
         display: none;
     }
@@ -1163,10 +1235,10 @@ background-color: black;
         /* border-radius: 20px;
         width: 50%; */
     }
-    #email-check{
+    #documento-check{
         position: absolute;
-        right: -45px;
-        top: 60px;          
+        right: -20px;
+        top: 45px;          
     }
     .admin-but {
         /* border: solid 2px red; */
@@ -2087,8 +2159,8 @@ i {
 @media (min-width: 992px) {
     #email-check{
         position: absolute;
-        right: -45px;
-        top: 60px;          
+        right: -70px;
+        top: 45px;          
     }
 
     .principal-form-boton2 .form-header button {
@@ -3077,15 +3149,16 @@ main form .text-aviso p{
     margin-bottom: 20px;
     margin-top: 0px;
     padding-top: 20px;
-    width: 90%;
+    width: 100%;
+   
 }
 .form-Reg label {
     font-weight: bold;
     margin-bottom: 10px;
     margin-left: 10px;
     padding-bottom: 10px;
+   
 }
-
 .form-Reg input {
     /* border: solid 2px rebeccapurple; */
     border: none;
@@ -3096,7 +3169,8 @@ main form .text-aviso p{
     padding-bottom: 8px;
     padding-top: 8px;
     padding-left: 5px;
-    width: 100%;
+    width: 280px;
+   
 }
    
 .errorRegister{
@@ -3178,12 +3252,6 @@ main form .text-aviso p{
     margin-top: 0px;
     margin-bottom: 10px;
 }
-
-/* 
-.form__usuario {
-    margin-bottom: 20px;
-
-} */
 
 .usuario_record {
     display: block;
@@ -3670,8 +3738,8 @@ main form .text-aviso p{
 @media (min-width: 1400px) {
     #email-check{
         position: absolute;
-        right: -45px;
-        top: 60px;          
+        right: -65px;
+        top: 45px;          
     }
     
 }
