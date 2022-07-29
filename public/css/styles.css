@@ -391,6 +391,7 @@ text-align: center;
     margin-bottom: 0px; */
     height: 30px;
     width:100%;
+    margin-top: 0px;
 }
 
 .texto2 i {
@@ -3145,9 +3146,7 @@ main form .text-aviso p{
 }
 .form-login .usuario_record_div{
     height: 30px;
-    display: flex;   
-    flex-direction: column;
-    justify-content: flex-start;
+    display: flex;
     padding: 0px;
     width: 50%;
 }
@@ -3158,7 +3157,7 @@ main form .text-aviso p{
 .form-login .usuario_record_div .checkbox{
     /* border: solid 25px green; */
     padding: 0px;
-    margin-top: 10px;
+    margin-top: -8px;
 }
 .form-login .section-login__button{
     height: 50px;
@@ -3175,8 +3174,8 @@ main form .text-aviso p{
     padding: 0px;
 }
 .form-login .section-login__button .button-login{
-    margin-top: 0px;
-    margin-bottom: 10px;
+    margin-top: -9px;
+    margin-bottom: 47px;
 }
 
 /* 
@@ -3186,10 +3185,9 @@ main form .text-aviso p{
 } */
 
 .usuario_record {
-    display: block;
-    padding-left: 20px;
+    
     text-align: left;
-    color: #585656
+    
 }
 
 .form__confirm input {
