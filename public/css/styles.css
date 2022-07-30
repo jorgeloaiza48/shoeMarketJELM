@@ -632,6 +632,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 @media(min-width:768px) {
 
+
     .principal-userList-encabezados{
         /* border: solid 2px brown; */
         display: flex;
@@ -1205,7 +1206,9 @@ background-color: black;
 
 /* /////////////////////////////Media quiery admin  ///////////////////////////// */
 @media(min-width:768px) {
-    
+    .none{
+        display: none;
+    }
     #documento-check{
         position: absolute;
         right: -75px;

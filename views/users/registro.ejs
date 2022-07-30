@@ -19,7 +19,7 @@
                             </ul>
                                                       
                             <% if (locals.errors && errors.documento) {%>
-                                <div class="text-aviso"><p><%= errors.documento.msg %></p></div>
+                                <div class="text-aviso" id="text-aviso"><p><%= errors.documento.msg %></p></div>
                             <%}%>
                         </div>
 
@@ -35,7 +35,7 @@
                                 <li id="liErrorNombre3" class="none">El nombre no puede contener números ni caracteres especiales.</li>
                             </ul>
                             <% if (locals.errors && errors.nombre) {%>
-                                <div class="text-aviso"><p><%= errors.nombre.msg %></p></div>
+                                <div class="text-aviso" id="text-aviso-nombre"><p><%= errors.nombre.msg %></p></div>
                             <%}%>
                         </div>
                         <div class="form__apellido">
@@ -49,7 +49,7 @@
                                 <li id="liErrorApellido3" class="none">El apellido no puede contener números ni caracteres especiales.</li>
                             </ul>
                             <% if (locals.errors && errors.apellido) {%>
-                                <div class="text-aviso"><p><%= errors.apellido.msg %></p></div>
+                                <div class="text-aviso" id="text-aviso-apellido"><p><%= errors.apellido.msg %></p></div>
                             <%}%>
                         </div>
 
@@ -62,7 +62,7 @@
                                 <li id="liErrorEmail2" class="none">Debe introducir una dirección de correo electrónico válida. Ejemplo: usuario@ejemplo.com</li>                               
                             </ul>
                             <% if (locals.errors && errors.email) {%>
-                                <div class="text-aviso"><p><%= errors.email.msg %></p></div>
+                                <div class="text-aviso" id="text-aviso-email"><p><%= errors.email.msg %></p></div>
                             <%}%>
                         </div>
                         <div class="form__fecha">
@@ -75,7 +75,7 @@
                             </ul>
                           
                             <% if (locals.errors && errors.fecha) {%>
-                                <div class="text-aviso"><p><%= errors.fecha.msg %></p></div>
+                                <div class="text-aviso" id="text-aviso-fecha"><p><%= errors.fecha.msg %></p></div>
                             <%}%>
             
                         </div>
@@ -87,7 +87,7 @@
                                 <li id="liErrorDomicilio2" class="none">La dirección debe tener mínimo 10 caracteres.</li>                          
                             </ul>
                             <% if (locals.errors && errors.domicilio) {%>
-                                <div class="text-aviso"><p><%= errors.domicilio.msg %></p></div>
+                                <div class="text-aviso" id="text-aviso-domicilio"><p><%= errors.domicilio.msg %></p></div>
                             <%}%>
                         </div>
                        
@@ -99,7 +99,7 @@
                                     <li id="liErrorPassword2" class="none">La contraseña no cumple con los requerimientos exigidos(una letra en minúscula, una en mayúscula, un número y un carácter especial como @ o #, y debe ser de almenos 8 caracteres).</li>                          
                                 </ul>
                                 <% if (locals.errors && errors.pass) {%>
-                                    <div class="text-aviso"><p><%= errors.pass.msg %></p></div>
+                                    <div class="text-aviso" id="text-aviso-password"><p><%= errors.pass.msg %></p></div>
                                 <%}%>
                             </div>
                           
@@ -110,7 +110,7 @@
                                         <li id="liErrorFile1" class="none">Debe seleccionar un archivo con extensión válida(.jpg, .jpeg, .png, .gif).</li>                                                                                                         
                                     </ul>
                                     <% if (locals.errors && errors.photo) {%>
-                                        <div class="text-aviso"><p><%= errors.photo.msg %></p></div>
+                                        <div class="text-aviso" id="text-aviso-file"><p><%= errors.photo.msg %></p></div>
                                     <%}%><hr>  
 
                                     <div id="preview"></div>

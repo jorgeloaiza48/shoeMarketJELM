@@ -148,15 +148,15 @@ window.addEventListener('load',function () {
         pass.classList.remove("error")   
         file.classList.remove("error")  
         
-        nombre.disabled = true;  
-        apellido.disabled = true;
-        email.disabled = true;
-        fecha.disabled = true;
-        domicilio.disabled = true;
-        pass.disabled = true;
-        file.disabled = true;
+        // nombre.disabled = true;  
+        // apellido.disabled = true;
+        // email.disabled = true;
+        // fecha.disabled = true;
+        // domicilio.disabled = true;
+        // pass.disabled = true;
+        // file.disabled = true;
 
-        sub_button.style.visibility = "hidden"
+        // sub_button.style.visibility = "hidden"
         
         })
 

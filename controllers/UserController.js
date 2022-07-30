@@ -21,10 +21,7 @@ const controller = {
         res.render("users/registro", { title: "Registro" }) 
 },
 
-    createUser: function (req, res) {
-        // let usersFilePath = path.join(__dirname, '../data/users.json');
-        // let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8')); //de JSON a JS
-        
+    createUser: function (req, res) {        
 
         let errors = validationResult(req)
        
@@ -34,8 +31,7 @@ const controller = {
                 title: "Registro de usuario" 
             
             })//mapped convierte un array en un objeto literal
-        } 
-        
+        }         
         
         else { //else2
             ///********************************* */
@@ -69,12 +65,14 @@ const controller = {
                 })
             }
             else if(documento == null && email != null){
+                
                 return res.render("users/registro", { errors: {
-                    email: { msg: "El Correo electronico ya se encuentra registrado." },
-                    
+                    email: { msg: "El Correo electrónico ya se encuentra registrado." },
+                   
                   },
                       oldData:req.body, 
                       title: "Registro de usuario" 
+                      
                   })
             }
             else{
