@@ -171,30 +171,43 @@ text-align: center;
 }
 .icono-emailOK{
     position: absolute;
-    bottom: -54px;
+    bottom: -37px;
     left: 172px;
     color: green;
 }
 .icono-emailX{
     position: absolute;
-    bottom: -54px;
+    bottom: -37px;
     left: 172px;
     color: rgb(164, 34, 34)
 }
 .icono-passwordOK{
     position: absolute;
-    bottom: -45px;
+    bottom: -37px;
     left: 145px;
     color: green;
 }
 .icono-passwordX{
     position: absolute;
-    bottom: -45px;
+    bottom: -37px;
     left: 145px;
     color: rgb(164, 34, 34)
 }
-
-
+.pass-login{
+    top: 7px
+}
+.errorText-login{
+    margin-left: -26px;
+    margin-bottom: 6px;
+    margin-top: -25px;
+    color: #d93f3f;
+}
+.errorText-login2{
+    margin-left: -26px;
+    margin-bottom: 6px;
+    margin-top: 0px;
+    color: #d93f3f;
+}
 #documento-check{
     position: absolute;
     right: -57px;
@@ -3172,6 +3185,9 @@ main form .text-aviso p{
 .form-login .section-login__button{
     margin-top: 0px;
     padding: 0px;
+}
+.correo-login{
+    top:17px
 }
 .form-login .section-login__button .button-login{
     margin-top: -9px;
