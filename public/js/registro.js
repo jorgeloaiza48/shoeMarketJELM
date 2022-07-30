@@ -72,10 +72,10 @@
           liErrorDocumento2.classList.remove("show")
           liErrorDocumento2.classList.add("none")
           documento_check.classList.remove("fa-circle-check")
-          documento_check.classList.remove("fa-solid") 
+          documento_check.classList.remove("fa-regular") 
           documento_check.classList.add("show")
           documento_check.classList.add("fa-circle-xmark")
-          documento_check.classList.add("fa-solid") 
+          documento_check.classList.add("fa-regular") 
          
         }
                   
@@ -86,7 +86,7 @@
             liErrorDocumento1.classList.add("none")  
             documento_check.classList.add("show")
             documento_check.classList.add("fa-circle-xmark")
-            documento_check.classList.add("fa-solid")                 
+            documento_check.classList.add("fa-regular")                 
             nombre.disabled = true;  
             documento.classList.remove("valid")                                      
             documento.classList.add("error")                 
@@ -100,9 +100,9 @@
             documento.classList.add("valid")
             documento_check.classList.add("show")
             documento_check.classList.remove("fa-circle-xmark")
-            documento_check.classList.remove("fa-solid")   
+            documento_check.classList.remove("fa-regular")   
             documento_check.classList.add("fa-circle-check")
-            documento_check.classList.add("fa-solid") 
+            documento_check.classList.add("fa-regular") 
             // toastr.info("Recuerde que el campo Documento de identidad debe contener mínimo 2 números y máximo 10.");
           }
         })          
@@ -116,10 +116,10 @@
                 liErrorNombre3.classList.remove("show")
                 liErrorNombre3.classList.add("none")    
                 nombre_check.classList.remove("fa-circle-check")
-                nombre_check.classList.remove("fa-solid") 
+                nombre_check.classList.remove("fa-regular") 
                 nombre_check.classList.add("show")
                 nombre_check.classList.add("fa-circle-xmark")
-                nombre_check.classList.add("fa-solid")                      
+                nombre_check.classList.add("fa-regular")                      
                 apellido.disabled = true;                   
             }
             else if(nombre.value.length < 2 && /\d/.test(nombre.value) || nombre.value.length < 2 && /[°¡¿ `!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/.test(nombre.value)){
@@ -130,10 +130,10 @@
                 liErrorNombre3.classList.remove("none")
                 liErrorNombre3.classList.add("show")  
                 nombre_check.classList.remove("fa-circle-check")
-                nombre_check.classList.remove("fa-solid") 
+                nombre_check.classList.remove("fa-regular") 
                 nombre_check.classList.add("show")
                 nombre_check.classList.add("fa-circle-xmark")
-                nombre_check.classList.add("fa-solid") 
+                nombre_check.classList.add("fa-regular") 
                 apellido.disabled = true;  
                 nombre.classList.remove("valid")                                      
                 nombre.classList.add("error")            
@@ -149,10 +149,10 @@
               nombre.classList.remove("valid")                                      
               nombre.classList.add("error") 
               nombre_check.classList.remove("fa-circle-check")
-              nombre_check.classList.remove("fa-solid") 
+              nombre_check.classList.remove("fa-regular") 
               nombre_check.classList.add("show")
               nombre_check.classList.add("fa-circle-xmark")
-              nombre_check.classList.add("fa-solid") 
+              nombre_check.classList.add("fa-regular") 
             }
             else if(nombre.value.length < 2){
               liErrorNombre1.classList.remove("show")
@@ -165,10 +165,10 @@
               nombre.classList.add("error") 
               nombre.classList.remove("show")
               nombre_check.classList.remove("fa-circle-check")
-              nombre_check.classList.remove("fa-solid") 
+              nombre_check.classList.remove("fa-regular") 
               nombre_check.classList.add("show")
               nombre_check.classList.add("fa-circle-xmark")
-              nombre_check.classList.add("fa-solid") 
+              nombre_check.classList.add("fa-regular") 
               
             }
             else{
@@ -183,9 +183,9 @@
               nombre.classList.add("valid")
               nombre_check.classList.add("show")
               nombre_check.classList.remove("fa-circle-xmark")
-              nombre_check.classList.remove("fa-solid")   
+              nombre_check.classList.remove("fa-regular")   
               nombre_check.classList.add("fa-circle-check")
-              nombre_check.classList.add("fa-solid") 
+              nombre_check.classList.add("fa-regular") 
               
 
                 // toastr.info("Recuerde que el campo Nombre debe contener mínimo 2 letras y no puede contener números.");
@@ -204,10 +204,10 @@
                 apellido.classList.remove("valid")                                      
                 apellido.classList.add("error")  
                 apellido_check.classList.remove("fa-circle-check")
-                apellido_check.classList.remove("fa-solid") 
+                apellido_check.classList.remove("fa-regular") 
                 apellido_check.classList.add("show")
                 apellido_check.classList.add("fa-circle-xmark")
-                apellido_check.classList.add("fa-solid")                       
+                apellido_check.classList.add("fa-regular")                       
             }
             else if(apellido.value.length < 2 && /\d/.test(apellido.value) || apellido.value.length < 2 && /[°¡¿`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/.test(apellido.value)){
                 liErrorApellido1.classList.remove("show")
@@ -220,10 +220,10 @@
                 apellido.classList.remove("valid")                                      
                 apellido.classList.add("error")  
                 apellido_check.classList.remove("fa-circle-check")
-                apellido_check.classList.remove("fa-solid") 
+                apellido_check.classList.remove("fa-regular") 
                 apellido_check.classList.add("show")
                 apellido_check.classList.add("fa-circle-xmark")
-                apellido_check.classList.add("fa-solid")  
+                apellido_check.classList.add("fa-regular")  
                 
             }
             else if(apellido.value.length >= 2 && /\d/.test(apellido.value) || apellido.value.length >= 2 && /[°¡¿`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/.test(apellido.value)){
@@ -237,10 +237,10 @@
               apellido.classList.remove("valid")                                      
               apellido.classList.add("error") 
               apellido_check.classList.remove("fa-circle-check")
-              apellido_check.classList.remove("fa-solid") 
+              apellido_check.classList.remove("fa-regular") 
               apellido_check.classList.add("show")
               apellido_check.classList.add("fa-circle-xmark")
-              apellido_check.classList.add("fa-solid")  
+              apellido_check.classList.add("fa-regular")  
               
             }
             else if(apellido.value.length < 2){
@@ -254,10 +254,10 @@
               apellido.classList.remove("valid")                                      
               apellido.classList.add("error") 
               apellido_check.classList.remove("fa-circle-check")
-              apellido_check.classList.remove("fa-solid") 
+              apellido_check.classList.remove("fa-regular") 
               apellido_check.classList.add("show")
               apellido_check.classList.add("fa-circle-xmark")
-              apellido_check.classList.add("fa-solid")    
+              apellido_check.classList.add("fa-regular")    
              
             }
             else{
@@ -272,9 +272,9 @@
               apellido.classList.add("valid")
               apellido_check.classList.add("show")
               apellido_check.classList.remove("fa-circle-xmark")
-              apellido_check.classList.remove("fa-solid")   
+              apellido_check.classList.remove("fa-regular")   
               apellido_check.classList.add("fa-circle-check")
-              apellido_check.classList.add("fa-solid") 
+              apellido_check.classList.add("fa-regular") 
 
                 // toastr.info("Recuerde que el campo Nombre debe contener mínimo 2 letras y no puede contener números.");
               }
@@ -289,10 +289,10 @@
               email.classList.remove("valid")                                      
               email.classList.add("error") 
               email_check.classList.remove("fa-circle-check")
-              email_check.classList.remove("fa-solid") 
+              email_check.classList.remove("fa-regular") 
               email_check.classList.add("show")
               email_check.classList.add("fa-circle-xmark")
-              email_check.classList.add("fa-solid")   
+              email_check.classList.add("fa-regular")   
             }
             else if(!(/^([\da-z_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/).test(email.value)){
               fecha.disabled = true;
@@ -303,10 +303,10 @@
               email.classList.remove("valid")                                      
               email.classList.add("error")  
               email_check.classList.remove("fa-circle-check")
-              email_check.classList.remove("fa-solid") 
+              email_check.classList.remove("fa-regular") 
               email_check.classList.add("show")
               email_check.classList.add("fa-circle-xmark")
-              email_check.classList.add("fa-solid")           
+              email_check.classList.add("fa-regular")           
             }
             else{
                 liErrorEmail1.classList.remove("show")
@@ -319,9 +319,9 @@
                 email_check.classList.remove("none")
                 email_check.classList.add("show")
                 email_check.classList.remove("fa-circle-xmark")
-                email_check.classList.remove("fa-solid")  
+                email_check.classList.remove("fa-regular")  
                 email_check.classList.add("fa-circle-check")
-                email_check.classList.add("fa-solid") 
+                email_check.classList.add("fa-regular") 
                
               }
                 // toastr.info("El campo Correo electrónico debe contener una dirección válida. Ejemplo: usuario@gmail.com");
@@ -346,9 +346,9 @@
               fecha_check.classList.remove("none")
               fecha_check.classList.add("show")                                                      
               fecha_check.classList.remove("fa-circle-check")
-              fecha_check.classList.remove("fa-solid")               
+              fecha_check.classList.remove("fa-regular")               
               fecha_check.classList.add("fa-circle-xmark")
-              fecha_check.classList.add("fa-solid")    
+              fecha_check.classList.add("fa-regular")    
             }
            
            else if(edad < 18){
@@ -362,9 +362,9 @@
               fecha_check.classList.remove("none")
               fecha_check.classList.add("show")                                                      
               fecha_check.classList.remove("fa-circle-check")
-              fecha_check.classList.remove("fa-solid")               
+              fecha_check.classList.remove("fa-regular")               
               fecha_check.classList.add("fa-circle-xmark")
-              fecha_check.classList.add("fa-solid")    
+              fecha_check.classList.add("fa-regular")    
             //   toastr.info("La edad no puede ser inferior a 18. Verifique la fecha ingresada.");
             }
             else{
@@ -380,9 +380,9 @@
               fecha_check.classList.remove("none")
               fecha_check.classList.add("show")
               fecha_check.classList.remove("fa-circle-xmark")
-              fecha_check.classList.remove("fa-solid")  
+              fecha_check.classList.remove("fa-regular")  
               fecha_check.classList.add("fa-circle-check")
-              fecha_check.classList.add("fa-solid") 
+              fecha_check.classList.add("fa-regular") 
             }            
             
           })
@@ -404,9 +404,9 @@
               fecha_check.classList.remove("none")
               fecha_check.classList.add("show")                                                      
               fecha_check.classList.remove("fa-circle-check")
-              fecha_check.classList.remove("fa-solid")               
+              fecha_check.classList.remove("fa-regular")               
               fecha_check.classList.add("fa-circle-xmark")
-              fecha_check.classList.add("fa-solid") 
+              fecha_check.classList.add("fa-regular") 
               
             }
             
@@ -421,9 +421,9 @@
               fecha_check.classList.remove("none")
               fecha_check.classList.add("show")
               fecha_check.classList.remove("fa-circle-xmark")
-              fecha_check.classList.remove("fa-solid")  
+              fecha_check.classList.remove("fa-regular")  
               fecha_check.classList.add("fa-circle-check")
-              fecha_check.classList.add("fa-solid") 
+              fecha_check.classList.add("fa-regular") 
             }            
             
           })
@@ -438,10 +438,10 @@
               domicilio.classList.remove("valid")                                      
               domicilio.classList.add("error") 
               domicilio_check.classList.remove("fa-circle-check")
-              domicilio_check.classList.remove("fa-solid") 
+              domicilio_check.classList.remove("fa-regular") 
               domicilio_check.classList.add("show")
               domicilio_check.classList.add("fa-circle-xmark")
-              domicilio_check.classList.add("fa-solid")   
+              domicilio_check.classList.add("fa-regular")   
             }
             else if(domicilio.value.length < 10 ){
               pass.disabled = true
@@ -452,10 +452,10 @@
               domicilio.classList.remove("valid")                                      
               domicilio.classList.add("error")
               domicilio_check.classList.remove("fa-circle-check")
-              domicilio_check.classList.remove("fa-solid") 
+              domicilio_check.classList.remove("fa-regular") 
               domicilio_check.classList.add("show")
               domicilio_check.classList.add("fa-circle-xmark")
-              domicilio_check.classList.add("fa-solid")   
+              domicilio_check.classList.add("fa-regular")   
             }
             else{
               pass.disabled = false
@@ -466,7 +466,7 @@
               domicilio_check.classList.remove("none")
               domicilio_check.classList.add("show")
               domicilio_check.classList.add("fa-circle-check")
-              domicilio_check.classList.add("fa-solid")               
+              domicilio_check.classList.add("fa-regular")               
               domicilio_check.classList.remove("fa-circle-xmark")
               
               }
@@ -483,10 +483,10 @@
               pass.classList.remove("valid")                                      
               pass.classList.add("error")
               password_check.classList.remove("fa-circle-check")
-              password_check.classList.remove("fa-solid") 
+              password_check.classList.remove("fa-regular") 
               password_check.classList.add("show")
               password_check.classList.add("fa-circle-xmark")
-              password_check.classList.add("fa-solid") 
+              password_check.classList.add("fa-regular") 
             }
             else if(/(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9])(?=.{8,})/.test(pass.value)){
                 sub_button.disabled = false
@@ -500,9 +500,9 @@
                 password_check.classList.remove("none")
                 password_check.classList.add("show")
                 password_check.classList.remove("fa-circle-xmark")
-                password_check.classList.remove("fa-solid")               
+                password_check.classList.remove("fa-regular")               
                 password_check.classList.add("fa-circle-check")
-                password_check.classList.add("fa-solid") 
+                password_check.classList.add("fa-regular") 
                 }
             else{
               // sub_button.disabled = true
@@ -516,9 +516,9 @@
               password_check.classList.remove("none")
               password_check.classList.add("show")
               password_check.classList.remove("fa-circle-check")
-              password_check.classList.remove("fa-solid")               
+              password_check.classList.remove("fa-regular")               
               password_check.classList.add("fa-circle-xmark")
-              password_check.classList.add("fa-solid")               
+              password_check.classList.add("fa-regular")               
               
             //   toastr.info("La contraeeña Debe tener almenos una letra en minúscula, una en mayúscula, un número y un carácter especial como @ o #, y debe ser de almenos 8 caracteres.")
             }
@@ -536,9 +536,9 @@
               file_check.classList.remove("none")
               file_check.classList.add("show")
               file_check.classList.remove("fa-circle-check")
-              file_check.classList.remove("fa-solid")               
+              file_check.classList.remove("fa-regular")               
               file_check.classList.add("fa-circle-xmark")
-              file_check.classList.add("fa-solid")      
+              file_check.classList.add("fa-regular")      
             }
             else{
               liErrorFile1.classList.remove("show")
@@ -549,10 +549,10 @@
               file.classList.add("valid")
               file_check.classList.remove("none")
               file_check.classList.add("show")
-              file_check.classList.remove("fa-solid")               
+              file_check.classList.remove("fa-regular")               
               file_check.classList.remove("fa-circle-xmark")
               file_check.classList.add("fa-circle-check")              
-              file_check.classList.add("fa-solid")      
+              file_check.classList.add("fa-regular")      
             }
           })
 
