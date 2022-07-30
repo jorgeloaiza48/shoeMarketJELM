@@ -193,6 +193,12 @@ text-align: center;
     left: 145px;
     color: rgb(164, 34, 34)
 }
+.icono-showPassword-login{
+    position: absolute;
+    bottom: -37px;
+    left: 180px;
+    
+}
 .pass-login{
     top: 7px
 }

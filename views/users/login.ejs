@@ -18,9 +18,9 @@
                                     <input  type="email" name="email" id="email" value="<%= locals.old && old.email ? old.email : ""%>"
                                     placeholder="Correo electrónico">
                                     <ul class="errorDocumento">
-                                        <li id="liErrorDocumento1" class="none">Debe introducir una dirección de email.</li>
-                                        <li id="liErrorDocumento2" class="none">El campo Correo electrónico debe contener una dirección válida. Ejemplo: usuario@gmail.com</li>
-                                        <li id="liErrorDocumento3" class="none">Debe introducir una dirección de e-mail y una contraseña para iniciar sesión.</li>
+                                        <li id="liErrorEmail1" class="none">Debe introducir una dirección de email.</li>
+                                        <li id="liErrorEmail2" class="none">El campo Correo electrónico debe contener una dirección válida. Ejemplo: usuario@gmail.com</li>
+                                        <li id="liErrorEmail3" class="none">Debe introducir una dirección de e-mail y una contraseña para iniciar sesión.</li>
                                     </ul>
                                     <% if (locals.errors && errors.email ) { %>
 
@@ -34,7 +34,8 @@
                                 <div class="usuario__pass">
                                     <label class="label-relative pass-login" for="password"><strong>Contraseña:</strong>
                                         <i class="icono-passwordOK" id="passwordCheckOK"></i>
-                                        <i class="icono-passwordX" id="passwordCheckX"></i> </label>
+                                        <i class="icono-passwordX" id="passwordCheckX"></i> 
+                                        <i class="fa-regular fa-eye-slash icono-showPassword-login" id="icono-showPassword"></i></label>
                                     <input type="password" name="password" id="password" placeholder="Contraseña" > 
                                     <ul class="errorDocumento">
                                         <li id="liErrorPassword1" class="none">Debe introducir una contraseña para iniciar sesión.</li>
