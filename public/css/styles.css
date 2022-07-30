@@ -712,7 +712,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     }
     .main-register .form-Reg {
         background-color: rgb(232, 207, 207);
-        border: solid 5px gainsboro;
+        /* border: solid 5px blue; */
         border-radius: 10px;
         display: flex;
         flex-wrap: wrap;
@@ -721,7 +721,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         margin-left: auto;
         margin-right: auto;
         padding: 10px;
-        max-width: 800px;
+        max-width: 750px;
     }
     .main-register .form-Reg div{
         /* border: solid 2px rgb(43, 198, 226); */
@@ -729,7 +729,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         margin-bottom: 20px;
         margin-top: 0px;
         padding-top: 20px;
-        width: 50%;      
+        max-width: 320px;      
     }
     .main-register .form-Reg label {
         font-weight: bold;
@@ -1213,13 +1213,13 @@ background-color: black;
     }
     #nombre-check{
         position: absolute;
-        right: -230px;
-        top: 5px
+        right: -142px;
+        top: 44px
     }
     #apellido-check{
         position: absolute;
-        right: -230px;
-        top: 5px
+        right: -143px;
+        top: 43px
     }
     #email-check{
         position: absolute;
