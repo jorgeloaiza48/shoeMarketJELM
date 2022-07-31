@@ -131,7 +131,7 @@ const controller = {
 					res.cookie("userEmail", req.body.email, {maxAge : (1000 * 60)*2})
 				}
                 
-				return res.redirect("/user/profile")
+				return res.redirect("/user/profile") //logueo existoso
 			} 
             else{//**
 			res.render("users/login", {

@@ -5,6 +5,7 @@ const fs = require("fs")
 const { validationResult } = require('express-validator')
 const { title } = require("process")
 const db = require("../database/models/index")
+const { Op, where } = require("sequelize");
 
 
 let roles = ["admin", "cliente", "vendedor", "invitado"]
@@ -21,7 +22,7 @@ const controller = {
             include: [
                 { association: "roles" },
                 { association: "order" }
-            ]
+            ]                      
         } )
             .then(users => {               
                 return res.render('admin/listaUsuarios.ejs', { users, title: "Listado de usuarios" })
@@ -35,7 +36,7 @@ const controller = {
                 { association: "roles" },
                 { association: "order" }
             ]
-        } )
+                } )
             .then(users => {               
                 return res.render('admin/listaUsuariosInactivos.ejs', { users, title: "Listado de usuarios inactivos" })
             })

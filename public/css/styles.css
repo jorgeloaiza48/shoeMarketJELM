@@ -1273,8 +1273,16 @@ background-color: black;
         flex-direction: row;
     }
     form .admin-but{
-        width: 90%;
+        width: 95%;
     }
+    form .admin-but-singleUserLogged{
+       height: 30px;
+       width: 40%;      
+    }
+    form .admin-but-singleUserLogged p{            
+        margin: auto;             
+    }
+    
    .product-edit form button{
         width: 80px;
     }

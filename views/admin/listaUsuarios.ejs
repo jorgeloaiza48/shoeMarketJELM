@@ -12,6 +12,9 @@
                         <% cantidadActivos = cantidadActivos + 1 %>        
                     <% } %>
                 <% }) %>
+                <% if(locals.userLogged.status === "Activo"){ %>
+                    <% cantidadActivos = cantidadActivos - 1 %>
+                    <% } %>
                 <h3 class="all-product-title">Usuarios Registrados Activos (<%= cantidadActivos%>)</h3>
                 <div class="principal-userList-encabezados" >
                     <div class="principal-userList-img"><h4>Imagen</h4></div>  
@@ -28,7 +31,7 @@
                 <div class="productos-admin">
 
                     <% users.forEach(usuario=> { %>
-                        <% if (usuario.status === "Activo") { %>
+                        <% if (usuario.status === "Activo" && usuario.email != locals.userLogged.email ) { %>
                             <%- include('../components/singleUser', {usuario : usuario}) %> 
                         <% } %>
                     <% }) %>
