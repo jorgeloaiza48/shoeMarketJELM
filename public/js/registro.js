@@ -20,14 +20,15 @@
       let text_aviso_domicilio = document.getElementById('text-aviso-domicilio')
       let text_aviso_password = document.getElementById('text-aviso-password')
       let text_aviso_file = document.getElementById('text-aviso-file')
-      // nombre.disabled = true;
-      // apellido.disabled = true;
-      // email.disabled = true;
-      // fecha.disabled = true;
-      // domicilio.disabled = true;
-      // pass.disabled = true;    
-      // file.disabled = true
-
+      
+      nombre.disabled = true;
+      apellido.disabled = true;
+      email.disabled = true;
+      fecha.disabled = true;
+      domicilio.disabled = true;
+      pass.disabled = true;    
+      file.disabled = true
+     
       let doc = 0
       let nom = 0
       let apell = 0
@@ -37,8 +38,20 @@
       let contrasena = 0 
       let foto_perfil = 0
 
-      // sub_button.style.visibility = "hidden"
       form.reset()
+      sub_button.style.visibility = "hidden"  
+
+      if(email.value != "" && email.disabled === true){
+        nombre.disabled = false;
+        apellido.disabled = false;
+        email.disabled = false;
+        fecha.disabled = false;
+        domicilio.disabled = false;
+        pass.disabled = false;    
+        file.disabled = false
+        sub_button.style.visibility = "visible"
+        }
+   
 
       let liErrorDocumento1 = document.querySelector("#liErrorDocumento1")
       let liErrorDocumento2 = document.querySelector("#liErrorDocumento2")
@@ -116,6 +129,7 @@
      
     documento.addEventListener("keyup", function (event) {
         if(documento.value === "" ){
+          nombre.disabled = true;
           liErrorDocumento1.classList.remove("none")
           liErrorDocumento1.classList.add("show")
           liErrorDocumento2.classList.remove("show")
@@ -131,6 +145,7 @@
         }
                   
         else if(documento.value.length < 5 || documento.value.length > 10){ 
+          nombre.disabled = true;
             liErrorDocumento2.classList.remove("none")
             liErrorDocumento2.classList.add("show")
             liErrorDocumento1.classList.remove("show")
@@ -145,7 +160,7 @@
         }
                              
           else{
-            
+            nombre.disabled = false;
             liErrorDocumento2.classList.remove("show")
             liErrorDocumento2.classList.add("none")
             documento.classList.remove("error")                                      
@@ -167,6 +182,7 @@
       })             
           nombre.addEventListener("keyup", function (event) {
             if(nombre.value === ""){
+              apellido.disabled = true;
                 liErrorNombre1.classList.remove("none")
                 liErrorNombre1.classList.add("show") 
                 liErrorNombre2.classList.remove("show")
@@ -182,6 +198,7 @@
                 // sub_button.style.visibility = "hidden"
             }
             else if(nombre.value.length < 2 && /\d/.test(nombre.value) || nombre.value.length < 2 && /[°¡¿ `!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/.test(nombre.value)){
+              apellido.disabled = true;
                 liErrorNombre1.classList.remove("show")
                 liErrorNombre1.classList.add("none")  
                 liErrorNombre2.classList.remove("show")
@@ -200,6 +217,7 @@
             }
             else if(nombre.value.length >= 2 && /\d/.test(nombre.value) || nombre.value.length >= 2 && /[°¡¿`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/.test(nombre.value)){
               // sub_button.style.visibility = "hidden"
+              apellido.disabled = true;
               liErrorNombre1.classList.remove("show")
               liErrorNombre1.classList.add("none")  
               liErrorNombre2.classList.remove("show")
@@ -216,6 +234,7 @@
               nom = 0
             }
             else if(nombre.value.length < 2){
+              apellido.disabled = true;
               liErrorNombre1.classList.remove("show")
               liErrorNombre1.classList.add("none")  
               liErrorNombre2.classList.remove("none")
@@ -234,7 +253,7 @@
               // sub_button.style.visibility = "hidden"
             }
             else{
-              
+              apellido.disabled = false;
               liErrorNombre1.classList.remove("show")
               liErrorNombre1.classList.add("none")  
               liErrorNombre2.classList.remove("show")
@@ -261,6 +280,7 @@
 
           apellido.addEventListener("keyup", function (event) {
             if(apellido.value === ""){
+              email.disabled = true;
                 liErrorApellido1.classList.remove("none")
                 liErrorApellido1.classList.add("show") 
                 liErrorApellido2.classList.remove("show")
@@ -278,6 +298,7 @@
                 apell = 0
             }
             else if(apellido.value.length < 2 && /\d/.test(apellido.value) || apellido.value.length < 2 && /[°¡¿`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/.test(apellido.value)){
+              email.disabled = true;
                 liErrorApellido1.classList.remove("show")
                 liErrorApellido1.classList.add("none")  
                 liErrorApellido2.classList.remove("show")
@@ -297,6 +318,7 @@
             }
             else if(apellido.value.length >= 2 && /\d/.test(apellido.value) || apellido.value.length >= 2 && /[°¡¿`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/.test(apellido.value)){
               // sub_button.style.visibility = "hidden"
+              email.disabled = true;
               liErrorApellido1.classList.remove("show")
               liErrorApellido1.classList.add("none")  
               liErrorApellido2.classList.remove("show")
@@ -314,6 +336,7 @@
             }
             else if(apellido.value.length < 2){
               // sub_button.style.visibility = "hidden"
+              email.disabled = true;
               liErrorApellido1.classList.remove("show")
               liErrorApellido1.classList.add("none")  
               liErrorApellido2.classList.remove("none")
@@ -330,7 +353,7 @@
               apell = 0
             }
             else{
-              
+              email.disabled = false;
               liErrorApellido1.classList.remove("show")
               liErrorApellido1.classList.add("none")  
               liErrorApellido2.classList.remove("show")
@@ -356,6 +379,7 @@
           })                              
           email.addEventListener("keyup", function (event) {
             if(email.value === ""){
+              fecha.disabled = true;
               liErrorEmail1.classList.remove("none")
               liErrorEmail1.classList.add("show")
               liErrorEmail2.classList.remove("show")
@@ -370,8 +394,12 @@
               email_check.classList.add("fa-regular")   
               correo = 0
             }
+            else if(email.value != "" && email.disabled === true){
+                  email.disabled = false
+            }
             else if(!(/^([\da-z_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/).test(email.value)){
               // sub_button.style.visibility = "hidden"
+              fecha.disabled = true;
               liErrorEmail1.classList.remove("show")
               liErrorEmail1.classList.add("none")
               liErrorEmail2.classList.remove("none")
@@ -386,6 +414,7 @@
               correo = 0
             }
             else{
+              fecha.disabled = false;
                 liErrorEmail1.classList.remove("show")
                 liErrorEmail1.classList.add("none")
                 liErrorEmail2.classList.remove("show")
@@ -417,6 +446,7 @@
             let edad = fechaHoy.getFullYear()- fecha_nacimiento.getFullYear()
 
             if(fecha.value === ""){
+              domicilio.disabled = true;
               // sub_button.style.visibility = "hidden"
               liErrorFecha2.classList.remove("none")
               liErrorFecha2.classList.add("show")
@@ -435,6 +465,7 @@
            
            else if(edad < 18){
             // sub_button.style.visibility = "hidden"
+              domicilio.disabled = true;
               liErrorFecha1.classList.remove("none")
               liErrorFecha1.classList.add("show")
               liErrorFecha2.classList.remove("show")
@@ -451,7 +482,7 @@
             //   toastr.info("La edad no puede ser inferior a 18. Verifique la fecha ingresada.");
             }
             else{
-              
+              domicilio.disabled = false;
               liErrorFecha1.classList.remove("show")
               liErrorFecha1.classList.add("none")
               liErrorFecha2.classList.remove("show")
@@ -483,6 +514,7 @@
             let mes = fecha_nacimiento.getMonth()+1     
             let edad = fechaHoy.getFullYear()- fecha_nacimiento.getFullYear()
            if(edad < 18){
+              domicilio.disabled = true;
             // sub_button.style.visibility = "hidden"
               liErrorFecha1.classList.remove("none")
               liErrorFecha1.classList.add("show")
@@ -500,7 +532,7 @@
             }
             
             else{
-              
+              domicilio.disabled = false;
               liErrorFecha1.classList.remove("show")
               liErrorFecha1.classList.add("none")
               liErrorFecha2.classList.remove("show")
@@ -525,6 +557,7 @@
                    
           domicilio.addEventListener("keyup",function(){
             if(domicilio.value === ""){
+              pass.disabled = true;    
               // sub_button.style.visibility = "hidden"
               liErrorDomicilio1.classList.remove("none")
               liErrorDomicilio1.classList.add("show")
@@ -540,6 +573,7 @@
               direccion = 0
             }
             else if(domicilio.value.length < 10 ){
+              pass.disabled = true;    
               // sub_button.style.visibility = "hidden"
               liErrorDomicilio1.classList.remove("show")
               liErrorDomicilio1.classList.add("none")
@@ -555,7 +589,7 @@
               direccion = 0
             }
             else{
-              
+              pass.disabled = false;    
               liErrorDomicilio2.classList.remove("show")
               liErrorDomicilio2.classList.add("none")
               domicilio.classList.remove("error")                                      
@@ -577,6 +611,7 @@
        
           pass.addEventListener("keyup",function(){
             if(pass.value === ""){
+              file.disabled = true
               liErrorPassword1.classList.remove("none")
               liErrorPassword1.classList.add("show")
               liErrorPassword2.classList.remove("show")
@@ -592,7 +627,7 @@
               contrasena = 0 
             }
             else if(/(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9])(?=.{8,})/.test(pass.value)){
-               
+              file.disabled = false
                 liErrorPassword1.classList.remove("show")
                 liErrorPassword1.classList.add("none")
                 liErrorPassword2.classList.remove("show")
@@ -608,6 +643,7 @@
                 contrasena = 1                 
                 }
             else{
+              file.disabled = true
               // sub_button.disabled = true
               liErrorPassword1.classList.remove("show")
               liErrorPassword1.classList.add("none")
@@ -638,8 +674,8 @@
             if(extension != "jpg" && extension != "jpeg" && extension != "png" && extension != "gif" ){
               liErrorFile1.classList.remove("none")
               liErrorFile1.classList.add("show")
-              // sub_button.disabled = true
-              // sub_button.style.visibility = "hidden"
+              //  sub_button.disabled = true
+              //sub_button.style.visibility = "hidden"
               file.classList.remove("valid")                                      
               file.classList.add("error")
               file_check.classList.remove("none")
@@ -651,6 +687,7 @@
               foto_perfil = 0   
             }
             else{
+              sub_button.style.visibility = "visible"
               liErrorFile1.classList.remove("show")
               liErrorFile1.classList.add("none")
               file.classList.remove("error")                                      
@@ -675,6 +712,7 @@
             liErrorFile1.classList.remove("show")
             liErrorFile1.classList.add("none")
           })
+
           
        
     })

@@ -47,7 +47,7 @@ const controller = {
                 return res.render("users/registro", { errors: {
                    
                     documento: {msg: "Ya hay un usuario registrado con este número de identificación."},
-                    email: { msg: "El Correo electronico ya se encuentra registrado." }
+                    email: { msg: "El Correo electrónico ya se encuentra registrado." }
                    
 				},
                     oldData:req.body, 

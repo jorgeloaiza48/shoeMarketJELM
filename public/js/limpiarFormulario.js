@@ -25,9 +25,10 @@ window.addEventListener('load',function () {
 
     let liErrorFile1 = document.querySelector("#liErrorFile1")
 
-    let boton_limpiar_form = document.querySelector("#boton-limpiar-form")
+    let boton_limpiar_form = document.getElementById("boton-limpiar-form")
     let register_form = document.querySelector('.form-Reg')
     let preview = document.getElementById('preview')
+    let text_aviso = document.getElementById('text-aviso')
 
     let documento = document.querySelector('#documento');
     let nombre = document.querySelector("#nombre");
@@ -52,7 +53,17 @@ window.addEventListener('load',function () {
         event.preventDefault()
         preview.innerHTML = '' //oculta la foto de perfil
         register_form.reset() //limpia todos los campos del formulario  
-        
+        text_aviso.innerHTML = ""
+        text_aviso.innerText = ""
+
+       //tocó escribir estas línes pórque el reset() no está funcionando 
+       documento.value=""
+       nombre.value=""
+       apellido.value=""
+       email.value=""
+       fecha.value=""
+       domicilio.value=""
+       pass.value=""        
       
         liErrorDocumento1.classList.remove("show")
         liErrorDocumento1.classList.add("none")  
@@ -148,15 +159,15 @@ window.addEventListener('load',function () {
         pass.classList.remove("error")   
         file.classList.remove("error")  
         
-        // nombre.disabled = true;  
-        // apellido.disabled = true;
-        // email.disabled = true;
-        // fecha.disabled = true;
-        // domicilio.disabled = true;
-        // pass.disabled = true;
-        // file.disabled = true;
+        nombre.disabled = true;  
+        apellido.disabled = true;
+        email.disabled = true;
+        fecha.disabled = true;
+        domicilio.disabled = true;
+        pass.disabled = true;
+        file.disabled = true;
 
-        // sub_button.style.visibility = "hidden"
+        sub_button.style.visibility = "hidden"
         
         })
 
