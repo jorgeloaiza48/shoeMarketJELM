@@ -9,7 +9,7 @@
                         <div class="form__documento">
                             <label class="label-relative" for="documento">Documento de identidad *<i id="documento-check"></i> 
                             </label>
-                            <input  type="text" name="documento" id="documento" placeholder="Mínimo 5 números, Máximo 10"
+                            <input  type="text" name="documento" id="documento" placeholder="Mín. 5 números, Máx. 10"
                             value ="<%= locals.oldData ? oldData.documento : null%>" title="hola"
                             >  
                             <ul class="errorRegister">
@@ -130,7 +130,7 @@
                                     </script>
                             </div>
                             <div class="contenedor_button" >
-                                <button class="form__button" id="boton-limpiar-form" >Limpiar formulario</button>
+                                <button class="form__button" id="boton-limpiar-form" type="reset">Limpiar formulario</button>
                                 <button class="form__button" id="sub_button" type="submit">Enviar</button>
             
                             </div>                                          

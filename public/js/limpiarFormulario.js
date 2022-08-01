@@ -1,5 +1,10 @@
 window.addEventListener('load',function () {
+    
+    let boton_limpiar_form = document.getElementById("boton-limpiar-form")
 
+    boton_limpiar_form.addEventListener("click",function(event){
+        //event.preventDefault()
+        
     let liErrorDocumento1 = document.querySelector("#liErrorDocumento1")
     let liErrorDocumento2 = document.querySelector("#liErrorDocumento2")
           
@@ -25,10 +30,19 @@ window.addEventListener('load',function () {
 
     let liErrorFile1 = document.querySelector("#liErrorFile1")
 
-    let boton_limpiar_form = document.getElementById("boton-limpiar-form")
+    let sub_button = document.querySelector("#sub_button");
+    sub_button.style.visibility = "visible"
+   
     let register_form = document.querySelector('.form-Reg')
     let preview = document.getElementById('preview')
     let text_aviso = document.getElementById('text-aviso')
+    let text_aviso_nombre = document.getElementById('text-aviso-nombre')
+    let text_aviso_apellido = document.getElementById('text-aviso-apellido')
+    let text_aviso_email = document.getElementById('text-aviso-email')
+    let text_aviso_fecha = document.getElementById('text-aviso-fecha')
+    let text_aviso_domicilio = document.getElementById('text-aviso-domicilio')
+    let text_aviso_password = document.getElementById('text-aviso-password')
+    let text_aviso_file = document.getElementById('text-aviso-file')
 
     let documento = document.querySelector('#documento');
     let nombre = document.querySelector("#nombre");
@@ -39,6 +53,14 @@ window.addEventListener('load',function () {
     let pass = document.querySelector("#pass");
     let file = document.querySelector("#file")
 
+    nombre.disabled = true;  
+    apellido.disabled = true;
+    email.disabled = true;
+    fecha.disabled = true;
+    domicilio.disabled = true;
+    pass.disabled = true;
+    file.disabled = true;    
+
     let documento_check = document.querySelector("#documento-check")
     let nombre_check = document.querySelector("#nombre-check")
     let apellido_check = document.querySelector("#apellido-check")
@@ -48,22 +70,34 @@ window.addEventListener('load',function () {
     let password_check = document.querySelector("#password-check")
     let file_check = document.querySelector("#file-check")
     
-
-    boton_limpiar_form.addEventListener("click",function(event){
-        event.preventDefault()
+        // sub_button.style.visibility = "hidden"
         preview.innerHTML = '' //oculta la foto de perfil
-        register_form.reset() //limpia todos los campos del formulario  
+        //register_form.reset() //limpia todos los campos del formulario  
         text_aviso.innerHTML = ""
         text_aviso.innerText = ""
+        text_aviso_nombre.innerHTML = ""
+        text_aviso_nombre.innerText = ""
+        text_aviso_apellido.innerHTML = ""
+        text_aviso_apellido.innerText = ""
+        text_aviso_email.innerHTML = ""
+        text_aviso_email.innerText = ""        
+        text_aviso_fecha.innerHTML = ""
+        text_aviso_fecha.innerText = ""
+        text_aviso_domicilio.innerHTML = ""
+        text_aviso_domicilio.innerText = ""
+        text_aviso_password.innerHTML = ""
+        text_aviso_password.innerText = ""
+        text_aviso_file.innerHTML = ""
+        text_aviso_file.innerText = ""
 
        //tocó escribir estas línes pórque el reset() no está funcionando 
-       documento.value=""
-       nombre.value=""
-       apellido.value=""
-       email.value=""
-       fecha.value=""
-       domicilio.value=""
-       pass.value=""        
+    //    documento.value=""
+    //    nombre.value=""
+    //    apellido.value=""
+    //    email.value=""
+    //    fecha.value=""
+    //    domicilio.value=""
+    //    pass.value=""        
       
         liErrorDocumento1.classList.remove("show")
         liErrorDocumento1.classList.add("none")  
@@ -159,17 +193,8 @@ window.addEventListener('load',function () {
         pass.classList.remove("error")   
         file.classList.remove("error")  
         
-        nombre.disabled = true;  
-        apellido.disabled = true;
-        email.disabled = true;
-        fecha.disabled = true;
-        domicilio.disabled = true;
-        pass.disabled = true;
-        file.disabled = true;
-
-        sub_button.style.visibility = "hidden"
-        
+            
         })
 
-
+      
 })

@@ -1,5 +1,5 @@
 
-    window.addEventListener('load',function(){
+    window.addEventListener('load',function(event){
      
       let documento = document.querySelector('#documento');
       let nombre = document.querySelector("#nombre");
@@ -12,14 +12,19 @@
       let file = document.querySelector("#file")
       let form = document.querySelector(".form-Reg")
 
-      let text_aviso = document.getElementById('text-aviso')
-      let text_aviso_nombre = document.getElementById('text-aviso-nombre')
-      let text_aviso_apellido = document.getElementById('text-aviso-apellido')
-      let text_aviso_email = document.getElementById('text-aviso-email')
-      let text_aviso_fecha = document.getElementById('text-aviso-fecha')
-      let text_aviso_domicilio = document.getElementById('text-aviso-domicilio')
-      let text_aviso_password = document.getElementById('text-aviso-password')
-      let text_aviso_file = document.getElementById('text-aviso-file')
+      sub_button.style.visibility = "visible"
+
+      //let text_aviso = document.querySelector('#text-aviso')
+      // let text_aviso_nombre = document.getElementById('text-aviso-nombre')
+      // let text_aviso_apellido = document.getElementById('text-aviso-apellido')
+      // let text_aviso_email = document.getElementById('text-aviso-email')
+      // let text_aviso_fecha = document.getElementById('text-aviso-fecha')
+      // let text_aviso_domicilio = document.getElementById('text-aviso-domicilio')
+      // let text_aviso_password = document.getElementById('text-aviso-password')
+      // let text_aviso_file = document.getElementById('text-aviso-file')
+
+      // text_aviso.innerHTML = ""
+      // text_aviso.innerText = ""
       
       nombre.disabled = true;
       apellido.disabled = true;
@@ -38,10 +43,10 @@
       let contrasena = 0 
       let foto_perfil = 0
 
-      form.reset()
-      sub_button.style.visibility = "hidden"  
+      //form.reset()
+      sub_button.style.visibility = "visible"  
 
-      if(email.value != "" && email.disabled === true){
+      if(email.value != "" && email.disabled === true || email.value != "" && email.disabled === false ){
         nombre.disabled = false;
         apellido.disabled = false;
         email.disabled = false;
@@ -90,38 +95,38 @@
       let file_check = document.querySelector("#file-check")
       
         
-      documento.addEventListener("focus", function (event) {                
-        text_aviso.classList.remove("text-aviso")
-        text_aviso.classList.add("none")
-      })
-      nombre.addEventListener("focus", function (event) {                
-        text_aviso_nombre.classList.remove("text-aviso")
-        text_aviso_nombre.classList.add("none")
-      })
-      apellido.addEventListener("focus", function (event) {                
-        text_aviso_apellido.classList.remove("text-aviso")
-        text_aviso_apellido.classList.add("none")
-      })
-      email.addEventListener("focus", function (event) {                
-        text_aviso_email.classList.remove("text-aviso")
-        text_aviso_email.classList.add("none")
-      })
-      fecha.addEventListener("focus", function (event) {                
-        text_aviso_fecha.classList.remove("text-aviso")
-        text_aviso_fecha.classList.add("none")
-      })
-      domicilio.addEventListener("focus", function (event) {                
-        text_aviso_domicilio.classList.remove("text-aviso")
-        text_aviso_domicilio.classList.add("none")
-      })
-      pass.addEventListener("focus", function (event) {                
-        text_aviso_password.classList.remove("text-aviso")
-        text_aviso_password.classList.add("none")
-      })
-      file.addEventListener("focus", function (event) {                
-        text_aviso_file.classList.remove("text-aviso")
-        text_aviso_file.classList.add("none")
-      })
+      // documento.addEventListener("focus", function (event) {                
+      //   text_aviso.classList.remove("text-aviso")
+      //   text_aviso.classList.add("none")
+      // })
+      // nombre.addEventListener("focus", function (event) {                
+      //   text_aviso_nombre.classList.remove("text-aviso")
+      //   text_aviso_nombre.classList.add("none")
+      // })
+      // apellido.addEventListener("focus", function (event) {                
+      //   text_aviso_apellido.classList.remove("text-aviso")
+      //   text_aviso_apellido.classList.add("none")
+      // })
+      // email.addEventListener("focus", function (event) {                
+      //   text_aviso_email.classList.remove("text-aviso")
+      //   text_aviso_email.classList.add("none")
+      // })
+      // fecha.addEventListener("focus", function (event) {                
+      //   text_aviso_fecha.classList.remove("text-aviso")
+      //   text_aviso_fecha.classList.add("none")
+      // })
+      // domicilio.addEventListener("focus", function (event) {                
+      //   text_aviso_domicilio.classList.remove("text-aviso")
+      //   text_aviso_domicilio.classList.add("none")
+      // })
+      // pass.addEventListener("focus", function (event) {                
+      //   text_aviso_password.classList.remove("text-aviso")
+      //   text_aviso_password.classList.add("none")
+      // })
+      // file.addEventListener("focus", function (event) {                
+      //   text_aviso_file.classList.remove("text-aviso")
+      //   text_aviso_file.classList.add("none")
+      // })
           
 
     documento.addEventListener("input", function (event) {
@@ -139,7 +144,7 @@
           documento_check.classList.add("show")
           documento_check.classList.add("fa-circle-xmark")
           documento_check.classList.add("fa-regular")
-          // sub_button.style.visibility = "hidden"
+          sub_button.style.visibility = "visible"
           doc = 0
          
         }
@@ -155,7 +160,7 @@
             documento_check.classList.add("fa-regular")                             
             documento.classList.remove("valid")                                      
             documento.classList.add("error")                 
-            // sub_button.style.visibility = "hidden"
+            sub_button.style.visibility = "visible"
             doc = 0
         }
                              
@@ -171,13 +176,14 @@
             documento_check.classList.add("fa-circle-check")
             documento_check.classList.add("fa-regular") 
             doc = 1                                   
+          
+          if(doc == 1 && nom == 1 && apell == 1 && correo == 1 && fecha_naci == 1 && direccion == 1 && contrasena == 1 && foto_perfil == 1){
+            sub_button.style.visibility = "visible"
           }
-        //   if(doc == 1 && nom == 1 && apell == 1 && correo == 1 && fecha_naci == 1 && direccion == 1 && contrasena == 1 && foto_perfil == 1){
-        //     sub_button.style.visibility = "visible"
-        //  }
-        //  else{
-        //    sub_button.style.visibility = "hidden"
-        //  }
+         else{
+           sub_button.style.visibility = "visible"
+          }
+        }
         })          
       })             
           nombre.addEventListener("keyup", function (event) {
@@ -195,7 +201,7 @@
                 nombre_check.classList.add("fa-circle-xmark")
                 nombre_check.classList.add("fa-regular")                      
                 nom = 0                
-                // sub_button.style.visibility = "hidden"
+                sub_button.style.visibility = "visible"
             }
             else if(nombre.value.length < 2 && /\d/.test(nombre.value) || nombre.value.length < 2 && /[°¡¿ `!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/.test(nombre.value)){
               apellido.disabled = true;
@@ -210,13 +216,13 @@
                 nombre_check.classList.add("show")
                 nombre_check.classList.add("fa-circle-xmark")
                 nombre_check.classList.add("fa-regular") 
-                // sub_button.style.visibility = "hidden"
+                sub_button.style.visibility = "visible"
                 nombre.classList.remove("valid")                                      
                 nombre.classList.add("error")            
                 nom = 0
             }
             else if(nombre.value.length >= 2 && /\d/.test(nombre.value) || nombre.value.length >= 2 && /[°¡¿`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/.test(nombre.value)){
-              // sub_button.style.visibility = "hidden"
+              sub_button.style.visibility = "visible"
               apellido.disabled = true;
               liErrorNombre1.classList.remove("show")
               liErrorNombre1.classList.add("none")  
@@ -250,7 +256,7 @@
               nombre_check.classList.add("fa-circle-xmark")
               nombre_check.classList.add("fa-regular") 
               nom = 0
-              // sub_button.style.visibility = "hidden"
+              sub_button.style.visibility = "visible"
             }
             else{
               apellido.disabled = false;
@@ -267,15 +273,15 @@
               nombre_check.classList.remove("fa-regular")   
               nombre_check.classList.add("fa-circle-check")
               nombre_check.classList.add("fa-regular") 
-              nom = 1              
-                // toastr.info("Recuerde que el campo Nombre debe contener mínimo 2 letras y no puede contener números.");
-              }
-            //   if(doc == 1 && nom == 1 && apell == 1 && correo == 1 && fecha_naci == 1 && direccion == 1 && contrasena == 1 && foto_perfil == 1){
-            //     sub_button.style.visibility = "visible"
-            //  }
-            //  else{
-            //    sub_button.style.visibility = "hidden"
-            //  }
+              nom = 1                              
+              
+              if(doc == 1 && nom == 1 && apell == 1 && correo == 1 && fecha_naci == 1 && direccion == 1 && contrasena == 1 && foto_perfil == 1){
+                sub_button.style.visibility = "visible"
+             }
+             else{
+               sub_button.style.visibility = "visible"
+             }
+            }
           })
 
           apellido.addEventListener("keyup", function (event) {
@@ -287,7 +293,7 @@
                 liErrorApellido2.classList.add("none")     
                 liErrorApellido3.classList.remove("show")
                 liErrorApellido3.classList.add("none")                         
-                // sub_button.style.visibility = "hidden"
+                sub_button.style.visibility = "visible"
                 apellido.classList.remove("valid")                                      
                 apellido.classList.add("error")  
                 apellido_check.classList.remove("fa-circle-check")
@@ -305,7 +311,7 @@
                 liErrorApellido2.classList.add("none")
                 liErrorApellido3.classList.remove("none")
                 liErrorApellido3.classList.add("show")  
-                // sub_button.style.visibility = "hidden"
+                sub_button.style.visibility = "visible"
                 apellido.classList.remove("valid")                                      
                 apellido.classList.add("error")  
                 apellido_check.classList.remove("fa-circle-check")
@@ -317,7 +323,7 @@
                 
             }
             else if(apellido.value.length >= 2 && /\d/.test(apellido.value) || apellido.value.length >= 2 && /[°¡¿`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/.test(apellido.value)){
-              // sub_button.style.visibility = "hidden"
+              sub_button.style.visibility = "visible"
               email.disabled = true;
               liErrorApellido1.classList.remove("show")
               liErrorApellido1.classList.add("none")  
@@ -335,7 +341,7 @@
               apell = 0
             }
             else if(apellido.value.length < 2){
-              // sub_button.style.visibility = "hidden"
+              sub_button.style.visibility = "visible"
               email.disabled = true;
               liErrorApellido1.classList.remove("show")
               liErrorApellido1.classList.add("none")  
@@ -367,15 +373,15 @@
               apellido_check.classList.remove("fa-regular")   
               apellido_check.classList.add("fa-circle-check")
               apellido_check.classList.add("fa-regular") 
-              apell = 1              
-                // toastr.info("Recuerde que el campo Nombre debe contener mínimo 2 letras y no puede contener números.");
-              }
-            //   if(doc == 1 && nom == 1 && apell == 1 && correo == 1 && fecha_naci == 1 && direccion == 1 && contrasena == 1 && foto_perfil == 1){
-            //     sub_button.style.visibility = "visible"
-            //  }
-            //  else{
-            //    sub_button.style.visibility = "hidden"
-            //  }
+              apell = 1                              
+              
+              if(doc == 1 && nom == 1 && apell == 1 && correo == 1 && fecha_naci == 1 && direccion == 1 && contrasena == 1 && foto_perfil == 1){
+                sub_button.style.visibility = "visible"
+             }
+             else{
+               sub_button.style.visibility = "visible"
+             }
+            }
           })                              
           email.addEventListener("keyup", function (event) {
             if(email.value === ""){
@@ -384,7 +390,7 @@
               liErrorEmail1.classList.add("show")
               liErrorEmail2.classList.remove("show")
               liErrorEmail2.classList.add("none")
-              // sub_button.style.visibility = "hidden"
+              sub_button.style.visibility = "visible"
               email.classList.remove("valid")                                      
               email.classList.add("error") 
               email_check.classList.remove("fa-circle-check")
@@ -398,7 +404,7 @@
                   email.disabled = false
             }
             else if(!(/^([\da-z_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/).test(email.value)){
-              // sub_button.style.visibility = "hidden"
+              sub_button.style.visibility = "visible"
               fecha.disabled = true;
               liErrorEmail1.classList.remove("show")
               liErrorEmail1.classList.add("none")
@@ -428,26 +434,25 @@
                 email_check.classList.add("fa-circle-check")
                 email_check.classList.add("fa-regular") 
                correo = 1               
-              }
-                // toastr.info("El campo Correo electrónico debe contener una dirección válida. Ejemplo: usuario@gmail.com");
-              //   if(doc == 1 && nom == 1 && apell == 1 && correo == 1 && fecha_naci == 1 && direccion == 1 && contrasena == 1 && foto_perfil == 1){
-              //     sub_button.style.visibility = "visible"
-              //  }
-              //  else{
-              //    sub_button.style.visibility = "hidden"
-              //  }
+                              
+                if(doc == 1 && nom == 1 && apell == 1 && correo == 1 && fecha_naci == 1 && direccion == 1 && contrasena == 1 && foto_perfil == 1){
+                  sub_button.style.visibility = "visible"
+               }
+               else{
+                 sub_button.style.visibility = "visible"
+               }}
           })
 
-          fecha.addEventListener("change",function(){
+          fecha.addEventListener("change",function(event){
             let fechaHoy = new Date()  
             let = fecha_nacimiento = new Date(fecha.value)
-            let dia = fecha_nacimiento.getDate()    
-            let mes = fecha_nacimiento.getMonth()+1                    
+            // let dia = fecha_nacimiento.getDate()    
+            // let mes = fecha_nacimiento.getMonth()+1                    
             let edad = fechaHoy.getFullYear()- fecha_nacimiento.getFullYear()
 
             if(fecha.value === ""){
               domicilio.disabled = true;
-              // sub_button.style.visibility = "hidden"
+              sub_button.style.visibility = "visible"
               liErrorFecha2.classList.remove("none")
               liErrorFecha2.classList.add("show")
               liErrorFecha2.classList.remove("show")
@@ -464,7 +469,7 @@
             }
            
            else if(edad < 18){
-            // sub_button.style.visibility = "hidden"
+              sub_button.style.visibility = "visible"
               domicilio.disabled = true;
               liErrorFecha1.classList.remove("none")
               liErrorFecha1.classList.add("show")
@@ -498,24 +503,24 @@
               fecha_check.classList.add("fa-circle-check")
               fecha_check.classList.add("fa-regular") 
               fecha_naci = 1              
-            }            
-          //   if(doc == 1 && nom == 1 && apell == 1 && correo == 1 && fecha_naci == 1 && direccion == 1 && contrasena == 1 && foto_perfil == 1){
-          //     sub_button.style.visibility = "visible"
-          //  }
-          //  else{
-          //    sub_button.style.visibility = "hidden"
-          //  }
+                        
+            if(doc == 1 && nom == 1 && apell == 1 && correo == 1 && fecha_naci == 1 && direccion == 1 && contrasena == 1 && foto_perfil == 1){
+              sub_button.style.visibility = "visible"
+           }
+           else{
+             sub_button.style.visibility = "visible"
+           }}
           })
 
-          fecha.addEventListener("keyup",function(){
+          fecha.addEventListener("keyup",function(event){
             let fechaHoy = new Date()                               
             let = fecha_nacimiento = new Date(fecha.value)
-            let dia = fecha.value.getDate()    
-            let mes = fecha_nacimiento.getMonth()+1     
+            // let dia = fecha.value.getDate()    
+            // let mes = fecha_nacimiento.getMonth()+1     
             let edad = fechaHoy.getFullYear()- fecha_nacimiento.getFullYear()
            if(edad < 18){
               domicilio.disabled = true;
-            // sub_button.style.visibility = "hidden"
+              sub_button.style.visibility = "visible"
               liErrorFecha1.classList.remove("none")
               liErrorFecha1.classList.add("show")
               liErrorFecha2.classList.remove("show")
@@ -546,19 +551,19 @@
               fecha_check.classList.add("fa-circle-check")
               fecha_check.classList.add("fa-regular") 
               fecha_naci = 1              
-            }            
-          //   if(doc == 1 && nom == 1 && apell == 1 && correo == 1 && fecha_naci == 1 && direccion == 1 && contrasena == 1 && foto_perfil == 1){
-          //     sub_button.style.visibility = "visible"
-          //  }
-          //  else{
-          //    sub_button.style.visibility = "hidden"
-          //  }
+                        
+            if(doc == 1 && nom == 1 && apell == 1 && correo == 1 && fecha_naci == 1 && direccion == 1 && contrasena == 1 && foto_perfil == 1){
+              sub_button.style.visibility = "visible"
+           }
+           else{
+             sub_button.style.visibility = "visible"
+           }}
           })
                    
-          domicilio.addEventListener("keyup",function(){
+          domicilio.addEventListener("keyup",function(event){
             if(domicilio.value === ""){
               pass.disabled = true;    
-              // sub_button.style.visibility = "hidden"
+              sub_button.style.visibility = "visible"
               liErrorDomicilio1.classList.remove("none")
               liErrorDomicilio1.classList.add("show")
               liErrorDomicilio2.classList.remove("show")
@@ -574,7 +579,7 @@
             }
             else if(domicilio.value.length < 10 ){
               pass.disabled = true;    
-              // sub_button.style.visibility = "hidden"
+              sub_button.style.visibility = "visible"
               liErrorDomicilio1.classList.remove("show")
               liErrorDomicilio1.classList.add("none")
               liErrorDomicilio2.classList.remove("none")
@@ -600,23 +605,23 @@
               domicilio_check.classList.add("fa-regular")               
               domicilio_check.classList.remove("fa-circle-xmark")
               direccion = 1              
-              }
-            //   if(doc == 1 && nom == 1 && apell == 1 && correo == 1 && fecha_naci == 1 && direccion == 1 && contrasena == 1 && foto_perfil == 1){
-            //     sub_button.style.visibility = "visible"
-            //  }
-            //  else{
-            //    sub_button.style.visibility = "hidden"
-            //  }
+              
+              if(doc == 1 && nom == 1 && apell == 1 && correo == 1 && fecha_naci == 1 && direccion == 1 && contrasena == 1 && foto_perfil == 1){
+                sub_button.style.visibility = "visible"
+             }
+             else{
+               sub_button.style.visibility = "visible"
+             }}
           }) 
        
-          pass.addEventListener("keyup",function(){
+          pass.addEventListener("keyup",function(event){
             if(pass.value === ""){
               file.disabled = true
               liErrorPassword1.classList.remove("none")
               liErrorPassword1.classList.add("show")
               liErrorPassword2.classList.remove("show")
               liErrorPassword2.classList.add("none")
-              // sub_button.style.visibility = "hidden"
+              sub_button.style.visibility = "visible"
               pass.classList.remove("valid")                                      
               pass.classList.add("error")
               password_check.classList.remove("fa-circle-check")
@@ -640,16 +645,20 @@
                 password_check.classList.remove("fa-regular")               
                 password_check.classList.add("fa-circle-check")
                 password_check.classList.add("fa-regular")
-                contrasena = 1                 
-                }
+                contrasena = 1
+                  if(doc == 1 && nom == 1 && apell == 1 && correo == 1 && fecha_naci == 1 && direccion == 1 && contrasena == 1 && foto_perfil == 1){
+                  sub_button.style.visibility = "visible"
+                     }
+              else{
+                  sub_button.style.visibility = "visible"
+                } }
             else{
-              file.disabled = true
-              // sub_button.disabled = true
+              file.disabled = true              
               liErrorPassword1.classList.remove("show")
               liErrorPassword1.classList.add("none")
               liErrorPassword2.classList.remove("none")
               liErrorPassword2.classList.add("show")
-              // sub_button.style.visibility = "hidden"
+              sub_button.style.visibility = "visible"
               pass.classList.remove("valid")                                      
               pass.classList.add("error")
               password_check.classList.remove("none")
@@ -659,23 +668,15 @@
               password_check.classList.add("fa-circle-xmark")
               password_check.classList.add("fa-regular")               
               contrasena = 0 
-            //   toastr.info("La contraeeña Debe tener almenos una letra en minúscula, una en mayúscula, un número y un carácter especial como @ o #, y debe ser de almenos 8 caracteres.")
-            }
-          //   if(doc == 1 && nom == 1 && apell == 1 && correo == 1 && fecha_naci == 1 && direccion == 1 && contrasena == 1 && foto_perfil == 1){
-          //     sub_button.style.visibility = "visible"
-          //  }
-          //  else{
-          //    sub_button.style.visibility = "hidden"
-          //  }
-          })
+              }
+                    })
 
-          file.addEventListener("change",function(){
+          file.addEventListener("change",function(event){
             let extension = file.value.split(".").pop() //captura la extensión del archivo seleccionado
             if(extension != "jpg" && extension != "jpeg" && extension != "png" && extension != "gif" ){
               liErrorFile1.classList.remove("none")
-              liErrorFile1.classList.add("show")
-              //  sub_button.disabled = true
-              //sub_button.style.visibility = "hidden"
+              liErrorFile1.classList.add("show")             
+              sub_button.style.visibility = "visible"
               file.classList.remove("valid")                                      
               file.classList.add("error")
               file_check.classList.remove("none")
@@ -699,22 +700,301 @@
               file_check.classList.add("fa-circle-check")              
               file_check.classList.add("fa-regular")  
               foto_perfil = 1                  
+              if(doc == 1 && nom == 1 && apell == 1 && correo == 1 && fecha_naci == 1 && direccion == 1 && contrasena == 1 && foto_perfil == 1){
+                sub_button.style.visibility = "visible"
+                   }
+            else{
+                sub_button.style.visibility = "visible"
+              } 
             }
-          //   if(doc == 1 && nom == 1 && apell == 1 && correo == 1 && fecha_naci == 1 && direccion == 1 && contrasena == 1 && foto_perfil == 1){
-          //     sub_button.style.visibility = "visible"
-          //  }
-          //  else{
-          //    sub_button.style.visibility = "hidden"
-          //  }
+           
           })
 
-          file.addEventListener("click",function(){
+          file.addEventListener("click",function(event){
             liErrorFile1.classList.remove("show")
             liErrorFile1.classList.add("none")
           })
+         
+          form.addEventListener("submit",function(event){
+            let fechaHoy = new Date()  
+            let = fecha_nacimiento = new Date(fecha.value)                              
+            let edad = fechaHoy.getFullYear()- fecha_nacimiento.getFullYear()  
 
-          
-       
+            if(documento.value === "" ){
+              event.preventDefault()             
+              liErrorDocumento1.classList.remove("none")
+              liErrorDocumento1.classList.add("show")
+              liErrorDocumento2.classList.remove("show")
+              liErrorDocumento2.classList.add("none")
+              documento_check.classList.remove("fa-circle-check")
+              documento_check.classList.remove("fa-regular") 
+              documento_check.classList.add("show")
+              documento_check.classList.add("fa-circle-xmark")
+              documento_check.classList.add("fa-regular")                                       
+            }
+            if(documento.value.length < 5 || documento.value.length > 10){ 
+                event.preventDefault()
+                liErrorDocumento2.classList.remove("none")
+                liErrorDocumento2.classList.add("show")
+                liErrorDocumento1.classList.remove("show")
+                liErrorDocumento1.classList.add("none")  
+                documento_check.classList.add("show")
+                documento_check.classList.add("fa-circle-xmark")
+                documento_check.classList.add("fa-regular")                             
+                documento.classList.remove("valid")                                      
+                documento.classList.add("error")                               
+            }
+            if(nombre.value.length < 2 && /\d/.test(nombre.value) || nombre.value.length < 2 && /[°¡¿ `!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/.test(nombre.value)){
+              event.preventDefault()  
+              liErrorNombre1.classList.remove("show")
+                liErrorNombre1.classList.add("none")  
+                liErrorNombre2.classList.remove("show")
+                liErrorNombre2.classList.add("none")
+                liErrorNombre3.classList.remove("none")
+                liErrorNombre3.classList.add("show")  
+                nombre_check.classList.remove("fa-circle-check")
+                nombre_check.classList.remove("fa-regular") 
+                nombre_check.classList.add("show")
+                nombre_check.classList.add("fa-circle-xmark")
+                nombre_check.classList.add("fa-regular")                
+                nombre.classList.remove("valid")                                      
+                nombre.classList.add("error")                           
+            }
+            if(nombre.value.length >= 2 && /\d/.test(nombre.value) || nombre.value.length >= 2 && /[°¡¿`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/.test(nombre.value)){
+              event.preventDefault()
+              liErrorNombre1.classList.remove("show")
+              liErrorNombre1.classList.add("none")  
+              liErrorNombre2.classList.remove("show")
+              liErrorNombre2.classList.add("none")  
+              liErrorNombre3.classList.remove("none")
+              liErrorNombre3.classList.add("show")  
+              nombre.classList.remove("valid")                                      
+              nombre.classList.add("error") 
+              nombre_check.classList.remove("fa-circle-check")
+              nombre_check.classList.remove("fa-regular") 
+              nombre_check.classList.add("show")
+              nombre_check.classList.add("fa-circle-xmark")
+              nombre_check.classList.add("fa-regular")              
+            }
+            if(nombre.value.length < 2){            
+              event.preventDefault()
+              liErrorNombre1.classList.remove("show")
+              liErrorNombre1.classList.add("none")  
+              liErrorNombre2.classList.remove("none")
+              liErrorNombre2.classList.add("show")
+              liErrorNombre3.classList.remove("show")
+              liErrorNombre3.classList.add("none") 
+              nombre.classList.remove("valid")                                      
+              nombre.classList.add("error") 
+              nombre.classList.remove("show")
+              nombre_check.classList.remove("fa-circle-check")
+              nombre_check.classList.remove("fa-regular") 
+              nombre_check.classList.add("show")
+              nombre_check.classList.add("fa-circle-xmark")
+              nombre_check.classList.add("fa-regular")               
+            }
+            if(apellido.value === ""){             
+              event.preventDefault()
+                liErrorApellido1.classList.remove("none")
+                liErrorApellido1.classList.add("show") 
+                liErrorApellido2.classList.remove("show")
+                liErrorApellido2.classList.add("none")     
+                liErrorApellido3.classList.remove("show")
+                liErrorApellido3.classList.add("none")                         
+                apellido.classList.remove("valid")                                      
+                apellido.classList.add("error")  
+                apellido_check.classList.remove("fa-circle-check")
+                apellido_check.classList.remove("fa-regular") 
+                apellido_check.classList.add("show")
+                apellido_check.classList.add("fa-circle-xmark")
+                apellido_check.classList.add("fa-regular")                                       
+            }
+            if(apellido.value.length < 2 && /\d/.test(apellido.value) || apellido.value.length < 2 && /[°¡¿`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/.test(apellido.value)){              
+              event.preventDefault()
+                liErrorApellido1.classList.remove("show")
+                liErrorApellido1.classList.add("none")  
+                liErrorApellido2.classList.remove("show")
+                liErrorApellido2.classList.add("none")
+                liErrorApellido3.classList.remove("none")
+                liErrorApellido3.classList.add("show")                 
+                apellido.classList.remove("valid")                                      
+                apellido.classList.add("error")  
+                apellido_check.classList.remove("fa-circle-check")
+                apellido_check.classList.remove("fa-regular") 
+                apellido_check.classList.add("show")
+                apellido_check.classList.add("fa-circle-xmark")
+                apellido_check.classList.add("fa-regular")                                 
+            }
+             if(apellido.value.length >= 2 && /\d/.test(apellido.value) || apellido.value.length >= 2 && /[°¡¿`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/.test(apellido.value)){              
+              event.preventDefault()
+              liErrorApellido1.classList.remove("show")
+              liErrorApellido1.classList.add("none")  
+              liErrorApellido2.classList.remove("show")
+              liErrorApellido2.classList.add("none")  
+              liErrorApellido3.classList.remove("none")
+              liErrorApellido3.classList.add("show")  
+              apellido.classList.remove("valid")                                      
+              apellido.classList.add("error") 
+              apellido_check.classList.remove("fa-circle-check")
+              apellido_check.classList.remove("fa-regular") 
+              apellido_check.classList.add("show")
+              apellido_check.classList.add("fa-circle-xmark")
+              apellido_check.classList.add("fa-regular")               
+            }
+            if(apellido.value.length < 2){
+              event.preventDefault()
+              liErrorApellido1.classList.remove("show")
+              liErrorApellido1.classList.add("none")  
+              liErrorApellido2.classList.remove("none")
+              liErrorApellido2.classList.add("show")
+              liErrorApellido3.classList.remove("show")
+              liErrorApellido3.classList.add("none") 
+              apellido.classList.remove("valid")                                      
+              apellido.classList.add("error") 
+              apellido_check.classList.remove("fa-circle-check")
+              apellido_check.classList.remove("fa-regular") 
+              apellido_check.classList.add("show")
+              apellido_check.classList.add("fa-circle-xmark")
+              apellido_check.classList.add("fa-regular")                  
+            }         
+            if(email.value === ""){ 
+              event.preventDefault()           
+              liErrorEmail1.classList.remove("none")
+              liErrorEmail1.classList.add("show")
+              liErrorEmail2.classList.remove("show")
+              liErrorEmail2.classList.add("none")             
+              email.classList.remove("valid")                                      
+              email.classList.add("error") 
+              email_check.classList.remove("fa-circle-check")
+              email_check.classList.remove("fa-regular") 
+              email_check.classList.add("show")
+              email_check.classList.add("fa-circle-xmark")
+              email_check.classList.add("fa-regular")                
+            }  
+            if(!(/^([\da-z_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/).test(email.value)){
+              event.preventDefault()
+              liErrorEmail1.classList.remove("show")
+              liErrorEmail1.classList.add("none")
+              liErrorEmail2.classList.remove("none")
+              liErrorEmail2.classList.add("show")   
+              email.classList.remove("valid")                                      
+              email.classList.add("error")  
+              email_check.classList.remove("fa-circle-check")
+              email_check.classList.remove("fa-regular") 
+              email_check.classList.add("show")
+              email_check.classList.add("fa-circle-xmark")
+              email_check.classList.add("fa-regular")                        
+            }
+            
+            if(fecha.value === ""){ 
+              event.preventDefault()                        
+              liErrorFecha2.classList.remove("none")
+              liErrorFecha2.classList.add("show")
+              liErrorFecha2.classList.remove("show")
+              liErrorFecha2.classList.add("none")
+              fecha.classList.remove("valid")                                      
+              fecha.classList.add("error") 
+              fecha_check.classList.remove("none")
+              fecha_check.classList.add("show")                                                      
+              fecha_check.classList.remove("fa-circle-check")
+              fecha_check.classList.remove("fa-regular")               
+              fecha_check.classList.add("fa-circle-xmark")
+              fecha_check.classList.add("fa-regular")                  
+            }
+           
+           if(edad < 18){      
+            event.preventDefault()        
+            liErrorFecha1.classList.remove("none")
+            liErrorFecha1.classList.add("show")
+            liErrorFecha2.classList.remove("show")
+            liErrorFecha2.classList.add("none")
+            fecha.classList.remove("valid")                                      
+            fecha.classList.add("error") 
+            fecha_check.classList.remove("none")
+            fecha_check.classList.add("show")                                                      
+            fecha_check.classList.remove("fa-circle-check")
+            fecha_check.classList.remove("fa-regular")               
+            fecha_check.classList.add("fa-circle-xmark")
+            fecha_check.classList.add("fa-regular")                 
+            }
+            if(domicilio.value === ""){
+              event.preventDefault()
+              liErrorDomicilio1.classList.remove("none")
+              liErrorDomicilio1.classList.add("show")
+              liErrorDomicilio2.classList.remove("show")
+              liErrorDomicilio2.classList.add("none")              
+              domicilio.classList.remove("valid")                                      
+              domicilio.classList.add("error") 
+              domicilio_check.classList.remove("fa-circle-check")
+              domicilio_check.classList.remove("fa-regular") 
+              domicilio_check.classList.add("show")
+              domicilio_check.classList.add("fa-circle-xmark")
+              domicilio_check.classList.add("fa-regular")   
+              
+            }
+            if(domicilio.value.length < 10 ){            
+              event.preventDefault()
+              liErrorDomicilio1.classList.remove("show")
+              liErrorDomicilio1.classList.add("none")
+              liErrorDomicilio2.classList.remove("none")
+              liErrorDomicilio2.classList.add("show")
+              domicilio.classList.remove("valid")                                      
+              domicilio.classList.add("error")
+              domicilio_check.classList.remove("fa-circle-check")
+              domicilio_check.classList.remove("fa-regular") 
+              domicilio_check.classList.add("show")
+              domicilio_check.classList.add("fa-circle-xmark")
+              domicilio_check.classList.add("fa-regular")                
+            }
+            if(pass.value === ""){  
+              event.preventDefault()            
+              liErrorPassword1.classList.remove("none")
+              liErrorPassword1.classList.add("show")
+              liErrorPassword2.classList.remove("show")
+              liErrorPassword2.classList.add("none")              
+              pass.classList.remove("valid")                                      
+              pass.classList.add("error")
+              password_check.classList.remove("fa-circle-check")
+              password_check.classList.remove("fa-regular") 
+              password_check.classList.add("show")
+              password_check.classList.add("fa-circle-xmark")
+              password_check.classList.add("fa-regular")               
+            }
+            if(!/(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9])(?=.{8,})/.test(pass.value)){              
+              event.preventDefault()
+              liErrorPassword1.classList.remove("show")
+              liErrorPassword1.classList.add("none")
+              liErrorPassword2.classList.remove("none")
+              liErrorPassword2.classList.add("show")
+              sub_button.style.visibility = "visible"
+              pass.classList.remove("valid")                                      
+              pass.classList.add("error")
+              password_check.classList.remove("none")
+              password_check.classList.add("show")
+              password_check.classList.remove("fa-circle-check")
+              password_check.classList.remove("fa-regular")               
+              password_check.classList.add("fa-circle-xmark")
+              password_check.classList.add("fa-regular")            
+            }
+            let extension = file.value.split(".").pop() //captura la extensión del archivo seleccionado
+            if(extension != "jpg" && extension != "jpeg" && extension != "png" && extension != "gif" ){
+              event.preventDefault()              
+              liErrorFile1.classList.remove("none")
+              liErrorFile1.classList.add("show")                          
+              file.classList.remove("valid")                                      
+              file.classList.add("error")
+              file_check.classList.remove("none")
+              file_check.classList.add("show")
+              file_check.classList.remove("fa-circle-check")
+              file_check.classList.remove("fa-regular")               
+              file_check.classList.add("fa-circle-xmark")
+              file_check.classList.add("fa-regular")                   
+            }
+
+
+
+          })
+
     })
 
    

@@ -1221,7 +1221,7 @@ background-color: black;
     }
     #documento-check{
         position: absolute;
-        right: -75px;
+        right: -15px;
         top: 45px;          
     }
     #nombre-check{
@@ -1268,11 +1268,7 @@ background-color: black;
         /* border-radius: 20px;
         width: 50%; */
     }
-    #documento-check{
-        position: absolute;
-        right: -20px;
-        top: 45px;          
-    }
+    
     .admin-but {
         /* border: solid 2px red; */
         line-height: 1px;
