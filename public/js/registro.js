@@ -42,6 +42,7 @@
       let direccion = 0 
       let contrasena = 0 
       let foto_perfil = 0
+      
 
       //form.reset()
       sub_button.style.visibility = "visible"  
@@ -716,6 +717,7 @@
           })
          
           form.addEventListener("submit",function(event){
+            let alerta = 0
             let fechaHoy = new Date()  
             let = fecha_nacimiento = new Date(fecha.value)                              
             let edad = fechaHoy.getFullYear()- fecha_nacimiento.getFullYear()  
@@ -730,7 +732,11 @@
               documento_check.classList.remove("fa-regular") 
               documento_check.classList.add("show")
               documento_check.classList.add("fa-circle-xmark")
-              documento_check.classList.add("fa-regular")                                       
+              documento_check.classList.add("fa-regular")  
+              alerta = 1                                    
+            }
+            else{
+              alerta = 0
             }
             if(documento.value.length < 5 || documento.value.length > 10){ 
                 event.preventDefault()
@@ -743,6 +749,10 @@
                 documento_check.classList.add("fa-regular")                             
                 documento.classList.remove("valid")                                      
                 documento.classList.add("error")                               
+                alerta = 1
+            }
+            else{
+              alerta = 0
             }
             if(nombre.value.length < 2 && /\d/.test(nombre.value) || nombre.value.length < 2 && /[°¡¿ `!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/.test(nombre.value)){
               event.preventDefault()  
@@ -759,6 +769,10 @@
                 nombre_check.classList.add("fa-regular")                
                 nombre.classList.remove("valid")                                      
                 nombre.classList.add("error")                           
+                alerta = 1
+            }
+            else{
+              alerta = 0
             }
             if(nombre.value.length >= 2 && /\d/.test(nombre.value) || nombre.value.length >= 2 && /[°¡¿`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/.test(nombre.value)){
               event.preventDefault()
@@ -775,6 +789,10 @@
               nombre_check.classList.add("show")
               nombre_check.classList.add("fa-circle-xmark")
               nombre_check.classList.add("fa-regular")              
+              alerta = 1
+            }
+            else{
+              alerta = 0
             }
             if(nombre.value.length < 2){            
               event.preventDefault()
@@ -792,6 +810,10 @@
               nombre_check.classList.add("show")
               nombre_check.classList.add("fa-circle-xmark")
               nombre_check.classList.add("fa-regular")               
+              alerta = 1
+            }
+            else{
+              alerta = 0
             }
             if(apellido.value === ""){             
               event.preventDefault()
@@ -808,6 +830,10 @@
                 apellido_check.classList.add("show")
                 apellido_check.classList.add("fa-circle-xmark")
                 apellido_check.classList.add("fa-regular")                                       
+                alerta = 1
+            }
+            else{
+              alerta = 0
             }
             if(apellido.value.length < 2 && /\d/.test(apellido.value) || apellido.value.length < 2 && /[°¡¿`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/.test(apellido.value)){              
               event.preventDefault()
@@ -824,6 +850,10 @@
                 apellido_check.classList.add("show")
                 apellido_check.classList.add("fa-circle-xmark")
                 apellido_check.classList.add("fa-regular")                                 
+                alerta = 1
+            }
+            else{
+              alerta = 0
             }
              if(apellido.value.length >= 2 && /\d/.test(apellido.value) || apellido.value.length >= 2 && /[°¡¿`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/.test(apellido.value)){              
               event.preventDefault()
@@ -840,6 +870,10 @@
               apellido_check.classList.add("show")
               apellido_check.classList.add("fa-circle-xmark")
               apellido_check.classList.add("fa-regular")               
+              alerta = 1
+            }
+            else{
+              alerta = 0
             }
             if(apellido.value.length < 2){
               event.preventDefault()
@@ -856,7 +890,11 @@
               apellido_check.classList.add("show")
               apellido_check.classList.add("fa-circle-xmark")
               apellido_check.classList.add("fa-regular")                  
-            }         
+              alert=1              
+            }        
+            else{
+              alerta = 0
+            } 
             if(email.value === ""){ 
               event.preventDefault()           
               liErrorEmail1.classList.remove("none")
@@ -870,7 +908,11 @@
               email_check.classList.add("show")
               email_check.classList.add("fa-circle-xmark")
               email_check.classList.add("fa-regular")                
+              alerta=1
             }  
+            else{
+              alerta = 0
+            }
             if(!(/^([\da-z_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/).test(email.value)){
               event.preventDefault()
               liErrorEmail1.classList.remove("show")
@@ -884,8 +926,11 @@
               email_check.classList.add("show")
               email_check.classList.add("fa-circle-xmark")
               email_check.classList.add("fa-regular")                        
+              alerta=1
             }
-            
+            else{
+              alerta = 0
+            }
             if(fecha.value === ""){ 
               event.preventDefault()                        
               liErrorFecha2.classList.remove("none")
@@ -900,8 +945,11 @@
               fecha_check.classList.remove("fa-regular")               
               fecha_check.classList.add("fa-circle-xmark")
               fecha_check.classList.add("fa-regular")                  
+              alerta=1
             }
-           
+            else{
+              alerta = 0
+            }
            if(edad < 18){      
             event.preventDefault()        
             liErrorFecha1.classList.remove("none")
@@ -916,6 +964,10 @@
             fecha_check.classList.remove("fa-regular")               
             fecha_check.classList.add("fa-circle-xmark")
             fecha_check.classList.add("fa-regular")                 
+            alerta=1
+            }
+            else{
+              alerta = 0
             }
             if(domicilio.value === ""){
               event.preventDefault()
@@ -930,7 +982,10 @@
               domicilio_check.classList.add("show")
               domicilio_check.classList.add("fa-circle-xmark")
               domicilio_check.classList.add("fa-regular")   
-              
+             alerta=1 
+            }
+            else{
+              alerta = 0
             }
             if(domicilio.value.length < 10 ){            
               event.preventDefault()
@@ -945,6 +1000,10 @@
               domicilio_check.classList.add("show")
               domicilio_check.classList.add("fa-circle-xmark")
               domicilio_check.classList.add("fa-regular")                
+              alerta=1
+            }
+            else{
+              alerta = 0
             }
             if(pass.value === ""){  
               event.preventDefault()            
@@ -959,6 +1018,10 @@
               password_check.classList.add("show")
               password_check.classList.add("fa-circle-xmark")
               password_check.classList.add("fa-regular")               
+              alerta=1
+            }
+            else{
+              alerta = 0
             }
             if(!/(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9])(?=.{8,})/.test(pass.value)){              
               event.preventDefault()
@@ -975,6 +1038,10 @@
               password_check.classList.remove("fa-regular")               
               password_check.classList.add("fa-circle-xmark")
               password_check.classList.add("fa-regular")            
+              alerta=1
+            }
+            else{
+              alerta = 0
             }
             let extension = file.value.split(".").pop() //captura la extensión del archivo seleccionado
             if(extension != "jpg" && extension != "jpeg" && extension != "png" && extension != "gif" ){
@@ -989,9 +1056,32 @@
               file_check.classList.remove("fa-regular")               
               file_check.classList.add("fa-circle-xmark")
               file_check.classList.add("fa-regular")                   
+              alerta=1
+            }
+            else{
+              alerta = 0
             }
 
+            if(alerta === 1){
+              Command: toastr["warning"]("Hay campos vacío o con errores. Verifique e intente de nuevo.", "¡CUIDADO!")
 
+          toastr.options = {
+            "closeButton": true,
+            "debug": false,
+            "newestOnTop": false,
+            "progressBar": true,
+            "positionClass": "toast-bottom-full-width",
+            "preventDuplicates": true,
+            "onclick": null,
+            "showDuration": "50",
+            "hideDuration": "10000",
+            "timeOut": "3000",
+            "extendedTimeOut": "1000",
+            "showEasing": "swing",
+            "hideEasing": "linear",
+            "showMethod": "fadeIn"
+          }
+            }
 
           })
 
