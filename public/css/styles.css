@@ -41,6 +41,15 @@ footer {
     text-align: center;
 
 }
+form .admin-but-singleUserLogged{
+    border-radius: 5px;
+    height: 30px;
+    width: 190%;      
+ }
+ form .admin-but-singleUserLogged p{            
+     margin: auto;             
+ }
+ 
 .icono-showPassword-register{
     left: 278px;
     position: absolute;
@@ -686,8 +695,9 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     
     .principal-userList .principal-userList-img img{
         /* border: solid 2px green; */
-        height: 100%;
-        width: 100%;                       
+        border-radius: 5px;
+        height: 60px;
+        width: 60px;                       
     }
     .principal-userList .principal-userList-email {
         /* border: solid 2px red; */
@@ -3187,7 +3197,7 @@ main form .text-aviso p{
     margin-left: auto;
     margin-right: auto;
     padding: 10px;
-    width: 90%;
+    max-width: 340px;
 }
 .form-Reg div{
     /* border: solid 2px rgb(43, 198, 226); */
