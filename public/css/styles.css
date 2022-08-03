@@ -41,7 +41,11 @@ footer {
     text-align: center;
 
 }
-
+.icono-showPassword-register{
+    left: 278px;
+    position: absolute;
+    top: 45px;
+}
 .image-404{
     display: block;
 text-align: center;
@@ -632,6 +636,11 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 @media(min-width:768px) {
 
+    .icono-showPassword-register{
+        left: 225px;
+        position: absolute;
+        top: 45px;
+    }
 
     .principal-userList-encabezados{
         /* border: solid 2px brown; */

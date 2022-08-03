@@ -11,8 +11,9 @@
       let sub_button = document.querySelector("#sub_button");
       let file = document.querySelector("#file")
       let form = document.querySelector(".form-Reg")
+      let showPasswordRegisterIcon = document.querySelector("#icono-showPassword-register")
 
-      sub_button.style.visibility = "visible"
+      // sub_button.style.visibility = "visible"
 
       //let text_aviso = document.querySelector('#text-aviso')
       // let text_aviso_nombre = document.getElementById('text-aviso-nombre')
@@ -43,9 +44,18 @@
       let contrasena = 0 
       let foto_perfil = 0
       
+      showPasswordRegisterIcon.addEventListener("click",function(event){
+        if(pass.type === "password"){
+          pass.type = "text"
+        } else {
+          pass.type = "password"
+        }
+    
+      })
+    
 
       //form.reset()
-      sub_button.style.visibility = "visible"  
+      // sub_button.style.visibility = "visible"  
 
       if(email.value != "" && email.disabled === true || email.value != "" && email.disabled === false ){
         nombre.disabled = false;
