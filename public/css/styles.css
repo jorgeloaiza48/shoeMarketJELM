@@ -870,6 +870,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     .cuentaCarrito2 li {
         /* display: flex; */
         align-items: center;
+        background-color: white;
         cursor: pointer;
         border-radius: 10px;
         box-shadow: 2px 2px 3px rgb(0 0 0 / 50%);
@@ -901,6 +902,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 
     .cuentaCarrito2 li a {
+        background-color: white;
         text-decoration: none;
         color: black;
         font-size: small;
@@ -1026,6 +1028,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
     .cuentaCarrito2 li {
         margin-left: 30px;
+        background-color: white;
     }
 
     .cont-search-nav {

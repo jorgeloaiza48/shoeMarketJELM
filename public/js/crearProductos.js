@@ -270,6 +270,7 @@ window.addEventListener("load", function (event) {
             liErrorimgProd1.classList.add("show")
             liErrorimgProd1.classList.add("errorText")
         }
+        
         if (category.value === "") {
             event.preventDefault()
             liErrorCategoriaProd1.classList.remove("none")
