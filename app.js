@@ -26,6 +26,8 @@ const publicPath = path.resolve(__dirname,'./public')
 /*** Main Router (require) */
 const mainRoutes = require('./routes/mainRoutes')
 
+const ApiMainRoutes = require("./routes/ApiRoutes/ApiMainRoutes")
+
 // ************ Express() ************/
 const app = express()
 
@@ -51,6 +53,9 @@ app.set('view engine', 'ejs')
 
 /*** Main Router (use) */
 app.use('/',mainRoutes)
+
+/*** Main Router (use) */
+app.use('/api', ApiMainRoutes)
 
 
 /*** Error (404) */

@@ -35,6 +35,7 @@ const controller = {
         }})
             
         let categoriesInDb = db.Category.findByPk(req.params.categoria)
+        
         Promise.all([categoriesInDb, productInDb])
             .then(function ([categoria, productos]) {
                 res.render("products/categoria",{productos:productos,title : "categoria",categoria:categoria})
