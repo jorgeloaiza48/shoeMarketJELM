@@ -21,28 +21,64 @@ const ApiProductsController = {
         })
         Promise.all([categoriesInDb, Allproducts])
             .then(function ([category, products]){
+               
                 let countByCategory = category.map(element => {
-                    let a = element.name
-                    return {
-                        [a] : element.productos.length
-                    }
+                    return ({ 
+                        [element.name] : element.productos.length
+                    })
                 });
-                let b = countByCategory.reduce(function(target,key,index){
-                    console.log(target,key,index)
-                    target[i] = key
-                    return target
-
-                })
                 
-                console.log(b)
+               let objcountByCategory = Object.assign({},
+                countByCategory[0],
+                countByCategory[1],
+                countByCategory[2],
+                countByCategory[3],
+                countByCategory[4],
+                countByCategory[5])
+
+                let productResponse = products.map(element => {
+                    let obj = {
+                        id : element.id,
+                        name : element.name,
+                        description : element.description,
+                        categorias : element.categorias,
+                        detail : `/api/products/detail/${element.id}`
+                    }
+                    return obj
+                });
+                
+                
+            
                 let response = {
                     count: products.length,
-                    countByCategory : b,
-                    category: category,
+                    countByCategory : objcountByCategory,
+                    products: productResponse,
                 }
                 res.json(response)
             })
             .catch(error => res.send(error))
+    },
+    detail: (req, res) => {
+        db.Product.findByPk(req.params.id,
+            {
+                include: [
+                    { association: "categorias" },
+                    
+                ], where : {
+                    status : "Enabled"
+                }
+            })
+            .then(product => {
+                let respuesta = {
+                    product : product,
+                    relation : [product.categorias],
+                    img : product.image
+
+                }
+                res.json(respuesta);
+            });
+
+
     },
     create: (req, res) => {
         db.Record.
