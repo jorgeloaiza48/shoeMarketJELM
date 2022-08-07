@@ -5,6 +5,8 @@ const ApiProductsController = require("../../controllers/apiControllers/ApiProdu
 /* List Productos. */
 router.get('/', ApiProductsController.list)
 
+router.get("/detail/:id",ApiProductsController.detail)
+
 
 
 
