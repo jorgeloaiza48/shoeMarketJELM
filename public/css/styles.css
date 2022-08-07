@@ -695,7 +695,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     
     .principal-userList .principal-userList-img img{
         /* border: solid 2px green; */
-        border-radius: 5px;
+        border-radius: 50%;
         height: 60px;
         width: 60px;                       
     }

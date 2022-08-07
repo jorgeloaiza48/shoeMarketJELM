@@ -53,3 +53,6 @@ Por medio de llamada de voz discutimos el manejo de la carga de imagen cuando se
 
 9-7-2022
 Vía telefónica, aclaramos mutuamente unas dudas para organizar el CRUD de usuarios y Productos.
+
+5-8-2022
+Através de videollamada discutimos algunos aspectos sobre el SRINT8.
