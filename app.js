@@ -6,6 +6,7 @@ const cookies = require("cookie-parser")
 const session = require("express-session")
 const userLoggedMiddleware = require("./middlewares/UserLoggedMiddleware")
 const adminLoggedMiddleware = require('./middlewares/AdminLoggedMiddleware');
+const cors= require("cors");
 
 const publicPath = path.resolve(__dirname,'./public')
 
@@ -31,6 +32,13 @@ const ApiMainRoutes = require("./routes/ApiRoutes/ApiMainRoutes")
 // ************ Express() ************/
 const app = express()
 
+const corsOptions ={
+   origin:'*', 
+   credentials:true,            //access-control-allow-credentials:true
+   optionSuccessStatus:200,
+}
+
+app.use(cors(corsOptions)) // Use this after the variable declaration
 
 // ************  Middlewares ************/
 app.use(session({secret: " shhhh",

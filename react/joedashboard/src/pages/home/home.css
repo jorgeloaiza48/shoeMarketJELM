@@ -1,0 +1,40 @@
+.home{
+    display: flex;
+}
+.homeContainer{
+    
+    flex: 2;
+
+
+}
+.cards-container{
+    display: flex;
+    padding: 25px;
+    flex-wrap: wrap;
+
+}
+@media(min-width:576px) {
+    .homeContainer{
+    
+        flex: 2.5;
+    
+    }
+
+}
+@media(min-width:768px) {
+    .homeContainer{
+    
+        flex: 3;
+    
+    }
+}
+    @media(min-width:998px) {
+        .homeContainer{
+        
+            flex: 4;
+        
+        }
+
+    
+
+}

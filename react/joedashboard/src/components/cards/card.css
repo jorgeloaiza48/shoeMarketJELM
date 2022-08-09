@@ -1,0 +1,16 @@
+.card{
+    background-color: rgb(234 190 192);
+    height: 185px;
+    width: 80%;
+    margin: 15px;
+    max-width: 320px;
+    border-radius: 10px;
+    text-align: center;
+}
+.card-photo{
+    width: 50px;
+
+}
+.card-link{
+    text-decoration: none;
+}
