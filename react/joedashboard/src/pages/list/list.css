@@ -1,0 +1,19 @@
+.list-product__img{
+    width: 100px;
+}
+.list-product__tr{
+    height: 100px;
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    
+    margin-left: 25px;
+}
+.table{
+    display: flex;
+    margin-left: 50px;
+}
+.list-products__btn{
+    border-radius: 10px;
+    background-color: aquamarine;
+}

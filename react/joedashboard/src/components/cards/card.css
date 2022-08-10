@@ -1,0 +1,36 @@
+.cardHome{
+    border: 0.5px outset grey;
+    box-shadow: -1px -1px rgb(117, 117, 117);
+    height: 220px;
+    width: 80%;
+    margin: 15px;
+    max-width: 320px;
+    border-radius: 10px;
+    text-align: center;
+    color: #443c3c;
+}
+.cardHome-img{
+    width: 160px;
+    margin-bottom: 5px;
+
+}
+.cardHome-link{
+    text-decoration: none;
+}
+.cardHome-link:hover{
+    color: #98092f
+
+}
+
+.loading{
+    margin-top: 30px;
+    
+}
+.cardHome-title{
+    font-size: 22px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.cardHome-quantity{
+    margin-bottom: 15px;
+}

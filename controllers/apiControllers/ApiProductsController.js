@@ -42,7 +42,8 @@ const ApiProductsController = {
                         name : element.name,
                         description : element.description,
                         categorias : element.categorias,
-                        detail : `/api/products/detail/${element.id}`
+                        detail : `/api/products/detail/${element.id}`,
+                        img: element.image
                     }
                     return obj
                 });
@@ -50,7 +51,7 @@ const ApiProductsController = {
                 
             
                 let response = {
-                    count: products.length,
+                    countProduts: products.length,
                     countByCategory : objcountByCategory,
                     products: productResponse,
                 }
