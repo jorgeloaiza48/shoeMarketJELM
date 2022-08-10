@@ -51,7 +51,7 @@ const ApiProductsController = {
                 
             
                 let response = {
-                    count: products.length,
+                    countProduts: products.length,
                     countByCategory : objcountByCategory,
                     products: productResponse,
                 }

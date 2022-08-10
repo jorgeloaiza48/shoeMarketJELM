@@ -1,31 +1,70 @@
-import React, { useEffect,useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import NavBar from '../../components/navBar/NavBar'
 import SideBar from '../../components/sidebar/SideBar'
 import Card from '../../components/cards/Card'
 import "./home.css"
-import useAllProducts from "../../helpers/useAllProducts"
-
+import useAllProducts from "../../Hooks/useAllProducts"
+import useAllUsers from '../../Hooks/useAllUsers'
+import imgProducts from "./imgProducts.jpg"
+import imgUsers from "./imgUsers.jpg"
+import imgCategory from "./imgCategory.jpg"
+import crearProducto from "./crearProducto.jpg"
 
 const Home = () => {
   const { dataProducts, isLoadingProducts } = useAllProducts("http://localhost:4000/api/products")
-  const { count, countByCategory, products } = !!dataProducts && dataProducts;
-  
+  const { countProduts, products, countByCategory } = !!dataProducts && dataProducts;
   const [lastProduct, setlastProduct] = useState("")
-
   const [ImglastProduct, setImglastProduct] = useState("")
- 
-
-
-useEffect(() => {
-
-  if (dataProducts) {
-    setlastProduct(products[products.length - 1])
-    setImglastProduct(lastProduct.img)
-  }
+  const urlImgProducto = "http://localhost:4000/img/products/"
   
-  console.log(lastProduct)
-  console.log(ImglastProduct)
-}, [])
+  
+  const { dataUsers, isLoadingUsers } = useAllUsers("http://localhost:4000/api/users")
+  const { count, users } = !!dataUsers && dataUsers;
+  const [lastUser, setlastUser] = useState("")
+  const [ImglasUser, setImglasUser] = useState("")
+  const urlUserImage = "http://localhost:4000/img/user/"
+  const { first_name, last_name, image } = lastUser
+
+  const [qcategoryProd, setqcategoryProd] = useState("")
+  
+
+
+
+
+
+  useEffect(() => {
+
+    if (dataUsers) {
+      setlastUser(users[users.length - 1])
+      setImglasUser(urlUserImage + image)
+
+    }
+
+
+  }, [dataUsers,users,lastUser.img,image])
+
+
+
+
+  useEffect(() => {
+
+    if (dataProducts) {
+      setlastProduct(products[products.length - 1])
+      setImglastProduct(urlImgProducto + lastProduct.img)
+    }
+
+
+  }, [products,dataProducts,lastProduct.img])
+
+  useEffect(() => {
+
+    if (dataProducts) {
+     const obj = Object.keys(countByCategory)
+      setqcategoryProd(obj.length)
+    }
+
+
+  }, [dataProducts,countByCategory])
 
 
 
@@ -37,12 +76,50 @@ useEffect(() => {
       <div className="homeContainer">
         <NavBar />
         <div className="cards-container">
-          <Card title="Productos" quantity={`Cantidad de productos ${count}`}link="products" />
-          <Card title="Categorias de productos" quantity={count} link="products/category" />
-          <Card title="Ultimo producto creado" img={ImglastProduct} link="products/lastProduct" />
-          <Card title="Usuarios" quantity={count} link="users" />
-          <Card title="Categorias de usuarios" quantity={`Cantidad de Usuarios ${countUsers}`} link="users/category" />
-          <Card title="Ultimo usuario creado" quantity={count} link="users/lastUser" />
+          <Card
+            title="Productos"
+            loading={isLoadingProducts}
+            quantity={`Cantidad de productos ${countProduts}`}
+            link="products"
+            img={imgProducts}
+          />
+          <Card
+            title="Categorias de productos"
+            loading={isLoadingProducts}
+            link="products/category"
+            quantity={`Cantidad de categorias ${qcategoryProd}`}
+            img={imgCategory}  
+          />
+            <Card
+              title="Crear producto"
+              link="users/category"
+              loading={isLoadingProducts}
+              img={crearProducto}
+              quantity={"Formulario de creacion"}
+
+            />
+          <Card
+            title="Ultimo producto creado"
+            loading={isLoadingProducts}
+            img={ImglastProduct}
+            link="products/lastProduct"
+            quantity={lastProduct.name}
+
+          />
+          <Card title="Usuarios"
+            loading={isLoadingUsers}
+            quantity={`Cantidad de Usuarios ${count}`}
+            link="users"
+            img={imgUsers}
+            
+          />
+          <Card title="Ultimo usuario creado"
+            loading={isLoadingUsers}
+            quantity={`${first_name} ${last_name} `}
+            link="users/lastUser"
+            img={ImglasUser}
+             
+          />
 
         </div>
       </div>

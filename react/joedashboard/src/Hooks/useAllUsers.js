@@ -4,34 +4,34 @@ import { useState, useEffect } from "react";
 export const useAllUsers = (url) => {
     
     const [state, setState] = useState({
-      dataAll : null,
-      isLoadingAll : true
+      dataUsers : null,
+      isLoadingUsers : true
     });
     
     useEffect(() => {
         setState({
             ...state,
-            isLoadingAll : true,
+            isLoadingUsers : true,
           });
 
         fetch(url)
         .then(res => res.json())
         .then(dataApi => setState({
-            dataAll : dataApi ,
-            isLoadingAll : false,
+            dataUsers : dataApi ,
+            isLoadingUsers : false,
         }))
         .catch(err =>{
             setState({
-                dataAll : null,
-                isLoadingAll : false,
+                dataUsers : null,
+                isLoadingUsers : false,
             })
         })
         
     }, [url])
 
     return {
-        dataAll: state.dataAll,
-        isLoadingAll: state.isLoadingAll,
+        dataUsers: state.dataUsers,
+        isLoadingUsers: state.isLoadingUsers,
 
     }
 
