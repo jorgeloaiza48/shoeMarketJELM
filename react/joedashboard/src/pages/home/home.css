@@ -2,7 +2,7 @@
     display: flex;
 }
 .homeContainer{
-    
+    background-color:#f4e0e0d3;
     flex: 2;
 
 
@@ -11,20 +11,27 @@
     display: flex;
     padding: 25px;
     flex-wrap: wrap;
+    background-color:#f4e0e0d3
 
+}
+.navbar-home{
+    background-color: white;
 }
 @media(min-width:576px) {
     .homeContainer{
-    
         flex: 2.5;
-    
     }
-
+    
 }
 @media(min-width:768px) {
     .homeContainer{
-    
+        
         flex: 3;
+        
+    }
+    .last-container{
+        display: flex;
+    
     
     }
 }

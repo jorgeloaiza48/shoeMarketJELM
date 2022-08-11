@@ -9,7 +9,7 @@ const NavBar = () => {
  
   return (
     
-      <div className='navbar'>
+      <div className="navbar">
         <div className="wrapper">
           <div className='navBar-title'>DashBoard Shoe Market</div>
           <div className="items">

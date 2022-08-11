@@ -1,19 +1,12 @@
 .cardHome{
-    border: 0.5px outset grey;
-    box-shadow: -1px -1px rgb(117, 117, 117);
-    height: 220px;
-    width: 80%;
+    width: 65%;
     margin: 15px;
-    max-width: 320px;
-    border-radius: 10px;
-    text-align: center;
-    color: #443c3c;
+    border-radius: 15px;
+    text-align: left;
+    background-color: white;
+    padding-left: 15px;
 }
-.cardHome-img{
-    width: 160px;
-    margin-bottom: 5px;
 
-}
 .cardHome-link{
     text-decoration: none;
 }
@@ -27,10 +20,84 @@
     
 }
 .cardHome-title{
-    font-size: 22px;
+    font-size: 18px;
+    font-weight: bold;
     margin-top: 15px;
     margin-bottom: 15px;
 }
 .cardHome-quantity{
+    font-size: 15px;
+    font-weight: bold;
+    color:#443c3c
+    
+
+}
+.cardUser-img{
+    width: 50%
+}
+.cardUser-link{
+    width: 500px;
+    text-decoration: none;
+    color: #443c3c;
+}
+
+.cardUser-link:hover{
+    color: none
+    
+}
+
+.cardUser-container{
+    background-color: rgb(255, 255, 255);
+    border-radius: 15px;
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+
+}
+.cardUser-btn{
+    border-radius: 10px;
+    border: 0.5px solid #98092f
+    
+}
+.cardUser-btn:hover{
+    background-color: #98092f;
+    color: white;
+}
+.cardUser-info{
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 10px;
     margin-bottom: 15px;
+}
+.cardUser-title{
+    font-weight: bold;
+    font-size: 20px;
+    
+}
+
+
+
+
+
+
+
+
+@media(min-width:576px) {
+   
+
+}
+@media(min-width:768px) {
+    .cardHome{
+        width: 28%;
+    }
+    .cardUser-container{
+        width: 48%;
+    }
+   
+}
+    @media(min-width:998px) {
+       
+
+    
+
 }

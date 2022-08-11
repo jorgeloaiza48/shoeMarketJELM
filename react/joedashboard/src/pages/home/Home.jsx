@@ -5,10 +5,8 @@ import Card from '../../components/cards/Card'
 import "./home.css"
 import useAllProducts from "../../Hooks/useAllProducts"
 import useAllUsers from '../../Hooks/useAllUsers'
-import imgProducts from "./imgProducts.jpg"
-import imgUsers from "./imgUsers.jpg"
-import imgCategory from "./imgCategory.jpg"
-import crearProducto from "./crearProducto.jpg"
+import CardLastUser from '../../components/cards/cardLastUser'
+
 
 const Home = () => {
   const { dataProducts, isLoadingProducts } = useAllProducts("http://localhost:4000/api/products")
@@ -16,17 +14,17 @@ const Home = () => {
   const [lastProduct, setlastProduct] = useState("")
   const [ImglastProduct, setImglastProduct] = useState("")
   const urlImgProducto = "http://localhost:4000/img/products/"
-  
-  
+
+
   const { dataUsers, isLoadingUsers } = useAllUsers("http://localhost:4000/api/users")
   const { count, users } = !!dataUsers && dataUsers;
   const [lastUser, setlastUser] = useState("")
   const [ImglasUser, setImglasUser] = useState("")
   const urlUserImage = "http://localhost:4000/img/user/"
-  const { first_name, last_name, image } = lastUser
+  const { first_name, last_name, image,email,adress,date_of_birth } = lastUser
 
   const [qcategoryProd, setqcategoryProd] = useState("")
-  
+
 
 
 
@@ -41,7 +39,7 @@ const Home = () => {
     }
 
 
-  }, [dataUsers,users,lastUser.img,image])
+  }, [dataUsers, users, lastUser.img, image])
 
 
 
@@ -54,17 +52,17 @@ const Home = () => {
     }
 
 
-  }, [products,dataProducts,lastProduct.img])
+  }, [products, dataProducts, lastProduct.img])
 
   useEffect(() => {
 
     if (dataProducts) {
-     const obj = Object.keys(countByCategory)
+      const obj = Object.keys(countByCategory)
       setqcategoryProd(obj.length)
     }
 
 
-  }, [dataProducts,countByCategory])
+  }, [dataProducts, countByCategory])
 
 
 
@@ -77,49 +75,54 @@ const Home = () => {
         <NavBar />
         <div className="cards-container">
           <Card
-            title="Productos"
+            title="Productos activos"
             loading={isLoadingProducts}
-            quantity={`Cantidad de productos ${countProduts}`}
+            quantity={countProduts}
             link="products"
-            img={imgProducts}
+            color="#a40f36"
+
           />
           <Card
-            title="Categorias de productos"
+            title="Categorias"
             loading={isLoadingProducts}
             link="products/category"
-            quantity={`Cantidad de categorias ${qcategoryProd}`}
-            img={imgCategory}  
-          />
-            <Card
-              title="Crear producto"
-              link="users/category"
-              loading={isLoadingProducts}
-              img={crearProducto}
-              quantity={"Formulario de creacion"}
-
-            />
-          <Card
-            title="Ultimo producto creado"
-            loading={isLoadingProducts}
-            img={ImglastProduct}
-            link="products/lastProduct"
-            quantity={lastProduct.name}
+            quantity={qcategoryProd}
+            color="#9533b5"
 
           />
-          <Card title="Usuarios"
+
+          <Card title="Usuarios activos"
             loading={isLoadingUsers}
-            quantity={`Cantidad de Usuarios ${count}`}
+            quantity={count}
             link="users"
-            img={imgUsers}
-            
+            color="#dd7f47"
+
+
           />
-          <Card title="Ultimo usuario creado"
+        </div>
+        <div className='last-container'>
+
+          <CardLastUser title="Ultimo usuario creado"
             loading={isLoadingUsers}
-            quantity={`${first_name} ${last_name} `}
             link="users/lastUser"
             img={ImglasUser}
-             
+            name={`${first_name} ${last_name} `}
+            email={email}
+            birth={date_of_birth}
+            address={adress}
+            color= "#936d19"
+            
+
           />
+          <CardLastUser
+              title="Ultimo producto creado"
+              loading={isLoadingProducts}
+              img={ImglastProduct}
+              link="products/lastProduct"
+              quantity={lastProduct.name}
+              color="#476397"
+              
+            />
 
         </div>
       </div>

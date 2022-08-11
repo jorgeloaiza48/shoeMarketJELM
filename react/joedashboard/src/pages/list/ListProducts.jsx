@@ -11,7 +11,7 @@ const ListProducts = () => {
   const { dataProducts } = useAllProducts("http://localhost:4000/api/products")
   const { products, countByCategory, isLoadingProducts } = !!dataProducts && dataProducts;
   const urlImgProducto = "http://localhost:4000/img/products/"
-  console.log(products)
+  
 
 
 
@@ -24,6 +24,28 @@ const ListProducts = () => {
       <div className='homeContainer'>
         <NavBar />
         <table className="table d-flex">
+        <div className='table-div'>
+            <th>ID</th>
+            {
+              products ?
+                (
+                  products.map(product => {
+                    return (
+                      <tr className='list-product__tr' key={product.id}>
+                        {product.id}
+                      </tr>
+                    )
+                  })
+                ) :
+                (
+                  <div class="spinner-border text-danger loading" role="status">
+                  <span class="visually-hidden ">Loading...</span>
+                </div>
+              
+                )
+
+            }
+          </div>
           <div>
             <th>Nombre</th>
             {
@@ -38,7 +60,9 @@ const ListProducts = () => {
                   })
                 ) :
                 (
-                  <p>cargando</p>
+                  <div class="spinner-border text-danger loading" role="status">
+                  <span class="visually-hidden ">Loading...</span>
+                </div>
                 )
 
             }
@@ -58,7 +82,9 @@ const ListProducts = () => {
                   })
                 ) :
                 (
-                  <p>cargando</p>
+                  <div class="spinner-border text-danger loading" role="status">
+                  <span class="visually-hidden ">Loading...</span>
+                </div>
                 )
 
             }
@@ -78,7 +104,9 @@ const ListProducts = () => {
                   })
                 ) :
                 (
-                  <p>cargando</p>
+                  <div class="spinner-border text-danger loading" role="status">
+                  <span class="visually-hidden ">Loading...</span>
+                </div>
                 )
 
             }
@@ -104,7 +132,7 @@ const ListProducts = () => {
             className='btn btn-danger'
             
             >
-              Editar
+              Eliminar
 
             </button>
             </tr>
