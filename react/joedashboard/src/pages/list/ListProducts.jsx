@@ -11,6 +11,10 @@ const ListProducts = () => {
   const { dataProducts } = useAllProducts("http://localhost:4000/api/products")
   const { products, countByCategory, isLoadingProducts } = !!dataProducts && dataProducts;
   const urlImgProducto = "http://localhost:4000/img/products/"
+
+
+
+  
   
 
 

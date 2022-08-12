@@ -17,18 +17,10 @@ const ProductCategory = () => {
     if (countByCategory) {
       setCategoryProd(countByCategory)
     }
-
-
   }, [countByCategory])
-  console.log(Object.entries(categoryProd))
 
-
-
-
-
-
-
-
+  
+  
 
 
 

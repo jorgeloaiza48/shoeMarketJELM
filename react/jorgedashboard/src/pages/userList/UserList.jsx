@@ -3,82 +3,46 @@ import { DataGrid } from '@mui/x-data-grid';
 import { DeleteOutline } from '@mui/icons-material';
 //import { response } from "express";
 //import { render } from "@testing-library/react";
-//import useAllUsers from "../../Hooks/useAllUsers";
+import useAllUsers from "../../Hooks/useAllUsers";
+import { useState } from "react";
+import { useEffect } from "react";
+
 
 export default function UserList() {
 
-  //   const columns = [
-  //       { field: 'id', headerName: 'ID', width: 90 },
-  //       { field: 'user', headerName: 'User', width: 200, renderCell:(params)=>{
-  //           return(
-  //           <div className="userListuser">
-  //               <img className="userListImg" src={params.row.avatar} alt=""/>
-  //               {params.row.username}
-  //               </div>
-  //               )
-  //           }},
-  //       { field: 'email', headerName: 'Email', width: 200 },
-  //       { field: 'status',headerName: 'Status',  width: 120 },
-  //       { field: 'transaction',headerName: 'Transaction', width: 260},
-  //       { field: 'action',headerName: 'Action', width: 150, renderCell:(params)=>{
-  //           return (
-  //               <>
-  //               <button className="userListEdit">Edit</button>
-  //               <DeleteOutline className="userListDelete"/>
-  //               </>
-  //           )
-  //       }},
-  //     ];
+  
 
-  //     const pepito = [
-  //       { id: 1, 
-  //         username: 'Jony', 
-  //         avatar: "photo-1659221789590.jpg",         
-  //         email: "hola@gmail.com",
-  //         status: "active",
-  //         transaction: "$120.000"
-  //       },
-  //       { id: 2, 
-  //           username: 'Jorge', 
-  //           avatar: 'photo-1659221789590.jpg',           
-  //           email: "hola@gmail.com",
-  //           status: "active",
-  //           transaction: "$120.000"
-  //         },
-  //         { id: 3, 
-  //           username: 'Jon', 
-  //           avatar: 'photo-1659221789590.jpg',            
-  //           email: "hola@gmail.com",
-  //           status: "active",
-  //           transaction: "$120.000"
-  //         },
-  //         { id: 4, 
-  //           username: 'Jon', 
-  //           avatar: 'photo-1659221789590.jpg',            
-  //           email: "hola@gmail.com",
-  //           status: "active",
-  //           transaction: "$120.000"
-  //         },
-  //         { id: 5, 
-  //           username: 'Jon', 
-  //           avatar: 'photo-1659221789590.jpg',            
-  //           email: "hola@gmail.com",
-  //           status: "active",
-  //           transaction: "$120.000"
-  //         },
-  //         { id: 6, 
-  //           username: 'Jon', 
-  //           avatar: 'photo-1659221789590.jpg',            
-  //           email: "hola@gmail.com",
-  //           status: "active",
-  //           transaction: "$120.000"
-  //         },
-  //     ];
 
-  // return (
-  //   <div className="userList"><DataGrid rows={pepito} disableSelectionOnClick columns={columns} pageSize={8} rowsPerPageOptions={[5]} checkboxSelection
-  // /></div>
-  // )
+  const { dataUsers} = useAllUsers("http://localhost:4000/api/users")
+  const { users } = !!dataUsers && dataUsers;
+  const [arrayUsers, setArrayUsers] = useState("")
+  const [urlImgUser, setUrlImgUser] = useState("")
+
+
+
+  
+ const urlImage =  "http://localhost:4000/img/user/"
+ 
+ useEffect(() => {
+
+  if (dataUsers) {
+    setUrlImgUser(users)
+  }
+
+}, [dataUsers, users])
+ 
+
+  useEffect(() => {
+
+    if (dataUsers) {
+      setArrayUsers(users)
+    }
+
+  }, [dataUsers, users])
+
+  
+
+
 
 
   const columns = [
@@ -203,18 +167,20 @@ export default function UserList() {
   //users.map(usuario => {
   //console.log(usuario)
   //.then(users => {
+
+
+
+
   return (
-    <div>
-      hola
+    
+    <div className="userList"  >
+      <DataGrid
+        rows={arrayUsers} disableSelectionOnClick
+        columns={columns} pageSize={8}
+        rowsPerPageOptions={[5]}
+        checkboxSelection
+      />
     </div>
-    // <div className="userList"  >
-    //   <DataGrid
-    //     rows={users} disableSelectionOnClick
-    //     columns={columns} pageSize={8}
-    //     rowsPerPageOptions={[5]}
-    //     checkboxSelection
-    //   />
-    // </div>
   )
   //return
   //}) //map

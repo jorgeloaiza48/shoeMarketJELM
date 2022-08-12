@@ -9,7 +9,7 @@ let userApiController = {
     list: function(req,res){
 
        
-        db.User.findAll()                                             
+                                                   
 
 
         db.User.findAll({
@@ -33,9 +33,11 @@ let userApiController = {
                        delete element.dataValues.updated_at
                        delete element.dataValues.created_at
                        element.dataValues.detail = `/api/users/${element.dataValues.id}`
+                       element.dataValues.image =  `http://localhost:4000/img/user/${element.dataValues.image}`
+                       
                })                       
              res.json ({
-             //count: users.length,
+             count: users.length,
              users:users
              //status: 200                                                       
            })                       
