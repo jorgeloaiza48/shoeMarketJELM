@@ -7,10 +7,10 @@ const fs = require('fs');
 let userApiController = {
 
     list: function(req,res){
-<<<<<<< HEAD
+
        
         db.User.findAll()                                             
-=======
+
 
         db.User.findAll({
             include: [
@@ -20,7 +20,7 @@ let userApiController = {
                 status : "Activo"
             }
         })                                             
->>>>>>> a6a4a71097ba0cb32f5299ea9ce3082cf8d70cd4
+
         //Borramos los campos que no queremos mostrar
         .then(users => {
             users.map(element =>{
