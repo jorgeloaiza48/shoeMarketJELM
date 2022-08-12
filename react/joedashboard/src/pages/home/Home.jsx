@@ -6,6 +6,8 @@ import "./home.css"
 import useAllProducts from "../../Hooks/useAllProducts"
 import useAllUsers from '../../Hooks/useAllUsers'
 import CardLastUser from '../../components/cards/cardLastUser'
+import CardLastProduct from '../../components/cards/CardLastProduct'
+
 
 
 const Home = () => {
@@ -14,6 +16,9 @@ const Home = () => {
   const [lastProduct, setlastProduct] = useState("")
   const [ImglastProduct, setImglastProduct] = useState("")
   const urlImgProducto = "http://localhost:4000/img/products/"
+  const { description, name } = lastProduct
+  const [categoryProd, setCategoryProd] = useState("")
+  const [qcategoryProd, setqcategoryProd] = useState("")
 
 
   const { dataUsers, isLoadingUsers } = useAllUsers("http://localhost:4000/api/users")
@@ -21,12 +26,12 @@ const Home = () => {
   const [lastUser, setlastUser] = useState("")
   const [ImglasUser, setImglasUser] = useState("")
   const urlUserImage = "http://localhost:4000/img/user/"
-  const { first_name, last_name, image,email,adress,date_of_birth } = lastUser
-
-  const [qcategoryProd, setqcategoryProd] = useState("")
-
+  const { first_name, last_name, image, email, adress, date_of_birth } = lastUser
+  const [rolUser, setRolUser] = useState("")
 
 
+
+  
 
 
 
@@ -41,6 +46,15 @@ const Home = () => {
 
   }, [dataUsers, users, lastUser.img, image])
 
+  useEffect(() => {
+
+    if (lastUser) {
+      setRolUser(lastUser.roles.name)
+
+    }
+
+  },[lastUser])
+
 
 
 
@@ -49,10 +63,20 @@ const Home = () => {
     if (dataProducts) {
       setlastProduct(products[products.length - 1])
       setImglastProduct(urlImgProducto + lastProduct.img)
+
     }
 
 
-  }, [products, dataProducts, lastProduct.img])
+  }, [products, dataProducts, lastProduct.img, lastProduct])
+  useEffect(() => {
+
+    if (lastProduct) {
+      setCategoryProd(lastProduct.categorias.name)
+
+    }
+
+
+  }, [lastProduct])
 
   useEffect(() => {
 
@@ -106,23 +130,27 @@ const Home = () => {
             loading={isLoadingUsers}
             link="users/lastUser"
             img={ImglasUser}
-            name={`${first_name} ${last_name} `}
-            email={email}
-            birth={date_of_birth}
-            address={adress}
-            color= "#936d19"
-            
+            name={`Nombre : ${first_name} ${last_name} `}
+            email={`Correo : ${email}`}
+            birth={`Fecha de Nacimiento : ${date_of_birth}`}
+            address={`Direccion : ${adress}`}
+            color="#936d19"
+            rol={`Rol : ${rolUser}`}
+
 
           />
-          <CardLastUser
-              title="Ultimo producto creado"
-              loading={isLoadingProducts}
-              img={ImglastProduct}
-              link="products/lastProduct"
-              quantity={lastProduct.name}
-              color="#476397"
-              
-            />
+          <CardLastProduct
+            title="Ultimo producto creado"
+            loading={isLoadingProducts}
+            img={ImglastProduct}
+            link="products/lastProduct"
+            name={`Nombre : ${name}`}
+            color="#476397"
+            description={`Descripcion : ${description}`}
+            categoria={`Categoria : ${categoryProd}`}
+
+
+          />
 
         </div>
       </div>

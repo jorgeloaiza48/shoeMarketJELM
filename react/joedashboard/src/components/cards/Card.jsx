@@ -5,8 +5,8 @@ import { Link } from "react-router-dom"
 const Card = ({ title, img, quantity, link, loading,color }) => {
   const loadingc = loading
   const styleCard = {
-    "border-bottom":`${color} 3px double`,
-    "border-left":`${color} 3px double`
+    "borderBottom":`${color} 3px double`,
+    "borderLeft":`${color} 3px double`
   }
 
   return (
@@ -18,15 +18,24 @@ const Card = ({ title, img, quantity, link, loading,color }) => {
             (
               <>
 
-                
+                <div className='d-flex div-card-btn'>
+
                 <p className='cardHome-quantity'>{quantity}</p>
+
+                {/* <button className="cardHome-btn">
+
+                <Link className='cardHome-btn-link' to="/">Ver detalle</Link>
+
+                </button> */}
+
+                </div>
 
               </>
 
             ) :
             (
-              <div class="spinner-border text-danger loading" role="status">
-                <span class="visually-hidden ">Loading...</span>
+              <div className="spinner-border text-danger loading" role="status">
+                <span className="visually-hidden ">Loading...</span>
               </div>
             )
 

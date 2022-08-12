@@ -7,7 +7,14 @@ let userApiController = {
 
     list: function(req,res){
 
-        db.User.findAll()                                             
+        db.User.findAll({
+            include: [
+                { association: "roles" },
+                
+            ], where : {
+                status : "Activo"
+            }
+        })                                             
         //Borramos los campos que no queremos mostrar
         .then(users => {
             users.map(element =>{

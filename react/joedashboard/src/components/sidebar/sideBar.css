@@ -3,6 +3,8 @@
     flex: 1;
     border-right: 0.5px solid rgb(188, 177, 177);
     
+    
+    
 
 
 }
@@ -32,6 +34,7 @@
     list-style-type: none;
     padding: 0;
     margin: 0;
+    
 }
 
 .center ul li {
@@ -40,6 +43,10 @@
     align-items: center;
     cursor: pointer;
     
+    
+}
+.sideBar-link{
+    text-decoration: none;
 }
 
 

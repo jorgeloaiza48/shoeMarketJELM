@@ -1,6 +1,6 @@
 import React from 'react'
 import "./sideBar.css"
-import logo from "./LOGO2.jpg"
+import logo from "./LOGO.png"
 import { MdDashboard } from "react-icons/md";
 import { FaUsers } from "react-icons/fa";
 import { FaProductHunt } from "react-icons/fa";
@@ -23,36 +23,46 @@ const SideBar = () => {
             <p className="title">Main</p>
           <li>
             <MdDashboard className='sideBar-icon' />
-            <Link to="/">
+            <Link className='sideBar-link' to="/">
             <span>Dashboard</span>
             </Link>
           </li>
           <p className="title">Usuarios</p>
           <li>
             <FaUsers className='sideBar-icon' />
+          <Link className='sideBar-link' to="/users">
             <span>Usuarios registrados</span>
+          </Link>
+            
           </li>
-          <li>
-            <DiCssdeck className='sideBar-icon' />
-            <span>Categorias</span>
-          </li>
+          
           <li>
             <BiUserCheck className='sideBar-icon' />
+            <Link className='sideBar-link' to="/users/lastUser">
+
             <span>Ultimo Usuario Creado</span>
+            </Link>
           </li>
           <p className="title">Productos</p>
           <li>
             
             <FaProductHunt className='sideBar-icon' />
+            <Link className='sideBar-link' to="/products">
+
             <span>Productos Activos</span>
+            </Link>
           </li>
           <li>
             <DiCssdeck className='sideBar-icon' />
+            <Link className='sideBar-link' to="/products/category">
             <span>Categorias</span>
+            </Link>
           </li>
           <li>
             <GiConverseShoe className='sideBar-icon' />
+            <Link className='sideBar-link' to="/products/lastProduct">
             <span>Ultimo Producto Creado</span>
+            </Link>
           </li>
           
           
@@ -60,13 +70,7 @@ const SideBar = () => {
 
         </ul>
       </div>
-      <div className="sideBar-bottom">
-        <div className="colorOption dark"></div>
-        <div className="colorOption light"></div>
-      </div>
-
-
-
+      
     </div>
   )
 }
