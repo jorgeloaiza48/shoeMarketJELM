@@ -55,7 +55,8 @@ window.addEventListener('load',function(event){
     }  else {
          articulosCarrito = [...articulosCarrito, infoCurso];
     }
-   
+
+
     carritoHTML();
 }
    

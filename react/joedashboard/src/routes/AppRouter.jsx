@@ -6,7 +6,7 @@ import ProductCategory from '../pages/Category/ProductCategory'
 import LastProduct from '../pages/product/LastProduct'
 
 import ListUsers from '../pages/list/ListUsers'
-import UserCategory from '../pages/Category/UserCategory'
+
 import LastUser from '../pages/user/LastUser'
 
 
@@ -26,12 +26,12 @@ const AppRouter = () => {
 
            <Route path="/products" element={<ListProducts />} />
            <Route path="/products/category" element={<ProductCategory />} />
-           <Route path="/users/lastProduct" element={<LastProduct />} />
+           <Route path="/products/lastProduct" element={<LastProduct />} />
 
 
 
            <Route path="/users" element={<ListUsers />} />
-           <Route path="/users/category" element={<UserCategory />} />
+          
            <Route path="/users/lastUser" element={<LastUser />} />
 
 
