@@ -4,7 +4,7 @@
 
     <main class="main-carrito">
         <div class="primer-parte-carrito">
-            <section class="art-productos">
+            <!-- <section class="art-productos">
                 <h3 class="nombreproductocarrito">Borcego LARA negro 36</h3>
                 <div class="productos-carrito">
 
@@ -46,7 +46,26 @@
                         Eliminar</button></div>
 
 
-            </section>
+            </section> -->
+
+            <div id="carrito">
+                                    
+                <table id="lista-carrito" class="u-full-width">
+                    <thead>
+                        <tr>
+                            <th>Imagen</th>
+                            <th>Nombre</th>
+                            <th>Precio</th>
+                            <th>Cantidad</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+
+                <a href="#" id="vaciar-carrito" class="button u-full-width"><button>Vaciar Carrito</button></a>
+        </div>
+
         </div>
        
 
@@ -114,6 +133,9 @@
 
 
     </main>
+
+  
+    
     <%- include("../partials/footer") %>
 </body>
 

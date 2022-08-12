@@ -2,38 +2,39 @@ const path = require('path');
 const db = require('../../database/models');
 const sequelize = db.sequelize;
 const { Op } = require("sequelize");
+const fs = require('fs');
 
 let userApiController = {
 
     list: function(req,res){
-
+       
         db.User.findAll()                                             
         //Borramos los campos que no queremos mostrar
         .then(users => {
             users.map(element =>{
+                       delete element.dataValues.document                       
+                       delete element.dataValues.date_of_birth
+                       delete element.dataValues.adress                   
+                       delete element.dataValues.detail
                        delete element.dataValues.password
                        delete element.dataValues.rol_id
                        delete element.dataValues.updated_at
                        delete element.dataValues.created_at
                        element.dataValues.detail = `/api/users/${element.dataValues.id}`
                })                       
-           return res.json ({
-            count: users.length,
-            users: users,
-            status: 200                                                       
-           })
+             res.json ({
+             //count: users.length,
+             users:users
+             //status: 200                                                       
+           })                       
         })                      
     },//list
 
-    detail: function(req,res){
+    detail: function(req, res){
         db.User.findByPk(req.params.id)
-     
-         // Inserto url de imagen en product
-        //  user.dataValues.userImageUrl = userImageUrl;
+                     
         .then(user =>{
-            // let userImageUrl = '/img/user/${user.dataValues.user.image}' //Almaceno la url de la imagen
-            // user.dataValues.image = userImageUrl
-           
+                      
                 delete user.dataValues.password
                 delete user.dataValues.rol_id
                 delete user.dataValues.updated_at
@@ -43,17 +44,9 @@ let userApiController = {
             return res.json ({
                 data:user,    
                 status:200,
-                // url: 'api/users/${user.id}' 
+                url: '/api/users/:id' 
             })
-        })
-        // let respuesta = {            
-        //     data:user,    
-        //     status:200,
-        //     url: 'api/users/${userImageUrl}'                        
-        // }
-      
-    //    return res.json(respuesta)
-    //     .catch(error => res.send(error))
+        })        
 
     }//detail
 
