@@ -14,6 +14,7 @@ import LastUser from '../pages/user/LastUser'
 import Create from '../pages/new/Create'
 import Login from '../pages/login/Login'
 import ProductDetail from '../pages/product/ProductDetail'
+import UserDetail from '../pages/user/UserDetail'
 
 
 
@@ -28,13 +29,14 @@ const AppRouter = () => {
            <Route path="/products" element={<ListProducts />} />
            <Route path="/products/category" element={<ProductCategory />} />
            <Route path="/products/lastProduct" element={<LastProduct />} />
-           <Route path="/products/:id" element={<ProductDetail />} />
+           <Route path="/products/:productid" element={<ProductDetail />} />
 
 
 
            <Route path="/users" element={<ListUsers />} />
           
            <Route path="/users/lastUser" element={<LastUser />} />
+           <Route path="/users/:userId" element={<UserDetail />} />
 
 
 

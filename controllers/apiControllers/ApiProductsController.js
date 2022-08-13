@@ -9,9 +9,9 @@ const ApiProductsController = {
         let Allproducts = db.Product.findAll({
             include: [
                 { association: "categorias" },
-                
-            ], where : {
-                status : "Enabled"
+
+            ], where: {
+                status: "Enabled"
             }
         })
         let categoriesInDb = db.Category.findAll({
@@ -20,41 +20,41 @@ const ApiProductsController = {
             ]
         })
         Promise.all([categoriesInDb, Allproducts])
-            .then(function ([category, products]){
-               
+            .then(function ([category, products]) {
+
                 let countByCategory = category.map(element => {
-                    return ({ 
-                        [element.name] : element.productos.length
+                    return ({
+                        [element.name]: element.productos.length
                     })
                 });
 
 
-                let objectCategory= {}
+                let objectCategory = {}
 
                 countByCategory.forEach(cate => {
-                    Object.assign(objectCategory,cate)
-                    
+                    Object.assign(objectCategory, cate)
+
                 });
-               
+
 
                 let productResponse = products.map(element => {
                     let obj = {
-                        id : element.id,
-                        name : element.name,
-                        description : element.description,
-                        categorias : element.categorias,
-                        detail : `/api/products/detail/${element.id}`,
+                        id: element.id,
+                        name: element.name,
+                        description: element.description,
+                        categorias: element.categorias,
+                        detail: `/api/products/detail/${element.id}`,
                         img: element.image,
                         category: element.categorias.name
                     }
                     return obj
                 });
-                
-                
-            
+
+
+
                 let response = {
                     countProduts: products.length,
-                    countByCategory : objectCategory,
+                    countByCategory: objectCategory,
                     products: productResponse,
                 }
                 res.json(response)
@@ -66,20 +66,27 @@ const ApiProductsController = {
             {
                 include: [
                     { association: "categorias" },
-                    
-                ], where : {
-                    status : "Enabled"
+
+                ], where: {
+                    status: "Enabled"
                 }
             })
             .then(product => {
+                let productResponse = {
+                    id: product.id,
+                    name: product.name,
+                    description: product.description,
+                    img: `http://localhost:4000/img/products/${product.image}`,
+                    category: product.categorias.name
+                }
                 let respuesta = {
-                    product : product,
-                    relation : [product.categorias],
-                    img : product.image
+                    product: productResponse,
+                   
 
                 }
                 res.json(respuesta);
-            });
+            })
+            .catch(error => res.send(error));
 
 
     },

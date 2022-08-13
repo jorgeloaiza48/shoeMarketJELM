@@ -5,6 +5,7 @@ import useAllUsers from "../../Hooks/useAllUsers";
 import SideBar from '../../components/sidebar/SideBar';
 import NavBar from '../../components/navBar/NavBar';
 import { DataGrid } from '@mui/x-data-grid';
+import { Link } from "react-router-dom";
 
 
 
@@ -41,12 +42,11 @@ export default function UserList() {
     { field: 'email', headerName: 'Email', width: 200 },
     { field: 'status', headerName: 'Status', width: 120 },
     {
-      field: 'action', headerName: 'Action', width: 150, renderCell: () => {
+      field: 'action', headerName: 'Action', width: 150, renderCell: (params) => {
         return (
-          <>
-            <button className="userListEdit">Edit</button>
-            <button className="userListDelete">Borrar</button>
-          </>
+          <Link to={`/users/${params.id}`}>
+            <button className="userListDetail">Detalle</button>
+          </Link>
         )
       }
     },
@@ -63,10 +63,10 @@ export default function UserList() {
       <SideBar />
       <div className="homeContainer">
         <NavBar />
-        <div className="list-container"  >
+        <div className="list-container-user"  >
           <DataGrid
            rows={arrayUsers} disableSelectionOnClick
-           columns={columns} pageSize={10}
+           columns={columns} pageSize={5}
            rowsPerPageOptions={[1]}
           />
         </div>

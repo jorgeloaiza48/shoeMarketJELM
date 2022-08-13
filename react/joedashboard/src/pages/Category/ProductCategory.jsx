@@ -12,7 +12,6 @@ const ProductCategory = () => {
 
   const [categoryProd, setCategoryProd] = useState("")
 
-//asdaskdaskldnaskdnasd
 
   useEffect(() => {
 
