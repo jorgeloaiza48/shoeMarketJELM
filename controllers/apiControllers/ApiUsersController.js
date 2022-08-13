@@ -7,12 +7,7 @@ const fs = require('fs');
 let userApiController = {
 
     list: function(req,res){
-
-
-       
-                                                   
-
-
+                                           
 
         db.User.findAll({
             include: [
