@@ -7,7 +7,15 @@ const fs = require('fs');
 let userApiController = {
 
     list: function(req,res){
+<<<<<<< HEAD
                                                   
+=======
+
+       
+                                                   
+
+
+>>>>>>> 1921f049ae7bfd89c176c9d53e8e44df95377aa9
         db.User.findAll({
             include: [
                 { association: "roles" },
@@ -29,6 +37,8 @@ let userApiController = {
                        delete element.dataValues.updated_at
                        delete element.dataValues.created_at
                        element.dataValues.detail = `/api/users/${element.dataValues.id}`
+                       element.dataValues.image =  `http://localhost:4000/img/user/${element.dataValues.image}`
+                       
                })                       
              res.json ({
              count: users.length,

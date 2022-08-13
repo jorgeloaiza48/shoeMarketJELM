@@ -7,38 +7,53 @@ import useAllProducts from "../../Hooks/useAllProducts"
 
 
 const ProductCategory = () => {
-  const { dataProducts, isLoadingProducts } = useAllProducts("http://localhost:4000/api/products")
+  const { dataProducts } = useAllProducts("http://localhost:4000/api/products")
   const { countByCategory } = !!dataProducts && dataProducts;
   const [categoryProd, setCategoryProd] = useState("")
-  const [qcategoryProd, setqcategoryProd] = useState("")
 
+<<<<<<< HEAD
  
+=======
+
+  useEffect(() => {
+
+    if (countByCategory) {
+      setCategoryProd(countByCategory)
+    }
+  }, [countByCategory])
+
+  
+  
 
 
-return (
-  <div className='home'>
-    <SideBar />
-    <div className="homeContainer">
-      <NavBar />
-      {
-        countByCategory.map((categoria, i) => {
-          return (
-            <div key={i} className="cards-container">
-              <CardCategory 
-              name={categoria}
-              
-              />
-            </div>
-
-          )
-        })
 
 
-      }
+  return (
+    <div className='home'>
+      <SideBar />
+      <div className="homeContainer">
+        <NavBar />
+        {
+          Object.entries(categoryProd).map(([key, value]) => {
+            return (
+              <div key={key} className="cards-container">
+                <CardCategory
+                  name={key}
+                  quantity={value}
+                  loading={true}
+                />
+              </div>
 
+            )
+          })
+
+
+        }
+>>>>>>> 1921f049ae7bfd89c176c9d53e8e44df95377aa9
+
+      </div>
     </div>
-  </div>
-)
+  )
 }
 
 export default ProductCategory
