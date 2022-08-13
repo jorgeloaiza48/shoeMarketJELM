@@ -12,17 +12,13 @@ const ProductCategory = () => {
 
   const [categoryProd, setCategoryProd] = useState("")
 
-//fbkjdghsdgf
+
   useEffect(() => {
 
     if (countByCategory) {
       setCategoryProd(countByCategory)
     }
   }, [dataProducts])
-
-
-
-
 
 
 
