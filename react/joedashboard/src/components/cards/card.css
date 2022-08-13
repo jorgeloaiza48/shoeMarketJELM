@@ -4,7 +4,9 @@
     border-radius: 15px;
     text-align: left;
     background-color: white;
-    padding-left: 15px;
+    padding-left: 25px;
+    padding-top: 15px;
+    padding-bottom: 15px
 }
 
 .cardHome-link{
@@ -108,13 +110,33 @@
     color: white;
 }
 
+.card-category-container{
+    margin: 25px;
+    width: 85%;
+}
+.cardCategory{
+    background-color: white;
+    border-radius: 15px;
+    margin: 15px;
+    padding-left: 25px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: left;
+      
+    
+
+}
+
 
 
 
 
 
 @media(min-width:576px) {
-   
+    .card-category-container{
+        width: 75%;
+
+    }
 
 }
 @media(min-width:768px) {
@@ -122,13 +144,23 @@
         width: 30%;
     }
     .cardUser-container{
-        width: 48%;
+        width: 50%;
     }
+    .card-category-container{
+        width: 65%;
+
+    }
+
+    
+    
    
 }
     @media(min-width:998px) {
        
+        .card-category-container{
+            width: 35%;
 
+        }
     
 
 }

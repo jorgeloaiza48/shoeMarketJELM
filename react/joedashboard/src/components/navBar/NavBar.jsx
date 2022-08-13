@@ -1,7 +1,7 @@
 import React from 'react'
 import "./navBar.css"
-import { MdOutlineDarkMode } from "react-icons/md";
-import { MdDarkMode } from "react-icons/md";
+// import { MdOutlineDarkMode } from "react-icons/md";
+// import { MdDarkMode } from "react-icons/md";
 
 
 const NavBar = () => {

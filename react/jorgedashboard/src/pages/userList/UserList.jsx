@@ -16,20 +16,9 @@ export default function UserList() {
   const { dataUsers} = useAllUsers("http://localhost:4000/api/users")
   const { users } = !!dataUsers && dataUsers;
   const [arrayUsers, setArrayUsers] = useState("")
-  const [urlImgUser, setUrlImgUser] = useState("")
-
-
-
-  
- const urlImage =  "http://localhost:4000/img/user/"
  
- useEffect(() => {
+ 
 
-  if (dataUsers) {
-    setUrlImgUser(users)
-  }
-
-}, [dataUsers, users])
  
 
   useEffect(() => {
@@ -175,7 +164,7 @@ export default function UserList() {
     
     <div className="userList"  >
       <DataGrid
-        rows={arrayUsers} disableSelectionOnClick
+        rows={{}} disableSelectionOnClick
         columns={columns} pageSize={8}
         rowsPerPageOptions={[5]}
         checkboxSelection

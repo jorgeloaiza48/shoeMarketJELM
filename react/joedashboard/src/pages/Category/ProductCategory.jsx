@@ -7,8 +7,9 @@ import useAllProducts from "../../Hooks/useAllProducts"
 
 
 const ProductCategory = () => {
-  const { dataProducts } = useAllProducts("http://localhost:4000/api/products")
+  const { dataProducts, isLoadingProducts } = useAllProducts("http://localhost:4000/api/products")
   const { countByCategory } = !!dataProducts && dataProducts;
+
   const [categoryProd, setCategoryProd] = useState("")
 
 
@@ -17,10 +18,10 @@ const ProductCategory = () => {
     if (countByCategory) {
       setCategoryProd(countByCategory)
     }
-  }, [countByCategory])
+  }, [dataProducts])
 
-  
-  
+
+
 
 
 
@@ -30,23 +31,26 @@ const ProductCategory = () => {
       <SideBar />
       <div className="homeContainer">
         <NavBar />
-        {
-          Object.entries(categoryProd).map(([key, value]) => {
-            return (
-              <div key={key} className="cards-container">
-                <CardCategory
-                  name={key}
-                  quantity={value}
-                  loading={true}
-                />
-              </div>
+        <div className='containerAllCards'>
 
-            )
-          })
+          {
+            Object.entries(categoryProd).map(([key, value,color]) => {
+              return (
+                <div key={key} className="card-category-container">
+                  <CardCategory
+                    name={key}
+                    quantity={value}
+                    loading={isLoadingProducts}
+                    color={color}                                        
+                    
 
+                  />
+                </div>
 
-        }
-
+              )
+            })
+          }
+        </div>
       </div>
     </div>
   )

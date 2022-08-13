@@ -24,9 +24,7 @@ let userApiController = {
         //Borramos los campos que no queremos mostrar
         .then(users => {
             users.map(element =>{
-                       delete element.dataValues.document                       
-                       delete element.dataValues.date_of_birth
-                       delete element.dataValues.adress                   
+                       delete element.dataValues.document                                       
                        delete element.dataValues.detail
                        delete element.dataValues.password
                        delete element.dataValues.rol_id

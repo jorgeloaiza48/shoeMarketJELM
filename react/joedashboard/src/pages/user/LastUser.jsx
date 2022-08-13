@@ -44,7 +44,7 @@ const LastUser = () => {
         <div className='lastUser'>
         <CardLastUser title="Ultimo usuario creado"
             loading={isLoadingUsers}
-            img={ImglasUser}
+            img={image}
             name={`Nombre : ${first_name} ${last_name} `}
             email={`Correo : ${email}`}
             birth={`Fecha de Nacimiento : ${date_of_birth}`}
