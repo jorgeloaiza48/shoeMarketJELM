@@ -13,13 +13,6 @@ const ProductCategory = () => {
   const [qcategoryProd, setqcategoryProd] = useState("")
 
  
- 
-
-
-
-
-
-
 
 
 return (

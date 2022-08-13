@@ -1,13 +1,12 @@
-<a href="detalle/<%= product.id %>">
-    <div class="produc"><img src="/img/products/<%= product.image %>" alt="bota">
-        <p>
-            <%= product.name %>
-        </p>
-        <p>
-            <%= product.price %>
-        </p>
-        <p><a href="/detalle/<%= product.id %>"
-                class="com-but-main"><button>COMPRAR</button></a></p>
+<!-- <a href="detalle/<%= product.id %>"> -->
+    <div class="produc">
+        <img src="/img/products/<%= product.image %>" alt="bota">
+        <p class="name"><%= product.name %></p>
+        <p class="price"><%= product.price %></p>
+        <a href="detalle/<%= product.id %>" class="com-but-main"><button>COMPRAR</button></a>
+        <!-- <a href="#" class="agregarCarrito" data-id="<%= product.id %>">Agregar Al Carrito</a> -->
+        <button class="agregarCarrito" data-id="<%= product.id %>">Agregar al carrito</button>
         <p><i class="fa-solid fa-star"></i></p>
     </div>
-</a>
+<!-- </a> -->
+<script src="/js/carrito.js"></script>

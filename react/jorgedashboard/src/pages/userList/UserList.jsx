@@ -3,7 +3,7 @@ import { DataGrid} from '@mui/x-data-grid';
 import {DeleteOutline} from '@mui/icons-material';
 //import { response } from "express";
 //import { render } from "@testing-library/react";
-//import useAllUsers from "../../Hooks/useAllUsers";
+import useAllUsers from "../../Hooks/useAllUsers";
 
 export default function UserList() {
 
@@ -184,25 +184,16 @@ export default function UserList() {
 //     }
 // ]
 
+ const { dataUsers, isLoadingUsers } = useAllUsers("http://localhost:4000/api/users")
+ const { users } = !!dataUsers && dataUsers;
+ console.log(users)
   
+
   
-  //let  usersapi = useAllUsers("http://localhost:4000/api/users") 
- 
-    let users = fetch('http://localhost:4000/api/users')
-   
-    
-  //let users = Object.entries(datausers)
-  //let users = JSON.parse(usersapi)
- 
-  //let  users = !!datausers && datausers;
- 
-  //users.map(usuario => {
-    //console.log(usuario)
-//.then(users => {
 return (
 <div className="userList"  ><DataGrid  rows={users} disableSelectionOnClick columns={columns} pageSize={8} rowsPerPageOptions={[5]} checkboxSelection
-/></div>  
+ /></div>  
 )//return
-   //}) //map
-//})
+  
+
 }

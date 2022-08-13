@@ -30,11 +30,6 @@ const Home = () => {
   const [rolUser, setRolUser] = useState("")
 
 
-
-  
-
-
-
   useEffect(() => {
 
     if (dataUsers) {

@@ -7,11 +7,7 @@ const fs = require('fs');
 let userApiController = {
 
     list: function(req,res){
-
-       
-        db.User.findAll()                                             
-
-
+                                                  
         db.User.findAll({
             include: [
                 { association: "roles" },
@@ -35,7 +31,7 @@ let userApiController = {
                        element.dataValues.detail = `/api/users/${element.dataValues.id}`
                })                       
              res.json ({
-             //count: users.length,
+             count: users.length,
              users:users
              //status: 200                                                       
            })                       
