@@ -12,10 +12,10 @@ const ProductCategory = () => {
 
   const [categoryProd, setCategoryProd] = useState("")
 
-<<<<<<< HEAD
- 
-=======
-
+// asdasjndjaskdnasjkdn
+// asdkaskjdnasdasdjas
+// kasdnasndjasdnasjdç
+// asjdajsdnjajndsa
   useEffect(() => {
 
     if (countByCategory) {
@@ -50,16 +50,11 @@ const ProductCategory = () => {
                   />
                 </div>
 
-<<<<<<< HEAD
-        }
->>>>>>> 1921f049ae7bfd89c176c9d53e8e44df95377aa9
-
-=======
               )
             })
           }
         </div>
->>>>>>> 6207672446f6507d2eba657653970e48fd23b3da
+
       </div>
     </div>
   )
