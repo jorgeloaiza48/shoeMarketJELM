@@ -5,7 +5,6 @@ import useAllUsers from "../../Hooks/useAllUsers";
 import SideBar from '../../components/sidebar/SideBar';
 import NavBar from '../../components/navBar/NavBar';
 import { DataGrid } from '@mui/x-data-grid';
-import { DeleteOutline } from '@mui/icons-material';
 
 
 
@@ -53,20 +52,7 @@ export default function UserList() {
     },
   ];
 
-  const users123 = [
-      {
-          "id": 3,
-          "first_name": "Joel nicolas",
-          "last_name": "Casa Marquez",
-          "email": "joeecasa@gmail.com",
-          "image": "photo-1659221808835.jpeg",
-          "status": "Activo",
-          "createdAt": "2022-07-12T13:39:50.000Z",
-          "updatedAt": "2022-07-31T12:57:52.000Z",
-          "detail": "/api/users/3"
-      }
 
-  ]
 
 
 

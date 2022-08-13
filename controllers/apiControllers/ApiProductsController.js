@@ -44,7 +44,8 @@ const ApiProductsController = {
                         description : element.description,
                         categorias : element.categorias,
                         detail : `/api/products/detail/${element.id}`,
-                        img: element.image
+                        img: element.image,
+                        category: element.categorias.name
                     }
                     return obj
                 });

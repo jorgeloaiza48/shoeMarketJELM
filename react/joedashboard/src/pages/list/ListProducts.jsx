@@ -1,163 +1,110 @@
-import React, { useEffect, useState } from 'react'
-import NavBar from '../../components/navBar/NavBar'
-import SideBar from '../../components/sidebar/SideBar'
-import useAllProducts from "../../Hooks/useAllProducts"
+import { useState } from "react";
+import { useEffect } from "react";
 import "./list.css"
+import useAllProducts from "../../Hooks/useAllProducts";
+import SideBar from '../../components/sidebar/SideBar';
+import NavBar from '../../components/navBar/NavBar';
+import { DataGrid } from '@mui/x-data-grid';
+import { Link } from "react-router-dom";
 
 
 
-const ListProducts = () => {
 
-  const { dataProducts } = useAllProducts("http://localhost:4000/api/products")
-  const { products, countByCategory, isLoadingProducts } = !!dataProducts && dataProducts;
+export default function UserList() {
+  const { dataProducts, isLoadingProducts } = useAllProducts("http://localhost:4000/api/products")
+  const { products, countByCategory } = !!dataProducts && dataProducts;
+  const [arrayProducts, setArrayProducts] = useState("")
+
+  const [ImglastProduct, setImglastProduct] = useState("")
   const urlImgProducto = "http://localhost:4000/img/products/"
+
+
+  
+
+
+  useEffect(() => {
+    if (dataProducts) {
+      setArrayProducts(products)
+    }
+
+  }, [products,dataProducts])
+
+
+
+
+
+
+  const columns = [
+    { field: 'id', headerName: 'ID', width: 90 },
+    { field: 'name', headerName: 'Nombre', width: 150 },
+    { field: 'category', headerName: 'Categoria', width: 150 },
+    {
+      field: '', headerName: 'Foto', width: 150, renderCell: (params) => {
+        return (
+          <div className="row-img">
+            <img className="productListImg" src={ urlImgProducto + params.row.img} alt="" />
+          </div>
+        )
+      }
+    },
+    {
+      field: 'detail', headerName: 'Detalle', width: 100, renderCell: (params) => {
+        return (
+          
+          <Link to={`/products/${params.id}`}>
+            <button className="userListDetail">Detalle</button>
+          </Link>
+           
+        )
+      }
+    },
+    {
+      field: 'Edit', headerName: 'Editar', width: 100, renderCell: () => {
+        return (
+          
+          <Link to="/products ">
+            <button className="userListEdit">Editar</button>
+          </Link>
+            
+        )
+      }
+    },
+    {
+      field: 'Delete', headerName: 'Borrar', width: 100, renderCell: () => {
+        return (
+          
+          <Link to="/ ">
+            <button className="userListDelete">Borrar</button>
+          </Link>
+            
+        
+        )
+      }
+    },
+  ];
+
+
+
+
 
 
 
   return (
-    <div className='home'>
+    <div className="home">
       <SideBar />
-      <div className='homeContainer'>
+      <div className="homeContainer">
         <NavBar />
-        <table className="table">
-          <thead>
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">First</th>
-              <th scope="col">Last</th>
-              <th scope="col">Handle</th>
-            </tr>
-          </thead>
-          <div className='table-div'>
-            <th>ID</th>
-            {
-              products ?
-                (
-                  products.map(product => {
-                    return (
-                      <tr className='list-product__tr' key={product.id}>
-                        {product.id}
-                      </tr>
-                    )
-                  })
-                ) :
-                (
-                  <div class="spinner-border text-danger loading" role="status">
-                    <span class="visually-hidden ">Loading...</span>
-                  </div>
-
-                )
-
-            }
-          </div>
-          <div>
-            <th>Nombre</th>
-            {
-              products ?
-                (
-                  products.map(product => {
-                    return (
-                      <tr className='list-product__tr' key={product.id}>
-                        {product.name}
-                      </tr>
-                    )
-                  })
-                ) :
-                (
-                  <div class="spinner-border text-danger loading" role="status">
-                    <span class="visually-hidden ">Loading...</span>
-                  </div>
-                )
-
-            }
-          </div>
-          <div>
-
-            <th>Categoria</th>
-            {
-              products ?
-                (
-                  products.map(product => {
-                    return (
-                      <tr className='list-product__tr' key={product.id}>
-                        {product.categorias.name}
-                      </tr>
-                    )
-                  })
-                ) :
-                (
-                  <div class="spinner-border text-danger loading" role="status">
-                    <span class="visually-hidden ">Loading...</span>
-                  </div>
-                )
-
-            }
-          </div>
-          <div>
-
-            <th>Foto</th>
-            {
-              products ?
-                (
-                  products.map(product => {
-                    return (
-                      <tr className='list-product__tr' key={product.id}>
-                        <img className='list-product__img' src={urlImgProducto + product.img} alt="" />
-                      </tr>
-                    )
-                  })
-                ) :
-                (
-                  <div class="spinner-border text-danger loading" role="status">
-                    <span class="visually-hidden ">Loading...</span>
-                  </div>
-                )
-
-            }
-          </div>
-          <div>
-
-            <th>Editar</th>
-            <tr className='list-product__tr' >
-              <button
-                className=''
-
-              >
-                Editar
-
-              </button>
-            </tr>
-          </div>
-          <div>
-
-            <th>Eliminar</th>
-            <tr className='list-product__tr' >
-              <button
-                className='btn btn-danger'
-
-              >
-                Eliminar
-
-              </button>
-            </tr>
-          </div>
-
-
-
-
-
-
-
-
-
-
-        </table>
-
-
-
+        <div className="list-container"  >
+          <DataGrid
+           rows={arrayProducts} disableSelectionOnClick
+           columns={columns} pageSize={10}
+           rowsPerPageOptions={[1]}
+           rowHeight={150}
+          />
+        </div>
       </div>
-    </div >
+    </div>
+
+
   )
 }
-
-export default ListProducts
