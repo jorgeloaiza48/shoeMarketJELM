@@ -12,7 +12,7 @@ const ProductCategory = () => {
 
   const [categoryProd, setCategoryProd] = useState("")
 
-
+// jasdjnaskjdasdjkasjkdsajkjasdg
   useEffect(() => {
 
     if (countByCategory) {
