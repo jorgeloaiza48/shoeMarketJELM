@@ -155,7 +155,7 @@ agregarCarrito.forEach(btnAgregarCarrito => {
                     `;
                     console.log(articulosCarrito.length)
                     console.log(row.innerHTML)
-               contenedorCarrito.append(row);
+               contenedorCarrito.appendChild(row);
           });
  
      }
