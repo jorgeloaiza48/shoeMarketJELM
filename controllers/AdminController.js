@@ -26,6 +26,7 @@ const controller = {
         } )
             .then(users => {               
                 return res.render('admin/listaUsuarios.ejs', { users, title: "Listado de usuarios" })
+                
             })
         
     },
