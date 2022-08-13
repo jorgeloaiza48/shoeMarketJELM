@@ -4,12 +4,11 @@ import { DeleteOutline } from '@mui/icons-material';
 //import { response } from "express";
 //import { render } from "@testing-library/react";
 import useAllUsers from "../../Hooks/useAllUsers";
-<<<<<<< HEAD
-=======
+
 import { useState } from "react";
 import { useEffect } from "react";
 
->>>>>>> 1921f049ae7bfd89c176c9d53e8e44df95377aa9
+
 
 export default function UserList() {
 
@@ -64,10 +63,10 @@ export default function UserList() {
     },
   ];
 
-<<<<<<< HEAD
- const { dataUsers, isLoadingUsers } = useAllUsers("http://localhost:4000/api/users")
- const { users } = !!dataUsers && dataUsers;
- console.log(users)
+
+//  const { dataUsers, isLoadingUsers } = useAllUsers("http://localhost:4000/api/users")
+//  const { users } = !!dataUsers && dataUsers;
+//  console.log(users)
   
 
   
@@ -77,7 +76,7 @@ return (
 )//return
   
 
-=======
+
   //   let users = [
   //     {
   //         "id": 3,
@@ -191,5 +190,5 @@ return (
   //return
   //}) //map
   //})
->>>>>>> 1921f049ae7bfd89c176c9d53e8e44df95377aa9
+
 }
