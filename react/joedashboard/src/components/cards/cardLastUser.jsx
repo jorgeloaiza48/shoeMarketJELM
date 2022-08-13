@@ -31,7 +31,11 @@ const CardLastUser = ({ title, img, name, link, loading, lastName, email, birth,
                   <Link className='cardUser-link cardUser' to={`/${link}`}>
                     <button className='cardUser-btn'>Ver detalle</button>
                   </Link>
-                ) : ("")}
+                ) : (
+                <Link className='cardUser-link cardUser' to={`/users`}>
+                <button className='cardUser-btn'>Listado</button>
+              </Link>
+              )}
 
 
 

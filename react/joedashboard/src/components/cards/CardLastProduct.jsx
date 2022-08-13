@@ -5,50 +5,56 @@ import { Link } from "react-router-dom"
 
 
 
-const CardLastUser = ({ title, img, name, link, loading,description,categoria,color }) => {
+const CardLastUser = ({ title, img, name, link, loading, description, categoria, color }) => {
   const loadingc = loading
   const styleCard = {
-    "borderBottom":`${color} 5px double`,
-    "borderLeft":`${color} 5px double`
+    "borderBottom": `${color} 5px double`,
+    "borderLeft": `${color} 5px double`
   }
 
 
   return (
     <>
-    <div className='cardUser-container' style={styleCard} >
-        <h2 className="cardUser-title" style={{"color":`${color}`}}>{title}</h2>
+      <div className='cardUser-container' style={styleCard} >
+        <h2 className="cardUser-title" style={{ "color": `${color}` }}>{title}</h2>
         {
-            loadingc === false ?
+          loadingc === false ?
             (
-                <>
+              <div className='container-father-card-product'>
 
-                <img className='cardUser-img' src={img} alt="img" />
-                <p className='cardUser-info'>{name}</p>
-                <p className='cardUser-info'>{categoria}</p>
-                <p className='cardUser-info'>{description}</p>
+                <div className='container-card-product-first'>
 
-               
-                { link ? (
+                  <img className='cardUser-img' src={img} alt="img" />
+                  <p className='cardUser-info'>{name}</p>
+                  <p className='cardUser-info'>{categoria}</p>
 
-                <Link className='cardUser-link cardUser' to={`/${link}`}>
+                </div>
+
+
+
+                {link ? (
+
+                  <Link className='cardUser-link cardUser' to={`/${link}`}>
                     <button className='cardProduct-btn'>Ver detalle</button>
-                </Link>
-                ) :("")}
-                 
+                  </Link>
+                ) : (<Link className='cardUser-link cardUser' to={`/Products`}>
+                  <button className='cardProduct-btn'>Listado</button>
+                </Link>)}
 
-              </>
+              </div>
+
 
             ) :
             (
-                <div className="spinner-border text-danger loading" role="status">
+              <div className="spinner-border text-danger loading" role="status">
                 <span className="visually-hidden ">Loading...</span>
               </div>
             )
 
-            
+
         }
-      
-        </div>
+
+      </div>
 
     </>
   )

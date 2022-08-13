@@ -1,12 +1,12 @@
 import React from 'react'
 import "./sideBar.css"
 import logo from "./LOGO.png"
-// import { MdDashboard } from "react-icons/md";
-// import { FaUsers } from "react-icons/fa";
-// import { FaProductHunt } from "react-icons/fa";
-// import { DiCssdeck } from "react-icons/di";
-// import { GiConverseShoe } from "react-icons/gi";
-// import { BiUserCheck } from "react-icons/bi";
+import { MdDashboard } from "react-icons/md";
+import { FaUsers } from "react-icons/fa";
+import { FaProductHunt } from "react-icons/fa";
+import { DiCssdeck } from "react-icons/di";
+import { GiConverseShoe } from "react-icons/gi";
+import { BiUserCheck } from "react-icons/bi";
 import { Link } from 'react-router-dom';
 
 
@@ -16,61 +16,65 @@ import { Link } from 'react-router-dom';
 const SideBar = () => {
   return (
     <div className='sideBar'>
-      <div className="top"><img className='logo' src={logo} alt="" /></div>
-      
+      <Link to="/">
+        <div className="top">
+          <img className='logo' src={logo} alt="" />
+        </div>
+      </Link>
+
       <div className="center">
         <ul>
-            <p className="title">Main</p>
-          <li>
-            {/* <MdDashboard className='sideBar-icon' /> */}
-            <Link className='sideBar-link' to="/">
-            <span>Dashboard</span>
-            </Link>
-          </li>
-          <p className="title">Usuarios</p>
-          <li>
-            {/* <FaUsers className='sideBar-icon' /> */}
-          <Link className='sideBar-link' to="/users">
-            <span>Usuarios registrados</span>
+          <p className="title">Main</p>
+          <Link className='sideBar-link' to="/">
+            <li>
+              <MdDashboard className='sideBar-icon' />
+              <span>Dashboard</span>
+            </li>
           </Link>
-            
-          </li>
-          
-          <li>
-            {/* <BiUserCheck className='sideBar-icon' /> */}
-            <Link className='sideBar-link' to="/users/lastUser">
+          <p className="title">Usuarios</p>
+          <Link className='sideBar-link' to="/users">
+            <li>
+              <FaUsers className='sideBar-icon' />
+              <span>Usuarios registrados</span>
 
-            <span>Ultimo Usuario Creado</span>
-            </Link>
-          </li>
+            </li>
+          </Link>
+
+          <Link className='sideBar-link' to="/users/lastUser">
+            <li>
+              <BiUserCheck className='sideBar-icon' />
+
+              <span>Ultimo Usuario Creado</span>
+            </li>
+          </Link>
           <p className="title">Productos</p>
-          <li>
-            
-            {/* <FaProductHunt className='sideBar-icon' /> */}
-            <Link className='sideBar-link' to="/products">
+          <Link className='sideBar-link' to="/products">
+            <li>
 
-            <span>Productos Activos</span>
-            </Link>
-          </li>
-          <li>
-            {/* <DiCssdeck className='sideBar-icon' /> */}
-            <Link className='sideBar-link' to="/products/category">
-            <span>Categorias</span>
-            </Link>
-          </li>
-          <li>
-            {/* <GiConverseShoe className='sideBar-icon' /> */}
-            <Link className='sideBar-link' to="/products/lastProduct">
-            <span>Ultimo Producto Creado</span>
-            </Link>
-          </li>
-          
-          
-          
+              <FaProductHunt className='sideBar-icon' />
+
+              <span>Productos Activos</span>
+            </li>
+          </Link>
+          <Link className='sideBar-link' to="/products/category">
+            <li>
+              <DiCssdeck className='sideBar-icon' />
+              <span>Categorias</span>
+            </li>
+          </Link>
+          <Link className='sideBar-link' to="/products/lastProduct">
+            <li>
+              <GiConverseShoe className='sideBar-icon' />
+              <span>Ultimo Producto Creado</span>
+            </li>
+          </Link>
+
+
+
 
         </ul>
       </div>
-      
+
     </div>
   )
 }

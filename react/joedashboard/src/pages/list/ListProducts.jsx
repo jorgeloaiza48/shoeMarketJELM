@@ -57,30 +57,8 @@ export default function UserList() {
            
         )
       }
-    },
-    {
-      field: 'Edit', headerName: 'Editar', width: 100, renderCell: () => {
-        return (
-          
-          <Link to="/products ">
-            <button className="userListEdit">Editar</button>
-          </Link>
-            
-        )
-      }
-    },
-    {
-      field: 'Delete', headerName: 'Borrar', width: 100, renderCell: () => {
-        return (
-          
-          <Link to="/ ">
-            <button className="userListDelete">Borrar</button>
-          </Link>
-            
-        
-        )
-      }
-    },
+    }
+   
   ];
 
 

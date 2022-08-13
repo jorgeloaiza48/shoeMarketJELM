@@ -29,13 +29,22 @@
 
 .list-container{
     height: 600px;
-     width: 85%;
+     width: 55%;
      margin-left: auto;
      margin-right: auto;
      margin-top: 25px;
      background-color: #ffffff;
      border-radius: 10px;
      
+}
+.list-container-user{
+    height: 600px;
+     width: 85%;
+     margin-left: auto;
+     margin-right: auto;
+     margin-top: 25px;
+     background-color: #ffffff;
+     border-radius: 10px;
 }
 
 .userListImg{
