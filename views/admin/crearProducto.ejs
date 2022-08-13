@@ -178,6 +178,13 @@
 
             <%- include("../partials/footer") %>
                 <script src="/js/crearProductos.js"></script>
+                <script>
+                    ClassicEditor
+                        .create( document.querySelector( '#description' ) )
+                        .catch( error => {
+                            console.error( error );
+                        } );
+                </script>
     </body>
 
     </html>

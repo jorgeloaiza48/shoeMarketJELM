@@ -27,14 +27,15 @@ const ApiProductsController = {
                         [element.name] : element.productos.length
                     })
                 });
-                
-               let objcountByCategory = Object.assign({},
-                countByCategory[0],
-                countByCategory[1],
-                countByCategory[2],
-                countByCategory[3],
-                countByCategory[4],
-                countByCategory[5])
+
+
+                let objectCategory= {}
+
+                countByCategory.forEach(cate => {
+                    Object.assign(objectCategory,cate)
+                    
+                });
+               
 
                 let productResponse = products.map(element => {
                     let obj = {
@@ -52,7 +53,7 @@ const ApiProductsController = {
             
                 let response = {
                     countProduts: products.length,
-                    countByCategory : objcountByCategory,
+                    countByCategory : objectCategory,
                     products: productResponse,
                 }
                 res.json(response)

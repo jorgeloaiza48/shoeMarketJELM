@@ -7,15 +7,13 @@ const fs = require('fs');
 let userApiController = {
 
     list: function(req,res){
-<<<<<<< HEAD
-                                                  
-=======
+
 
        
                                                    
 
 
->>>>>>> 1921f049ae7bfd89c176c9d53e8e44df95377aa9
+
         db.User.findAll({
             include: [
                 { association: "roles" },
@@ -28,9 +26,7 @@ let userApiController = {
         //Borramos los campos que no queremos mostrar
         .then(users => {
             users.map(element =>{
-                       delete element.dataValues.document                       
-                       delete element.dataValues.date_of_birth
-                       delete element.dataValues.adress                   
+                       delete element.dataValues.document                                       
                        delete element.dataValues.detail
                        delete element.dataValues.password
                        delete element.dataValues.rol_id

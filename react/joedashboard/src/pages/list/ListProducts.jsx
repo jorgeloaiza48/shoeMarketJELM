@@ -14,21 +14,21 @@ const ListProducts = () => {
 
 
 
-  
-  
-
-
-
-
-
-
   return (
     <div className='home'>
       <SideBar />
       <div className='homeContainer'>
         <NavBar />
-        <table className="table d-flex">
-        <div className='table-div'>
+        <table className="table">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">First</th>
+              <th scope="col">Last</th>
+              <th scope="col">Handle</th>
+            </tr>
+          </thead>
+          <div className='table-div'>
             <th>ID</th>
             {
               products ?
@@ -43,9 +43,9 @@ const ListProducts = () => {
                 ) :
                 (
                   <div class="spinner-border text-danger loading" role="status">
-                  <span class="visually-hidden ">Loading...</span>
-                </div>
-              
+                    <span class="visually-hidden ">Loading...</span>
+                  </div>
+
                 )
 
             }
@@ -65,8 +65,8 @@ const ListProducts = () => {
                 ) :
                 (
                   <div class="spinner-border text-danger loading" role="status">
-                  <span class="visually-hidden ">Loading...</span>
-                </div>
+                    <span class="visually-hidden ">Loading...</span>
+                  </div>
                 )
 
             }
@@ -87,8 +87,8 @@ const ListProducts = () => {
                 ) :
                 (
                   <div class="spinner-border text-danger loading" role="status">
-                  <span class="visually-hidden ">Loading...</span>
-                </div>
+                    <span class="visually-hidden ">Loading...</span>
+                  </div>
                 )
 
             }
@@ -109,8 +109,8 @@ const ListProducts = () => {
                 ) :
                 (
                   <div class="spinner-border text-danger loading" role="status">
-                  <span class="visually-hidden ">Loading...</span>
-                </div>
+                    <span class="visually-hidden ">Loading...</span>
+                  </div>
                 )
 
             }
@@ -119,26 +119,26 @@ const ListProducts = () => {
 
             <th>Editar</th>
             <tr className='list-product__tr' >
-            <button
-            className=''
-            
-            >
-              Editar
+              <button
+                className=''
 
-            </button>
+              >
+                Editar
+
+              </button>
             </tr>
           </div>
           <div>
 
             <th>Eliminar</th>
             <tr className='list-product__tr' >
-            <button
-            className='btn btn-danger'
-            
-            >
-              Eliminar
+              <button
+                className='btn btn-danger'
 
-            </button>
+              >
+                Eliminar
+
+              </button>
             </tr>
           </div>
 
