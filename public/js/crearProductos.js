@@ -224,10 +224,6 @@ window.addEventListener("load", function (event) {
             liErrorNombreProd2.classList.add("show")
             liErrorNombreProd2.classList.add("errorText")
             nombre.classList.add("error")
-            iconoNombreX.classList.add("fa-regular")
-            iconoNombreX.classList.add("fa-circle-xmark")
-            iconoNombreOK.classList.remove("fa-regular")
-            iconoNombreOK.classList.remove("fa-circle-check")
         }
         if (description.value.length < 20) {
             3
@@ -236,10 +232,6 @@ window.addEventListener("load", function (event) {
             liErrorDescripcionProd2.classList.add("show")
             liErrorDescripcionProd2.classList.add("errorText")
             description.classList.add("error")
-            iconoDescripcionX.classList.add("fa-regular")
-            iconoDescripcionX.classList.add("fa-circle-xmark")
-            iconoDescripcionOK.classList.remove("fa-regular")
-            iconoDescripcionOK.classList.remove("fa-circle-check")
         }
         if (precio.value === "") {
             event.preventDefault()
@@ -247,10 +239,6 @@ window.addEventListener("load", function (event) {
             liErrorPrecioProd1.classList.add("show")
             liErrorPrecioProd1.classList.add("errorText")
             precio.classList.add("error")
-            iconoPrecioX.classList.add("fa-regular")
-            iconoPrecioX.classList.add("fa-circle-xmark")
-            iconoPrecioOK.classList.remove("fa-regular")
-            iconoPrecioOK.classList.remove("fa-circle-check")
         }
         if (color.value.length < 3) {
             event.preventDefault()
@@ -258,10 +246,6 @@ window.addEventListener("load", function (event) {
             liErrorColorProd1.classList.add("show")
             liErrorColorProd1.classList.add("errorText")
             color.classList.add("error")
-            iconoColorX.classList.add("fa-regular")
-            iconoColorX.classList.add("fa-circle-xmark")
-            iconoColorOK.classList.remove("fa-regular")
-            iconoColorOK.classList.remove("fa-circle-check")
 
         }
         if (img.value === "") {

@@ -150,11 +150,11 @@
           liErrorDocumento1.classList.add("show")
           liErrorDocumento2.classList.remove("show")
           liErrorDocumento2.classList.add("none")
-          documento_check.classList.remove("fa-circle-check")
-          documento_check.classList.remove("fa-regular") 
+          // documento_check.classList.remove("fa-circle-check")
+          // documento_check.classList.remove("fa-regular") 
           documento_check.classList.add("show")
-          documento_check.classList.add("fa-circle-xmark")
-          documento_check.classList.add("fa-regular")
+          // documento_check.classList.add("fa-circle-xmark")
+          // documento_check.classList.add("fa-regular")
           sub_button.style.visibility = "visible"
           doc = 0
          
@@ -167,8 +167,8 @@
             liErrorDocumento1.classList.remove("show")
             liErrorDocumento1.classList.add("none")  
             documento_check.classList.add("show")
-            documento_check.classList.add("fa-circle-xmark")
-            documento_check.classList.add("fa-regular")                             
+            // documento_check.classList.add("fa-circle-xmark")
+            // documento_check.classList.add("fa-regular")                             
             documento.classList.remove("valid")                                      
             documento.classList.add("error")                 
             sub_button.style.visibility = "visible"
@@ -182,10 +182,10 @@
             documento.classList.remove("error")                                      
             documento.classList.add("valid")
             documento_check.classList.add("show")
-            documento_check.classList.remove("fa-circle-xmark")
-            documento_check.classList.remove("fa-regular")   
-            documento_check.classList.add("fa-circle-check")
-            documento_check.classList.add("fa-regular") 
+            // documento_check.classList.remove("fa-circle-xmark")
+            // documento_check.classList.remove("fa-regular")   
+            // documento_check.classList.add("fa-circle-check")
+            // documento_check.classList.add("fa-regular") 
             doc = 1                                   
           
           if(doc == 1 && nom == 1 && apell == 1 && correo == 1 && fecha_naci == 1 && direccion == 1 && contrasena == 1 && foto_perfil == 1){
@@ -206,11 +206,11 @@
                 liErrorNombre2.classList.add("none")     
                 liErrorNombre3.classList.remove("show")
                 liErrorNombre3.classList.add("none")    
-                nombre_check.classList.remove("fa-circle-check")
-                nombre_check.classList.remove("fa-regular") 
+                // nombre_check.classList.remove("fa-circle-check")
+                // nombre_check.classList.remove("fa-regular") 
                 nombre_check.classList.add("show")
-                nombre_check.classList.add("fa-circle-xmark")
-                nombre_check.classList.add("fa-regular")                      
+                // nombre_check.classList.add("fa-circle-xmark")
+                // nombre_check.classList.add("fa-regular")                      
                 nom = 0                
                 sub_button.style.visibility = "visible"
             }
@@ -222,11 +222,11 @@
                 liErrorNombre2.classList.add("none")
                 liErrorNombre3.classList.remove("none")
                 liErrorNombre3.classList.add("show")  
-                nombre_check.classList.remove("fa-circle-check")
-                nombre_check.classList.remove("fa-regular") 
+                // nombre_check.classList.remove("fa-circle-check")
+                // nombre_check.classList.remove("fa-regular") 
                 nombre_check.classList.add("show")
-                nombre_check.classList.add("fa-circle-xmark")
-                nombre_check.classList.add("fa-regular") 
+                // nombre_check.classList.add("fa-circle-xmark")
+                // nombre_check.classList.add("fa-regular") 
                 sub_button.style.visibility = "visible"
                 nombre.classList.remove("valid")                                      
                 nombre.classList.add("error")            
@@ -243,11 +243,11 @@
               liErrorNombre3.classList.add("show")  
               nombre.classList.remove("valid")                                      
               nombre.classList.add("error") 
-              nombre_check.classList.remove("fa-circle-check")
-              nombre_check.classList.remove("fa-regular") 
+              // nombre_check.classList.remove("fa-circle-check")
+              // nombre_check.classList.remove("fa-regular") 
               nombre_check.classList.add("show")
-              nombre_check.classList.add("fa-circle-xmark")
-              nombre_check.classList.add("fa-regular") 
+              // nombre_check.classList.add("fa-circle-xmark")
+              // nombre_check.classList.add("fa-regular") 
               nom = 0
             }
             else if(nombre.value.length < 2){
@@ -261,11 +261,11 @@
               nombre.classList.remove("valid")                                      
               nombre.classList.add("error") 
               nombre.classList.remove("show")
-              nombre_check.classList.remove("fa-circle-check")
-              nombre_check.classList.remove("fa-regular") 
+              // nombre_check.classList.remove("fa-circle-check")
+              // nombre_check.classList.remove("fa-regular") 
               nombre_check.classList.add("show")
-              nombre_check.classList.add("fa-circle-xmark")
-              nombre_check.classList.add("fa-regular") 
+              // nombre_check.classList.add("fa-circle-xmark")
+              // nombre_check.classList.add("fa-regular") 
               nom = 0
               sub_button.style.visibility = "visible"
             }
@@ -280,10 +280,10 @@
               nombre.classList.remove("error")                                      
               nombre.classList.add("valid")
               nombre_check.classList.add("show")
-              nombre_check.classList.remove("fa-circle-xmark")
-              nombre_check.classList.remove("fa-regular")   
-              nombre_check.classList.add("fa-circle-check")
-              nombre_check.classList.add("fa-regular") 
+              // nombre_check.classList.remove("fa-circle-xmark")
+              // nombre_check.classList.remove("fa-regular")   
+              // nombre_check.classList.add("fa-circle-check")
+              // nombre_check.classList.add("fa-regular") 
               nom = 1                              
               
               if(doc == 1 && nom == 1 && apell == 1 && correo == 1 && fecha_naci == 1 && direccion == 1 && contrasena == 1 && foto_perfil == 1){
@@ -307,11 +307,11 @@
                 sub_button.style.visibility = "visible"
                 apellido.classList.remove("valid")                                      
                 apellido.classList.add("error")  
-                apellido_check.classList.remove("fa-circle-check")
-                apellido_check.classList.remove("fa-regular") 
+                // apellido_check.classList.remove("fa-circle-check")
+                // apellido_check.classList.remove("fa-regular") 
                 apellido_check.classList.add("show")
-                apellido_check.classList.add("fa-circle-xmark")
-                apellido_check.classList.add("fa-regular")                       
+                // apellido_check.classList.add("fa-circle-xmark")
+                // apellido_check.classList.add("fa-regular")                       
                 apell = 0
             }
             else if(apellido.value.length < 2 && /\d/.test(apellido.value) || apellido.value.length < 2 && /[°¡¿`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/.test(apellido.value)){
@@ -325,11 +325,11 @@
                 sub_button.style.visibility = "visible"
                 apellido.classList.remove("valid")                                      
                 apellido.classList.add("error")  
-                apellido_check.classList.remove("fa-circle-check")
-                apellido_check.classList.remove("fa-regular") 
+                // apellido_check.classList.remove("fa-circle-check")
+                // apellido_check.classList.remove("fa-regular") 
                 apellido_check.classList.add("show")
-                apellido_check.classList.add("fa-circle-xmark")
-                apellido_check.classList.add("fa-regular")  
+                // apellido_check.classList.add("fa-circle-xmark")
+                // apellido_check.classList.add("fa-regular")  
                 apell = 0
                 
             }
@@ -344,11 +344,11 @@
               liErrorApellido3.classList.add("show")  
               apellido.classList.remove("valid")                                      
               apellido.classList.add("error") 
-              apellido_check.classList.remove("fa-circle-check")
-              apellido_check.classList.remove("fa-regular") 
+              // apellido_check.classList.remove("fa-circle-check")
+              // apellido_check.classList.remove("fa-regular") 
               apellido_check.classList.add("show")
-              apellido_check.classList.add("fa-circle-xmark")
-              apellido_check.classList.add("fa-regular")  
+              // apellido_check.classList.add("fa-circle-xmark")
+              // apellido_check.classList.add("fa-regular")  
               apell = 0
             }
             else if(apellido.value.length < 2){
@@ -362,11 +362,11 @@
               liErrorApellido3.classList.add("none") 
               apellido.classList.remove("valid")                                      
               apellido.classList.add("error") 
-              apellido_check.classList.remove("fa-circle-check")
-              apellido_check.classList.remove("fa-regular") 
+              // apellido_check.classList.remove("fa-circle-check")
+              // apellido_check.classList.remove("fa-regular") 
               apellido_check.classList.add("show")
-              apellido_check.classList.add("fa-circle-xmark")
-              apellido_check.classList.add("fa-regular")    
+              // apellido_check.classList.add("fa-circle-xmark")
+              // apellido_check.classList.add("fa-regular")    
               apell = 0
             }
             else{
@@ -380,10 +380,10 @@
               apellido.classList.remove("error")                                      
               apellido.classList.add("valid")
               apellido_check.classList.add("show")
-              apellido_check.classList.remove("fa-circle-xmark")
-              apellido_check.classList.remove("fa-regular")   
-              apellido_check.classList.add("fa-circle-check")
-              apellido_check.classList.add("fa-regular") 
+              // apellido_check.classList.remove("fa-circle-xmark")
+              // apellido_check.classList.remove("fa-regular")   
+              // apellido_check.classList.add("fa-circle-check")
+              // apellido_check.classList.add("fa-regular") 
               apell = 1                              
               
               if(doc == 1 && nom == 1 && apell == 1 && correo == 1 && fecha_naci == 1 && direccion == 1 && contrasena == 1 && foto_perfil == 1){
@@ -404,11 +404,11 @@
               sub_button.style.visibility = "visible"
               email.classList.remove("valid")                                      
               email.classList.add("error") 
-              email_check.classList.remove("fa-circle-check")
-              email_check.classList.remove("fa-regular") 
+              // email_check.classList.remove("fa-circle-check")
+              // email_check.classList.remove("fa-regular") 
               email_check.classList.add("show")
-              email_check.classList.add("fa-circle-xmark")
-              email_check.classList.add("fa-regular")   
+              // email_check.classList.add("fa-circle-xmark")
+              // email_check.classList.add("fa-regular")   
               correo = 0
             }
             else if(email.value != "" && email.disabled === true){
@@ -423,11 +423,11 @@
               liErrorEmail2.classList.add("show")   
               email.classList.remove("valid")                                      
               email.classList.add("error")  
-              email_check.classList.remove("fa-circle-check")
-              email_check.classList.remove("fa-regular") 
+              // email_check.classList.remove("fa-circle-check")
+              // email_check.classList.remove("fa-regular") 
               email_check.classList.add("show")
-              email_check.classList.add("fa-circle-xmark")
-              email_check.classList.add("fa-regular")           
+              // email_check.classList.add("fa-circle-xmark")
+              // email_check.classList.add("fa-regular")           
               correo = 0
             }
             else{
@@ -440,10 +440,10 @@
                 email.classList.add("valid") 
                 email_check.classList.remove("none")
                 email_check.classList.add("show")
-                email_check.classList.remove("fa-circle-xmark")
-                email_check.classList.remove("fa-regular")  
-                email_check.classList.add("fa-circle-check")
-                email_check.classList.add("fa-regular") 
+                // email_check.classList.remove("fa-circle-xmark")
+                // email_check.classList.remove("fa-regular")  
+                // email_check.classList.add("fa-circle-check")
+                // email_check.classList.add("fa-regular") 
                correo = 1               
                               
                 if(doc == 1 && nom == 1 && apell == 1 && correo == 1 && fecha_naci == 1 && direccion == 1 && contrasena == 1 && foto_perfil == 1){
@@ -472,10 +472,10 @@
               fecha.classList.add("error") 
               fecha_check.classList.remove("none")
               fecha_check.classList.add("show")                                                      
-              fecha_check.classList.remove("fa-circle-check")
-              fecha_check.classList.remove("fa-regular")               
-              fecha_check.classList.add("fa-circle-xmark")
-              fecha_check.classList.add("fa-regular")    
+              // fecha_check.classList.remove("fa-circle-check")
+              // fecha_check.classList.remove("fa-regular")               
+              // fecha_check.classList.add("fa-circle-xmark")
+              // fecha_check.classList.add("fa-regular")    
               fecha_naci = 0
             }
            
@@ -490,10 +490,10 @@
               fecha.classList.add("error") 
               fecha_check.classList.remove("none")
               fecha_check.classList.add("show")                                                      
-              fecha_check.classList.remove("fa-circle-check")
-              fecha_check.classList.remove("fa-regular")               
-              fecha_check.classList.add("fa-circle-xmark")
-              fecha_check.classList.add("fa-regular")    
+              // fecha_check.classList.remove("fa-circle-check")
+              // fecha_check.classList.remove("fa-regular")               
+              // fecha_check.classList.add("fa-circle-xmark")
+              // fecha_check.classList.add("fa-regular")    
               fecha_naci = 0
             //   toastr.info("La edad no puede ser inferior a 18. Verifique la fecha ingresada.");
             }
@@ -509,10 +509,10 @@
               email.classList.add("valid") 
               fecha_check.classList.remove("none")
               fecha_check.classList.add("show")
-              fecha_check.classList.remove("fa-circle-xmark")
-              fecha_check.classList.remove("fa-regular")  
-              fecha_check.classList.add("fa-circle-check")
-              fecha_check.classList.add("fa-regular") 
+              // fecha_check.classList.remove("fa-circle-xmark")
+              // fecha_check.classList.remove("fa-regular")  
+              // fecha_check.classList.add("fa-circle-check")
+              // fecha_check.classList.add("fa-regular") 
               fecha_naci = 1              
                         
             if(doc == 1 && nom == 1 && apell == 1 && correo == 1 && fecha_naci == 1 && direccion == 1 && contrasena == 1 && foto_perfil == 1){
@@ -540,10 +540,10 @@
               fecha.classList.add("fecha") 
               fecha_check.classList.remove("none")
               fecha_check.classList.add("show")                                                      
-              fecha_check.classList.remove("fa-circle-check")
-              fecha_check.classList.remove("fa-regular")               
-              fecha_check.classList.add("fa-circle-xmark")
-              fecha_check.classList.add("fa-regular") 
+              // fecha_check.classList.remove("fa-circle-check")
+              // fecha_check.classList.remove("fa-regular")               
+              // fecha_check.classList.add("fa-circle-xmark")
+              // fecha_check.classList.add("fa-regular") 
               fecha_naci = 0
             }
             
@@ -557,10 +557,10 @@
               fecha.classList.add("valid") 
               fecha_check.classList.remove("none")
               fecha_check.classList.add("show")
-              fecha_check.classList.remove("fa-circle-xmark")
-              fecha_check.classList.remove("fa-regular")  
-              fecha_check.classList.add("fa-circle-check")
-              fecha_check.classList.add("fa-regular") 
+              // fecha_check.classList.remove("fa-circle-xmark")
+              // fecha_check.classList.remove("fa-regular")  
+              // fecha_check.classList.add("fa-circle-check")
+              // fecha_check.classList.add("fa-regular") 
               fecha_naci = 1              
                         
             if(doc == 1 && nom == 1 && apell == 1 && correo == 1 && fecha_naci == 1 && direccion == 1 && contrasena == 1 && foto_perfil == 1){
@@ -581,11 +581,11 @@
               liErrorDomicilio2.classList.add("none")              
               domicilio.classList.remove("valid")                                      
               domicilio.classList.add("error") 
-              domicilio_check.classList.remove("fa-circle-check")
-              domicilio_check.classList.remove("fa-regular") 
+              // domicilio_check.classList.remove("fa-circle-check")
+              // domicilio_check.classList.remove("fa-regular") 
               domicilio_check.classList.add("show")
-              domicilio_check.classList.add("fa-circle-xmark")
-              domicilio_check.classList.add("fa-regular")   
+              // domicilio_check.classList.add("fa-circle-xmark")
+              // domicilio_check.classList.add("fa-regular")   
               direccion = 0
             }
             else if(domicilio.value.length < 10 ){
@@ -597,11 +597,11 @@
               liErrorDomicilio2.classList.add("show")
               domicilio.classList.remove("valid")                                      
               domicilio.classList.add("error")
-              domicilio_check.classList.remove("fa-circle-check")
-              domicilio_check.classList.remove("fa-regular") 
+              // domicilio_check.classList.remove("fa-circle-check")
+              // domicilio_check.classList.remove("fa-regular") 
               domicilio_check.classList.add("show")
-              domicilio_check.classList.add("fa-circle-xmark")
-              domicilio_check.classList.add("fa-regular")   
+              // domicilio_check.classList.add("fa-circle-xmark")
+              // domicilio_check.classList.add("fa-regular")   
               direccion = 0
             }
             else{
@@ -612,9 +612,9 @@
               domicilio.classList.add("valid")
               domicilio_check.classList.remove("none")
               domicilio_check.classList.add("show")
-              domicilio_check.classList.add("fa-circle-check")
-              domicilio_check.classList.add("fa-regular")               
-              domicilio_check.classList.remove("fa-circle-xmark")
+              // domicilio_check.classList.add("fa-circle-check")
+              // domicilio_check.classList.add("fa-regular")               
+              // domicilio_check.classList.remove("fa-circle-xmark")
               direccion = 1              
               
               if(doc == 1 && nom == 1 && apell == 1 && correo == 1 && fecha_naci == 1 && direccion == 1 && contrasena == 1 && foto_perfil == 1){
@@ -635,11 +635,11 @@
               sub_button.style.visibility = "visible"
               pass.classList.remove("valid")                                      
               pass.classList.add("error")
-              password_check.classList.remove("fa-circle-check")
-              password_check.classList.remove("fa-regular") 
+              // password_check.classList.remove("fa-circle-check")
+              // password_check.classList.remove("fa-regular") 
               password_check.classList.add("show")
-              password_check.classList.add("fa-circle-xmark")
-              password_check.classList.add("fa-regular") 
+              // password_check.classList.add("fa-circle-xmark")
+              // password_check.classList.add("fa-regular") 
               contrasena = 0 
             }
             else if(/(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9])(?=.{8,})/.test(pass.value)){
@@ -652,10 +652,10 @@
                 pass.classList.add("valid")
                 password_check.classList.remove("none")
                 password_check.classList.add("show")
-                password_check.classList.remove("fa-circle-xmark")
-                password_check.classList.remove("fa-regular")               
-                password_check.classList.add("fa-circle-check")
-                password_check.classList.add("fa-regular")
+                // password_check.classList.remove("fa-circle-xmark")
+                // password_check.classList.remove("fa-regular")               
+                // password_check.classList.add("fa-circle-check")
+                // password_check.classList.add("fa-regular")
                 contrasena = 1
                   if(doc == 1 && nom == 1 && apell == 1 && correo == 1 && fecha_naci == 1 && direccion == 1 && contrasena == 1 && foto_perfil == 1){
                   sub_button.style.visibility = "visible"
@@ -674,10 +674,10 @@
               pass.classList.add("error")
               password_check.classList.remove("none")
               password_check.classList.add("show")
-              password_check.classList.remove("fa-circle-check")
-              password_check.classList.remove("fa-regular")               
-              password_check.classList.add("fa-circle-xmark")
-              password_check.classList.add("fa-regular")               
+              // password_check.classList.remove("fa-circle-check")
+              // password_check.classList.remove("fa-regular")               
+              // password_check.classList.add("fa-circle-xmark")
+              // password_check.classList.add("fa-regular")               
               contrasena = 0 
               }
                     })
@@ -692,10 +692,10 @@
               file.classList.add("error")
               file_check.classList.remove("none")
               file_check.classList.add("show")
-              file_check.classList.remove("fa-circle-check")
-              file_check.classList.remove("fa-regular")               
-              file_check.classList.add("fa-circle-xmark")
-              file_check.classList.add("fa-regular")      
+              // file_check.classList.remove("fa-circle-check")
+              // file_check.classList.remove("fa-regular")               
+              // file_check.classList.add("fa-circle-xmark")
+              // file_check.classList.add("fa-regular")      
               foto_perfil = 0   
             }
             else{
@@ -706,10 +706,10 @@
               file.classList.add("valid")
               file_check.classList.remove("none")
               file_check.classList.add("show")
-              file_check.classList.remove("fa-regular")               
-              file_check.classList.remove("fa-circle-xmark")
-              file_check.classList.add("fa-circle-check")              
-              file_check.classList.add("fa-regular")  
+              // file_check.classList.remove("fa-regular")               
+              // file_check.classList.remove("fa-circle-xmark")
+              // file_check.classList.add("fa-circle-check")              
+              // file_check.classList.add("fa-regular")  
               foto_perfil = 1                  
               if(doc == 1 && nom == 1 && apell == 1 && correo == 1 && fecha_naci == 1 && direccion == 1 && contrasena == 1 && foto_perfil == 1){
                 sub_button.style.visibility = "visible"
@@ -738,11 +738,11 @@
               liErrorDocumento1.classList.add("show")
               liErrorDocumento2.classList.remove("show")
               liErrorDocumento2.classList.add("none")
-              documento_check.classList.remove("fa-circle-check")
-              documento_check.classList.remove("fa-regular") 
-              documento_check.classList.add("show")
-              documento_check.classList.add("fa-circle-xmark")
-              documento_check.classList.add("fa-regular")  
+              // documento_check.classList.remove("fa-circle-check")
+              // documento_check.classList.remove("fa-regular") 
+              // // documento_check.classList.add("show")
+              // documento_check.classList.add("fa-circle-xmark")
+              // documento_check.classList.add("fa-regular")  
               alerta = 1                                    
             }
             else{
@@ -754,11 +754,11 @@
                 liErrorDocumento2.classList.add("show")
                 liErrorDocumento1.classList.remove("show")
                 liErrorDocumento1.classList.add("none")  
-                documento_check.classList.add("show")
-                documento_check.classList.add("fa-circle-xmark")
-                documento_check.classList.add("fa-regular")                             
-                documento.classList.remove("valid")                                      
-                documento.classList.add("error")                               
+                // documento_check.classList.add("show")
+                // documento_check.classList.add("fa-circle-xmark")
+                // documento_check.classList.add("fa-regular")                             
+                // // documento.classList.remove("valid")                                      
+                // documento.classList.add("error")                               
                 alerta = 1
             }
             else{
@@ -772,11 +772,11 @@
                 liErrorNombre2.classList.add("none")
                 liErrorNombre3.classList.remove("none")
                 liErrorNombre3.classList.add("show")  
-                nombre_check.classList.remove("fa-circle-check")
-                nombre_check.classList.remove("fa-regular") 
-                nombre_check.classList.add("show")
-                nombre_check.classList.add("fa-circle-xmark")
-                nombre_check.classList.add("fa-regular")                
+                // nombre_check.classList.remove("fa-circle-check")
+                // nombre_check.classList.remove("fa-regular") 
+                // // nombre_check.classList.add("show")
+                // nombre_check.classList.add("fa-circle-xmark")
+                // nombre_check.classList.add("fa-regular")                
                 nombre.classList.remove("valid")                                      
                 nombre.classList.add("error")                           
                 alerta = 1
@@ -794,11 +794,11 @@
               liErrorNombre3.classList.add("show")  
               nombre.classList.remove("valid")                                      
               nombre.classList.add("error") 
-              nombre_check.classList.remove("fa-circle-check")
-              nombre_check.classList.remove("fa-regular") 
-              nombre_check.classList.add("show")
-              nombre_check.classList.add("fa-circle-xmark")
-              nombre_check.classList.add("fa-regular")              
+              // nombre_check.classList.remove("fa-circle-check")
+              // nombre_check.classList.remove("fa-regular") 
+              // // nombre_check.classList.add("show")
+              // nombre_check.classList.add("fa-circle-xmark")
+              // nombre_check.classList.add("fa-regular")              
               alerta = 1
             }
             else{
@@ -815,11 +815,11 @@
               nombre.classList.remove("valid")                                      
               nombre.classList.add("error") 
               nombre.classList.remove("show")
-              nombre_check.classList.remove("fa-circle-check")
-              nombre_check.classList.remove("fa-regular") 
-              nombre_check.classList.add("show")
-              nombre_check.classList.add("fa-circle-xmark")
-              nombre_check.classList.add("fa-regular")               
+              // nombre_check.classList.remove("fa-circle-check")
+              // nombre_check.classList.remove("fa-regular") 
+              // // nombre_check.classList.add("show")
+              // nombre_check.classList.add("fa-circle-xmark")
+              // nombre_check.classList.add("fa-regular")               
               alerta = 1
             }
             else{
@@ -835,12 +835,12 @@
                 liErrorApellido3.classList.add("none")                         
                 apellido.classList.remove("valid")                                      
                 apellido.classList.add("error")  
-                apellido_check.classList.remove("fa-circle-check")
-                apellido_check.classList.remove("fa-regular") 
-                apellido_check.classList.add("show")
-                apellido_check.classList.add("fa-circle-xmark")
-                apellido_check.classList.add("fa-regular")                                       
-                alerta = 1
+                // // apellido_check.classList.remove("fa-circle-check")
+                // apellido_check.classList.remove("fa-regular") 
+                // // apellido_check.classList.add("show")
+                // apellido_check.classList.add("fa-circle-xmark")
+                // apellido_check.classList.add("fa-regular")                                       
+                // alerta = 1
             }
             else{
               alerta = 0
@@ -855,11 +855,11 @@
                 liErrorApellido3.classList.add("show")                 
                 apellido.classList.remove("valid")                                      
                 apellido.classList.add("error")  
-                apellido_check.classList.remove("fa-circle-check")
-                apellido_check.classList.remove("fa-regular") 
-                apellido_check.classList.add("show")
-                apellido_check.classList.add("fa-circle-xmark")
-                apellido_check.classList.add("fa-regular")                                 
+                // apellido_check.classList.remove("fa-circle-check")
+                // apellido_check.classList.remove("fa-regular") 
+                // // apellido_check.classList.add("show")
+                // apellido_check.classList.add("fa-circle-xmark")
+                // apellido_check.classList.add("fa-regular")                                 
                 alerta = 1
             }
             else{
@@ -875,11 +875,11 @@
               liErrorApellido3.classList.add("show")  
               apellido.classList.remove("valid")                                      
               apellido.classList.add("error") 
-              apellido_check.classList.remove("fa-circle-check")
-              apellido_check.classList.remove("fa-regular") 
-              apellido_check.classList.add("show")
-              apellido_check.classList.add("fa-circle-xmark")
-              apellido_check.classList.add("fa-regular")               
+              // apellido_check.classList.remove("fa-circle-check")
+              // apellido_check.classList.remove("fa-regular") 
+              // // apellido_check.classList.add("show")
+              // apellido_check.classList.add("fa-circle-xmark")
+              // apellido_check.classList.add("fa-regular")               
               alerta = 1
             }
             else{
@@ -895,11 +895,11 @@
               liErrorApellido3.classList.add("none") 
               apellido.classList.remove("valid")                                      
               apellido.classList.add("error") 
-              apellido_check.classList.remove("fa-circle-check")
-              apellido_check.classList.remove("fa-regular") 
-              apellido_check.classList.add("show")
-              apellido_check.classList.add("fa-circle-xmark")
-              apellido_check.classList.add("fa-regular")                  
+              // apellido_check.classList.remove("fa-circle-check")
+              // apellido_check.classList.remove("fa-regular") 
+              // // apellido_check.classList.add("show")
+              // apellido_check.classList.add("fa-circle-xmark")
+              // apellido_check.classList.add("fa-regular")                  
               alert=1              
             }        
             else{
@@ -913,11 +913,11 @@
               liErrorEmail2.classList.add("none")             
               email.classList.remove("valid")                                      
               email.classList.add("error") 
-              email_check.classList.remove("fa-circle-check")
-              email_check.classList.remove("fa-regular") 
-              email_check.classList.add("show")
-              email_check.classList.add("fa-circle-xmark")
-              email_check.classList.add("fa-regular")                
+              // email_check.classList.remove("fa-circle-check")
+              // email_check.classList.remove("fa-regular") 
+              // // email_check.classList.add("show")
+              // email_check.classList.add("fa-circle-xmark")
+              // email_check.classList.add("fa-regular")                
               alerta=1
             }  
             else{
@@ -931,11 +931,11 @@
               liErrorEmail2.classList.add("show")   
               email.classList.remove("valid")                                      
               email.classList.add("error")  
-              email_check.classList.remove("fa-circle-check")
-              email_check.classList.remove("fa-regular") 
-              email_check.classList.add("show")
-              email_check.classList.add("fa-circle-xmark")
-              email_check.classList.add("fa-regular")                        
+              // // email_check.classList.remove("fa-circle-check")
+              // email_check.classList.remove("fa-regular") 
+              // // email_check.classList.add("show")
+              // email_check.classList.add("fa-circle-xmark")
+              // email_check.classList.add("fa-regular")                        
               alerta=1
             }
             else{
@@ -949,12 +949,12 @@
               liErrorFecha2.classList.add("none")
               fecha.classList.remove("valid")                                      
               fecha.classList.add("error") 
-              fecha_check.classList.remove("none")
-              fecha_check.classList.add("show")                                                      
-              fecha_check.classList.remove("fa-circle-check")
-              fecha_check.classList.remove("fa-regular")               
-              fecha_check.classList.add("fa-circle-xmark")
-              fecha_check.classList.add("fa-regular")                  
+              // fecha_check.classList.remove("none")
+              // fecha_check.classList.add("show")                                                      
+              // fecha_check.classList.remove("fa-circle-check")
+              // fecha_check.classList.remove("fa-regular")               
+              // fecha_check.classList.add("fa-circle-xmark")
+              // fecha_check.classList.add("fa-regular")                  
               alerta=1
             }
             else{
@@ -968,12 +968,12 @@
             liErrorFecha2.classList.add("none")
             fecha.classList.remove("valid")                                      
             fecha.classList.add("error") 
-            fecha_check.classList.remove("none")
-            fecha_check.classList.add("show")                                                      
-            fecha_check.classList.remove("fa-circle-check")
-            fecha_check.classList.remove("fa-regular")               
-            fecha_check.classList.add("fa-circle-xmark")
-            fecha_check.classList.add("fa-regular")                 
+            // fecha_check.classList.remove("none")
+            // fecha_check.classList.add("show")                                                      
+            // // fecha_check.classList.remove("fa-circle-check")
+            // fecha_check.classList.remove("fa-regular")               
+            // fecha_check.classList.add("fa-circle-xmark")
+            // fecha_check.classList.add("fa-regular")                 
             alerta=1
             }
             else{
@@ -987,11 +987,11 @@
               liErrorDomicilio2.classList.add("none")              
               domicilio.classList.remove("valid")                                      
               domicilio.classList.add("error") 
-              domicilio_check.classList.remove("fa-circle-check")
-              domicilio_check.classList.remove("fa-regular") 
-              domicilio_check.classList.add("show")
-              domicilio_check.classList.add("fa-circle-xmark")
-              domicilio_check.classList.add("fa-regular")   
+              // domicilio_check.classList.remove("fa-circle-check")
+              // domicilio_check.classList.remove("fa-regular") 
+              // // domicilio_check.classList.add("show")
+              // domicilio_check.classList.add("fa-circle-xmark")
+              // domicilio_check.classList.add("fa-regular")   
              alerta=1 
             }
             else{
@@ -1005,12 +1005,12 @@
               liErrorDomicilio2.classList.add("show")
               domicilio.classList.remove("valid")                                      
               domicilio.classList.add("error")
-              domicilio_check.classList.remove("fa-circle-check")
-              domicilio_check.classList.remove("fa-regular") 
-              domicilio_check.classList.add("show")
-              domicilio_check.classList.add("fa-circle-xmark")
-              domicilio_check.classList.add("fa-regular")                
-              alerta=1
+              // domicilio_check.classList.remove("fa-circle-check")
+              // domicilio_check.classList.remove("fa-regular") 
+              // // domicilio_check.classList.add("show")
+              // domicilio_check.classList.add("fa-circle-xmark")
+              // domicilio_check.classList.add("fa-regular")                
+              // alerta=1
             }
             else{
               alerta = 0
@@ -1023,11 +1023,11 @@
               liErrorPassword2.classList.add("none")              
               pass.classList.remove("valid")                                      
               pass.classList.add("error")
-              password_check.classList.remove("fa-circle-check")
-              password_check.classList.remove("fa-regular") 
-              password_check.classList.add("show")
-              password_check.classList.add("fa-circle-xmark")
-              password_check.classList.add("fa-regular")               
+              // password_check.classList.remove("fa-circle-check")
+              // password_check.classList.remove("fa-regular") 
+              // // password_check.classList.add("show")
+              // password_check.classList.add("fa-circle-xmark")
+              // password_check.classList.add("fa-regular")               
               alerta=1
             }
             else{
@@ -1042,12 +1042,12 @@
               sub_button.style.visibility = "visible"
               pass.classList.remove("valid")                                      
               pass.classList.add("error")
-              password_check.classList.remove("none")
-              password_check.classList.add("show")
-              password_check.classList.remove("fa-circle-check")
-              password_check.classList.remove("fa-regular")               
-              password_check.classList.add("fa-circle-xmark")
-              password_check.classList.add("fa-regular")            
+              // password_check.classList.remove("none")
+              // password_check.classList.add("show")
+              // password_check.classList.remove("fa-circle-check")
+              // password_check.classList.remove("fa-regular")               
+              // password_check.classList.add("fa-circle-xmark")
+              // password_check.classList.add("fa-regular")            
               alerta=1
             }
             else{
@@ -1060,12 +1060,12 @@
               liErrorFile1.classList.add("show")                          
               file.classList.remove("valid")                                      
               file.classList.add("error")
-              file_check.classList.remove("none")
-              file_check.classList.add("show")
-              file_check.classList.remove("fa-circle-check")
-              file_check.classList.remove("fa-regular")               
-              file_check.classList.add("fa-circle-xmark")
-              file_check.classList.add("fa-regular")                   
+              // file_check.classList.remove("none")
+              // file_check.classList.add("show")
+              // file_check.classList.remove("fa-circle-check")
+              // file_check.classList.remove("fa-regular")               
+              // file_check.classList.add("fa-circle-xmark")
+              // file_check.classList.add("fa-regular")                   
               alerta=1
             }
             else{

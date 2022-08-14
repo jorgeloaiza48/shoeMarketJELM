@@ -4,7 +4,7 @@
         <%- include("../partials/header2") %>
             <main class="main-register">
 
-                <form action="/admin/productos/editar/<%=producto.id%>?_method=PUT" method="post" class="form-create"
+                <form action="/admin/productos/editar/<%=producto.id%>?_method=PUT" method="post" class="form-create label-relative"
                     enctype="multipart/form-data">
                     <div>
                         <h1 class="crear-title">
@@ -14,21 +14,20 @@
                             alt="<%= producto.image %>">
                     </div>
                     <div class="form-create__nombre">
-                        <label class="label-relative" for="nombre">Nombre y color *
-                            <i class="iconoNombre-edit-prod-OK" id="iconoEditNombreOK"></i>
-                            <i class="iconoNombre-edit-prod-X" id="iconoEditNombreX"></i>
+                        <label class="" for="nombre">Nombre y color *
                         </label>
-                        <input type="text" name="name" id="nombre-edit-prod" placeholder="Nombre del nuevo producto"
+                        <input class="input-edit-prod" type="text" name="name" id="nombre-edit-prod" placeholder="Nombre del nuevo producto"
                             required value="<%= producto.name %>">
                     </div>
                     <ul>
                         <li class="none" id="liErrorNombreEditProd1">Debe introducir un nombre para el producto</li>
                         <li class="none" id="liErrorNombreEditProd2">Debe tener al menos 5 caracteres</li>
                     </ul>
+                    <div class="div-title-editar-prod ">
+
+                        <label class=" title-editar-prod" for="description">Descripcion del producto*
+                    </div>
                     <div class="form-create__descr">
-                        <label class="label-relative" for="description">Descripcion del producto*
-                            <i class="iconoDescripcion-edit-prod-OK" id="iconoEditDescripcionOK"></i>
-                            <i class="iconoDescripcion-edit-prod-X" id="iconoEditDescripcionX"></i>
                         </label>
                         <textarea name="description" id="descriptionEditProd" cols="30"
                             rows="10"> <%= producto.description %> </textarea>
@@ -42,7 +41,7 @@
                     </ul>
 
                     <div class="form-create__img">
-                        <label class="label-relative"  for="photo">Seleccione la foto
+                        <label class=""  for="photo">Seleccione la foto
                             <div class="file-select"><input type="file" name="img" accept=".jpg,.jpeg" id="img-edit-prod"></div>
                         </label>
                         <ul>
@@ -72,22 +71,20 @@
                     </div>
 
                     <div class="form-create__price">
-                        <label class="label-relative" for="price">Precio *
-                            <i class="iconoPrecio-edit-prod-OK" id="iconoEditPrecioOK"></i>
-                            <i class="iconoPrecio-edit-prod-X" id="iconoEditPrecioX"></i>
+                        <label  for="price">Precio *
                         </label><br>
-                        <input type="number" name="price" id="priceEditProd" value="<%= producto.price %>">
+                        
+                            <input  class="input-edit-prod" type="number" name="price" id="priceEditProd" value="<%= producto.price %>">
+
                     </div>
                     <ul>
                         <li class="none" id="liErrorPrecioEditProd1">Debe introducir un precio para el producto</li>
 
                     </ul>
                     <div class="form-create__price">
-                        <label class="label-relative" for="color">Color *
-                            <i class="iconoColor-edit-prod-OK" id="iconoEditColorOK"></i>
-                            <i class="iconoColor-edit-prod-X" id="iconoEditColorX"></i>
+                        <label class="" for="color">Color *
                         </label><br>
-                        <input type="text" id="color-edit-prod" name="color" value="<%= producto.color %>">
+                        <input class="input-edit-prod" type="text" id="color-edit-prod" name="color" value="<%= producto.color %>">
                     </div>
                     <ul>
                         <li class="none" id="liErrorEditColorProd1">Debe introducir un color para el producto</li>
