@@ -36,25 +36,25 @@
 
                     <article class="descr-prod">
                         <section class="name-pr">
-                            <h3 class="name-pr__title">
+                            <h3 class="name-pr__title p-detail">
                                 <%=producto.name %>
                             </h3>
-                            <p class="name-pr__price">$<%= producto.price %>
+                            <p class="name-pr__price  p-detail">$<%= producto.price %>
                             </p>
-                            <p class="name-pr__cuota">12 cuotas sin interes <i class="fa-solid fa-credit-card"></i>
+                            <p class="name-pr__cuota  p-detail">12 cuotas sin interes <i class="fa-solid fa-credit-card"></i>
                             </p>
-                            <p class="name-pr__off">20% OFF abonando con transferencia</p>
+                            <p class="name-pr__off  p-detail">20% OFF abonando con transferencia</p>
                         </section>
                         <% if (producto.color) { %>
                             <section class="art-size">
                                 <h3 class="art-size__title">Selecciona el talle</h4>
                                     <div class="size">
-                                        <button class="size__35">35</button>
-                                        <button class="size__36">36</button>
-                                        <button class="size__37">37</button>
-                                        <button class="size__38">38</button>
-                                        <button class="size__39">39</button>
-                                        <button class="size__39">40</button>
+                                        <button class="btn-size">35</button>
+                                        <button class="btn-size">36</button>
+                                        <button class="btn-size">37</button>
+                                        <button class="btn-size">38</button>
+                                        <button class="btn-size">39</button>
+                                        <button class="btn-size">40</button>
                                     </div>
                             </section>
                             <% } %>
