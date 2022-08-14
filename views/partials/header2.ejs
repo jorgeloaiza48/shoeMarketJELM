@@ -29,16 +29,19 @@
                 <% if (locals.isAdmin) { %>
                     <a href="/admin"><i class="fa-solid fa-lock"></i></a>
                     <% } %>
-                    <% if (locals.isLogged) { %>
-                        <a class="initials" href="/user/profile"><span ><%= locals.userLogged.first_name[0].toUpperCase() + locals.userLogged.last_name[0].toUpperCase() %> </span></a>
-                        
-                
-                    <% } else { %>
-                        <a href="/user/registro"><i class="fa-solid fa-user-plus"></i></a>
-                        <a href="/user/login"><i class="fa-solid fa-user"></i></a>
-                        <% } %>
+                        <% if (locals.isLogged) { %>
+                            <a class="initials" href="/user/profile"><span>
+                                    <%= locals.userLogged.first_name[0].toUpperCase() +
+                                        locals.userLogged.last_name[0].toUpperCase() %>
+                                </span></a>
 
-                 <a href="#"> <i class="fa-solid fa-bars"></i></a>
+
+                            <% } else { %>
+                                <a href="/user/registro"><i class="fa-solid fa-user-plus"></i></a>
+                                <a href="/user/login"><i class="fa-solid fa-user"></i></a>
+                                <% } %>
+
+                                    <a href="#"> <i class="fa-solid fa-bars"></i></a>
 
             </div>
 
@@ -59,15 +62,23 @@
                         </li>
                         <li><a href="/productos">Productos</a><i class="fa-brands fa-product-hunt"></i></li>
 
-                        <li ><a href="/carrito" class="boton-carrito" >Carrito</a><i class="fa-solid fa-cart-shopping"></i></li>
+                        <li class="boton-carrito"><a href="/carrito" >Carrito
+                            
+                        </a>
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </li>
                         <% if (locals.isAdmin) { %>
                             <li class="lista__profile"><a href="/admin">Admin</a> <i class="fa-solid fa-lock"></i>
                                 <ul class="lista__profile-down__admin">
                                     <li class="lista__profile-li" v><a href="/admin">Panel del control</a></li>
-                                    <li class="lista__profile-li"><a href="/admin/lista/usuarios">Usuarios activos</a></li>
-                                    <li class="lista__profile-li"><a href="/admin/lista/usuariosinactivos">Usuarios inactivos</a></li>
-                                    <li class="lista__profile-li"><a href="/admin/lista/productos">Productos activos</a></li>
-                                    <li class="lista__profile-li"><a href="/admin/lista/productosinactivos">Productos inactivos</a></li>
+                                    <li class="lista__profile-li"><a href="/admin/lista/usuarios">Usuarios activos</a>
+                                    </li>
+                                    <li class="lista__profile-li"><a href="/admin/lista/usuariosinactivos">Usuarios
+                                            inactivos</a></li>
+                                    <li class="lista__profile-li"><a href="/admin/lista/productos">Productos activos</a>
+                                    </li>
+                                    <li class="lista__profile-li"><a href="/admin/lista/productosinactivos">Productos
+                                            inactivos</a></li>
                                     <li class="lista__profile-li"><a href="/admin/productos/crear">Carga de
                                             productos</a></li>
                                     <li class="lista__profile-li"><a href="/user/profile">Mi perfil</a></li>
@@ -75,14 +86,17 @@
                             </li>
                             <% } %>
                                 <% if (locals.isLogged) { %>
-                                    <li class="lista__profile">Hola <span class="initials"><%= locals.userLogged.first_name[0].toUpperCase() + locals.userLogged.last_name[0].toUpperCase() %> </span>▼
-                                            <ul class="lista__profile-down">
-                                                <li class="lista__profile-li" v><a href="/user/profile">Mi Perfil <img
-                                                            src="/img/user/<%=locals.userLogged.image%>" alt=""></a>
-                                                </li>
-                                                <li class="lista__profile-li"><a href="/user/logout">logout</a></li>
+                                    <li class="lista__profile">Hola <span class="initials">
+                                            <%= locals.userLogged.first_name[0].toUpperCase() +
+                                                locals.userLogged.last_name[0].toUpperCase() %>
+                                        </span>▼
+                                        <ul class="lista__profile-down">
+                                            <li class="lista__profile-li" v><a href="/user/profile">Mi Perfil <img
+                                                        src="/img/user/<%=locals.userLogged.image%>" alt=""></a>
+                                            </li>
+                                            <li class="lista__profile-li"><a href="/user/logout">logout</a></li>
 
-                                            </ul>
+                                        </ul>
                                     </li>
                                     <% } else { %>
                                         <li><a href="/user/registro">Registrarse</a><i

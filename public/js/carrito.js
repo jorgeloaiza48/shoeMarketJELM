@@ -6,7 +6,25 @@ window.addEventListener("load", function (event) {
      let agregarCarrito = document.querySelectorAll(".agregarCarrito")
      let  carrito = document.querySelector("#carrito"); //contenedor que está en el carrito
      let articulosCarrito = [];
+     let btnCarritoHeader = document.querySelector(".boton-carrito")
+     let containerCarrito = document.querySelector(".containerCarrito")
 
+    btnCarritoHeader.addEventListener("mouseover",function(){
+     carrito.classList.add("show")
+     carrito.classList.remove("none")
+      })
+    carrito.addEventListener("mouseleave",function(){
+     carrito.classList.remove("show")
+     carrito.classList.add("none")
+      })
+       
+// carrito.addEventListener("moouseout",function(){
+//      carrito.classList.remove("show")
+//      carrito.classList.add("none")
+//      carrito.classList.add("red")
+//     } 
+//     ) 
+    
 
      agregarCarrito.forEach(btnAgregarCarrito => {
           btnAgregarCarrito.addEventListener("click",cargarEventListeners)
@@ -117,6 +135,14 @@ window.addEventListener("load", function (event) {
                contenedorCarrito.removeChild(contenedorCarrito.firstChild);
           }
      }
+
+
+
+
+   
+
+
+
 
   })
 
