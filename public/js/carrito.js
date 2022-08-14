@@ -37,6 +37,7 @@ window.addEventListener("load", function (event) {
                carrito.addEventListener("click", eliminarProducto);
                // Al Vaciar el carrito
                vaciarCarritoBtn.addEventListener("click", vaciarCarrito);
+              
      
              }
 
@@ -78,8 +79,8 @@ window.addEventListener("load", function (event) {
                articulosCarrito = [...articulosCarrito, infoCurso];
           }
 
-
           carritoHTML();
+         
      }
 
      //      // Elimina el curso del carrito en el DOM
