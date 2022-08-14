@@ -2,100 +2,107 @@
 
 
     <body>
-        
+
         <%- include("../partials/header2") %>
             <main class="main-register">
 
-                <form action="/admin/usuario/editar/<%= usuario.id%>?_method=PUT" method="post" enctype="multipart/form-data" class="formEditUser" >
+                <form action="/admin/usuario/editar/<%= usuario.id%>?_method=PUT" method="post"
+                    enctype="multipart/form-data" class="formEditUser">
                     <div class="form-edit-user-img">
                         <img src="/img/user/<%= usuario.image %>" alt="foto-usuario">
                     </div>
 
-                    <div class="form-edit-user-data">
-                        <p><strong>Documento de identificación :</strong>
-                            <%= usuario.document%>
-                        </p>
 
-                        <div class="form__nombre">
-                            <label for="nombre">Nombres:</label>
-                            <input type="text" name="Nombre" id="nombre" placeholder=" Introduzca su Nombre y apellido"
-                                value="<%= usuario.first_name%>" class="input">
-                        </div>
 
-                        <div class="form__nombre">
-                            <label for="nombre">Apellido:</label>
-                            <input type="text" name="apellido" id="nombre" placeholder=" Introduzca su Nombre y apellido"
-                                value="<%= usuario.last_name%>" class="input">
-                        </div>
-
-                        <div class="form__nombre"><label for="email">Correo electrónico:</label>
-                            <input type="email" name="email" id="email" placeholder="Introduzca su Correo electronico"
-                                value="<%= usuario.email %>" class="input">
-                        </div>
-
-                        <div class="form__nombre"><label for="fecha">Fecha de nacimiento:</label>
-                            <input type="date" name="fecha" id="fecha" value="<%= usuario.date_of_birth %>" class="input">
-                        </div>
-
-                        <div class="form__nombre"><label for="domicilio">Domicilio de envio:</label><br>
-                            <input type="text" name="domicilio" id="domicilio" value="<%= usuario.adress %>" class="input">
-                        </div>
-
-                        <% if (locals.isAdmin) { %>
-                            <div class="form__nombre"><label for="rol">Estado</label><br>
-                          <select name="estado" class="form-edit_select">
-                          <% locals.estados.forEach(estado => { %>
-                            <option <%= estado == usuario.status ? "selected" : "" %> value="<%= estado %>"> <%= estado %></option>
-                         <% }) %>
-                            
-                          </select>
-                        
-                         
-                        <% } %>
-                       
-
-                        <% if (locals.isAdmin) { %>
-                            <div class="form__nombre"><label for="rol">Rol</label><br>
-                          <select name="rol" class="form-edit_select">
-                          <% locals.roles.forEach(rol => { %>
-                            <option <%= rol.name == usuario.roles.name ? "selected" : "" %> value="<%= rol.id %>"> <%= rol.name %></option>
-                         <% }) %>
-                            
-                          </select>
-                        
-                         
-                        <% } %>
-
-                        <div class="form__nombre">
-                            <label for="photo">Nueva foto de perfil:
-                                <input type="file" name="photo" accept=".jpg,.jpeg" id="file" class="input">
-                                <hr>
-                            </label><br>
-                            <div id="preview"></div>
-                               <script>
-                                document.getElementById("file").onchange = function (e) {
-                                    let reader = new FileReader();
-                                    reader.onload = function () {
-                                        let preview = document.getElementById('preview'),
-                                            image = document.createElement("img");
-                                        image.src = reader.result;
-                                        preview.innerHTML = '';
-                                        preview.append(image);
-                                    };
-                                    reader.readAsDataURL(e.target.files[0]);
-                                }    
-                                </script>
-
-                            
-                        </div>
+                    <div class="form__nombre">
+                        <label for="nombre">Nombres:</label>
+                        <input class="input-edit-prod" type="text" name="Nombre" id="nombre"
+                            placeholder=" Introduzca su Nombre y apellido" value="<%= usuario.first_name%>"
+                            class="input">
                     </div>
 
-                    <div class="contenedor_button_user_edit">
-                    
-                        <button class="form__button" type="submit">Enviar</button>
-
-
+                    <div class="form__nombre">
+                        <label for="nombre">Apellido:</label>
+                        <input class="input-edit-prod" type="text" name="apellido" id="nombre"
+                            placeholder=" Introduzca su Nombre y apellido" value="<%= usuario.last_name%>"
+                            class="input">
                     </div>
+
+                    <div class="form__nombre"><label for="email">Correo electrónico:</label>
+                        <input class="input-edit-prod" type="email" name="email" id="email"
+                            placeholder="Introduzca su Correo electronico" value="<%= usuario.email %>" class="input">
+                    </div>
+
+                    <div class="form__nombre"><label for="fecha">Fecha de nacimiento:</label>
+                        <input class="input-edit-prod" type="date" name="fecha" id="fecha"
+                            value="<%= usuario.date_of_birth %>" class="input">
+                    </div>
+
+                    <div class="form__nombre"><label for="domicilio">Domicilio de envio:</label><br>
+                        <input class="input-edit-prod" type="text" name="domicilio" id="domicilio"
+                            value="<%= usuario.adress %>" class="input">
+                    </div>
+
+                    <% if (locals.isAdmin) { %>
+                        <div class="form__nombre form-status-user"><label for="rol">Estado</label><br>
+                            <select name="estado" class="form-edit_select">
+                                <% locals.estados.forEach(estado=> { %>
+                                    <option <%=estado==usuario.status ? "selected" : "" %> value="<%= estado %>"> <%=
+                                                estado %>
+                                    </option>
+                                    <% }) %>
+
+                            </select>
+                        </div>
+                        <% } %>
+
+
+                            <% if (locals.isAdmin) { %>
+                                <div class="form__nombre form-status-user"><label for="rol">Rol</label><br>
+                                    <select name="rol" class="form-edit_select">
+                                        <% locals.roles.forEach(rol=> { %>
+                                            <option <%=rol.name==usuario.roles.name ? "selected" : "" %> value="<%=
+                                                    rol.id %>"> <%= rol.name %>
+                                            </option>
+                                            <% }) %>
+
+                                    </select>
+                                </div>
+
+
+                                <% } %>
+
+                                    <div class="form__nombre form-status-user">
+                                        <label for="photo">Nueva foto de perfil:
+                                            <input class="input-edit-prod" type="file" name="photo" accept=".jpg,.jpeg"
+                                                id="file" class="input">
+                                            <hr>
+                                        </label><br>
+                                        <div id="preview"></div>
+                                        <script>
+                                            document.getElementById("file").onchange = function (e) {
+                                                let reader = new FileReader();
+                                                reader.onload = function () {
+                                                    let preview = document.getElementById('preview'),
+                                                        image = document.createElement("img");
+                                                    image.src = reader.result;
+                                                    preview.innerHTML = '';
+                                                    preview.append(image);
+                                                };
+                                                reader.readAsDataURL(e.target.files[0]);
+                                            }    
+                                        </script>
+
+
+                                    </div>
+
+
+                                    <div class="contenedor_button_user_edit">
+
+                                        <button class="form__button" type="submit">Enviar</button>
+
+
+                                    </div>
 
                 </form>
 

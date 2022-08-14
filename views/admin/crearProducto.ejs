@@ -12,11 +12,9 @@
 
                     <div class="form-create__nombre">
                         <label class="label-relative" for="nombre">Nombre y color *
-                            <i class="iconoNombre-create-prod-OK" id="iconoNombreOK"></i>
-                            <i class="iconoNombre-create-prod-X" id="iconoNombreX"></i>
                         </label>
 
-                        <input type="text" name="nombre" id="nombre-create-prod" placeholder="Nombre del nuevo producto"
+                        <input class="input-edit-prod" type="text" name="nombre" id="nombre-create-prod" placeholder="Nombre del nuevo producto"
                             value="<%= locals.old && old.nombre ? old.nombre : ""%>">
 
                         <% if (locals.errors && errors.nombre) {%>
@@ -31,10 +29,11 @@
 
                     </ul>
                     <div class="form-create__descr">
-                        <label  class="label-relative label-create-prod-descr" for="description">Descripcion del producto*
-                            <i class="iconoDescripcion-create-prod-OK" id="iconoDescripcionOK"></i>
-                            <i class="iconoDescripcion-create-prod-X" id="iconoDescripcionX"></i>
-                        </label>
+                        <div class="div-title-editar-prod ">
+
+                            <label class=" title-editar-prod" for="description">Descripcion del producto*
+                        </div>
+                        
                         <textarea id="description" name="description" cols="1"
                             rows="1"><%= locals.old && old.description ? old.description : "" %></textarea>
 
@@ -61,7 +60,7 @@
 
                         </div>
 
-                        <input class="input-create-prod-img" type="file" id="img-create-prod" name="img" accept=".jpg,.jpeg,.png" id="file">
+                        <input class="input-create-prod-img input-edit-prod" type="file" id="img-create-prod" name="img" accept=".jpg,.jpeg,.png" id="file">
 
                     </div>
                     <ul>
@@ -96,12 +95,10 @@
                             </script>
 
 
-                            <div class="form-create__price">
-                                <label class="label-relative" for="price">Precio *
-                                    <i class="iconoPrecio-create-prod-OK" id="iconoPrecioOK"></i>
-                                    <i class="iconoPrecio-create-prod-X" id="iconoPrecioX"></i>
+                            <div class="form-create__price price-create">
+                                <label class="label-relative price-create" for="price">Precio *
                                 </label><br>
-                                <input type="number" name="price" id="price" placeholder=" Introduzca el precio"
+                                <input class="input-edit-prod" type="number" name="price" id="price" placeholder=" Introduzca el precio"
                                     value="<%= locals.old && old.price ? old.price: ""%>">
 
                                 <% if (locals.errors && errors.price) {%>
@@ -145,10 +142,8 @@
                             </div>
                             <div class="form-create__nombre">
                                 <label class="label-relative" for="color">Color del producto *
-                                    <i class="iconoColor-create-prod-OK" id="iconoColorOK"></i>
-                                    <i class="iconoColor-create-prod-X" id="iconoColorX"></i>
                                 </label>
-                                <input type="text" name="color" id="color-create-prod"
+                                <input class="input-edit-prod" type="text" name="color" id="color-create-prod"
                                     placeholder="Nombre del nuevo producto"
                                     value="<%= locals.old && old.color ? old.color : ""%>">
                                 <% if (locals.errors && errors.color) {%>
@@ -167,7 +162,7 @@
 
 
                             <div class="contenedor_button">
-                                <button class="form__button" type="reset">Borrar</button>
+                                <button class="btn-delete" type="reset">Borrar</button>
                                 <button class="form__button" type="submit">Enviar</button>
 
                             </div>

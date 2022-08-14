@@ -49,57 +49,63 @@
               <div class="main-home" id="main-home" >
 
 
-                <h3>DESTACADOS</h3>
-                <section class="productos">
-                    <% productos.forEach(product=> { %>
-                        <% if (product.status === "Enabled") { %>
-                            <%- include("./components/productHome",{product:product}) %>
-                       <% } %>
-                        <% }) %>
-                </section>
+                    <h3>DESTACADOS</h3>
+                    <section class="productos">
+                        <% productos.forEach(product=> { %>
+                            <% if (product.status==="Enabled" ) { %>
+                                <%- include("./components/productHome",{product:product}) %>
+                                    <% } %>
+                                        <% }) %>
+                    </section>
 
 
-                <section class="section3">
-                    <video autoplay loop muted>
-                        <source
-                            src="https://player.vimeo.com/progressive_redirect/playback/686324588/rendition/720p?loc=external&signature=d6b9e6986b56478f7ab61ca9479464a10d79f4f600bf950c804fe828697f1cce"
-                            playsinline type="video/mp4" />
-                        No se puede reproducir el video
-                    </video>
-                </section>
+                    <section class="section3">
+                        <video autoplay loop muted>
+                            <source
+                                src="https://player.vimeo.com/progressive_redirect/playback/686324588/rendition/720p?loc=external&signature=d6b9e6986b56478f7ab61ca9479464a10d79f4f600bf950c804fe828697f1cce"
+                                playsinline type="video/mp4" />
+                            No se puede reproducir el video
+                        </video>
+                    </section>
 
-                <h3>PROMOCIONES</h3>
-                <section class="productos">
-                    <% productos.forEach(product=> { %>
-                        <% if (product.status === "Enabled") { %>
-                            <%- include("./components/productHome",{product:product}) %>
-                            <% } %>
-                        <% }) %>
-                </section>
-                <section class="section3">
-                    <video autoplay loop muted>
-                        <source
-                            src="https://player.vimeo.com/progressive_redirect/playback/686324588/rendition/720p?loc=external&signature=d6b9e6986b56478f7ab61ca9479464a10d79f4f600bf950c804fe828697f1cce"
-                            playsinline type="video/mp4" />
-                        No se puede reproducir el video
-                    </video>
-                </section>
+                    <h3>PROMOCIONES</h3>
+                    <section class="productos">
+                        <% productos.forEach(product=> { %>
+                            <% if (product.status==="Enabled" ) { %>
+                                <%- include("./components/productHome",{product:product}) %>
+                                    <% } %>
+                                        <% }) %>
+                    </section>
+                    <section class="section3">
+                        <video autoplay loop muted>
+                            <source
+                                src="https://player.vimeo.com/progressive_redirect/playback/686324588/rendition/720p?loc=external&signature=d6b9e6986b56478f7ab61ca9479464a10d79f4f600bf950c804fe828697f1cce"
+                                playsinline type="video/mp4" />
+                            No se puede reproducir el video
+                        </video>
+                    </section>
 
-
-                <div class="news-letter">
-                    <h2>Suscribite a nuestro newsletter</h2>
-                    <form action="/" method="POST">
-                        <input type="email"  name="newsletter" placeholder="Ingresa tu e-mail">
-                        <button><i class="fa-solid fa-arrow-right"></i></button>
-                    </form>
 
                 </div>
+                <section class="newsletter-help__section">
 
-                <div class="help-button">
-                    <button><i class="fa-solid fa-circle-question"></i> Ayuda</button>
-                </div>
+                    <div class="news-letter">
+                        <h2>Suscribite a nuestro newsletter</h2>
+                        <form action="/" method="POST">
+                            <div class="div-newsletter">
 
-            </div>
+                                <input type="email" name="newsletter" placeholder="Ingresa tu e-mail">
+                                <button class="news-letter-btn"><i class="fa-solid fa-arrow-right arrow-news"></i></button>
+                            </div>
+                        </form>
+
+                    </div>
+
+                    <div class="help-button">
+                        <button><i class="fa-solid fa-circle-question"></i> Ayuda</button>
+                    </div>
+
+                </section>
 
             <!-- Carrito -->
            
@@ -110,7 +116,7 @@
 
             <!-- ********************************FIN MAIN***************************************** -->
             <%- include("./partials/footer") %>
-            <script src="/js/carrito.js"></script>
+                <script src="/js/carrito.js"></script>
 
     </body>
 

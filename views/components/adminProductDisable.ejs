@@ -1,32 +1,35 @@
 <section class="section-destacados-admin">
 
+    <article class="article-product-card">
 
-    <img src="../../img/products/<%= product.image %>" alt="bota">
+        <img src="../../img/products/<%= product.image %>" alt="bota">
 
 
-    <p><strong>Nombre:</strong>
-        <%= product.name %>
-    </p>
-    <p><strong>Precio:</strong> $<%= product.price %>
-    </p>
-    <p><strong>Estado:</strong>
-        <% if (product.status==="Enabled" ) { %>
-            Activo
-            <% } else { %>
-                Inactivo
-                <% }%>
-    </p>
+        <p><strong>Nombre:</strong>
+            <%= product.name %>
+        </p>
+        <p><strong>Precio:</strong> $<%= product.price %>
+        </p>
+        <p><strong>Estado:</strong>
+            <% if (product.status==="Enabled" ) { %>
+                Activo
+                <% } else { %>
+                    Inactivo
+                    <% }%>
+        </p>
 
+    </article>
 
     <div class="product-edit">
         <form action="/admin/productos/editar/<%= product.id %>" method="get">
-            <button type="submit" name="editar" id="editar" class="admin-but">
-                EDITAR
+            <button type="submit" name="editar" id="editar" class="form__button">
+                Editar
             </button>
         </form>
+
         <form action="/admin/productos/enable/<%= product.id%>?_method=PUT" method="POST">
-            <button type="submit" name="delete" id="delete" class="admin-but">
-                ACTIVAR
+            <button type="submit" name="delete" id="delete" class="btn-delete">
+                Activar
             </button>
         </form>
     </div>
