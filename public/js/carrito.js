@@ -80,7 +80,7 @@ window.addEventListener("load", function (event) {
           }
 
           carritoHTML();
-         
+          localStorage.setItem('platillos', JSON.stringify(articulosCarrito))
      }
 
      //      // Elimina el curso del carrito en el DOM
@@ -148,7 +148,7 @@ window.addEventListener("load", function (event) {
   })
 
 
-//**********************************************
+// **********************************************
 
 // window.addEventListener("load", function (event) {
 

@@ -1,38 +1,32 @@
+<div class="produc" id="lista-platillos">
 
-<!-- <a href="detalle/<%= product.id %>"> -->
-    <div class="produc" id="lista-platillos">
-        <img src="/img/products/<%= product.image %>" alt="bota">
-        <p class="name"><%= product.name %></p>
-        <p class="price"><%= product.price %></p>
-        <a href="detalle/<%= product.id %>" class="com-but-main"><button>COMPRAR</button></a>
-        <!-- <a href="#" class="agregarCarrito" data-id="<%= product.id %>">Agregar Al Carrito</a> -->
-        <button class="agregarCarrito" data-id="<%= product.id %>">Agregar al carrito</button>
-        <p><i class="fa-solid fa-star"></i></p>
-    </div>
-<!-- </a> -->
-
-<script src="/js/carrito.js"></script>
-
-<!-- <div class="produc">
     <a href="detalle/<%= product.id %>">
-        <div class="container-img-home">
-            <img src="/img/products/<%= product.image %>" alt="bota">
+        <div class="container-first-cardHome">
 
+            <div class="container-img-home">
+                <img src="/img/products/<%= product.image %>" alt="bota">
+            </div>
+
+            <p class="name">
+                <%= product.name %>
+            </p>
+            <div class="div-price-home">
+                <p>$</p>
+
+                <p class="price">
+                    <%= product.price %>
+                </p>
+            </div>
         </div>
-        <h4>
-            <%= product.name %>
-        </h4>
-        <p>
-            <%= product.price %>
-        </p>
     </a>
-    <p>
-        <a href="/detalle/<%= product.id %>" class="com-but-main">
-            <button>COMPRAR</button>
-        </a>
-    </p>
+
+    <button class="agregarCarrito form__button btn-productHome" data-id="<%= product.id %>">
+        Agregar al carrito
+    </button>
     <p>
         <i class="fa-solid fa-star"></i>
     </p>
+
 </div>
- -->
+
+<script src="/js/carrito.js"></script>

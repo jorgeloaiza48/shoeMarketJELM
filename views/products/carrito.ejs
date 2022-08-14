@@ -1,161 +1,97 @@
 <%- include("../partials/head") %>
 
-<body>
-<%- include("../partials/header2") %>
+    <body>
+        <%- include("../partials/header2") %>
 
-    <main class="main-carrito">
-        <div class="primer-parte-carrito">
-            <!-- <section class="art-productos">
-                <h3 class="nombreproductocarrito">Borcego LARA negro 36</h3>
-                <div class="productos-carrito">
-
-                    <article class="producto-carrito">
-
-                        <img class="prod-carr__img" src="img/products/londonNegro.jpeg" alt="PRODUCTO1">
-                        <div class="prod-carr__precio">$20000</div>
-                        <button class="prod-carr__logomas"><i class="fa-solid fa-minus"></i></button>
-                        <div class="prod-carr__cantidad">1</div>
-                        <button class="prod-carr__logomenos"><i class="fa-solid fa-plus"></i></button>
-
-                    </article>
+            <main class="main-carrito">
+                <div class="primer-parte-carrito">
+                    <table class="tabla-carrito">
+                        <thead>
+                            <tr>
+                                <th class="probandocarrito"> Foto </th>
+                                <th class="probandocarrito"> Nombre </th>
+                                <th class="probandocarrito"> Cantidad </th>
+                                <th class="probandocarrito"> Precio </th>
+                            </tr>
+                        </thead>
+                        <tbody class="tabla-carrito">
+                        </tbody>
+                    </table>
                 </div>
 
-                <div class="eliminar-carr"><button class="eliminar-carr__boton"><i class="fa-solid fa-trash-can"></i>
-                        Eliminar</button></div>
 
 
+                <div class="div-resumen-compra">
+                    <div class="resumen-de-compra">
 
-            </section>
+                        <article class="resumencarrito">
+                            <h2 class="title-resumen">Resumen de compra</h2>
 
+                            <p class="cupon-descuento__text">Cupon de descuento</p>
+                            <div class="descuento-flex">
 
-            <section class="art-productos">
-                <h3 class="nombreproductocarrito">Borcego TIZI negro 36</h3>
-                <div class="productos-carrito">
+                                <form class="cupon-descuento__form" method="POST" action="/busqueda">
 
-                    <article class="producto-carrito">
+                                    <div class="cont-cupon">
 
-                        <img class="prod-carr__img" src="img/products/laraNegro.jpeg" alt="PRODUCTO1">
-                        <div class="prod-carr__precio">$25000</div>
-                        <button class="prod-carr__logomas"><i class="fa-solid fa-minus"></i></button>
-                        <div class="prod-carr__cantidad">1</div>
-                        <button class="prod-carr__logomenos"><i class="fa-solid fa-plus"></i></button>
-
-                    </article>
-                </div>
-
-                <div class="eliminar-carr"><button class="eliminar-carr__boton"><i class="fa-solid fa-trash-can"></i>
-                        Eliminar</button></div>
+                                        <label for="cupon"></label>
+                                        <input type="text" name="cupon" placeholder="Ingrese su codigo">
+                                        <button type="submit" class="cupon-descuento__boton">Usar Cupon</button>
 
 
-            </section> -->
-
-            <div class="container">
-                <div class="row">
-                    <div class="four columns">
-                        <!-- <img src="img/logo.jpg" id="logo"> -->
-                    </div>
-                    <div class="two columns u-pull-right">
-                        <ul>
-                            <li class="submenu">
-                                    <!-- <img src="img/cart.png" id="img-carrito"> -->
-                                    <div id="carrito">
-                                            
-                                            <table id="lista-carrito" class="u-full-width">
-                                                <thead>
-                                                    <tr>
-                                                        
-                                                        
-                                                        <th> <%= locals.productos.nombre %>    </th>
-                                                        <th>Precio   </th>
-                                                        <th>Cantidad  </th>
-                                                        <th></th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-
-                                                </tbody>
-                                            </table>
-        
-                                            <a href="#" id="vaciar-carrito" class="button u-full-width"><button>Vaciar Carrito</button></a>
                                     </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div> 
-            </div>
-           
 
-     </div>
-       
-
-
-        <div class="resumen-de-compra">
-            <article class="resumencarrito">
-                <h2 class="title-resumen">Resumen de compra</h2>
-
-                <p class="cupon-descuento__text">Cupon de descuento</p>
-                <div class="descuento-flex">
-
-                    <form class="cupon-descuento__form" method="POST" action="/busqueda">
-
-                        <div class="cont-cupon">
-
-                            <label for="cupon"></label>
-                            <input type="text" name="cupon" placeholder="Ingrese su codigo">
-                            <button type="submit" class="cupon-descuento__boton">Usar Cupon</button>
-
-
-                        </div>
-
-                    </form>
+                                </form>
 
 
 
-                </div>
+                            </div>
 
 
 
-            </article>
+                        </article>
 
-            <article class="fin-compra">
+                        <article class="fin-compra">
 
-                <div class="contenedor-precios">
-                    <div class="contenedor-sub">
-                        <div class="contenedor-sub__text">Subtotal</div>
-                        <div class="contenedor-sub__text">$45.000</div>
-                    </div>
+                            <div class="contenedor-precios">
+                                <div class="contenedor-sub">
+                                    <div class="contenedor-sub__text">Subtotal</div>
+                                    <div class="contenedor-sub__text">$45.000</div>
+                                </div>
 
 
 
-                    <div class="contenedor-total">
-                        <div class="contenedor-total__text">Total</div>
-                        <div class="contenedor-total__price">  $45.000</div>
+                                <div class="contenedor-total">
+                                    <div class="contenedor-total__text">Total</div>
+                                    <div class="contenedor-total__price"> $45.000</div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="boton-finalizar">
+                                <div><button class="boton-finalizar__terminar">Finalizar compra</button></div>
+                                <div><BUTton class="boton-finalizar__seguir">Seguir comprando</BUTton></div>
+
+
+                            </div>
 
                     </div>
 
+                    </article>
                 </div>
 
-                <div class="boton-finalizar">
-                    <div><button class="boton-finalizar__terminar">Finalizar compra</button></div>
-                    <div><BUTton class="boton-finalizar__seguir">Seguir comprando</BUTton></div>
-
-
+                <div class="help-button">
+                    <button><i class="fa-solid fa-circle-question"></i> Ayuda</button>
                 </div>
 
-        </div>
 
-        </article>
-
-        <div class="help-button">
-            <button><i class="fa-solid fa-circle-question"></i> Ayuda</button>
-          </div>
+            </main>
 
 
-    </main>
+            <%- include("../partials/footer") %>
+                <script src="/js/probandoCarrito.js"></script>
 
-    
-    <%- include("../partials/footer") %>
-   
-   </body>
+    </body>
 
-</html>
+    </html>
