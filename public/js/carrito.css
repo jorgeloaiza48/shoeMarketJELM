@@ -36,7 +36,7 @@ tr td{
     height: 30px;
    
 }
-.container {
+.containerCarrito {
     /* border: solid 3px violet; */
     display: flex;
     justify-content: center;
@@ -60,7 +60,9 @@ tr td{
 #lista-carrito tboby{
     border: solid 2px black;
 }
-
+.red{
+    background-color: red;
+}
 /* .submenu:hover #carrito{
     display: block;
     position: absolute;
@@ -73,16 +75,4 @@ tr td{
     min-height: 400px;
     min-width: 300px;
 } */
-@media (min-width: 768px) {
 
-    #carrito{
-        display: block;
-    }
-    ul li a.boton-carrito:hover #carrito{
-        display: block;
-      
-    }
-
-
-
-}

@@ -159,6 +159,22 @@ window.addEventListener("load", function (event) {
      const  vaciarCarritoBtn = document.querySelector('#vaciar-carrito'); //botón para vaciar carrito
      let agregarCarrito = document.querySelectorAll(".agregarCarrito")
 
+    btnCarritoHeader.addEventListener("mouseover",function(){
+     carrito.classList.add("show")
+     carrito.classList.remove("none")
+      })
+    carrito.addEventListener("mouseleave",function(){
+     carrito.classList.remove("show")
+     carrito.classList.add("none")
+      })
+       
+// carrito.addEventListener("moouseout",function(){
+//      carrito.classList.remove("show")
+//      carrito.classList.add("none")
+//      carrito.classList.add("red")
+//     } 
+//     ) 
+    
 
      agregarCarrito.forEach(btnAgregarCarrito => {
           btnAgregarCarrito.addEventListener("click",cargarEventListener)

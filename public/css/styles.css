@@ -389,6 +389,35 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 /*//////////////////////////header 2/********************/
+.burguer-list{
+    position: absolute;
+    left: -99px;
+
+}
+.burguer-container{
+    position: relative;
+}
+.lista_burger{
+    align-items: center;
+    background-color: white;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 2px 2px 3px rgb(0 0 0 / 50%);
+    font-size: 13px;
+    margin-top: 5px;
+    margin-left: 5px;
+    list-style: none;
+    padding: 10px 10px 10px 10px;
+    transition: all 0.5s;
+    position: relative;
+}
+
+.lista_burger a{
+    background-color: white;
+    text-decoration: none;
+    color: black;
+    font-size: small;
+}
 
 .form-header {
     /* border: solid 1px black; */
@@ -530,7 +559,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .icono-carrito2 {
-
+margin-left: 11%;
     display: flex;
     justify-content: space-around;
 }
@@ -1202,7 +1231,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 /* /////////////////////////////admin view  ///////////////////////////// */
 .admin-list {
     width: 422px;
-    padding-left: 0px;
+    padding-left: 60px;
     margin-left: auto;
     margin-right: auto;
 
@@ -1730,11 +1759,6 @@ i {
     width: 100%;
 }
 
-.productos .produc button {
-    background-color: white;
-    border-radius: 5px;
-    transition: 0.5s;
-}
 
 .section3 {
     margin-top: 15px;
@@ -1965,17 +1989,8 @@ i {
         list-style: none;
     }
 
-    .productos .produc button {
-        background-color: white;
-
-
-    }
-
-    .productos .produc button:hover {
-        background-color: black;
-        color: white;
-    }
-
+   
+ 
     .resumen-de-compra {
         align-self: center;
         margin-left: auto;
