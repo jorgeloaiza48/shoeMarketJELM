@@ -1,9 +1,7 @@
-/* .agregar-carrito {
-    margin:10px 0;
-} */
+
 .agregarCarrito{
     margin:10px 0;
-    border: solid 2px blue;
+    /* border: solid 2px blue; */
 }
 .borrar-curso {
     background-color: red;
@@ -13,12 +11,78 @@
     color: white;
     font-weight: bold;
 }
-
-#carrito{
- border: solid 2px blue;
- height: 200px;
- width: 300px;
+.botones-del-carrito {
+    /* border: solid 1px blue; */
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 20px;
 }
-#lista-carrito{
-    border: solid 3px violet;
+#carrito{
+ border: solid 2px whitesmoke; 
+ width: 600px;
+ padding-left: 0px;
+ margin-top: 20px;
+ margin-bottom: 20px; 
+ 
+}
+#carrito a{
+    text-decoration: none;
+}
+tr td{
+    border-bottom:1px solid gainsboro; 
+    border-top:1px solid gainsboro; 
+}
+#carrito #lista-carrito tbody tr >td{   
+    height: 30px;
+   
+}
+.container {
+    /* border: solid 3px violet; */
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.espacio{
+    border-top:none; 
+    border-bottom:none; 
+    height: 0px;
+}
+#lista-carrito  {
+    /* border: solid 3px violet;        */
+    width: 600px;
+}
+.boton-vaciar-carrito{
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+#lista-carrito tboby{
+    border: solid 2px black;
+}
+
+/* .submenu:hover #carrito{
+    display: block;
+    position: absolute;
+    right:0;
+
+    top:100%;
+    z-index: 1;
+    background-color: white;
+    padding: 20px;
+    min-height: 400px;
+    min-width: 300px;
+} */
+@media (min-width: 768px) {
+
+    #carrito{
+        display: block;
+    }
+    ul li a.boton-carrito:hover #carrito{
+        display: block;
+      
+    }
+
+
+
 }
