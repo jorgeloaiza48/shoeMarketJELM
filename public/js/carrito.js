@@ -10,6 +10,17 @@ window.addEventListener("load", function (event) {
      let containerCarrito = document.querySelector(".containerCarrito")
      let prodAgregado = document.querySelector(".prodAgregado")
 
+<<<<<<< HEAD
+         btnCarritoHeader.addEventListener("mouseover",function(){
+          carrito.classList.add("show")
+          carrito.classList.remove("none")
+           })
+         carrito.addEventListener("mouseleave",function(){
+          carrito.classList.remove("show")
+          carrito.classList.add("none")
+           })
+       //sdfsfsfsdf        
+=======
     btnCarritoHeader.addEventListener("mouseover",function(){
      carrito.classList.add("show")
      carrito.classList.remove("none")
@@ -28,6 +39,7 @@ klasdaskldaskldklaskldaklsdklaslkd
 //     } 
 //     ) 
     
+>>>>>>> 8f60d79bc98b3ed319cc393d77e013be0c597e17
 
      agregarCarrito.forEach(btnAgregarCarrito => {
           btnAgregarCarrito.addEventListener("click",cargarEventListeners)
