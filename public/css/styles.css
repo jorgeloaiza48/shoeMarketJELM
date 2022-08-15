@@ -1090,7 +1090,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     font-size: 12px;
     text-align: center;
     padding: 0px 0px;
-    background-color: #c44b52;
+    background-color: rgb(172 46 216);
     border: 1px solid grey;
     border-radius: 10px;
     color: white;
@@ -1098,7 +1098,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     transition: all 0.5s;
 }
 .mini-btn-delete:hover{
-    background-color: #c44b52;
+    background-color: #cd59e4;
     color: white;
     -webkit-transform: scale(1.2);
     transform: scale(1.2);
@@ -2960,7 +2960,7 @@ i {
 .name-pr__cuota {
     font-size: 20px;
     font-weight: 700;
-    color: #c44b52;
+    color: rgb(172 46 216);
 
 }
 
@@ -2971,7 +2971,7 @@ i {
 .name-pr__off {
     font-size: 20px;
     font-weight: 700;
-    color: #c44b52;
+    color: rgb(172 46 216);
     margin-bottom: 15px;
 }
 
@@ -3526,6 +3526,7 @@ main form .text-aviso p {
 
 .section-login {
     background-color: #ebebeb;
+    border-radius: 10px;
     max-width: 350px;
     margin-top: 0px;
     margin-bottom: 20px;
@@ -3617,7 +3618,7 @@ main form .text-aviso p {
 }
 
 .btn-delete {
-    background-color: #a54b50;
+    background-color: rgb(172 46 216);
     border: 1px solid grey;
     border-radius: 10px;
     color: white;
@@ -3626,7 +3627,7 @@ main form .text-aviso p {
 }
 
 .btn-delete:hover {
-    background-color: #d86464;
+    background-color: #ce64d8;
     color: rgb(255, 255, 255);
     -webkit-transform: scale(1.2);
     transform: scale(1.2);
