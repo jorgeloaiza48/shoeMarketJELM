@@ -49,7 +49,7 @@
                                             <ul class="none burguer-list">
                                                 <li class="lista_burger"><a href="/productos">Productos</a> </li>
                                                 <li class="lista_burger"><a href="/user/profile">Mi perfil</a></li>
-                                                <li class="lista_burger"><a href="/user/logout">Logout</a></li>
+                                                <li class="lista_burger"><a href="/user/logout">logout</a></li>
                                             </ul>
 
                                             <% } else { %>
@@ -80,15 +80,11 @@
                         </li>
                         <li><a href="/productos">Productos</a><i class="fa-brands fa-product-hunt"></i></li>
 
-<<<<<<< HEAD
-                        <li class="boton-carrito" ><a href="/carrito"  >Carrito</a><i class="fa-solid fa-cart-shopping"></i></li>
-=======
                         <li class="boton-carrito"><a href="/carrito">Carrito
 
                             </a>
                             <i class="fa-solid fa-cart-shopping"></i>
                         </li>
->>>>>>> 0943b1cab0023eab1f9cc92703fff95c66fc16c1
                         <% if (locals.isAdmin) { %>
                             <li class="lista__profile"><a href="/admin">Admin</a> <i class="fa-solid fa-lock"></i>
                                 <ul class="lista__profile-down__admin">

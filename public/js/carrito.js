@@ -8,6 +8,7 @@ window.addEventListener("load", function (event) {
      let articulosCarrito = [];
      let btnCarritoHeader = document.querySelector(".boton-carrito")
      let containerCarrito = document.querySelector(".containerCarrito")
+     let prodAgregado = document.querySelector(".prodAgregado")
 
     btnCarritoHeader.addEventListener("mouseover",function(){
      carrito.classList.add("show")
@@ -17,6 +18,21 @@ window.addEventListener("load", function (event) {
      carrito.classList.remove("show")
      carrito.classList.add("none")
       })
+
+      agregarCarrito.forEach((btnAgregarCarrito) => {
+     btnAgregarCarrito.addEventListener("click",(event)=>{
+          let cursoId = event.target.getAttribute('data-id')
+          prodAgregado.forEach((uno)=>{
+               prodAgregado.innerHTML += "agregado"
+
+
+          })
+
+     
+     
+     })
+     
+})
        
 // carrito.addEventListener("moouseout",function(){
 //      carrito.classList.remove("show")

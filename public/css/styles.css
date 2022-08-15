@@ -333,7 +333,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     top: 45px;
 }
 
-@media(min-width:768px) {}
+
 
 
 /*//////////////////////////profile/********************/
@@ -621,7 +621,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .div-form-delete-edit-users {
     /* border: solid 2px red; */
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     height: 45px;
     margin: 2px;
     position: inherit;
@@ -778,11 +778,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     }
 
     .principal-userList {
-        border: solid 2px black;
         background-color: #f1f1f1;
         display: flex;
         justify-content: space-between;
-        margin: 3px;
+        margin: 10px;
         width: 95%;
         border-radius: 8px;
 
@@ -793,6 +792,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
     .principal-userList div p {
         font-size: smaller;
+        font-weight:500;
         color: black;
     }
 
@@ -806,6 +806,15 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         text-align: center;
         width: 70%;
 
+    }
+
+
+
+
+    .principal-userList-img {
+        border-radius: 50%;
+        height: 60px;
+        width: 60px;
     }
 
     .principal-userList .principal-userList-img img {
@@ -1070,8 +1079,32 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         list-style: none;
 
     }
-}
 
+}
+.mini-btn-delete{
+    width: 64px;
+    font-size: 12px;
+    text-align: center;
+    padding: 0px 0px;
+    background-color: #c44b52;
+    border: 1px solid grey;
+    border-radius: 10px;
+    color: white;
+    min-width: 1px;
+    transition: all 0.5s;
+}
+.mini-btn{
+    width: 64px;
+    font-size: 12px;
+    text-align: center;
+    padding: 0px 0px;
+    background-color: #000000;
+    border: 1px solid grey;
+    border-radius: 10px;
+    color: white;
+    min-width: 1px;
+    transition: all 0.5s;
+}
 @media(min-width: 537px) {
     #email-check {
         position: absolute;
@@ -1201,9 +1234,9 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
     }
 
-  
 
-    
+
+
 
     .productos-admin img {
         width: 300px;
@@ -1505,7 +1538,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 /* /////////////////////////////Media quiery para 360px   ///////////////////////////// */
 
-/*@media(min-width:360px) {/*/
 .credit-cards {
     background-color: whitesmoke;
 }
@@ -1737,7 +1769,7 @@ header {
 }
 
 .container-first-cardHome {
-    min-height: 360px;
+    min-height: 393px;
 }
 
 .btn-productHome {
@@ -1826,13 +1858,8 @@ i {
 /* /////////////////////////////Media query para 768px   ///////////////////////////// */
 
 @media (min-width: 768px) {
-    .div-resumen-compra{
-        width: 40%;
-    }
-    .primer-parte-carrito{
-        width: 60%;
 
-    }
+
 
     .art-size__title {
         text-align: center;
@@ -1888,7 +1915,7 @@ i {
         display: none;
     }
 
-    
+
 
     .main-descr {
         display: flex;
@@ -2012,7 +2039,7 @@ i {
         align-self: center;
         margin-left: auto;
         margin-right: auto;
-        height: 50%;
+
         padding: 10px;
     }
 
@@ -2510,10 +2537,10 @@ i {
 }
 
 .primer-parte-carrito {
-    margin-bottom: 20px;
     margin-left: auto;
     margin-right: auto;
     padding: 25px;
+    max-width: 650px;
 }
 
 .producto-carrito {
@@ -2734,14 +2761,15 @@ i {
     -webkit-transform: scale(1.2);
     transform: scale(1.2);
 }
-.div-resumen-compra{
-    
+
+.div-resumen-compra {
+
     margin-bottom: 20px;
-    margin-top: 25px;
     margin-left: auto;
     margin-right: auto;
     padding: 25px;
 }
+
 .resumen-de-compra {
     border-radius: 10px;
     background-color: rgb(252, 252, 252);
@@ -2749,6 +2777,7 @@ i {
     margin-left: auto;
     margin-right: auto;
     padding: 15px;
+    max-width: 600px;
 }
 
 .descuento-flex {
@@ -2761,22 +2790,13 @@ i {
 @media (min-width: 768px) {
 
 
-    .main-carrito {
-        display: flex;
 
-    }
 
     .descuento-flex {
         display: block;
     }
 
-    .resumen-de-compra {
-        align-self: center;
-        margin-left: auto;
-        margin-right: auto;
-        height: 50%;
-        padding: 10px;
-    }
+
 }
 
 @media (min-width: 992px) {
@@ -2785,6 +2805,17 @@ i {
         display: block;
     }
 
+}
+
+@media (min-width: 1200px) {
+
+    .resumen-de-compra {
+        width: 500px;
+    }
+
+    .main-carrito {
+        display: flex;
+    }
 }
 
 
@@ -3864,41 +3895,51 @@ main form .text-aviso p {
 }
 
 .contact-form {
-   text-align: center;
+    text-align: center;
     margin-bottom: 40px;
 
 }
-.main-contact{
+
+.main-contact {
     padding: 35px;
 }
 
-.img-carrito{
+.img-carrito {
     width: 100px;
     margin: 10px 0px;
     border-radius: 10px;
 }
-.fila-carrito{
+
+.fila-carrito {
     width: 200px;
     text-align: center;
     margin-bottom: 10px;
+    min-width: 50px
 }
-.tabla-carrito{
+
+.tabla-carrito {
     background-color: white;
     border-radius: 10px;
+    min-height: 400px;
+    min-width: 550px
 }
-.fila-carrito-price{
+
+.fila-carrito-price {
     width: 200px;
     text-align: center;
 }
-.div-price-home{
+
+.div-price-home {
     display: flex;
     justify-content: center;
 }
-.filaCompleta-carrito{
+
+.filaCompleta-carrito {
     padding: 10px;
     margin: 10px;
 
 }
+
 .contact-form__input {
     border: none;
     background-color: #eee;
