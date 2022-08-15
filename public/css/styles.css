@@ -333,7 +333,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     top: 45px;
 }
 
-@media(min-width:768px) {}
+
 
 
 /*//////////////////////////profile/********************/
@@ -389,15 +389,17 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 /*//////////////////////////header 2/********************/
-.burguer-list{
+.burguer-list {
     position: absolute;
     left: -99px;
 
 }
-.burguer-container{
+
+.burguer-container {
     position: relative;
 }
-.lista_burger{
+
+.lista_burger {
     align-items: center;
     background-color: white;
     cursor: pointer;
@@ -412,7 +414,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     position: relative;
 }
 
-.lista_burger a{
+.lista_burger a {
     background-color: white;
     text-decoration: none;
     color: black;
@@ -559,7 +561,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .icono-carrito2 {
-margin-left: 11%;
+    margin-left: 11%;
     display: flex;
     justify-content: space-around;
 }
@@ -619,7 +621,7 @@ margin-left: 11%;
 .div-form-delete-edit-users {
     /* border: solid 2px red; */
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     height: 45px;
     margin: 2px;
     position: inherit;
@@ -713,7 +715,8 @@ margin-left: 11%;
     border-radius: 10px;
     min-height: 350px;
 }
-.article-product-card{
+
+.article-product-card {
     min-height: 360px;
 }
 
@@ -745,9 +748,9 @@ margin-left: 11%;
 
 @media(min-width:768px) {
 
-   
 
-    .icono-showPassword-register{
+
+    .icono-showPassword-register {
         left: 225px;
         position: absolute;
         top: 45px;
@@ -775,11 +778,10 @@ margin-left: 11%;
     }
 
     .principal-userList {
-        border: solid 2px black;
         background-color: #f1f1f1;
         display: flex;
         justify-content: space-between;
-        margin: 3px;
+        margin: 10px;
         width: 95%;
         border-radius: 8px;
 
@@ -790,6 +792,7 @@ margin-left: 11%;
 
     .principal-userList div p {
         font-size: smaller;
+        font-weight:500;
         color: black;
     }
 
@@ -803,6 +806,15 @@ margin-left: 11%;
         text-align: center;
         width: 70%;
 
+    }
+
+
+
+
+    .principal-userList-img {
+        border-radius: 50%;
+        height: 60px;
+        width: 60px;
     }
 
     .principal-userList .principal-userList-img img {
@@ -1067,8 +1079,32 @@ margin-left: 11%;
         list-style: none;
 
     }
-}
 
+}
+.mini-btn-delete{
+    width: 64px;
+    font-size: 12px;
+    text-align: center;
+    padding: 0px 0px;
+    background-color: #c44b52;
+    border: 1px solid grey;
+    border-radius: 10px;
+    color: white;
+    min-width: 1px;
+    transition: all 0.5s;
+}
+.mini-btn{
+    width: 64px;
+    font-size: 12px;
+    text-align: center;
+    padding: 0px 0px;
+    background-color: #000000;
+    border: 1px solid grey;
+    border-radius: 10px;
+    color: white;
+    min-width: 1px;
+    transition: all 0.5s;
+}
 @media(min-width: 537px) {
     #email-check {
         position: absolute;
@@ -1198,13 +1234,9 @@ margin-left: 11%;
 
     }
 
-    .contact-p_contain {
-        padding-left: 28%;
-    }
 
-    .contact-form {
-        padding-left: 13%;
-    }
+
+
 
     .productos-admin img {
         width: 300px;
@@ -1506,7 +1538,6 @@ margin-left: 11%;
 
 /* /////////////////////////////Media quiery para 360px   ///////////////////////////// */
 
-/*@media(min-width:360px) {/*/
 .credit-cards {
     background-color: whitesmoke;
 }
@@ -1720,17 +1751,30 @@ header {
     flex-wrap: wrap;
     margin-top: 20px;
     justify-content: space-evenly;
-    width: 100%;
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
 
 }
 
 .produc {
-    /* border: solid 2px green;*/
     border-radius: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     max-width: 80%;
+    margin: 10px;
+    align-items: center;
+    min-height: 511px;
+}
+
+.container-first-cardHome {
+    min-height: 393px;
+}
+
+.btn-productHome {
+    width: 167px;
+    padding: 10px;
 }
 
 .produc a {
@@ -1815,6 +1859,8 @@ i {
 
 @media (min-width: 768px) {
 
+
+
     .art-size__title {
         text-align: center;
     }
@@ -1869,9 +1915,7 @@ i {
         display: none;
     }
 
-    .main-carrito {
-        display: flex;
-    }
+
 
     .main-descr {
         display: flex;
@@ -1903,7 +1947,7 @@ i {
         justify-content: center;
     }
 
-   
+
 
     .principal {
         /* border: solid 5px blue; */
@@ -1989,13 +2033,13 @@ i {
         list-style: none;
     }
 
-   
- 
+
+
     .resumen-de-compra {
         align-self: center;
         margin-left: auto;
         margin-right: auto;
-        height: 50%;
+
         padding: 10px;
     }
 
@@ -2140,14 +2184,7 @@ i {
 
     }
 
-    .productos .produc {
-        /* border: solid 5px red; */
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        max-width: 350px;
-        transition: all 500ms;
-    }
+
 
     .productos .produc img {
         width: 100%;
@@ -2407,7 +2444,7 @@ i {
     .productos .produc {
         /* border: solid 1px red; */
         height: 5%;
-        width: 35%;
+        width: 30%;
     }
 
     .productos .produc p {
@@ -2495,15 +2532,15 @@ i {
     margin-right: auto;
     padding-bottom: 15px;
     width: 90%;
+    border-radius: 10px;
 
 }
 
 .primer-parte-carrito {
-    max-width: 400px;
-    margin-bottom: 20px;
     margin-left: auto;
     margin-right: auto;
-    padding: 15px;
+    padding: 25px;
+    max-width: 650px;
 }
 
 .producto-carrito {
@@ -2725,17 +2762,22 @@ i {
     transform: scale(1.2);
 }
 
-.resumen-de-compra {
-    border: 1px solid rgb(255, 254, 254);
-    border-radius: 10px;
-    background-color: rgb(252, 252, 252);
-    max-width: 400px;
-    margin-left: 15px;
+.div-resumen-compra {
+
+    margin-bottom: 20px;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 5px;
-    padding-right: 5px;
-    width: 85%;
+    padding: 25px;
+}
+
+.resumen-de-compra {
+    border-radius: 10px;
+    background-color: rgb(252, 252, 252);
+    border: 1px solid rgb(255, 254, 254);
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px;
+    max-width: 600px;
 }
 
 .descuento-flex {
@@ -2748,22 +2790,13 @@ i {
 @media (min-width: 768px) {
 
 
-    .main-carrito {
-        display: flex;
 
-    }
 
     .descuento-flex {
         display: block;
     }
 
-    .resumen-de-compra {
-        align-self: center;
-        margin-left: auto;
-        margin-right: auto;
-        height: 50%;
-        padding: 10px;
-    }
+
 }
 
 @media (min-width: 992px) {
@@ -2772,6 +2805,17 @@ i {
         display: block;
     }
 
+}
+
+@media (min-width: 1200px) {
+
+    .resumen-de-compra {
+        width: 500px;
+    }
+
+    .main-carrito {
+        display: flex;
+    }
 }
 
 
@@ -2861,7 +2905,7 @@ i {
 }
 
 .name-pr {
-    
+
     height: 200%;
     text-align: center;
     margin-bottom: 45px;
@@ -2893,7 +2937,7 @@ i {
     font-size: 20px;
     font-weight: 700;
     color: #c44b52;
-    
+
 }
 
 .name-pr__cuota i {
@@ -2992,7 +3036,7 @@ i {
 
 }
 
-.btn-size { 
+.btn-size {
     border: 1px solid #1c1819;
     border-radius: 15px;
     background-color: #1d1d1d;
@@ -3001,7 +3045,7 @@ i {
     display: flex;
     margin: 1px;
     margin-left: 15px;
-    min-width: 36px;    
+    min-width: 36px;
     width: 30px;
     transition: all 0.5s;
 
@@ -3091,7 +3135,7 @@ i {
         margin-bottom: 8px;
     }
 
-    
+
 
     .name-pr__title {
         margin-top: 10px;
@@ -3110,7 +3154,7 @@ i {
         justify-content: center;
     }
 
-    
+
 
     .desc-comp {
         align-items: center;
@@ -3136,9 +3180,9 @@ i {
         text-align: center;
     }
 
-    
 
-   
+
+
 
 
     .desc-comp__but {
@@ -3153,11 +3197,11 @@ i {
 
 @media (min-width: 1200px) {
 
-    .p-detail{
+    .p-detail {
         padding: 10px;
-        
+
     }
-    
+
 }
 
 
@@ -3671,7 +3715,8 @@ main form .text-aviso p {
     margin-bottom: 20px;
     width: 116%;
 }
-.price-create{
+
+.price-create {
     margin-top: 25px;
 }
 
@@ -3796,7 +3841,7 @@ main form .text-aviso p {
 .btn-detail {
     background-color: #fdfffa;
     color: black;
-    
+
     border: 1px solid grey;
     border-radius: 10px;
     ;
@@ -3805,8 +3850,8 @@ main form .text-aviso p {
 }
 
 .btn-detail:hover {
-   
-    
+
+
     -webkit-transform: scale(1.2);
     transform: scale(1.2);
 }
@@ -3833,15 +3878,7 @@ main form .text-aviso p {
 
 
 /*///////////contact//////////////////*/
-.contact-p_contain {
-    margin-right: auto;
-    margin-left: auto;
-    padding-left: 15%;
-    padding-right: 15%;
 
-
-
-}
 
 .contact-title {
     font-size: 40px;
@@ -3853,27 +3890,60 @@ main form .text-aviso p {
     line-height: 32px;
     font-size: 20px;
     max-width: 750px;
-
-
-
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .contact-form {
-    margin-left: 15%;
-    margin-right: 15%;
+    text-align: center;
     margin-bottom: 40px;
 
 }
 
-.contact-form label {
+.main-contact {
+    padding: 35px;
+}
+
+.img-carrito {
+    width: 100px;
+    margin: 10px 0px;
+    border-radius: 10px;
+}
+
+.fila-carrito {
+    width: 200px;
     text-align: center;
+    margin-bottom: 10px;
+    min-width: 50px
+}
+
+.tabla-carrito {
+    background-color: white;
+    border-radius: 10px;
+    min-height: 400px;
+    min-width: 550px
+}
+
+.fila-carrito-price {
+    width: 200px;
+    text-align: center;
+}
+
+.div-price-home {
+    display: flex;
+    justify-content: center;
+}
+
+.filaCompleta-carrito {
+    padding: 10px;
+    margin: 10px;
+
 }
 
 .contact-form__input {
     border: none;
     background-color: #eee;
     border-radius: 10px;
-    display: block;
     margin-bottom: 20px;
     padding: 10px;
     width: 100%;
