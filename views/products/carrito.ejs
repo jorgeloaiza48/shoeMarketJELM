@@ -12,10 +12,26 @@
                                 <th class="probandocarrito"> Nombre </th>
                                 <th class="probandocarrito"> Cantidad </th>
                                 <th class="probandocarrito"> Precio </th>
+
+
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody class="tabla-carrito-body">
+
                         </tbody>
+                        <tfoot>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>
+                                    <button class="btn-cupon form__button">Vaciar carrito </button>
+                                </td>
+                                <td></td>
+                            </tr>
+                        </tfoot>
+
+
                     </table>
                     <button id="vaciar-carrito-del-LS" class="boton-vaciar-carrito">Vaciar Carrito</button>
                 </div>
@@ -37,7 +53,7 @@
 
                                         <label for="cupon"></label>
                                         <input type="text" name="cupon" placeholder="Ingrese su codigo">
-                                        <button type="submit" class="form__button">
+                                        <button type="submit" class="form__button btn-cupon">
                                             Usar Cupon
 
                                         </button>
@@ -59,7 +75,7 @@
 
                             <div class="contenedor-precios">
                                 <div class="contenedor-sub">
-                                    <div class="contenedor-sub__text">Subtotal</div>
+                                    <div class="contenedor-sub__text"></div>
                                     <div class="contenedor-sub__text"></div>
                                 </div>
 
@@ -77,12 +93,12 @@
                                 <div>
                                     <a href="https://www.mercadopago.com.ar/home">
 
-                                        <button class="boton-finalizar__terminar form__button">Finalizar compra</button>
+                                        <button class="boton-finalizar__terminar btn-finalizar-carrito form__button">Finalizar compra</button>
                                     </a>
                                 </div>
                                 <div>
                                     <a href="/">
-                                        <BUTton class="boton-finalizar__seguir btn-delete">Seguir comprando</BUTton>
+                                        <BUTton class="boton-finalizar__seguir form__button">Seguir comprando</BUTton>
                                     </a>
                                 </div>
 
@@ -97,7 +113,6 @@
                 <div class="help-button">
                     <button><i class="fa-solid fa-circle-question"></i> Ayuda</button>
                 </div>
-
 
             </main>
 

@@ -1,3 +1,4 @@
+
 window.addEventListener("load", function (event) {
 
     let probandoCarrito = document.querySelector(".probandoCarrito")
@@ -19,33 +20,59 @@ window.addEventListener("load", function (event) {
         console.log(localStorage)
        
     }
+    let btnDeleteCarrito = document.querySelector("btn-delete-carrito")
 
-    
-    local.forEach(producto => {
+
+    if (local) {
+
+        local.forEach(producto => {
+            tablaCarrito.innerHTML +=
+                `<tr class="filaCompleta-carrito" >` +
+                `<td class="fila-carrito">` + `<img class="img-carrito" src=${producto.imagen} >` + "</img>" + "</td>" +
+                `<td class="fila-carrito">` + producto.nombre + "</td>" +
+                `<td class="fila-carrito">` + producto.cantidad + "</td>" +
+                `<td class="fila-carrito-price">` + "$" + producto.precio * producto.cantidad + "</td>" +
+                `<td><a href="#" class="borrar-curso" data-id="${producto.id}">X</a> </td>`
+            "</tr>"
+
+
+
+        });
+    } else {
         tablaCarrito.innerHTML +=
-        `<tr class="filaCompleta-carrito" >` +
-         `<td class="fila-carrito">` + `<img class="img-carrito" src=${producto.imagen} >` + "</img>" + "</td>" +
-            `<td class="fila-carrito">` + producto.nombre + "</td>" +
-            `<td class="fila-carrito">` + producto.cantidad + "</td>" +
-            `<td id="hola" class="fila-carrito-price">` + "$" + producto.precio * producto.cantidad + "</td>" +
-        "</tr>"
-        console.log(producto.nombre)
-        console.log(producto.cantidad)
-        console.log(producto.precio)
-        
-        
-    });
+            `<tr class="filaCompleta-carrito" >` +
+            `<td class="fila-carrito">` + "No hay productos en el carrito" + "</td>" +
+            `<td class="fila-carrito">` +
+            `<a href="/">` +
+            `<button class="form__button">` + "Ir a Comprar" + "</button>"
+            + `</a>` +
+            "</td>" +
+            "</tr>"
 
-    vaciarCarritoDelLS.addEventListener("click",vaciarLocalStorage) 
+    }
+
+    let td = document.querySelectorAll(".fila-carrito-price")
+    let arrayPrecios = []
+    let total = 0
+    if (td) {
+        td.forEach((producto) => {
+            let precio = parseInt(producto.outerText.replace("$", "0"))
+            total += precio
+        })
+    }
+    
+    totalPrice.innerHTML += "$ " + total
+
+
+    vaciarCarritoDelLS.addEventListener('click',vaciarLocalStorage)
 
     function vaciarLocalStorage(){
-        localStorage.clear()
-        console.log("localstorage vacío " + localStorage)
-              } 
-    
-    // console.log(filaCarritoPrice)
+                  localStorage.clear()
+             }
+        
 
-    
+
+
 
 
 

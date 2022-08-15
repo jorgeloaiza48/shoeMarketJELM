@@ -3,7 +3,6 @@ window.addEventListener("load", function (event) {
      let listaProductos = document.querySelector('#main-home'); // home donde se muestra todos los productos
      let contenedorCarrito = document.querySelector('#lista-carrito tbody'); //tabla en el carrito
      let vaciarCarritoBtn = document.querySelector('#vaciar-carrito'); //botón para vaciar carrito
-     let vaciarCarritoDelLS = document.getElementById('vaciar-carrito-del-LS'); //botón para vaciar carrito del LS
      let agregarCarrito = document.querySelectorAll(".agregarCarrito")
      let  carrito = document.querySelector("#carrito"); //contenedor que está en el carrito
      let articulosCarrito = [];
@@ -12,18 +11,21 @@ window.addEventListener("load", function (event) {
      let prodAgregado = document.querySelector(".prodAgregado")
      let  platillos = document.getElementById('lista-platillos')
 
-     //     btnCarritoHeader.addEventListener("mouseover",function(){
-     //      carrito.classList.add("show")
-     //      carrito.classList.remove("none")
-     //       })
-     //     carrito.addEventListener("mouseleave",function(){
-     //      carrito.classList.remove("show")
-     //      carrito.classList.add("none")
-     //       })
-       //sdfsfsfsdf        
+//     btnCarritoHeader.addEventListener("mouseover",function(){
+//      carrito.classList.add("show")
+//      carrito.classList.remove("none")
+//       })
+//     carrito.addEventListener("mouseleave",function(){
+//      carrito.classList.remove("show")
+//      carrito.classList.add("none")
+//       })
+
+
+
 
      agregarCarrito.forEach(btnAgregarCarrito => {
           btnAgregarCarrito.addEventListener("click",cargarEventListeners)
+          
      })
 
      function cargarEventListeners(event) {
@@ -84,6 +86,8 @@ window.addEventListener("load", function (event) {
                let platillosLS = [];
                platillosLS = JSON.parse(localStorage.getItem("platillos"));               
                platillosLS.push(articulosCarrito)
+               console.log(platillosLS)
+               console.log(" articulos carrito " + articulosCarrito)
                localStorage.setItem('platillos', JSON.stringify(platillosLS))//guarda los productos en el LocalStorage               
           }
           //localStorage.setItem('platillos', JSON.stringify(articulosCarrito))//guarda los productos en el LocalStorage
