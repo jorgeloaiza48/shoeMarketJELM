@@ -30,13 +30,16 @@
                             <p class="cupon-descuento__text">Cupon de descuento</p>
                             <div class="descuento-flex">
 
-                                <form class="cupon-descuento__form" method="POST" action="/busqueda">
+                                <form class="cupon-descuento__form">
 
                                     <div class="cont-cupon">
 
                                         <label for="cupon"></label>
                                         <input type="text" name="cupon" placeholder="Ingrese su codigo">
-                                        <button type="submit" class="cupon-descuento__boton">Usar Cupon</button>
+                                        <button type="submit" class="form__button">
+                                            Usar Cupon
+
+                                        </button>
 
 
                                     </div>
@@ -56,7 +59,7 @@
                             <div class="contenedor-precios">
                                 <div class="contenedor-sub">
                                     <div class="contenedor-sub__text">Subtotal</div>
-                                    <div class="contenedor-sub__text">$45.000</div>
+                                    <div class="contenedor-sub__text"></div>
                                 </div>
 
 
@@ -70,8 +73,17 @@
                             </div>
 
                             <div class="boton-finalizar">
-                                <div><button class="boton-finalizar__terminar">Finalizar compra</button></div>
-                                <div><BUTton class="boton-finalizar__seguir">Seguir comprando</BUTton></div>
+                                <div>
+                                    <a href="https://www.mercadopago.com.ar/home">
+
+                                        <button class="boton-finalizar__terminar form__button">Finalizar compra</button>
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="/">
+                                        <BUTton class="boton-finalizar__seguir btn-delete">Seguir comprando</BUTton>
+                                    </a>
+                                </div>
 
 
                             </div>

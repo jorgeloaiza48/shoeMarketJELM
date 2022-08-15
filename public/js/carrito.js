@@ -5,11 +5,12 @@ window.addEventListener("load", function (event) {
      let vaciarCarritoBtn = document.querySelector('#vaciar-carrito'); //botón para vaciar carrito
      let agregarCarrito = document.querySelectorAll(".agregarCarrito")
      let  carrito = document.querySelector("#carrito"); //contenedor que está en el carrito
-     let tablaCarrito = document.getElementById('lista-carrito') //capturo la tabla
      let articulosCarrito = [];
-     let precioTotal = 0
      let btnCarritoHeader = document.querySelector(".boton-carrito")
+     let containerCarrito = document.querySelector(".containerCarrito")
+     let prodAgregado = document.querySelector(".prodAgregado")
 
+<<<<<<< HEAD
          btnCarritoHeader.addEventListener("mouseover",function(){
           carrito.classList.add("show")
           carrito.classList.remove("none")
@@ -19,25 +20,40 @@ window.addEventListener("load", function (event) {
           carrito.classList.add("none")
            })
        //sdfsfsfsdf        
+=======
+    btnCarritoHeader.addEventListener("mouseover",function(){
+     carrito.classList.add("show")
+     carrito.classList.remove("none")
+      })
+    carrito.addEventListener("mouseleave",function(){
+     carrito.classList.remove("show")
+     carrito.classList.add("none")
+      })
+
+       
+// carrito.addEventListener("moouseout",function(){
+//      carrito.classList.remove("show")
+//      carrito.classList.add("none")
+//      carrito.classList.add("red")
+//     } 
+//     ) 
+    
+>>>>>>> 8f60d79bc98b3ed319cc393d77e013be0c597e17
 
      agregarCarrito.forEach(btnAgregarCarrito => {
           btnAgregarCarrito.addEventListener("click",cargarEventListeners)
-                   
      })
-
-      // console.log(tablaCarrito)
-     // precioTotal = tablaCarrito.rows
-     
 
      function cargarEventListeners(event) {
           
-               listaProductos.addEventListener("click", agregarProducto);                                                                    
+               listaProductos.addEventListener("click", agregarProducto);                          
                // Cuando se elimina un curso del carrito
                carrito.addEventListener("click", eliminarProducto);
                // Al Vaciar el carrito
                vaciarCarritoBtn.addEventListener("click", vaciarCarrito);
               
-     }
+     
+             }
 
 
      function agregarProducto(event) {
@@ -45,8 +61,8 @@ window.addEventListener("load", function (event) {
 
           // Delegation para agregar-carrito
           if (event.target.classList.contains('agregarCarrito')) {
-               //let curso = event.target.closest('.produc')//captura el contenedor padre
-               let curso = event.target.parentNode;//captura el contenedor padre
+               let curso = event.target.closest('.produc')//captura el contenedor padre
+               //let curso = event.target.parentNode;//captura el contenedor padre
                // Enviamos el curso seleccionado para tomar sus datos
                leerDatosProducto(curso);
           }
@@ -57,9 +73,9 @@ window.addEventListener("load", function (event) {
           let infoCurso = {
                imagen: curso.querySelector('img').src, //imagen del producto
                nombre: curso.querySelector('.name').textContent, //nombre del producto
-               precio: parseInt(curso.querySelector('.price').textContent), //precio del producto
+               precio: curso.querySelector('.price').textContent, //precio del producto
                id: curso.querySelector('.agregarCarrito').getAttribute('data-id'), //id del producto seleccionado
-               cantidad: 1               
+               cantidad: 1
           }
 
 
@@ -79,16 +95,11 @@ window.addEventListener("load", function (event) {
 
           carritoHTML();
           localStorage.setItem('platillos', JSON.stringify(articulosCarrito))
-          // console.log("Este es el precio total " + tablaCarrito.rows[1].innerHTML)
-          // console.log("Este es el precio total " + tablaCarrito.rows[3].innerHTML)
-         
-          
-          
      }
 
      //      // Elimina el curso del carrito en el DOM
      function eliminarProducto(event) {
-          event.preventDefault();
+          //event.preventDefault();
           if (event.target.classList.contains('borrar-curso')) {
                event.target.parentNode.remove();
                let cursoId = event.target.getAttribute('data-id')
@@ -97,19 +108,17 @@ window.addEventListener("load", function (event) {
                articulosCarrito = articulosCarrito.filter(curso => curso.id !== cursoId);
                //alert("producto eliminado")
                carritoHTML();
-
           }
      }
 
-     // Muestra el curso seleccionado en el Carrito
+     //      // Muestra el curso seleccionado en el Carrito
      function carritoHTML() {
 
           vaciarCarrito();
 
           articulosCarrito.forEach(curso => {
                let row = document.createElement('tr');
-               let rowaux = document.createElement('tr');//esta fila es para que de espacio entre las filas                            
-               precioTotal = precioTotal + curso.precio
+               let rowaux = document.createElement('tr');//esta fila es para que de espacio entre las filas
                row.innerHTML = `
                     <td> <img src="${curso.imagen}" width=100> </td>
                     <td>${curso.nombre}</td>
@@ -125,73 +134,50 @@ window.addEventListener("load", function (event) {
                                    <td class="espacio"></td>
                                    <td class="espacio"></td> `
                contenedorCarrito.appendChild(row);
-               contenedorCarrito.appendChild(rowaux);             
-               
+               contenedorCarrito.appendChild(rowaux);
           });
 
-          // console.log(tablaCarrito)
-          // console.log(tablaCarrito.rows.length)
-          // console.log(tablaCarrito.rows)         
-          // console.log(precioTotal)
-          // if (precioTotal !=0){precioTotal=0}
-          
-          // for(let i=1; i< tablaCarrito.rows.length; i=i+2 ){
-          //      precioTotal = precioTotal + parseInt(tablaCarrito.rows[i].cells[2].innerHTML) 
-          //      console.log(parseInt(tablaCarrito.rows[i].cells[2].innerHTML) )             
-          // }
-          // console.log("Este es el precio total " + precioTotal)
-                             
      }
 
      //      // Elimina los productos del carrito en el DOM
      function vaciarCarrito(event) {
           // forma lenta
-          contenedorCarrito.innerHTML = '';
+          // contenedorCarrito.innerHTML = '';
 
 
-          //forma rapida (recomendada)
+          // forma rapida (recomendada)
           while (contenedorCarrito.firstChild) {
-               contenedorCarrito.removeChild(contenedorCarrito.firstChild);               
+               contenedorCarrito.removeChild(contenedorCarrito.firstChild);
           }
      }
+
+
+
+
+   
+
+
+
 
   })
 
 
-//**********************************************
+// **********************************************
 
 // window.addEventListener("load", function (event) {
 
 
-//      const  carrito = document.getElementById("carrito"); //contenedor que está en el carrito
+//      let  carrito = document.querySelector("#carrito"); //contenedor que está en el carrito
 //      const  platillos = document.getElementById('lista-platillos')
 //      const  listaPlatillos = document.querySelector('#lista-carrito tbody'); //tabla en el carrito
-//      const  vaciarCarritoBtn = document.getElementById('vaciar-carrito'); //botón para vaciar carrito
-//      let agregarCarrito = document.querySelectorAll(".agregarCarrito");
-//      btnCarritoHeader = document.querySelector(".boton-carrito")
+//      const  vaciarCarritoBtn = document.querySelector('#vaciar-carrito'); //botón para vaciar carrito
+//      let agregarCarrito = document.querySelectorAll(".agregarCarrito")
 
-//     btnCarritoHeader.addEventListener("mouseover",function(){
-//      carrito.classList.add("show")
-//      carrito.classList.remove("none")
-//       })
-//     carrito.addEventListener("mouseleave",function(){
-//      carrito.classList.remove("show")
-//      carrito.classList.add("none")
-//       })
-       
-// // carrito.addEventListener("moouseout",function(){
-// //      carrito.classList.remove("show")
-// //      carrito.classList.add("none")
-// //      carrito.classList.add("red")
-// //     } 
-// //     ) 
-    
 
 //      agregarCarrito.forEach(btnAgregarCarrito => {
 //           btnAgregarCarrito.addEventListener("click",cargarEventListener)
 //      })
      
-           //  }
 
 //      function cargarEventListener() {          
 //           platillos.addEventListener('click', comprarPlatillo);
