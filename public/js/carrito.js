@@ -18,7 +18,8 @@ window.addEventListener("load", function (event) {
      carrito.classList.remove("show")
      carrito.classList.add("none")
       })
-
+jnlkasdlknasldlasdlnaslkdaslkdlkmasklmdklamsdmk
+klasdaskldaskldklaskldaklsdklaslkd
        
 // carrito.addEventListener("moouseout",function(){
 //      carrito.classList.remove("show")
