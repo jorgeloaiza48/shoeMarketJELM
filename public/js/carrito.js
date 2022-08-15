@@ -3,56 +3,37 @@ window.addEventListener("load", function (event) {
      let listaProductos = document.querySelector('#main-home'); // home donde se muestra todos los productos
      let contenedorCarrito = document.querySelector('#lista-carrito tbody'); //tabla en el carrito
      let vaciarCarritoBtn = document.querySelector('#vaciar-carrito'); //botón para vaciar carrito
+     let vaciarCarritoDelLS = document.getElementById('vaciar-carrito-del-LS'); //botón para vaciar carrito del LS
      let agregarCarrito = document.querySelectorAll(".agregarCarrito")
      let  carrito = document.querySelector("#carrito"); //contenedor que está en el carrito
      let articulosCarrito = [];
      let btnCarritoHeader = document.querySelector(".boton-carrito")
      let containerCarrito = document.querySelector(".containerCarrito")
      let prodAgregado = document.querySelector(".prodAgregado")
+     let  platillos = document.getElementById('lista-platillos')
 
-<<<<<<< HEAD
-         btnCarritoHeader.addEventListener("mouseover",function(){
-          carrito.classList.add("show")
-          carrito.classList.remove("none")
-           })
-         carrito.addEventListener("mouseleave",function(){
-          carrito.classList.remove("show")
-          carrito.classList.add("none")
-           })
+     //     btnCarritoHeader.addEventListener("mouseover",function(){
+     //      carrito.classList.add("show")
+     //      carrito.classList.remove("none")
+     //       })
+     //     carrito.addEventListener("mouseleave",function(){
+     //      carrito.classList.remove("show")
+     //      carrito.classList.add("none")
+     //       })
        //sdfsfsfsdf        
-=======
-    btnCarritoHeader.addEventListener("mouseover",function(){
-     carrito.classList.add("show")
-     carrito.classList.remove("none")
-      })
-    carrito.addEventListener("mouseleave",function(){
-     carrito.classList.remove("show")
-     carrito.classList.add("none")
-      })
-
-       
-// carrito.addEventListener("moouseout",function(){
-//      carrito.classList.remove("show")
-//      carrito.classList.add("none")
-//      carrito.classList.add("red")
-//     } 
-//     ) 
-    
->>>>>>> 8f60d79bc98b3ed319cc393d77e013be0c597e17
 
      agregarCarrito.forEach(btnAgregarCarrito => {
           btnAgregarCarrito.addEventListener("click",cargarEventListeners)
      })
 
      function cargarEventListeners(event) {
-          
+               alert("Producto Agregado")     
                listaProductos.addEventListener("click", agregarProducto);                          
                // Cuando se elimina un curso del carrito
                carrito.addEventListener("click", eliminarProducto);
                // Al Vaciar el carrito
                vaciarCarritoBtn.addEventListener("click", vaciarCarrito);
-              
-     
+             
              }
 
 
@@ -94,10 +75,42 @@ window.addEventListener("load", function (event) {
           }
 
           carritoHTML();
-          localStorage.setItem('platillos', JSON.stringify(articulosCarrito))
-     }
 
-     //      // Elimina el curso del carrito en el DOM
+          if(localStorage.getItem('platillos') === null){
+               localStorage.setItem('platillos', JSON.stringify(articulosCarrito))//guarda los productos en el LocalStorage
+               
+          }
+          else{
+               let platillosLS = [];
+               platillosLS = JSON.parse(localStorage.getItem("platillos"));               
+               platillosLS.push(articulosCarrito)
+               localStorage.setItem('platillos', JSON.stringify(platillosLS))//guarda los productos en el LocalStorage               
+          }
+          //localStorage.setItem('platillos', JSON.stringify(articulosCarrito))//guarda los productos en el LocalStorage
+          //guardarPlatilloLocalStorage(articulosCarrito)
+     }
+     
+    
+     function guardarPlatilloLocalStorage(platillo){
+                    let platillos;
+                    platillos = obtenerPlatillosLocalStorage();
+                    platillos.push(platillo);          
+                    localStorage.setItem('platillos',JSON.stringify(platillos));
+               }   
+                
+ 
+     function obtenerPlatillosLocalStorage(){
+                    let platillosLS;
+                    if(localStorage.getItem('platillos') === null){
+                         platillosLS = [];
+                    }
+                    else{
+                         platillosLS = JSON.parse(localStorage.getItem("platillos"));
+                    }                   
+                    return platillosLS;
+               }    
+
+                    //      // Elimina el curso del carrito en el DOM
      function eliminarProducto(event) {
           //event.preventDefault();
           if (event.target.classList.contains('borrar-curso')) {
@@ -152,9 +165,7 @@ window.addEventListener("load", function (event) {
      }
 
 
-
-
-   
+     
 
 
 

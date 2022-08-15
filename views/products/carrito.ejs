@@ -4,7 +4,7 @@
         <%- include("../partials/header2") %>
 
             <main class="main-carrito">
-                <div class="primer-parte-carrito">
+                <div class="primer-parte-carrito" id="carrito">
                     <table class="tabla-carrito">
                         <thead>
                             <tr>
@@ -14,9 +14,10 @@
                                 <th class="probandocarrito"> Precio </th>
                             </tr>
                         </thead>
-                        <tbody class="tabla-carrito">
+                        <tbody>
                         </tbody>
                     </table>
+                    <button id="vaciar-carrito-del-LS" class="boton-vaciar-carrito">Vaciar Carrito</button>
                 </div>
 
 
@@ -103,6 +104,7 @@
 
             <%- include("../partials/footer") %>
                 <script src="/js/probandoCarrito.js"></script>
+                <script src="/js/carrito.js"></script>
 
     </body>
 
