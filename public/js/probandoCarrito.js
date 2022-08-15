@@ -8,25 +8,41 @@ window.addEventListener("load", function (event) {
     let tablaCarrito = document.querySelector(".tabla-carrito")
     let totalPrice = document.querySelector(".contenedor-total__price")
     let filaCarritoPrice = document.querySelector("#hola")
-    
-    
+    let btnDeleteCarrito = document.querySelector("btn-delete-carrito")
+    console.log(btnDeleteCarrito)
 
-    
-    local.forEach(producto => {
+
+
+    if (local) {
+
+        local.forEach(producto => {
+            tablaCarrito.innerHTML +=
+            `<tr class="filaCompleta-carrito" >` +
+                `<td class="fila-carrito">` + `<img class="img-carrito" src=${producto.imagen} >` + "</img>" + "</td>" +
+                `<td class="fila-carrito">` + producto.nombre + "</td>" +
+                `<td class="fila-carrito">` + producto.cantidad + "</td>" +
+                `<td class="fila-carrito-price">` + "$" + producto.precio * producto.cantidad + "</td>" +
+                `<td><a href="#" class="borrar-curso" data-id="${producto.id}">X</a> </td>`
+            "</tr>"
+
+
+        });
+    } else {
         tablaCarrito.innerHTML +=
-        `<tr class="filaCompleta-carrito" >` +
-         `<td class="fila-carrito">` + `<img class="img-carrito" src=${producto.imagen} >` + "</img>" + "</td>" +
-            `<td class="fila-carrito">` + producto.nombre + "</td>" +
-            `<td class="fila-carrito">` + producto.cantidad + "</td>" +
-            `<td class="fila-carrito-price">` + "$" + producto.precio * producto.cantidad + "</td>" +
-        "</tr>"
-        
-        
-    });
-    
+            `<tr class="filaCompleta-carrito" >` +
+            `<td class="fila-carrito">` + "No hay productos en el carrito" + "</td>" +
+            `<td class="fila-carrito">` +
+            `<a href="/">` +
+            `<button class="form__button">` + "Ir a Comprar" + "</button>"
+            + `</a>` +
+            "</td>" +
+            "</tr>"
+
+    }
+
     console.log(filaCarritoPrice)
 
-    
+
 
 
 
