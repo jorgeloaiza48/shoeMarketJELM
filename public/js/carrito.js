@@ -18,7 +18,7 @@ window.addEventListener("load", function (event) {
           carrito.classList.remove("show")
           carrito.classList.add("none")
            })
-               
+       //sdfsfsfsdf        
 
      agregarCarrito.forEach(btnAgregarCarrito => {
           btnAgregarCarrito.addEventListener("click",cargarEventListeners)
