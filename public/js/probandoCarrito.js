@@ -9,6 +9,17 @@ window.addEventListener("load", function (event) {
     let tablaCarrito = document.querySelector(".tabla-carrito")
     let totalPrice = document.querySelector(".contenedor-total__price")
     let filaCarritoPrice = document.querySelector("#hola")
+    let vaciarCarritoDelLS = document.getElementById('vaciar-carrito-del-LS'); //botón para vaciar carrito del LS
+    
+    if(localStorage.getItem('platillos') === null){
+        console.log("locastorage vacío " + localStorage)
+    }
+    else{
+        console.log("localstoraeg no está vacío " + localStorage)
+        console.log("longitud del LS " + local.length)
+        console.log(localStorage)
+       
+    }
     let btnDeleteCarrito = document.querySelector("btn-delete-carrito")
 
 
@@ -53,7 +64,12 @@ window.addEventListener("load", function (event) {
     totalPrice.innerHTML += "$ " + total
 
 
+    vaciarCarritoDelLS.addEventListener('click',vaciarLocalStorage)
 
+    function vaciarLocalStorage(){
+                  localStorage.clear()
+             }
+        
 
 
 
