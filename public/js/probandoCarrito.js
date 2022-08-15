@@ -18,7 +18,7 @@ window.addEventListener("load", function (event) {
          `<td class="fila-carrito">` + `<img class="img-carrito" src=${producto.imagen} >` + "</img>" + "</td>" +
             `<td class="fila-carrito">` + producto.nombre + "</td>" +
             `<td class="fila-carrito">` + producto.cantidad + "</td>" +
-            `<td id="hola" class="fila-carrito-price">` + "$" + producto.precio * producto.cantidad + "</td>" +
+            `<td class="fila-carrito-price">` + "$" + producto.precio * producto.cantidad + "</td>" +
         "</tr>"
         
         

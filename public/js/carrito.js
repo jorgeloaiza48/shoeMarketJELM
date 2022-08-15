@@ -19,20 +19,6 @@ window.addEventListener("load", function (event) {
      carrito.classList.add("none")
       })
 
-      agregarCarrito.forEach((btnAgregarCarrito) => {
-     btnAgregarCarrito.addEventListener("click",(event)=>{
-          let cursoId = event.target.getAttribute('data-id')
-          prodAgregado.forEach((uno)=>{
-               prodAgregado.innerHTML += "agregado"
-
-
-          })
-
-     
-     
-     })
-     
-})
        
 // carrito.addEventListener("moouseout",function(){
 //      carrito.classList.remove("show")

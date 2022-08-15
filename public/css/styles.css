@@ -392,6 +392,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .burguer-list {
     position: absolute;
     left: -99px;
+    top: 8px;
+    z-index: 1;
 
 }
 
@@ -792,7 +794,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
     .principal-userList div p {
         font-size: smaller;
-        font-weight:500;
+        font-weight: 500;
         color: black;
     }
 
@@ -1081,7 +1083,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     }
 
 }
-.mini-btn-delete{
+
+.mini-btn-delete {
     width: 64px;
     font-size: 12px;
     text-align: center;
@@ -1093,7 +1096,15 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     min-width: 1px;
     transition: all 0.5s;
 }
-.mini-btn{
+.mini-btn-delete:hover{
+    background-color: #c44b52;
+    color: white;
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+
+}
+
+.mini-btn {
     width: 64px;
     font-size: 12px;
     text-align: center;
@@ -1105,6 +1116,15 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     min-width: 1px;
     transition: all 0.5s;
 }
+
+.mini-btn:hover {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+
+}
+
 @media(min-width: 537px) {
     #email-check {
         position: absolute;
