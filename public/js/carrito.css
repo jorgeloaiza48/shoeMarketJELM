@@ -31,7 +31,7 @@
 }
 tr td{
     border-bottom:1px solid gainsboro; 
-    border-top:1px solid gainsboro; 
+    padding: 5px 0px;
 }
 #carrito #lista-carrito tbody tr >td{   
     height: 30px;

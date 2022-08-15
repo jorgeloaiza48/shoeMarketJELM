@@ -50,103 +50,119 @@
 
 <div class="principal-userList">
 
-    <div class="principal-userList-img" >
-    <img src="../../img/user/<%= usuario.image %>" alt="foto-usuario">
+    <div class="principal-userList-img">
+        <img src="../../img/user/<%= usuario.image %>" alt="foto-usuario">
     </div>
 
     <div class="principal-userList-documento">
-    <P><%= usuario.document %></P>
+        <P>
+            <%= usuario.document %>
+        </P>
     </div>
 
     <div class="principal-userList-nombre">
-    <p><%= usuario.first_name %></p>
+        <p>
+            <%= usuario.first_name %>
+        </p>
     </div>
 
     <div class="principal-userList-apellido">
-    <p><%= usuario.last_name %></p>
+        <p>
+            <%= usuario.last_name %>
+        </p>
     </div>
 
     <div class="principal-userList-email">
-    <p><%= usuario.email %></p>
+        <p>
+            <%= usuario.email %>
+        </p>
     </div>
 
     <div class="principal-userList-fecha">
-    <p><%= usuario.date_of_birth %></p>
+        <p>
+            <%= usuario.date_of_birth %>
+        </p>
     </div>
 
     <div class="principal-userList-direccion">
-    <p><%= usuario.adress %></p>
+        <p>
+            <%= usuario.adress %>
+        </p>
     </div>
 
     <div class="principal-userList-rol">
-    <p><%= usuario.roles.name %></p>
+        <p>
+            <%= usuario.roles.name %>
+        </p>
     </div>
 
     <div class="principal-userList-status">
-    <p><%= usuario.status %></p>
+        <p>
+            <%= usuario.status %>
+        </p>
     </div>
 
 
-<div class="div-form-delete-edit-users">
-    
-            <form action="/admin/usuario/editar/<%= usuario.id %>" method="get">
-                <button type="submit" name="editar" id="delete" class="admin-but">
-                  <p>EDITAR</p>
-                </button>
-            </form>
-    <form action="/admin/usuario/activar/<%= usuario.id %>?_method=PUT" method="POST">
-        <button type="submit" name="delete" id="delete" class="admin-but">
-           <p>ACTIVAR</p>
-        </button>
-    </form>
-</div>
+    <div class="div-form-delete-edit-users">
+
+        <form action="/admin/usuario/editar/<%= usuario.id %>" method="get">
+            <button type="submit" name="editar" id="delete" class="mini-btn">
+                Editar
+            </button>
+        </form>
+        <form action="/admin/usuario/activar/<%= usuario.id %>?_method=PUT" method="POST">
+            <button type="submit" name="delete" id="delete" class="mini-btn-delete ">
+                Activar
+            </button>
+        </form>
+    </div>
 </div> <!-- principal-userList -->
 <!-- </section> -->
 
 <section class="section-destacados-admin" id="vista-usuarios">
 
-<img src="../../img/user/<%= usuario.image %>" alt="foto-usuario">
-<P><STRONG>Documento: </STRONG>
-    <%= usuario.document %>
-</P>
-<p><strong>Nombre:</strong><br>
-    <%= usuario.first_name %>
-</p>
-<p><strong>Apellido:</strong><br>
-    <%= usuario.last_name %>
-</p>
-<p><strong>Correo Electrónico:</strong><br>
-    <%= usuario.email %>
-</p>
-<p><strong>Fecha de nacimiento: </strong><br>
-    <%= usuario.date_of_birth %>
-    
-</p>
-<p><strong>Dirección: </strong><br>
-    <%= usuario.adress %>
-</p>
-<p><strong>Rol: </strong><br>
-    <%= usuario.roles.name %>
-</p>
+    <img src="../../img/user/<%= usuario.image %>" alt="foto-usuario">
+    <P><STRONG>Documento: </STRONG>
+        <%= usuario.document %>
+    </P>
+    <p><strong>Nombre:</strong><br>
+        <%= usuario.first_name %>
+    </p>
+    <p><strong>Apellido:</strong><br>
+        <%= usuario.last_name %>
+    </p>
+    <p><strong>Correo Electrónico:</strong><br>
+        <%= usuario.email %>
+    </p>
+    <p><strong>Fecha de nacimiento: </strong><br>
+        <%= usuario.date_of_birth %>
 
-<p><strong>Estado: </strong><br>
-    <%= usuario.status %>
-</p>
+    </p>
+    <p><strong>Dirección: </strong><br>
+        <%= usuario.adress %>
+    </p>
+    <p><strong>Rol: </strong><br>
+        <%= usuario.roles.name %>
+    </p>
+
+    <p><strong>Estado: </strong><br>
+        <%= usuario.status %>
+    </p>
 
 
 
-<div class="div-form-delete-edit-users">
-    
-            <form action="/admin/usuario/editar/<%= usuario.id %>" method="get">
-                <button type="submit" name="editar" id="delete" class="admin-but">
-                    <strong>EDITAR</strong>
-                </button>
-            </form>
-    <form action="/admin/usuario/activar/<%= usuario.id %>?_method=PUT" method="POST">
-        <button type="submit" name="delete" id="delete" class="admin-but">
-            <strong>ACTIVAR</strong>
-        </button>
-    </form>
-</div>
+    <div class="div-form-delete-edit-users">
+
+        <form action="/admin/usuario/editar/<%= usuario.id %>" method="get">
+            <button type="submit" name="editar" id="delete" class="form__button">
+                Editar
+            </button>
+        </form>
+        <form action="/admin/usuario/activar/<%= usuario.id %>?_method=PUT" method="POST">
+            <button type="submit" name="delete" id="delete" class="btn-delete">
+                Activar
+            </button>
+        </form>
+    </div>
 
 </section>

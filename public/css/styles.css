@@ -518,7 +518,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     align-items: center;
     font-size: small;
     justify-content: center;
-    background-color: rgb(232 207 207);
+    background-color: black;
+    color: white;
     /* margin-top: 0px;
     margin-bottom: 0px; */
     height: 30px;
@@ -532,7 +533,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .btn-search {
-    background-color: rgb(232 207 207);
+    background-color: rgb(0, 0, 0);
     border-radius: 5px;
     height: 30px;
     min-height: 10px;
@@ -546,7 +547,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .principal-form-boton2 form button .fa-search {
-    color: rgb(44, 44, 44);
+    color: rgb(255, 255, 255);
     cursor: pointer;
 }
 
@@ -632,8 +633,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 
 .formEditUser {
-    border: solid 2px gainsboro;
-    background-color: rgb(232, 207, 207);
+    background-color: #efeff4;
     border-radius: 10px;
     margin: 0 auto;
     margin-top: 20px;
@@ -701,8 +701,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .initials {
-    background-color: #e8cfcf;
-    color: black;
+    background-color: #efeff4;
+    color: rgb(0, 0, 0);
     border-radius: 50px;
     font-size: 18px;
     padding: 6px;
@@ -861,7 +861,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     }
 
     .main-register .form-Reg {
-        background-color: rgb(232, 207, 207);
         /* border: solid 5px blue; */
         border-radius: 10px;
         display: flex;
@@ -1532,8 +1531,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     }
 
     .formEditUser {
-        border: solid 2px gainsboro;
-        background-color: rgb(232, 207, 207);
         margin-bottom: 20px;
         width: 70%;
         max-width: 1200px;
@@ -2548,7 +2545,7 @@ i {
 
 
 .main-carrito {
-    background-color: #cfcccc;
+    background-color: #efeff4;
     margin-top: 50px;
     margin-left: auto;
     margin-right: auto;
@@ -2557,6 +2554,7 @@ i {
     border-radius: 10px;
     padding-top: 100px;
     padding-bottom: 100px;
+    margin-bottom: 25px;
 
 }
 
@@ -2708,7 +2706,8 @@ i {
 .cont-cupon input {
     margin-right: 15px;
     padding-left: 10px;
-    width: 65%;
+    width: 70%;
+    border-radius: 10px;
 }
 
 .cupon-descuento__form {
@@ -2806,7 +2805,7 @@ i {
 }
 
 .descuento-flex {
-    display: flex;
+    
     justify-content: space-between;
 
 }
@@ -3287,8 +3286,7 @@ main form .text-aviso p {
 }
 
 .form-Reg {
-    background-color: rgb(232, 207, 207);
-    border: solid 5px gainsboro;
+    background-color: #efeff4;
     border-radius: 10px;
     margin: 20px;
     margin-left: auto;
@@ -3363,8 +3361,7 @@ main form .text-aviso p {
 }
 
 .form-login {
-    border: solid 5px gainsboro;
-    background-color: rgb(232, 207, 207);
+    background-color: #efeff4;
     border-radius: 15px;
     display: flex;
     flex-wrap: wrap;
@@ -3608,7 +3605,7 @@ main form .text-aviso p {
 
 
 .form-create {
-    background-color: rgb(232, 207, 207);
+    background-color: #efeff4;
     border-radius: 10px;
     max-width: 1200px;
     margin: 20px;
@@ -3620,7 +3617,7 @@ main form .text-aviso p {
 }
 
 .btn-delete {
-    background-color: #c44b52;
+    background-color: #a54b50;
     border: 1px solid grey;
     border-radius: 10px;
     color: white;
@@ -3629,8 +3626,8 @@ main form .text-aviso p {
 }
 
 .btn-delete:hover {
-    background-color: #c44b52;
-    color: white;
+    background-color: #d86464;
+    color: rgb(255, 255, 255);
     -webkit-transform: scale(1.2);
     transform: scale(1.2);
 
@@ -3958,6 +3955,8 @@ main form .text-aviso p {
     border-radius: 10px;
     min-height: 400px;
     min-width: 280px;
+    padding: 15px 10px;
+    
 }
 
 .fila-carrito-price {
@@ -4031,17 +4030,17 @@ main form .text-aviso p {
 }
 
 .btn-finalizar-carrito{
-    background-color: rgb(217 188 227);
-    color: black;
+    background-color: rgb(172 46 216);
+    color: rgb(255, 255, 255);
 }
 .btn-finalizar-carrito:hover{
-    background-color: rgb(217 188 227);
-    color: black;
+    background-color: rgb(195, 131, 216);
 }
 .btn-cupon{
 background-color: #ffffff;
 color: black;
 min-width: 127px;
+font-weight: 500;
 }
 .btn-cupon:hover{
     background-color: #ffffff;
@@ -4079,12 +4078,24 @@ div.produc {
     min-width: 10px;
     width: 10px;
     height: 10px;
-    background-color: #e8cfcf;
+    background-color: #000000;
     display: flex;
     justify-content: center;
     align-items: center;
 
 
+}
+.news-letter-btn i{
+    color: white;
+}
+.fa-lock{
+    color: #000000;
+}
+.fa-cart-shopping{
+color: #000000;
+}
+.fa-bars{
+    color: #000000;
 }
 
 .div-newsletter {
