@@ -1,5 +1,5 @@
 
-window.addEventListener("load", function (event) {
+window.addEventListener("DOMContentLoaded", function (event) {
 
     let probandoCarrito = document.querySelector(".probandoCarrito")
     let fila1Nombre = document.querySelector(".fila1-nombre")
@@ -9,7 +9,7 @@ window.addEventListener("load", function (event) {
     let tablaCarrito = document.querySelector(".tabla-carrito")
     let totalPrice = document.querySelector(".contenedor-total__price")
     let filaCarritoPrice = document.querySelector("#hola")
-    let vaciarCarritoDelLS = document.getElementById('vaciar-carrito-del-LS'); //botón para vaciar carrito del LS
+    let vaciarCarritoDelLS = document.getElementById('vaciar-carrito'); //botón para vaciar carrito del LS
     
     if(localStorage.getItem('platillos') === null){
         console.log("locastorage vacío " + localStorage)
@@ -34,7 +34,9 @@ window.addEventListener("load", function (event) {
                 `<td class="fila-carrito-price">` + "$" + producto.precio * producto.cantidad + "</td>" +
                 `<td><a href="#" class="borrar-curso" data-id="${producto.id}">X</a> </td>`
             "</tr>"
-
+            console.log(" Esta es la imagen " + producto.imagen)
+            console.log(" Esta es el nombre " + producto.nombre)
+            console.log(" Esta es la cantidad " + producto.cantidad)
 
 
         });

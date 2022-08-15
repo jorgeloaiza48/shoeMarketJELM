@@ -47,49 +47,63 @@ window.addEventListener("load", function (event) {
                let curso = event.target.closest('.produc')//captura el contenedor padre
                //let curso = event.target.parentNode;//captura el contenedor padre
                // Enviamos el curso seleccionado para tomar sus datos
-               leerDatosProducto(curso);
+               const productId = curso.querySelector('.agregarCarrito').getAttribute('data-id') //id del producto seleccionado
+               leerDatosProducto(productId);
           }
      }
 
      // Lee los datos del curso
-     function leerDatosProducto(curso) {
-          let infoCurso = {
-               imagen: curso.querySelector('img').src, //imagen del producto
-               nombre: curso.querySelector('.name').textContent, //nombre del producto
-               precio: curso.querySelector('.price').textContent, //precio del producto
-               id: curso.querySelector('.agregarCarrito').getAttribute('data-id'), //id del producto seleccionado
-               cantidad: 1
-          }
-
-
-          if (articulosCarrito.some(curso => curso.id === infoCurso.id)) {
-               let cursos = articulosCarrito.map(curso => {
-                    if (curso.id === infoCurso.id) {
-                         curso.cantidad++;
-                         return curso;
-                    } else {
-                         return curso;
-                    }
-               })
-               articulosCarrito = [...cursos];
-          } else {
-               articulosCarrito = [...articulosCarrito, infoCurso];
-          }
-
-          carritoHTML();
-
+     async function  leerDatosProducto(productId) {
+          
           if(localStorage.getItem('platillos') === null){
-               localStorage.setItem('platillos', JSON.stringify(articulosCarrito))//guarda los productos en el LocalStorage
+               const listproducts = []
+
+               fetch(`http://localhost:4000/api/products/detail/${productId}`)
+               .then((response)=> response.json())
+               .then((data) => {
+                    console.log(data)
+                    listaProductos.push(data)
+                    localStorage.setItem("platillos",JSON.stringify(listaProductos))
+               })
                
           }
-          else{
-               let platillosLS = [];
-               platillosLS = JSON.parse(localStorage.getItem("platillos"));               
-               platillosLS.push(articulosCarrito)
-               console.log(platillosLS)
-               console.log(" articulos carrito " + articulosCarrito)
-               localStorage.setItem('platillos', JSON.stringify(platillosLS))//guarda los productos en el LocalStorage               
-          }
+          // let infoProducto = {
+          //      imagen: producData.img, //imagen del producto
+          //      nombre: producData.name, //nombre del producto
+          //      // precio: producData, //precio del producto
+          //      id: producData.id,//id del producto seleccionado
+          //      cantidad: 1
+          // }
+          // console.log(infoProducto)
+
+          // if (articulosCarrito.some(curso => curso.id === infoCurso.id)) {
+          //      let cursos = articulosCarrito.map(curso => {
+          //           if (curso.id === infoCurso.id) {
+          //                curso.cantidad++;
+          //                return curso;
+          //           } else {
+          //                return curso;
+          //           }
+          //      })
+          //      articulosCarrito = [...cursos];
+          // } else {
+          //      articulosCarrito = [...articulosCarrito, infoCurso];
+          // }
+
+          // carritoHTML();
+
+          // if(localStorage.getItem('platillos') === null){
+          //      localStorage.setItem('platillos', JSON.stringify(articulosCarrito))//guarda los productos en el LocalStorage
+               
+          // }
+          // else{
+          //      let platillosLS;
+          //      platillosLS = JSON.parse(localStorage.getItem("platillos"));               
+          //      platillosLS.push(articulosCarrito)
+          //      console.log(platillosLS)
+          //      console.log(" articulos carrito " + articulosCarrito)
+          //      localStorage.setItem('platillos', JSON.stringify(platillosLS))//guarda los productos en el LocalStorage               
+          // }
           //localStorage.setItem('platillos', JSON.stringify(articulosCarrito))//guarda los productos en el LocalStorage
           //guardarPlatilloLocalStorage(articulosCarrito)
      }
