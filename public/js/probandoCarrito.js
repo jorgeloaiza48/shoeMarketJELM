@@ -1,5 +1,6 @@
 
-window.addEventListener("load", function (event) {
+window.addEventListener("DOMContentLoaded", function (event) {
+
 
     let probandoCarrito = document.querySelector(".probandoCarrito")
     let fila1Nombre = document.querySelector(".fila1-nombre")
@@ -12,8 +13,7 @@ window.addEventListener("load", function (event) {
 
 
 
-
-    if (local) {
+    if (local && local.length > 0 ) {
 
         local.forEach(producto => {
             tablaCarrito.innerHTML +=
@@ -21,7 +21,7 @@ window.addEventListener("load", function (event) {
                 `<td class="fila-carrito">` + `<img class="img-carrito" src=${producto.img} >` + "</img>" + "</td>" +
                 `<td class="fila-carrito">` + producto.quantity + "</td>" +
                 `<td class="fila-carrito-price">` + "$" + producto.price + "</td>" +
-                `<td><a href="#" class="borrar-curso" data-id="${producto.id}">X</a> </td>`
+                `<td><button class="borrar-curso"  data-id="${producto.id}">X</button> </td>`
             "</tr>"
 
 
@@ -59,9 +59,29 @@ window.addEventListener("load", function (event) {
     function vaciarLocalStorage() {
         localStorage.clear()
         window.location.reload()
-        
+
     }
 
+    const anclas = document.querySelectorAll("button[data-id]")
+
+    anclas.forEach((ancla) => {
+        ancla.addEventListener("click", (event) => {
+            console.log(event.target.dataset.id)
+
+            let localPlatillos = JSON.parse(localStorage.getItem("platillos"))
+
+            const filterPlatillos = localPlatillos.filter((producto) => {
+
+                return event.target.dataset.id != producto.id
+            })
+            localStorage.setItem("platillos",JSON.stringify(filterPlatillos))
+            window.location.reload()
+
+
+        })
+
+
+    })
 
 
 

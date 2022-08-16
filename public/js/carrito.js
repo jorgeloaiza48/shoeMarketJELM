@@ -57,7 +57,6 @@ window.addEventListener("load", function (event) {
                })
                
           } else {
-               const listProducts = []
               let localStoragePlat = JSON.parse(localStorage.getItem("platillos")) 
 
 
@@ -80,8 +79,8 @@ window.addEventListener("load", function (event) {
                .then((response)=> response.json())
                .then((data) => {
 
-                    listProducts.push(...localStoragePlat,data.product)
-                    localStorage.setItem("platillos",JSON.stringify(listProducts))
+                    localStoragePlat.push(data.product)
+                    localStorage.setItem("platillos",JSON.stringify(localStoragePlat))
                })
 
 
