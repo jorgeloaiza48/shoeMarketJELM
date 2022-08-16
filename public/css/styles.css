@@ -1085,20 +1085,21 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .btn-detail-view{
     text-decoration: none;
 }
+
 .mini-btn-delete {
     width: 64px;
     font-size: 12px;
     text-align: center;
     padding: 0px 0px;
-    background-color: rgb(172 46 216);
-    border: 1px solid grey;
+    background-color: rgb(255, 255, 255);
+    border: rgb(90 34 130) 1px solid;
     border-radius: 10px;
-    color: white;
+    color: rgb(90 34 130);
     min-width: 1px;
     transition: all 0.5s;
 }
 .mini-btn-delete:hover{
-    background-color: #cd59e4;
+    background-color: rgb(90 34 130);
     color: white;
     -webkit-transform: scale(1.2);
     transform: scale(1.2);
@@ -3618,16 +3619,17 @@ main form .text-aviso p {
 }
 
 .btn-delete {
-    background-color: rgb(172 46 216);
-    border: 1px solid grey;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(90 34 130) ;
     border-radius: 10px;
-    color: white;
+    color: rgb(90 34 130) ;
     padding: 10px 20px;
     transition: all 0.5s
 }
 
+
 .btn-delete:hover {
-    background-color: #ce64d8;
+    background-color: rgb(90 34 130) ;
     color: rgb(255, 255, 255);
     -webkit-transform: scale(1.2);
     transform: scale(1.2);
@@ -4031,11 +4033,13 @@ main form .text-aviso p {
 }
 
 .btn-finalizar-carrito{
-    background-color: rgb(172 46 216);
-    color: rgb(255, 255, 255);
+    background-color: rgb(255 255 255);
+    color: rgb(90 34 130);
+    border: rgb(90 34 130) 1px solid;
 }
 .btn-finalizar-carrito:hover{
-    background-color: rgb(195, 131, 216);
+    background-color: rgb(90 34 130);
+    
 }
 .btn-cupon{
 background-color: #ffffff;

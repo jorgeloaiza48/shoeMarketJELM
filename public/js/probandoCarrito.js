@@ -16,13 +16,19 @@ window.addEventListener("DOMContentLoaded", function (event) {
     if (local && local.length > 0 ) {
 
         local.forEach(producto => {
-            tablaCarrito.innerHTML +=
-                `<tr class="filaCompleta-carrito" >` +
-                `<td class="fila-carrito">` + `<img class="img-carrito" src=${producto.img} >` + "</img>" + "</td>" +
-                `<td class="fila-carrito">` + producto.quantity + "</td>" +
-                `<td class="fila-carrito-price">` + "$" + producto.price + "</td>" +
-                `<td><button class="borrar-curso"  data-id="${producto.id}">X</button> </td>`
-            "</tr>"
+            if(producto.price === null){
+                localStorage.clear()
+                window.location.reload()
+            } else{
+
+                tablaCarrito.innerHTML +=
+                    `<tr class="filaCompleta-carrito" >` +
+                    `<td class="fila-carrito">` + `<img class="img-carrito" src=${producto.img} >` + "</img>" + "</td>" +
+                    `<td class="fila-carrito">` + producto.quantity + "</td>" +
+                    `<td class="fila-carrito-price">` + "$" + producto.price + "</td>" +
+                    `<td><button class="borrar-curso"  data-id="${producto.id}">X</button> </td>`
+                "</tr>"
+            }
 
 
 
@@ -31,6 +37,7 @@ window.addEventListener("DOMContentLoaded", function (event) {
         tablaCarrito.innerHTML +=
             `<tr class="filaCompleta-carrito" >` +
             `<td class="fila-carrito">` + "No hay productos en el carrito" + "</td>" +
+            `<td class="fila-carrito">` + "" + "</td>" +
             `<td class="fila-carrito">` +
             `<a href="/">` +
             `<button class="form__button">` + "Ir a Comprar" + "</button>"
@@ -62,10 +69,10 @@ window.addEventListener("DOMContentLoaded", function (event) {
 
     }
 
-    const anclas = document.querySelectorAll("button[data-id]")
+    const btns = document.querySelectorAll("button[data-id]")
 
-    anclas.forEach((ancla) => {
-        ancla.addEventListener("click", (event) => {
+    btns.forEach((btn) => {
+        btn.addEventListener("click", (event) => {
             console.log(event.target.dataset.id)
 
             let localPlatillos = JSON.parse(localStorage.getItem("platillos"))

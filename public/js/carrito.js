@@ -49,7 +49,7 @@ window.addEventListener("load", function (event) {
           if(localStorage.getItem('platillos') === null){
                const listProducts = []
 
-               fetch(`http://localhost:4000/api/products/detail/${productId}`)
+               fetch(`https://shoemarket.herokuapp.com/api/products/detail/${productId}`)
                .then((response)=> response.json())
                .then((data) => {
                     listProducts.push(data.product)
@@ -59,23 +59,7 @@ window.addEventListener("load", function (event) {
           } else {
               let localStoragePlat = JSON.parse(localStorage.getItem("platillos")) 
 
-
-              
-          //    if(localStoragePlat.some(producto => producto.id === productId)){
-          //      let algo = localStoragePlat.map(producto=>{
-          //           if(producto.id === productId){
-          //                producto.cantidad++;
-          //                return producto
-          //           } else {
-          //                return producto
-          //           }
-          //      })
-          //      localStoragePlat = [...algo];
-          //    } else {
-          //      localStoragePlat = [...algo,];
-          //    }
-
-              fetch(`http://localhost:4000/api/products/detail/${productId}`)
+              fetch(`https://shoemarket.herokuapp.com/api/products/detail/${productId}`)
                .then((response)=> response.json())
                .then((data) => {
 
