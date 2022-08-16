@@ -1,4 +1,4 @@
-window.addEventListener("load", function (event) {
+window.addEventListener("DOMContentLoaded", function (event) {
     
      let listaProductos = document.querySelector('#main-home'); // home donde se muestra todos los productos
      let contenedorCarrito = document.querySelector('#lista-carrito tbody'); //tabla en el carrito
@@ -10,6 +10,23 @@ window.addEventListener("load", function (event) {
      let containerCarrito = document.querySelector(".containerCarrito")
      let prodAgregado = document.querySelector(".prodAgregado")
      let  platillos = document.getElementById('lista-platillos')
+
+    const btns = document.querySelectorAll("button[data-id]")
+    
+     btns.forEach((btn) => {
+          btn.addEventListener("click", (event) => {
+               event.target.classList.remove("form__button")
+               event.target.classList.remove("btn-productHome")
+               event.target.classList.add("hover-agregando")
+          })
+          btn.addEventListener("mouseleave", (event) => {
+               event.target.classList.add("form__button")
+               event.target.classList.add("btn-productHome")
+               event.target.classList.remove("hover-agregando")
+          })
+  
+  
+      })
 
 
 
@@ -23,9 +40,9 @@ window.addEventListener("load", function (event) {
      function cargarEventListeners(event) {
                listaProductos.addEventListener("click", agregarProducto);                          
                // Cuando se elimina un curso del carrito
-               carrito.addEventListener("click", eliminarProducto);
+               // carrito.addEventListener("click", eliminarProducto);
                // Al Vaciar el carrito
-               vaciarCarritoBtn.addEventListener("click", vaciarCarrito);
+               // vaciarCarritoBtn.addEventListener("click", vaciarCarrito);
              
              }
 

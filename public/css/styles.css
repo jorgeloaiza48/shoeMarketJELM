@@ -1082,9 +1082,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     }
 
 }
-.btn-detail-view{
-    text-decoration: none;
-}
+
 
 .mini-btn-delete {
     width: 64px;
@@ -1793,6 +1791,16 @@ header {
 }
 
 .btn-productHome {
+    width: 167px;
+    padding: 10px;
+}
+.hover-agregando{
+    background-color: rgb(91 35 130);
+    border: 1px solid grey;
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    transition: all 0.8s;
     width: 167px;
     padding: 10px;
 }
@@ -2961,7 +2969,7 @@ i {
 .name-pr__cuota {
     font-size: 20px;
     font-weight: 700;
-    color: rgb(172 46 216);
+    color: rgb(90 34 130)
 
 }
 
@@ -2972,7 +2980,7 @@ i {
 .name-pr__off {
     font-size: 20px;
     font-weight: 700;
-    color: rgb(172 46 216);
+    color: rgb(90 34 130);
     margin-bottom: 15px;
 }
 
@@ -3056,7 +3064,7 @@ i {
 .size {
     display: flex;
     justify-content: center;
-    margin-bottom: 15px;
+    margin-bottom: 40px;
 
 
 }
@@ -3099,6 +3107,7 @@ i {
 .art-size__title {
     font-size: 20px;
     margin-top: 15px;
+    margin-bottom: 25px;
 }
 
 .desc-comp {
@@ -3158,7 +3167,7 @@ i {
 
     .name-pr__price {
         margin-top: 0px;
-        margin-bottom: 8px;
+        margin-bottom: 25px;
     }
 
 
@@ -3170,7 +3179,7 @@ i {
 
     .name-pr__off {
         margin-top: 0px;
-        margin-bottom: 10px;
+        margin-bottom: 20px;
     }
 
     .select {
@@ -3221,14 +3230,7 @@ i {
 
 }
 
-@media (min-width: 1200px) {
 
-    .p-detail {
-        padding: 10px;
-
-    }
-
-}
 
 
 
@@ -3863,6 +3865,14 @@ main form .text-aviso p {
     transition: all 0.8s;
 
 }
+.hover-agregando-detail{
+    background-color: rgb(90 34 130);
+    border: 1px solid grey;
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    transition: all 0.8s;
+}
 .btn-delete-carrito{
         background-color:  #e84750;
         border-radius: 15px;
@@ -3955,7 +3965,8 @@ main form .text-aviso p {
 
 .tabla-carrito {
     background-color: white;
-    border-radius: 10px;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
     min-height: 400px;
     min-width: 280px;
     padding: 15px 10px;
@@ -3981,9 +3992,17 @@ main form .text-aviso p {
 }
 .div-colmuna-nombre{
     font-weight: 500;
+    font-size: 25px;
 }
 .div-colmuna-precio{
     font-weight: 500;
+    font-size: 25px;
+
+}
+.div-colmuna-cant{
+font-weight: 500;
+font-size: 25px;
+
 }
 .x-carrito{
     min-width: 1px;
@@ -4001,6 +4020,15 @@ main form .text-aviso p {
     background-color: white;
     padding: 20px;
     text-align: end;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.div-price-home{
+    display: flex;
+    justify-content: center;
 }
 .contact-form__input {
     border: none;
@@ -4052,6 +4080,10 @@ main form .text-aviso p {
     .tabla-carrito {
        
         min-width: 600px
+    }
+    .div-btn-carrito-vaciar{
+        min-width: 600px
+
     }
 }
 

@@ -1,5 +1,5 @@
 
-    window.addEventListener('load',function(event){
+    window.addEventListener('DOMContentLoaded',function(event){
      
       let documento = document.querySelector('#documento');
       let nombre = document.querySelector("#nombre");

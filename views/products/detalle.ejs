@@ -58,9 +58,9 @@
                                     </div>
                             </section>
                             <% } %>
+                             
                                 <section class="desc-comp">
-                                    <!-- <button type="submit" class="desc-comp__but" >Agregar al carrito</button> -->
-                                    <a href="#" class="u-full-width button-primary button input agregar-carrito form__button btn-detail-view" data-id="3">Agregar Al Carrito</a>
+                                    <button class="agregar-carrito form__button btn-detail-view" data-id="<%= producto.id %>">Agregar Al Carrito</button>
                                 </section>
                     </article>
                 </article>
@@ -90,6 +90,8 @@
                             <% }  %>
             </main>
             <%- include("../partials/footer") %>
+            <script src="/js/detalle.js"></script>
+
     </body>
 
     </html>
