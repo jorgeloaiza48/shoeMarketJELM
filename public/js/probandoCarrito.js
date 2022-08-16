@@ -1,5 +1,5 @@
 
-window.addEventListener("DOMContentLoaded", function (event) {
+window.addEventListener("load", function (event) {
 
     let probandoCarrito = document.querySelector(".probandoCarrito")
     let fila1Nombre = document.querySelector(".fila1-nombre")
@@ -10,17 +10,7 @@ window.addEventListener("DOMContentLoaded", function (event) {
     let totalPrice = document.querySelector(".contenedor-total__price")
     let filaCarritoPrice = document.querySelector("#hola")
     let vaciarCarritoDelLS = document.getElementById('vaciar-carrito'); //botón para vaciar carrito del LS
-    
-    if(localStorage.getItem('platillos') === null){
-        console.log("locastorage vacío " + localStorage)
-    }
-    else{
-        console.log("localstoraeg no está vacío " + localStorage)
-        console.log("longitud del LS " + local.length)
-        console.log(localStorage)
-       
-    }
-    let btnDeleteCarrito = document.querySelector("btn-delete-carrito")
+   
 
 
     if (local) {
@@ -28,15 +18,13 @@ window.addEventListener("DOMContentLoaded", function (event) {
         local.forEach(producto => {
             tablaCarrito.innerHTML +=
                 `<tr class="filaCompleta-carrito" >` +
-                `<td class="fila-carrito">` + `<img class="img-carrito" src=${producto.imagen} >` + "</img>" + "</td>" +
-                `<td class="fila-carrito">` + producto.nombre + "</td>" +
-                `<td class="fila-carrito">` + producto.cantidad + "</td>" +
-                `<td class="fila-carrito-price">` + "$" + producto.precio * producto.cantidad + "</td>" +
+                `<td class="fila-carrito">` + `<img class="img-carrito" src=${producto.img} >` + "</img>" + "</td>" +
+                `<td class="fila-carrito">` + producto.name + "</td>" +
+                `<td class="fila-carrito">` + 1 + "</td>" +
+                `<td class="fila-carrito-price">` + "$ " + producto.price  + "</td>" +
                 `<td><a href="#" class="borrar-curso" data-id="${producto.id}">X</a> </td>`
             "</tr>"
-            console.log(" Esta es la imagen " + producto.imagen)
-            console.log(" Esta es el nombre " + producto.nombre)
-            console.log(" Esta es la cantidad " + producto.cantidad)
+            
 
 
         });
@@ -70,6 +58,7 @@ window.addEventListener("DOMContentLoaded", function (event) {
 
     function vaciarLocalStorage(){
                   localStorage.clear()
+                  window.location.reload()
              }
         
 

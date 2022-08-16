@@ -53,19 +53,51 @@ window.addEventListener("load", function (event) {
      }
 
      // Lee los datos del curso
-     async function  leerDatosProducto(productId) {
+     function  leerDatosProducto(productId) {
           
           if(localStorage.getItem('platillos') === null){
-               const listproducts = []
-
+               const listProducts = []
                fetch(`http://localhost:4000/api/products/detail/${productId}`)
                .then((response)=> response.json())
                .then((data) => {
-                    console.log(data)
-                    listaProductos.push(data)
-                    localStorage.setItem("platillos",JSON.stringify(listaProductos))
-               })
+                    console.log("Esto es data " + data)
+                    listProducts.push(data.product)
+                    localStorage.setItem("platillos",JSON.stringify(listProducts))
+               })             
                
+          }
+          else {
+               let aux = 0
+              let localStoragePlat = JSON.parse(localStorage.getItem("platillos")) 
+              localStoragePlat.forEach(function(producto){
+                              if(producto.id === productId){
+                                  producto.quantity = producto.quantity + 1 ; 
+                                  aux = 1
+                              }
+                         });
+                         if (aux === 1){
+                              localStorage.clear()
+                              localStorage.setItem('platillos', JSON.stringify(localStoragePlat));
+                         }
+                         else{
+                              const listProducts = []
+                              fetch(`http://localhost:4000/api/products/detail/${productId}`)
+                              .then((response)=> response.json())
+                              .then((data) => {
+                              console.log("Esto es data " + data)
+                              listProducts.push(data.product)
+                              localStorage.clear()
+                              localStorage.setItem("platillos",JSON.stringify(listProducts)) })        
+                         }
+
+          //     fetch(`http://localhost:4000/api/products/detail/${productId}`)
+          //      .then((response)=> response.json())
+          //      .then((data) => {
+          //           listProducts.push(...localStoragePlat,data.product)
+          //           localStorage.setItem("platillos",JSON.stringify(listProducts))
+               
+
+
           }
           // let infoProducto = {
           //      imagen: producData.img, //imagen del producto
