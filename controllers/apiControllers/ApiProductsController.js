@@ -76,7 +76,7 @@ const ApiProductsController = {
                     id: product.id,
                     name: product.name,
                     description: product.description,
-                    img: `http://localhost:4000/img/products/${product.image}`,
+                    img: `https://shoemarket.herokuapp.com/img/products/${product.image}`,
                     category: product.categorias.name,
                     price : product.price,
                     quantity : 1,
