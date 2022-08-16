@@ -2,52 +2,72 @@
 window.addEventListener("DOMContentLoaded", function (event) {
 
 
-    let probandoCarrito = document.querySelector(".probandoCarrito")
-    let fila1Nombre = document.querySelector(".fila1-nombre")
-    let fila1Precio = document.querySelector(".fila1-precio")
-    let fila1Img = document.querySelector(".fila1-img")
-    let local = JSON.parse(localStorage.getItem("platillos"))
-    let tablaCarrito = document.querySelector(".tabla-carrito")
-    let totalPrice = document.querySelector(".contenedor-total__price")
-    let filaCarritoPrice = document.querySelector("#hola")
+    const local = JSON.parse(localStorage.getItem("platillos"))
+    const tablaCarrito = document.querySelector(".tabla-carrito")
+    const totalPrice = document.querySelector(".contenedor-total__price")
+    const primeraPärte = document.querySelector(".primer-parte-carrito")
 
 
 
-    if (local && local.length > 0 ) {
+
+
+    if (local && local.length > 0) {
 
         local.forEach(producto => {
-            if(producto.price === null){
+            if (producto.price === null) {
                 localStorage.clear()
                 window.location.reload()
-            } else{
+            } else {
 
                 tablaCarrito.innerHTML +=
-                    `<tr class="filaCompleta-carrito" >` +
-                    `<td class="fila-carrito">` + `<img class="img-carrito" src=${producto.img} >` + "</img>" + "</td>" +
-                    `<td class="fila-carrito">` + producto.quantity + "</td>" +
-                    `<td class="fila-carrito-price">` + "$" + producto.price + "</td>" +
-                    `<td><button class="borrar-curso"  data-id="${producto.id}">X</button> </td>`
-                "</tr>"
+                    `<div class="div-tabla">` +
+                    `<div class="div-columna-img">` +
+                    `<img src=${producto.img} >` +
+                    "</div>" +
+                    `<div class="div-colmuna-cant">` +
+                    producto.quantity +
+                    "</div>" +
+                    `<div class="div-colmuna-precio">` +
+                    producto.price +
+                    "</div>" +
+                    `<div class="div-colmuna-btn">` +
+                    `<button class="x-carrito" data-id="${producto.id}">` +
+                    "X" +
+                    "</button>" +
+                    "</div>" +
+                    "</div>"
             }
 
-
-
         });
+    
+       
+        primeraPärte.innerHTML +=
+            `<div class="div-btn-carrito-vaciar">` +
+            `<button class="form__button" id="vaciar-carrito">` +
+            "Vaciar Carrito" +
+            "</button>" +
+            "</div>"
+
+
     } else {
         tablaCarrito.innerHTML +=
-            `<tr class="filaCompleta-carrito" >` +
-            `<td class="fila-carrito">` + "No hay productos en el carrito" + "</td>" +
-            `<td class="fila-carrito">` + "" + "</td>" +
-            `<td class="fila-carrito">` +
-            `<a href="/">` +
-            `<button class="form__button">` + "Ir a Comprar" + "</button>"
-            + `</a>` +
-            "</td>" +
-            "</tr>"
+                    `<div class="div-tabla">` +
+                    `<div class="div-colmuna-precio">` +
+                     "No hay productos en el carrito" +
+                    "</div>" 
+
+        primeraPärte.innerHTML +=
+            `<div class="div-btn-carrito-vaciar">` +
+            `<a href="/">` + 
+            `<button class="form__button">` +
+            "Ir a comprar" +
+            "</button>" +
+            "</a>" +
+            "</div>"
 
     }
 
-    let td = document.querySelectorAll(".fila-carrito-price")
+    let td = document.querySelectorAll(".div-colmuna-precio")
     let arrayPrecios = []
     let total = 0
     if (td) {
@@ -70,6 +90,7 @@ window.addEventListener("DOMContentLoaded", function (event) {
     }
 
     const btns = document.querySelectorAll("button[data-id]")
+    console.log(btns)
 
     btns.forEach((btn) => {
         btn.addEventListener("click", (event) => {
@@ -81,7 +102,7 @@ window.addEventListener("DOMContentLoaded", function (event) {
 
                 return event.target.dataset.id != producto.id
             })
-            localStorage.setItem("platillos",JSON.stringify(filterPlatillos))
+            localStorage.setItem("platillos", JSON.stringify(filterPlatillos))
             window.location.reload()
 
 
