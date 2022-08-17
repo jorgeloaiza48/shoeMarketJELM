@@ -66,7 +66,7 @@ export default function UserList() {
         <div className="list-container-user"  >
           <DataGrid
            rows={arrayUsers} disableSelectionOnClick
-           columns={columns} pageSize={5}
+           columns={columns} pageSize={8}
            rowsPerPageOptions={[1]}
           />
         </div>

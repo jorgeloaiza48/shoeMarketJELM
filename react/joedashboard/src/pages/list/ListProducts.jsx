@@ -11,12 +11,12 @@ import { Link } from "react-router-dom";
 
 
 export default function UserList() {
-  const { dataProducts, isLoadingProducts } = useAllProducts("https://shoemarket.herokuapp.com/api/products")
-  const { products, countByCategory } = !!dataProducts && dataProducts;
+  const { dataProducts } = useAllProducts("https://shoemarket.herokuapp.com/api/products")
+  const { products } = !!dataProducts && dataProducts;
   const [arrayProducts, setArrayProducts] = useState("")
 
-  const [ImglastProduct, setImglastProduct] = useState("")
-  const urlImgProducto = "http://localhost:4000/img/products/"
+  // const [ImglastProduct, setImglastProduct] = useState("")
+  // const urlImgProducto = "http://localhost:4000/img/products/"
 
 
   
@@ -76,7 +76,7 @@ export default function UserList() {
           <DataGrid
           className="datagrid-user"
            rows={arrayProducts} disableSelectionOnClick
-           columns={columns} pageSize={10}
+           columns={columns} pageSize={5}
            rowsPerPageOptions={[1]}
            rowHeight={150}
           />
