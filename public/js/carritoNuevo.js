@@ -21,7 +21,7 @@ window.addEventListener("DOMContentLoaded", function (event) {
                     `<div class="div-tabla">` +
                     `<div class="div-columna-img">` +
                     `<img src=${producto.img} >` +
-                    "</div>" +
+                    "</div>" + 
                     `<div class="div-colmuna-cant">` +
                     producto.quantity +
                     "</div>" +
