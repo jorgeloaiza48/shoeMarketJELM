@@ -19,6 +19,8 @@ const CardLastUser = ({ title, img, name, link, loading, lastName, email, birth,
           loadingc === false ?
             (
               <>
+              <div className='container-info'>
+
 
                 <img className='cardUser-img' src={img} alt="img" />
                 <p className='cardUser-info'>{name}</p>
@@ -27,6 +29,7 @@ const CardLastUser = ({ title, img, name, link, loading, lastName, email, birth,
                 <p className='cardUser-info'>{address}</p>
                 <p className='cardUser-info'>{rol}</p>
                 
+              </div>
                 {link ? (
                   <Link className='cardUser-link cardUser' to={`/${link}`}>
                     <button className='cardUser-btn'>Ver detalle</button>

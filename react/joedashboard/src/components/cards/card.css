@@ -132,11 +132,13 @@
 
 } */
 .container-card-product-first{
-    min-height: 342px;
+    min-height: 360px;
 
 }
 
-
+.container-info{
+min-height: 360px;
+}
 
 
 @media(min-width:576px) {
