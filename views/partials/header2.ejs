@@ -24,7 +24,7 @@
                 </form>
             </div>
             <div class="icono-carrito2">
-                <a href="/carrito"><i class="fa-solid fa-cart-shopping"></i></a>
+                <a class="label-relative" href="/carrito"><i class="fa-solid fa-cart-shopping"></i> <p class="cart-p cart-none"></p></a>
                 <% if (locals.isAdmin) { %>
                     <a href="/admin"><i class="fa-solid fa-lock"></i></a>
                     <% } %>
@@ -135,4 +135,5 @@
     </div>
 
     <script src="/js/header.js"></script>
+    <script src="/js/home.js"></script>
 </header>

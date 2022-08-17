@@ -1,8 +1,17 @@
 window.addEventListener("DOMContentLoaded", function (event) {
+
+    const local = JSON.parse(localStorage.getItem("platillos"))
     let burguer = document.querySelector(".burguer")
     let burguerList = document.querySelector(".burguer-list")
-
+    const cartP = document.querySelector(".cart-p")
+   
     
+    if (local && local.length > 0) {
+        cartP.classList.remove("cart-none")                    
+   } else{
+    cartP.classList.add("cart-none")                    
+
+   }
     burguer.addEventListener("click",function(){
         burguerList.classList.add("show")
         burguerList.classList.remove("none")
@@ -15,6 +24,8 @@ window.addEventListener("DOMContentLoaded", function (event) {
 
 
     })
+
+
 
 
 
