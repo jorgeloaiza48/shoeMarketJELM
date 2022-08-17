@@ -65,7 +65,7 @@ window.addEventListener("DOMContentLoaded", function (event) {
                     for(let i=0; i<localStorageProduct.length; i++){
                          if(JSON.stringify(localStorageProduct[i].id) === productId){
                             JSON.stringify(localStorageProduct[i].quantity++)
-                            //JSON.stringify(localStorageProduct[i].price)= JSON.stringify(localStorageProduct[i].price)*(JSON.stringify(localStorageProduct[i].quantity))
+                            //JSON.stringify(localStorageProduct[i].price)=JSON.stringify(localStorageProduct[i].price) * JSON.stringify(localStorageProduct[i].quantity)
                             aux = 1
                             console.log("Encontrado")
                          }
