@@ -20,33 +20,50 @@ window.addEventListener("DOMContentLoaded", function (event) {
         })
 
 
-     function  cargarAlCarrito(productId) {
-         
-         if(localStorage.getItem('platillos') === null){
-              const listProducts = []
+function cargarAlCarrito(productId) {
 
-              fetch(`https://shoemarket.herokuapp.com/api/products/detail/${productId}`)
-              .then((response)=> response.json())
-              .then((data) => {
-                   listProducts.push(data.product)
-                   localStorage.setItem("platillos",JSON.stringify(listProducts))
-              })
-              
-         } else {
-             let localStoragePlat = JSON.parse(localStorage.getItem("platillos")) 
+     if (localStorage.getItem('platillos') === null) {
 
-             fetch(`https://shoemarket.herokuapp.com/api/products/detail/${productId}`)
-              .then((response)=> response.json())
-              .then((data) => {
+          const listProducts = []
+          fetch(`https://shoemarket.herokuapp.com/api/products/detail/${productId}`)
+               .then((response) => response.json())
+               .then((data) => {
+                    listProducts.push(data.product)
+                    localStorage.setItem("platillos", JSON.stringify(listProducts))
+               })
 
-                   localStoragePlat.push(data.product)
-                   localStorage.setItem("platillos",JSON.stringify(localStoragePlat))
-              })
+     } 
+     else 
+           {   let aux = 0 
+               let localStorageProduct = JSON.parse(localStorage.getItem("platillos")) 
+               
+               console.log("Este es productId " , productId)  
+               
+               for(let i=0; i<localStorageProduct.length; i++){
+                    if(JSON.stringify(localStorageProduct[i].id) === productId){
+                       JSON.stringify(localStorageProduct[i].quantity++)
+                       //JSON.stringify(localStorageProduct[i].price)= JSON.stringify(localStorageProduct[i].price)*(JSON.stringify(localStorageProduct[i].quantity))
+                       aux = 1
+                       console.log("Encontrado")
+                    }
+               }                                                                                                                                
+               if(aux === 1){
+                    localStorage.setItem("platillos", JSON.stringify(localStorageProduct))
+               }
+                
+               else{
+                         fetch(`https://shoemarket.herokuapp.com/api/products/detail/${productId}`)
+                         .then((response) => response.json())
+                         .then((data) => {
+                         localStorageProduct.push(data.product)                                    
+                         //localStorage.clear()
+                         localStorage.setItem("platillos", JSON.stringify(localStorageProduct))
+                         })
+                    }
+          }          
+          
 
-
-         }
-         
-    }
+} //function leerDatosProducto(productId)  
     
  
 
