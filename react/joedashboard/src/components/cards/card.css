@@ -12,10 +12,7 @@
 .cardHome-link{
     text-decoration: none;
 }
-.cardHome-link:hover{
-    color: #98092f
 
-}
 
 .loading{
     margin-top: 30px;
@@ -26,6 +23,10 @@
     font-weight: bold;
     margin-top: 15px;
     margin-bottom: 15px;
+    color: black;
+}
+.cardHome:hover .cardHome-title{
+    color: rgb(90 34 130);;
 }
 .cardHome-quantity{
     font-size: 15px;
@@ -58,19 +59,26 @@
 }
 .cardUser-btn{
     border-radius: 10px;
-    border: 0.5px solid #936d19
+    border: 0.5px solid rgb(90 34 130);
+    background-color: white;
+    width: 100px;
+    padding: 3px;
+    background-color: white;
     
 }
 .cardUser-btn:hover{
-    background-color: #936d19;
+    background-color: rgb(90 34 130);
     color: white;
 }
 .cardProduct-btn{
     border-radius: 10px;
-    border: 0.5px solid #476397
+    border: 0.5px solid rgb(90 34 130);
+    width: 100px;
+    padding: 3px;
+    background-color: white;
 }
 .cardProduct-btn:hover{
-    background-color: #476397;
+    background-color: rgb(90 34 130);
     color: white;
 }
 .cardUser-info{
@@ -82,6 +90,9 @@
 .cardUser-title{
     font-weight: bold;
     font-size: 20px;
+    color: black;
+    
+    margin-bottom: 25px;
     
 }
 .cardHome-btn{
@@ -89,8 +100,15 @@
     font-size: 15px;
     margin-bottom: 20px;
     margin-right: 15px;
-    border: 0.5px solid #476397
+    border: 0.5px solid rgb(90 34 130);
+    width: 100px;
+    padding: 3px;
+    background-color: white;
 }
+
+
+
+
 .div-card-btn{
     justify-content: space-between;
 }
@@ -132,11 +150,13 @@
 
 } */
 .container-card-product-first{
-    min-height: 342px;
+    min-height: 360px;
 
 }
 
-
+.container-info{
+min-height: 360px;
+}
 
 
 @media(min-width:576px) {

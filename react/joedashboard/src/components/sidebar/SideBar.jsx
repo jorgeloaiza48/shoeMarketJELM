@@ -1,6 +1,8 @@
 import React from 'react'
 import "./sideBar.css"
-import logo from "./LOGO.png"
+import "../navBar/navBar.css"
+
+import logo from "./LogoV.png"
 import { MdDashboard } from "react-icons/md";
 import { FaUsers } from "react-icons/fa";
 import { FaProductHunt } from "react-icons/fa";
@@ -14,8 +16,16 @@ import { Link } from 'react-router-dom';
 
 
 const SideBar = () => {
+
+const hideSideBar = ()=>{
+  document.querySelector(".sideBar").classList.add("none")
+  document.querySelector(".sideBar").classList.remove("show")
+}
+
   return (
-    <div className='sideBar'>
+    <div className='sideBar none'
+    // onMouseLeave={hideSideBar}
+    >
       <Link to="/">
         <div className="top">
           <img className='logo' src={logo} alt="" />

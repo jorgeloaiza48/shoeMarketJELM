@@ -18,33 +18,34 @@
 
 .list-products__btn {
     border-radius: 10px;
-    background-color: aquamarine;
+    background-color: rgb(90 34 130);
 }
 
 .table-div {
     margin-left: auto;
     margin-right: auto;
-    border: 1px red solid;
 }
 
 .list-container{
     height: 600px;
-     width: 55%;
+     width: 90%;
      margin-left: auto;
      margin-right: auto;
      margin-top: 25px;
      background-color: #ffffff;
      border-radius: 10px;
+     max-width: 690px;
      
 }
 .list-container-user{
     height: 600px;
-     width: 85%;
+     width: 90%;
      margin-left: auto;
      margin-right: auto;
      margin-top: 25px;
      background-color: #ffffff;
      border-radius: 10px;
+     max-width: 900px;
 }
 
 .userListImg{
@@ -71,11 +72,17 @@
     border: none;
     border-radius: 10px;
     padding: 5px 10px;
-    background-color: #3b8db0;
-    color: white;
+    border: 1px solid rgb(90 34 130);;
+    background-color: white;
+    
+    color: black;
     cursor: pointer;
     margin-right: 5px;
-
+    
+}
+.userListDetail:hover{
+color: white;
+    background-color: rgb(90 34 130);
 }
 .userListDelete{
     
@@ -91,4 +98,7 @@
 
 .productListImg{
 width: 120px;
+}
+.css-r11z79-MuiDataGrid-root{
+    padding: 15px;
 }

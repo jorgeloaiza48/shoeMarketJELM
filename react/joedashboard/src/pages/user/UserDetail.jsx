@@ -11,7 +11,7 @@ const UserDetail = () => {
   const { userId } = useParams()
   console.log(userId)
 
-  const { dataUser, isLoadingUser } = useOneUser(`http://localhost:4000/api/users/detail/${userId}`)
+  const { dataUser, isLoadingUser } = useOneUser(`https://shoemarket.herokuapp.com/api/users/detail/${userId}`)
   const {  user } = !!dataUser && dataUser;
   const [usuario, setUsuario] = useState("")
   

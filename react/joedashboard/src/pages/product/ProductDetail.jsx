@@ -3,7 +3,7 @@ import NavBar from '../../components/navBar/NavBar'
 import SideBar from '../../components/sidebar/SideBar'
 import "./lastProduct.css"
 import useOneProduct from "../../Hooks/useOneProduct"
-import { useParams,Navigate } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import CardLastProduct from '../../components/cards/CardLastProduct'
 
 
@@ -11,7 +11,7 @@ const ProductDetail = () => {
   const { productid } = useParams()
 
 
-  const { dataProduct, isLoadingProduct } = useOneProduct(`http://localhost:4000/api/products/detail/${productid}`)
+  const { dataProduct, isLoadingProduct } = useOneProduct(`https://shoemarket.herokuapp.com/api/products/detail/${productid}`)
   const { product } = !!dataProduct && dataProduct;
   const [producto, setProducto] = useState("")
  
@@ -50,7 +50,7 @@ const ProductDetail = () => {
             loading={isLoadingProduct}
             img={img}
             name={`Nombre : ${name}`}
-            color="#476397"
+            color="rgb(90 34 130)"
             description={`Descripcion : ${description}`}
             categoria={`Categoria : ${category}`}
 

@@ -6,12 +6,12 @@ import useAllProducts from "../../Hooks/useAllProducts"
 import CardLastProduct from '../../components/cards/CardLastProduct'
 
 const LastProduct = () => {
-  const { dataProducts, isLoadingProducts } = useAllProducts("http://localhost:4000/api/products")
-  const { products, countByCategory } = !!dataProducts && dataProducts;
+  const { dataProducts, isLoadingProducts } = useAllProducts("https://shoemarket.herokuapp.com/api/products")
+  const { products } = !!dataProducts && dataProducts;
   const [lastProduct, setlastProduct] = useState("")
-  const [ImglastProduct, setImglastProduct] = useState("")
-  const urlImgProducto = "http://localhost:4000/img/products/"
-  const { description, name } = lastProduct
+  // const [ImglastProduct, setImglastProduct] = useState("")
+  // const urlImgProducto = "https://shoemarket.herokuapp.com/img/products/"
+  const { description, name,img } = lastProduct
   const [categoryProd, setCategoryProd] = useState("")
  
 
@@ -21,7 +21,7 @@ const LastProduct = () => {
 
     if (dataProducts) {
       setlastProduct(products[products.length - 1])
-      setImglastProduct(urlImgProducto + lastProduct.img)
+      // setImglastProduct(urlImgProducto + lastProduct.img)
 
     }
 
@@ -49,9 +49,9 @@ const LastProduct = () => {
           <CardLastProduct
             title="Ultimo producto creado"
             loading={isLoadingProducts}
-            img={ImglastProduct}
+            img={img}
             name={`Nombre : ${name}`}
-            color="#476397"
+            color="rgb(90 34 130)"
             description={`Descripcion : ${description}`}
             categoria={`Categoria : ${categoryProd}`}
 

@@ -7,13 +7,22 @@
     
 
 }
+.show{
+    display: block;
+}
 .navBar-title{
      color: #443c3c;
      font-weight: bold;
      font-size: 20px;
      padding-left: 25px;
      align-items: center;
-     padding-top: 15px;
+}
+.navBar-title:hover{
+  color:rgb(90 34 130); ;
+
+}
+.navBar-link{
+    text-decoration: none;
 }
 .wrapper{
     display: flex;
@@ -32,3 +41,21 @@
     font-size: 25px;
     margin-right: 5px;
 }
+.burguer-menu{
+    margin-left: 15px;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+@media(min-width:768px) {
+    .burguer-menu{
+        display: none;
+    }
+    .sideBar{
+        display: block;
+    }
+}
+
+
+
+

@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 
 
 export default function UserList() {
-  const { dataUsers } = useAllUsers("http://localhost:4000/api/users")
+  const { dataUsers } = useAllUsers("https://shoemarket.herokuapp.com/api/users")
   const { users } = !!dataUsers && dataUsers;
   const [arrayUsers, setArrayUsers] = useState("")
 
@@ -66,7 +66,7 @@ export default function UserList() {
         <div className="list-container-user"  >
           <DataGrid
            rows={arrayUsers} disableSelectionOnClick
-           columns={columns} pageSize={5}
+           columns={columns} pageSize={8}
            rowsPerPageOptions={[1]}
           />
         </div>

@@ -11,12 +11,12 @@ import { Link } from "react-router-dom";
 
 
 export default function UserList() {
-  const { dataProducts, isLoadingProducts } = useAllProducts("http://localhost:4000/api/products")
-  const { products, countByCategory } = !!dataProducts && dataProducts;
+  const { dataProducts } = useAllProducts("https://shoemarket.herokuapp.com/api/products")
+  const { products } = !!dataProducts && dataProducts;
   const [arrayProducts, setArrayProducts] = useState("")
 
-  const [ImglastProduct, setImglastProduct] = useState("")
-  const urlImgProducto = "http://localhost:4000/img/products/"
+  // const [ImglastProduct, setImglastProduct] = useState("")
+  // const urlImgProducto = "http://localhost:4000/img/products/"
 
 
   
@@ -42,7 +42,7 @@ export default function UserList() {
       field: '', headerName: 'Foto', width: 150, renderCell: (params) => {
         return (
           <div className="row-img">
-            <img className="productListImg" src={ urlImgProducto + params.row.img} alt="" />
+            <img className="productListImg" src={ params.row.img} alt="" />
           </div>
         )
       }
@@ -74,8 +74,9 @@ export default function UserList() {
         <NavBar />
         <div className="list-container"  >
           <DataGrid
+          className="datagrid-user"
            rows={arrayProducts} disableSelectionOnClick
-           columns={columns} pageSize={10}
+           columns={columns} pageSize={5}
            rowsPerPageOptions={[1]}
            rowHeight={150}
           />

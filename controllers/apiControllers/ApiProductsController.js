@@ -37,15 +37,15 @@ const ApiProductsController = {
                 });
 
 
-                let productResponse = products.map(element => {
+                let productResponse = products.map(product => {
                     let obj = {
-                        id: element.id,
-                        name: element.name,
-                        description: element.description,
-                        categorias: element.categorias,
-                        detail: `/api/products/detail/${element.id}`,
-                        img: element.image,
-                        category: element.categorias.name
+                        id: product.id,
+                        name: product.name,
+                        description: product.description,
+                        categorias: product.categorias,
+                        detail: `https://shoemarket.herokuapp.com/api/products/detail/${product.id}`,
+                        img: `https://shoemarket.herokuapp.com/img/products/${product.image}`,
+                        category: product.categorias.name
                     }
                     return obj
                 });
