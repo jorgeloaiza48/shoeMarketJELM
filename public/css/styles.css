@@ -1357,6 +1357,9 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     justify-content: space-around;
 
 }
+.product-edit form{
+    margin-bottom: 15px;
+}
 
 
 
