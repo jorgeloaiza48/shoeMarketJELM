@@ -1,19 +1,31 @@
 <div class="produc" id="lista-platillos">
+
     <a href="detalle/<%= product.id %>">
         <div class="container-first-cardHome">
+
             <div class="container-img-home">
                 <img src="/img/products/<%= product.image %>" alt="bota">
             </div>
-            <p class="name"><%= product.name %></p>
+
+            <p class="name">
+                <%= product.name %>
+            </p>
             <div class="div-price-home">
-                <p>$</p><p class="price"><%= product.price %></p>
+                <p>$</p>
+
+                <p class="price">
+                    <%= product.price %>
+                </p>
             </div>
         </div>
-    </a> 
-    <button class="agregarCarrito" data-id="<%= product.id %>">Agregar al carrito</button>
-    <!-- <p class="prodAgregado" data-id="<%= product.id %>"></p>  -->
-    <p><i class="fa-solid fa-star"></i></p>
+    </a>
+
+    <button class="agregarCarrito form__button btn-productHome" data-id="<%= product.id %>">
+        Agregar al carrito
+    </button>
+    <p class="prodAgregado" data-id="<%= product.id %>"></p> 
+    
 
 </div>
-<script src="/js/probandoCarrito.js"></script>
 
+<script src="/js/carrito.js"></script>

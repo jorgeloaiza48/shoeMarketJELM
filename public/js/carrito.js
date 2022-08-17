@@ -11,14 +11,6 @@ window.addEventListener("load", function (event) {
      let prodAgregado = document.querySelector(".prodAgregado")
      let  platillos = document.getElementById('lista-platillos')
 
-//     btnCarritoHeader.addEventListener("mouseover",function(){
-//      carrito.classList.add("show")
-//      carrito.classList.remove("none")
-//       })
-//     carrito.addEventListener("mouseleave",function(){
-//      carrito.classList.remove("show")
-//      carrito.classList.add("none")
-//       })
 
 
 
@@ -29,7 +21,6 @@ window.addEventListener("load", function (event) {
      })
 
      function cargarEventListeners(event) {
-               alert("Producto Agregado")     
                listaProductos.addEventListener("click", agregarProducto);                          
                // Cuando se elimina un curso del carrito
                carrito.addEventListener("click", eliminarProducto);
@@ -56,49 +47,59 @@ window.addEventListener("load", function (event) {
      function  leerDatosProducto(productId) {
           
           if(localStorage.getItem('platillos') === null){
+               console.log("LS null")
                const listProducts = []
                fetch(`http://localhost:4000/api/products/detail/${productId}`)
                .then((response)=> response.json())
                .then((data) => {
-                    console.log("Esto es data " + data)
                     listProducts.push(data.product)
                     localStorage.setItem("platillos",JSON.stringify(listProducts))
-               })             
+               })
                
-          }
+          } 
           else {
-               let aux = 0
-              let localStoragePlat = JSON.parse(localStorage.getItem("platillos")) 
-              localStoragePlat.forEach(function(producto){
+               console.log("LS NO null")
+                    let localStorageProduct = JSON.parse(localStorage.getItem("platillos"))  
+                    if (localStorageProduct.some(producto => producto.id === productId)){                           
+                         let LSAux = localStorageProduct.map((producto) =>{
                               if(producto.id === productId){
-                                  producto.quantity = producto.quantity + 1 ; 
-                                  aux = 1
+                                   producto.quantity++ ;
+                                   return producto
                               }
+                                        
                          });
-                         if (aux === 1){
-                              localStorage.clear()
-                              localStorage.setItem('platillos', JSON.stringify(localStoragePlat));
-                         }
-                         else{
-                              const listProducts = []
-                              fetch(`http://localhost:4000/api/products/detail/${productId}`)
-                              .then((response)=> response.json())
-                              .then((data) => {
-                              console.log("Esto es data " + data)
-                              listProducts.push(data.product)
-                              localStorage.clear()
-                              localStorage.setItem("platillos",JSON.stringify(listProducts)) })        
-                         }
-
-          //     fetch(`http://localhost:4000/api/products/detail/${productId}`)
-          //      .then((response)=> response.json())
-          //      .then((data) => {
-          //           listProducts.push(...localStoragePlat,data.product)
-          //           localStorage.setItem("platillos",JSON.stringify(listProducts))
-               
-
-
+                         lsP = []
+                         lsP.push(LSAux);
+                         localStorage.clear()
+                         localStorage.setItem("platillos",JSON.stringify(lsP))
+                    }    
+                    else {
+                         fetch(`http://localhost:4000/api/products/detail/${productId}`)
+                         .then((response)=> response.json())
+                         .then((data) => {
+                         localStorageProduct.push(data.product)
+                         localStorage.clear()
+                         localStorage.setItem("platillos",JSON.stringify(localStorageProduct))
+                         })
           }
+                   
+         }
+
+              
+          //    if(localStoragePlat.some(producto => producto.id === productId)){
+          //      let algo = localStoragePlat.map(producto=>{
+          //           if(producto.id === productId){
+          //                producto.cantidad++;
+          //                return producto
+          //           } 
+               //        else { return producto }
+          //      })
+          //      localStoragePlat = [...algo];
+          //    } else {
+          //      localStoragePlat = [...algo,];
+          //    }
+
+            
           // let infoProducto = {
           //      imagen: producData.img, //imagen del producto
           //      nombre: producData.name, //nombre del producto
@@ -140,25 +141,7 @@ window.addEventListener("load", function (event) {
           //guardarPlatilloLocalStorage(articulosCarrito)
      }
      
-    
-     function guardarPlatilloLocalStorage(platillo){
-                    let platillos;
-                    platillos = obtenerPlatillosLocalStorage();
-                    platillos.push(platillo);          
-                    localStorage.setItem('platillos',JSON.stringify(platillos));
-               }   
-                
- 
-     function obtenerPlatillosLocalStorage(){
-                    let platillosLS;
-                    if(localStorage.getItem('platillos') === null){
-                         platillosLS = [];
-                    }
-                    else{
-                         platillosLS = JSON.parse(localStorage.getItem("platillos"));
-                    }                   
-                    return platillosLS;
-               }    
+   
 
                     //      // Elimina el curso del carrito en el DOM
      function eliminarProducto(event) {

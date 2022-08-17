@@ -78,8 +78,8 @@ const ApiProductsController = {
                     description: product.description,
                     img: `http://localhost:4000/img/products/${product.image}`,
                     category: product.categorias.name,
-                    price: product.price,
-                    quantity: 1
+                    price : product.price,
+                    quantity : 1,
                 }
                 let respuesta = {
                     product: productResponse,
