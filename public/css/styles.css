@@ -1801,8 +1801,6 @@ header {
     color: rgb(255, 255, 255);
     padding: 10px 20px;
     transition: all 0.8s;
-    width: 167px;
-    padding: 10px;
 }
 
 .produc a {
@@ -3873,6 +3871,7 @@ main form .text-aviso p {
     padding: 10px 20px;
     transition: all 0.8s;
 }
+
 .btn-delete-carrito{
         background-color:  #e84750;
         border-radius: 15px;
