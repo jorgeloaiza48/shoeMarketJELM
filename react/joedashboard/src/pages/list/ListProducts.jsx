@@ -42,7 +42,7 @@ export default function UserList() {
       field: '', headerName: 'Foto', width: 150, renderCell: (params) => {
         return (
           <div className="row-img">
-            <img className="productListImg" src={ urlImgProducto + params.row.img} alt="" />
+            <img className="productListImg" src={ params.row.img} alt="" />
           </div>
         )
       }
@@ -74,6 +74,7 @@ export default function UserList() {
         <NavBar />
         <div className="list-container"  >
           <DataGrid
+          className="datagrid-user"
            rows={arrayProducts} disableSelectionOnClick
            columns={columns} pageSize={10}
            rowsPerPageOptions={[1]}

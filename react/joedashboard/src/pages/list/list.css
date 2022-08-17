@@ -29,22 +29,24 @@
 
 .list-container{
     height: 600px;
-     width: 55%;
+     width: 90%;
      margin-left: auto;
      margin-right: auto;
      margin-top: 25px;
      background-color: #ffffff;
      border-radius: 10px;
+     max-width: 690px;
      
 }
 .list-container-user{
     height: 600px;
-     width: 85%;
+     width: 90%;
      margin-left: auto;
      margin-right: auto;
      margin-top: 25px;
      background-color: #ffffff;
      border-radius: 10px;
+     max-width: 900px;
 }
 
 .userListImg{
@@ -91,4 +93,7 @@
 
 .productListImg{
 width: 120px;
+}
+.css-r11z79-MuiDataGrid-root{
+    padding: 15px;
 }

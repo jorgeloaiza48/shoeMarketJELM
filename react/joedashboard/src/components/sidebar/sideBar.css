@@ -1,11 +1,11 @@
 .sideBar {
-
     flex: 1;
     border-right: 0.5px solid rgb(188, 177, 177);
     
-    
-    
 
+}
+.none{
+    display: none;
 
 }
 
@@ -105,4 +105,12 @@
     }
 
 
+}
+@media(min-width:768px) {
+    .burguer-menu{
+        display: none;
+    }
+    .sideBar{
+        display: block;
+    }
 }
