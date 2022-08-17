@@ -11,21 +11,21 @@ import CardLastProduct from '../../components/cards/CardLastProduct'
 
 
 const Home = () => {
-  const { dataProducts, isLoadingProducts } = useAllProducts("http://localhost:4000/api/products")
+  const { dataProducts, isLoadingProducts } = useAllProducts("https://shoemarket.herokuapp.com/api/products")
   const { countProduts, products, countByCategory } = !!dataProducts && dataProducts;
   const [lastProduct, setlastProduct] = useState("")
   const [ImglastProduct, setImglastProduct] = useState("")
-  const urlImgProducto = "http://localhost:4000/img/products/"
+  const urlImgProducto = "https://shoemarket.herokuapp.com/img/products/"
   const { description, name } = lastProduct
   const [categoryProd, setCategoryProd] = useState("")
   const [qcategoryProd, setqcategoryProd] = useState("")
 
 
-  const { dataUsers, isLoadingUsers } = useAllUsers("http://localhost:4000/api/users")
+  const { dataUsers, isLoadingUsers } = useAllUsers("https://shoemarket.herokuapp.com/api/users")
   const { count, users } = !!dataUsers && dataUsers;
   const [lastUser, setlastUser] = useState("")
   const [ImglasUser, setImglasUser] = useState("")
-  const urlUserImage = "http://localhost:4000/img/user/"
+  const urlUserImage = "https://shoemarket.herokuapp.com/img/user/"
   const { first_name, last_name, image, email, adress, date_of_birth } = lastUser
   const [rolUser, setRolUser] = useState("")
 

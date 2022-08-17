@@ -7,7 +7,7 @@ import useAllProducts from "../../Hooks/useAllProducts"
 
 
 const ProductCategory = () => {
-  const { dataProducts, isLoadingProducts } = useAllProducts("http://localhost:4000/api/products")
+  const { dataProducts, isLoadingProducts } = useAllProducts("https://shoemarket.herokuapp.com/api/products")
   const { countByCategory } = !!dataProducts && dataProducts;
 
   const [categoryProd, setCategoryProd] = useState("")

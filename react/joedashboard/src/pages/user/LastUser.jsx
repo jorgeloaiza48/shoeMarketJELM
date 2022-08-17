@@ -7,25 +7,23 @@ import "./lastUser.css"
 
 
 const LastUser = () => {
-  const { dataUsers, isLoadingUsers } = useAllUsers("http://localhost:4000/api/users")
+  const { dataUsers, isLoadingUsers } = useAllUsers("https://shoemarket.herokuapp.com/api/users")
   const {  users } = !!dataUsers && dataUsers;
   const [lastUser, setlastUser] = useState("")
-  const [ImglasUser, setImglasUser] = useState("")
-  const urlUserImage = "http://localhost:4000/img/user/"
-  const { first_name, last_name, image, email, adress, date_of_birth } = lastUser
   const [rolUser, setRolUser] = useState("")
 
-
+  const { first_name, last_name, image, email, adress, date_of_birth } = lastUser
+  
   useEffect(() => {
-
+    
     if (dataUsers) {
       setlastUser(users[users.length - 1])
-      setImglasUser(urlUserImage + image)
-
+      
     }
-
-
+    
+    
   }, [dataUsers, users, lastUser.img, image])
+  
 
   useEffect(() => {
 

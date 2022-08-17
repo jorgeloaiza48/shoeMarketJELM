@@ -6,11 +6,11 @@ import useAllProducts from "../../Hooks/useAllProducts"
 import CardLastProduct from '../../components/cards/CardLastProduct'
 
 const LastProduct = () => {
-  const { dataProducts, isLoadingProducts } = useAllProducts("http://localhost:4000/api/products")
+  const { dataProducts, isLoadingProducts } = useAllProducts("https://shoemarket.herokuapp.com/api/products")
   const { products, countByCategory } = !!dataProducts && dataProducts;
   const [lastProduct, setlastProduct] = useState("")
   const [ImglastProduct, setImglastProduct] = useState("")
-  const urlImgProducto = "http://localhost:4000/img/products/"
+  const urlImgProducto = "https://shoemarket.herokuapp.com/img/products/"
   const { description, name } = lastProduct
   const [categoryProd, setCategoryProd] = useState("")
  

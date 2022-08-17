@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 
 
 export default function UserList() {
-  const { dataProducts, isLoadingProducts } = useAllProducts("http://localhost:4000/api/products")
+  const { dataProducts, isLoadingProducts } = useAllProducts("https://shoemarket.herokuapp.com/api/products")
   const { products, countByCategory } = !!dataProducts && dataProducts;
   const [arrayProducts, setArrayProducts] = useState("")
 
