@@ -27,7 +27,7 @@ let userApiController = {
                     delete element.dataValues.rol_id
                     delete element.dataValues.updated_at
                     delete element.dataValues.created_at
-                    element.dataValues.detail = `https://shoemarket.herokuapp.com/api/users/${element.dataValues.id}`
+                    element.dataValues.detail = `https://shoemarket.herokuapp.com/api/users/detail/${element.dataValues.id}`
                     element.dataValues.image = `https://shoemarket.herokuapp.com/img/user/${element.dataValues.image}`
 
                 })
