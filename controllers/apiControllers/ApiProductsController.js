@@ -44,7 +44,7 @@ const ApiProductsController = {
                         description: product.description,
                         categorias: product.categorias,
                         detail: `https://shoemarket.herokuapp.com/api/products/detail/${product.id}`,
-                        img: `https://shoemarket.herokuapp.com/img/user/${product.image}`,
+                        img: `https://shoemarket.herokuapp.com/img/products/${product.image}`,
                         category: product.categorias.name
                     }
                     return obj
