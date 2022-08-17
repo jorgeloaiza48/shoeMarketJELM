@@ -2,20 +2,26 @@
 
     <body>
         <%- include("../partials/header2") %>
+        <main id="main-home">
+
             <!-- Banner -->
             <div class="banner"></div>
             <!-- /Banner -->
-
-           
-
+            
+            
+            
             <section class="productos">
                 <% products.forEach(product=> { %>
                     <% if (product.status === "Enabled") { %>
                         <%- include("../components/productHome",{product:product}) %>
-                    <% } %>
+                        <% } %>
                  <% }) %>
-            </section>
-        <%- include("../partials/footer") %>
+                </section>
+            </main>
+            
+            
+            <%- include("../partials/footer") %>
+            <script src="/js/home.js"></script>
 
     </body>
 

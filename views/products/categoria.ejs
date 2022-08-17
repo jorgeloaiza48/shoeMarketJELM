@@ -5,7 +5,7 @@
 
             <!-- *****************************INICIO MAIN****************************************** -->
 
-            <main>
+            <main id="main-home">
                 <% if (productos.length != 0) { %>
                  
                     <h3 class="all-product-title" ><%=categoria.name  %> </h3>
@@ -45,6 +45,8 @@
 
             <!-- ********************************FIN MAIN***************************************** -->
             <%- include("../partials/footer") %>
+            <script src="/js/listadoProductos.js"></script>
+
     </body>
 
     </html>
