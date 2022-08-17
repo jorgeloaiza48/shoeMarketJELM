@@ -23,15 +23,15 @@
     font-weight: bold;
     margin-top: 15px;
     margin-bottom: 15px;
-    color: rgb(90 34 130);;
+    color: black;
 }
 .cardHome:hover .cardHome-title{
-    color: rgb(90 34 130);;
+    color: rgb(90 34 130);
 }
 .cardHome-quantity{
     font-size: 15px;
     font-weight: bold;
-    color:#443c3c
+    color:rgb(90 34 130);
     
 
 }
