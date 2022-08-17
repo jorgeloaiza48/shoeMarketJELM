@@ -29,9 +29,8 @@ window.addEventListener("DOMContentLoaded", function (event) {
                     `<div class="div-colmuna-cant div-fila-carrito">` +
                     producto.quantity +
                     "</div>" +
-                    `<div class="div-colmuna-precio div-fila-carrito">` +
-                     
-                    producto.price +
+                    `<div class="div-colmuna-precio div-fila-carrito">` + "$ " +
+                    producto.price * producto.quantity +
                     "</div>" +
                     `<div class="div-colmuna-btn">` +
                     `<button class="x-carrito div-fila-carrito" data-id="${producto.id}">` +
@@ -75,15 +74,16 @@ window.addEventListener("DOMContentLoaded", function (event) {
     let total = 0
     if (td) {
         td.forEach((producto) => {
+            console.log(producto)
             if(producto){
-                let precio = parseInt(producto.outerText.replace("$", "0"))
+                let precio = parseInt(producto.outerText.replace("$ ", "0"))
                 total += precio
 
             }
             
         })
     }
-//dfdfdfdsf
+
     
     totalPrice.innerHTML += "$" + total
     

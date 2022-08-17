@@ -61,14 +61,14 @@ window.addEventListener("DOMContentLoaded", function (event) {
               {   let aux = 0 
                   let localStorageProduct = JSON.parse(localStorage.getItem("platillos")) 
                   
-                  console.log("Este es productId " , productId)  
+                //   console.log("Este es productId " , productId)  
                   
                   for(let i=0; i<localStorageProduct.length; i++){
                        if(JSON.stringify(localStorageProduct[i].id) === productId){
                           JSON.stringify(localStorageProduct[i].quantity++)
                           //JSON.stringify(localStorageProduct[i].price)= JSON.stringify(localStorageProduct[i].price)*(JSON.stringify(localStorageProduct[i].quantity))
                           aux = 1
-                          console.log("Encontrado")
+                        //   console.log("Encontrado")
                        }
                   }                                                                                                                                
                   if(aux === 1){
