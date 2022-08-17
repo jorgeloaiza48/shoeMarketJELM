@@ -6,7 +6,7 @@ window.addEventListener("DOMContentLoaded", function (event) {
     const tablaCarrito = document.querySelector(".tabla-carrito")
     const totalPrice = document.querySelector(".contenedor-total__price")
     const primeraPärte = document.querySelector(".primer-parte-carrito")
-    const cartP = document.querySelector(".cart-p")
+    
 
    
 

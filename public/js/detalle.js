@@ -2,21 +2,20 @@ window.addEventListener("DOMContentLoaded", function (event) {
     
     let agregarCarrito = document.querySelector(".agregar-carrito")
     const productId = agregarCarrito.getAttribute('data-id') //id del producto seleccionado
+    const cartP = document.querySelector(".cart-p")
+     const cartPXl = document.querySelector(".cart-p-xl")
 
    
         agregarCarrito.addEventListener("click", (event) => {
             event.target.classList.remove("form__button")
             event.target.classList.remove("btn-detail-view")
             event.target.classList.add("hover-agregando-detail")
-            cargarAlCarrito(productId)
          })
          agregarCarrito.addEventListener("mouseleave", (event) => {
               event.target.classList.add("form__button")
               event.target.classList.add("btn-detail-view")
               event.target.classList.remove("hover-agregando-detail")
          })
- 
- 
         })
 
 

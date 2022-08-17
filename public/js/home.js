@@ -4,6 +4,8 @@ window.addEventListener("DOMContentLoaded", function (event) {
      let agregarCarrito = document.querySelectorAll(".agregarCarrito")
      const btns = document.querySelectorAll("button[data-id]")
      const cartP = document.querySelector(".cart-p")
+     const cartPXl = document.querySelector(".cart-p-xl")
+
      const local = JSON.parse(localStorage.getItem("platillos"))
 
 
@@ -13,7 +15,8 @@ window.addEventListener("DOMContentLoaded", function (event) {
                event.target.classList.remove("form__button")
                event.target.classList.remove("btn-productHome")
                event.target.classList.add("hover-agregando")
-                    cartP.classList.remove("cart-none")                    
+                    // cartP.classList.remove("cart-none")                    
+                    // cartPXl.classList.remove("cart-none")                    
                
           })
           btn.addEventListener("mouseleave", (event) => {
