@@ -1,4 +1,4 @@
-window.addEventListener('load',function () {
+window.addEventListener('DOMContentLoaded',function () {
     
     let boton_limpiar_form = document.getElementById("boton-limpiar-form")
 

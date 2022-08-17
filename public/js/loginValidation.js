@@ -1,4 +1,4 @@
-window.addEventListener('load', function () {
+window.addEventListener('DOMContentLoaded', function () {
   let email = document.querySelector("#email")
   let password = document.querySelector('#password')
   let recordame = document.querySelector("#record")

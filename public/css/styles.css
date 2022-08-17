@@ -1082,23 +1082,22 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     }
 
 }
-.btn-detail-view{
-    text-decoration: none;
-}
+
+
 .mini-btn-delete {
     width: 64px;
     font-size: 12px;
     text-align: center;
     padding: 0px 0px;
-    background-color: rgb(172 46 216);
-    border: 1px solid grey;
+    background-color: rgb(255, 255, 255);
+    border: rgb(90 34 130) 1px solid;
     border-radius: 10px;
-    color: white;
+    color: rgb(90 34 130);
     min-width: 1px;
     transition: all 0.5s;
 }
 .mini-btn-delete:hover{
-    background-color: #cd59e4;
+    background-color: rgb(90 34 130);
     color: white;
     -webkit-transform: scale(1.2);
     transform: scale(1.2);
@@ -1792,6 +1791,16 @@ header {
 }
 
 .btn-productHome {
+    width: 167px;
+    padding: 10px;
+}
+.hover-agregando{
+    background-color: rgb(91 35 130);
+    border: 1px solid grey;
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    transition: all 0.8s;
     width: 167px;
     padding: 10px;
 }
@@ -2960,7 +2969,7 @@ i {
 .name-pr__cuota {
     font-size: 20px;
     font-weight: 700;
-    color: rgb(172 46 216);
+    color: rgb(90 34 130)
 
 }
 
@@ -2971,7 +2980,7 @@ i {
 .name-pr__off {
     font-size: 20px;
     font-weight: 700;
-    color: rgb(172 46 216);
+    color: rgb(90 34 130);
     margin-bottom: 15px;
 }
 
@@ -3055,7 +3064,7 @@ i {
 .size {
     display: flex;
     justify-content: center;
-    margin-bottom: 15px;
+    margin-bottom: 40px;
 
 
 }
@@ -3098,6 +3107,7 @@ i {
 .art-size__title {
     font-size: 20px;
     margin-top: 15px;
+    margin-bottom: 25px;
 }
 
 .desc-comp {
@@ -3157,7 +3167,7 @@ i {
 
     .name-pr__price {
         margin-top: 0px;
-        margin-bottom: 8px;
+        margin-bottom: 25px;
     }
 
 
@@ -3169,7 +3179,7 @@ i {
 
     .name-pr__off {
         margin-top: 0px;
-        margin-bottom: 10px;
+        margin-bottom: 20px;
     }
 
     .select {
@@ -3220,14 +3230,7 @@ i {
 
 }
 
-@media (min-width: 1200px) {
 
-    .p-detail {
-        padding: 10px;
-
-    }
-
-}
 
 
 
@@ -3618,16 +3621,17 @@ main form .text-aviso p {
 }
 
 .btn-delete {
-    background-color: rgb(172 46 216);
-    border: 1px solid grey;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(90 34 130) ;
     border-radius: 10px;
-    color: white;
+    color: rgb(90 34 130) ;
     padding: 10px 20px;
     transition: all 0.5s
 }
 
+
 .btn-delete:hover {
-    background-color: #ce64d8;
+    background-color: rgb(90 34 130) ;
     color: rgb(255, 255, 255);
     -webkit-transform: scale(1.2);
     transform: scale(1.2);
@@ -3861,6 +3865,14 @@ main form .text-aviso p {
     transition: all 0.8s;
 
 }
+.hover-agregando-detail{
+    background-color: rgb(90 34 130);
+    border: 1px solid grey;
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    transition: all 0.8s;
+}
 .btn-delete-carrito{
         background-color:  #e84750;
         border-radius: 15px;
@@ -3953,30 +3965,71 @@ main form .text-aviso p {
 
 .tabla-carrito {
     background-color: white;
-    border-radius: 10px;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
     min-height: 400px;
     min-width: 280px;
     padding: 15px 10px;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
     
 }
+.div-tabla{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 
-.fila-carrito-price {
-    width: 200px;
-    text-align: center;
-    font-weight: 500;
 }
+.div-columna-img{
+    font-weight: 500;
+    text-align: center;
+    width: 29%;
+}
+.div-columna-img img{
+    width: 90%;
+    
+}
+.div-colmuna-nombre{
+    font-weight: 500;
+    font-size: 25px;
+}
+.div-colmuna-precio{
+    font-weight: 500;
+    font-size: 25px;
 
-.div-price-home {
+}
+.div-colmuna-cant{
+font-weight: 500;
+font-size: 25px;
+
+}
+.x-carrito{
+    min-width: 1px;
+    min-height: 1px;
+    width: 1px;
+    height: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: none;
+    color: red;
+}
+.div-btn-carrito-vaciar{
+    background-color: white;
+    padding: 20px;
+    text-align: end;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.div-price-home{
     display: flex;
     justify-content: center;
 }
-
-.filaCompleta-carrito {
-    padding: 10px;
-    margin: 10px;
-
-}
-
 .contact-form__input {
     border: none;
     background-color: #eee;
@@ -4028,14 +4081,20 @@ main form .text-aviso p {
        
         min-width: 600px
     }
+    .div-btn-carrito-vaciar{
+        min-width: 600px
+
+    }
 }
 
 .btn-finalizar-carrito{
-    background-color: rgb(172 46 216);
-    color: rgb(255, 255, 255);
+    background-color: rgb(255 255 255);
+    color: rgb(90 34 130);
+    border: rgb(90 34 130) 1px solid;
 }
 .btn-finalizar-carrito:hover{
-    background-color: rgb(195, 131, 216);
+    background-color: rgb(90 34 130);
+    
 }
 .btn-cupon{
 background-color: #ffffff;

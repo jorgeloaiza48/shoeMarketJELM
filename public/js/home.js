@@ -1,4 +1,4 @@
-window.addEventListener("load", function (event) {
+window.addEventListener("DOMContentLoaded", function (event) {
     
      let listaProductos = document.querySelector('#main-home'); // home donde se muestra todos los productos
      let contenedorCarrito = document.querySelector('#lista-carrito tbody'); //tabla en el carrito
@@ -10,6 +10,23 @@ window.addEventListener("load", function (event) {
      let containerCarrito = document.querySelector(".containerCarrito")
      let prodAgregado = document.querySelector(".prodAgregado")
      let  platillos = document.getElementById('lista-platillos')
+
+    const btns = document.querySelectorAll("button[data-id]")
+    
+     btns.forEach((btn) => {
+          btn.addEventListener("click", (event) => {
+               event.target.classList.remove("form__button")
+               event.target.classList.remove("btn-productHome")
+               event.target.classList.add("hover-agregando")
+          })
+          btn.addEventListener("mouseleave", (event) => {
+               event.target.classList.add("form__button")
+               event.target.classList.add("btn-productHome")
+               event.target.classList.remove("hover-agregando")
+          })
+  
+  
+      })
 
 
 
@@ -23,9 +40,9 @@ window.addEventListener("load", function (event) {
      function cargarEventListeners(event) {
                listaProductos.addEventListener("click", agregarProducto);                          
                // Cuando se elimina un curso del carrito
-               carrito.addEventListener("click", eliminarProducto);
+               // carrito.addEventListener("click", eliminarProducto);
                // Al Vaciar el carrito
-               vaciarCarritoBtn.addEventListener("click", vaciarCarrito);
+               // vaciarCarritoBtn.addEventListener("click", vaciarCarrito);
              
              }
 
@@ -49,13 +66,19 @@ window.addEventListener("load", function (event) {
           if(localStorage.getItem('platillos') === null){
                console.log("LS null")
                const listProducts = []
+<<<<<<< HEAD:public/js/carrito.js
                fetch(`http://localhost:4000/api/products/detail/${productId}`)
+=======
+
+               fetch(`https://shoemarket.herokuapp.com/api/products/detail/${productId}`)
+>>>>>>> d32357c762a09b7afb21e05c1c6fc600f9b063f2:public/js/home.js
                .then((response)=> response.json())
                .then((data) => {
                     listProducts.push(data.product)
                     localStorage.setItem("platillos",JSON.stringify(listProducts))
                })
                
+<<<<<<< HEAD:public/js/carrito.js
           } 
           else {
                console.log("LS NO null")
@@ -100,6 +123,21 @@ window.addEventListener("load", function (event) {
           //    }
 
             
+=======
+          } else {
+              let localStoragePlat = JSON.parse(localStorage.getItem("platillos")) 
+
+              fetch(`https://shoemarket.herokuapp.com/api/products/detail/${productId}`)
+               .then((response)=> response.json())
+               .then((data) => {
+
+                    localStoragePlat.push(data.product)
+                    localStorage.setItem("platillos",JSON.stringify(localStoragePlat))
+               })
+
+
+          }
+>>>>>>> d32357c762a09b7afb21e05c1c6fc600f9b063f2:public/js/home.js
           // let infoProducto = {
           //      imagen: producData.img, //imagen del producto
           //      nombre: producData.name, //nombre del producto
