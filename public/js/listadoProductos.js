@@ -3,11 +3,15 @@ window.addEventListener("DOMContentLoaded", function (event) {
     const listaProductos = document.querySelector('#main-home'); // home donde se muestra todos los productos
     const agregarCarrito = document.querySelectorAll(".agregarCarrito")
     const btns = document.querySelectorAll("button[data-id]")
+    const cartP = document.querySelector(".cart-p")
+     const cartPXl = document.querySelector(".cart-p-xl")
 
     btns.forEach((btn) => {
         btn.addEventListener("click", (event) => {
             event.target.classList.remove("form__button")
             event.target.classList.add("hover-agregando")
+            cartP.classList.remove("cart-none")                    
+            cartPXl.classList.remove("cart-none") 
         })
         btn.addEventListener("mouseleave", (event) => {
             event.target.classList.add("form__button")

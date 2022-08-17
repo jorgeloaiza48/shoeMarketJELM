@@ -6,6 +6,7 @@ window.addEventListener("DOMContentLoaded", function (event) {
     const tablaCarrito = document.querySelector(".tabla-carrito")
     const totalPrice = document.querySelector(".contenedor-total__price")
     const primeraPärte = document.querySelector(".primer-parte-carrito")
+    
 
    
 
@@ -22,14 +23,18 @@ window.addEventListener("DOMContentLoaded", function (event) {
                     `<div class="div-columna-img">` +
                     `<img src=${producto.img} >` +
                     "</div>" + 
-                    `<div class="div-colmuna-cant">` +
+                    `<div class="div-colmuna-nombre div-fila-carrito">` +
+                    producto.name +
+                    "</div>" +
+                    `<div class="div-colmuna-cant div-fila-carrito">` +
                     producto.quantity +
                     "</div>" +
-                    `<div class="div-colmuna-precio">` +
+                    `<div class="div-colmuna-precio div-fila-carrito">` +
+                     
                     producto.price +
                     "</div>" +
                     `<div class="div-colmuna-btn">` +
-                    `<button class="x-carrito" data-id="${producto.id}">` +
+                    `<button class="x-carrito div-fila-carrito" data-id="${producto.id}">` +
                     "X" +
                     "</button>" +
                     "</div>" +

@@ -24,7 +24,7 @@
                 </form>
             </div>
             <div class="icono-carrito2">
-                <a href="/carrito"><i class="fa-solid fa-cart-shopping"></i></a>
+                <a class="label-relative" href="/carrito"><i class="fa-solid fa-cart-shopping"></i> <p class="cart-p cart-none"></p></a>
                 <% if (locals.isAdmin) { %>
                     <a href="/admin"><i class="fa-solid fa-lock"></i></a>
                     <% } %>
@@ -79,7 +79,7 @@
                         </li>
                         <li><a href="/productos">Productos</a><i class="fa-brands fa-product-hunt"></i></li>
 
-                        <li class="boton-carrito" ><a href="/carrito"  >Carrito</a><i class="fa-solid fa-cart-shopping"></i></li>
+                        <li class="boton-carrito label-relative" ><a  href="/carrito"  >Carrito</a><i class="fa-solid fa-cart-shopping"></i><span class="cart-p-xl cart-none"></span> </li>
                         <% if (locals.isAdmin) { %>
                             <li class="lista__profile"><a href="/admin">Admin</a> <i class="fa-solid fa-lock"></i>
                                 <ul class="lista__profile-down__admin">

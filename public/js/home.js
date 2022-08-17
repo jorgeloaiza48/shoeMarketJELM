@@ -3,18 +3,30 @@ window.addEventListener("DOMContentLoaded", function (event) {
      let listaProductos = document.querySelector('#main-home'); // home donde se muestra todos los productos
      let agregarCarrito = document.querySelectorAll(".agregarCarrito")
      const btns = document.querySelectorAll("button[data-id]")
+     const cartP = document.querySelector(".cart-p")
+     const cartPXl = document.querySelector(".cart-p-xl")
+
+     const local = JSON.parse(localStorage.getItem("platillos"))
+
+
 
      btns.forEach((btn) => {
           btn.addEventListener("click", (event) => {
                event.target.classList.remove("form__button")
                event.target.classList.remove("btn-productHome")
                event.target.classList.add("hover-agregando")
+               cartP.classList.remove("cart-none")                    
+               cartPXl.classList.remove("cart-none")                    
+               
           })
           btn.addEventListener("mouseleave", (event) => {
                event.target.classList.add("form__button")
                event.target.classList.add("btn-productHome")
                event.target.classList.remove("hover-agregando")
           })
+
+
+         
 
 
      })
@@ -25,7 +37,7 @@ window.addEventListener("DOMContentLoaded", function (event) {
 
      function cargarEventListeners(event) {
           listaProductos.addEventListener("click", agregarProducto);
-          
+
 
      }
 
@@ -70,21 +82,23 @@ window.addEventListener("DOMContentLoaded", function (event) {
                             console.log("Encontrado")
                          }
                     }                                                                                                                                
-                    if(aux === 1){
-                         localStorage.setItem("platillos", JSON.stringify(localStorageProduct))
-                    }
-                     
-                    else{
-                              fetch(`https://shoemarket.herokuapp.com/api/products/detail/${productId}`)
-                              .then((response) => response.json())
-                              .then((data) => {
-                              localStorageProduct.push(data.product)                                    
+                    
+               
+               if (aux === 1) {
+                    localStorage.setItem("platillos", JSON.stringify(localStorageProduct))
+               }
+
+               else {
+                    fetch(`https://shoemarket.herokuapp.com/api/products/detail/${productId}`)
+                         .then((response) => response.json())
+                         .then((data) => {
+                              localStorageProduct.push(data.product)
                               //localStorage.clear()
                               localStorage.setItem("platillos", JSON.stringify(localStorageProduct))
-                              })
-                         }
-               }          
-               
+                         })
+               }
+          }
+
 
      } //function leerDatosProducto(productId)  
 
