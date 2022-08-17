@@ -51,7 +51,7 @@ const LastProduct = () => {
             loading={isLoadingProducts}
             img={img}
             name={`Nombre : ${name}`}
-            color="#476397"
+            color="rgb(90 34 130)"
             description={`Descripcion : ${description}`}
             categoria={`Categoria : ${categoryProd}`}
 

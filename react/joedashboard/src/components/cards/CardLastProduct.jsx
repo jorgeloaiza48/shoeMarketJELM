@@ -8,15 +8,15 @@ import { Link } from "react-router-dom"
 const CardLastUser = ({ title, img, name, link, loading, description, categoria, color }) => {
   const loadingc = loading
   const styleCard = {
-    "borderBottom": `${color} 5px double`,
-    "borderLeft": `${color} 5px double`
+    "borderBottom": `rgb(90 34 130) 5px double`,
+    "borderLeft": `rgb(90 34 130) 5px double`
   }
 
 
   return (
     <>
       <div className='cardUser-container' style={styleCard} >
-        <h2 className="cardUser-title" style={{ "color": `${color}` }}>{title}</h2>
+        <h2 className="cardUser-title" >{title}</h2>
         {
           loadingc === false ?
             (

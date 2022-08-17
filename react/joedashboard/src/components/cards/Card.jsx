@@ -12,7 +12,7 @@ const Card = ({ title, img, quantity, link, loading,color }) => {
   return (
     <>
       <Link className='cardHome-link cardHome' style={styleCard}  to={`/${link}`} >
-        <h2 className="cardHome-title" style={{"color":`${color}`}}>{title}</h2>
+        <h2 className="cardHome-title" >{title}</h2>
         {
           loadingc === false ?
             (

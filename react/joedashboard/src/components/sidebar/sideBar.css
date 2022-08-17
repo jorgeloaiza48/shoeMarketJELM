@@ -51,7 +51,7 @@
 
 
 .center ul li:hover {
-    background-color: rgb(253 197 199)
+    background-color: rgb(206, 184, 222);
 }
 
 .title {
@@ -65,7 +65,7 @@
 .sideBar-icon{
     font-size: 22px;
     margin-right: 5px;
-    color: #98092f
+    color: black
 }
 .center ul li span{
     font-size: 15px;
@@ -86,15 +86,7 @@
     margin: 5px;
   
 }
-.dark{
-    background-color: #0c0c64;
-    
-    
-}
-.light{
-    
-    background-color: whitesmoke;
-}
+
 
 @media(min-width:998px) {
     .top {

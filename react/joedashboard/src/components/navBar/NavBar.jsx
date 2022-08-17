@@ -1,40 +1,73 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./navBar.css"
 import "../sidebar/sideBar.css"
 // import { MdOutlineDarkMode } from "react-icons/md";
 import { AiOutlineMenu } from "react-icons/ai";
+import { Link } from 'react-router-dom';
+
+
 
 
 
 
 const NavBar = () => {
 
- const side = document.querySelector(".sideBar")
+
+
+  const [btn, setBtn] = useState(false)
+  const sideBar = document.querySelector(".sideBar")
+
+
+  if(sideBar != null){
+
+    if (btn === true) {
+      sideBar.classList.add("show")
+      sideBar.classList.remove("none")
+  
+    } else {
+      sideBar.classList.add("none")
+      sideBar.classList.remove("show")
+    }
+  }
+
+
+
+
+
 
   function showSideBar(event) {
-   side.classList.add("show")
-   side.classList.remove("none")
-    
+    if (btn === true) {
+      setBtn(false)
+    } else {
+      setBtn(true)
+    }
+
+
+
   }
- 
- 
+
+
   return (
-    
-      <div className="navbar">
-        <div className="wrapper">
-          <AiOutlineMenu
+
+    <div className="navbar">
+      <div className="wrapper">
+        <AiOutlineMenu
           className='burguer-menu'
           onClick={showSideBar}
-           />
+        />
+
+        <Link
+          to="/"
+          className='navBar-link'
+        >
+
           <div className='navBar-title'>DashBoard Shoe Market</div>
-          <div className="items">
+        </Link>
 
-          
-          </div>
 
-        </div>
       </div>
-    
+    </div>
+
   )
 }
 

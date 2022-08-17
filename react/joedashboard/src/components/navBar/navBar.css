@@ -17,6 +17,13 @@
      padding-left: 25px;
      align-items: center;
 }
+.navBar-title:hover{
+  color:rgb(90 34 130); ;
+
+}
+.navBar-link{
+    text-decoration: none;
+}
 .wrapper{
     display: flex;
     justify-content: space-between;

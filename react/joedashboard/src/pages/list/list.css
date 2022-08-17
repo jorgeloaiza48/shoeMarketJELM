@@ -18,13 +18,12 @@
 
 .list-products__btn {
     border-radius: 10px;
-    background-color: aquamarine;
+    background-color: rgb(90 34 130);
 }
 
 .table-div {
     margin-left: auto;
     margin-right: auto;
-    border: 1px red solid;
 }
 
 .list-container{
@@ -73,11 +72,17 @@
     border: none;
     border-radius: 10px;
     padding: 5px 10px;
-    background-color: #3b8db0;
-    color: white;
+    border: 1px solid rgb(90 34 130);;
+    background-color: white;
+    
+    color: black;
     cursor: pointer;
     margin-right: 5px;
-
+    
+}
+.userListDetail:hover{
+color: white;
+    background-color: rgb(90 34 130);
 }
 .userListDelete{
     

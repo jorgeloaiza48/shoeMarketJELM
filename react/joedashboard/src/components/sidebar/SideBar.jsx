@@ -2,7 +2,7 @@ import React from 'react'
 import "./sideBar.css"
 import "../navBar/navBar.css"
 
-import logo from "./LOGO.png"
+import logo from "./LogoV.png"
 import { MdDashboard } from "react-icons/md";
 import { FaUsers } from "react-icons/fa";
 import { FaProductHunt } from "react-icons/fa";
@@ -24,7 +24,7 @@ const hideSideBar = ()=>{
 
   return (
     <div className='sideBar none'
-    onMouseLeave={hideSideBar}
+    // onMouseLeave={hideSideBar}
     >
       <Link to="/">
         <div className="top">

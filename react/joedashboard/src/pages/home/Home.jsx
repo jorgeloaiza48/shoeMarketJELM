@@ -98,7 +98,7 @@ const Home = () => {
             loading={isLoadingProducts}
             quantity={countProduts}
             link="products"
-            color="#a40f36"
+            color="rgb(90 34 130)"
 
           />
           <Card
@@ -106,7 +106,7 @@ const Home = () => {
             loading={isLoadingProducts}
             link="products/category"
             quantity={qcategoryProd}
-            color="#9533b5"
+            color="rgb(90 34 130)"
 
           />
 
@@ -114,7 +114,7 @@ const Home = () => {
             loading={isLoadingUsers}
             quantity={count}
             link="users"
-            color="#dd7f47"
+            color="rgb(90 34 130)"
 
 
           />
@@ -129,7 +129,7 @@ const Home = () => {
             email={`Correo : ${email}`}
             birth={`Fecha de Nacimiento : ${date_of_birth}`}
             address={`Direccion : ${adress}`}
-            color="#936d19"
+            color="rgb(90 34 130)"
             rol={`Rol : ${rolUser}`}
 
 
@@ -140,7 +140,7 @@ const Home = () => {
             img={img}
             link="products/lastProduct"
             name={`Nombre : ${name}`}
-            color="#476397"
+            color="rgb(90 34 130)"
             description={`Descripcion : ${description}`}
             categoria={`Categoria : ${categoryProd}`}
 
