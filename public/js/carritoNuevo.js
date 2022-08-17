@@ -22,10 +22,14 @@ window.addEventListener("DOMContentLoaded", function (event) {
                     `<div class="div-columna-img">` +
                     `<img src=${producto.img} >` +
                     "</div>" + 
+                    `<div class="div-colmuna-nombre">` +
+                    producto.name +
+                    "</div>" +
                     `<div class="div-colmuna-cant">` +
                     producto.quantity +
                     "</div>" +
                     `<div class="div-colmuna-precio">` +
+                     
                     producto.price +
                     "</div>" +
                     `<div class="div-colmuna-btn">` +
