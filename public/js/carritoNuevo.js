@@ -78,7 +78,7 @@ window.addEventListener("DOMContentLoaded", function (event) {
             
         })
     }
-
+//dfdfdfdsf
     
     totalPrice.innerHTML += "$" + total
     
