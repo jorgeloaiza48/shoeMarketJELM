@@ -10,12 +10,17 @@ window.addEventListener("DOMContentLoaded", function (event) {
             event.target.classList.remove("form__button")
             event.target.classList.remove("btn-detail-view")
             event.target.classList.add("hover-agregando-detail")
+            cargarAlCarrito(productId)
+            cartP.classList.remove("cart-none")                    
+           cartPXl.classList.remove("cart-none")  
          })
          agregarCarrito.addEventListener("mouseleave", (event) => {
               event.target.classList.add("form__button")
               event.target.classList.add("btn-detail-view")
               event.target.classList.remove("hover-agregando-detail")
          })
+ 
+ 
         })
 
 

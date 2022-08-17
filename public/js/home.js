@@ -15,8 +15,8 @@ window.addEventListener("DOMContentLoaded", function (event) {
                event.target.classList.remove("form__button")
                event.target.classList.remove("btn-productHome")
                event.target.classList.add("hover-agregando")
-                    // cartP.classList.remove("cart-none")                    
-                    // cartPXl.classList.remove("cart-none")                    
+                    cartP.classList.remove("cart-none")                    
+                    cartPXl.classList.remove("cart-none")                    
                
           })
           btn.addEventListener("mouseleave", (event) => {
