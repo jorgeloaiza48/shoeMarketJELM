@@ -4,7 +4,7 @@ window.addEventListener("DOMContentLoaded", function (event) {
     const agregarCarrito = document.querySelectorAll(".agregarCarrito")
     const btns = document.querySelectorAll("button[data-id]")
     const cartP = document.querySelector(".cart-p")
-     const cartPXl = document.querySelector(".cart-p-xl")
+    const cartPXl = document.querySelector(".cart-p-xl")
 
     btns.forEach((btn) => {
         btn.addEventListener("click", (event) => {
@@ -32,13 +32,13 @@ window.addEventListener("DOMContentLoaded", function (event) {
 
 
     function agregarProducto(event) {
-        event.preventDefault();
-        // Delegation para agregar-carrito
+        //event.preventDefault();
+        
         if (event.target.classList.contains('agregarCarrito')) {
-            let curso = event.target.closest('.produc')//captura el contenedor padre
-            //let curso = event.target.parentNode;//captura el contenedor padre
-            // Enviamos el curso seleccionado para tomar sus datos
-            const productId = curso.querySelector('.agregarCarrito').getAttribute('data-id') //id del producto seleccionado
+            let producto = event.target.closest('.produc')//captura el contenedor padre
+            //let producto = event.target.parentNode;//captura el contenedor padre
+            // Enviamos el producto seleccionado para tomar sus datos
+            const productId = producto.querySelector('.agregarCarrito').getAttribute('data-id') //id del producto seleccionado
             leerDatosProducto(productId);
         }
     }
@@ -49,7 +49,8 @@ window.addEventListener("DOMContentLoaded", function (event) {
         if (localStorage.getItem('platillos') === null) {
 
              const listProducts = []
-             fetch(`https://shoemarket.herokuapp.com/api/products/detail/${productId}`)
+             //fetch(`https://shoemarket.herokuapp.com/api/products/detail/${productId}`) //heroku
+             fetch(`http://localhost:4000/api/products/detail/${productId}`)
                   .then((response) => response.json())
                   .then((data) => {
                        listProducts.push(data.product)
@@ -61,14 +62,14 @@ window.addEventListener("DOMContentLoaded", function (event) {
               {   let aux = 0 
                   let localStorageProduct = JSON.parse(localStorage.getItem("platillos")) 
                   
-                //   console.log("Este es productId " , productId)  
+                
                   
                   for(let i=0; i<localStorageProduct.length; i++){
                        if(JSON.stringify(localStorageProduct[i].id) === productId){
                           JSON.stringify(localStorageProduct[i].quantity++)
                           //JSON.stringify(localStorageProduct[i].price)= JSON.stringify(localStorageProduct[i].price)*(JSON.stringify(localStorageProduct[i].quantity))
                           aux = 1
-                        //   console.log("Encontrado")
+                        
                        }
                   }                                                                                                                                
                   if(aux === 1){
@@ -76,7 +77,8 @@ window.addEventListener("DOMContentLoaded", function (event) {
                   }
                    
                   else{
-                            fetch(`https://shoemarket.herokuapp.com/api/products/detail/${productId}`)
+                            //fetch(`https://shoemarket.herokuapp.com/api/products/detail/${productId}`) //heroku
+                            fetch(`http://localhost:4000/api/products/detail/${productId}`)
                             .then((response) => response.json())
                             .then((data) => {
                             localStorageProduct.push(data.product)                                    

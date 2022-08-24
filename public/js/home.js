@@ -1,12 +1,12 @@
 window.addEventListener("DOMContentLoaded", function (event) {
 
-     let listaProductos = document.querySelector('#main-home'); // home donde se muestra todos los productos
-     let agregarCarrito = document.querySelectorAll(".agregarCarrito")
+     const listaProductos = document.querySelector('#main-home'); // home donde se muestra todos los productos
+     const agregarCarrito = document.querySelectorAll(".agregarCarrito")
      const btns = document.querySelectorAll("button[data-id]")
      const cartP = document.querySelector(".cart-p")
      const cartPXl = document.querySelector(".cart-p-xl")
 
-     const local = JSON.parse(localStorage.getItem("platillos"))
+     //const local = JSON.parse(localStorage.getItem("platillos"))
 
 
 
@@ -24,80 +24,75 @@ window.addEventListener("DOMContentLoaded", function (event) {
                event.target.classList.add("btn-productHome")
                event.target.classList.remove("hover-agregando")
           })
-
-
          
-
-
      })
+
      agregarCarrito.forEach(btnAgregarCarrito => {
-          btnAgregarCarrito.addEventListener("click", cargarEventListeners)
-
-     })
-
-     function cargarEventListeners(event) {
+          btnAgregarCarrito.addEventListener("click", cargarEventListeners);          
+      })
+  
+      function cargarEventListeners() {
           listaProductos.addEventListener("click", agregarProducto);
+         
+      }
 
-
-     }
-
-
-     function agregarProducto(event) {
-          event.preventDefault();
-
-          // Delegation para agregar-carrito
+      function agregarProducto(event) {
+          //event.preventDefault();                    
           if (event.target.classList.contains('agregarCarrito')) {
-               let curso = event.target.closest('.produc')//captura el contenedor padre
-               //let curso = event.target.parentNode;//captura el contenedor padre
-               // Enviamos el curso seleccionado para tomar sus datos
-               const productId = curso.querySelector('.agregarCarrito').getAttribute('data-id') //id del producto seleccionado
-               leerDatosProducto(productId);
+               console.log("Hicieron click");
+              let producto = event.target.closest('.produc')//captura el contenedor padre
+              //let producto = event.target.parentNode;//captura el contenedor padre
+              // Enviamos el producto seleccionado para tomar sus datos
+              const productId = producto.querySelector('.agregarCarrito').getAttribute('data-id') //id del producto seleccionado
+              leerDatosProducto(productId);
           }
-     }
-
-     function leerDatosProducto(productId) {
-
+      }
+      
+      
+  
+      function leerDatosProducto(productId) {
+         
           if (localStorage.getItem('platillos') === null) {
-
+              
                const listProducts = []
-               fetch(`https://shoemarket.herokuapp.com/api/products/detail/${productId}`)
+               //fetch(`https://shoemarket.herokuapp.com/api/products/detail/${productId}`) //heroku
+               fetch(`http://localhost:4000/api/products/detail/${productId}`)
                     .then((response) => response.json())
                     .then((data) => {
                          listProducts.push(data.product)
                          localStorage.setItem("platillos", JSON.stringify(listProducts))
                     })
-
-          }
-          else {
-               let aux = 0
-               let localStorageProduct = JSON.parse(localStorage.getItem("platillos"))
-
-               console.log("Este es productId ", productId)
-
-               for (let i = 0; i < localStorageProduct.length; i++) {
-                    if (JSON.stringify(localStorageProduct[i].id) === productId) {
-                         JSON.stringify(localStorageProduct[i].quantity++)
-                         //JSON.stringify(localStorageProduct[i].price)= JSON.stringify(localStorageProduct[i].price)*(JSON.stringify(localStorageProduct[i].quantity))
-                         aux = 1
-                         console.log("Encontrado")
+  
+          } 
+          else 
+                {   let aux = 0 
+                    let localStorageProduct = JSON.parse(localStorage.getItem("platillos")) 
+                                                          
+                    for(let i=0; i<localStorageProduct.length; i++){
+                         if(JSON.stringify(localStorageProduct[i].id) === productId){
+                            JSON.stringify(localStorageProduct[i].quantity++)
+                            //JSON.stringify(localStorageProduct[i].price)= JSON.stringify(localStorageProduct[i].price)*(JSON.stringify(localStorageProduct[i].quantity))
+                            aux = 1
+                          
+                         }
+                    }                                                                                                                                
+                    if(aux === 1){
+                         localStorage.setItem("platillos", JSON.stringify(localStorageProduct))
                     }
-               }
-               if (aux === 1) {
-                    localStorage.setItem("platillos", JSON.stringify(localStorageProduct))
-               }
-
-               else {
-                    fetch(`https://shoemarket.herokuapp.com/api/products/detail/${productId}`)
-                         .then((response) => response.json())
-                         .then((data) => {
-                              localStorageProduct.push(data.product)
+                     
+                    else{
+                              //fetch(`https://shoemarket.herokuapp.com/api/products/detail/${productId}`) //heroku
+                              fetch(`http://localhost:4000/api/products/detail/${productId}`)
+                              .then((response) => response.json())
+                              .then((data) => {
+                              localStorageProduct.push(data.product)                                    
                               //localStorage.clear()
                               localStorage.setItem("platillos", JSON.stringify(localStorageProduct))
-                         })
-               }
-          }
-
-
+                              })
+                         }
+               }          
+               
+  
      } //function leerDatosProducto(productId)  
 
 }) //window.addEventListener("DOMContentLoaded", function (event)

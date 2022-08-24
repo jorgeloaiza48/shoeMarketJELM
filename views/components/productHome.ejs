@@ -6,24 +6,17 @@
             <div class="container-img-home">
                 <img src="/img/products/<%= product.image %>" alt="bota">
             </div>
-
-            <p class="name">
-                <%= product.name %>
-            </p>
-            <div class="div-price-home">
-                <p>$</p>
-
-                <p class="price">
-                    <%= product.price %>
-                </p>
+                <p class="name"><%= product.name %></p>
+            <div class="div-price-home">               
+                <p class="price">$ <%= product.price %></p>
             </div>
         </div>
     </a>
-
-    <button class="agregarCarrito form__button btn-productHome" data-id="<%= product.id %>">
-        Agregar al carrito
-    </button>
+<!-- 
+    <button class="agregarCarrito form__button btn-productHome" data-id="<%= product.id %>"><p>Comprar</p></button>
     <p class="prodAgregado" data-id="<%= product.id %>"></p> 
+     -->
+     <button class="agregarCarrito form__button btn-productHome" data-id="<%= product.id %>">Comprar</button>
     
 
 </div>

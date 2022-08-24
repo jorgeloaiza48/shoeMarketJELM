@@ -1776,36 +1776,37 @@ header {
 }
 
 .productos {
-    /* border: solid 2px blue;*/
+    /* border: solid 2px blue; */
     display: flex;
     flex-wrap: wrap;
+    
     margin-top: 20px;
     justify-content: space-evenly;
-    width: 85%;
-    margin-left: auto;
-    margin-right: auto;
-
+    width: 95%;
+    /* margin-left: auto;
+    margin-right: auto; */
 }
-
 .produc {
-    border-radius: 20px;
+    border: solid 1px gainsboro;
+   
+    height: auto;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    max-width: 80%;
-    margin: 10px;
+    justify-content: center;
+    width: 48%;
+    /* margin: 10px; */
     align-items: center;
-    min-height: 511px;
+    /* min-height: 511px; */
 }
 
 .container-first-cardHome {
     min-height: 393px;
 }
 
-.btn-productHome {
-    width: 167px;
-    padding: 10px 1px;
-}
+
+ 
+   
+
 
 .hover-agregando {
     background-color: rgb(91 35 130);
@@ -1837,7 +1838,7 @@ i {
 }
 
 .produc img {
-    border-radius: 20px;
+    /* border-radius: 20px; */
     max-width: 260px;
     width: 100%;
 }
@@ -3867,15 +3868,20 @@ main form .text-aviso p {
 }
 
 .form__button {
-
+    
     background-color: rgb(0, 0, 0);
     border: 1px solid grey;
-    border-radius: 10px;
-    color: rgb(255, 255, 255);
-    padding: 10px 15px;
+    border-radius: 10px;  
+    color: white;  
+    height: 30px;
+    /* padding: 10px 15px; */
     transition: all 0.8s;
-
+    width: 70%;
+    vertical-align: center;
+    padding: 5px ;
+    text-align: center;
 }
+
 
 .hover-agregando-detail {
     background-color: rgb(90 34 130);
@@ -3926,7 +3932,7 @@ main form .text-aviso p {
 
 .form__button:hover {
     background-color: rgb(0, 0, 0);
-    color: white;
+    /* color: white; */
     -webkit-transform: scale(1.2);
     transform: scale(1.2);
 
@@ -4016,19 +4022,19 @@ main form .text-aviso p {
     border-radius: 10px;
 
 }
-.cart-p{
+/* .cart-p{
     position: absolute;
     top: -4px;
     background-color: rgb(90 34 130);
     border-radius: 52px;
-    height: 15px;
-    width: 15px;
+    height: 25px;
+    width: 25px;
     left: 25px;
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
-}
+} */
 
 
 .cart-p-xl{
@@ -4036,8 +4042,8 @@ main form .text-aviso p {
     top: -6px;
     background-color: rgb(90 34 130);
     border-radius: 52px;
-    height: 15px;
-    width: 15px;
+    height: 20px;
+    width: 20px;
     left: 74px;
     color: white;
     display: flex;
@@ -4045,7 +4051,6 @@ main form .text-aviso p {
     align-items: center;
 }
 .cart-none{
-
     display: none;
 }
 .div-colmuna-nombre {
@@ -4215,9 +4220,6 @@ button {
 
 }
 
-div.produc {
-    min-height: 500px;
-}
 
 .container-img-home {
     min-height: 260px;

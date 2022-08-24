@@ -29,7 +29,8 @@ function cargarAlCarrito(productId) {
      if (localStorage.getItem('platillos') === null) {
 
           const listProducts = []
-          fetch(`https://shoemarket.herokuapp.com/api/products/detail/${productId}`)
+               // fetch(`https://shoemarket.herokuapp.com/api/products/detail/${productId}`) //para Heroku
+               fetch(`http://localhost:4000/api/products/detail/${productId}`)
                .then((response) => response.json())
                .then((data) => {
                     listProducts.push(data.product)
@@ -39,16 +40,13 @@ function cargarAlCarrito(productId) {
      } 
      else 
            {   let aux = 0 
-               let localStorageProduct = JSON.parse(localStorage.getItem("platillos")) 
-               
-               console.log("Este es productId " , productId)  
+               let localStorageProduct = JSON.parse(localStorage.getItem("platillos"))                               
                
                for(let i=0; i<localStorageProduct.length; i++){
                     if(JSON.stringify(localStorageProduct[i].id) === productId){
                        JSON.stringify(localStorageProduct[i].quantity++)
                        //JSON.stringify(localStorageProduct[i].price)= JSON.stringify(localStorageProduct[i].price)*(JSON.stringify(localStorageProduct[i].quantity))
-                       aux = 1
-                       console.log("Encontrado")
+                       aux = 1                      
                     }
                }                                                                                                                                
                if(aux === 1){
@@ -56,7 +54,8 @@ function cargarAlCarrito(productId) {
                }
                 
                else{
-                         fetch(`https://shoemarket.herokuapp.com/api/products/detail/${productId}`)
+                         // fetch(`https://shoemarket.herokuapp.com/api/products/detail/${productId}`) //para Heroku
+                         fetch(`http://localhost:4000/api/products/detail/${productId}`)
                          .then((response) => response.json())
                          .then((data) => {
                          localStorageProduct.push(data.product)                                    
