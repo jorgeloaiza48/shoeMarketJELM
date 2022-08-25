@@ -759,6 +759,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 @media(min-width:768px) {
 
 
+    
 
     .icono-showPassword-register {
         left: 225px;
@@ -1787,26 +1788,19 @@ header {
     margin-right: auto; */
 }
 .produc {
-    border: solid 1px gainsboro;
-   
-    height: auto;
+    align-items: center;
+    border: solid 1px gray;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 5px;
     width: 48%;
-    /* margin: 10px; */
-    align-items: center;
-    /* min-height: 511px; */
+    margin: 3px;        
 }
 
 .container-first-cardHome {
     min-height: 393px;
 }
-
-
- 
-   
-
 
 .hover-agregando {
     background-color: rgb(91 35 130);
@@ -1838,9 +1832,9 @@ i {
 }
 
 .produc img {
-    /* border-radius: 20px; */
-    max-width: 260px;
-    width: 100%;
+    display: block;
+    margin: auto;
+    width: 95%;
 }
 
 
@@ -1898,7 +1892,17 @@ i {
 /* /////////////////////////////Media query para 768px   ///////////////////////////// */
 
 @media (min-width: 768px) {
-
+    .produc {
+        align-items: center;
+        border: solid 1px gray;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 5px;
+        width: 25%;
+        margin: 4px;        
+    }
+    
 
 
     .art-size__title {

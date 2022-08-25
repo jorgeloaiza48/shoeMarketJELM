@@ -1,10 +1,16 @@
 window.addEventListener("DOMContentLoaded", function (event) {
     
-    let agregarCarrito = document.querySelector(".agregar-carrito")
+    let agregarCarrito = document.querySelector(".agregarCarrito")
     const productId = agregarCarrito.getAttribute('data-id') //id del producto seleccionado
     const cartP = document.querySelector(".cart-p")
-     const cartPXl = document.querySelector(".cart-p-xl")
-
+    const cartPXl = document.querySelector(".cart-p-xl")
+    
+    if (localStorage.getItem('platillos') != null) {
+     let localStorageProduct = JSON.parse(localStorage.getItem("platillos")) 
+     let longitudLS = localStorageProduct.length               
+     cartPXl.innerHTML =  longitudLS
+     
+}
    
         agregarCarrito.addEventListener("click", (event) => {
             event.target.classList.remove("form__button")
@@ -12,7 +18,7 @@ window.addEventListener("DOMContentLoaded", function (event) {
             event.target.classList.add("hover-agregando-detail")
             cargarAlCarrito(productId)
             cartP.classList.remove("cart-none")                    
-           cartPXl.classList.remove("cart-none")  
+           cartPXl.classList.remove("cart-none")          
          })
          agregarCarrito.addEventListener("mouseleave", (event) => {
               event.target.classList.add("form__button")
@@ -25,7 +31,7 @@ window.addEventListener("DOMContentLoaded", function (event) {
 
 
 function cargarAlCarrito(productId) {
-
+    
      if (localStorage.getItem('platillos') === null) {
 
           const listProducts = []
@@ -36,6 +42,7 @@ function cargarAlCarrito(productId) {
                     listProducts.push(data.product)
                     localStorage.setItem("platillos", JSON.stringify(listProducts))
                })
+               .then(() =>{cartPXl.innerHTML = 1})
 
      } 
      else 
@@ -51,6 +58,11 @@ function cargarAlCarrito(productId) {
                }                                                                                                                                
                if(aux === 1){
                     localStorage.setItem("platillos", JSON.stringify(localStorageProduct))
+                    .then(()=>{ 
+                         let localStorageProduct = JSON.parse(localStorage.getItem("platillos")) 
+                         let longitudLS = localStorageProduct.length               
+                         cartPXl.innerHTML =  longitudLS
+                    })
                }
                 
                else{
@@ -58,10 +70,14 @@ function cargarAlCarrito(productId) {
                          fetch(`http://localhost:4000/api/products/detail/${productId}`)
                          .then((response) => response.json())
                          .then((data) => {
-                         localStorageProduct.push(data.product)                                    
-                         //localStorage.clear()
+                         localStorageProduct.push(data.product)                                                            
                          localStorage.setItem("platillos", JSON.stringify(localStorageProduct))
                          })
+                         .then(()=>{ 
+                              let localStorageProduct = JSON.parse(localStorage.getItem("platillos")) 
+                              let longitudLS = localStorageProduct.length               
+                              cartPXl.innerHTML =  longitudLS
+                              })
                     }
           }          
           

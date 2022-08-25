@@ -5,8 +5,14 @@ window.addEventListener("DOMContentLoaded", function (event) {
      const btns = document.querySelectorAll("button[data-id]")
      const cartP = document.querySelector(".cart-p")
      const cartPXl = document.querySelector(".cart-p-xl")
-
-     //const local = JSON.parse(localStorage.getItem("platillos"))
+     
+    
+     if (localStorage.getItem('platillos') != null) {
+          let localStorageProduct = JSON.parse(localStorage.getItem("platillos")) 
+          let longitudLS = localStorageProduct.length               
+          cartPXl.innerHTML =  longitudLS
+     }
+     
 
 
 
@@ -16,7 +22,7 @@ window.addEventListener("DOMContentLoaded", function (event) {
                event.target.classList.remove("btn-productHome")
                event.target.classList.add("hover-agregando")
                     cartP.classList.remove("cart-none")                    
-                    cartPXl.classList.remove("cart-none")                    
+                    cartPXl.classList.remove("cart-none")                             
                
           })
           btn.addEventListener("mouseleave", (event) => {
@@ -53,21 +59,21 @@ window.addEventListener("DOMContentLoaded", function (event) {
       function leerDatosProducto(productId) {
          
           if (localStorage.getItem('platillos') === null) {
-              
+               
                const listProducts = []
                //fetch(`https://shoemarket.herokuapp.com/api/products/detail/${productId}`) //heroku
                fetch(`http://localhost:4000/api/products/detail/${productId}`)
                     .then((response) => response.json())
                     .then((data) => {
                          listProducts.push(data.product)
-                         localStorage.setItem("platillos", JSON.stringify(listProducts))
+                         localStorage.setItem("platillos", JSON.stringify(listProducts))                        
                     })
-  
+               .then(() =>{cartPXl.innerHTML = 1})
+                 
           } 
           else 
                 {   let aux = 0 
-                    let localStorageProduct = JSON.parse(localStorage.getItem("platillos")) 
-                                                          
+                    let localStorageProduct = JSON.parse(localStorage.getItem("platillos"))                                                           
                     for(let i=0; i<localStorageProduct.length; i++){
                          if(JSON.stringify(localStorageProduct[i].id) === productId){
                             JSON.stringify(localStorageProduct[i].quantity++)
@@ -78,6 +84,12 @@ window.addEventListener("DOMContentLoaded", function (event) {
                     }                                                                                                                                
                     if(aux === 1){
                          localStorage.setItem("platillos", JSON.stringify(localStorageProduct))
+                         .then(()=>{ 
+                              let localStorageProduct = JSON.parse(localStorage.getItem("platillos")) 
+                              let longitudLS = localStorageProduct.length               
+                              cartPXl.innerHTML =  longitudLS
+                         })
+                         
                     }
                      
                     else{
@@ -85,14 +97,18 @@ window.addEventListener("DOMContentLoaded", function (event) {
                               fetch(`http://localhost:4000/api/products/detail/${productId}`)
                               .then((response) => response.json())
                               .then((data) => {
-                              localStorageProduct.push(data.product)                                    
-                              //localStorage.clear()
+                              localStorageProduct.push(data.product)                                                                
                               localStorage.setItem("platillos", JSON.stringify(localStorageProduct))
                               })
+                              .then(()=>{ 
+                                   let localStorageProduct = JSON.parse(localStorage.getItem("platillos")) 
+                                   let longitudLS = localStorageProduct.length               
+                                   cartPXl.innerHTML =  longitudLS
+                                   })
+                              
                          }
-               }          
-               
-  
+               }                                                      
+              
      } //function leerDatosProducto(productId)  
 
 }) //window.addEventListener("DOMContentLoaded", function (event)

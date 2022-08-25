@@ -6,6 +6,13 @@ window.addEventListener("DOMContentLoaded", function (event) {
     const cartP = document.querySelector(".cart-p")
     const cartPXl = document.querySelector(".cart-p-xl")
 
+     
+    if (localStorage.getItem('platillos') != null) {
+        let localStorageProduct = JSON.parse(localStorage.getItem("platillos")) 
+        let longitudLS = localStorageProduct.length               
+        cartPXl.innerHTML =  longitudLS
+   }
+
     btns.forEach((btn) => {
         btn.addEventListener("click", (event) => {
             event.target.classList.remove("form__button")
@@ -56,6 +63,7 @@ window.addEventListener("DOMContentLoaded", function (event) {
                        listProducts.push(data.product)
                        localStorage.setItem("platillos", JSON.stringify(listProducts))
                   })
+                  .then(() =>{cartPXl.innerHTML = 1})
 
         } 
         else 
@@ -74,6 +82,11 @@ window.addEventListener("DOMContentLoaded", function (event) {
                   }                                                                                                                                
                   if(aux === 1){
                        localStorage.setItem("platillos", JSON.stringify(localStorageProduct))
+                       .then(()=>{ 
+                        let localStorageProduct = JSON.parse(localStorage.getItem("platillos")) 
+                        let longitudLS = localStorageProduct.length               
+                        cartPXl.innerHTML =  longitudLS
+                   })
                   }
                    
                   else{
@@ -85,6 +98,11 @@ window.addEventListener("DOMContentLoaded", function (event) {
                             //localStorage.clear()
                             localStorage.setItem("platillos", JSON.stringify(localStorageProduct))
                             })
+                            .then(()=>{ 
+                                let localStorageProduct = JSON.parse(localStorage.getItem("platillos")) 
+                                let longitudLS = localStorageProduct.length               
+                                cartPXl.innerHTML =  longitudLS
+                                })
                        }
              }          
              

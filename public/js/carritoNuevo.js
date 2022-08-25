@@ -6,7 +6,14 @@ window.addEventListener("DOMContentLoaded", function (event) {
     const tablaCarrito = document.querySelector(".tabla-carrito")
     const totalPrice = document.querySelector(".contenedor-total__price")
     const primeraPärte = document.querySelector(".primer-parte-carrito")
+    const cartPXl = document.querySelector(".cart-p-xl")
     
+    if (localStorage.getItem('platillos') != null) {
+        let localStorageProduct = JSON.parse(localStorage.getItem("platillos")) 
+        let longitudLS = localStorageProduct.length               
+        cartPXl.innerHTML =  longitudLS
+   }
+   
 
    
 
