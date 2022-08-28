@@ -18,8 +18,8 @@ const controller = {
                 { association: "ordenes" },
 
             ],
-            limit: 6,
-            order: sequelize.random()
+            // limit: 6,
+            // order: sequelize.random()
 
         }).then(function (productos) {
             return res.render("home", { productos, title: "Shoe Market" })
