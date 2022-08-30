@@ -809,6 +809,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
     .principal-userList div {
         border: solid 2px gainsboro;
+        border-radius: 10%;
         align-items: center;
         height: 80px;
         display: flex;
@@ -823,7 +824,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 
     .principal-userList-img {
-        border-radius: 50%;
+        /* border-radius: 10%; */
         height: 60px;
         width: 60px;
     }
