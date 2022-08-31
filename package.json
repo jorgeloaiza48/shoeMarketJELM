@@ -7,8 +7,8 @@
     "node": "16.x"
   },
   "scripts": {
-    "start": "node app.js",
-    "dev": "node app.js"
+    "start": "nodemon app.js",
+    "dev": "nodemon app.js"
   },
   "repository": {
     "type": "git",
