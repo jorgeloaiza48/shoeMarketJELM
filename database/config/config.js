@@ -1,54 +1,54 @@
 // **********************Conexión local************************
 
-module.exports = {
-  "development": {
-    "username": "root",   
-    "password": "George4810008968", 
-    "database": "rnj9ky0w22h0cycz",           
-    "host"    : "localhost",              
-    "dialect": "mysql"
-  },
-  "test": {
-    "username": "root",   
-    "password": "George4810008968",
-    "database": "rnj9ky0w22h0cycz",           
-    "host"    : "localhost",              
-    "dialect": "mysql"
-  },
-  "production": {
-    "username": "root",   
-    "password": "George4810008968", 
-    "database": "rnj9ky0w22h0cycz",           
-    "host"    : "localhost",               
-    "dialect": "mysql"
-  }
-}
-
-// **********************Conexión remotemysql************************
-
 // module.exports = {
 //   "development": {
-//     "username": "WArbTvEJfU",   
-//     "password": "cvlXSAef5M", 
-//     "database": "WArbTvEJfU",           
-//     "host"    : "remotemysql.com",              
+//     "username": "root",   
+//     "password": "George4810008968", 
+//     "database": "rnj9ky0w22h0cycz",           
+//     "host"    : "localhost",              
 //     "dialect": "mysql"
 //   },
 //   "test": {
-//     "username": "WArbTvEJfU",   
-//     "password": "cvlXSAef5M",
-//     "database": "WArbTvEJfU",           
-//     "host"    : "remotemysql.com",              
+//     "username": "root",   
+//     "password": "George4810008968",
+//     "database": "rnj9ky0w22h0cycz",           
+//     "host"    : "localhost",              
 //     "dialect": "mysql"
 //   },
 //   "production": {
-//     "username": "WArbTvEJfU",   
-//     "password": "cvlXSAef5M", 
-//     "database": "WArbTvEJfU",           
-//     "host"    : "remotemysql.com",               
+//     "username": "root",   
+//     "password": "George4810008968", 
+//     "database": "rnj9ky0w22h0cycz",           
+//     "host"    : "localhost",               
 //     "dialect": "mysql"
 //   }
 // }
+
+// **********************Conexión remotemysql************************
+
+module.exports = {
+  "development": {
+    "username": "WArbTvEJfU",   
+    "password": "cvlXSAef5M", 
+    "database": "WArbTvEJfU",           
+    "host"    : "remotemysql.com",              
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "WArbTvEJfU",   
+    "password": "cvlXSAef5M",
+    "database": "WArbTvEJfU",           
+    "host"    : "remotemysql.com",              
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "WArbTvEJfU",   
+    "password": "cvlXSAef5M", 
+    "database": "WArbTvEJfU",           
+    "host"    : "remotemysql.com",               
+    "dialect": "mysql"
+  }
+}
 
 
 //********************** Conexión para Maria **********************/
