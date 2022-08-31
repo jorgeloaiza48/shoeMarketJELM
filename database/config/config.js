@@ -24,28 +24,28 @@
 //   }
 // }
 
-// **********************Conexión remotemysql************************
+// **********************Conexión sql10.freesqldatabase.com ************************
 
 module.exports = {
   "development": {
-    "username": "WArbTvEJfU",   
-    "password": "cvlXSAef5M", 
-    "database": "WArbTvEJfU",           
-    "host"    : "remotemysql.com",              
+    "username": "sql10516464",   
+    "password": "4jJX98pdiw", 
+    "database": "sql10516464",           
+    "host"    : "sql10.freesqldatabase.com",              
     "dialect": "mysql"
   },
   "test": {
-    "username": "WArbTvEJfU",   
-    "password": "cvlXSAef5M",
-    "database": "WArbTvEJfU",           
-    "host"    : "remotemysql.com",              
+    "username": "sql10516464",   
+    "password": "4jJX98pdiw",
+    "database": "sql10516464",           
+    "host"    : "sql10.freesqldatabase.com",              
     "dialect": "mysql"
   },
   "production": {
-    "username": "WArbTvEJfU",   
-    "password": "cvlXSAef5M", 
-    "database": "WArbTvEJfU",           
-    "host"    : "remotemysql.com",               
+    "username": "sql10516464",   
+    "password": "4jJX98pdiw", 
+    "database": "sql10516464",           
+    "host"    : "sql10.freesqldatabase.com",               
     "dialect": "mysql"
   }
 }
