@@ -5,6 +5,7 @@ import React from "react";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import "./app.css"
 import UserList from "./pages/userList/UserList";
+import User from "./pages/user/User";
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Routes>
           <Route exact path="/" element={ <Home />}></Route>
           <Route path="/users" element={<UserList />}></Route>
+          <Route path="/user/:userId" element={<User/>}></Route>
         </Routes>
         
       </div>
