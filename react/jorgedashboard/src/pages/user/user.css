@@ -85,10 +85,48 @@
     font-weight: 600;
 }
 .userUpdateForm{
-    /* border: solid 2px blue; */
+    /* border: solid 2px black; */
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
+}
+.userUpdateItem{
+    /* border: solid 1px blue; */
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+.userUpdateItem > label{
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+.userUpdateInput{
+    border: none;
+    width: 250px;
+    border-bottom: 1px solid gray;
+    height: 30px;
+}
+.userUpdateRight{
+    /* border: solid 2px violet; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.userUpdateUpload{
+    display: flex;
+    align-items: center;
+}
+.userUpdateIcon{
+    cursor: pointer;
+}
+.userUpdateButton{
+    border-radius: 5px;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    background-color: darkblue;
+    color: white;
+    font-weight: 600;
 }
 .userUpdateImg{
     width: 100px;
