@@ -61,6 +61,23 @@ export   const userData = [
     },
   ];
 
+  export   const productData = [
+    {
+      name: 'Jan',
+      "Sales": 4000,      
+    },
+    {
+      name: 'Feb',
+      "Sales": 3000,      
+    },
+    {
+      name: 'Mar',
+      "Sales": 2000,      
+    },    
+  ];
+
+  
+
  export let arrayUsers = [
     {
         "id": 3,
@@ -139,4 +156,91 @@ export   const userData = [
         "updatedAt": "2022-08-02T15:37:05.000Z",
         "detail": "/api/users/53"
     }
+]
+
+export let productRows = [
+  {
+      "id": 3,
+      "productName": "Apple Airpods",
+      "last_name": "Casa Marquez",
+      "stock": "321",
+      "image": "photo-1659220501642.jpg",
+      "status": "Activo",
+      "price": "$1200",
+      "createdAt": "2022-07-12T13:39:50.000Z",
+      "updatedAt": "2022-07-31T12:57:52.000Z",
+      "detail": "/api/users/3"
+  },
+  {
+      "id": 4,
+      "productName": "Ipad mini",
+      "last_name": "Archivaldo",
+      "stock": "123",
+      "image": "photo-1659220501642.jpg",
+      "status": "Activo",
+      "price": "$1500",
+      "createdAt": "2022-07-12T15:08:52.000Z",
+      "updatedAt": "2022-07-30T22:49:16.000Z",
+      "detail": "/api/users/4"
+  },
+  {
+      "id": 23,
+      "productName": "Iphone",
+      "last_name": "Villa",
+      "stock": "123",
+      "image": "photo-1659221789590.jpg",
+      "status": "Activo",
+      "price": "$2200",
+      "createdAt": "2022-07-18T21:59:57.000Z",
+      "updatedAt": "2022-07-31T00:26:03.000Z",
+      "detail": "/api/users/23"
+  },
+  {
+      "id": 24,
+      "productName": "Macbook",
+      "last_name": "casa",
+      "stock": "123",
+      "image": "photo-1659221846189.jpg",
+      "status": "Inactivo",
+      "price": "$5200",
+      "createdAt": "2022-07-18T22:03:21.000Z",
+      "updatedAt": "2022-07-30T22:57:26.000Z",
+      "detail": "/api/users/24"
+  },
+  {
+      "id": 25,
+      "productName": "Sindi Entes",
+      "last_name": "PC",
+      "stock": "123",
+      "image": "photo-1659221861032.jpg",
+      "status": "Inactivo",
+      "price": "$43200",
+      "createdAt": "2022-07-18T22:10:45.000Z",
+      "updatedAt": "2022-07-30T22:57:41.000Z",
+      "detail": "/api/users/25"
+  },
+  {
+      "id": 26,
+      "productName": "Xbox",
+      "last_name": "casas de bareque",
+      "stock": "123",
+      "image": "photo-1659221826724.jpg",
+      "status": "Activo",
+      "price": "$7200",
+      "createdAt": "2022-07-19T13:26:43.000Z",
+      "updatedAt": "2022-07-30T22:57:06.000Z",
+      "detail": "/api/users/26"
+  },
+  {
+      "id": 53,
+      "productName": "PlayStation ",
+      "last_name": "Pérez",
+      "stock": "123",
+      "image": "photo-1659454625923.jpg",
+      "status": "Inactivo",
+      "price": "$8200",
+      "createdAt": "2022-07-30T23:51:09.000Z",
+      "updatedAt": "2022-08-02T15:37:05.000Z",
+      "detail": "/api/users/53"
+  }
 ]
