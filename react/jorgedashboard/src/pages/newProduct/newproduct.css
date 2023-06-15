@@ -1,0 +1,7 @@
+.newProduct{
+    flex: 6;
+}
+.newProduct{
+    display: flex;
+    flex-direction: column;
+}
